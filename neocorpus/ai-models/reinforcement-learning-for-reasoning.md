@@ -1,115 +1,55 @@
 # Reinforcement Learning for Reasoning
 
-Reinforcement learning from human feedback (RLHF) and its successors are the post-training techniques that transformed large language models from fluent text generators into reasoning systems. The shift is architectural in significance: pre-training gives a model knowledge; reinforcement learning gives it the ability to use that knowledge to solve problems step-by-step. The reasoning models — OpenAI's o-series, Anthropic's extended thinking, and their descendants — represent a regime where the primary capability improvement comes from RL post-training, not from scaling pre-training. This inverts the development paradigm that dominated 2020-2024, where pre-training scale was the primary lever. The fundamental tension: gradient descent, the optimizer underlying both pre-training and RL fine-tuning, is 4-5 orders of magnitude less sample-efficient than human learning. RL makes models reason, but the mechanism by which they reason bears little resemblance to human cognition.
+Reinforcement learning post-training represents one of the most consequential shifts in recent AI development. The reasoning models — OpenAI's o-series and their successors — emerged from a period when labs began moving beyond pre-training as the sole scaling lever. This shift is documented from three sources: a Chollet/Knoop interview on ARC-AGI and the limits of gradient descent, a Mark Chen (OpenAI CRO) interview reflecting on reasoning model breakthroughs, and a Jerry Tworek exit interview discussing lab convergence and the need for new scaling directions.
 
 ---
 
-## The RLHF Pipeline and Its Evolution
+## The Reasoning Paradigm Shift
 
-### Classical RLHF
+### Evidence from Benchmarks
 
-The original RLHF pipeline (Christiano et al., 2017; refined by OpenAI for InstructGPT):
+Before 2024, large language models with only pre-training performed poorly on ARC: GPT-4's base model achieved 4–5%. Performance jumped significantly — to approximately 21% — with the introduction of reasoning paradigms, as seen with o1 and o1 preview. Chollet and Knoop cite this jump as evidence that the reasoning paradigm was transformational, and note that major labs including OpenAI and xAI subsequently adopted ARC-AGI as part of their model release evaluations.
 
-1. **Pre-train** a base model on internet text (unsupervised)
-2. **Supervised fine-tuning** (SFT) on human-demonstrated responses
-3. **Train a reward model** from human preference comparisons (which response is better?)
-4. **Optimize the model** via reinforcement learning (PPO) to maximize the reward model's score
+### Industry Testimony
 
-This pipeline converted base models that completed text into assistants that followed instructions. The reward model encodes human preferences; RL optimizes the model to produce outputs that score highly against those preferences.
+Mark Chen, OpenAI's Chief Research Officer, describes the breakthrough in reasoning models as one of OpenAI's most significant milestones, alongside a renewed focus on pre-training. He frames the compute allocation question — how to balance pre-training investment against other paradigms — as an active concern. The episode description references "the shift toward reasoning-driven models" and "what's next" as central themes, but no transcript is available, so specific technical claims about RL mechanisms cannot be attributed to this source.
 
-### Beyond RLHF: Direct Preference Optimization and Variants
-
-DPO (Direct Preference Optimization) eliminated the separate reward model and RL optimization step, instead directly optimizing the policy from preference pairs. RLHF's successors (DPO, IPO, KTO, ORPO) share the core insight — human preferences are the training signal — but differ in how they convert preferences into gradient updates.
-
-The trend: simpler pipelines that achieve comparable or better results. The reward model and PPO loop introduced instability, hyperparameter sensitivity, and training complexity. Direct methods reduce engineering overhead while preserving the capability gains.
-
-### RL for Reasoning: The New Frontier
-
-The reasoning models (o1, o3, and their successors) represent a qualitative expansion of what RL post-training achieves. Instead of merely aligning the model's outputs with human preferences for helpfulness and safety, RL now trains the model to:
-
-- Decompose problems into steps
-- Evaluate intermediate results
-- Backtrack when a reasoning path fails
-- Allocate more "thinking" to harder problems
-- Produce chain-of-thought traces that demonstrate step-by-step reasoning
-
-This is RL applied not to output quality but to cognitive strategy. The reward signal shifts from "did the human prefer this response?" to "did this reasoning process arrive at the correct answer?" Process reward models (PRMs) evaluate each step of the reasoning chain, not just the final output.
-
----
-
-## The Shift from Pre-Training-Primary to RL-Primary Capability
-
-### The Historical Arc
-
-- **2020-2023**: Pre-training scale is the primary lever. Bigger models, more data, more compute yield better performance. RL post-training (RLHF) is a refinement step that improves alignment and instruction-following.
-- **2024**: The reasoning models reveal that RL can add capabilities that pre-training alone does not provide. Chain-of-thought reasoning, multi-step problem solving, and self-correction emerge primarily from RL training, not from scale.
-- **2025-2026**: Labs converge on a dual-scaling paradigm — pre-training for knowledge, RL for reasoning. Jerry Tworek (formerly OpenAI) describes the need for "new scaling methods" beyond pre-training, and the "shift toward reasoning-driven models" as one of OpenAI's most important breakthroughs.
-
-### Why RL Adds What Pre-Training Cannot
-
-Pre-training optimizes next-token prediction. A model trained only to predict the next token learns to produce plausible text, including text that looks like reasoning. But it does not optimize for reasoning correctness — it optimizes for the statistical distribution of tokens that appear after reasoning-like prefixes.
-
-RL optimizes for a different objective: did the reasoning process produce a correct outcome? This distinction is subtle but crucial. A pre-trained model may produce fluent, plausible-looking reasoning that arrives at an incorrect answer. An RL-trained model has been explicitly optimized to produce reasoning that arrives at correct answers, with incorrect reasoning paths penalized during training.
-
-The result: RL-trained reasoning models show qualitatively different behavior on hard problems. They allocate more tokens to harder sub-problems, they backtrack and try alternative approaches, and they achieve higher accuracy on tasks that require multi-step deduction — not because they are larger, but because they have been trained to reason rather than to predict.
+Jerry Tworek, in his exit interview after nearly seven years at OpenAI, identifies the shift toward reasoning-driven models as one of the breakthroughs he worked on. The episode describes him discussing "the need for new scaling methods" beyond pre-training and the convergence of major labs on similar approaches. Again, no transcript is available; only chapter-level descriptions can be cited.
 
 ---
 
 ## The Sample Efficiency Gap
 
-### Gradient Descent vs. Human Learning
+Francois Chollet's critique provides the clearest technical grounding. Gradient descent — the optimizer underlying pre-training and RL fine-tuning — is 4–5 orders of magnitude less sample-efficient than human learning. Chollet frames this as the core reason LLMs are not AGI: they encode programs acquired via gradient descent, which is far less efficient at skill acquisition than human intelligence. LLMs could serve as a memory or knowledge-representation component of AGI, but they lack the efficient skill acquisition that characterizes general intelligence.
 
-Francois Chollet's persistent critique provides essential context: gradient descent, the optimizer underlying both pre-training and RL fine-tuning, is 4-5 orders of magnitude less sample-efficient than human learning. A human learns a new reasoning pattern from a handful of examples. An RL training run requires millions of trajectory samples to achieve comparable improvement.
-
-This means that RL-trained reasoning is not reasoning in the way humans reason. The model does not learn abstract reasoning principles and apply them flexibly; it learns statistical patterns over millions of reasoning trajectories and interpolates between them. The outputs may look like reasoning — step-by-step, self-correcting, internally consistent — but the mechanism is statistical pattern matching at enormous scale, not the flexible abstraction that characterizes human cognition.
-
-### The Implications
-
-This gap does not make RL-trained reasoning useless — it makes it useful in a specific way. RL-trained models excel at problems that are well-represented in their training distribution. They can apply learned reasoning patterns reliably and quickly. But they struggle with genuinely novel problems that require reasoning patterns not present in training — the exact capability that ARC-AGI is designed to test and that Chollet argues is the essence of intelligence.
+Chollet further argues that relying on RL environments for AI progress is a "whack-a-mole" problem: it is impossible to create RL environments for every future problem, and solving novel problems without environment-specific training is core to AGI. This is distinct from claiming RL reasoning is without value — rather, it identifies a structural ceiling on what environment-specific RL training can achieve.
 
 ---
 
-## Key Insights
+## The Homogeneity of Current Labs
 
-### RL as the Second Scaling Axis
+Tworek's interview is described as addressing "the sad homogeneity of current AI labs" — the observation that nearly every major lab has converged on the same ideas. He names mavericks working on alternative approaches: Carmack, Ilya Sutskever, and LeCun. The episode also references "two big bets: new architectures and continual learning" as directions Tworek considers promising. The specific connection between this lab homogeneity and RL reasoning recipes is suggested by context but cannot be quoted directly without a transcript.
 
-The discovery that RL post-training provides a scaling axis independent of pre-training is the most important architectural insight of the 2024-2026 period. Labs now optimize across both axes: pre-training compute for knowledge breadth, RL compute for reasoning depth. The optimal allocation between these two axes is an active research question and a competitive differentiator.
+---
 
-### Inference-Time Compute as the Third Axis
+## The 2025–2026 Dual-Scaling Period
 
-Reasoning models introduced a third scaling dimension: inference-time compute. By "thinking" for more tokens, the model can solve harder problems. This creates a cost-accuracy tradeoff at inference time — spend more tokens (and more money) for better answers. This is economically significant because inference costs are ongoing while training costs are one-time.
-
-### The Convergence of Labs
-
-Tworek's observation about the "sad homogeneity of current AI labs" applies directly to RL for reasoning. All major labs have converged on variants of the same approach: pre-train a large model, then RL-train it for reasoning. The architectures differ in details but share the fundamental structure. This convergence may indicate that the approach is correct, or it may indicate that the field is stuck in a local optimum. The mavericks working on alternative architectures (Sutskever's SSI, LeCun's JEPA) represent the hedge against this convergence being premature.
-
-### Process vs. Outcome Rewards
-
-A crucial design decision in RL for reasoning: reward each step of the reasoning process (process reward) or reward only the final answer (outcome reward)? Process rewards provide denser training signal and better credit assignment but require evaluating intermediate reasoning steps, which is harder to automate. Outcome rewards are simpler but can reward models that arrive at correct answers via flawed reasoning (lucky guessing). The field is trending toward process rewards as the superior approach, but the evaluation infrastructure for step-level assessment remains immature.
+The combination of sources supports the claim that 2025–2026 marks a period where labs pursue capability improvement through multiple scaling axes — pre-training and post-training RL — rather than pre-training alone. Mark Chen's interview references a "renewed focus on pre-training" alongside reasoning model breakthroughs, suggesting both are active levers rather than a clean handoff from one paradigm to the other.
 
 ---
 
 ## Anti-Patterns
 
-- **Assuming RL reasoning = human reasoning**: The mechanism is fundamentally different. Treating model reasoning as equivalent to human reasoning leads to misplaced trust in novel situations where the model's training distribution does not apply.
-- **Ignoring the sample efficiency gap**: Celebrating reasoning benchmark improvements without acknowledging that achieving them required orders of magnitude more training signal than a human would need. The capability is real; the mechanism is profligate.
-- **Treating thinking tokens as free**: Inference-time reasoning costs money proportional to the number of thinking tokens. For high-volume applications, the cost of RL-trained reasoning models can be substantially higher than pre-training-only models that answer immediately.
-- **Conflating alignment RLHF with reasoning RL**: RLHF for helpfulness/safety and RL for reasoning are different applications of similar techniques with different objectives, failure modes, and evaluation criteria. Expertise in one does not transfer cleanly to the other.
-
----
-
-## Implications
-
-Reinforcement learning has permanently expanded the frontier of what language models can do. The reasoning capability it provides is real, measurable, and valuable. But it is important to hold two facts simultaneously: RL-trained models reason better than pre-training-only models, and the mechanism by which they reason is fundamentally different from human reasoning. This dual awareness — capability without anthropomorphism — is essential for deploying reasoning models appropriately.
-
-The RL-primary paradigm is likely to intensify. As pre-training scaling approaches data and compute constraints, RL post-training provides a way to continue improving capability without proportional increases in pre-training cost. The next generation of frontier models will likely be distinguished more by their RL training recipes than by their pre-training scale.
+- **Anthropomorphizing RL reasoning**: Chollet explicitly distinguishes gradient descent-based skill acquisition from human learning. RL-trained reasoning outputs may resemble step-by-step human reasoning in appearance while differing fundamentally in mechanism.
+- **Assuming RL environments generalize**: Chollet's critique applies — RL trained on specific environments does not automatically transfer to novel problems outside the training distribution. This is what ARC-AGI is designed to expose.
+- **Treating benchmark jumps as mechanism proof**: The ARC performance jump with o1 demonstrates that the reasoning paradigm changed model behavior on this benchmark. It does not by itself explain which specific RL techniques drove the change.
 
 ---
 
 ## Source Provenance
 
-| Source | Corpus ID | Content |
-|--------|-----------|---------|
-| ARC-AGI v3 interview (Chollet & Knoop) | `corpus/ai-models/01191.md` | Gradient descent 4-5 orders of magnitude less efficient than human learning; LLMs as memory component; efficient skill acquisition gap |
-| Mark Chen interview (Core Memory) | `corpus/ai-models/09558.md` | Reasoning model breakthroughs; renewed pre-training focus; compute allocation across paradigms; AGI timeline speculation |
-| Jerry Tworek interview (Core Memory) | `corpus/ai-models/10201.md` | Shift toward reasoning-driven models; beyond pre-training; homogeneity of labs; new architectures needed; RL as primary capability source |
+| Source | Corpus ID | What It Actually Contains |
+|--------|-----------|--------------------------|
+| ARC-AGI v3 interview (Chollet & Knoop) | `corpus/ai-models/01191.md` | Transcript-derived atoms: gradient descent 4–5 orders of magnitude less efficient than human learning; LLMs as memory component; ARC benchmark jump from ~5% to 21% with reasoning paradigms; RL environment "whack-a-mole" critique |
+| Mark Chen interview (Core Memory EP 46) | `corpus/ai-models/09558.md` | Episode description only (no transcript): reasoning model breakthrough; renewed pre-training focus; compute allocation across paradigms; AGI timeline speculation |
+| Jerry Tworek interview (Core Memory EP 53) | `corpus/ai-models/10201.md` | Episode description only (no transcript): shift toward reasoning-driven models; need for new scaling methods beyond pre-training; homogeneity of AI labs; mavericks on alternative architectures |
