@@ -67,6 +67,7 @@ On this machine, the persistent path is a local LaunchAgent:
 ```bash
 make tooling-surface-status
 make ontology-domain-health-edge
+python3 cloudflare_domain_bridge.py --project-ontology --ontology-url domain
 ```
 
 ## Historical Setup Path

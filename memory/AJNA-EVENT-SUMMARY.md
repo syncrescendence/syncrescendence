@@ -1,13 +1,23 @@
 # Agent Event Summary
 
-**Updated**: 2026-03-02T05:21:57Z
+**Updated**: 2026-03-02T05:23:41Z
 
 ## Source Counts
 
 - `ajna`: `5`
 - `manus`: `2`
+- `system`: `1`
 
 ## Recent Events
+
+### system-20260302-052335-domain-cutover-state
+- Emitted: `2026-03-02T05:23:35Z`
+- Type: `domain_cutover_state`
+- Surface: `exocortex`
+- Artifact class: `cloudflare_dns_domain`
+- Capture level: `pointer`
+- Durable capture: `pointer`
+- Summary: Captured Cloudflare domain cutover state.
 
 ### manus-20260302-052048-manus-queue-state
 - Emitted: `2026-03-02T05:20:48Z`
