@@ -1,13 +1,8 @@
 {
   "failed_count": 0,
   "failed_files": [],
-  "last_run_at": "2026-03-02T03:38:56Z",
-  "processed_count": 4,
-  "processed_ids": [
-    "ajna-20260301-184507-slack-token-regen",
-    "ajna-20260302-discord-token-regen",
-    "commander-20260302-gcloud-auth",
-    "commander-20260302-wrangler-auth"
-  ],
+  "last_run_at": "2026-03-02T04:01:48Z",
+  "processed_count": 0,
+  "processed_ids": [],
   "skipped_duplicates": []
 }
