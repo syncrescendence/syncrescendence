@@ -12,7 +12,7 @@ The alternative — homogeneous agents distinguished only by name — collapses 
 
 ### 1. Cognitive Function, Not Job Title
 
-A role is defined by what kind of thinking it performs, not by an organizational label. The Syncrescendence constellation maps roles to cognitive functions explicitly:
+A role is defined by what kind of thinking it performs, not by an organizational label. This table synthesizes across multiple sources and operational experience; 00413 provides the foundational taxonomy but not all role-model assignments shown here. The Syncrescendence constellation maps roles to cognitive functions explicitly:
 
 | Role | Cognitive Function | What It Actually Does |
 |------|-------------------|----------------------|
@@ -138,6 +138,16 @@ Adding agents to a constellation is not a scaling decision — it is a specializ
 ### For Cross-Model Composition
 
 Role specialization enables deliberate cross-model composition. The Syncrescendence pairs Grok's recursive traversal with Gemini's analogical reasoning with Codex's systematic verification with Claude's nuanced synthesis — not because any single model is best, but because each model's behavioral profile aligns with its assigned cognitive function. This is the architectural benefit of role specialization: it converts model diversity from a management burden into a capability advantage.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Triple-layer negative space hardening for Cartographer prompts
+- The avatar-context multiplier (Oracle performing "exponentially better" with constellation identity)
+- The role-specific anti-pattern matrix (polished paraphrases for Oracle, inferences-as-observations for Cartographer, depth-without-width for Adjudicator, Commander projection)
+- Prompting formulas (Oracle, Cartographer, Adjudicator) as specific engineering specifications
 
 ---
 

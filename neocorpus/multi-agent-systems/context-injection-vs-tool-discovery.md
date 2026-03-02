@@ -128,6 +128,15 @@ This asymmetry will not last forever. As models improve at tool use and retrieva
 
 ---
 
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The Oracle prompting formula and its specific techniques (folder census, named anchor files, ugly-quote content proof, output pressure)
+- The "70+ sessions" of battle-testing evidence for the injection thesis
+- The constellation division of labor (Commander performs injection for triangulation dispatch; Adjudicator uses tool discovery for verification; Cartographer receives injected context plus tool access; Ajna operates via tool-discovery model)
+
+---
+
 ## Provenance
 
 This entry synthesizes operational findings from MCP server architecture patterns (04587), the Ars Contexta knowledge system design (10893), and agentic reasoning survey analysis (00176). The Oracle prompting formula referenced throughout is documented in `memory/oracle-prompting-formula.md` and codified in the CLAUDE.md constitutional document. The context tax measurements (7 servers = 100K tokens) derive from empirical MCP deployment data in the Syncrescendence constellation.

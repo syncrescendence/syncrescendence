@@ -32,6 +32,8 @@ The context tax is not a bug in MCP — it is an inherent cost of the tool-schem
 
 While MCP connects agents to tools, A2A connects agents to each other. Google's Agent-to-Agent Protocol provides:
 
+09928 describes ADK/A2A agents communicating over web standards; the discovery and delegation details extrapolate from this framing:
+
 - **Agent discovery**: Agents can find other agents and query their capabilities. This enables dynamic team formation — an orchestrator can discover specialist agents at runtime rather than hardcoding their existence.
 - **Task delegation**: A standardized format for one agent to request work from another, including task description, expected output format, and completion criteria.
 - **Communication over web standards**: A2A uses HTTP, JSON, and standard web authentication. No proprietary transport. Any agent that speaks HTTP can participate.
@@ -135,6 +137,15 @@ Map your current integration points to the protocol stack. Every custom integrat
 ### For the Ecosystem
 
 The convergence of MCP and A2A under foundation governance creates the possibility of a unified agent communication stack: agents discover tools via MCP, discover each other via A2A, and both protocols are governed by the same foundation. This is the TCP/IP moment for AI agents — the point where the plumbing becomes invisible and the focus shifts to what you build on top of it. But only if governance prevents fragmentation. The history of technology standards teaches that the window for convergence is narrow: once incompatible implementations reach critical mass, the cost of convergence exceeds the benefit, and the ecosystem fragments permanently. MCP and A2A are in the convergence window now. The decisions made by the Agentic AI Foundation in its first two years will determine whether the agent ecosystem unifies or balkanizes.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- MCP clients for Notion and Linear failing to start due to OAuth token handshake failures
+- The specific error cascade (`AuthRequired` -> `Transport channel closed` -> `MCP client failed to start`)
+- The Syncrescendence constellation's use of MCP for tool access, git for state coordination, and custom dispatch for task delegation
 
 ---
 

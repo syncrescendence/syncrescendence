@@ -28,7 +28,7 @@ This is distinct from frameworks where agents are threads in a single process, o
 
 ### Agent-to-Machine Assignment
 
-The Syncrescendence constellation assigns agents to machines based on three constraints: model provider access, credential scope, and resource isolation.
+Current operational details (machine assignments, SSH configuration, socket-mode status) reflect the constellation's live state and are not sourced from the cited corpus files. The Syncrescendence constellation assigns agents to machines based on three constraints: model provider access, credential scope, and resource isolation.
 
 | Machine | Agents | Models | Rationale |
 |---------|--------|--------|-----------|
@@ -153,6 +153,17 @@ Constellation architecture is the natural form for multi-agent systems that outg
 3. **Rate-limit isolation through provider diversity.** Different models on different providers is a resource management strategy, not just a capability strategy.
 4. **Partial operation as normal state.** Design for N-K agents available, not N. The anesthesia protocol is not an emergency procedure — it is how the constellation operates most of the time.
 5. **Repository sovereignty as coordination guarantee.** The repo is the only surface that survives all failure modes. It must remain under the constellation's control, not a third party's.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Shared ChatGPT Plus quota between Psyche and Adjudicator causing mutual starvation
+- Gemini free-tier reset timing and staggered retry tactics
+- SSH aliases (`mini`, `macbook-air`), macOS Stealth Mode firewall behavior
+- Socket-mode connections for Slack and Discord via Ajna
+- Mac mini anesthesia since CC27 and tmux constellation session status
 
 ---
 

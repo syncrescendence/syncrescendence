@@ -14,7 +14,7 @@ This is not a theoretical finding. It is a measurable, reproducible result: hold
 
 When models from different providers achieve comparable scores on standard benchmarks, marginal gains from model swapping diminish toward zero. The remaining performance surface is structural: how work is decomposed, distributed, and synthesized. This is the Performance Convergence Scaling Law — as model capability gaps narrow, orchestration design accounts for an increasing share of total system performance.
 
-The convergence is not hypothetical. By early 2026, frontier models from Anthropic, OpenAI, Google, and Meta achieve comparable scores on MMLU, HumanEval, SWE-bench, and GPQA. Picking Claude over GPT or Gemini on benchmark deltas yields single-digit percentage differences. Picking the right orchestration topology yields 12-23% differences. The optimization surface has shifted from the node (which model) to the edge (how models are connected).
+This observation reflects the broader industry landscape as of early 2026, not a specific claim from the declared sources. By early 2026, frontier models from Anthropic, OpenAI, Google, and Meta achieve comparable scores on MMLU, HumanEval, SWE-bench, and GPQA. Picking Claude over GPT or Gemini on benchmark deltas yields single-digit percentage differences. Picking the right orchestration topology yields 12-23% differences. The optimization surface has shifted from the node (which model) to the edge (how models are connected).
 
 ### 2. Four Canonical Topologies
 
@@ -132,6 +132,14 @@ The Syncrescendence's triangulation cycle uses Sovereign relay as a phase gate b
 ### For Open Questions
 
 The AdaptOrch topology routing algorithm operates in O(|V| + |E|) time — linear in the size of the task dependency graph. But constructing the dependency graph from a natural language task description is itself an unsolved problem. Who decomposes "build a production-ready auth system" into subtasks with explicit dependencies? Currently, the human or the orchestrator agent performs this decomposition. The quality of topology selection is bounded by the quality of task decomposition. This is the frontier: automated task dependency graph construction from natural language specifications.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The Syncrescendence triangulation cycle as a concrete hybrid topology case study (Commander grounds, Oracle/Diviner produce independent analyses, Commander compiles, Adjudicator engineers)
+- Topology transitions across phases within the triangulation playbook
 
 ---
 

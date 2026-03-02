@@ -61,7 +61,7 @@ The architectural response is to separate credential lifecycle from task executi
 
 ### The Confirmation Receipt Pattern
 
-A gate is not just a checkpoint — it is an audit trail. Every human approval should generate a receipt: who approved, when, what they were shown, what they authorized. The Syncrescendence uses CONFIRM messages with explicit fields: `Kind: CONFIRM`, `From-Agent`, `To-Agent`, `Status`, `Completed-At`. This receipt chain is essential for debugging pipeline failures and for establishing accountability when an irreversible action produces unexpected results.
+A gate is not just a checkpoint — it is an audit trail. Every human approval should generate a receipt: who approved, when, what they were shown, what they authorized. 00574 contains an agent-generated confirm artifact from a failed session, illustrating the confirm-message pattern even in failure cases. The Syncrescendence uses CONFIRM messages with explicit fields: `Kind: CONFIRM`, `From-Agent`, `To-Agent`, `Status`, `Completed-At`. This receipt chain is essential for debugging pipeline failures and for establishing accountability when an irreversible action produces unexpected results.
 
 ---
 
@@ -137,6 +137,16 @@ The selection matrix:
 | Low | Yes | Emergency stop only | Internal summarization, data formatting |
 
 Mapping your pipeline's actions to this matrix is the first step in gate architecture. Most actions cluster in the medium-to-low range, which is why most actions should not have gates.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The gate taxonomy (pre-execution, post-execution review, periodic audit, emergency stop)
+- The approval-fatigue framing and the 80-90% heuristic for actions not requiring human intervention
+- The Sovereign Interaction Protocol's minimal-action principle
+- Plaintext keys in `openclaw.json` for NVIDIA, OpenAI, Slack, and Discord requiring human-mediated rotation
 
 ---
 

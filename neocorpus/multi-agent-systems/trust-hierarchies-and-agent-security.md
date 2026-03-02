@@ -40,9 +40,9 @@ The principle of minimum privilege demands:
 - **Temporal bounds**: Tool access should expire. A lease-based model (access granted for N minutes or until task completion) prevents zombie agents from retaining privileges indefinitely.
 - **Audit trails**: Every tool invocation is logged with the invoking agent's identity, the tool called, the arguments passed, and the result returned.
 
-### 4. Prompt Injection as the Primary Attack Vector
+### 4. Prompt Injection as Attack Vector
 
-In a multi-agent system, agents consume content from external sources: web pages, emails, documents, API responses. Any of this content can contain adversarial instructions designed to hijack the agent's behavior. This is prompt injection — the equivalent of SQL injection for the agent era.
+Prompt injection as the primary multi-agent attack vector is a widely discussed concern in the field, though not explicitly established by the cited sources. In a multi-agent system, agents consume content from external sources: web pages, emails, documents, API responses. Any of this content can contain adversarial instructions designed to hijack the agent's behavior. This is prompt injection — the equivalent of SQL injection for the agent era.
 
 The attack surface is vast:
 - A web page that includes hidden instructions in white text
@@ -137,6 +137,16 @@ Build trust levels into the framework as a first-class abstraction. When an agen
 The regulatory gap is widest precisely where the risk is highest.
 
 The state-agent problem will not be solved by individual user choices. It requires regulatory frameworks that mandate transparency about where inference runs, what data is retained, and what jurisdiction governs agent behavior. The parallel to TikTok suggests that waiting until dependency is entrenched makes intervention politically costly. Early frameworks are cheaper than late bans.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The five-level trust gradient (Sovereign, Constitutional agent, Scoped agent, Sandboxed agent, Untrusted input) and the specific role mappings (Commander as level-4 constitutional agent, etc.)
+- Commander running with full filesystem access on MacBook Air as explicit trust decision
+- Adjudicator running with `sandbox: danger-full-access` for verification tasks
+- Plaintext keys in `openclaw.json` and remediation to macOS Keychain with `syncrescendence` service label
 
 ---
 

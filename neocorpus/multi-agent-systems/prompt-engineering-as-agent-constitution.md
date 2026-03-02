@@ -52,9 +52,9 @@ This has architectural implications:
 
 ## Key Insights
 
-### The Constitution Determines Reliability More Than the Model
+### The Constitution as Critical Reliability Factor
 
-Multi-agent systems fail 41-86.7% of the time in production. The survey finding that "agents achieving 60% pass@1 may exhibit only 25% consistency across multiple trials" points directly at the constitutional layer: the model has the capability to succeed (60% of the time) but lacks the behavioral constraints to succeed consistently. Consistency is a property of the constitution, not the model. A model that can do the right thing but sometimes does the wrong thing is a model with an insufficient constitution.
+Multi-agent systems fail 41-86.7% of the time in production. The cited sources collectively suggest that constitution/prompt design is a critical reliability factor, though none directly establishes it as the dominant variable over model selection. The survey finding that "agents achieving 60% pass@1 may exhibit only 25% consistency across multiple trials" is consistent with the hypothesis that behavioral constraints matter: the model has the capability to succeed (60% of the time) but may lack the behavioral constraints to succeed consistently.
 
 The Syncrescendence learned this through 74 sessions of operational experience. The same Claude Opus model, given the same task, produces dramatically different results depending on whether the session starts from a well-structured handoff with full constitutional context or from a bare prompt. The model is the same; the constitution is the variable.
 
@@ -156,6 +156,18 @@ This pipeline provides:
 - **Auditability**: Changes to the constitution are git-tracked, reviewable, and reversible. "When did this rule change?" is answered by `git log AGENTS.md`.
 
 The pipeline transforms constitutional engineering from an artisanal craft (hand-editing system prompts per agent) into a systematic discipline (editing sources, validating, rendering, deploying). This is the difference between a system that works because someone remembers to update all the prompts and a system that works because the build process enforces consistency.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Seared lessons and their specific origins (CC31 mass-edit catastrophe, CC52-CC57 phantom path cascade)
+- Config v2.0 implementation (render-configs.py, validate-configs.py, section tags)
+- Ajna receiving approximately 10.7KB constitutional subset
+- The `make configs` build pipeline (`AGENTS.md + *-EXT.md -> CLAUDE.md, GEMINI.md`)
+- 74 sessions of operational experience demonstrating constitutional impact on reliability
+- Oracle, Cartographer, and Adjudicator prompting formulas as specific engineering specifications
 
 ---
 

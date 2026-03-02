@@ -16,7 +16,7 @@ A well-formed task dependency graph is a directed acyclic graph where:
 
 The graph is not merely a planning artifact — it is the runtime execution plan. An orchestrator walks the graph, dispatching tasks whose dependencies are satisfied, collecting results, and unblocking downstream tasks. The Syncrescendence task dispatch system embodies this: each task carries `Status`, `Lease-ID`, `Timeout`, and `Escalation-Contact` fields that govern its lifecycle within the graph.
 
-The formal property that matters most is the **critical path**: the longest chain of sequential dependencies in the graph. This chain determines the minimum wall-clock time for the entire pipeline, regardless of how many agents are available. Optimizing the decomposition means minimizing the critical path — moving tasks off the critical chain into parallel branches wherever the dependency structure permits.
+These architectural principles represent standard practice in distributed task systems; they are not directly stated in the cited sources. The formal property that matters most is the **critical path**: the longest chain of sequential dependencies in the graph. This chain determines the minimum wall-clock time for the entire pipeline, regardless of how many agents are available. Optimizing the decomposition means minimizing the critical path — moving tasks off the critical chain into parallel branches wherever the dependency structure permits.
 
 ### 2. The Topology Selection Problem
 
@@ -76,7 +76,7 @@ The Topology Routing Algorithm from AdaptOrch maps tasks to optimal patterns in 
 
 Dependency graphs without timeouts are dependency graphs that can block forever. The lease model — where an agent claims a task for a bounded duration — transforms the graph from a static plan into a self-healing system. When a lease expires, the task returns to the available pool and can be claimed by a different agent. This prevents a single slow or failed agent from blocking the entire downstream graph.
 
-The Syncrescendence dispatch system demonstrates this concretely: every task carries a `Lease-ID` and `Timeout`. The Adjudicator claimed task DC-003 with `lease-adjudicator-1771575249-40825` and a 30-minute timeout. When the task failed (exit code 75, usage limit hit), the retry mechanism incremented the attempt counter and re-dispatched. Without the lease, the task would have remained "in progress" indefinitely, blocking any dependent work.
+The Syncrescendence dispatch system demonstrates this concretely: every task carries a `Lease-ID` and `Timeout`. The Adjudicator claimed task DC-003 with `lease-adjudicator-1771575249-40825` and a `Timeout: 30` value (00302 specifies `Timeout: 30` without explicitly stating the unit). When the task failed (exit code 75, usage limit hit), the retry mechanism incremented the attempt counter and re-dispatched. Without the lease, the task would have remained "in progress" indefinitely, blocking any dependent work.
 
 The lease duration must be calibrated to the task complexity: too short and agents are interrupted mid-work; too long and failed agents block the pipeline. A heuristic: set the lease to 2x the expected completion time, with escalation at 1x.
 

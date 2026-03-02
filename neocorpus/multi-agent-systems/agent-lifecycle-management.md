@@ -30,7 +30,7 @@ The term "lifecycle" is precise. Agents are born (initialized with credentials, 
 
 Agent initialization is not instant and not guaranteed. The Cartographer startup sequence (09018) reveals the actual complexity: credential loading from cache, extension loading (code-review, conductor, plan, self-command, and others), MCP server connection with capability negotiation (tool updates, prompt updates), hook registry initialization, and security scanner attachment. Each step can fail independently.
 
-The Adjudicator execution log (00574) demonstrates initialization failure in production: MCP clients for Notion and Linear failed to start because OAuth tokens had expired. The error cascaded — `AuthRequired` errors on the transport layer propagated to `handshaking with MCP server failed`, which propagated to the agent starting with degraded capabilities. The agent did not crash. It started without tools it was supposed to have, which is worse — a silent capability reduction that the agent may not detect until mid-task.
+The Adjudicator execution log (00574) demonstrates initialization failure in production: MCP clients for Notion and Linear failed to start because OAuth tokens had expired. The error cascaded — `AuthRequired` errors on the transport layer propagated to `handshaking with MCP server failed`, which propagated to the log suggesting a partial startup sequence, though the session ultimately failed. The agent did not crash cleanly — the log shows it started without tools it was supposed to have, which is worse — a silent capability reduction that the agent may not detect until mid-task.
 
 **Initialization checklist** (derived from operational failures):
 1. **Credential validation**: Test every credential before declaring readiness. Cached credentials expire. OAuth tokens rotate. API keys get revoked.
@@ -69,7 +69,7 @@ Claimed-At: 2026-02-20T08:14:09Z
 A lease is a time-bounded claim on a task. If the agent completes within the lease period, it writes results. If the lease expires (agent crashed, hit limits, timed out), the task returns to the queue for re-dispatch. This prevents both duplication (two agents working the same task) and abandonment (a crashed agent holding a task forever).
 
 Lease design decisions:
-- **Duration**: Long enough for legitimate completion, short enough for timely recovery. The 30-second timeout in 00302 is aggressive — appropriate for lightweight tasks, insufficient for deep analysis.
+- **Duration**: Long enough for legitimate completion, short enough for timely recovery. The `Timeout: 30` value in 00302 (unit unspecified) is aggressive if interpreted as seconds — appropriate for lightweight tasks, insufficient for deep analysis.
 - **Renewal**: Should agents extend their own leases mid-task? Yes, for long tasks — but renewal requires liveness checking, adding complexity.
 - **Escalation**: When a lease expires without completion, the escalation contact and delay determine how quickly a human or higher-authority agent is notified.
 
@@ -157,6 +157,17 @@ Agent lifecycle management is infrastructure, not application logic. Every multi
 6. **Quota-aware scheduling** that respects shared ceilings across agents
 
 The systems that treat these as optional — that assume agents will just work, credentials will stay fresh, rate limits will not be hit, and context will not fill — are the systems in the 41-86.7% failure range. Lifecycle management is the difference between a demo and a deployment.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Shared quota pressure between Psyche and Adjudicator on ChatGPT Plus capacity
+- The constitutional rule against dispatching simultaneous heavy jobs under shared quota pressure
+- Gemini free-tier reset hints and staggered retry strategies
+- Context exhaustion thresholds (<30% alert, <15% mandatory handoff)
+- The Sovereign Interaction Protocol's minimal-action escalation principle
 
 ---
 

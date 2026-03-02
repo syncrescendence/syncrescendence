@@ -140,10 +140,19 @@ Context degradation is empirically observed but not well-characterized theoretic
 
 ---
 
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The 75% degradation threshold as operational heuristic
+- The <30% and <15% protocol thresholds for context vigilance
+- The context budget worked example using CLAUDE.md, MEMORY.md, and handoff document token estimates
+
+---
+
 ## Source Provenance
 
 | Source | Type | Key Contribution |
 |--------|------|------------------|
 | `corpus/multi-agent-systems/04587.md` | Technical entry (MCP Server Patterns) | Context tax quantification (7 servers = 100K tokens = 50% consumed), solution patterns (tool search, CLI wrappers, launchpads) |
-| `corpus/multi-agent-systems/00176.md` | Survey analysis thread | Benchmark vs. production reliability gap; consistency degradation under load |
+| `corpus/multi-agent-systems/00176.md` | Survey analysis thread | Benchmark vs. production reliability gap; consistency-gap findings are directionally consistent with the hypothesis that reliability declines under load, though the survey focuses on cross-trial reliability rather than context-load degradation specifically |
 | `corpus/multi-agent-systems/10893.md` | Essay (Ars Contexta / Agentic Note-Taking) | "Dumping is not thinking" principle; progressive disclosure; fresh agent per phase; context as attention not storage |

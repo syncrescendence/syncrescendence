@@ -12,7 +12,7 @@
 |----|------|---------|
 | 00413 | `corpus/multi-agent-systems/00413.md` | Ontology Annealment v2.0 — version chains as first-class artifacts, supersession semantics |
 | 00302 | `corpus/multi-agent-systems/00302.md` | Task dispatch — lease-based claiming, retry counts, status lifecycle (PENDING → IN_PROGRESS → COMPLETE/FAILED) |
-| 09018 | `corpus/multi-agent-systems/09018.md` | Gas Town commentary — agent orchestration with issue chains, activity feeds as execution traces |
+| 09018 | `corpus/multi-agent-systems/09018.md` | Cartographer initialization log showing startup sequence details including extension loading and capability negotiation |
 
 ---
 
@@ -125,7 +125,7 @@ Each transition is recorded with:
 
 This is explicit state continuity at the task granularity. When a task fails and retries, the retry inherits the previous attempt's context — the failure reason, the attempt count, the execution history. The new agent does not start blind; it knows what was tried and why it failed.
 
-The Gas Town pattern (09018) achieves similar continuity through GitHub issues: each task is an issue, agents claim issues, close them on completion, and the issue chain produces an activity feed that serves as an execution trace. The issues are the handoffs — each closed issue documents what was done, each open issue documents what remains.
+09018 is a Cartographer initialization log showing startup sequence details including extension loading and capability negotiation — illustrating the concrete complexity of agent session initialization that continuity mechanisms must preserve across session boundaries.
 
 ---
 
@@ -184,6 +184,18 @@ The mature form is a continuity architecture with:
 
 ---
 
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The two-lane CC handoff protocol (lane A = CRUSH/corpus, lane B = tool stack)
+- The handoff section template (What Was Accomplished, What Remains, Key Decisions, Sovereign Intent, etc.)
+- The Kaizen sweep procedure (seared lessons extraction, config drift check, memory hygiene)
+- Context exhaustion thresholds (<30% alert, <15% mandatory handoff)
+- The lineage-as-memory anti-pattern and condense-into-wisdom discipline
+- 74+ sessions of operational experience informing handoff quality as productivity determinant
+
+---
+
 ## Provenance
 
-This entry synthesizes the Ontology Annealment version chain semantics (00413), the task dispatch state machine with lease-based claiming (00302), and the Gas Town issue-chain-as-activity-feed pattern (09018). The handoff protocol, Kaizen sweep, two-lane CC system, context exhaustion thresholds, and lineage-as-memory anti-pattern derive from 74+ sessions of Syncrescendence Commander Council operational experience, codified in CLAUDE.md, AGENTS.md, and `memory/MEMORY.md`.
+This entry synthesizes the Ontology Annealment version chain semantics (00413), the task dispatch state machine with lease-based claiming (00302), and the Cartographer initialization log (09018) illustrating startup complexity. The handoff protocol, Kaizen sweep, two-lane CC system, context exhaustion thresholds, and lineage-as-memory anti-pattern derive from 74+ sessions of Syncrescendence Commander Council operational experience, codified in CLAUDE.md, AGENTS.md, and `memory/MEMORY.md`.

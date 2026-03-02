@@ -44,7 +44,7 @@ For multi-agent systems, inconsistency compounds. If Agent A produces correct ou
 
 #### Failure Mode Taxonomy
 
-The Berkeley trace analysis identified 14 unique failure modes. Most were system design and coordination issues, not individual model failures. The dominant failure categories:
+The Berkeley trace analysis identified 14 unique failure modes. Most were system design and coordination issues, not individual model failures. The following failure-mode labels synthesize from the survey's reported categories; the specific terminology used here is the entry author's characterization:
 
 1. **Cascading misinterpretation**: Agent B misreads Agent A's output, producing confidently wrong downstream reasoning
 2. **Coordination deadlock**: Agents wait on each other or duplicate work without detection
@@ -147,6 +147,14 @@ The evaluation gap has practical consequences for every team building multi-agen
 4. **Topology is a variable, not a constant.** If your evaluation holds coordination architecture fixed, you are measuring the wrong thing. The AdaptOrch finding (12-23% improvement from topology selection alone) means architecture choice is a larger lever than most model upgrades.
 
 5. **The 41-86.7% failure rate is the baseline to beat.** Any MAS deployment that does not measure and report its failure rate is operating blind. The Berkeley finding is not a warning about multi-agent systems — it is the current state of the art. Improvement requires measurement, and measurement requires evaluation frameworks designed for coordination, not individual performance.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- TASK/CONFIRM/RESULT traces as execution trace infrastructure with exit codes, lease IDs, and execution logs
+- The Syncrescendence constellation's task dispatch system as an instance of execution trace architecture
 
 ---
 

@@ -16,7 +16,7 @@ In synchronous multi-agent systems, agents communicate through message passing â
 
 ### 2. One Authority Surface
 
-The most dangerous failure mode in multi-agent coordination is split-brain: two or more sources of truth that diverge silently. If the repo says the task is complete but the project management tool says it is in progress, which is authoritative? If the config file references a path that exists in the documentation but not on disk, which is true? Repo sovereignty resolves this by decree: the repo is always authoritative. Every other surface must derive from or reconcile with the repo. No agent may create a second authority surface.
+The sources support git-tracked coordination as a primary authority pattern; the stronger exclusivity doctrine (repo as sole authority surface) extrapolates from this evidence. The most dangerous failure mode in multi-agent coordination is split-brain: two or more sources of truth that diverge silently. If the repo says the task is complete but the project management tool says it is in progress, which is authoritative? If the config file references a path that exists in the documentation but not on disk, which is true? Repo sovereignty resolves this by decree: the repo is always authoritative. Every other surface must derive from or reconcile with the repo. No agent may create a second authority surface.
 
 ### 3. Committed State Is Real State
 
@@ -127,6 +127,16 @@ Every coordination decision is permanently recorded in git history. Who dispatch
 ### For Constellation Bootstrap
 
 A new agent joining the constellation needs only one thing: access to the repo. By reading CLAUDE.md (its constitutional rules), the handoff chain (prior session state), and the task queue (pending work), the agent bootstraps itself into a productive member of the constellation. No onboarding call, no synchronous briefing, no external documentation. The repo IS the onboarding document. This is the deepest implication of repo sovereignty: the repo contains not just the work product but the complete operational context for producing more work. An agent with repo access and a constitutional config file can resume any work any prior agent left behind.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The 16-session phantom-path catastrophe (CC52-CC57) and config drift check protocol
+- Semantic-prefix commit grammar (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`) as coordination grammar
+- The handoff protocol structure and two-lane CC system
+- The dispatch-as-file pattern (TASK/CONFIRM/RESULT directives)
 
 ---
 

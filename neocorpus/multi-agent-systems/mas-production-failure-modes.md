@@ -16,7 +16,7 @@ The dominant failure modes in production multi-agent systems are architectural, 
 
 ### 2. The 14 Failure Modes (Berkeley Taxonomy)
 
-The Berkeley analysis across 1,642 traces identifies 14 distinct failure categories. These cluster into five operational families:
+The Berkeley analysis across 1,642 traces identifies 14 distinct failure categories. The following family taxonomy extrapolates from the survey's broad failure categories; the five-family grouping and sandbox-collision classification are the entry author's synthesis:
 
 **Cascading Context Loss**: Agent A produces output that exceeds Agent B's effective context capacity. Information degrades at each handoff. By the third agent in a chain, critical details from the first agent's output have been lost — not because any single agent failed, but because the pipeline did not manage information decay.
 
@@ -74,7 +74,7 @@ Failed tasks consume resources without producing value. The TASK-20260220 dispat
 
 ### The Consistency Gap
 
-The 60% pass@1 / 25% consistency finding implies that most deployed agent systems are operating in a regime where they occasionally produce correct results but cannot be relied upon. This has direct implications for system design: if individual agent reliability is 25%, then a three-agent pipeline has an expected reliability of ~1.6% under independent failure assumptions. Redundancy, verification loops, and human-in-the-loop gates are not optional — they are structurally necessary.
+The 60% pass@1 / 25% consistency finding implies that most deployed agent systems are operating in a regime where they occasionally produce correct results but cannot be relied upon. This has direct implications for system design: if individual agent reliability is 25%, then a three-agent pipeline has an expected reliability of ~1.6% under independent failure assumptions (this calculation illustrates compounding failure under independence assumptions and is not directly from the cited sources). Redundancy, verification loops, and human-in-the-loop gates are not optional — they are structurally necessary.
 
 ### Production Failure Is a Design Problem
 

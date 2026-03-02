@@ -48,7 +48,7 @@ The Ars Contexta system researches tools for thought to build itself a tool for 
 
 ### Memory Hierarchy in Practice
 
-The Syncrescendence implements a multi-tier memory architecture:
+The following hierarchy synthesizes across the cited sources; no single source presents this exact integrated taxonomy. The Syncrescendence implements a multi-tier memory architecture:
 
 | Layer | Mechanism | Latency | Persistence |
 |-------|-----------|---------|-------------|
@@ -82,7 +82,7 @@ The MEMORY.md auto-memory file functions as a cache: it stores cross-session sta
 | Filesystem-as-Graph | Portable, human-readable knowledge bases | Thousands of files | Full (local files) | File read | No native semantic search |
 | Living Ledger | Time-sensitive intelligence, evolving state | Hundreds of domains | Full (git-tracked) | File read | Requires update discipline |
 
-No single architecture covers all needs. Production systems require a hybrid: injection for hot state, filesystem-as-graph for warm state, and vector stores or knowledge graphs for cold state. The choice is not which architecture to use but which architecture to use for each category of memory.
+No single architecture covers all needs. The cited sources collectively suggest that production systems benefit from combining multiple memory modalities: injection for hot state, filesystem-as-graph for warm state, and vector stores or knowledge graphs for cold state. The choice is not which architecture to use but which architecture to use for each category of memory.
 
 ---
 

@@ -70,7 +70,7 @@ The pattern generalizes. Every platform vendor will ship MCP servers that expose
 
 Model lock-in is the most immediately felt form of agent dependency. When your system's prompts, tool schemas, and coordination logic are tuned for one model's behavior, switching providers means re-tuning everything.
 
-OpenClaw (10279) addresses this through **model-agnostic agent design**: a gateway that routes to 15+ model providers with built-in failover. The agent's logic is decoupled from the model's identity. If Claude is rate-limited, route to GPT. If GPT is down, route to Gemini. The agent's behavior should be model-invariant for the class of tasks it performs.
+OpenClaw (10279) addresses this through **model-agnostic agent design**: a gateway that routes to multiple model providers with built-in failover. The agent's logic is decoupled from the model's identity. If Claude is rate-limited, route to GPT. If GPT is down, route to Gemini. The agent's behavior should be model-invariant for the class of tasks it performs.
 
 In practice, model invariance is aspirational. Models differ in:
 - **Tool use patterns**: How they format tool calls, handle errors, and chain multi-step operations
@@ -86,14 +86,14 @@ The Syncrescendence constellation takes a pragmatic approach: each agent is assi
 
 ### Abstraction Layers: OpenClaw as Case Study
 
-OpenClaw demonstrates the abstraction layer approach to interoperability. As a **model-agnostic relay**, it provides:
+OpenClaw demonstrates the abstraction layer approach to interoperability. As a **model-agnostic relay**, 10279 describes it providing:
 
-1. **Multi-provider routing**: A single interface that dispatches to any supported model provider based on configuration, not code changes
-2. **Channel abstraction**: 20+ messaging platforms (Slack, Discord, WhatsApp, Telegram, etc.) behind a unified input/output interface
+1. **Multi-provider routing**: A single interface that dispatches to supported model providers based on configuration, not code changes
+2. **Channel abstraction**: Multiple messaging platforms behind a unified input/output interface
 3. **Persistent memory**: File-based storage that survives model switches, session restarts, and provider outages
-4. **Skill framework**: AgentSkills specification (Anthropic-originated, now open standard) that decouples capability definition from model implementation
+4. **Skill framework**: A skill specification that decouples capability definition from model implementation
 
-The abstraction has real costs. Every indirection layer adds latency, complexity, and a potential failure point. OpenClaw's gateway model means an extra hop between the user's message and the model's response. Configuration complexity increases (15+ provider configurations to maintain). Debugging becomes harder when failures can originate in the gateway, the provider, or the translation layer between them.
+The abstraction has real costs. Every indirection layer adds latency, complexity, and a potential failure point. OpenClaw's gateway model means an extra hop between the user's message and the model's response. Configuration complexity increases with multiple provider configurations to maintain. Debugging becomes harder when failures can originate in the gateway, the provider, or the translation layer between them.
 
 But the alternative — direct integration with a single provider — means that provider's outage is your outage, their price increase is your cost increase, and their API deprecation is your rewrite. The abstraction layer's cost is insurance against single-provider dependency.
 
@@ -141,6 +141,15 @@ Interoperability is not a feature — it is an architectural property that emerg
 5. **Abstraction layer**: Build abstraction after concrete experience, not before. Accept the latency and complexity cost as insurance against single-vendor dependency.
 
 The north star is simple: can you replace any single vendor — model provider, tool platform, hosting service, communication channel — without rebuilding the system? If yes, you are interoperable. If no, you are locked in, regardless of how many open protocols you speak.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Repo sovereignty as constitutional invariant ("Every durable result must return through the repo/event/reconciliation contract")
+- Constellation-level provider diversification strategy (Commander on Claude, Adjudicator on Codex, Cartographer on Gemini)
+- The portfolio strategy for model lock-in mitigation through provider diversification across the constellation
 
 ---
 

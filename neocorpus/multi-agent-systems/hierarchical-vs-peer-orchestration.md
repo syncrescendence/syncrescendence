@@ -75,7 +75,7 @@ This is why regulated industries default to hierarchical: not because it is bett
 
 ### The Communication Complexity Argument
 
-The theoretical basis for choosing between topologies can be stated in terms of message complexity:
+These complexity characterizations are standard distributed-systems reasoning, not directly stated in the cited sources. The theoretical basis for choosing between topologies can be stated in terms of message complexity:
 
 - **Hierarchical**: O(N) messages per coordination round, where N is the number of workers. The orchestrator sends one message to each worker and receives one response. Simple, predictable, scales linearly.
 - **Full mesh peer**: O(N^2) messages per coordination round. Every agent must communicate with every other agent. Coordination overhead grows quadratically, making full mesh impractical beyond ~10 agents.
@@ -134,6 +134,16 @@ Start hierarchical. Migrate to hybrid when the orchestrator becomes the bottlene
 Peer with shared state and conflict resolution protocols. If the system must continue operating when any single component fails, no single orchestrator can be acceptable. But the peer system must include explicit conflict resolution (voting, priority, fallback to designated resolver) or it will produce inconsistent outputs.
 
 The conflict resolution protocol is the hidden cost of peer orchestration. It must answer: when two agents claim the same task, who wins? When two agents produce conflicting outputs, which is authoritative? When an agent disagrees with a peer's decision, how is the disagreement resolved? These questions have clean answers in hierarchical systems (the orchestrator decides) and no default answers in peer systems. Every peer system must design its own answers, and the design of those answers is the actual architecture — the peer topology is just the communication pattern.
+
+---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- Commander as explicit hierarchical orchestrator with triangulation cycle dispatch
+- The AjnaPsyche Archon as a peer pairing within the hierarchical architecture
+- The five-agent constellation operating at N=5 with O(5) messages through Commander
+- 74 sessions of pure hierarchical orchestration before introducing peer dynamics
 
 ---
 
