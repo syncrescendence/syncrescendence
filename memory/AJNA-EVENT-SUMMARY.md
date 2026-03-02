@@ -1,15 +1,33 @@
 # Agent Event Summary
 
-**Updated**: 2026-03-02T18:30:18Z
+**Updated**: 2026-03-02T19:33:37Z
 
 ## Source Counts
 
 - `ajna`: `3`
-- `commander`: `6`
+- `commander`: `8`
 - `manus`: `2`
 - `system`: `17`
 
 ## Recent Events
+
+### commander-20260302-193337-149569-perplexity-response-landed
+- Emitted: `2026-03-02T19:33:37Z`
+- Type: `perplexity_response_landed`
+- Surface: `exocortex`
+- Artifact class: `repo_markdown_change`
+- Capture level: `summary`
+- Durable capture: `summary_and_typed_record`
+- Summary: Perplexity verification landed for current official capabilities around the CLI-web gap.
+
+### commander-20260302-193337-085813-oracle-response-landed
+- Emitted: `2026-03-02T19:33:37Z`
+- Type: `oracle_response_landed`
+- Surface: `exocortex`
+- Artifact class: `repo_markdown_change`
+- Capture level: `summary`
+- Durable capture: `summary_and_typed_record`
+- Summary: Oracle hypersensing landed for the CLI-web gap and subscription-worker architecture.
 
 ### commander-20260302-183018-332001-google-model-checkpoint
 - Emitted: `2026-03-02T18:30:18Z`
@@ -82,21 +100,3 @@
 - Capture level: `summary`
 - Durable capture: `summary_markdown`
 - Summary: Mac mini stage-1 tmux constellation revived: repo hydrated, Psyche surface deployed, detached constellation session created.
-
-### system-20260302-054204-231060-slack-channel-state
-- Emitted: `2026-03-02T05:42:04Z`
-- Type: `slack_channel_state`
-- Surface: `runtime`
-- Artifact class: `slack_discord_comms`
-- Capture level: `summary`
-- Durable capture: `summary_and_typed_record`
-- Summary: Concurrent Slack channel probe after reconciler lock.
-
-### system-20260302-054203-390044-discord-channel-state
-- Emitted: `2026-03-02T05:42:03Z`
-- Type: `discord_channel_state`
-- Surface: `runtime`
-- Artifact class: `slack_discord_comms`
-- Capture level: `summary`
-- Durable capture: `summary_and_typed_record`
-- Summary: Concurrent Discord channel probe after reconciler lock.
