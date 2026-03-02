@@ -1,15 +1,33 @@
 # Agent Event Summary
 
-**Updated**: 2026-03-02T19:33:37Z
+**Updated**: 2026-03-02T19:49:34Z
 
 ## Source Counts
 
 - `ajna`: `3`
-- `commander`: `8`
+- `commander`: `10`
 - `manus`: `2`
 - `system`: `17`
 
 ## Recent Events
+
+### commander-20260302-194933-464690-perplexity-response-landed
+- Emitted: `2026-03-02T19:49:33Z`
+- Type: `perplexity_response_landed`
+- Surface: `exocortex`
+- Artifact class: `repo_markdown_change`
+- Capture level: `summary`
+- Durable capture: `summary_and_typed_record`
+- Summary: Perplexity follow-up landed for current official Cowork and Claude in Chrome capabilities.
+
+### commander-20260302-194933-464690-oracle-response-landed
+- Emitted: `2026-03-02T19:49:33Z`
+- Type: `oracle_response_landed`
+- Surface: `exocortex`
+- Artifact class: `repo_markdown_change`
+- Capture level: `summary`
+- Durable capture: `summary_and_typed_record`
+- Summary: Oracle follow-up landed for Cowork/Chrome versus custom browser-worker strategy.
 
 ### commander-20260302-193337-149569-perplexity-response-landed
 - Emitted: `2026-03-02T19:33:37Z`
@@ -82,21 +100,3 @@
 - Capture level: `summary`
 - Durable capture: `summary_markdown`
 - Summary: Mac mini stage-1 constellation LaunchAgent is installed and running; detached tmux session can be reasserted on login.
-
-### system-20260302-055435-829577-mini-git-checkout-normalized
-- Emitted: `2026-03-02T05:54:35Z`
-- Type: `mini_git_checkout_normalized`
-- Surface: `runtime`
-- Artifact class: `runtime_state`
-- Capture level: `summary`
-- Durable capture: `summary_markdown`
-- Summary: Mac mini canonical repo path is now a real Git checkout tracking origin/main; detached constellation session remains present.
-
-### system-20260302-055042-793609-tmux-constellation-stage1
-- Emitted: `2026-03-02T05:50:42Z`
-- Type: `tmux_constellation_stage1`
-- Surface: `runtime`
-- Artifact class: `runtime_state`
-- Capture level: `summary`
-- Durable capture: `summary_markdown`
-- Summary: Mac mini stage-1 tmux constellation revived: repo hydrated, Psyche surface deployed, detached constellation session created.
