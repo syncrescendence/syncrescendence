@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -99,6 +99,9 @@ manus-checkpoint-help:
 cloudflare-domain-bridge-help:
 	@$(PYTHON) cloudflare_domain_bridge.py --help
 
+github-issue-bridge-help:
+	@$(PYTHON) github_issue_bridge.py --help
+
 # Default target
 help:
 	@echo "Syncrescendence Repository Commands"
@@ -125,6 +128,7 @@ help:
 	@echo "  make exocortex-bridge-help - Show generic exocortex event bridge usage"
 	@echo "  make manus-checkpoint-help - Show Manus checkpoint bridge usage"
 	@echo "  make cloudflare-domain-bridge-help - Show Cloudflare domain checkpoint bridge usage"
+	@echo "  make github-issue-bridge-help - Show GitHub issue/PR checkpoint bridge usage"
 	@echo "  make sync             - Pull, rebase, push"
 	@echo "  make sync-checkpoint  - Quick sync checkpoint (git state)"
 	@echo "  make tree             - Generate current directory tree"

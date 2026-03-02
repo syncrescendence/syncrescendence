@@ -1,14 +1,23 @@
 # Agent Event Summary
 
-**Updated**: 2026-03-02T05:23:41Z
+**Updated**: 2026-03-02T05:24:38Z
 
 ## Source Counts
 
 - `ajna`: `5`
 - `manus`: `2`
-- `system`: `1`
+- `system`: `2`
 
 ## Recent Events
+
+### system-20260302-052430-github-issue-state
+- Emitted: `2026-03-02T05:24:30Z`
+- Type: `github_issue_state`
+- Surface: `github`
+- Artifact class: `github_issue_pr`
+- Capture level: `pointer`
+- Durable capture: `pointer`
+- Summary: Captured GitHub issue state for public domain cutover.
 
 ### system-20260302-052335-domain-cutover-state
 - Emitted: `2026-03-02T05:23:35Z`
