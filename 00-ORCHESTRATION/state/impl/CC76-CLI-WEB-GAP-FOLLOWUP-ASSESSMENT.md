@@ -135,3 +135,28 @@ The next highest-leverage implementation is:
 5. only then decide whether NotebookLM upload should be the second prototype
 
 That is now a falsifiable build sequence rather than a conceptual discussion.
+
+---
+
+## Live Prototype Result
+
+On 2026-03-02, the first live Perplexity round-trip succeeded through the v1 relay:
+
+- Cowork was grounded to `00-ORCHESTRATION/relay/cowork-v1`
+- Claude in Chrome submitted the staged Perplexity packet
+- Cowork wrote the returned markdown and status JSON into the relay folder
+- Hazel detected the status file and ran the finalization script
+- the response landed back in repo truth and projected through the existing event/ontology path
+
+This does not prove the final architecture.
+It does prove the core v1 claim:
+
+- a designated local folder
+- Cowork execution
+- Claude in Chrome browser control
+- Hazel edge triggering
+- repo/event/ontology normalization
+
+is already strong enough to close the loop for a real subscription-surface relay.
+
+The remaining work is now about hardening and generalizing the pattern, not guessing whether the pattern exists.

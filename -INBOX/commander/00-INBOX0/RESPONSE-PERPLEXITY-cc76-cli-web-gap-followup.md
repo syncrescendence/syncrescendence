@@ -1,93 +1,94 @@
-Here is the narrow factual verification pass on Cowork + Claude in Chrome as a practical browser relay layer.
+# Perplexity Verification Response — CLI/Web Gap Follow-Up
 
-***
+- Slug: `cc76-cli-web-gap-followup`
+- Source: Perplexity (Claude Sonnet 4.6 model)
+- Retrieved: 2026-03-02
+- Perplexity URL: https://www.perplexity.ai/search/we-need-a-narrow-factual-verif-oHkp9bwpRuSFJjNh5Tx5oA
 
-# Cowork + Claude in Chrome — CLI↔Web Gap Follow-Up Verification
+---
 
-**March 2, 2026**
+Here is a rigorous, question-by-question factual verification based on official Anthropic sources and closely adjacent documentation. Each item is labeled as **Verified Fact**, **Plausible / Unverified**, or **Explicitly Unsupported**.
 
-***
+---
 
 ## 1. Cowork + Folder Grounding
 
-**Verified fact — strong official support.**
+**Verified Fact.** Cowork requires you to designate a specific local folder as its working context. Within that folder, it can read existing files, modify them, and create new files. Anthropic stated directly on X: *"In Cowork, you grant access to a folder on your computer. [Claude] can then read, modify, or create files within that folder."* Tasks are executed inside an isolated virtual machine sandboxed to that folder — Cowork cannot roam your entire filesystem. [1][2]
 
-Cowork has documented, explicit local file access as a core capability. The official help-center article states: *"Direct local file access: Claude can read from and write to your local files without manual uploads or downloads."*  Folder-specific context is supported via **Folder Instructions**: when you select a local folder in a Cowork session, Cowork loads project-specific instructions from that folder, and Claude can also update those instructions autonomously during a session. [support.claude](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
+**Constraint worth noting:** The sandbox is the point of confinement. Folder-based job relay is realistic and explicitly supported, but multi-folder or cross-drive access requires explicitly granting additional folder mounts. Cowork cannot self-expand its own file access scope. [2]
 
-File output is written directly to your filesystem after execution in an isolated VM. Cowork supports generation of Excel files with working formulas, PowerPoints, CSVs, and formatted documents — all delivered to specified local paths. [support.claude](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
+---
 
-**Constraint to note (official):** There is **no memory across sessions** — Claude does not retain memory from previous Cowork sessions, so folder instructions and global instructions are the only persistence mechanism across runs. The Claude Desktop app must remain open for the session to continue; closing it ends the session. **Inference:** Folder-based job relay is architecturally realistic, but the relay contract must be encoded in folder instructions and task descriptions, not in session memory. [support.claude](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
+## 2. Claude in Chrome: Browser Execution
 
-***
+**Verified Fact.** Claude in Chrome is an official Anthropic Chrome extension (currently beta, available to all paid subscribers at Pro tier and above). It can navigate pages, click buttons, fill forms, run multi-step processes across multiple tabs, and complete scheduled workflows. The official claude.com/chrome page explicitly states it supports "scheduled workflows" set to run daily or weekly without manual triggers. [3][4]
 
-## 2. Claude in Chrome — Browser Execution
+**Verified Fact — Cowork integration.** The official Anthropic page at claude.com/chrome explicitly documents the Cowork handoff: *"Chrome navigates and gathers information, Cowork produces Excel models, comparison decks, and reports without having to copy and paste."* Context flows automatically from Chrome to Cowork without manual copy-paste. This confirms that a Cowork task can invoke Claude in Chrome as part of its execution path — this is officially documented, not inferred. [5]
 
-**Verified fact — broadly capable, with specific documented limitations.**
+---
 
-Claude in Chrome is now generally available in beta to all paid subscribers (Pro, Team, Enterprise). The Chrome Web Store listing (official Anthropic publisher) explicitly documents the following capabilities: [pcmag](https://www.pcmag.com/news/anthropic-rolls-out-its-chatbot-claude-as-a-chrome-extension)
+## 3. File Uploads in Claude in Chrome
 
-- Navigate and organize inbox and calendar
-- Fill forms and handle repetitive data entry
-- Extract information from web content
-- **Run multi-step processes across multiple tabs**
-- **Record common browser workflows and let Claude handle them automatically** [chromewebstore.google](https://chromewebstore.google.com/publisher/anthropic/u308d63ea0533efcf7ba778ad42da7390)
+**Plausible / Partially Verified.** The official Chrome Web Store listing and claude.com/chrome page describe Claude in Chrome's capabilities in terms of browser-native interaction: navigating sites, clicking, filling forms, and extracting information from web content. There is **no explicit official statement** from Anthropic confirming that Claude in Chrome supports direct file uploads to third-party sites like NotebookLM or Perplexity as a documented capability. [6]
 
-PCMag's December 2025 rollout report (secondary source, labeled as such) confirms it can complete **scheduled tasks** and access multiple tabs simultaneously. The initial beta was Max-only ($100–$200/month) when launched in August 2025; it was extended to all paid tiers (Pro at $20/month minimum) by December 2025. [techcrunch](https://techcrunch.com/2025/08/26/anthropic-launches-a-claude-ai-agent-that-lives-in-chrome/)
+**Plausible inference:** Because Claude in Chrome can click buttons and fill forms, it could in principle trigger a file input element on a third-party site. However, operating a native OS file picker (which is what file upload buttons open) is a known hard constraint for browser automation agents — it typically requires OS-level access, not just browser DOM control. Whether Cowork's local file access bridges this gap is not officially documented. **Treat this as experimental.**
 
-**Cowork + Claude in Chrome integration: CONFIRMED.** The Chrome Web Store listing explicitly notes *"For developers: Claude Code"* as an integration point, and the December 2025 Reddit thread confirmed Claude in Chrome shipped with a **Claude Code integration**. The Cowork help article also notes MCP connectivity as part of the permission/tool layer. **Inference (not explicitly documented):** whether a Cowork task can programmatically *invoke* a Claude in Chrome browser action as a sub-agent step is not confirmed in official docs — treat the Cowork→Chrome dispatch chain as plausible but unverified at the sub-agent invocation level. [reddit](https://www.reddit.com/r/ClaudeAI/comments/1pq2cf8/official_claude_in_chrome_is_now_live_for_all/)
+---
 
-***
+## 4. State, Continuation, and Long-Running Workflows
 
-## 3. File Uploads
+**Verified Fact.** Claude in Chrome maintains context across tabs during a session — the official description notes it *"maintains context of everything happening in their browser"*. The claude.com/chrome page confirms background task completion and scheduled recurrence. [4][7]
 
-**Verified fact — Claude's own upload surface is broad; third-party site uploads via Chrome are separately addressable.**
+**Partially Verified.** Claude in Chrome can record workflows for reuse: *"Record common browser workflows and let Claude handle them automatically"*. This constitutes a form of workflow continuation. [6]
 
-For Claude's own interface, officially supported upload types include: [support.claude](https://support.claude.com/en/articles/8241126-uploading-files-to-claude)
+**Plausible / Unverified — long-running chained complexity.** There is no official documentation specifying a session state limit, a maximum number of chained steps, or a timeout ceiling. Third-party hands-on guides note that well-defined tasks of 7–10 steps complete reliably, but complex or indefinitely long chained actions are not officially characterized as supported or unsupported. **Treat multi-dozen-step chains as experimental.** [8]
 
-| Category | Formats |
-|---|---|
-| Documents | DOCX, CSV, TXT, HTML, ODT, RTF, EPUB, JSON, XLSX |
-| Images | JPEG, PNG, GIF, WebP |
-| Size limit | 30MB per file, 20 files per chat |
-| Project files | Unlimited count, 30MB per file, text extraction only (except multimodal PDFs) |
+---
 
-The question of whether Claude in Chrome can **upload files to third-party sites** (e.g., NotebookLM, Perplexity) is a distinct capability from Claude's own upload surface. The Chrome Web Store listing states Claude can "fill forms" and "run multi-step processes", and PCMag confirms "filling out forms" is an explicit capability. **Inference:** Form-based file upload to third-party sites is architecturally within scope of Claude in Chrome's documented capability set (it is a form action), but there is **no official statement explicitly confirming third-party file uploads** to services like NotebookLM. Treat this as plausible but unverified — **lower confidence, experimental**. [pcmag](https://www.pcmag.com/news/anthropic-rolls-out-its-chatbot-claude-as-a-chrome-extension)
+## 5. Programmability, Developer Hooks, and Automation Surface
 
-***
+**Partially Verified.** The official claude.com/chrome FAQ notes: *"Developers can use Claude Code to build and test directly in Chrome. This integration enables faster iteration on browser-based projects."* Claude in Chrome and Claude Code communicate via MCP (Model Context Protocol), which keeps context synced across terminal and browser sessions. [9]
 
-## 4. Follow-Ups and Continuation
+**Explicitly Unsupported (as of current official documentation).** There is no official Anthropic API, webhook, or programmatic trigger surface for Claude in Chrome itself — no documented way to invoke it headlessly, script it externally, or embed it as a callable service. The current model is purely interactive and task-driven, initiated by a user prompt or a pre-recorded workflow. **This is a hard architectural boundary to note: you cannot, from code, call "Claude in Chrome, go do X" the way you would call an API.**
 
-**Verified fact — within-session state is maintained; cross-session state is not.**
+---
 
-Claude in Chrome maintains browser context across a multi-step interaction during a single task session: it "maintains context of everything happening in your browser"  and can work across multiple tabs simultaneously. The workflow recording feature (Chrome Web Store) implies state-aware continuation within a session. [techcrunch](https://techcrunch.com/2025/08/26/anthropic-launches-a-claude-ai-agent-that-lives-in-chrome/)
+## 6. Factual Verdict
 
-**Hard official limitation:** Claude in Chrome, like Cowork, does not have documented cross-session persistence. There is no officially documented mechanism to resume a prior browser task from a new session. **Verified constraint:** Claude will prompt for user permission before high-risk actions (publishing, purchasing, sharing personal data) and auto-disables on financial services, adult content, and piracy sites. These blocks are enforced by default and are not overridable for those categories. [techcrunch](https://techcrunch.com/2025/08/26/anthropic-launches-a-claude-ai-agent-that-lives-in-chrome/)
+| Prototype | Strength of Current Official Capability | Experimental Risk |
+|---|---|---|
+| **Perplexity browser relay** | Moderate — Chrome can navigate and extract from Perplexity; Cowork can receive that data and produce outputs [5][10] | The relay depends on Chrome→Cowork context handoff working reliably end-to-end; no official SLA on handoff fidelity |
+| **NotebookLM upload + synthesis** | Low-to-moderate — Chrome can navigate NotebookLM; file upload via native OS picker is unverified officially | File upload capability to third-party sites is the single largest unverified assumption; treat as experimental, not architectural fact |
 
-***
+### What is verified and safe to architect around:
 
-## 5. Extension / Programmability / Hooks
+- Cowork folder read/write with explicit folder grant [10]
+- Chrome multi-step browser interaction + scheduled/recorded workflows [5]
+- Native Chrome→Cowork handoff with automatic context transfer [5]
 
-**Verified fact — no official developer API or programmable hook for Claude in Chrome.**
+### What must be treated as experimental:
 
-The official Chrome Web Store listing (Anthropic publisher) describes Claude in Chrome as entirely interaction-driven: natural conversation, task description, and workflow recording. There is no documented webhook, event listener, REST hook, or programmatic API surface exposed by the extension itself. The Claude Code integration mentioned in the December 2025 rollout is user-facing (Claude Code users can invoke browser tasks from Claude Code's interface), not a developer hook for external orchestration. [chromewebstore.google](https://chromewebstore.google.com/publisher/anthropic/u308d63ea0533efcf7ba778ad42da7390)
+- File upload to third-party sites (OS file picker access from Chrome agent) — not officially documented
+- Complex chained workflows beyond ~10 steps — no official characterization of limits
+- Any programmatic invocation of Claude in Chrome from external code — explicitly absent from official documentation; no developer hook exists [5]
 
-**Verified fact:** The current official model is purely interactive and task-driven. Any programmatic relay must go through Claude Code's MCP or tool layer to invoke browser actions — there is no headless or API-driven mode for Claude in Chrome. [chromewebstore.google](https://chromewebstore.google.com/publisher/anthropic/u308d63ea0533efcf7ba778ad42da7390)
+**The Cowork + Claude in Chrome stack is strong enough to be a first execution layer for research-gather → local-synthesis workflows (e.g., competitor research → PowerPoint). It is not yet verified as a reliable execution layer for upload-dependent workflows like NotebookLM ingestion until the file-picker question is empirically tested or officially clarified.**
 
-***
+---
 
-## 6. Best Factual Interpretation
+## Sources
 
-| Prototype target | Current official support | Confidence | Recommendation |
-|---|---|---|---|
-| **Perplexity browser relay** | Claude in Chrome can navigate, extract, and run multi-step workflows; Perplexity is not on the blocked-sites list | **Medium-high** | Prototype now — treat workflow recording as the relay mechanism |
-| **NotebookLM upload + synthesis** | Claude in Chrome can fill forms and run multi-step processes; file upload to third-party sites is plausible but not explicitly documented | **Medium** | Prototype with explicit verification step — do not assume file upload works until tested |
-| **Cowork as job relay layer** | Folder grounding, local file read/write, scheduled tasks, and sub-agent coordination are all officially documented | **High** | Architectural fact — proceed |
-| **Cowork→Chrome sub-agent dispatch** | Claude Code integration exists; whether Cowork can invoke Chrome actions as a named sub-agent step is undocumented | **Low-medium** | Experimental — verify before building architecture around it |
+1. letsdatascience — https://letsdatascience.com/blog/anthropic-launches-claude-cowork-the-agent-that-lives-on-your-...
+2. letsdatascience (same article, folder constraints)
+3. pcmag — https://www.pcmag.com/news/anthropic-rolls-out-its-chatbot-claude-as-a-chrome-extension
+4. techcrunch (Claude in Chrome capabilities)
+5. claude.com/chrome — https://claude.com/chrome (official Anthropic page)
+6. chromewebstore.google — Chrome Web Store listing for Claude in Chrome
+7. techcrunch (context maintenance across tabs)
+8. datacamp — hands-on guide to Claude in Chrome step limits
+9. aimaker.substack — MCP integration between Claude Code and Chrome
+10. venturebeat — https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent...
 
-**Overall verdict:** Cowork + Claude in Chrome is strong enough for a **Perplexity browser relay prototype now**. The folder grounding, workflow recording, multi-tab execution, and scheduled task features are all officially documented. The **NotebookLM upload prototype** is viable as an experiment but should be treated as requiring empirical confirmation on the file-upload step specifically — it is not an architectural fact yet. [support.claude](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
+---
 
-The part that remains most unverified and should **not** be treated as architectural fact: the Cowork→Chrome programmatic sub-agent invocation chain, and explicit third-party file upload behavior via Claude in Chrome. Both are plausible from documented capability descriptions, but neither is explicitly stated in official Anthropic documentation as of this date.
-
-***
-
-*Filesystem relay note: The `python3 perplexity_response_bridge.py` command must be executed locally. This response is the full artifact content for `-INBOX/commander/00-INBOX0/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md`.*
+*Prepared using Perplexity with Claude Sonnet 4.6 — 25 citations referenced in original response.*

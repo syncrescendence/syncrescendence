@@ -35,3 +35,15 @@ Hazel is the recommended edge-trigger layer for v1:
 - Hazel notices the status file
 - Hazel runs the finalization script
 - repo/event/ontology are updated automatically
+
+## Current Status
+
+The first live Perplexity round-trip succeeded on 2026-03-02.
+
+That verified the full v1 loop:
+
+- staged job file in `jobs/inbox/`
+- staged packet copy in `packets/`
+- Cowork execution with Claude in Chrome
+- response markdown + status JSON written to `artifacts/outgoing/`
+- Hazel-triggered finalization back into repo truth
