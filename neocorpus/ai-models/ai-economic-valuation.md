@@ -1,0 +1,111 @@
+# AI Economic Valuation
+
+## Definition
+
+AI economic valuation is the discipline of assessing whether the current wave of AI investment represents a speculative bubble or structural value creation. The debate is framed by two opposing forces: skeptics who see echoes of the dot-com bust in massive capital expenditures without proportionate revenue, and bulls who argue that AI's productivity gains are so large that current valuations are conservative. The truth, as usual, lives in the specifics — which companies, which applications, which metrics, and over what time horizon.
+
+The key data points as of early 2026: data center CapEx spending is at historic highs, ARK Invest's Chief Futurist Brett Winton calls the bubble narrative "flat wrong," Anthropic's Claude Economic Index introduces "task primitives" as a new measurement framework for AI's economic impact, and global impact remains profoundly uneven across industries and geographies.
+
+---
+
+## Core Principles
+
+### 1. The Bubble vs. Structural Value Debate
+
+The bubble argument: AI companies are valued at multiples that require enormous future revenue growth. Data center construction is a capital-intensive bet on demand that may not materialize. The last time the tech industry spent this aggressively on infrastructure (fiber optics in the late 1990s), most of the investment was written off.
+
+The structural value argument: AI is not fiber optics. The productivity gains are measurable today — not speculative future demand but demonstrated present capability. Code generation, document analysis, customer service automation, scientific discovery acceleration — these are real applications generating real value. The CapEx is justified because the demand is already here and growing.
+
+Both arguments contain truth. Some AI investments will fail catastrophically. Others will generate returns that dwarf current projections. The question is which ones, and the answer depends on specifics that aggregate market analysis obscures.
+
+### 2. ARK Invest's Contrarian Thesis
+
+Brett Winton's argument has three prongs:
+- **Revenue projections are conservative**: Current Wall Street models underestimate the pricing power that AI companies have. As models become more capable, the value per token increases faster than the cost per token decreases.
+- **CapEx is justified**: Unlike the fiber optic boom, where supply was built speculatively, data center construction is responding to demonstrated demand. Inference volume is growing exponentially.
+- **Wall Street underestimates "cures"**: Winton's most provocative claim is that traditional finance prefers recurring revenue models (subscriptions, SaaS) and systematically undervalues one-time transformative breakthroughs (like curing a disease or automating a job category entirely). AI may produce more "cures" than "subscriptions," making traditional valuation models structurally wrong.
+
+The prediction: productivity gains from AI tools will "triple over the course of this year and then triple again," leading to a compound increase in pricing power of 40-50x. This is an extraordinary claim that, if correct, means current valuations are not inflated but deeply underpriced.
+
+### 3. Task Primitives and the Claude Economic Index
+
+Anthropic's Economic Index introduces a framework for measuring AI's economic impact at the task level. Rather than asking "how much revenue does AI generate?" it asks "what tasks can AI perform, at what complexity level, with what autonomy, and at what success rate?"
+
+This task-primitive approach reveals that AI's impact is highly uneven:
+- **High-skill analytical tasks**: Strong AI performance, significant productivity gains
+- **Routine administrative tasks**: High automation potential, cost savings
+- **Physical tasks**: Minimal AI impact (no robot body)
+- **Creative/judgment tasks**: Variable, depends on domain
+
+The unevenness matters for valuation because aggregate statistics ("AI will add $X trillion to GDP") mask enormous variance. Some sectors will see transformative gains; others will see minimal impact. Valuations based on sector-specific analysis will be more accurate than those based on macro projections.
+
+### 4. Uneven Global Impact
+
+AI's economic impact is geographically concentrated. Companies and economies with large knowledge-worker populations, strong digital infrastructure, and access to frontier models benefit disproportionately. Economies dependent on physical labor, natural resource extraction, or industries resistant to automation benefit less or not at all.
+
+This creates a compounding effect: AI-productive economies become more productive, attracting more AI investment, becoming more productive still. The gap between AI-leveraged and AI-unleveraged economies may widen faster than any previous technology wave.
+
+---
+
+## Key Insights
+
+### The Pricing Power Asymmetry
+
+Winton's insight about pricing power is underappreciated. If an AI tool saves a knowledge worker 2 hours per day, the tool's value to the employer is 2 hours of salary savings — potentially $50-100/day. Current pricing for frontier AI access is $20-200/month. The gap between value delivered and price charged is enormous, which means pricing power has room to expand by an order of magnitude before customers defect.
+
+This asymmetry explains why AI revenue projections may indeed be conservative: companies are pricing far below value because they are still in market-capture mode. When they shift to value-capture mode, revenues could increase dramatically without losing customers.
+
+### CapEx as Leading Indicator, Not Bubble Signal
+
+Data center CapEx is often cited as evidence of a bubble: "companies are spending billions on infrastructure without proportionate revenue." But CapEx is a leading indicator — revenue follows infrastructure, not the other way around. The fiber optic analogy fails because fiber optic demand was speculative (betting on future internet usage) while AI compute demand is demonstrated (inference volume is measurable and growing).
+
+The relevant question is not "is CapEx too high?" but "will inference demand continue to grow?" If agentic deployment becomes standard (see: agentic-model-deployment.md), inference demand grows by orders of magnitude as models run autonomously rather than responding to individual queries.
+
+### The "Cure" vs. "Subscription" Valuation Problem
+
+Traditional financial models value recurring revenue streams highly and one-time transformative events poorly. If AI automates an entire job category, the economic value is enormous but non-recurring — the job is automated once, permanently. Wall Street's models, calibrated for SaaS metrics (ARR, churn, NRR), may systematically undervalue AI's most transformative applications because they do not fit the recurring revenue template.
+
+This is a structural bias in financial modeling, not a flaw in AI. The implication is that the "bubble" assessment may itself be a byproduct of applying the wrong valuation framework.
+
+### The Inequality Amplifier
+
+AI's uneven impact means that economic inequality — between individuals, companies, industries, and nations — may increase even as aggregate productivity increases. A world where total GDP grows 10% but the gains accrue to 20% of the population is a world with more wealth and more inequality simultaneously. This is not a prediction about whether AI is "good" or "bad" but a structural observation about distributional effects.
+
+---
+
+## Anti-Patterns
+
+### Binary Bubble/No-Bubble Framing
+The reality is granular: some AI investments are overvalued, others are undervalued, and the aggregate assessment depends on which you weight more heavily. Demanding a single verdict — "bubble" or "not bubble" — forfeits the nuance that matters.
+
+### Ignoring Task-Level Specificity
+Macro projections ("AI will add $15 trillion to GDP") are too aggregated to be useful for investment or strategy decisions. The value is in task-level analysis: which specific tasks, in which specific industries, with which specific models?
+
+### Extrapolating from Consumer AI to Enterprise AI
+Consumer AI (chatbots, image generation) has different economics than enterprise AI (process automation, code generation, research acceleration). Consumer AI may be overhyped relative to willingness-to-pay. Enterprise AI may be underhyped relative to value delivered.
+
+### Assuming Current Model Capability is Final
+Valuations based on what models can do today will be wrong in 12 months. The self-improvement feedback loop (models contributing to their own development) means capability growth is accelerating, not linear. Valuation models must account for capability trajectory, not just current capability.
+
+---
+
+## Implications
+
+The AI economic valuation debate will not be settled by argument — it will be settled by revenue. As frontier models move from impressive demonstrations to deployed production systems generating measurable value, the data will resolve what theory cannot. The next 12-24 months are the critical period: if AI-driven revenue growth materializes at the rates ARK predicts (tripling and tripling again), the bubble narrative collapses. If revenue growth stalls while CapEx continues, the bubble narrative strengthens.
+
+For operators and practitioners, the actionable implication is: focus on demonstrated value creation at the task level. Build systems that produce measurable outputs (code written, documents analyzed, decisions supported) rather than impressive demos. The economic case for AI will be won task by task, not by grand narrative.
+
+---
+
+## Source Provenance
+
+| Source | File | Content |
+|--------|------|---------|
+| ARK Invest — Brett Winton on AI bubble thesis | `corpus/ai-models/01248.md` | Pricing power argument, CapEx justification, "cures vs subscriptions," 40-50x compound prediction |
+| AI avatar / media generation landscape | `corpus/ai-models/09903.md` | Consumer AI platform economics, creative tool pricing, market fragmentation |
+| Google AI Ecosystem Audit | `corpus/ai-models/08800.md` | Infrastructure layer economics, compute pricing, platform business models, developer ecosystem |
+
+---
+
+*Compendium entry 14 of 21 -- ai-models*
+*Crystallized: 2026-03-02*
