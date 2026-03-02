@@ -1,8 +1,8 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-02 (CC75a)
+**Updated**: 2026-03-02 (CC76a)
 **Corpus**: 22 semantic topic folders, 5,783 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 126 entries across 18 topic folders (18 COMPLETE)
+**Neocorpus**: 182 entries across 22 topic folders (22/22 COMPLETE — CRUSH FINISHED)
 **Subcategory Indexes**: 10 folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
@@ -14,18 +14,18 @@
 |--------|------:|-------------|:---:|
 | ai-biotech | 21 | Biotechnology, BCI, AI in life sciences | — |
 | ai-capability-futures | 481 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (CC75a COMPLETE) | **8** |
-| ai-memory-retrieval | 319 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture | — |
-| ai-models | 643 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization | **6** |
+| ai-memory-retrieval | 319 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (CC76a COMPLETE) | — |
+| ai-models | 644 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (CC76a COMPLETE) | **6** |
 | ai-safety | 42 | Constitutional AI, RLHF, alignment, governance, existential risk | — |
 | ai-video-vfx | 22 | AI image/video generation, VFX workflows, creative AI tooling | — |
-| claude-code | 346 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
+| claude-code | 347 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions (CC76a COMPLETE) | **6** |
 | design-taste | 34 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" (CC73a COMPLETE) | — |
 | geopolitics-grand-strategy | 122 | US-China, grand strategy, civilizational analysis, defense, international relations | — |
 | health-psychology | 88 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
 | infrastructure | 121 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs | — |
 | leadership-management | 26 | Executive decision-making, org design, management frameworks, AI adoption | — |
 | meaning-civilization | 125 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism (CC75a COMPLETE) | **11** |
-| multi-agent-systems | 2402 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
+| multi-agent-systems | 2404 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files (CC76a COMPLETE) | **6** |
 | openclaw | 244 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
 | philosophy-esoterica | 168 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah (CC75a COMPLETE) | **8** |
 | product-business | 210 | Business models, PMF, SaaS, AI product strategy, distribution (CC75a COMPLETE) | **9** |
@@ -294,6 +294,90 @@ The compendium layer. Each entry is the definitive treatment of a concept, lossl
 | `distribution-ai-era.md` | 8 files | Content as distribution, AI-powered growth combos |
 
 **Totals**: 13 entries from 171 on-topic source files. 86 of 274 files (31%) reclassified. 9 subcategories. product-business/ nucleosynthesis COMPLETE.
+
+### ai-memory-retrieval/ (CC76a)
+
+| Entry | Concept |
+|-------|---------|
+| `memory-architectures-for-ai-agents.md` | Three-layer architecture, CQRS on git, file-first, always-on vs tool-gated |
+| `knowledge-graphs-and-graph-memory.md` | Graphiti/Neo4j, episodic vs semantic, graph partitioning, autopoietic decay |
+| `personal-ai-infrastructure.md` | PAI thesis, persistent context as asset, model neutrality, lock-in trap |
+| `context-engineering.md` | Continuous degradation, clean > large context, 6-layer Dash architecture |
+| `self-learning-agent-systems.md` | GPU-poor continuous learning, error pattern memory, institutional knowledge |
+| `tools-for-thought-and-agent-vaults.md` | Zettelkasten for agents, Cornelius experiment, vault lifecycle |
+| `cognitive-infrastructure-design.md` | Shallow semantic directories, single source of truth, three-layer architecture |
+| `ai-agent-engineering-as-discipline.md` | Trigger/loop/tools architecture, domain > coding, five-layer skill stack |
+| `retrieval-augmented-generation.md` | RAG pipeline, demo-to-production gap, hybrid retrieval, evaluation problem |
+| `memory-persistence-patterns.md` | Six patterns: history stuffing, summarization, filesystem, database, structured, auto-recall |
+
+**Totals**: 10 entries from 319 source files. ai-memory-retrieval/ nucleosynthesis COMPLETE.
+
+### claude-code/ (CC76a)
+
+| Entry | Concept |
+|-------|---------|
+| `context-window-management-and-compaction.md` | Lost in the Middle, auto-compaction, trigger thresholds, effective range |
+| `claude-md-configuration-system.md` | Multi-scope loading, import depth, behavioral contract |
+| `sub-agent-architecture.md` | Independent context windows, agent roster, background agents |
+| `agent-teams-and-parallel-orchestration.md` | Team lead + teammates, file-ownership, shared task list |
+| `hooks-and-permissions-architecture.md` | Deny → allow → ask, MCP scope precedence, security perimeter |
+| `skills-and-progressive-disclosure.md` | On-demand context loading, skill registry, anti-shelfware |
+| `mcp-as-integration-standard.md` | JSON-RPC transport, Desktop Extensions, IDE adoption |
+| `extended-thinking-and-effort-control.md` | Keyword-to-budget mapping, effort levels, extended thinking vs Plan Mode |
+| `plan-mode-and-human-in-the-loop.md` | Exploration before execution, triggering conditions, team alignment |
+| `agent-first-engineering-culture.md` | Agents as primary workers, objective-first specs, workflow inversion |
+| `filesystem-as-agent-memory.md` | CLAUDE.md as state, compounding file systems, session coordination |
+| `cowork-and-non-technical-access.md` | Non-terminal agent interface, outcome-first prompting, desktop agent |
+| `context-injection-and-codebase-traversal.md` | Search overhead reduction, React Grab, context specificity |
+| `autonomous-research-workflow.md` | Voice → SSH → GPU → results, human as redirector |
+
+**Totals**: 14 entries from 347 source files. claude-code/ nucleosynthesis COMPLETE.
+
+### ai-models/ (CC76a)
+
+| Entry | Concept |
+|-------|---------|
+| `mathematical-foundations-of-ml.md` | ML prerequisite toolkit, Yi Ma parsimony + self-consistency |
+| `frontier-model-release-cadence.md` | Accelerating releases, lab rivalry, interval compression |
+| `model-capability-benchmarks.md` | ARC-AGI, SWE-Bench, Arena Hard, cost-per-task, Move 37 |
+| `self-improving-ai-models.md` | Models in own training pipeline, operational self-improvement |
+| `scaling-laws-as-engineering.md` | Compute allocation, "is scaling dead?" debate |
+| `reinforcement-learning-for-reasoning.md` | RLHF successors, RL-primary capability, sample inefficiency |
+| `token-efficiency-and-inference-optimization.md` | Token efficiency as metric, context extension, cost-performance frontier |
+| `neural-memory-architectures.md` | Titans/MIRAS, memory as structural property, surprise metrics |
+| `agentic-model-deployment.md` | Subagent orchestration, systems over prompts, abstraction ladder |
+| `local-vs-hosted-ai.md` | Economics/security, setup-vs-execution, hybrid architecture |
+| `model-role-assignment-antipatterns.md` | Cognitive lobotomization, Ajna2 cautionary tale, function-based taxonomy |
+| `ai-platform-ecosystem.md` | Five-layer model, Google full-stack, platform routing |
+| `agi-definition-and-measurement.md` | Chollet sample efficiency, ARC-AGI v1-v3, timeline compression |
+| `ai-economic-valuation.md` | Bubble vs structural value, task primitives, cure economics |
+
+**Totals**: 14 entries from 644 source files. ai-models/ nucleosynthesis COMPLETE.
+
+### multi-agent-systems/ (CC76a)
+
+| Entry | Concept |
+|-------|---------|
+| `orchestration-topology-selection.md` | Parallel/sequential/hierarchical/hybrid, AdaptOrch 12-23% gains |
+| `mas-production-failure-modes.md` | 41-86.7% production failure, 14 failure modes, coordination > model errors |
+| `agent-role-specialization.md` | Cognitive function mapping, model-role alignment, homogenization trap |
+| `context-window-as-operational-constraint.md` | Context tax (50%+), fresh-context-per-phase, degradation before exhaustion |
+| `agent-memory-architecture.md` | Five options: injection, vector, graph, filesystem, living ledger |
+| `repo-as-coordination-surface.md` | Repo sovereignty, phantom paths, handoffs as documents |
+| `human-in-the-loop-gate-design.md` | Irreducibility test, minimal-action principle, gate taxonomy |
+| `trust-hierarchies-and-agent-security.md` | Double agent problem, minimum-privilege, prompt injection |
+| `task-decomposition-and-dependency-graphs.md` | DAGs, parallel vs sequential, lease timeouts, granularity trap |
+| `a2a-and-mcp-protocol-standardization.md` | MCP "USB-C for AI", context tax, protocol governance |
+| `hierarchical-vs-peer-orchestration.md` | Single-point-of-coherence/failure vs coordination ambiguity |
+| `prompt-engineering-as-agent-constitution.md` | System prompt as operating law, searing problem, avatar effect |
+| `context-injection-vs-tool-discovery.md` | Injection vs retrieval tools, Oracle formula endorsement |
+| `multi-agent-evaluation-and-benchmarking.md` | Coordination metrics, execution trace analysis, cost-as-signal |
+| `agent-lifecycle-management.md` | Rate limits, auth expiry, lease-based claiming, escalation |
+| `constellation-architecture.md` | Multi-machine fleets, inter-machine routing, anesthesia protocol |
+| `agent-interoperability-and-lock-in.md` | Model/protocol/platform lock-in, repo sovereignty as defense |
+| `session-state-continuity-and-handoffs.md` | Handoff as first-class artifact, Kaizen sweeps, lineage anti-pattern |
+
+**Totals**: 18 entries from 2,404 source files. multi-agent-systems/ nucleosynthesis COMPLETE.
 
 ---
 
