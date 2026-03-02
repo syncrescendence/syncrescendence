@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -48,6 +48,10 @@ reconcile-ajna-events-project-domain:
 	@$(PYTHON) reconcile-ajna-events.py --project-ontology --ontology-url "$(ONTOLOGY_DOMAIN_URL)"
 	@echo "✓ Ajna event landing zone reconciled and projected to ontology domain"
 
+sanitize-openclaw-events:
+	@$(PYTHON) sanitize-openclaw-events.py --apply
+	@echo "✓ OpenClaw runtime event files sanitized and report refreshed"
+
 ontology-init:
 	@$(PYTHON) ontology_v1.py init
 	@echo "✓ Ontology v1 schema initialized"
@@ -86,6 +90,7 @@ help:
 	@echo "  make reconcile-ajna-events - Ingest Ajna event files from OpenClaw workspace"
 	@echo "  make reconcile-ajna-events-project - Reconcile Ajna events and POST them to local ontology"
 	@echo "  make reconcile-ajna-events-project-domain - Reconcile Ajna events and POST them to ontology domain"
+	@echo "  make sanitize-openclaw-events - Redact secrets from OpenClaw runtime event files"
 	@echo "  make ontology-init    - Initialize the local ontology v1 SQLite schema"
 	@echo "  make ontology-project - Project repo-normalized state into ontology v1"
 	@echo "  make ontology-run     - Run the ontology v1 FastAPI service on 127.0.0.1:8787"

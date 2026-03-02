@@ -1,0 +1,59 @@
+{
+  "files_changed": 1,
+  "files_scanned": 8,
+  "generated_at": "2026-03-02T04:10:45Z",
+  "mode": "apply",
+  "results": [
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/ajna-20260301-184507-slack-token-regen.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/ajna-20260302-021600-sample-browser-check.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/ajna-20260302-032626-obsidian-note-create.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/ajna-20260302-033735-manus-queue-state.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/ajna-20260302-discord-token-regen.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/commander-20260302-gcloud-auth.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": false,
+      "path": "/Users/system/.openclaw/workspace/events/archive/commander-20260302-wrangler-auth.json",
+      "redacted_keys": [],
+      "status": "clean"
+    },
+    {
+      "changed": true,
+      "path": "/Users/system/.openclaw/workspace/events/failed/ajna-20260301-195534-manus-api-key.json",
+      "redacted_keys": [
+        "key_value"
+      ],
+      "status": "sanitized"
+    }
+  ],
+  "workspace_root": "/Users/system/.openclaw/workspace"
+}
