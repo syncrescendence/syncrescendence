@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help oracle-packet-help perplexity-packet-help oracle-response-bridge-help perplexity-response-bridge-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -109,6 +109,18 @@ github-issue-bridge-help:
 channel-surface-bridge-help:
 	@$(PYTHON) channel_surface_bridge.py --help
 
+oracle-packet-help:
+	@$(PYTHON) stage_oracle_packet.py --help
+
+perplexity-packet-help:
+	@$(PYTHON) stage_perplexity_packet.py --help
+
+oracle-response-bridge-help:
+	@$(PYTHON) oracle_response_bridge.py --help
+
+perplexity-response-bridge-help:
+	@$(PYTHON) perplexity_response_bridge.py --help
+
 bootstrap-mini:
 	@bash bootstrap-mac-mini.sh all
 	@echo "✓ Mac mini repo/bootstrap state refreshed"
@@ -158,6 +170,10 @@ help:
 	@echo "  make cloudflare-domain-bridge-help - Show Cloudflare domain checkpoint bridge usage"
 	@echo "  make github-issue-bridge-help - Show GitHub issue/PR checkpoint bridge usage"
 	@echo "  make channel-surface-bridge-help - Show Slack/Discord runtime checkpoint bridge usage"
+	@echo "  make oracle-packet-help - Show Oracle web dispatch packet generator usage"
+	@echo "  make perplexity-packet-help - Show Perplexity verification packet generator usage"
+	@echo "  make oracle-response-bridge-help - Show Oracle response landing bridge usage"
+	@echo "  make perplexity-response-bridge-help - Show Perplexity response landing bridge usage"
 	@echo "  make bootstrap-mini  - Render mini configs, rsync repo to the Mac mini, and deploy Psyche surface"
 	@echo "  make revive-mini-constellation - Create the stage-1 tmux constellation session on the Mac mini"
 	@echo "  make constellation-mini-status - Report Mac mini repo/tmux constellation status"
