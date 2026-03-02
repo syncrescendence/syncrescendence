@@ -1,14 +1,24 @@
 # Agent Event Summary
 
-**Updated**: 2026-03-02T05:24:38Z
+**Updated**: 2026-03-02T05:27:04Z
 
 ## Source Counts
 
-- `ajna`: `5`
+- `ajna`: `3`
+- `commander`: `2`
 - `manus`: `2`
-- `system`: `2`
+- `system`: `3`
 
 ## Recent Events
+
+### system-20260302-052703-github-issue-state
+- Emitted: `2026-03-02T05:27:03Z`
+- Type: `github_issue_state`
+- Surface: `github`
+- Artifact class: `github_issue_pr`
+- Capture level: `pointer`
+- Durable capture: `pointer`
+- Summary: Captured closed GitHub issue state for completed public domain cutover.
 
 ### system-20260302-052430-github-issue-state
 - Emitted: `2026-03-02T05:24:30Z`
@@ -85,8 +95,8 @@
 ### ajna-20260302-021600-sample-browser-check
 - Emitted: `2026-03-02T02:16:00Z`
 - Type: `browser_state_check`
-- Surface: `unknown`
-- Artifact class: `unknown`
+- Surface: `browser`
+- Artifact class: `browser_action`
 - Capture level: `summary`
-- Durable capture: `unknown`
+- Durable capture: `summary_markdown`
 - Summary: Verified OpenClaw browser relay attachment and example.com tab availability.

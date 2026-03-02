@@ -1,13 +1,16 @@
 {
   "failed_count": 0,
   "failed_files": [],
-  "last_run_at": "2026-03-02T05:24:38Z",
-  "processed_count": 0,
-  "processed_ids": [],
+  "last_run_at": "2026-03-02T05:27:04Z",
+  "processed_count": 1,
+  "processed_ids": [
+    "system-20260302-052703-github-issue-state"
+  ],
   "skipped_duplicates": [],
   "source_counts": {
-    "ajna": 5,
+    "ajna": 3,
+    "commander": 2,
     "manus": 2,
-    "system": 2
+    "system": 3
   }
 }
