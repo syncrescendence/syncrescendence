@@ -367,7 +367,6 @@ def project_config_manifest(connection: sqlite3.Connection, commit_sha: str | No
 def project_event_entities(connection: sqlite3.Connection, event: dict[str, Any], commit_sha: str | None) -> int:
     count = 0
     event_entity_id = f"exo-event:{event['id']}"
-    agent_state_id = "agent-state:ajna"
     event_payload = {
         "surface": event.get("surface"),
         "artifact_class": event.get("artifact_class"),
@@ -390,14 +389,27 @@ def project_event_entities(connection: sqlite3.Connection, event: dict[str, Any]
         provenance_type="repo-path",
         provenance_ref=str(LEDGER_PATH.relative_to(REPO_ROOT)),
     )
-    if not entity_exists(connection, agent_state_id):
+    source = event["source"]
+    if source in {"ajna", "commander", "manus"}:
+        target_id = f"agent-state:{source}"
+        target_kind = "AgentState"
+        target_slug = source
+        target_title = f"{source.capitalize()} state (pending snapshot)"
+        target_state = "pending-snapshot"
+    else:
+        target_id = f"surface-state:{source}"
+        target_kind = "SurfaceState"
+        target_slug = source
+        target_title = f"{source.capitalize()} surface state"
+        target_state = event.get("type") or "observed"
+    if not entity_exists(connection, target_id):
         upsert_entity(
             connection,
-            entity_id=agent_state_id,
-            kind="AgentState",
-            slug="ajna",
-            title="Ajna runtime state (pending snapshot)",
-            state="pending-snapshot",
+            entity_id=target_id,
+            kind=target_kind,
+            slug=target_slug,
+            title=target_title,
+            state=target_state,
             payload={},
             source=event["source"],
             captured_at=event["emitted_at"],
@@ -406,10 +418,10 @@ def project_event_entities(connection: sqlite3.Connection, event: dict[str, Any]
         )
     upsert_relationship(
         connection,
-        relationship_id=f"rel:{event_entity_id}:updates:agent-state-ajna",
+        relationship_id=f"rel:{event_entity_id}:updates:{target_id.replace(':', '-')}",
         subject_id=event_entity_id,
         predicate="updates",
-        object_id=agent_state_id,
+        object_id=target_id,
         payload={"event_type": event["type"]},
         source=event["source"],
         captured_at=event["emitted_at"],

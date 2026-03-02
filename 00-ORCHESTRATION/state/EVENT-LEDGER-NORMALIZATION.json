@@ -1,0 +1,15 @@
+{
+  "normalized": {
+    "ajna-20260302-021600-sample-browser-check": [
+      "surface: browser",
+      "artifact_class: browser_action",
+      "durable_capture: summary_markdown"
+    ],
+    "commander-20260302-gcloud-auth": [
+      "source: ajna -> commander"
+    ],
+    "commander-20260302-wrangler-auth": [
+      "source: ajna -> commander"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -63,6 +63,10 @@ sanitize-openclaw-events:
 	@$(PYTHON) sanitize-openclaw-events.py --apply
 	@echo "✓ OpenClaw runtime event files sanitized and report refreshed"
 
+normalize-event-ledger:
+	@$(PYTHON) normalize_event_ledger.py
+	@echo "✓ Legacy event ledger normalized"
+
 ontology-init:
 	@$(PYTHON) ontology_v1.py init
 	@echo "✓ Ontology v1 schema initialized"
@@ -118,6 +122,7 @@ help:
 	@echo "  make reconcile-ajna-events-project - Reconcile Ajna events and POST them to local ontology"
 	@echo "  make reconcile-ajna-events-project-domain - Reconcile Ajna events and POST them to ontology domain"
 	@echo "  make sanitize-openclaw-events - Redact secrets from OpenClaw runtime event files"
+	@echo "  make normalize-event-ledger - Normalize legacy event ledger records to the current contract"
 	@echo "  make ontology-init    - Initialize the local ontology v1 SQLite schema"
 	@echo "  make ontology-project - Project repo-normalized state into ontology v1"
 	@echo "  make ontology-run     - Run the ontology v1 FastAPI service on 127.0.0.1:8787"
