@@ -1,8 +1,8 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-01 (CC71a)
+**Updated**: 2026-03-01 (CC72a)
 **Corpus**: 22 semantic topic folders, 5,780 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 50 entries across 9 topic folders (9 COMPLETE)
+**Neocorpus**: 55 entries across 10 topic folders (10 COMPLETE)
 **Subcategory Indexes**: 5 largest folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
@@ -12,27 +12,27 @@
 
 | Folder | Files | Description | Subcategories |
 |--------|------:|-------------|:---:|
-| ai-biotech | 8 | Biotechnology, BCI, AI in life sciences | — |
-| ai-capability-futures | 176 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions | **6** |
-| ai-memory-retrieval | 305 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture | — |
-| ai-models | 546 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization | **6** |
+| ai-biotech | 15 | Biotechnology, BCI, AI in life sciences (6 from health-psychology in CC72a) | — |
+| ai-capability-futures | 209 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (20 from health-psychology in CC72a) | **6** |
+| ai-memory-retrieval | 311 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (7 from health-psychology in CC72a) | — |
+| ai-models | 573 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (11 from health-psychology in CC72a) | **6** |
 | ai-safety | 37 | Constitutional AI, RLHF, alignment, governance, existential risk (46 reclassified in CC69a) | — |
 | ai-video-vfx | 15 | AI image/video generation, VFX workflows, creative AI tooling (102 reclassified in CC71a) | — |
-| claude-code | 327 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
+| claude-code | 332 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
 | design-taste | 190 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" | — |
-| geopolitics-grand-strategy | 75 | US-China, grand strategy, civilizational analysis, defense, international relations (65 reclassified in CC71a) | — |
-| health-psychology | 138 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
-| infrastructure | 32 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs (47 reclassified in CC69b) | — |
+| geopolitics-grand-strategy | 76 | US-China, grand strategy, civilizational analysis, defense, international relations (65 reclassified in CC71a) | — |
+| health-psychology | 65 | Sleep, fitness, mental health, neuroscience, biohacking, psychology (78 reclassified in CC72a) | — |
+| infrastructure | 43 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs (47 reclassified in CC69b) | — |
 | leadership-management | 12 | Executive decision-making, org design, management frameworks, AI adoption (37 reclassified in CC68) | — |
-| meaning-civilization | 215 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
-| multi-agent-systems | 2212 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
-| openclaw | 215 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem (74 reclassified to MAS/PE in CC65-66) | **5** (Operational Tooling dissolved) |
-| philosophy-esoterica | 224 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
-| product-business | 255 | Business models, PMF, SaaS, AI product strategy, distribution | — |
+| meaning-civilization | 230 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
+| multi-agent-systems | 2271 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
+| openclaw | 235 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem (74 reclassified to MAS/PE in CC65-66) | **5** (Operational Tooling dissolved) |
+| philosophy-esoterica | 245 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
+| product-business | 268 | Business models, PMF, SaaS, AI product strategy, distribution | — |
 | productivity-pkm | 185 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
-| prompt-engineering | 19 | Prompt design, templates, optimization, few-shot patterns (24 reclassified in CC67) | — |
-| startup-vc | 46 | Founders, fundraising, startup culture, VC dynamics (30 reclassified in CC67) | — |
-| vibe-coding | 151 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
+| prompt-engineering | 21 | Prompt design, templates, optimization, few-shot patterns (24 reclassified in CC67) | — |
+| startup-vc | 48 | Founders, fundraising, startup culture, VC dynamics (30 reclassified in CC67) | — |
+| vibe-coding | 170 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
 | writing-creation | 221 | Writing craft, rhetoric, content creation, voice/TTS | — |
 
 **Total**: 5,780 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 5 folders subcategorized with cross-references. CC69a: census corrected to ground truth — prior counts were stale from CC57 repetition removal + CC60-62 reclassifications never reflected in census. Major corrections: ai-memory-retrieval 351→305, health-psychology 176→138, vibe-coding 220→151, geopolitics 152→135, infrastructure 96→75, philosophy-esoterica 235→224.
@@ -155,6 +155,18 @@ The compendium layer. Each entry is the definitive treatment of a concept, lossl
 | `institutional-power-governance.md` | 02200, 02695, 02709, 02712, 02740, 02742, 02800, 02854, 02871, 02937, 03022, 03073, 10155 | WEF, JPMorgan, balanced budget, decentralized media, governance pressures |
 
 **Totals**: 5 entries from 75 on-topic source files. 65 of 140 files (46%) reclassified. geopolitics-grand-strategy/ nucleosynthesis COMPLETE.
+
+### health-psychology/ (CC72a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `computational-neuroscience-predictive-brain.md` | 01122, 01131, 09266, 09270, 09293, 09838, 09863, 10123, 10274, 09785, 02232 | Free Energy Principle, Thousand Brains, Bayesian brain, cortical columns, collective brain, metaphor problem |
+| `attention-focus-cognitive-performance.md` | 00035, 01158, 09299, 09312, 09755, 09846, 02196, 10076, 10084, 10125, 02673, 09702 | Dopamine floor model, ADHD neuroscience, brain rot, cognitive outsourcing, non-narrative thinking |
+| `psychology-of-human-flourishing.md` | 00034, 00101, 01137, 01839, 02208, 02655, 09584, 10331, 10789, 10925, 10326 | Emotional regulation, caring continuum, fear as barrier, taste as skill, inverse thinking |
+| `longevity-biohacking-physical-optimization.md` | 10028, 10188, 02868, 10475, 10837, 10234, 10315, 00034 | Supplement science, bioelectricity (Levin), Bryan Johnson protocol, neuroplasticity, bio/acc |
+| `consciousness-boredom-subjective-experience.md` | 10810, 03168, 10357, 09293 | IIT/phi, boredom as prediction stall, cortical architecture, subjective experience |
+
+**Totals**: 5 entries from 65 on-topic source files. 78 of 146 files (53%) reclassified to 15 folders. health-psychology/ nucleosynthesis COMPLETE.
 
 ---
 
