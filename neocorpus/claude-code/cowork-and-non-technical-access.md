@@ -8,9 +8,9 @@ Cowork is Claude Code's extension from terminal-based coding agent to desktop-le
 
 ### What Cowork Is
 
-Cowork is a non-terminal interface layer for Claude Code. It provides the same agentic capabilities — file reading, file creation, file editing, tool connections, sub-agent delegation — through a graphical interface that does not require command-line fluency. The user interacts through natural language prompts in a desktop application rather than a terminal emulator.
+Cowork is a non-terminal interface layer for Claude Code. The cited sources only lightly describe Cowork's architecture; detailed claims about its full capability set (file reading, file creation, file editing, tool connections, sub-agent delegation all exposed through a graphical interface) are consistent with its described purpose but are not fully established by the cited sources. [the sources mention Cowork only lightly; the detailed architecture is not established in this entry's cited source set] The user interacts through natural language prompts in a desktop application rather than a terminal emulator.
 
-The critical distinction from a standard chatbot: Cowork operates on the user's local filesystem. It reads and writes real files in real directories. It does not require uploading documents to a web interface or copy-pasting content into a chat window. The agent has persistent access to the user's working context because that context lives in files the agent can traverse.
+The critical distinction from a standard chatbot: Cowork is described as operating on the user's local filesystem with direct access rather than requiring document upload or copy-paste.
 
 ### The Three-World Problem
 
@@ -36,9 +36,9 @@ This is not a degraded version of Claude Code. It is a different interface to th
 
 ### Built in Ten Days
 
-Cowork was constructed using Claude Code itself — a fact that serves as both a technical demonstration and a cultural signal. The ten-day development timeline illustrates the velocity of agent-first development: the specification was outcome-focused ("non-technical users need filesystem access through a graphical interface"), and the agent implemented the solution.
+`10313` mentions software being built in ten days using Claude Code, but does not specifically identify this software as Cowork. `10411` is about Slack usage patterns, not Cowork's build history. The claim that Cowork specifically was built in ten days using Claude Code is a citation error — the sources do not directly establish this for Cowork. [citation error — the ten-day build timeline is attributed to Cowork but the cited sources do not confirm this specifically]
 
-This recursive quality — an agent building the tool that extends agent access to new populations — is characteristic of the compounding dynamics in agent-first ecosystems.
+The broader pattern the sources do support: agent-first development enables very rapid construction of software tools that would previously have taken much longer.
 
 ---
 

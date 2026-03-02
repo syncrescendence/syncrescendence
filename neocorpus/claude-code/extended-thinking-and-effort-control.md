@@ -10,14 +10,14 @@ Extended thinking is Claude Code's mechanism for allocating variable reasoning d
 
 Claude Code recognizes a set of natural language keywords that signal desired reasoning depth. The documented tiers form a rough escalation ladder:
 
-| Keyword | Intent Signal | Approximate Budget |
+| Keyword | Intent Signal | Reported Budget (disputed) |
 |---------|--------------|-------------------|
 | *(none)* | Standard response | Default allocation |
 | `think` | Moderate deliberation | ~4,000 tokens of internal reasoning |
 | `think hard` | Substantial deliberation | ~10,000 tokens of internal reasoning |
 | `ultrathink` | Maximum deliberation | ~32,000 tokens of internal reasoning |
 
-The exact token budgets mapped to these keywords are a matter of productive disagreement in the research corpus. Source-code-verified analysis reports specific numeric allocations (4,000 / 10,000 / 31,999). However, official Anthropic documentation frames these phrases as "interpreted like normal prompt instructions" that do not mechanically allocate additional thinking tokens. Independent verification confirms only `think` and `ultrathink` as hardcoded triggers, dismissing finer-grained escalations.
+The token budgets in the table above are disputed, not settled. Source-code-verified analysis reports specific numeric allocations (4,000 / 10,000 / 31,999), but `08764` presents this as genuinely unresolved and the project's own CLAUDE.md states that keywords are "cosmetic intent signals" that do not allocate specific token budgets. Independent verification confirms only `think` and `ultrathink` as hardcoded triggers, dismissing finer-grained escalations. The table values should be read as claimed, not confirmed.
 
 The resolution of this tension is operationally important: **treat the keywords as behavioral signals, not API switches.** They reliably produce longer, more thorough reasoning chains, but the mechanism may be behavioral compliance rather than mechanical budget allocation. The practical effect is the same — more reasoning depth — but the mental model matters when debugging unexpected behavior.
 
@@ -29,9 +29,7 @@ The key architectural distinction: **extended thinking produces reasoning tokens
 
 ### Effort-Level Configuration
 
-Beyond per-prompt keywords, Claude Code supports session-level effort configuration. The `--thinking-budget` flag and environment variables allow setting baseline reasoning effort. This is distinct from the per-prompt keyword system — it sets a floor rather than a ceiling.
-
-The interaction between session-level configuration and per-prompt keywords follows a maximum-wins logic: if the session is configured for moderate thinking but a prompt includes `ultrathink`, the higher budget applies.
+Beyond per-prompt keywords, Claude Code may support session-level effort configuration. The `--thinking-budget` flag and the maximum-wins combination rule (where per-prompt keywords can override session-level floors) are not directly established in the cited sources for this entry. [synthesis — not documented in `08764` or CLAUDE.md as cited here]
 
 ---
 
@@ -80,7 +78,7 @@ Deep reasoning over insufficient context produces confident but wrong conclusion
 
 ### Ignoring the Thinking Trace
 
-When extended thinking is enabled, the reasoning trace (visible in some interfaces) contains the model's actual deliberation. Practitioners who skip reading the thinking trace when debugging miss the most diagnostic information available. If the model reached the wrong conclusion, the trace shows exactly where its reasoning diverged from reality.
+When extended thinking is enabled, the reasoning trace (visible in some interfaces) may contain the model's deliberation. The practice of reading the thinking trace as a primary debugging tool is not directly discussed in the cited sources (`08764`, `10857`, `00041`). [synthesis — not directly stated in cited sources]
 
 ---
 

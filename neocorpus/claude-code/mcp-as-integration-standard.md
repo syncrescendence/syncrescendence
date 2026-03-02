@@ -1,6 +1,6 @@
 # MCP as Integration Standard
 
-The Model Context Protocol (MCP) is the standardized interface by which Claude Code connects to external tools, data sources, and services. It replaces ad-hoc integrations with a uniform protocol that any tool provider can implement, creating an ecosystem where adding a new capability to an AI agent is as straightforward as adding a new server to a configuration file. MCP operates over two transports (HTTP and stdio), follows a scope-based precedence hierarchy, and has achieved rapid adoption across IDE vendors and tool providers. It is the integration layer that transforms Claude Code from a standalone agent into a node in a larger tool network.
+The Model Context Protocol (MCP) is the standardized interface by which Claude Code connects to external tools, data sources, and services. It replaces ad-hoc integrations with a uniform protocol that any tool provider can implement, creating an ecosystem where adding a new capability to an AI agent is as straightforward as adding a new server to a configuration file. MCP operates over multiple transports (including HTTP and stdio; `08764` also documents SSE and SDK/in-process types), follows a scope-based precedence hierarchy, and has achieved adoption across IDE vendors and tool providers. It is the integration layer that transforms Claude Code from a standalone agent into a node in a larger tool network.
 
 ---
 
@@ -18,7 +18,7 @@ The protocol handles:
 
 ### Transport Mechanisms
 
-MCP supports two transport mechanisms:
+MCP supports multiple transport mechanisms. The two most prominent are:
 
 **stdio (Standard I/O)**: The MCP server runs as a local process, communicating with Claude Code through standard input and output streams. This is the simplest transport — no networking, no authentication, no ports. The server is a command-line executable that reads JSON from stdin and writes JSON to stdout.
 
@@ -26,7 +26,7 @@ Example: `claude mcp add --transport stdio xcode -- xcrun mcpbridge` adds Apple'
 
 **HTTP (Streamable HTTP)**: The MCP server runs as a network service, communicating over HTTP. This enables remote servers, shared servers, and servers running in different environments. HTTP transport supports authentication, TLS, and the full range of HTTP infrastructure (load balancers, proxies, monitoring).
 
-The transport choice is invisible to the agent. A tool provided via stdio and a tool provided via HTTP are invoked identically. The transport is a deployment decision, not an interface decision.
+`08764` also documents SSE and SDK/in-process transport types. The transport choice is invisible to the agent — the transport is a deployment decision, not an interface decision.
 
 ### Scope-Based Server Precedence
 
@@ -35,9 +35,11 @@ MCP server configurations follow a scope-based precedence hierarchy:
 | Precedence | Scope | Location | Controlled By |
 |------------|-------|----------|---------------|
 | **Highest** | Enterprise/Managed | `managed-mcp.json` | IT administrators |
-| **High** | Local/Project | `.claude/mcp.json` or project settings | Project team |
-| **Medium** | User | `~/.claude/mcp.json` or user settings | Individual developer |
+| **High** | Local/Project | `.mcp.json` or project settings | Project team |
+| **Medium** | User | `~/.claude.json` or user settings | Individual developer |
 | **Lowest** | Default | Built-in servers | Anthropic |
+
+Note: The exact file locations vary — `08764` uses `.mcp.json` and `~/.claude.json` and emphasizes scope complexity. The paths in this table should be verified against current documentation. [the specific file paths are uncertain; `08764` gives different locations than `.claude/mcp.json` / `~/.claude/mcp.json`]
 
 When multiple scopes define a server with the same name, the higher-precedence scope wins. This mirrors the CLAUDE.md and permissions precedence patterns — the same architectural principle (more specific overrides more general, enterprise overrides individual) applied to a different configuration domain.
 
@@ -47,7 +49,7 @@ The enterprise `managed-mcp.json` layer is significant for organizations: it all
 
 Desktop Extensions package MCP servers as installable units with configuration UI, dependency management, and lifecycle control. Where raw MCP server configuration requires editing JSON files and managing processes manually, DXT provides a user-friendly installation experience.
 
-DXT represents the maturation of MCP from a developer-oriented protocol to a user-oriented capability. The progression is: raw protocol specification (for tool authors), CLI configuration (for developers), Desktop Extensions (for everyone).
+DXT represents the maturation of MCP from a developer-oriented protocol to a user-oriented capability. The progression is: raw protocol specification (for tool authors), CLI configuration (for developers), Desktop Extensions (for everyone). [DXT packaging is not mentioned in the cited sources (`08764`, `10513`, `10313`); this is synthesis — not directly stated in cited sources]
 
 ---
 
@@ -57,7 +59,7 @@ DXT represents the maturation of MCP from a developer-oriented protocol to a use
 
 The strategic significance of MCP extends beyond its technical protocol. By standardizing the interface between AI agents and external tools, MCP creates a marketplace dynamic: tool providers implement MCP servers once and gain compatibility with every MCP-supporting agent. Agent platforms support MCP once and gain access to every MCP-compatible tool.
 
-This marketplace effect is already visible in adoption patterns. Apple's Xcode 26.3 ships with an MCP bridge. Cloudflare publishes MCP servers for their infrastructure. IDE vendors (Cursor, VS Code extensions) integrate MCP as a standard capability. Each adoption increases the value of every other MCP implementation through network effects.
+Apple's Xcode MCP bridge adoption is directly evidenced in `10513`. Broader claims — Cloudflare publishing MCP servers, IDE vendors (Cursor, Windsurf) adopting MCP as a standard, and a plugin marketplace ecosystem — are not established by this entry's cited sources. [synthesis / unsupported by cited source set — Apple/Xcode is evidenced; broader adoption claims are not]
 
 ### Token Efficiency Through Tool Delegation
 
@@ -79,9 +81,7 @@ For Claude Code specifically, IDE-level adoption means that MCP servers develope
 
 ### The Anthropic Plugin Marketplace
 
-Claude Code now supports an official plugin marketplace where MCP servers, skills, agents, hooks, and LSP configurations can be distributed as installable packages. This formalizes the ecosystem that MCP enables: not just a protocol for tool integration, but a distribution channel for tool discovery and installation.
-
-The marketplace pattern further accelerates the network effect. Tool authors who publish to the marketplace gain visibility across the entire Claude Code user base. Users who browse the marketplace discover capabilities they did not know existed. The marketplace becomes a discovery mechanism as much as a distribution mechanism.
+Claude Code may support an official plugin marketplace for MCP servers, skills, agents, hooks, and LSP configurations. This marketplace claim is not established by the cited sources for this entry. [synthesis — not documented in `08764`, `10513`, or `10313`]
 
 ---
 

@@ -20,7 +20,7 @@ The team lead does not share conversation history with its teammates. Communicat
 
 Teams are activated by setting `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` to `"1"` in `settings.json`. No additional dependencies are required. The operator describes a task and requests a team; Claude Code reads the project's CLAUDE.md to determine how to partition work, then spawns teammates automatically.
 
-The team configuration is stored at `~/.claude/teams/{team-name}/config.json`, containing member names, agent IDs, and types. The corresponding task list lives at `~/.claude/tasks/{team-name}/`. Both are created automatically by `TeamCreate` and cleaned up by `TeamDelete`.
+The team configuration and task list storage paths (`~/.claude/teams/`, `~/.claude/tasks/`) and the `TeamCreate`/`TeamDelete` APIs are observed operational behavior; they are not documented in the cited sources. [observed behavior, not documented in cited sources]
 
 ### File Ownership Partitioning
 
@@ -36,7 +36,7 @@ Teammates communicate through two channels:
 
 **Direct messages**: Teammates send messages to specific other teammates or broadcast to all. Messages include a content field and a summary field (for UI preview). The team lead receives automatic idle notifications when teammates complete their turns.
 
-The message protocol includes structured types for lifecycle management: `shutdown_request`/`shutdown_response` for graceful termination, `plan_approval_request`/`plan_approval_response` for coordinated planning.
+The message protocol supports lifecycle management including graceful termination and coordinated planning handoffs. Specific structured type names such as `shutdown_request`/`shutdown_response` and `plan_approval_request`/`plan_approval_response` are observed operational behavior; they are not documented in the cited sources. [observed behavior, not documented in cited sources]
 
 ---
 

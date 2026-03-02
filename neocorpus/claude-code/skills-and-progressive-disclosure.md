@@ -8,20 +8,20 @@ A skill in Claude Code is a reusable block of context — instructions, constrai
 
 ### What Skills Are
 
-A skill is a markdown file (`.md`) placed in `.claude/skills/` at the project or user level. When invoked — via slash command (`/skill-name`), programmatic tool call, or agent-loop reference — its content is loaded into the current context. Until invoked, it consumes zero tokens.
+A skill is a markdown file (`.md`) that loads on-demand when invoked. The specific mechanics — storage at `.claude/skills/`, project scope overriding user scope, and the exact invocation paths — are not directly established by this entry's cited sources. [synthesis — the concrete file locations and scope-override mechanics are not established by `10032`, `00419`, or `00001` as cited]
 
 Each skill file contains natural-language instructions that the agent treats as behavioral directives for the duration of the task. A skill might describe a code review methodology, a deployment checklist, a refactoring protocol, or domain-specific knowledge about a particular subsystem. The format is deliberately simple — markdown, not code — because the consumer is a language model, not a runtime.
 
 ### Skill Scopes
 
-Skills exist at two scopes:
+Skills exist at two scopes. The specific file locations and scope-override behavior below are not directly established by the cited sources — they are consistent with Claude Code's general architectural patterns but should be treated as synthesis. [synthesis — not documented in cited sources]
 
 | Scope | Location | Availability |
 |-------|----------|-------------|
 | **Project** | `.claude/skills/` | Available in this repository |
 | **User/Personal** | `~/.claude/skills/` | Available across all repositories |
 
-Project-level skills are version-controlled and team-shared. Personal skills reflect an individual developer's workflows and preferences. When both levels define a skill with the same name, the project-level skill takes precedence.
+Project-level skills are version-controlled and team-shared. Personal skills reflect an individual developer's workflows and preferences. When both levels define a skill with the same name, the project-level skill is expected to take precedence.
 
 ### Invocation Patterns
 
@@ -44,7 +44,7 @@ Progressive disclosure is a design principle borrowed from UI design: reveal com
 
 Skills are the most explicit implementation of progressive disclosure. The operator or agent makes a conscious decision to load specific knowledge at a specific moment. The overhead is zero before that moment and bounded after it (limited to the skill's content size).
 
-The token economics are dramatic. A project with 30 skills averaging 500 tokens each would consume 15,000 tokens if loaded at session start — roughly 7.5% of context before any work begins. With progressive disclosure, a session that invokes 3 skills consumes 1,500 tokens for skill content, a 10x reduction. Multiply this across longer sessions with larger skill sets and the savings compound.
+The token economics principle is clear: skills not loaded consume no tokens. The specific 30-skills × 500-tokens example and derived 10x savings calculation are not provided by `10032` (which is a short video description without these numbers). [synthesis — not directly stated in cited sources]
 
 ---
 
@@ -126,6 +126,13 @@ For teams, skills are the mechanism by which institutional knowledge becomes por
 The progressive disclosure pattern extends beyond skills to a broader architectural principle: information should flow to the agent at the rate it can be usefully consumed, not at the rate it can be produced. This principle governs CLAUDE.md (layered, on-demand), sub-agents (isolated, summary-returning), MCP servers (available, not always active), and skills (registered, selectively invoked). Together, these mechanisms create an information architecture that respects the agent's cognitive constraints while maximizing its access to relevant knowledge.
 
 ---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and skill registry (`corpus/claude-code/00419.md`), not from generalizable external sources about Claude Code:
+- The anti-shelfware rule, bifurcation schema, wiring requirement, and consolidation logic (these are Syncrescendence-internal registry policies documented in `00419`)
+- The 230-skill audit with 119 flagged and 111 cleared (these exact counts are from the Syncrescendence's own `ARCH-SKILL_REGISTRY.md` as referenced in `00419`)
+- The registry containing 264 skills at peak, reduced to ~196 effective skills after consolidation
 
 ## Source Provenance
 

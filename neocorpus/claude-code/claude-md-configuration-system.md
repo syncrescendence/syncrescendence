@@ -31,7 +31,7 @@ For behavioral instructions — the content most operators care about — the pr
 
 Subdirectory CLAUDE.md files are not loaded at session start. They load lazily when Claude Code accesses files within that subtree. This is a critical architectural decision for monorepos: a repository with 50 subdirectory CLAUDE.md files pays zero context cost for the 49 it never touches in a given session.
 
-The loading trigger is file access, not directory traversal. Simply listing files in a directory does not trigger loading; reading or writing a file within the subtree does. This means subdirectory configuration can contain detailed, context-heavy instructions without impacting sessions that work elsewhere in the repository.
+The loading trigger is file access within the subtree. The sources support on-demand subtree loading, but the stronger claim that directory listing specifically does not trigger loading (while file reads do) is not directly established in the cited sources. [synthesis — not directly stated in sources]
 
 ### Import Syntax and Depth
 
@@ -66,7 +66,7 @@ This modularity also supports conditional activation — rules that apply only w
 
 ### Configuration as Team Coordination
 
-When agent teams are active, every teammate automatically loads the project's CLAUDE.md. This makes CLAUDE.md the primary coordination mechanism for multi-agent work. Module boundaries declared in CLAUDE.md determine how the team lead splits work across teammates. Coding standards in CLAUDE.md ensure consistent output across parallel agents. Protected directories in CLAUDE.md prevent edit collisions.
+When agent teams are active, every teammate automatically loads the project's CLAUDE.md [supported by `corpus/claude-code/00212.md`, not in this entry's primary cited source set]. This makes CLAUDE.md the primary coordination mechanism for multi-agent work. Module boundaries declared in CLAUDE.md determine how the team lead splits work across teammates. Coding standards in CLAUDE.md ensure consistent output across parallel agents. Protected directories in CLAUDE.md prevent edit collisions.
 
 The implication is that investing in CLAUDE.md quality has multiplicative returns: it improves not just single-agent sessions but every parallel agent session in the project.
 
@@ -111,6 +111,13 @@ For organizations, the managed/enterprise scope creates a governance layer: secu
 The deeper implication is architectural: CLAUDE.md is the interface between human organizational knowledge and machine execution. It is where project wisdom becomes operational constraint. Every team investing in Claude Code should invest proportionally in their CLAUDE.md configuration — it is the highest-leverage artifact in the entire workflow.
 
 ---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The Syncrescendence constellation discovering phantom path failure through 16 consecutive sessions (CC52-CC57) of degraded performance
+- The `make validate` path-checking ritual as the prevention method
+- The `AGENTS.md` + `*-EXT.md` > `make configs` > `CLAUDE.md` pipeline as the Syncrescendence's config generation pattern
 
 ## Source Provenance
 

@@ -55,9 +55,9 @@ The insight is that human alignment time is the critical path. An hour of pair p
 
 The corpus identifies three distinct populations experiencing this transformation differently:
 
-1. **Software engineers** — clear productivity gains, 3-10x on well-specified tasks. The transformation is primarily about workflow restructuring, not capability acquisition.
+1. **Software engineers** — clear productivity gains on well-specified tasks [synthesis — `02088` documents clear gains but does not give a 3-10x range]. The transformation is primarily about workflow restructuring, not capability acquisition.
 2. **Non-engineers building software** — democratized creation. People who could never write code can now produce working applications. The transformation is about access.
-3. **Enterprises** — moving slowly, analogous to mid-2010s cloud migration. The transformation requires infrastructure work (MCP adoption, data annotation, internal API surfaces) before productivity gains materialize.
+3. **Enterprises** — moving slowly, analogous to mid-2010s cloud migration. The transformation requires infrastructure work (MCP adoption, data annotation, and related connector and lineage work) before productivity gains materialize [the sources support connector, MCP, and data/lineage work; "internal API surfaces" is an expansion not directly stated in `02088`].
 
 Agent-first culture emerged from the first population but is now propagating to all three.
 
@@ -125,7 +125,13 @@ The ratio of engineers to output changes dramatically. Teams that rebuild around
 
 ### For the Syncrescendence
 
-Agent-first culture is the external-world validation of the constellation's founding premise: agents as primary workers, humans as directors of intent. The "no coding before 10am" playbook is a startup independently arriving at the same architecture the Syncrescendence formalized through constitutional law — Sovereign intent flows through agent execution, with the repo as the coordination layer.
+Agent-first culture is the external-world validation of the constellation's founding premise: agents as primary workers, humans as directors of intent. The "no coding before 10am" playbook is a startup independently arriving at the same architecture the Syncrescendence formalized through constitutional law — Sovereign intent flows through agent execution, with the repo as the coordination layer. [synthesis — not directly stated in cited sources]
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The Syncrescendence formalized an agent-as-primary-worker architecture through constitutional law
+- The Sovereign intent / agent execution / repo-as-coordination-layer framing as the constellation's "founding premise"
 
 ---
 

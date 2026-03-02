@@ -59,7 +59,7 @@ This is not hyperbole about AI capabilities. It is a precise description of the 
 
 Previously, this signal detection step required either the researcher doing it themselves (days of engineering) or asking a student (days of their time). Now it requires a voice memo and periodic check-ins. The activation energy for exploring a new research question has dropped by an order of magnitude.
 
-The implication is not that research becomes trivial. It is that **the exploration funnel widens dramatically.** A researcher who can affordably test ten hypotheses per month instead of two will find more productive directions faster. The quality of research improves not because each experiment is better but because the portfolio of explored questions is larger.
+The implication is not that research becomes trivial. It is that **the exploration funnel widens.** The sources suggest that cheaper first-answer generation allows researchers to explore more questions. The fuller framing of this as a deliberate portfolio-screening strategy — testing many hypotheses cheaply before concentrating investment — is consistent with `10857` but goes beyond what the source directly states. [synthesis — not directly stated in sources]
 
 ### Human as Redirector, Not Executor
 
@@ -90,7 +90,7 @@ This temporal decoupling — the human works in bursts, the agent works continuo
 
 ### Question Without Hypothesis
 
-Asking the agent to "explore this topic" without a testable hypothesis produces undirected computation — experiments run, data collected, but no framework for interpretation. The voice memo must contain not just "I wonder about X" but "I think X because Y, and we can test this by measuring Z."
+Asking the agent to "explore this topic" without a testable hypothesis produces undirected computation — experiments run, data collected, but no framework for interpretation. The voice memo must contain not just "I wonder about X" but "I think X because Y, and we can test this by measuring Z." [synthesis — not directly stated in cited sources]
 
 ### Insufficient Check-In Cadence
 
@@ -108,7 +108,7 @@ The autonomous workflow accelerates the time from question to first answer. It d
 
 ### Infrastructure Lock-In
 
-Building the entire workflow around a single cloud provider, a single GPU type, or a single agent. The agent should be able to SSH into any compute environment, deploy to any infrastructure, and manage jobs on any cluster. Workflows hardcoded to specific infrastructure cannot adapt when pricing changes, capacity shifts, or better options emerge.
+Building the entire workflow around a single cloud provider, a single GPU type, or a single agent. The agent should be able to SSH into any compute environment, deploy to any infrastructure, and manage jobs on any cluster. Workflows hardcoded to specific infrastructure cannot adapt when pricing changes, capacity shifts, or better options emerge. [synthesis — not directly stated in cited sources]
 
 ---
 

@@ -8,13 +8,11 @@ Plan Mode is Claude Code's mechanism for enforcing exploration before execution.
 
 ### What Plan Mode Actually Does
 
-When Plan Mode is engaged, Claude Code operates under a modified tool permission regime:
+When Plan Mode is engaged, Claude Code shifts to an exploration-before-execution mode. The specific mechanics — whether write tools are literally suppressed at the permission level, and the exact output contract — are not directly documented in the cited sources. The operational description below is synthesis consistent with the sources. [synthesis — the mechanical detail of write-tool suppression and output contract is not established in `00025`, `10825`, `08764`, or CLAUDE.md as cited]
 
 - **Read tools remain fully available.** The agent can read files, search the codebase, run grep, inspect git history, and gather any information it needs.
-- **Write tools are suppressed.** The agent cannot create files, edit files, or execute commands that modify state.
-- **The output contract changes.** Instead of producing code changes, the agent produces a plan document — a structured proposal describing what it intends to do, which files it will modify, and why.
-
-This is not merely a UI affordance. It is a cognitive mode shift. An agent operating in Plan Mode allocates its reasoning budget differently: it spends more tokens on understanding the problem space and less on generating implementation details. The exploration phase is genuinely different from the execution phase.
+- **Write tools are not engaged during planning.** The agent focuses on understanding and planning rather than making changes.
+- **The output is a plan.** Instead of producing code changes, the agent produces a structured proposal describing what it intends to do, which files it will modify, and why.
 
 ### Triggering Conditions
 
@@ -27,7 +25,7 @@ Plan Mode activates through several pathways:
 
 ### The Plan Document
 
-A well-formed plan produced in Plan Mode typically contains:
+A well-formed plan produced in Plan Mode typically contains elements that help the human evaluate and approve the proposed changes. The specific required sections listed below (current state, ordered changes, risks, success criteria) are advisory synthesis rather than documented source-backed Claude Code mechanics. [synthesis — this structure is plausible but not established in the cited sources]
 
 - **Current state assessment.** What exists now, what the relevant files contain, what the dependency graph looks like.
 - **Proposed changes.** Specific files to create, modify, or delete, with rationale for each.
@@ -35,7 +33,7 @@ A well-formed plan produced in Plan Mode typically contains:
 - **Risk assessment.** What could go wrong, what is irreversible, what needs testing.
 - **Success criteria.** How to verify the changes achieved their objective.
 
-The plan is not a spec document for a human to implement. It is an execution plan that the agent itself will carry out once approved. The human reviews for correctness and alignment, then releases the agent to execute.
+The plan is an execution plan that the agent itself will carry out once approved. The human reviews for correctness and alignment, then releases the agent to execute.
 
 ---
 
@@ -96,7 +94,7 @@ Not every change benefits from Plan Mode. A single-file bug fix with an obvious 
 
 ### Plan as Permanent Artifact
 
-Plans are ephemeral. They describe a proposed action at a point in time against a specific codebase state. Storing plans as permanent documentation creates a maintenance burden and a source of confusion when the codebase evolves past the plan's assumptions. The plan's value is consumed in the approval moment. The implementation and its tests are the durable artifacts.
+Plans describe a proposed action at a point in time against a specific codebase state. Storing plans as permanent documentation can create a maintenance burden when the codebase evolves past the plan's assumptions. The advice that plans are inherently ephemeral and should never be kept as durable artifacts is process guidance not cited in the sources. [synthesis — not directly stated in cited sources]
 
 ### Approval Without Review
 
@@ -123,6 +121,11 @@ Plan Mode is the primary mechanism through which non-technical team members can 
 Plan Mode exists on a spectrum. At one end, every change requires human approval. At the other, the agent operates fully autonomously. The appropriate position on this spectrum depends on task familiarity, error reversibility, and organizational trust. As teams build confidence in their agent's judgment, they can selectively disable Plan Mode for well-understood task categories while retaining it for novel or high-risk changes.
 
 ---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's constitutional documents (AGENTS.md, CLAUDE.md), not from external corpus sources:
+- "Enter Plan Mode for any directive touching >3 files or spanning multiple domains" — this is the Syncrescendence's own CLAUDE.md protocol
 
 ## Source Provenance
 

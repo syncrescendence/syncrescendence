@@ -39,9 +39,9 @@ Background execution deserves emphasis. A background sub-agent runs asynchronous
 
 ### The Nesting Constraint
 
-Sub-agents cannot spawn additional sub-agents. This is a deliberate architectural constraint that prevents infinite recursion, unbounded resource consumption, and coordination complexity that would exceed the system's ability to manage. The execution graph is always exactly two levels deep: parent and child. Never parent, child, and grandchild.
+Sub-agents cannot spawn additional sub-agents — the execution graph is two levels deep: parent and child. This constraint is documented in `corpus/claude-code/08764.md`, which is not cited in this entry's source provenance. The cited sources (`00025`, `08403`, `00212`) support sub-agent isolation and context economics but do not directly establish the two-level nesting limit. [citation gap — the nesting constraint is documented in `08764`, not in the sources cited by this entry]
 
-This constraint shapes delegation strategy. A sub-agent must be self-sufficient for its assigned task — it cannot further decompose work into sub-sub-tasks. If a task requires hierarchical decomposition, the parent must perform the decomposition and dispatch multiple sub-agents, not delegate the decomposition itself.
+This constraint shapes delegation strategy. A sub-agent must be self-sufficient for its assigned task. If a task requires hierarchical decomposition, the parent must perform the decomposition and dispatch multiple sub-agents, not delegate the decomposition itself.
 
 ---
 
@@ -70,15 +70,7 @@ The key branching criterion is **independence from current conversation state**.
 
 ### Context Economics
 
-The economic case for sub-agents becomes stark in real projects. Consider a feature implementation that requires:
-- Analyzing the existing codebase (30,000 tokens of file reads)
-- Planning the approach (10,000 tokens of reasoning)
-- Implementing the changes (40,000 tokens of writes and iteration)
-- Reviewing the result (15,000 tokens of verification)
-
-Without sub-agents, this consumes 95,000 tokens of parent context — nearly half the nominal limit, well past the effective quality threshold. With sub-agents handling analysis, implementation, and review, the parent might consume 15,000 tokens total (task descriptions + returned summaries), preserving context for subsequent work.
-
-In one documented example, sub-agents consumed 80,000 tokens collectively while the main thread's usage increased by only a few percentage points. The parent retained enough context for extensive follow-up work, bug fixes, and refinements.
+The economic case for sub-agents is that tokens consumed by sub-agents do not count against the parent context window, so delegation preserves main-thread context. The cited sources support this general principle. The specific numerical scenario (95,000 tokens without sub-agents vs. 15,000 with; sub-agents consuming 80,000 collectively) is synthesis — it illustrates the principle but is not directly stated in the cited sources. [synthesis — the general economics are supported; the specific numerical example is not directly stated in `00025`, `08403`, or `00212`]
 
 ### The Coordinator Pattern
 
@@ -146,3 +138,4 @@ The deeper pattern is that sub-agents implement a form of cognitive architecture
 | `corpus/claude-code/00025.md` | Sub-agents and background agents — built-in roster, invocation patterns, context economics, coordinator pattern |
 | `corpus/claude-code/08403.md` | Sub-agent delegation guide — decision tree, context annotation, fork/inline/parallel routing |
 | `corpus/claude-code/00212.md` | Agent teams — sub-agent context isolation, CLAUDE.md automatic loading, teammate coordination |
+| `corpus/claude-code/08764.md` | Unified research synthesis — two-level nesting constraint (not previously cited in this entry but documents the nesting limit) |

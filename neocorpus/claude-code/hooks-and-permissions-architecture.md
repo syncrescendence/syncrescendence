@@ -14,7 +14,7 @@ Every tool invocation in Claude Code passes through a deterministic evaluation s
 2. **Allow rules** — evaluated second. If an allow rule matches and no deny rule blocked, the action proceeds silently.
 3. **Ask (default)** — if no deny or allow rule matches, the operator is prompted for approval.
 
-This ordering is security-critical. Deny takes absolute precedence, ensuring that prohibited actions cannot be permitted by an overly broad allow rule. The default state is "ask" — absent any explicit configuration, every action requires operator approval. Autonomy is opt-in, not opt-out.
+This ordering is security-critical. Deny takes absolute precedence, ensuring that prohibited actions cannot be permitted by an overly broad allow rule. The default state is "ask" for anything not explicitly configured — however, Claude Code ships with a small set of pre-approved safe commands that do not require approval, so not literally every action requires approval absent configuration. Autonomy beyond the conservative safe-command defaults is opt-in.
 
 ### Permission Scopes
 
@@ -98,14 +98,14 @@ Claude Code combines the permission system with static analysis and sandboxing t
 
 ### Progressive Autonomy
 
-The natural workflow for a new Claude Code deployment follows a progressive autonomy pattern:
+A natural workflow for a new Claude Code deployment is to incrementally expand permissions as confidence grows. The day-1 / week-1 / month-1 rollout framing below is advisory synthesis rather than a documented source-backed Claude Code pattern; it is consistent with the general principle in the sources but not directly stated. [synthesis — not directly stated in cited sources]
 
-1. **Day 1**: Default permissions. Approve every action manually. Observe what the agent does.
-2. **Week 1**: Identify frequently approved safe actions. Add allow rules for these. Identify any actions that should never occur. Add deny rules.
+1. **Day 1**: Default permissions. Approve unfamiliar actions manually. Observe what the agent does.
+2. **Week 1**: Identify frequently approved safe actions. Add allow rules for these. Add deny rules for anything that should never occur.
 3. **Month 1**: The permission set stabilizes. Most routine actions are allowed, dangerous actions are denied, and only novel or unusual actions trigger prompts.
 4. **Ongoing**: Hooks codify organizational policy. The permission set evolves as the project's needs change.
 
-This progression is impossible if the system starts from a permissive default — the operator would never observe what needs restricting. The conservative default enables learning.
+This progression benefits from starting conservatively — the operator can observe what needs restricting before expanding autonomy.
 
 ---
 

@@ -8,9 +8,7 @@ The context window is the fundamental constraint shaping every Claude Code inter
 
 ### The 200K Illusion
 
-Claude Code advertises a 200,000-token context window. This is a theoretical maximum, not a practical operating range. The architecture exhibits measurable quality degradation at approximately 75% capacity — around 150,000 tokens — due to the well-documented "Lost in the Middle" phenomenon. Information positioned in the middle third of the context receives less attention than information at the beginning or end. The implication is stark: a session running at 80% context utilization is already operating in degraded mode, even though the system reports 20% remaining.
-
-The effective context window is therefore closer to 120,000-150,000 tokens for high-fidelity work, depending on the distribution and criticality of the information within it. Operators who treat the 200K limit as a runway rather than a cliff discover too late that the cliff was 50K tokens behind them.
+Claude Code advertises a 200,000-token context window. This is a theoretical maximum, not a practical operating range. The architecture exhibits measurable quality degradation before full capacity, due to the well-documented "Lost in the Middle" phenomenon. Information positioned in the middle third of the context receives less attention than information at the beginning or end. The sources present ranges and uncertainty rather than a settled threshold: the ~75% figure and a derived effective window of 120,000-150,000 tokens are consistent with the synthesis but should be treated as estimates, not confirmed thresholds. [the sources present this as uncertain; the specific figures are not definitively established in `08764`] Operators who treat the 200K limit as a runway rather than a cliff may discover too late that quality has already degraded.
 
 ### Auto-Compaction
 
@@ -47,7 +45,7 @@ The result is a kind of artificial amnesia: the agent remembers what it decided 
 
 ### The Vigilance Protocol
 
-Effective context management requires proactive monitoring, not reactive recovery. The Syncrescendence constellation enforces a two-threshold protocol:
+Effective context management requires proactive monitoring, not reactive recovery. The Syncrescendence constellation enforces a two-threshold protocol [this is a Syncrescendence operational protocol derived from the constellation's constitutional documents, not a documented practice in the cited external corpus sources]:
 
 | Threshold | Action |
 |-----------|--------|
@@ -66,11 +64,11 @@ In practice, this means the difference between a session hitting 60% context at 
 
 Sessions that survive one compaction event are operating on summarized history. Sessions that survive two compactions are operating on summaries of summaries. Each successive compaction amplifies information loss non-linearly. A session that has compacted three times retains only the broadest strokes of its early work — and may actively contradict decisions made in the first third of the conversation, because the reasoning that supported those decisions has been compressed beyond recognition.
 
-This creates a practical session-length ceiling that is well below the theoretical maximum. Even with aggressive sub-agent delegation, a single-thread session that extends beyond ~100,000 tokens of organic content is increasingly likely to produce internally inconsistent output.
+This creates a practical session-length ceiling that is well below the theoretical maximum. The cited sources support the general pattern that long sessions with multiple compaction events produce degraded, internally inconsistent output, but the specific ~100,000-token threshold is not established in the sources — it is a synthesis. [synthesis — not directly stated in sources]
 
 ### Pre-Compaction Handoff
 
-The highest-fidelity strategy for long tasks is not to fight compaction but to preempt it entirely. When a session approaches 70% context, the operator commits all work to disk (git commit), writes a structured handoff document capturing the full mental model, and starts a fresh session that reads only the handoff. This produces two sessions of 70% quality rather than one session that degrades from 100% to 40% across a compaction boundary.
+The highest-fidelity strategy for long tasks is not to fight compaction but to preempt it entirely. The sources support fresh-session strategies and structured handoffs generally. The specific 70% threshold for triggering a handoff and the "two sessions of 70% quality" framing are consistent with the sources but are synthesis rather than directly documented thresholds. [synthesis — not directly stated in sources] When a session approaches significant context utilization, the operator commits all work to disk (git commit), writes a structured handoff document capturing the full mental model, and starts a fresh session that reads only the handoff.
 
 The handoff document is the lossless equivalent of what compaction tries to do lossily. It preserves not just what was decided, but why; not just what remains, but what traps to avoid; not just the current file state, but the operator's intent.
 
@@ -109,6 +107,12 @@ The trajectory of Claude Code development reflects this: features like sub-agent
 For multi-agent constellations like the Syncrescendence, context management becomes a coordination problem. Each agent session is a finite resource that must be spent wisely. The handoff protocol, the two-threshold vigilance system, and the systematic use of sub-agents are not bureaucratic overhead — they are the mechanism by which a constellation of finite-context agents approximates the behavior of an unbounded intelligence.
 
 ---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The specific two-threshold vigilance protocol (<30% alert / <15% emergency handoff)
+- The handoff protocol as a Syncrescendence constitutional practice
 
 ## Source Provenance
 

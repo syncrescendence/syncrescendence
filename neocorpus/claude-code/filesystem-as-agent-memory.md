@@ -1,6 +1,6 @@
 # Filesystem as Agent Memory
 
-The filesystem-as-agent-memory pattern is the architectural recognition that structured directories and markdown files — not vector databases, not conversation history, not retrieval-augmented generation — constitute the most effective persistent context layer for AI coding agents. CLAUDE.md files serve as agent-readable state. Folder hierarchies encode semantic relationships. File naming conventions enable discovery. The filesystem is the memory, and it compounds: every session that adds well-structured information makes every subsequent session more capable.
+The filesystem-as-agent-memory pattern is the architectural recognition that structured directories and markdown files constitute a highly effective persistent context layer for AI coding agents. The sources argue strongly for file-based systems; the blanket claim that filesystem memory is categorically superior to all alternatives (vector databases, RAG, conversation history) in all contexts is stronger than what the sources directly establish. [synthesis — the sources advocate strongly for file-based approaches but do not support a blanket exclusionary ranking over all alternatives] CLAUDE.md files serve as agent-readable state. Folder hierarchies encode semantic relationships. File naming conventions enable discovery. The filesystem is the memory, and it compounds: every session that adds well-structured information makes every subsequent session more capable.
 
 ---
 
@@ -89,9 +89,9 @@ This is not a summarized conversation log. It is a structured state document, wr
 
 ### The Filesystem as Coordination Layer for Multi-Agent Systems
 
-When multiple agents need to coordinate — across sessions, across machines, or across concurrent execution — the filesystem (via git) provides a shared state layer with built-in conflict resolution, history, and auditability. No message bus, no shared database, no custom coordination protocol. Agents write files. Git merges them. Other agents read the result.
+When multiple agents need to coordinate — across sessions, across machines, or across concurrent execution — the filesystem (via git) provides a shared state layer with built-in conflict resolution, history, and auditability. The cited sources support file-mediated continuity and session handoffs, but the stronger claim that git-backed files can fully replace a message bus, shared database, or custom coordination protocol for multi-agent systems is not directly established in this entry's cited sources. [synthesis — not directly stated in cited sources]
 
-This is the pattern the Syncrescendence constellation uses: five agents across two machines coordinate entirely through the repository. The repo is the coordination layer. Every durable result flows through files.
+This is the pattern the Syncrescendence constellation uses: five agents across two machines coordinate through the repository. [Syncrescendence operational context — see section below]
 
 ### Anti-Pattern: Conversation History as Memory
 
@@ -109,7 +109,7 @@ A filesystem converts the valuable parts of conversation history into structured
 
 ### Phantom Paths
 
-Referencing files or directories in configuration documents that do not actually exist on disk. This is the silent killer of filesystem-as-memory systems. The agent reads the configuration, believes a file exists, and either hallucinates its contents or fails silently when it cannot find it. No error signal. The Syncrescendence constellation lost 16 sessions to phantom paths in CLAUDE.md before discovering the pattern.
+Referencing files or directories in configuration documents that do not actually exist on disk. This is the silent killer of filesystem-as-memory systems. The agent reads the configuration, believes a file exists, and either hallucinates its contents or fails silently when it cannot find it. No error signal. [The Syncrescendence constellation losing 16 sessions to phantom paths is a constellation operational anecdote; it is not cited in any external corpus source — see Syncrescendence Operational Context section below]
 
 **Prevention:** Every path referenced in a configuration file must be verified against the actual filesystem. Run `make validate` or equivalent after every configuration change.
 
@@ -148,6 +148,13 @@ The filesystem-as-memory pattern means that knowledge management and agent capab
 The neocorpus itself is an instance of filesystem-as-memory. Each entry is a node in a navigable knowledge graph. The corpus files are the provenance layer. The directory structure encodes the ontology. The compendium is simultaneously a reference work for humans and a memory system for agents — and this is not a coincidence. It is the point.
 
 ---
+
+## Syncrescendence Operational Context
+
+The following claims derive from the constellation's operational history and constitutional documents (AGENTS.md, CLAUDE.md, memory/), not from external corpus sources:
+- The Syncrescendence constellation losing 16 sessions (CC52-CC57) to phantom path failures in CLAUDE.md
+- Five agents across two machines coordinating through the repository as the constellation's live architecture
+- The `make validate` ritual as the prevention method for phantom paths
 
 ## Source Provenance
 

@@ -53,7 +53,7 @@ The corpus documents several concrete techniques:
 
 This provides the complete resolution chain: which component, which file, which line. The agent receives O(1) lookup information embedded in the prompt.
 
-**@ symbol file references.** Claude Code's built-in `@` syntax for referencing files: `@path/to/file.tsx`. This both adds the file to context and signals to the agent that this file is relevant to the current task.
+**@ symbol file references.** Claude Code's built-in `@` syntax for referencing files: `@path/to/file.tsx`. This both adds the file to context and signals to the agent that this file is relevant to the current task. [the `@` syntax mechanism is not directly documented in the cited sources for this entry; it is referenced in `corpus/claude-code/08764.md`]
 
 ### Benchmarking the Impact
 
