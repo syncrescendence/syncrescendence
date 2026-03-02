@@ -1,8 +1,8 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-01 (CC73a)
-**Corpus**: 22 semantic topic folders, 5,780 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 60 entries across 11 topic folders (11 COMPLETE)
+**Updated**: 2026-03-01 (CC74a)
+**Corpus**: 22 semantic topic folders, 5,783 files (50.7% reduction from 11,733 originals)
+**Neocorpus**: 72 entries across 13 topic folders (13 COMPLETE)
 **Subcategory Indexes**: 5 largest folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
@@ -12,30 +12,30 @@
 
 | Folder | Files | Description | Subcategories |
 |--------|------:|-------------|:---:|
-| ai-biotech | 18 | Biotechnology, BCI, AI in life sciences (6 from health-psychology in CC72a) | — |
-| ai-capability-futures | 235 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (20 from health-psychology in CC72a) | **6** |
-| ai-memory-retrieval | 313 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (7 from health-psychology in CC72a) | — |
-| ai-models | 596 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (11 from health-psychology in CC72a) | **6** |
-| ai-safety | 39 | Constitutional AI, RLHF, alignment, governance, existential risk (46 reclassified in CC69a) | — |
-| ai-video-vfx | 19 | AI image/video generation, VFX workflows, creative AI tooling (102 reclassified in CC71a) | — |
-| claude-code | 338 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
-| design-taste | 34 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" (154 reclassified in CC73a, 80% misclassification) | — |
-| geopolitics-grand-strategy | 79 | US-China, grand strategy, civilizational analysis, defense, international relations (65 reclassified in CC71a) | — |
-| health-psychology | 69 | Sleep, fitness, mental health, neuroscience, biohacking, psychology (78 reclassified in CC72a) | — |
-| infrastructure | 58 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs (47 reclassified in CC69b) | — |
-| leadership-management | 19 | Executive decision-making, org design, management frameworks, AI adoption (37 reclassified in CC68) | — |
+| ai-biotech | 21 | Biotechnology, BCI, AI in life sciences | — |
+| ai-capability-futures | 338 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions | **6** |
+| ai-memory-retrieval | 319 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture | — |
+| ai-models | 643 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization | **6** |
+| ai-safety | 42 | Constitutional AI, RLHF, alignment, governance, existential risk | — |
+| ai-video-vfx | 22 | AI image/video generation, VFX workflows, creative AI tooling | — |
+| claude-code | 347 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
+| design-taste | 34 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" (CC73a COMPLETE) | — |
+| geopolitics-grand-strategy | 99 | US-China, grand strategy, civilizational analysis, defense, international relations | — |
+| health-psychology | 81 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
+| infrastructure | 84 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs | — |
+| leadership-management | 26 | Executive decision-making, org design, management frameworks, AI adoption | — |
 | meaning-civilization | 233 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
-| multi-agent-systems | 2275 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
-| openclaw | 236 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem (74 reclassified to MAS/PE in CC65-66) | **5** (Operational Tooling dissolved) |
-| philosophy-esoterica | 249 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
+| multi-agent-systems | 2294 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
+| openclaw | 238 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
+| philosophy-esoterica | 283 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
 | product-business | 275 | Business models, PMF, SaaS, AI product strategy, distribution | — |
-| productivity-pkm | 212 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
-| prompt-engineering | 26 | Prompt design, templates, optimization, few-shot patterns (24 reclassified in CC67) | — |
-| startup-vc | 59 | Founders, fundraising, startup culture, VC dynamics (30 reclassified in CC67) | — |
-| vibe-coding | 182 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
-| writing-creation | 221 | Writing craft, rhetoric, content creation, voice/TTS | — |
+| productivity-pkm | 88 | Second Brain, PKM, Obsidian, habits, workflow automation, focus (124 reclassified in CC74a, 57%) | — |
+| prompt-engineering | 40 | Prompt design, templates, optimization, few-shot patterns | — |
+| startup-vc | 71 | Founders, fundraising, startup culture, VC dynamics | — |
+| vibe-coding | 193 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
+| writing-creation | 12 | Writing craft, rhetoric, content creation, voice/TTS (213 reclassified in CC74a, 96%) | — |
 
-**Total**: 5,780 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 5 folders subcategorized with cross-references. CC69a: census corrected to ground truth — prior counts were stale from CC57 repetition removal + CC60-62 reclassifications never reflected in census. Major corrections: ai-memory-retrieval 351→305, health-psychology 176→138, vibe-coding 220→151, geopolitics 152→135, infrastructure 96→75, philosophy-esoterica 235→224.
+**Total**: 5,783 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 5 folders subcategorized with cross-references. CC74a: massive reclassification — productivity-pkm lost 124 files (57%), writing-creation lost 213 files (96%, worst misclassification rate yet — Watch Later dump). Major recipients: ai-capability-futures (+103), ai-models (+47), philosophy-esoterica (+34), geopolitics-grand-strategy (+20), infrastructure (+26), prompt-engineering (+14), vibe-coding (+11).
 
 ---
 
@@ -178,7 +178,33 @@ The compendium layer. Each entry is the definitive treatment of a concept, lossl
 | `agent-ready-brand-infrastructure.md` | 04276, 04278 | Dual-native brand systems (human + agent), agent-first brand kit, Steinberger Principle |
 | `agentic-ui-generative-disposable-interfaces.md` | 01618 | Generative/disposable UI, coherent GUI as economic hack, substrate-first architecture, intent as design object |
 
-**Totals**: 5 entries from 34 on-topic source files. 157 of 193 files (80%) reclassified to 18 folders — worst misclassification rate yet (dumping ground for unclassified YouTube transcripts). design-taste/ nucleosynthesis COMPLETE.
+**Totals**: 5 entries from 34 on-topic source files. 157 of 193 files (80%) reclassified to 18 folders. design-taste/ nucleosynthesis COMPLETE.
+
+### productivity-pkm/ (CC74a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `obsidian-vault-based-pkm.md` | 00031, 09405, 10652, 10723, 02766, 03190, 03826, 03634 | Vault-as-codebase, CLI-driven PKM, graph traversal as spreading activation |
+| `knowledge-management-methodology.md` | 10932, 10969, 04222, 04297, 03781, 04153, CANON-34100, CANON-34110, CANON-34120, 04581, 04590 | Eight-knob configuration space, Eurorack principle, vocabulary-as-architecture, CANON knowledge chain |
+| `agentic-note-taking.md` | 00213, 03741, 03739, 04354, 09940, 09908, 10158 | Habit gap, hooks vs instructions, verbatim trap, unsynthesized backlog |
+| `second-brain-para-notion-notebooklm.md` | 09991, 01440, 01438, 09369, 10300, 10815, 09805, 09874, 09926, 03042 | PARA method, PPV Life OS, NotebookLM as conversational interface |
+| `learning-science-accelerated-learning.md` | 00030, 09329, 09464, 09496, 09504, 09554, 09686, 09791, 09848, 10470, 10846, 09256 | Top-down learning, spaced repetition, thinking on paper, Learning 2.0 |
+| `focus-engineering-deep-work.md` | 00076, 09626, 10067, 02700, 02970, 02968, 10724 | Focus as engineering problem, variance model, attention scarcity |
+| `ai-workflow-adoption-bottlenecks.md` | 03234, 03808, 02220, 02218, 02931, 02944, 09805, 09874, 09926, 03042, 10158, 00019 | Bottleneck shift, amplifier effect, 80% abandonment, measurement gap |
+| `productivity-systems-gtd-automation.md` | 00948, 09940, 04581, 04590, 03234, 10158 | GTD-to-agent evolution, Agent Skills format, anneal pipeline |
+| `skill-stacking-agency-polymathic-learning.md` | 00019, 02220, 02218, 02931, 02929, 02850, 03117, 01816, 09791, 09848, 10846, 09686, 09554, 09464, 09329, 00030 | Agency as master skill, skill stacking, 5D thinking, mental models over information |
+
+**Totals**: 9 entries from 88 on-topic source files. 124 of 212 files (57%) reclassified to 17 folders. productivity-pkm/ nucleosynthesis COMPLETE.
+
+### writing-creation/ (CC74a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `writing-craft-and-articulation.md` | 00026 | Dan Koe three-tier articulation, Inner Album of Greatest Hits, Pyramid Principle |
+| `creative-leverage-and-production-systems.md` | 00223, 03724, 03451, 03865, CANON-00014, 04456, 09403 | Consumer-Compounder hierarchy, tool-shaped objects, Three-Rail System, energy-state mapping |
+| `platform-distribution-and-tone-architecture.md` | 00932, CANON-31110, CANON-31120, CANON-31121 | Alchemizing Catalyst, Feedcraft, Tone Library, platform-specific distribution |
+
+**Totals**: 3 entries from 12 on-topic source files. 213 of 221 files (96%) reclassified to 20 folders — worst misclassification rate ever (Watch Later dump). writing-creation/ nucleosynthesis COMPLETE.
 
 ---
 
