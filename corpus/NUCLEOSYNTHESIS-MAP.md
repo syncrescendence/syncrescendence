@@ -1,8 +1,8 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-01 (CC72a)
+**Updated**: 2026-03-01 (CC73a)
 **Corpus**: 22 semantic topic folders, 5,780 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 55 entries across 10 topic folders (10 COMPLETE)
+**Neocorpus**: 60 entries across 11 topic folders (11 COMPLETE)
 **Subcategory Indexes**: 5 largest folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
@@ -12,27 +12,27 @@
 
 | Folder | Files | Description | Subcategories |
 |--------|------:|-------------|:---:|
-| ai-biotech | 15 | Biotechnology, BCI, AI in life sciences (6 from health-psychology in CC72a) | — |
-| ai-capability-futures | 209 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (20 from health-psychology in CC72a) | **6** |
-| ai-memory-retrieval | 311 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (7 from health-psychology in CC72a) | — |
-| ai-models | 573 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (11 from health-psychology in CC72a) | **6** |
-| ai-safety | 37 | Constitutional AI, RLHF, alignment, governance, existential risk (46 reclassified in CC69a) | — |
-| ai-video-vfx | 15 | AI image/video generation, VFX workflows, creative AI tooling (102 reclassified in CC71a) | — |
-| claude-code | 332 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
-| design-taste | 190 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" | — |
-| geopolitics-grand-strategy | 76 | US-China, grand strategy, civilizational analysis, defense, international relations (65 reclassified in CC71a) | — |
-| health-psychology | 65 | Sleep, fitness, mental health, neuroscience, biohacking, psychology (78 reclassified in CC72a) | — |
-| infrastructure | 43 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs (47 reclassified in CC69b) | — |
-| leadership-management | 12 | Executive decision-making, org design, management frameworks, AI adoption (37 reclassified in CC68) | — |
-| meaning-civilization | 230 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
-| multi-agent-systems | 2271 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
-| openclaw | 235 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem (74 reclassified to MAS/PE in CC65-66) | **5** (Operational Tooling dissolved) |
-| philosophy-esoterica | 245 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
-| product-business | 268 | Business models, PMF, SaaS, AI product strategy, distribution | — |
-| productivity-pkm | 185 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
-| prompt-engineering | 21 | Prompt design, templates, optimization, few-shot patterns (24 reclassified in CC67) | — |
-| startup-vc | 48 | Founders, fundraising, startup culture, VC dynamics (30 reclassified in CC67) | — |
-| vibe-coding | 170 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
+| ai-biotech | 18 | Biotechnology, BCI, AI in life sciences (6 from health-psychology in CC72a) | — |
+| ai-capability-futures | 235 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (20 from health-psychology in CC72a) | **6** |
+| ai-memory-retrieval | 313 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (7 from health-psychology in CC72a) | — |
+| ai-models | 596 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (11 from health-psychology in CC72a) | **6** |
+| ai-safety | 39 | Constitutional AI, RLHF, alignment, governance, existential risk (46 reclassified in CC69a) | — |
+| ai-video-vfx | 19 | AI image/video generation, VFX workflows, creative AI tooling (102 reclassified in CC71a) | — |
+| claude-code | 338 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
+| design-taste | 34 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" (154 reclassified in CC73a, 80% misclassification) | — |
+| geopolitics-grand-strategy | 79 | US-China, grand strategy, civilizational analysis, defense, international relations (65 reclassified in CC71a) | — |
+| health-psychology | 69 | Sleep, fitness, mental health, neuroscience, biohacking, psychology (78 reclassified in CC72a) | — |
+| infrastructure | 58 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs (47 reclassified in CC69b) | — |
+| leadership-management | 19 | Executive decision-making, org design, management frameworks, AI adoption (37 reclassified in CC68) | — |
+| meaning-civilization | 233 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
+| multi-agent-systems | 2275 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
+| openclaw | 236 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem (74 reclassified to MAS/PE in CC65-66) | **5** (Operational Tooling dissolved) |
+| philosophy-esoterica | 249 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
+| product-business | 275 | Business models, PMF, SaaS, AI product strategy, distribution | — |
+| productivity-pkm | 212 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
+| prompt-engineering | 26 | Prompt design, templates, optimization, few-shot patterns (24 reclassified in CC67) | — |
+| startup-vc | 59 | Founders, fundraising, startup culture, VC dynamics (30 reclassified in CC67) | — |
+| vibe-coding | 182 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
 | writing-creation | 221 | Writing craft, rhetoric, content creation, voice/TTS | — |
 
 **Total**: 5,780 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 5 folders subcategorized with cross-references. CC69a: census corrected to ground truth — prior counts were stale from CC57 repetition removal + CC60-62 reclassifications never reflected in census. Major corrections: ai-memory-retrieval 351→305, health-psychology 176→138, vibe-coding 220→151, geopolitics 152→135, infrastructure 96→75, philosophy-esoterica 235→224.
@@ -167,6 +167,18 @@ The compendium layer. Each entry is the definitive treatment of a concept, lossl
 | `consciousness-boredom-subjective-experience.md` | 10810, 03168, 10357, 09293 | IIT/phi, boredom as prediction stall, cortical architecture, subjective experience |
 
 **Totals**: 5 entries from 65 on-topic source files. 78 of 146 files (53%) reclassified to 15 folders. health-psychology/ nucleosynthesis COMPLETE.
+
+### design-taste/ (CC73a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `taste-as-cultivable-objective-capacity.md` | 01057, 01059, 04204, 04206, 09255, 01969, 09475 | Taste as objective skill (Graham, Hume, Burke, Kant), design properties, cultivation path, modern ugliness |
+| `direct-design-code-as-primary-medium.md` | 00169, 00267, 03562, 03564, 03838, 03840, 04246, 10939 | Figma→code paradigm shift, Direct Design vs vibe coding, handoff elimination, OpenEditor |
+| `ai-augmented-design-workflow-patterns.md` | 00121, 03376, 03378, 03541, 03637, 04087, 04089, 10819, 10855, 01894, 00260, 03114, 11042 | Phase-gated AI workflows, taste as scarce resource, Bad Build method, Zoom-In method, terminal as design tool |
+| `agent-ready-brand-infrastructure.md` | 04276, 04278 | Dual-native brand systems (human + agent), agent-first brand kit, Steinberger Principle |
+| `agentic-ui-generative-disposable-interfaces.md` | 01618 | Generative/disposable UI, coherent GUI as economic hack, substrate-first architecture, intent as design object |
+
+**Totals**: 5 entries from 34 on-topic source files. 157 of 193 files (80%) reclassified to 18 folders — worst misclassification rate yet (dumping ground for unclassified YouTube transcripts). design-taste/ nucleosynthesis COMPLETE.
 
 ---
 
