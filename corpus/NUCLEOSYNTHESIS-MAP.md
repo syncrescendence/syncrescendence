@@ -1,8 +1,9 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-02 (CC76a)
-**Corpus**: 22 semantic topic folders, 5,783 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 182 entries across 22 topic folders (22/22 COMPLETE — CRUSH FINISHED)
+**Updated**: 2026-03-02 (CC78a)
+**Corpus**: 22 semantic topic folders, 5,794 files (50.6% reduction from 11,733 originals)
+**Neocorpus**: 187 entries across 22 topic folders (22/22 Phase 2 first pass COMPLETE — Phases 3-4 UNAUDITED)
+**Note**: 5 MANIFEST-CC75a.md production manifests exist in neocorpus folders (not entries). 306 supplemental corpus files arrived post-nucleosynthesis via reclassification — triage in progress.
 **Subcategory Indexes**: 10 folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
@@ -13,7 +14,7 @@
 | Folder | Files | Description | Subcategories |
 |--------|------:|-------------|:---:|
 | ai-biotech | 21 | Biotechnology, BCI, AI in life sciences | — |
-| ai-capability-futures | 481 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (CC75a COMPLETE) | **8** |
+| ai-capability-futures | 484 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (CC75a COMPLETE) | **8** |
 | ai-memory-retrieval | 319 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture (CC76a COMPLETE) | — |
 | ai-models | 644 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization (CC76a COMPLETE) | **6** |
 | ai-safety | 42 | Constitutional AI, RLHF, alignment, governance, existential risk | — |
@@ -24,18 +25,18 @@
 | health-psychology | 88 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
 | infrastructure | 121 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs | — |
 | leadership-management | 26 | Executive decision-making, org design, management frameworks, AI adoption | — |
-| meaning-civilization | 125 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism (CC75a COMPLETE) | **11** |
+| meaning-civilization | 128 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism (CC75a COMPLETE) | **11** |
 | multi-agent-systems | 2404 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files (CC76a COMPLETE) | **6** |
-| openclaw | 244 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
-| philosophy-esoterica | 168 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah (CC75a COMPLETE) | **8** |
-| product-business | 210 | Business models, PMF, SaaS, AI product strategy, distribution (CC75a COMPLETE) | **9** |
+| openclaw | 245 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
+| philosophy-esoterica | 171 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah (CC75a COMPLETE) | **8** |
+| product-business | 214 | Business models, PMF, SaaS, AI product strategy, distribution (CC75a COMPLETE) | **9** |
 | productivity-pkm | 116 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
 | prompt-engineering | 46 | Prompt design, templates, optimization, few-shot patterns | — |
 | startup-vc | 80 | Founders, fundraising, startup culture, VC dynamics | — |
-| vibe-coding | 108 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines (CC75a COMPLETE) | **7** |
+| vibe-coding | 111 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines (CC75a COMPLETE) | **7** |
 | writing-creation | 12 | Writing craft, rhetoric, content creation, voice/TTS (213 reclassified in CC74a, 96%) | — |
 
-**Total**: 5,783 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 7 folders subcategorized with cross-references. CC75a: CRUSH completed ai-capability-futures (14 entries) and philosophy-esoterica (10 entries). Major reclassification: philosophy-esoterica lost 152 files (54%), ai-capability-futures lost 55 files (25%). Cross-reclassification between the two folders (61 philo→ai-cap, 12 ai-cap→philo).
+**Total**: 5,794 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 7 folders subcategorized with cross-references. CC75a: CRUSH completed ai-capability-futures (14 entries) and philosophy-esoterica (10 entries). Major reclassification: philosophy-esoterica lost 152 files (54%), ai-capability-futures lost 55 files (25%). Cross-reclassification between the two folders (61 philo→ai-cap, 12 ai-cap→philo).
 
 ---
 
