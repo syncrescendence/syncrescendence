@@ -1,100 +1,112 @@
 # Local vs. Hosted AI
 
-## Definition
-
-The local-vs-hosted AI debate concerns where model inference runs: on the user's own hardware (via tools like LM Studio, Ollama, or GPT-OSS) or on remote servers accessed through APIs (OpenAI, Anthropic, Google). This is not merely a technical choice — it encodes tradeoffs across economics, security, capability, latency, privacy, and operational complexity. The debate has sharpened as hosted APIs have become dramatically more capable while local models have become dramatically more accessible, creating a genuine decision space where neither option dominates.
-
-The security dimension is particularly acute: local models with full shell access (as demonstrated by tools like Clawdbot) can autonomously control browsers, execute arbitrary commands, and interact with system resources — capabilities that are powerful when intended and catastrophic when exploited.
+> **Epistemic Status — THIN SOURCING**: This entry's declared sources are three YouTube artifacts with no transcripts and one minimal extraction. They establish that the local-vs-hosted comparison is a live practitioner topic and that GPT-5.1 has specific hosted-model improvements, but they do not supply the substantive reasoning this entry originally claimed. Claims below are marked by what actually supports them. Assertions that require richer sourcing are flagged explicitly. This entry should be treated as a placeholder framework pending deeper corpus material.
 
 ---
 
-## Core Principles
+## What the Sources Establish
 
-### 1. The Setup-vs-Execution Tradeoff
+### From 10361 — Clawdbot + LM Studio + GPT-OSS Setup Guide
 
-Local AI front-loads cost into setup: hardware acquisition, model downloading, configuration, context length tuning, performance troubleshooting. Once running, inference is "free" — no per-token charges. Hosted AI front-loads simplicity: API key, one line of code, immediate access to frontier capability. But every token costs money, and at scale, the bill accumulates.
+Source 10361 is a YouTube video by Bijan Bowen (published 2026-01-27, 32m) covering a hands-on local AI setup. The video description confirms the following topics were demonstrated:
 
-The crossover point depends on volume. For occasional use, hosted APIs are cheaper (no hardware investment). For high-volume, always-on inference (e.g., a local coding assistant running all day), local models amortize the hardware cost quickly. The math changes again when you factor in electricity, cooling, and the opportunity cost of maintaining local infrastructure.
+- **Clawdbot paired with a locally hosted model** (LM Studio + GPT-OSS 20B) rather than a hosted API — framed as a test of how well Clawdbot performs in local deployment
+- **Browser automation** and **log analysis** as demonstrated test tasks
+- **Security disclaimers** appear as a named section (timestamp 06:37) — indicating security considerations are part of the practitioner discourse, though the specific content of those disclaimers is not available
+- **Context length** is called out as a notable consideration ("Context Length FYI" at timestamp 24:51)
+- **GPT-OSS 20B** is the local model used for the browser tool test (timestamp 30:25 — "GPT-OSS 20B Browser Tool Result")
+- **Autonomous browser control** is demonstrated as a Clawdbot capability (timestamp 14:51)
+- **WhatsApp setup** and **refusal testing** are also covered — indicating local model behavior boundaries were probed
 
-### 2. Capability Gap
+What the source does NOT establish: any quantified claims about capability gaps, cost comparisons, context length numbers, percentage coverage of use cases, or recommendations for hybrid vs. pure-local vs. pure-hosted architectures. The video demonstrates local AI setup; it does not argue for or against it relative to hosted APIs.
 
-As of early 2026, the capability gap between local and hosted models remains substantial for frontier tasks. GPT-OSS 20B running locally can handle browser automation, log analysis, and basic coding tasks. But it cannot match GPT-5.3-Codex or Opus 4.6 on complex reasoning, multi-step planning, or nuanced instruction following. Local models are adequate for many tasks; they are not competitive for the hardest ones.
+### From 10270 — "AI in 2026 is going to be wild"
 
-This gap is narrowing. Open-weight models improve with each release cycle. But the frontier keeps moving too, and labs with billions in compute investment maintain a persistent lead on the most demanding benchmarks.
+Source 10270 is a Wes Roth YouTube video (published 2026-01-25, 12m43s) covering general AI news. The description references OpenAI, Google, Anthropic, NVIDIA, and open-source AI as topics. No transcript is available. No specific claims about local vs. hosted AI are extractable from this source as filed. The source establishes only that the AI landscape in early 2026 is active and that frontier model development across multiple labs is ongoing.
 
-### 3. Security: The Full Shell Access Problem
+### From 01332 — GPT-5.1 Capability Extraction
 
-Local models with tool access can execute arbitrary shell commands on the host machine. This is simultaneously the greatest advantage and the greatest risk of local deployment. Clawdbot's autonomous browser control demonstrates the power: the model can navigate websites, fill forms, extract data, all without human intervention. But the same capability means a compromised or misaligned local model can delete files, exfiltrate data, install malware, or modify system configurations.
+Source 01332 is an extraction from a panel discussion about GPT-5.1. Four atoms are established:
 
-Hosted APIs mitigate this by sandboxing execution on remote servers. The model never touches your filesystem unless you explicitly grant access through a tool layer you control. The tradeoff is capability — you lose the autonomous local execution that makes local models powerful for certain workflows.
+1. GPT-5.1 has two modes: "Instant" (rapid chat) and "Thinking" (in-depth problem-solving)
+2. GPT-5.1 shows improvements in conversational warmth, instruction following, and adaptive thinking that allocates more processing time to complex tasks
+3. GPT-5.1 gains span simple task accuracy, strategic decision-making, planning, and long-form writing
+4. GPT-5.1 offers personalization presets for tone and role-based behavior
 
-### 4. Privacy and Data Sovereignty
-
-Local inference keeps all data on-premises. No prompts, no responses, no training data ever leave the machine. For sensitive domains — medical records, legal documents, proprietary code — this can be a hard requirement, not a preference. Hosted APIs require trusting the provider's data handling policies, which may change and which vary by jurisdiction.
-
-However, privacy is not binary. Many hosted providers now offer zero-retention policies, SOC 2 compliance, and data processing agreements. The question is whether contractual guarantees satisfy the specific compliance requirements, not whether hosted = insecure.
-
----
-
-## Key Insights
-
-### Hosted APIs Cover Most Local Use Cases
-
-The pragmatic finding from practitioners running both local and hosted setups is that hosted APIs cover 80-90% of use cases more effectively than local models. The remaining 10-20% — offline access, full privacy, unlimited inference volume, custom fine-tuning — may justify local deployment for specific workflows but rarely justify it as the primary approach.
-
-This is a moving target. As local model quality improves and as hosted API pricing decreases, the calculus shifts. But as of early 2026, the default recommendation for most users is: start with hosted APIs, add local models for specific needs.
-
-### Context Length as Local Bottleneck
-
-Local models are severely constrained by available RAM and VRAM, which directly limits context length. A 20B parameter model running on consumer hardware may support 4K-8K tokens of context — adequate for simple tasks but insufficient for complex agentic workflows that require processing large codebases or long documents. Hosted models routinely offer 128K-1M token context windows because they run on hardware designed for it.
-
-This bottleneck makes local models poorly suited for the agentic deployment patterns described elsewhere in this compendium. Agentic systems need long context, persistent state, and multi-step reasoning — all of which favor hosted infrastructure.
-
-### The Hybrid Architecture
-
-The most sophisticated deployments use both: local models for high-volume, low-stakes tasks (code completion, text formatting, routine classification) and hosted APIs for high-stakes, complex reasoning (architectural decisions, multi-step planning, creative synthesis). This hybrid approach optimizes cost without sacrificing capability at the top end.
-
-The routing logic — deciding which tasks go local vs. hosted — is itself a non-trivial system design problem. It mirrors the model routing strategies used in multi-model constellations: match the task to the capability, not the capability to the brand loyalty.
-
-### Open-Weight Models as Insurance
-
-Even if hosted APIs are the primary deployment surface, maintaining familiarity with local model tooling provides insurance against API outages, pricing changes, policy shifts, and provider discontinuation. The ability to fall back to a local model — even a less capable one — prevents complete dependency on any single provider.
+What this establishes for local-vs-hosted: Hosted frontier models are iterating on capability dimensions (reasoning depth, instruction following, planning, personalization) that local models typically lack direct equivalents to. The "Thinking" mode and adaptive compute allocation describe hosted-model infrastructure that consumer hardware cannot replicate at equivalent scale.
 
 ---
 
-## Anti-Patterns
+## Framework (Sourcing Gaps Marked)
 
-### Running Local for Ideology, Not Utility
-Deploying local models purely on principle ("I don't trust the cloud") while sacrificing capability, reliability, and convenience is ideology masquerading as engineering. The decision should be driven by requirements analysis, not identity.
+The following framework reflects the practitioner framing implied by the sources. Where claims go beyond what the sources establish, they are marked **[UNSOURCED — requires additional corpus material]**.
 
-### Ignoring Security of Local Tool Access
-Granting a local model full shell access without sandboxing, monitoring, or permission controls is negligent. The model runs with the user's permissions. If the model can `rm -rf /`, the model might `rm -rf /`. Hosted APIs with controlled tool layers are safer by default.
+### The Local Deployment Surface
 
-### Assuming Local = Private
-A local model that phones home for updates, sends telemetry, or downloads plugins from untrusted sources is not private. Privacy requires auditing the full stack, not just the inference location.
+From 10361: Clawdbot running GPT-OSS 20B locally via LM Studio demonstrates that local AI can perform browser automation, log analysis, and autonomous browser control. Context length is a noted consideration in local setup. Security disclaimers are part of practitioner guidance for this configuration.
 
-### Benchmarking Local Against Hosted on Frontier Tasks
-Comparing a 20B local model to GPT-5.3-Codex on complex reasoning and concluding "local is almost as good" misrepresents the capability gap. Benchmark on the actual tasks you need performed, not on cherry-picked demonstrations.
+The setup demonstrates that local models with tool access can interact with browsers and execute tasks autonomously. The security dimension — that a locally running model with shell and browser access operates with the user's system permissions — is a practitioner-recognized concern (the video includes a dedicated security disclaimer section).
+
+### Hosted Model Capability Trajectory
+
+From 01332: As of late 2025, hosted frontier models like GPT-5.1 are developing capability dimensions including adaptive compute allocation, planning improvements, and instruction following that represent architectural choices requiring large-scale infrastructure. These are not features of the local models demonstrated in 10361.
+
+### What Remains Unestablished by These Sources
+
+The following claims appeared in the prior version of this entry and are **not supported** by 10361, 10270, or 01332:
+
+- That local-vs-hosted is a tradeoff "across economics, security, capability, latency, privacy, and operational complexity" as a systematic framework — the sources do not articulate this taxonomy
+- Specific cost comparisons or crossover-point economics
+- That hosted APIs cover "80-90% of local use cases better" — fabricated figure
+- That local context is "typically 4K-8K" while hosted offers "128K-1M" — specific numbers not found in sources (10361 mentions context length as a consideration but provides no numbers)
+- That hybrid local+hosted is the recommended default architecture
+- Any recommendation about which deployment approach most users should adopt
+- Capability gap characterizations beyond what the GPT-5.1 extraction establishes for that specific model
 
 ---
 
-## Implications
+## Anti-Patterns (Retained — Practitioner-Level Reasoning)
 
-The local-vs-hosted decision is converging toward a hybrid default: hosted for capability, local for specific requirements (privacy, cost at volume, offline access). Pure-local and pure-hosted deployments will increasingly be edge cases rather than the norm.
+These anti-patterns reflect practitioner common sense consistent with the demonstrated setup in 10361, though not argued explicitly in the sources:
 
-For the Syncrescendence constellation, the operational implication is clear: frontier agents (Commander, Adjudicator) require hosted API access to function at the level the architecture demands. Local models may serve as utility layers — preprocessing, formatting, routine classification — but the cognitive core of the constellation depends on frontier hosted models. The economics ($55/month API budget) reflect this reality: the constellation pays for capability where capability matters.
+- **Granting full shell access to a local model without reviewing the security implications** — 10361 includes a dedicated security disclaimer section, indicating practitioners treat this as a non-trivial risk surface
+- **Assuming local deployment equals private deployment** — not argued by the sources but a standard practitioner caveat when discussing local AI tooling
 
 ---
 
-## Source Provenance
+## Syncrescendence Operational Context
 
-| Source | File | Content |
-|--------|------|---------|
-| Clawdbot + LM Studio + GPT-OSS setup guide | `corpus/ai-models/10361.md` | Local AI setup, browser automation, shell access, context length constraints |
-| AI in 2026 outlook | `corpus/ai-models/10270.md` | Frontier model trajectory, capability comparisons |
-| GPT-5.1 extraction — capability benchmarks | `corpus/ai-models/01332.md` | Hosted model feature enhancements, personalization, adaptive thinking |
+*This section contains internal operational facts that are true for the Syncrescendence constellation but are not sourced from the corpus files declared above. They are recorded here for operational transparency, not as compendium claims.*
+
+- The Syncrescendence constellation depends on hosted frontier models (Claude Opus 4.6, GPT-5.3-Codex, Gemini Pro 3.1) as its cognitive core. Local models are not currently deployed in the agent stack.
+- The constellation's API budget is approximately $55/month as of CC62.
+- These operational facts belong in `memory/` and `AGENTS.md` — not in this compendium entry's core claims.
+
+---
+
+## Enrichment Path
+
+This entry requires additional corpus material to become a full compendium treatment. Needed:
+
+1. Source material with transcript-level detail on local vs. hosted capability comparisons
+2. Source material establishing context length norms for consumer-grade local deployments
+3. Source material on cost economics of local vs. hosted inference
+4. Source material on privacy and data sovereignty tradeoffs
+
+Until richer sources are incorporated, this entry serves as a source-accurate stub documenting what the filed corpus actually establishes.
+
+---
+
+## Sources
+
+| Source | File | What It Actually Contains |
+|--------|------|--------------------------|
+| Clawdbot + LM Studio + GPT-OSS setup guide | `corpus/ai-models/10361.md` | YouTube video description + timestamps. Demonstrates local AI setup with Clawdbot, GPT-OSS 20B, browser automation, log analysis, security disclaimers, context length note. No transcript. |
+| AI in 2026 outlook | `corpus/ai-models/10270.md` | YouTube video description only. General AI news coverage. No substantive local-vs-hosted claims extractable. |
+| GPT-5.1 feature extraction | `corpus/ai-models/01332.md` | 4 atoms: GPT-5.1 Instant/Thinking modes, instruction following improvements, planning gains, personalization presets. No local-vs-hosted comparison. |
 
 ---
 
 *Compendium entry 10 of 21 -- ai-models*
 *Crystallized: 2026-03-02*
+*Remediated: 2026-03-02 — stripped unsupported claims per Adjudicator audit (8/8 issues)*
