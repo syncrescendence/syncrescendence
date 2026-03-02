@@ -77,7 +77,7 @@ Po-Shen Loh (10526.md) argues creativity alone won't save you — AI can be crea
 
 ## The Gaian Field Node (CANON-35200)
 
-The Syncrescendence CANON provides a concrete civilizational alternative: self-sufficient, regenerative physical infrastructure demonstrating post-institutional alternatives. Gaian Field Nodes validate that AI-accelerated individuals can build permanent civilizational infrastructure without institutional permission. They integrate post-labor economics directly: content-native economic sustainability, voluntary coordination, open-source knowledge sharing.
+The Syncrescendence CANON provides a concrete civilizational alternative (CANON-35200.sn.md): self-sufficient, regenerative physical infrastructure demonstrating post-institutional alternatives. Gaian Field Nodes validate that AI-accelerated individuals can build permanent civilizational infrastructure without institutional permission. They integrate post-labor economics directly: content-native economic sustainability, voluntary coordination, open-source knowledge sharing.
 
 ## Tensions & Open Questions
 

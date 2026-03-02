@@ -2,7 +2,7 @@
 > Vibe coding crossed from novelty to infrastructure when non-technical leaders started building production software, Lovable hit $100M ARR, and even Torvalds and DHH acknowledged the paradigm.
 
 ## Sources
-02614.jsonl, 02638.jsonl, 02640.md, 02377.jsonl, 02379.md, 09382.md, 09830.md, 09916.md, 09952.md, 04300.jsonl, 10063.md
+02614.jsonl, 02638.jsonl, 02640.md, 02377.jsonl, 02379.md, 09382.md, 09830.md, 09916.md, 09952.md, 04300.jsonl, 10063.md, 10282.md
 
 ## The Prediction That Proved Correct
 The Anthropic CEO predicted 90% of code would be AI-written. Initially met with skepticism, the prediction gained credibility as CodeRabbit's state-of-AI-code report showed the trajectory was real (02377.jsonl, 02379.md, 09916.md). Theo T3 treated this as a watershed acknowledgment from the data.

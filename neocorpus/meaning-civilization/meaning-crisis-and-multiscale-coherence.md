@@ -4,7 +4,7 @@
 
 ## Sources
 
-00022.md, 01159.jsonl, 01351.jsonl, 01353.md, 02535.md, 03055.jsonl, 03057.md, CANON-00002.sn.md, CANON-00005.sn.md, CANON-00015.sn.md
+00022.md, 00036.md, 01159.jsonl, 01351.jsonl, 01353.md, 02535.md, 03055.jsonl, 03057.md, CANON-00002.sn.md, CANON-00005.sn.md, CANON-00015.sn.md
 
 ## The Meaning Crisis Defined
 

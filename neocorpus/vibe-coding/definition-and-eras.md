@@ -2,7 +2,7 @@
 > Vibe coding is the practice of describing desired outcomes to AI and accepting generated code without fully understanding it — a practice born in the Software 3.0 era where prompts are programming, and one that is already being superseded by structured AI engineering.
 
 ## Sources
-00078.md, 03097.jsonl, 03094.jsonl, 03277.jsonl, 03279.md, 03673.jsonl, 10282.md, 09685.md, 01336.jsonl, 09423.md
+00078.md, 03097.jsonl, 03094.jsonl, 03277.jsonl, 03279.md, 03673.jsonl, 10282.md, 09685.md, 01336.jsonl, 09423.md, 02638.jsonl, 02640.md, 10063.md, 10982.md, 03433.jsonl
 
 ## The Term and Its Origin
 Andrej Karpathy captured the essence: "There's a new kind of coding where you fully give in to the vibes, embrace exponentials, and forget that the code even exists" (10282.md). The term gained rapid adoption as an industry descriptor for a development approach where the builder describes what they want, the AI generates it, and the builder evaluates by running it — not by reading code (03097.jsonl, 10282.md).

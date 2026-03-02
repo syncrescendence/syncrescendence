@@ -2,7 +2,7 @@
 > AI lowered the entry barrier to building software so dramatically that demand for true engineering — ownership, consequences, future-proofing — has never been higher, precisely because everyone else can now vibe code.
 
 ## Sources
-00021.md, 00086.md, 00258.md, 03349.jsonl, 03351.md, 10075.md, 10227.md
+00021.md, 00086.md, 00258.md, 03349.jsonl, 03351.md, 10075.md, 10227.md, 10982.md
 
 ## The Commoditized Skills
 AI commoditized specific developer skills (00258.md): syntax knowledge, scaffolding, boilerplate generation, routine bug fixing, standard CRUD operations. These were historically the bulk of junior developer work and the entry ticket to the profession.
