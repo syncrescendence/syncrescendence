@@ -20,7 +20,7 @@ def utc_now() -> str:
 
 
 def compact_timestamp() -> str:
-    return datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
+    return datetime.now(UTC).strftime("%Y%m%d-%H%M%S-%f")
 
 
 def slugify(value: str) -> str:
