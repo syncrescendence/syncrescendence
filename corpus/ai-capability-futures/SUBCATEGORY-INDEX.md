@@ -1,49 +1,74 @@
-# Subcategory Index — ai-capability-futures
+# SUBCATEGORY-INDEX — ai-capability-futures
 
-Total files: 174
+> Ranganathan faceted index mapping 282 on-topic files to 8 subcategories.
+> Generated from INVENTORY-CC75a.md classifications.
 
-## AGI Timelines & Predictions
-Expert forecasts, timeline analyses, when-not-if arguments.
+## AGI — AGI Timelines & Predictions (101 files)
 
-Files: 00023, 01104, 01365, 01518, 01623, 01692, 01743, 01854, 01938, 01947, 01950, 02100, 02124, 02259, 02307, 02361, 02373, 02415, 02424, 02439, 02502, 02619, 02625, 02646, 02781, 02808, 02823, 02826, 02874, 02886, 02958, 03015, 03129, 03132, 03219, 03465, 03930, 08441, 08458, 08469, 08479, 09258, 09519, 09614, 09708, 09715, 09925, 10134, 10149, 10152, 10160, 10264, 10342, 10349, 10476, 10726, 10864, 10906
+00023.md, 00147.md, 00257.md, 00270.md, 01075.jsonl, 01176.md, 01365.md, 01509.md, 01518.md, 01560.md, 01671.md, 01680.md, 01692.md, 01761.md, 01920.md, 01947.md, 01968.md, 02115.md, 02124.md, 02226.md, 02254.jsonl, 02256.md, 02286.md, 02307.md, 02361.md, 02409.md, 02424.md, 02439.md, 02448.md, 02502.md, 02625.md, 02646.md, 02808.md, 02823.md, 02826.md, 02881.jsonl, 02883.md, 02886.md, 03129.md, 03132.md, 03360.md, 03465.md, 03501.md, 03534.md, 03867.md, 03900.md, 08087.md, 08441.md, 08479.md, 09377.md, 09399.md, 09432.md, 09494.md, 09500.md, 09506.md, 09517.md, 09564.md, 09577.md, 09582.md, 09591.md, 09614.md, 09629.md, 09640.md, 09656.md, 09667.md, 09670.md, 09681.md, 09698.md, 09703.md, 09707.md, 09709.md, 09729.md, 09826.md, 09834.md, 09844.md, 09861.md, 09865.md, 09877.md, 09878.md, 09905.md, 09925.md, 09929.md, 09932.md, 09942.md, 09947.md, 09983.md, 09989.md, 10134.md, 10149.md, 10152.md, 10160.md, 10342.md, 10349.md, 10472.md, 10476.md, 10537.md, 10746.md, 10843.md, 10891.md, 10906.md, 10985.md
 
-## Scaling Laws & Trajectories
-Chinchilla-optimal, data walls, emergent abilities, phase transitions, physics of capability growth.
+**Neocorpus entries**:
+- agi-timelines-predictions.md — Core timeline convergence, definition problem, METR exponential, Feb 2026 inflection
+- intelligence-explosion-recursive-improvement.md — Feedback loop mechanics, R&D multiplier, self-building threshold, physical constraints
+- post-agi-futures-civilizational-vision.md — Compressed century, phase transition, post-AGI economy, boring singularity
+- agi-governance-geopolitical-race.md — Nationalization vs private anarchy, US-China race, entente strategy, Pentagon preparedness
+- agi-skepticism-counternarratives.md — Tool-shaped objects, discovery limitation, embodiment debate, normalization critique
 
-Files: 00716, 00724, 00912, 01128, 01263, 01275, 01287, 01350, 01485, 01509, 01656, 01761, 02064, 02082, 02226, 02550, 02562, 02565, 02661, 02883, 03363, 03921, 08460, 09294, 09381, 09487, 09509, 09766, 10013, 10056, 10214, 10306, 10449, 10472, 10902, 11553
+## SCALE — Scaling Laws & Capability Trajectories (43 files)
 
-## Agent Evals & Capability Benchmarks
-SWE-bench, GAIA, real-world tool-use assessment, autonomous coding evaluations.
+01192.jsonl, 01194.md, 01263.md, 01287.md, 01377.md, 01485.md, 01506.md, 01537.jsonl, 01539.md, 01626.md, 01656.md, 01752.md, 01806.md, 01863.md, 01887.md, 01981.jsonl, 02007.md, 02091.md, 02109.md, 02181.md, 02205.md, 02211.md, 02550.md, 02751.md, 03012.md, 03273.md, 03832.jsonl, 04117.jsonl, 04197.md, 04200.md, 04251.md, 08442.md, 09361.md, 09381.md, 09439.md, 09526.md, 09692.md, 09715.md, 10056.md, 10099.md, 10153.md, 10814.md, 10902.md
 
-Files: 00020, 00134, 00141, 01284, 01713, 02445, 02529, 03012, 03048, 03273, 09598, 10863, 10918
+**Neocorpus entry**: scaling-laws-trajectories.md — Two axes of capability, clean reward signal thesis, scaling-to-research transition, neuralese, inference bottleneck, cost collapse, biological intelligence parallels
 
-## Market & Investment Analysis
-AI bubble indicators, VC dynamics, valuation analysis, market correction scenarios.
+## MARKET — AI Market & Investment Dynamics (48 files)
 
-Files: 01335, 02175, 02520, 02703, 03606, 09601, 10037
+00199.md, 01246.jsonl, 01320.md, 01335.md, 01623.md, 01659.md, 01854.md, 01918.jsonl, 01951.jsonl, 02055.md, 02067.md, 02175.md, 02190.md, 02250.md, 02430.md, 02520.md, 02637.md, 02703.md, 02787.md, 02959.jsonl, 03133.jsonl, 03321.md, 03606.md, 03769.jsonl, 04308.md, 09353.md, 09354.md, 09374.md, 09487.md, 09498.md, 09524.md, 09618.md, 09633.md, 09634.md, 09695.md, 09700.md, 09767.md, 09773.md, 09807.md, 09948.md, 09999.md, 10000.md, 10037.md, 10081.md, 10230.md, 10259.md, 10306.md, 10449.md
 
-## Democratization & Open Models
-Open-source frontier models, capability distribution, access equity.
+**Neocorpus entry**: ai-market-investment-dynamics.md — Compute arms race, not-a-bubble evidence, SaaSpocalypse, platform layer battle, US-China dynamics
 
-Files: 00140, 02109, 08474
+## ECON — AI Economic Impact & Labor (34 files)
 
-## Human-AI Symbiosis
-Second brains, extended mind, personal capability augmentation, daily AI integration.
+00140.md, 00151.md, 00262.md, 01449.md, 01593.md, 01716.md, 02874.md, 03246.md, 03312.md, 03462.md, 03930.md, 04107.md, 08472.md, 09278.md, 09479.md, 09540.md, 09601.md, 09608.md, 09689.md, 09708.md, 09742.md, 09847.md, 09904.md, 09920.md, 10012.md, 10133.md, 10396.md, 10437.md, 10438.md, 10533.md, 10726.md, 10774.md, 10839.md, 10864.md
 
-Files: 00101, 00196, 00218, 00234, 00379, 00388, 00842, 00953, 01575, 01791, 01812, 02355, 02442, 02448, 02604, 02796, 03246, 03345, 03492, 03777, 03828, 03879, 04248, 08073, 08084, 08087, 08481, 08581, 08868, 08992, 08993, 08994, 10396, 10792, 10891, 11010, 11319, 11381, 11500
+**Neocorpus entries**:
+- ai-labor-displacement-historical-pattern.md — Bastiat's razor, 500-year track record, K-shaped economy, deskilling shock
+- post-labor-economics.md — Refactoring thesis, post-labor ≠ post-scarcity, firm persistence, techno-homestead vision
 
----
+## SYMB — Human-AI Symbiosis (25 files)
 
-## Cross-References
+00142.md, 00233.md, 01104.md, 01548.md, 01791.md, 01812.md, 02440.jsonl, 02442.md, 02572.jsonl, 02574.md, 02698.jsonl, 02793.md, 02850.md, 02857.jsonl, 02929.jsonl, 03777.md, 03855.md, 03879.md, 04038.md, 09527.md, 09620.md, 10002.md, 10014.md, 10186.md, 10870.md
 
-| This Sub-Theme | Related Sub-Theme | Folder |
-|----------------|-------------------|--------|
-| Scaling Laws & Trajectories | Training & Scaling | ai-models |
-| Scaling Laws & Trajectories | Extended Thinking & Reasoning | claude-code |
-| Agent Evals & Capability Benchmarks | Benchmarks & Evaluation | ai-models |
-| Agent Evals & Capability Benchmarks | External MAS Research | multi-agent-systems |
-| AGI Timelines & Predictions | Frontier Model Releases | ai-models |
-| Democratization & Open Models | Frontier Model Releases | ai-models |
-| Human-AI Symbiosis | Community & Usage Patterns | claude-code |
-| Human-AI Symbiosis | Memory & Personality | openclaw |
-| Market & Investment Analysis | Ecosystem & Comparative Analysis | openclaw |
+**Neocorpus entries**:
+- human-ai-productivity-augmentation.md — Orchestration paradigm, 2026 stack, persistent context, token economy
+- human-competitive-advantage-ai-era.md — Talent stack, polymath imperative, AI as amplifier, what cannot be delegated
+
+## PHYS — Physical AI & Robotics (16 files)
+
+00912.md, 01146.md, 01227_from_infrastructure.md, 01372.jsonl, 01374.md, 02619.md, 02914.jsonl, 02916.md, 03201.md, 03939.md, 09436.md, 09642.md, 09766.md, 09910.md, 10049.md, 10372.md
+
+**Neocorpus entry**: physical-ai-robotics.md — Four waves of AI, data bottleneck, simulation, robot trajectories, autonomous vehicles
+
+## EVAL — Agent Evals & Capability Benchmarks (13 files)
+
+00020.md, 01128.md, 01284.md, 01713.md, 09292.md, 09332.md, 09510.md, 09519.md, 09545.md, 09586.md, 09598.md, 10863.md, 10918.md
+
+**Neocorpus entry**: agent-evals-capability-benchmarks.md — Agent eval structure, ARC-AGI, measurement crisis, agent stagnation
+
+## DEMO — Democratization & Open Models (2 files)
+
+02464.jsonl, 08474.md
+
+**Neocorpus entry**: democratization-open-models.md — Moatlessness, printing press cascade, transparency, cost democratization
+
+## Cross-Subcategory References
+
+| From | To | Relationship |
+|------|----|-------------|
+| AGI | SCALE | Capability trajectory mechanics drive timeline predictions |
+| AGI | ECON | Economic impact follows from AGI arrival timing |
+| AGI | MARKET | Investment thesis depends on timeline beliefs |
+| SCALE | EVAL | Benchmarks measure what scaling produces |
+| ECON | SYMB | Labor displacement meets human adaptation |
+| MARKET | ECON | Investment dynamics shape economic structure |
+| PHYS | ECON | Robot deployment timeline constrains labor displacement |
+| DEMO | MARKET | Cost democratization disrupts market dynamics |
