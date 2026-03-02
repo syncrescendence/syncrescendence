@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help oracle-packet-help perplexity-packet-help notebooklm-packet-help claude-cowork-packet-help oracle-response-bridge-help perplexity-response-bridge-help notebooklm-response-bridge-help claude-cowork-response-bridge-help youtube-feed-bridge-help xai-model-bridge-help google-model-bridge-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help oracle-packet-help perplexity-packet-help notebooklm-packet-help claude-cowork-packet-help oracle-response-bridge-help perplexity-response-bridge-help notebooklm-response-bridge-help claude-cowork-response-bridge-help youtube-feed-bridge-help xai-model-bridge-help google-model-bridge-help cowork-relay-stage-help cowork-relay-finalize-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -142,6 +142,12 @@ xai-model-bridge-help:
 google-model-bridge-help:
 	@$(PYTHON) google_model_bridge.py --help
 
+cowork-relay-stage-help:
+	@$(PYTHON) stage_cowork_relay_job.py --help
+
+cowork-relay-finalize-help:
+	@$(PYTHON) finalize_cowork_relay_job.py --help
+
 bootstrap-mini:
 	@bash bootstrap-mac-mini.sh all
 	@echo "✓ Mac mini repo/bootstrap state refreshed"
@@ -202,6 +208,8 @@ help:
 	@echo "  make youtube-feed-bridge-help - Show YouTube feed/media checkpoint bridge usage"
 	@echo "  make xai-model-bridge-help - Show xAI model checkpoint bridge usage"
 	@echo "  make google-model-bridge-help - Show Google model checkpoint bridge usage"
+	@echo "  make cowork-relay-stage-help - Show Cowork relay job staging usage"
+	@echo "  make cowork-relay-finalize-help - Show Cowork relay finalization usage"
 	@echo "  make bootstrap-mini  - Render mini configs, rsync repo to the Mac mini, and deploy Psyche surface"
 	@echo "  make revive-mini-constellation - Create the stage-1 tmux constellation session on the Mac mini"
 	@echo "  make constellation-mini-status - Report Mac mini repo/tmux constellation status"

@@ -1,0 +1,12 @@
+jobs/inbox/*
+jobs/running/*
+jobs/completed/*
+jobs/failed/*
+artifacts/incoming/*
+artifacts/outgoing/*
+!jobs/inbox/.gitkeep
+!jobs/running/.gitkeep
+!jobs/completed/.gitkeep
+!jobs/failed/.gitkeep
+!artifacts/incoming/.gitkeep
+!artifacts/outgoing/.gitkeep
