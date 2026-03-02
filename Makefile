@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -109,6 +109,22 @@ github-issue-bridge-help:
 channel-surface-bridge-help:
 	@$(PYTHON) channel_surface_bridge.py --help
 
+bootstrap-mini:
+	@bash bootstrap-mac-mini.sh all
+	@echo "✓ Mac mini repo/bootstrap state refreshed"
+
+revive-mini-constellation:
+	@ssh mini 'bash /Users/home/syncrescendence/constellation-mini-stage1.sh'
+	@echo "✓ Mac mini constellation tmux stage-1 session refreshed"
+
+constellation-mini-status:
+	@bash bootstrap-mac-mini.sh status
+	@ssh mini 'PATH=/opt/homebrew/bin:$$PATH; tmux has-session -t constellation 2>/dev/null && tmux list-windows -t constellation || true'
+
+mini-constellation-snapshot:
+	@$(PYTHON) collect-mini-constellation-status.py
+	@echo "✓ Mac mini constellation status snapshot refreshed"
+
 # Default target
 help:
 	@echo "Syncrescendence Repository Commands"
@@ -138,6 +154,10 @@ help:
 	@echo "  make cloudflare-domain-bridge-help - Show Cloudflare domain checkpoint bridge usage"
 	@echo "  make github-issue-bridge-help - Show GitHub issue/PR checkpoint bridge usage"
 	@echo "  make channel-surface-bridge-help - Show Slack/Discord runtime checkpoint bridge usage"
+	@echo "  make bootstrap-mini  - Render mini configs, rsync repo to the Mac mini, and deploy Psyche surface"
+	@echo "  make revive-mini-constellation - Create the stage-1 tmux constellation session on the Mac mini"
+	@echo "  make constellation-mini-status - Report Mac mini repo/tmux constellation status"
+	@echo "  make mini-constellation-snapshot - Write repo-safe Mac mini constellation status artifacts"
 	@echo "  make sync             - Pull, rebase, push"
 	@echo "  make sync-checkpoint  - Quick sync checkpoint (git state)"
 	@echo "  make tree             - Generate current directory tree"

@@ -1,0 +1,26 @@
+{
+  "binaries": {
+    "codex": "/opt/homebrew/bin/codex",
+    "gemini": "/opt/homebrew/bin/gemini",
+    "openclaw": "/opt/homebrew/bin/openclaw",
+    "tmux": "/opt/homebrew/bin/tmux"
+  },
+  "captured_at": "2026-03-02T05:52:13Z",
+  "constellation_session_present": true,
+  "constellation_windows": [
+    "1: psyche* (1 panes) [80x24] [layout b25d,80x24,0,0,0] @0 (active)",
+    "2: adjudicator (1 panes) [80x24] [layout b25e,80x24,0,0,1] @1",
+    "3: cartographer (1 panes) [80x24] [layout b25f,80x24,0,0,2] @2",
+    "4: ops- (1 panes) [80x24] [layout b260,80x24,0,0,3] @3"
+  ],
+  "git_native_ready": false,
+  "git_probe_error": "You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.",
+  "hostname": "M1-Mac-mini.local",
+  "psyche_workspace_bytes": 10251,
+  "psyche_workspace_path": "/Users/home/.openclaw/workspace/AGENTS.md",
+  "psyche_workspace_present": true,
+  "remote_alias": "mini",
+  "repo_path": "/Users/home/syncrescendence",
+  "repo_present": true,
+  "xcode_license_blocked": true
+}
