@@ -1,6 +1,6 @@
 # Ajna Runtime Synthesis
 
-**Captured**: 2026-03-02T02:33:02Z
+**Captured**: 2026-03-02T04:16:05Z
 
 ## Stable Facts
 
@@ -12,13 +12,18 @@
 ## Current Constraints
 
 - Denied tools: `exec, process, apply_patch`
-- Channel `discord` enabled: `False`
-- Channel `slack` enabled: `False`
+- Channel `slack` enabled: `True`
+- Channel `discord` enabled: `True`
+- Slack runtime token presence: bot=`True` app=`True`
+- Slack keychain presence: bot=`True` app=`True`
+- Discord runtime token presence: bot=`True`
+- Discord keychain presence: bot=`True`
 
 ## Operational Reading
 
 - Ajna is browser-capable and repo-grounded.
 - Runtime remains conservative: browser is available, shell mutation remains denied in OpenClaw.
+- Slack and Discord are now live in runtime, but their durable description must remain pointer-only and repo-safe.
 - Durable decisions should be promoted from workspace memory into repo artifacts rather than living only in runtime files.
 
 ## Next Actions

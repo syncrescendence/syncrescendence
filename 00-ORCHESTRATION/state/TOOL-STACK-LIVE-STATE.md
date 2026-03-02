@@ -13,9 +13,13 @@
 - Ajna's current primary model in live OpenClaw config is `anthropic/claude-sonnet-4-5`
 - OpenClaw workspace path is `/Users/system/.openclaw/workspace`
 - Browser is not denied in OpenClaw
-- Ajna has `playwright-mcp` skill installed
-- Slack channel is currently disabled
-- Discord channel is currently disabled
+- Ajna has `playwright-mcp` skill(s) installed
+- Slack channel is currently enabled
+- Discord channel is currently enabled
+- Slack socket mode tokens are configured in runtime: bot=`True` app=`True`
+- Slack keychain entries are present: bot=`True` app=`True`
+- Discord bot token is configured in runtime: `True`
+- Discord keychain entry is present: `True`
 - `exec`, `process`, and `apply_patch` remain denied in OpenClaw
 - Rendered + validated config scaffold now exists locally:
   - `harness/*.json`
@@ -50,9 +54,8 @@
 1. The current sync loop is snapshot-first and still needs richer normalization rules
 2. Memory synthesis is still first-pass and not yet canon-promotion aware
 3. Historical documents still preserve pre-rewire Ajna/Kimi assumptions
-4. OpenClaw LaunchAgent restart path is still brittle; the gateway currently recovers cleanly in foreground mode
-5. `gcloud` still needs one-time browser OAuth
-6. `wrangler` still needs one-time browser OAuth
+4. Public ontology cutover still depends on DNS / edge for `syncrescendence.com`
+5. OpenClaw stores active channel credentials in local runtime config; repo truth remains pointer-only and repo-safe
 
 ## Authority
 

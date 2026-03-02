@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import shutil
 from datetime import UTC, datetime
 from pathlib import Path
@@ -16,6 +17,7 @@ MEMORY_DIR = REPO_ROOT / "memory"
 CONFIG_MANIFEST = REPO_ROOT / "configs" / "manifest.json"
 OPENCLAW_CONFIG = Path.home() / ".openclaw" / "openclaw.json"
 OPENCLAW_WORKSPACE = Path.home() / ".openclaw" / "workspace"
+KEYCHAIN_SERVICE = "syncrescendence"
 
 
 def read_json(path: Path):
@@ -24,6 +26,52 @@ def read_json(path: Path):
 
 def utc_now() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def keychain_item_metadata(account: str) -> dict:
+    command = [
+        "security",
+        "find-generic-password",
+        "-s",
+        KEYCHAIN_SERVICE,
+        "-a",
+        account,
+    ]
+    result = subprocess.run(command, capture_output=True, text=True, check=False)
+    if result.returncode != 0:
+        return {"present": False}
+
+    created_at = None
+    modified_at = None
+    for line in result.stdout.splitlines():
+        if '"cdat"' in line and "202" in line:
+            created_at = line.split('"')[-2].replace("\\000", "")
+        if '"mdat"' in line and "202" in line:
+            modified_at = line.split('"')[-2].replace("\\000", "")
+    return {
+        "present": True,
+        "created_at": created_at,
+        "modified_at": modified_at,
+    }
+
+
+def channel_runtime_summary(name: str, data: dict) -> dict:
+    summary = {
+        "enabled": bool(data.get("enabled")),
+    }
+    for key in ("mode", "groupPolicy", "dmPolicy", "streaming", "nativeStreaming", "webhookPath"):
+        if key in data:
+            summary[key] = data.get(key)
+
+    if name == "slack":
+        summary["bot_token_configured"] = bool(data.get("botToken"))
+        summary["app_token_configured"] = bool(data.get("appToken"))
+        summary["bot_token_keychain"] = keychain_item_metadata("slack-bot-token")
+        summary["app_token_keychain"] = keychain_item_metadata("slack-app-token")
+    elif name == "discord":
+        summary["bot_token_configured"] = bool(data.get("token"))
+        summary["bot_token_keychain"] = keychain_item_metadata("discord-bot-token")
+    return summary
 
 
 def get_target(agent: str) -> dict:
@@ -77,10 +125,7 @@ def collect_runtime(agent: str) -> dict:
             "bind": gateway.get("bind"),
             "mode": gateway.get("mode"),
         },
-        "channels": {
-            name: {"enabled": data.get("enabled")}
-            for name, data in channels.items()
-        },
+        "channels": {name: channel_runtime_summary(name, data) for name, data in channels.items()},
         "workspace_agents_excerpt": workspace_agents[:4000],
         "workspace_memory_excerpt": workspace_memory[:4000],
     }
@@ -109,7 +154,19 @@ def write_runtime_snapshot(runtime: dict) -> tuple[Path, Path]:
         "",
     ]
     for name, data in runtime["channels"].items():
-        lines.append(f"- `{name}` enabled: `{data.get('enabled')}`")
+        details = [f"enabled={data.get('enabled')}"]
+        for key in ("mode", "groupPolicy", "dmPolicy", "streaming"):
+            if key in data:
+                details.append(f"{key}={data.get(key)}")
+        if name == "slack":
+            details.append(f"botTokenConfigured={data.get('bot_token_configured')}")
+            details.append(f"appTokenConfigured={data.get('app_token_configured')}")
+            details.append(f"botTokenKeychain={data.get('bot_token_keychain', {}).get('present')}")
+            details.append(f"appTokenKeychain={data.get('app_token_keychain', {}).get('present')}")
+        if name == "discord":
+            details.append(f"botTokenConfigured={data.get('bot_token_configured')}")
+            details.append(f"botTokenKeychain={data.get('bot_token_keychain', {}).get('present')}")
+        lines.append(f"- `{name}` " + " ".join(f"`{item}`" for item in details))
     lines.extend(
         [
             "",
@@ -131,9 +188,86 @@ def write_runtime_snapshot(runtime: dict) -> tuple[Path, Path]:
     return json_path, md_path
 
 
+def write_tool_stack_live_state(runtime: dict) -> Path:
+    path = STATE_DIR / "TOOL-STACK-LIVE-STATE.md"
+    slack = runtime["channels"].get("slack", {})
+    discord = runtime["channels"].get("discord", {})
+    lines = [
+        "# Tool Stack Live State",
+        "",
+        f"**Date**: {runtime['captured_at'][:10]}  ",
+        "**Purpose**: factual live runtime snapshot for repo↔harness reconciliation  ",
+        "**Status**: ACTIVE reference for current tool-stack truth",
+        "",
+        "---",
+        "",
+        "## Live Runtime Facts",
+        "",
+        "- `syncrescendence.com` is secured",
+        f"- OpenClaw gateway is live on the MacBook Air at `127.0.0.1:{runtime['gateway'].get('port')}`",
+        f"- Ajna's current primary model in live OpenClaw config is `{runtime.get('model_primary')}`",
+        f"- OpenClaw workspace path is `{runtime.get('workspace_path')}`",
+        f"- Browser is {'not denied' if runtime.get('browser_enabled') else 'disabled'} in OpenClaw",
+        f"- Ajna has `{', '.join(runtime.get('skills_installed', [])) or 'no extra'}` skill(s) installed",
+        f"- Slack channel is currently {'enabled' if slack.get('enabled') else 'disabled'}",
+        f"- Discord channel is currently {'enabled' if discord.get('enabled') else 'disabled'}",
+        f"- Slack socket mode tokens are configured in runtime: bot=`{slack.get('bot_token_configured')}` app=`{slack.get('app_token_configured')}`",
+        f"- Slack keychain entries are present: bot=`{slack.get('bot_token_keychain', {}).get('present')}` app=`{slack.get('app_token_keychain', {}).get('present')}`",
+        f"- Discord bot token is configured in runtime: `{discord.get('bot_token_configured')}`",
+        f"- Discord keychain entry is present: `{discord.get('bot_token_keychain', {}).get('present')}`",
+        "- `exec`, `process`, and `apply_patch` remain denied in OpenClaw",
+        "- Rendered + validated config scaffold now exists locally:",
+        "  - `harness/*.json`",
+        "  - `machine/*.json`",
+        "  - `render-configs.py`",
+        "  - `validate-configs.py`",
+        "  - `configs/manifest.json`",
+        "- OpenClaw repo↔runtime tooling now exists locally:",
+        "  - `make deploy-ajna`",
+        "  - `make sync-openclaw`",
+        "  - `sync-openclaw.py`",
+        "  - `00-ORCHESTRATION/state/OPENCLAW-RUNTIME-SNAPSHOT.md`",
+        "  - `memory/AJNA-RUNTIME-SYNTHESIS.md`",
+        "- Ajna event reconciliation now exists locally:",
+        "  - `make reconcile-ajna-events`",
+        "  - `reconcile-ajna-events.py`",
+        "  - `memory/AJNA-EVENT-LEDGER.jsonl`",
+        "  - `memory/AJNA-EVENT-SUMMARY.md`",
+        "  - `00-ORCHESTRATION/state/AJNA-EVENT-RECONCILIATION.json`",
+        "- Ajna's OpenClaw workspace instruction surface has been compacted below the 20k bootstrap ceiling",
+        "",
+        "## Current Truth Split",
+        "",
+        "- Repo constitutional/orientation docs have been partially reconciled, but historical artifacts still narrate Ajna as Kimi-primary",
+        "- Live OpenClaw runtime has already moved Ajna onto Claude Sonnet",
+        "- Config scaffold is implemented in-repo and Ajna workspace deployment is now repo-driven",
+        "- Memory remains split across repo memory, OpenClaw workspace memory, and session logs, but there is now a first synthesis loop back into repo memory",
+        "- Ajna can now emit durable event files into a landing zone that Commander reconciles into repo state",
+        "",
+        "## Immediate Blockers",
+        "",
+        "1. The current sync loop is snapshot-first and still needs richer normalization rules",
+        "2. Memory synthesis is still first-pass and not yet canon-promotion aware",
+        "3. Historical documents still preserve pre-rewire Ajna/Kimi assumptions",
+        "4. Public ontology cutover still depends on DNS / edge for `syncrescendence.com`",
+        "5. OpenClaw stores active channel credentials in local runtime config; repo truth remains pointer-only and repo-safe",
+        "",
+        "## Authority",
+        "",
+        "- Strategic architecture: `engine/CC65-TOOL-STACK-FINAL.md`",
+        "- Current narrowing brief: `engine/CC72b-IMPLEMENTATION-BRIEF.md`",
+        "- This file is the factual runtime snapshot, not the long-term architecture",
+        "",
+    ]
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
+
+
 def synthesize_memory(runtime: dict) -> Path:
     MEMORY_DIR.mkdir(parents=True, exist_ok=True)
     path = MEMORY_DIR / "AJNA-RUNTIME-SYNTHESIS.md"
+    slack = runtime["channels"].get("slack", {})
+    discord = runtime["channels"].get("discord", {})
     lines = [
         "# Ajna Runtime Synthesis",
         "",
@@ -150,8 +284,16 @@ def synthesize_memory(runtime: dict) -> Path:
         "",
         f"- Denied tools: `{', '.join(runtime.get('tools_deny', []))}`",
     ]
-    for name, data in runtime["channels"].items():
-        lines.append(f"- Channel `{name}` enabled: `{data.get('enabled')}`")
+    lines.extend(
+        [
+            f"- Channel `slack` enabled: `{slack.get('enabled')}`",
+            f"- Channel `discord` enabled: `{discord.get('enabled')}`",
+            f"- Slack runtime token presence: bot=`{slack.get('bot_token_configured')}` app=`{slack.get('app_token_configured')}`",
+            f"- Slack keychain presence: bot=`{slack.get('bot_token_keychain', {}).get('present')}` app=`{slack.get('app_token_keychain', {}).get('present')}`",
+            f"- Discord runtime token presence: bot=`{discord.get('bot_token_configured')}`",
+            f"- Discord keychain presence: bot=`{discord.get('bot_token_keychain', {}).get('present')}`",
+        ]
+    )
     lines.extend(
         [
             "",
@@ -159,6 +301,7 @@ def synthesize_memory(runtime: dict) -> Path:
             "",
             "- Ajna is browser-capable and repo-grounded.",
             "- Runtime remains conservative: browser is available, shell mutation remains denied in OpenClaw.",
+            "- Slack and Discord are now live in runtime, but their durable description must remain pointer-only and repo-safe.",
             "- Durable decisions should be promoted from workspace memory into repo artifacts rather than living only in runtime files.",
             "",
             "## Next Actions",
@@ -195,7 +338,9 @@ def main() -> int:
 
     if args.snapshot and runtime is not None:
         json_path, md_path = write_runtime_snapshot(runtime)
+        live_state_path = write_tool_stack_live_state(runtime)
         print(f"Wrote runtime snapshots to {json_path} and {md_path}")
+        print(f"Wrote live-state snapshot to {live_state_path}")
 
     if args.synthesize_memory and runtime is not None:
         memory_path = synthesize_memory(runtime)

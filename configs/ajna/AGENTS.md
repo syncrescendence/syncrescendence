@@ -200,7 +200,9 @@ Use in this order:
 - GitHub CLI is authenticated
 - `gcloud` is installed but still needs one-time `gcloud auth login`
 - `wrangler` is installed but still needs one-time `wrangler login`
-- Slack and Discord remain disabled pending stable token regeneration
+- Slack is enabled in socket mode with bot/app tokens present in local runtime + Keychain
+- Discord is enabled with bot token present in local runtime + Keychain
+- Treat Slack/Discord state as pointer-only in repo artifacts; never persist raw tokens outside local runtime and Keychain
 
 ## Mission Priority
 

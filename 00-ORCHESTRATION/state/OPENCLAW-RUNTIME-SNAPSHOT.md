@@ -1,6 +1,6 @@
 # OpenClaw Runtime Snapshot
 
-- Captured: `2026-03-02T02:33:02Z`
+- Captured: `2026-03-02T04:16:05Z`
 - Agent focus: `ajna`
 - Primary model: `anthropic/claude-sonnet-4-5`
 - Workspace path: `/Users/system/.openclaw/workspace`
@@ -11,8 +11,8 @@
 
 ## Channels
 
-- `discord` enabled: `False`
-- `slack` enabled: `False`
+- `discord` `enabled=True` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=off` `botTokenConfigured=True` `botTokenKeychain=True`
+- `slack` `enabled=True` `mode=socket` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=partial` `botTokenConfigured=True` `appTokenConfigured=True` `botTokenKeychain=True` `appTokenKeychain=True`
 
 ## Workspace Excerpts
 
@@ -22,8 +22,8 @@
 
 # Syncrescendence — Operational Law
 
-**Version**: 7.0.0
-**Last Updated**: 2026-02-28
+**Version**: 7.1.0
+**Last Updated**: 2026-03-01
 **Authority**: Constitutional — all agents inherit this file verbatim via `make configs`.
 
 ## Identity
@@ -96,8 +96,8 @@ Current live runtime state for tool-stack reconciliation is tracked separately i
 - Gateway: live on 127.0.0.1:18789
 - Browser: enabled
 - Playwright MCP skill: installed
-- Slack: disabled after attempted setup; bot token believed valid, app token stale
-- Discord: disabled after attempted setup
+- Slack: enabled in socket mode; bot token + app token present in runtime and Keychain
+- Discord: enabled; bot token present in runtime and Keychain
 
 ## Standing Orders
 - Repo is ground truth; if runtime and repo disagree, reconcile into repo
@@ -109,5 +109,6 @@ Current live runtime state for tool-stack reconciliation is tracked separately i
 - Use the repo-managed deploy/sync loop instead of letting workspace state drift
 - Distill runtime changes into repo state and memory instead of leaving them only here
 - Keep OpenClaw workspace deployment conservative while normalization rules mature
+- Keep channel state pointer-only in repo memory; never persist raw tokens outside local runtime + Keychain
 - Use the next Oracle round to resolve exocortex↔ontology bridge sequencing, not settled Ajna questions
 ```
