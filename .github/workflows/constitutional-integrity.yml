@@ -1,6 +1,7 @@
 name: Constitutional Integrity
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
