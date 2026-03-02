@@ -59,7 +59,7 @@ This is a genuine reskilling demand, not a cosmetic one. The skills of visual de
 
 Disposability does not mean total elimination of human-facing interfaces. It means human-facing interfaces become residual — rendered for the specific moments where human judgment, oversight, or decision is required, and not otherwise. The design challenge migrates from "how do humans operate this system end-to-end" to "at what decision points does the human remain in the loop, and what is the minimal surface necessary to support that loop."
 
-This residual interface is likely sparser, more contextual, and less aesthetically elaborate than the monolith it replaces. It does not need to onboard new users to a complex system — the agent handles that. It does not need to represent the full state of the system visually — the agent can be queried. It needs to present the specific decision, in context, with enough information for the human to act, and then get out of the way.
+This residual interface would plausibly be sparser, more contextual, and less aesthetically elaborate than the monolith it replaces. The source supports the general principle of reskilling around intent (01618.jsonl), and the specific characteristics sketched here — minimal onboarding surfaces, query-based state representation, decision-point-focused rendering — are extrapolations from that principle rather than claims directly made in the source material.
 
 ### Tension and Open Questions
 

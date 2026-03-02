@@ -13,7 +13,7 @@
 - `corpus/productivity-pkm/04153.jsonl` — Atom: Ideas accumulate faster than they can be organized
 
 ## Core Thesis
-The Second Brain concept (Tiago Forte's PARA method) and its tool implementations (Notion, NotebookLM) represent the mainstream approach to personal knowledge management: externalize everything, organize by actionability (Projects, Areas, Resources, Archive), and use AI to surface connections the human would miss. The 2026 iteration of this approach (09991) argues that AI has finally made the "Second Brain" metaphor literal — tools like NotebookLM can now read, summarize, and converse with your knowledge base. The tension: the easier it becomes to externalize, the greater the risk that externalization replaces internalization.
+The Second Brain concept (Tiago Forte's PARA method) and its tool implementations (Notion, NotebookLM) represent the mainstream approach to personal knowledge management: externalize everything, organize by actionability (Projects, Areas, Resources, Archive), and use AI to surface connections the human would miss. The 2026 iteration of this approach (09991) argues that AI has finally made the "Second Brain" metaphor literal — tools like NotebookLM can now read, summarize, and converse with your knowledge base. A plausible tension: the easier it becomes to externalize, the greater the risk that externalization replaces internalization.
 
 ## Key Frameworks
 

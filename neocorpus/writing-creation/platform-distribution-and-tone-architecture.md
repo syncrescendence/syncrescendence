@@ -2,9 +2,9 @@
 
 ## Sources
 - `corpus/writing-creation/00932.md` — "The Alchemizing Catalyst" (platform deployment architecture, Three-Rail Operating System, full platform specifications)
-- `corpus/writing-creation/CANON-31110.sn.md` — Feedcraft: Constitutional Architecture of Digital Sovereignty (uncompressed SN stubs — section titles reveal structure)
+- `corpus/writing-creation/CANON-31110.sn.md` — Feedcraft: Constitutional Architecture of Digital Sovereignty (Syncrescript notation with substantive content)
 - `corpus/writing-creation/CANON-31120.sn.md` — Tone Library: dissemination execution system (rhetorical functions, stylistic forms, evidence types, cadence patterns, diction registers, CTAs, guardrails)
-- `corpus/writing-creation/CANON-31121.sn.md` — Tone Library Taxonomy (uncompressed SN stubs — full dimensional taxonomy reference)
+- `corpus/writing-creation/CANON-31121.sn.md` — Tone Library Taxonomy (Syncrescript notation — full dimensional taxonomy reference, 11 entity types)
 
 ## Core Thesis
 
@@ -48,7 +48,7 @@ Orthogonal to the platform topology, three rails govern ALL content:
 
 ### 3. The Tone Library Dimensional System (CANON-31120.sn.md)
 
-A ten-entity geological model from bedrock taxonomies through settlements to infrastructure:
+A multi-dimensional geological model (11 entity types per CANON-31121) from bedrock taxonomies through settlements to infrastructure:
 
 **Bedrock (stable dimensions)**:
 1. **Rhetorical Function** (10 types): Why content exists. EXPLAIN, PERSUADE, DEMONSTRATE, SYNTHESIZE, QUESTION, ANALYZE, INSPIRE, CONTEXTUALIZE, CRITIQUE, CONNECT. Each has micro-structure, optimal evidence types, and anti-patterns (CANON-31120.sn.md).
@@ -69,7 +69,7 @@ Nine-phase protocol: (1) Select concept, (2) Identify audience/platform, (3) Sel
 
 ### 5. Feedcraft — Constitutional Architecture of Digital Sovereignty (CANON-31110.sn.md)
 
-The section titles (the file itself is uncompressed stubs) reveal the conceptual architecture: an ontological crisis in digital platforms, a bifurcated attention economy, three structural shifts (2020-2025), measurement reflexivity, the failure of traditional responses, and a constitutional response through functional platform topology, cognitive architecture (three modes of constitutional intelligence), and category-specific platform intelligence. This represents the theoretical foundation beneath the operational Tone Library — why platforms behave as they do and how to navigate them constitutionally rather than reactively.
+The Syncrescript notation file contains substantive content whose conceptual architecture includes: an ontological crisis in digital platforms, a bifurcated attention economy, three structural shifts (2020-2025), measurement reflexivity, the failure of traditional responses, and a constitutional response through functional platform topology, cognitive architecture (three modes of constitutional intelligence), and category-specific platform intelligence. This represents the theoretical foundation beneath the operational Tone Library — why platforms behave as they do and how to navigate them constitutionally rather than reactively.
 
 ### 6. Tone Library Taxonomy (CANON-31121.sn.md)
 
@@ -83,7 +83,7 @@ The key design insight is that platform adaptation is not about reformatting the
 
 The Three-Rail system (Editorial, Instrumentation, Stewardship) provides the quality governance layer — content doesn't just need to be produced and distributed, it needs to be comprehensible (Rail A), measurable (Rail B), and reproducible by others (Rail C). This connects directly to the Compounder ideal from the creative leverage entry: the Tone Library itself IS a compounding asset — it encodes taste into a system that works without the founder's presence.
 
-Feedcraft (CANON-31110) and the extended Taxonomy (CANON-31121) remain in uncompressed stub form, meaning the full theoretical foundation and extended dimensional reference are not yet available for synthesis. Their section titles suggest substantial depth — particularly around platform ontology and recipient archetype modeling — that will enrich this entry once compressed.
+Feedcraft (CANON-31110) and the extended Taxonomy (CANON-31121) are in Syncrescript notation with substantive content — including platform ontology, constitutional architecture, and the full dimensional taxonomy reference. Their content will further enrich this entry once fully integrated into the synthesis.
 
 ## Open Questions
 
