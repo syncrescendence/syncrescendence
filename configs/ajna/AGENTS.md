@@ -2,8 +2,8 @@
 
 # Syncrescendence — Operational Law
 
-**Version**: 7.0.0
-**Last Updated**: 2026-02-28
+**Version**: 7.1.0
+**Last Updated**: 2026-03-01
 **Authority**: Constitutional — all agents inherit this file verbatim via `make configs`.
 
 ## Identity
@@ -91,6 +91,26 @@ Current live runtime state for tool-stack reconciliation is tracked separately i
 3. **If credential-blocked** → present Sovereign with ONE action.
 4. **If policy-blocked** → escalate to Sovereign directly.
 5. **NEVER** stop and describe what "needs to happen" — DO IT.
+
+---
+
+## Execution Surface Routing (GLOBAL — ALL AGENTS)
+
+### Principle: Use the Surface That Can Finish End-to-End
+
+1. **Direct execution in the current harness** — use the local shell, repo tools, and authenticated CLIs when the task can be completed deterministically on the current machine without creating a second source of truth.
+2. **Ajna / OpenClaw** — use Ajna for browser-native, OAuth-gated, DOM-aware, or other UI-mediated tasks that require live web traversal or manual sign-in checkpoints.
+3. **Manus** — use Manus for bounded autonomous backend or infrastructure tasks that cannot be completed end-to-end from the current harness but can be executed safely as a remote operational run.
+4. **Commander** — use Commander for orchestration, cross-surface sequencing, GitHub-facing dispatch, handoffs, and any task whose primary output is a repo artifact, prompt, or coordination decision.
+5. **Sovereign escalation** — escalate only for irreducible human actions: passwords, approval clicks, 2FA, or policy decisions that no agent can lawfully infer.
+
+### Routing Invariants
+
+- Pick the execution surface that can complete the task without handoffs that merely restate the same work.
+- Browser/OAuth/UI work defaults to Ajna unless a direct local path is already proven and cleaner.
+- Long-running or externally executed backend work defaults to Manus when local completion is blocked.
+- Every durable result must return through the repo/event/reconciliation contract. No agent may create a second authority surface.
+- GitHub, Obsidian, SaaS dashboards, and runtime tool state are operational surfaces, not constitutional truth.
 
 ---
 
@@ -205,9 +225,12 @@ Minimum schema:
   "id": "ajna-20260302-021500-browser-auth-check",
   "emitted_at": "2026-03-02T02:15:00Z",
   "source": "ajna",
+  "surface": "browser",
+  "artifact_class": "browser_action",
   "type": "browser_auth_state",
   "summary": "Checked browser auth state for Cloudflare and GitHub.",
   "capture_level": "summary",
+  "durable_capture": "summary_markdown",
   "repo_paths": [
     "/Users/system/syncrescendence/00-ORCHESTRATION/state/TOOL-STACK-LIVE-STATE.md"
   ],
@@ -224,6 +247,16 @@ Minimum schema:
 Rules:
 
 - Default `capture_level` to `pointer` unless the task clearly changed durable state.
+- `durable_capture` decides where the change is allowed to persist:
+  - `pointer`
+  - `summary_markdown`
+  - `typed_record`
+  - `summary_and_typed_record`
 - Use `summary` for decisions, state transitions, browser/OAuth milestones, or newly created repo artifacts.
+- Set `surface` and `artifact_class` explicitly on every event.
+- For Obsidian actions:
+  - tracked markdown changes use `surface: "obsidian"` + `artifact_class: "obsidian_repo_markdown"`
+  - `.obsidian/` config or plugin state must never be treated as canonical output
+- For exocortex actions, use the class that matches the external system and stay pointer-first unless the policy explicitly allows more.
 - Never write secrets, raw tokens, cookies, or full third-party message bodies into the event payload.
 - One event per meaningful state change. Do not batch unrelated actions into one file.
