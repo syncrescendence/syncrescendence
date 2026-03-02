@@ -1,6 +1,6 @@
 # Self-Improving AI Models
 
-A self-improving AI model is one that participates instrumentally in its own development pipeline — debugging its training code, managing its deployment, diagnosing its evaluations, or generating training data for its successor. GPT-5.3 Codex is the canonical example: OpenAI described it as "our first model that was instrumental in creating itself," with early versions used to debug training, manage deployment, and diagnose test results. This is operational self-improvement — a model accelerating the engineering cycle that produces it — as distinct from theoretical recursive self-improvement, where a model autonomously redesigns its own architecture to become arbitrarily more capable. The distinction matters enormously. Operational self-improvement is happening now and compressing release intervals. Recursive self-improvement remains speculative and faces fundamental obstacles.
+A self-improving AI model is one that participates instrumentally in its own development pipeline. GPT-5.3 Codex is the canonical example: OpenAI described it as "our first model that was instrumental in creating itself," with early versions used to debug training, manage deployment, and diagnose test results. This is operational self-improvement — a model accelerating the engineering cycle that produces it — as distinct from theoretical recursive self-improvement, where a model autonomously redesigns its own architecture to become arbitrarily more capable. The sources establish the operational phenomenon clearly; the recursive endpoint remains speculative and faces fundamental obstacles.
 
 ---
 
@@ -18,49 +18,13 @@ The parallel from Anthropic: Opus 4.5 was described as having "delivered all the
 
 ### What "Instrumental in Creating Itself" Actually Means
 
-The operational self-improvement loop looks like this:
+The GPT-5.3 announcement describes a bounded operational loop: the engineering team deployed early model versions to perform development tasks — debugging training code, managing deployment, diagnosing evaluation failures — that previously required human engineers. The human engineers still directed the process; the model accelerated it. This is not qualitatively different from a compiler that compiles its own successor (bootstrapping), but it is quantitatively significant because the model brings general-purpose problem-solving capability rather than narrow compilation capability.
 
-1. **Train model version N** using existing infrastructure
-2. **Deploy version N** as a development tool for the engineering team
-3. **Use version N** to debug training code, analyze evaluation failures, manage deployment infrastructure, and write tooling for version N+1
-4. **Train model version N+1** with the improvements version N helped engineer
-5. **Repeat**
-
-The acceleration comes from step 3: tasks that previously required human engineers — debugging CUDA kernels, diagnosing why a training run diverged, writing evaluation harnesses — can now be partially delegated to the model itself. The human engineers still direct the process, but the labor cost per development cycle drops.
-
-This is not qualitatively different from a compiler that compiles its own successor (bootstrapping). But it is quantitatively significant because the model brings general-purpose problem-solving capability, not just the narrow capability of compilation. A model that can debug arbitrary code, understand evaluation metrics, and reason about training dynamics is a more powerful development tool than any previous form of bootstrapping.
-
----
-
-## The Spectrum of Self-Improvement
-
-### Level 0: Model as End Product
-
-The model is trained, deployed, and used. It does not participate in any development activities. Most deployed models operate at this level.
-
-### Level 1: Model as Development Tool
-
-The model is used by engineers to write code, debug systems, and analyze data within its own development pipeline. GPT-5.3 Codex and Claude Code operate here. The model accelerates human-directed development but does not set objectives or make architectural decisions.
-
-### Level 2: Model as Training Data Generator
-
-The model generates synthetic training data, evaluation benchmarks, or curriculum for its successor. This is increasingly common — models generating "hard examples" for training, or generating chain-of-thought annotations that teach the next model how to reason. The loop is tighter here: the model's outputs directly influence the next model's capabilities.
-
-### Level 3: Model as Architecture Searcher
-
-The model proposes and evaluates architectural modifications to itself or its successors. Neural Architecture Search (NAS) approaches this, but current NAS operates in a constrained search space defined by human engineers. A model with genuine architectural self-modification capability would represent a qualitative leap.
-
-### Level 4: Recursive Self-Improvement (Theoretical)
-
-The model autonomously designs, trains, and deploys improved versions of itself without human direction, with each generation more capable of producing the next generation. This is the scenario that generates both the strongest excitement and the strongest safety concerns. No system operates at this level. The gap between Level 2 and Level 4 is vast and may be unbridgeable for fundamental reasons.
+The claim is bounded: this acceleration happened, it was directed by humans, and it was significant enough for OpenAI to lead with it in the announcement. Claims beyond this — about what the loop implies for future capability levels or where the safety frontier lies — are not grounded in the source.
 
 ---
 
 ## Key Insights
-
-### The Bottleneck Shifts, Not Disappears
-
-Self-improving models shift the bottleneck from "can the engineering team write the code?" to "can the engineering team evaluate the results?" As models become more capable development tools, the rate-limiting step becomes the human capacity to verify that the model's contributions are correct, safe, and aligned with development goals. This is the alignment problem applied to the development pipeline itself.
 
 ### Interval Compression as Evidence
 
@@ -89,9 +53,7 @@ The ARC-AGI research perspective suggests that LLMs could serve as the memory/kn
 
 The era of self-improving models has arrived in its operational form. Models are tools in their own development pipeline, and this is measurably accelerating the release cycle. The practical consequence for the field is faster iteration: models get better, faster, with each generation contributing to the next.
 
-The safety implications are real but bounded at current levels: a model that debugs training code under human direction is a productivity multiplier, not an autonomous agent. The safety frontier is at the transition between Levels 2 and 3 — when models begin to propose and evaluate architectural changes that humans cannot fully verify, the trust model breaks down.
-
-For practitioners: the acceleration means your evaluation infrastructure must keep pace with the release cadence. For researchers: the gap between operational self-improvement and theoretical recursive self-improvement is the most important open question in the field. For society: the models are getting better at making themselves better, and the pace is accelerating, but the humans are still in the loop — for now.
+The safety implications at current levels are bounded: a model that debugs training code under human direction is a productivity multiplier, not an autonomous agent. What constitutes a safety-relevant transition beyond current operational self-improvement is an open question — the sources establish the phenomenon but do not define where thresholds lie. For researchers: the gap between operational self-improvement and theoretical recursive self-improvement is the most important open question in the field.
 
 ---
 
@@ -100,5 +62,5 @@ For practitioners: the acceleration means your evaluation infrastructure must ke
 | Source | Corpus ID | Content |
 |--------|-----------|---------|
 | "GPT-5.3 Codex and Opus 4.6: An Unexpected Breakthrough" | `corpus/ai-models/00157.md` | GPT-5.3 "instrumental in creating itself" quote; self-improvement claims; release interval compression; Opus 4.5 writing Claude Code |
-| Mark Chen interview (Core Memory) | `corpus/ai-models/09558.md` | OpenAI compute allocation; GPT-5 Pro scientific discoveries; AGI timeline claims; model-accelerated research |
+| Mark Chen interview (Core Memory) | `corpus/ai-models/09558.md` | OpenAI compute allocation; GPT-5 Pro scientific discoveries; AGI timeline claims; model-accelerated research (description only — no transcript) |
 | ARC-AGI v3 interview (Chollet & Knoop) | `corpus/ai-models/01191.md` | Gradient descent sample inefficiency (4-5 orders of magnitude); LLMs as memory component not intelligence; efficient skill acquisition gap |
