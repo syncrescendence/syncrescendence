@@ -5,15 +5,15 @@
 
 ## Current Status
 
-As of **March 2, 2026**, `syncrescendence.com` is not yet resolving publicly from this machine.
+As of **March 2, 2026**, the Stage 1 domain path is effectively live at Cloudflare edge, but this macOS host still has a stale default resolver path.
 
-That means the repo should be **domain-ready** but should not yet switch default event projection away from localhost.
-
-Current local readiness is stronger than the public cutover state:
+Current state:
 
 - local ontology API is healthy on `127.0.0.1:8787`
 - local reverse proxy is healthy on `http://localhost:8080/health`
-- public DNS still does not resolve
+- `dig` resolves `syncrescendence.com` to Cloudflare edge IPs
+- direct edge health checks succeed for `https://syncrescendence.com/health`
+- default `curl https://syncrescendence.com/health` on this machine may still fail until the local resolver catches up
 - repo-safe readiness checks are written by `make tooling-surface-status`
 
 ## Role
@@ -71,10 +71,16 @@ make tooling-surface-status
 4. Confirm:
 
 ```bash
-curl https://syncrescendence.com/health
+make ontology-domain-health-edge
 ```
 
-5. Only after stable health:
+If the machine resolver has caught up, this should also pass:
+
+```bash
+make ontology-domain-health
+```
+
+5. Only after stable edge health:
    - point selected automation/event projectors at the domain URL instead of localhost
    - use `make reconcile-ajna-events-project-domain`
 

@@ -29,7 +29,48 @@ These are already true on this machine:
 - local Caddy proxy is healthy on `http://localhost:8080/health`
 - Cloudflare account and zone exist for `syncrescendence.com`
 
-## Remaining External Steps
+## Completed On This Machine
+
+These are already complete:
+
+1. `cloudflared tunnel login`
+   - created `~/.cloudflared/cert.pem`
+
+2. `cloudflared tunnel create syncrescendence-ontology`
+   - created tunnel `d3a8d735-a776-46ab-9dbf-ab7b87ec4cf2`
+
+3. tunnel DNS routing
+   - apex and `www` were routed through Cloudflare Tunnel
+
+4. local tunnel config
+   - `~/.cloudflared/config.yml` points both hostnames at `http://127.0.0.1:8080`
+
+5. edge verification
+   - direct edge health probes succeed even when the default macOS resolver is still stale
+
+## Remaining Local Hardening
+
+1. Keep the tunnel running under a local supervisor:
+
+```bash
+cloudflared tunnel --config ~/.cloudflared/config.yml run syncrescendence-ontology
+```
+
+On this machine, the persistent path is a local LaunchAgent:
+
+- label: `com.syncrescendence.cloudflared-ontology`
+- config: `~/.cloudflared/config.yml`
+
+2. Refresh the repo-safe readiness snapshot:
+
+```bash
+make tooling-surface-status
+make ontology-domain-health-edge
+```
+
+## Historical Setup Path
+
+These were the one-time setup steps used to reach the current state:
 
 1. Authenticate `cloudflared` with Cloudflare:
 
@@ -76,8 +117,7 @@ curl http://localhost:8080/health
 Public:
 
 ```bash
-curl https://syncrescendence.com/health
-curl https://www.syncrescendence.com/health
+make ontology-domain-health-edge
 ```
 
 Repo-safe status:
@@ -88,6 +128,5 @@ make tooling-surface-status
 
 ## What This Does Not Solve
 
-- Cloudflare login/approval if interactive auth is still required
-- nameserver activation if the zone is not fully active yet
+- local OS resolver lag after DNS changes
 - Zero Trust / Access policy, which is optional and downstream for this API-first stage

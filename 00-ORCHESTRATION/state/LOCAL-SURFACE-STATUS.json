@@ -1,5 +1,20 @@
 {
-  "captured_at": "2026-03-02T04:22:55Z",
+  "captured_at": "2026-03-02T04:49:24Z",
+  "cloudflared": {
+    "cert_present": true,
+    "config_present": true,
+    "connections": [],
+    "installed": true,
+    "launch_agent": {
+      "loaded": true,
+      "pid": "5249",
+      "state": "active"
+    },
+    "tunnel_id": "d3a8d735-a776-46ab-9dbf-ab7b87ec4cf2",
+    "tunnel_name": "syncrescendence-ontology",
+    "tunnel_present": true,
+    "version": "cloudflared version 2026.2.0 (built 2026-02-06T14:21:32Z)"
+  },
   "gcloud": {
     "cli": {
       "accounts": [
@@ -59,6 +74,13 @@
     "status_code": 200
   },
   "ontology": {
+    "domain_dig": {
+      "records": [
+        "104.21.75.60",
+        "172.67.214.249"
+      ],
+      "resolves": true
+    },
     "domain_dns": {
       "error": "[Errno 8] nodename nor servname provided, or not known",
       "resolves": false
@@ -66,6 +88,11 @@
     "domain_health": {
       "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
       "reachable": false
+    },
+    "domain_health_edge": {
+      "address": "104.21.75.60",
+      "reachable": true,
+      "status_code": 200
     },
     "local_api": {
       "payload": {

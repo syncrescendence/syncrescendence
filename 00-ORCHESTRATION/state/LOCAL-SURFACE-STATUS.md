@@ -1,6 +1,6 @@
 # Local Surface Status
 
-**Captured**: 2026-03-02T04:22:55Z
+**Captured**: 2026-03-02T04:49:24Z
 
 ## Auth Surfaces
 
@@ -18,11 +18,22 @@
 
 - Local API reachable: `True`
 - Local proxy reachable: `True`
-- Public DNS resolves: `False`
-- Public domain health reachable: `False`
+- macOS resolver sees domain: `False`
+- `dig` sees public records: `True`
+- Direct public edge health reachable: `True`
+- Default local domain health reachable: `False`
+
+## Tunnel
+
+- `cloudflared` installed: `True`
+- Cloudflare tunnel cert present: `True`
+- Local tunnel config present: `True`
+- Named tunnel present: `True`
+- Tunnel LaunchAgent loaded: `True`
+- Tunnel LaunchAgent state: `active`
 
 ## Reading
 
 - Local auth and serving surfaces can be checked without exposing secrets in repo artifacts.
-- Public cutover remains blocked until DNS and edge routing make `syncrescendence.com` resolve and serve `/health`.
+- If `dig` and direct edge health are green while default local curl still fails, the public cutover is live and only the local resolver is stale.
 - CLI and Keychain status should remain pointer-only; credentials stay local.

@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -83,6 +83,10 @@ ontology-domain-health:
 	@echo ""
 	@echo "✓ Ontology domain health endpoint is reachable"
 
+ontology-domain-health-edge:
+	@$(PYTHON) collect-tooling-surface-status.py
+	@$(PYTHON) -c 'import json, pathlib; report=json.loads(pathlib.Path("00-ORCHESTRATION/state/LOCAL-SURFACE-STATUS.json").read_text()); edge=report["ontology"].get("domain_health_edge") or {}; assert edge.get("reachable"), "Direct edge health is not reachable"; print("✓ Ontology edge health reachable via {} with status {}".format(edge.get("address"), edge.get("status_code")))'
+
 obsidian-bridge-help:
 	@$(PYTHON) obsidian_repo_bridge.py --help
 
@@ -110,6 +114,7 @@ help:
 	@echo "  make ontology-run     - Run the ontology v1 FastAPI service on 127.0.0.1:8787"
 	@echo "  make ontology-smoke   - Verify ontology v1 projection and API wiring"
 	@echo "  make ontology-domain-health - Check https://syncrescendence.com/health"
+	@echo "  make ontology-domain-health-edge - Check edge health even if the local resolver is stale"
 	@echo "  make obsidian-bridge-help - Show repo-backed Obsidian bridge usage"
 	@echo "  make exocortex-bridge-help - Show generic exocortex event bridge usage"
 	@echo "  make sync             - Pull, rebase, push"
