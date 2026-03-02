@@ -1,0 +1,48 @@
+name: Constitutional Integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'harness/**'
+      - 'machine/**'
+      - 'render-configs.py'
+      - 'validate-configs.py'
+      - 'reconcile-ajna-events.py'
+      - 'ontology_v1.py'
+      - 'exocortex_event_bridge.py'
+      - 'Makefile'
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate constitutional sources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile repo scripts
+        run: |
+          python3 -m py_compile render-configs.py
+          python3 -m py_compile validate-configs.py
+          python3 -m py_compile reconcile-ajna-events.py
+          python3 -m py_compile ontology_v1.py
+          python3 -m py_compile exocortex_event_bridge.py
+
+      - name: Validate config sources
+        run: make validate
+
+      - name: Render configs (dry run)
+        run: |
+          python3 render-configs.py \
+            --source AGENTS.md \
+            --harness-dir harness \
+            --machine-dir machine \
+            --output-dir configs \
+            --machine "lisas-macbook-air"
