@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
+import fcntl
 import json
 import shutil
 import subprocess
@@ -25,6 +27,7 @@ CAPTURE_POLICY_PATH = REPO_ROOT / "00-ORCHESTRATION" / "state" / "EXOCORTEX-CAPT
 LEDGER_PATH = REPO_ROOT / "memory" / "AJNA-EVENT-LEDGER.jsonl"
 SUMMARY_PATH = REPO_ROOT / "memory" / "AJNA-EVENT-SUMMARY.md"
 STATE_PATH = REPO_ROOT / "00-ORCHESTRATION" / "state" / "AJNA-EVENT-RECONCILIATION.json"
+LOCK_PATH = REPO_ROOT / "00-ORCHESTRATION" / "state" / "AJNA-EVENT-RECONCILIATION.lock"
 
 REQUIRED_FIELDS = {
     "id",
@@ -45,6 +48,17 @@ ALLOWED_SOURCES = {"ajna", "manus", "commander", "system"}
 def ensure_dirs() -> None:
     for path in (INBOX_DIR, ARCHIVE_DIR, FAILED_DIR, LEDGER_PATH.parent, SUMMARY_PATH.parent, STATE_PATH.parent):
         path.mkdir(parents=True, exist_ok=True)
+
+
+@contextlib.contextmanager
+def reconcile_lock():
+    LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK_PATH.open("w", encoding="utf-8") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 
 
 def utc_now() -> str:
@@ -195,6 +209,8 @@ def write_state(processed: list[str], failed: list[str], skipped: list[str]) -> 
 
 
 def archive_file(path: Path, destination_dir: Path) -> None:
+    if not path.exists():
+        return
     destination = destination_dir / path.name
     if destination.exists():
         destination = destination_dir / f"{path.stem}-{int(datetime.now().timestamp())}{path.suffix}"
@@ -289,76 +305,79 @@ def project_via_edge_resolve(
 
 def reconcile(project_ontology: bool, ontology_url: str, ontology_timeout_seconds: float) -> int:
     ensure_dirs()
-    policy = load_capture_policy()
-    existing_ids = load_existing_ids()
-    processed: list[str] = []
-    failed: list[str] = []
-    skipped: list[str] = []
-    projected_to_ontology: list[str] = []
-    ontology_failures: list[str] = []
+    with reconcile_lock():
+        policy = load_capture_policy()
+        existing_ids = load_existing_ids()
+        processed: list[str] = []
+        failed: list[str] = []
+        skipped: list[str] = []
+        projected_to_ontology: list[str] = []
+        ontology_failures: list[str] = []
 
-    for path in sorted(INBOX_DIR.glob("*.json")):
-        try:
-            event = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            failed.append(path.name)
-            archive_file(path, FAILED_DIR)
-            continue
+        for path in sorted(INBOX_DIR.glob("*.json")):
+            try:
+                event = json.loads(path.read_text(encoding="utf-8"))
+            except FileNotFoundError:
+                continue
+            except json.JSONDecodeError:
+                failed.append(path.name)
+                archive_file(path, FAILED_DIR)
+                continue
 
-        errors = validate_event(event, path, policy)
-        if errors:
-            failed.append(path.name)
-            archive_file(path, FAILED_DIR)
-            continue
+            errors = validate_event(event, path, policy)
+            if errors:
+                failed.append(path.name)
+                archive_file(path, FAILED_DIR)
+                continue
 
-        if event["id"] in existing_ids:
-            skipped.append(event["id"])
+            if event["id"] in existing_ids:
+                skipped.append(event["id"])
+                archive_file(path, ARCHIVE_DIR)
+                continue
+
+            normalized = {
+                "id": event["id"],
+                "emitted_at": event["emitted_at"],
+                "source": event["source"],
+                "surface": event["surface"],
+                "artifact_class": event["artifact_class"],
+                "type": event["type"],
+                "capture_level": event["capture_level"],
+                "durable_capture": event["durable_capture"],
+                "summary": event["summary"],
+                "repo_paths": event.get("repo_paths", []),
+                "ontology_entities": event.get("ontology_entities", []),
+                "payload": event["payload"],
+                "reconciled_at": utc_now(),
+            }
+            with LEDGER_PATH.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps(normalized, sort_keys=True) + "\n")
+            processed.append(event["id"])
+            if project_ontology:
+                success, error = project_event_to_ontology(
+                    normalized,
+                    ontology_url=ontology_url,
+                    timeout_seconds=ontology_timeout_seconds,
+                )
+                if success:
+                    projected_to_ontology.append(event["id"])
+                else:
+                    ontology_failures.append(f"{event['id']}: {error}")
+            existing_ids.add(event["id"])
             archive_file(path, ARCHIVE_DIR)
-            continue
 
-        normalized = {
-            "id": event["id"],
-            "emitted_at": event["emitted_at"],
-            "source": event["source"],
-            "surface": event["surface"],
-            "artifact_class": event["artifact_class"],
-            "type": event["type"],
-            "capture_level": event["capture_level"],
-            "durable_capture": event["durable_capture"],
-            "summary": event["summary"],
-            "repo_paths": event.get("repo_paths", []),
-            "ontology_entities": event.get("ontology_entities", []),
-            "payload": event["payload"],
-            "reconciled_at": utc_now(),
-        }
-        with LEDGER_PATH.open("a", encoding="utf-8") as handle:
-            handle.write(json.dumps(normalized, sort_keys=True) + "\n")
-        processed.append(event["id"])
+        write_state(processed, failed, skipped)
+        write_summary(load_recent_events())
+
+        print(f"Processed: {len(processed)}")
+        print(f"Failed: {len(failed)}")
+        print(f"Skipped duplicates: {len(skipped)}")
         if project_ontology:
-            success, error = project_event_to_ontology(
-                normalized,
-                ontology_url=ontology_url,
-                timeout_seconds=ontology_timeout_seconds,
-            )
-            if success:
-                projected_to_ontology.append(event["id"])
-            else:
-                ontology_failures.append(f"{event['id']}: {error}")
-        existing_ids.add(event["id"])
-        archive_file(path, ARCHIVE_DIR)
-
-    write_state(processed, failed, skipped)
-    write_summary(load_recent_events())
-
-    print(f"Processed: {len(processed)}")
-    print(f"Failed: {len(failed)}")
-    print(f"Skipped duplicates: {len(skipped)}")
-    if project_ontology:
-        print(f"Projected to ontology: {len(projected_to_ontology)}")
-        if ontology_failures:
-            print("Ontology projection failures:")
-            for failure in ontology_failures:
-                print(f"- {failure}")
+            print(f"Projected to ontology: {len(projected_to_ontology)}")
+            if ontology_failures:
+                print("Ontology projection failures:")
+                for failure in ontology_failures:
+                    print(f"- {failure}")
     return 0
 
 

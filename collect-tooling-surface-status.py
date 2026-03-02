@@ -132,6 +132,26 @@ def wrangler_status() -> dict[str, Any]:
     }
 
 
+def openclaw_channel_status() -> dict[str, Any]:
+    code, stdout, stderr, timed_out = run_command(
+        ["openclaw", "channels", "status", "--probe", "--json"],
+        timeout=20.0,
+    )
+    if timed_out:
+        return {"available": True, "timed_out": True}
+    if code != 0:
+        return {"available": False, "error": (stderr or stdout).strip() or None}
+    payload = json.loads(stdout or "{}")
+    channels = payload.get("channels", {})
+    channel_accounts = payload.get("channelAccounts", {})
+    return {
+        "available": True,
+        "captured_at_ms": payload.get("ts"),
+        "channels": channels,
+        "channel_accounts": channel_accounts,
+    }
+
+
 def http_status(url: str, timeout: float = 5.0) -> dict[str, Any]:
     request = urllib.request.Request(url, headers={"User-Agent": "syncrescendence-status/1.0"})
     try:
@@ -362,6 +382,7 @@ def collect() -> dict[str, Any]:
 
     return {
         "captured_at": utc_now(),
+        "openclaw_channels": openclaw_channel_status(),
         "gcloud": {
             "cli": gcloud_status(),
             "keychain": gcloud_keychain,
@@ -397,6 +418,7 @@ def write_report(report: dict[str, Any]) -> None:
     wrangler_cli = report["wrangler"]["cli"]
     manus = report["manus"]
     cloudflared = report["cloudflared"]
+    openclaw_channels = report["openclaw_channels"]
     ontology = report["ontology"]
     lines = [
         "# Local Surface Status",
@@ -415,6 +437,34 @@ def write_report(report: dict[str, Any]) -> None:
         f"- Manus keychain pointer present: `{manus.get('keychain', {}).get('present')}`",
         f"- Manus API reachable: `{manus.get('reachable')}`",
         "",
+        "## OpenClaw Channels",
+        "",
+    ]
+    if openclaw_channels.get("available"):
+        for channel in ("slack", "discord"):
+            channel_data = (openclaw_channels.get("channels") or {}).get(channel, {})
+            account = ((openclaw_channels.get("channel_accounts") or {}).get(channel) or [{}])[0]
+            lines.extend(
+                [
+                    f"- `{channel}` running: `{channel_data.get('running')}`",
+                    f"- `{channel}` probe ok: `{(channel_data.get('probe') or {}).get('ok')}`",
+                    f"- `{channel}` last inbound observed: `{account.get('lastInboundAt')}`",
+                    f"- `{channel}` last outbound observed: `{account.get('lastOutboundAt')}`",
+                ]
+            )
+            if channel == "slack":
+                team = (channel_data.get("probe") or {}).get("team", {})
+                if team:
+                    lines.append(f"- `slack` workspace: `{team.get('name')}` (`{team.get('id')}`)")
+            if channel == "discord":
+                bot = (channel_data.get("probe") or {}).get("bot", {})
+                if bot:
+                    lines.append(f"- `discord` bot: `{bot.get('username')}` (`{bot.get('id')}`)")
+    else:
+        lines.append(f"- OpenClaw channel probe unavailable: `{openclaw_channels.get('error') or 'unknown'}`")
+    lines.extend(
+        [
+            "",
         "## Ontology Domain Readiness",
         "",
         f"- Local API reachable: `{ontology['local_api'].get('reachable')}`",
@@ -436,10 +486,11 @@ def write_report(report: dict[str, Any]) -> None:
         "## Reading",
         "",
         "- Local auth and serving surfaces can be checked without exposing secrets in repo artifacts.",
+        "- Slack and Discord may be healthy and authenticated before any real inbound/outbound traffic is observed.",
         "- If `dig` and direct edge health are green while default local curl still fails, the public cutover is live and only the local resolver is stale.",
         "- CLI and Keychain status should remain pointer-only; credentials stay local.",
         "",
-    ]
+    ])
     MD_PATH.write_text("\n".join(lines), encoding="utf-8")
 
 

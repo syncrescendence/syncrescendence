@@ -1,9 +1,23 @@
 {
   "agent": "ajna",
   "browser_enabled": true,
-  "captured_at": "2026-03-02T04:16:05Z",
+  "captured_at": "2026-03-02T05:39:56Z",
+  "channel_probe_available": true,
   "channels": {
     "discord": {
+      "application": {
+        "flags": 8953856,
+        "id": "1469043297174421618",
+        "intents": {
+          "guildMembers": "limited",
+          "messageContent": "limited",
+          "presence": "limited"
+        }
+      },
+      "bot_identity": {
+        "id": "1469043297174421618",
+        "username": "Ajna"
+      },
       "bot_token_configured": true,
       "bot_token_keychain": {
         "created_at": "20260302033006Z",
@@ -13,6 +27,11 @@
       "dmPolicy": "pairing",
       "enabled": true,
       "groupPolicy": "allowlist",
+      "last_inbound_at": null,
+      "last_outbound_at": null,
+      "last_probe_at": 1772429996161,
+      "probe_ok": true,
+      "running": true,
       "streaming": "off"
     },
     "slack": {
@@ -21,6 +40,10 @@
         "created_at": "20260302030001Z",
         "modified_at": "20260302030001Z",
         "present": true
+      },
+      "bot_identity": {
+        "id": "U0AC8TU837E",
+        "name": "ajna"
       },
       "bot_token_configured": true,
       "bot_token_keychain": {
@@ -31,10 +54,19 @@
       "dmPolicy": "pairing",
       "enabled": true,
       "groupPolicy": "allowlist",
+      "last_inbound_at": null,
+      "last_outbound_at": null,
+      "last_probe_at": 1772429996381,
       "mode": "socket",
       "nativeStreaming": true,
+      "probe_ok": true,
+      "running": true,
       "streaming": "partial",
-      "webhookPath": "/slack/events"
+      "webhookPath": "/slack/events",
+      "workspace": {
+        "id": "T0AB6TCRZGF",
+        "name": "Syncrescendence"
+      }
     }
   },
   "gateway": {

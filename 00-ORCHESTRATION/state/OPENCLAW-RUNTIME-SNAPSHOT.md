@@ -1,6 +1,6 @@
 # OpenClaw Runtime Snapshot
 
-- Captured: `2026-03-02T04:16:05Z`
+- Captured: `2026-03-02T05:39:56Z`
 - Agent focus: `ajna`
 - Primary model: `anthropic/claude-sonnet-4-5`
 - Workspace path: `/Users/system/.openclaw/workspace`
@@ -11,8 +11,8 @@
 
 ## Channels
 
-- `discord` `enabled=True` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=off` `botTokenConfigured=True` `botTokenKeychain=True`
-- `slack` `enabled=True` `mode=socket` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=partial` `botTokenConfigured=True` `appTokenConfigured=True` `botTokenKeychain=True` `appTokenKeychain=True`
+- `discord` `enabled=True` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=off` `botTokenConfigured=True` `botTokenKeychain=True` `running=True` `probeOk=True` `lastInbound=None` `lastOutbound=None`
+- `slack` `enabled=True` `mode=socket` `groupPolicy=allowlist` `dmPolicy=pairing` `streaming=partial` `botTokenConfigured=True` `appTokenConfigured=True` `botTokenKeychain=True` `appTokenKeychain=True` `running=True` `probeOk=True` `lastInbound=None` `lastOutbound=None`
 
 ## Workspace Excerpts
 

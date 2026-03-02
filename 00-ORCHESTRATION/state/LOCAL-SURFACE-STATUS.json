@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-03-02T05:21:49Z",
+  "captured_at": "2026-03-02T05:40:41Z",
   "cloudflared": {
     "cert_present": true,
     "config_present": true,
@@ -94,8 +94,8 @@
       "payload": {
         "config_snapshot_count": 2,
         "db_path": "/Users/system/syncrescendence/00-ORCHESTRATION/state/ontology-v1.sqlite3",
-        "entity_count": 5,
-        "event_count": 3,
+        "entity_count": 22,
+        "event_count": 17,
         "status": "ok"
       },
       "reachable": true,
@@ -110,8 +110,8 @@
       "payload": {
         "config_snapshot_count": 2,
         "db_path": "/Users/system/syncrescendence/00-ORCHESTRATION/state/ontology-v1.sqlite3",
-        "entity_count": 5,
-        "event_count": 3,
+        "entity_count": 22,
+        "event_count": 17,
         "status": "ok"
       },
       "reachable": true,
@@ -121,12 +121,147 @@
       "payload": {
         "config_snapshot_count": 2,
         "db_path": "/Users/system/syncrescendence/00-ORCHESTRATION/state/ontology-v1.sqlite3",
-        "entity_count": 5,
-        "event_count": 3,
+        "entity_count": 22,
+        "event_count": 17,
         "status": "ok"
       },
       "reachable": true,
       "status_code": 200
+    }
+  },
+  "openclaw_channels": {
+    "available": true,
+    "captured_at_ms": 1772430050114,
+    "channel_accounts": {
+      "discord": [
+        {
+          "accountId": "default",
+          "application": {
+            "flags": 8953856,
+            "id": "1469043297174421618",
+            "intents": {
+              "guildMembers": "limited",
+              "messageContent": "limited",
+              "presence": "limited"
+            }
+          },
+          "bot": {
+            "id": "1469043297174421618",
+            "username": "Ajna"
+          },
+          "configured": true,
+          "enabled": true,
+          "lastError": null,
+          "lastInboundAt": null,
+          "lastOutboundAt": null,
+          "lastProbeAt": 1772430050678,
+          "lastStartAt": 1772422815899,
+          "lastStopAt": null,
+          "probe": {
+            "application": {
+              "flags": 8953856,
+              "id": "1469043297174421618",
+              "intents": {
+                "guildMembers": "limited",
+                "messageContent": "limited",
+                "presence": "limited"
+              }
+            },
+            "bot": {
+              "id": "1469043297174421618",
+              "username": "Ajna"
+            },
+            "elapsedMs": 564,
+            "error": null,
+            "ok": true,
+            "status": null
+          },
+          "running": true,
+          "tokenSource": "config"
+        }
+      ],
+      "slack": [
+        {
+          "accountId": "default",
+          "appTokenSource": "config",
+          "botTokenSource": "config",
+          "configured": true,
+          "enabled": true,
+          "lastError": null,
+          "lastInboundAt": null,
+          "lastOutboundAt": null,
+          "lastProbeAt": 1772430050916,
+          "lastStartAt": 1772422815900,
+          "lastStopAt": null,
+          "probe": {
+            "bot": {
+              "id": "U0AC8TU837E",
+              "name": "ajna"
+            },
+            "elapsedMs": 237,
+            "ok": true,
+            "status": 200,
+            "team": {
+              "id": "T0AB6TCRZGF",
+              "name": "Syncrescendence"
+            }
+          },
+          "running": true
+        }
+      ]
+    },
+    "channels": {
+      "discord": {
+        "configured": true,
+        "lastError": null,
+        "lastProbeAt": 1772430050678,
+        "lastStartAt": 1772422815899,
+        "lastStopAt": null,
+        "probe": {
+          "application": {
+            "flags": 8953856,
+            "id": "1469043297174421618",
+            "intents": {
+              "guildMembers": "limited",
+              "messageContent": "limited",
+              "presence": "limited"
+            }
+          },
+          "bot": {
+            "id": "1469043297174421618",
+            "username": "Ajna"
+          },
+          "elapsedMs": 564,
+          "error": null,
+          "ok": true,
+          "status": null
+        },
+        "running": true,
+        "tokenSource": "config"
+      },
+      "slack": {
+        "appTokenSource": "config",
+        "botTokenSource": "config",
+        "configured": true,
+        "lastError": null,
+        "lastProbeAt": 1772430050916,
+        "lastStartAt": 1772422815900,
+        "lastStopAt": null,
+        "probe": {
+          "bot": {
+            "id": "U0AC8TU837E",
+            "name": "ajna"
+          },
+          "elapsedMs": 237,
+          "ok": true,
+          "status": 200,
+          "team": {
+            "id": "T0AB6TCRZGF",
+            "name": "Syncrescendence"
+          }
+        },
+        "running": true
+      }
     }
   },
   "wrangler": {

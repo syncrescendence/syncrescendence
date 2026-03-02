@@ -1,6 +1,6 @@
 # Ajna Runtime Synthesis
 
-**Captured**: 2026-03-02T04:16:05Z
+**Captured**: 2026-03-02T05:39:56Z
 
 ## Stable Facts
 
@@ -16,8 +16,10 @@
 - Channel `discord` enabled: `True`
 - Slack runtime token presence: bot=`True` app=`True`
 - Slack keychain presence: bot=`True` app=`True`
+- Slack provider health: running=`True` probeOk=`True` inbound=`None` outbound=`None`
 - Discord runtime token presence: bot=`True`
 - Discord keychain presence: bot=`True`
+- Discord provider health: running=`True` probeOk=`True` inbound=`None` outbound=`None`
 
 ## Operational Reading
 

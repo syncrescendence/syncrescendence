@@ -55,6 +55,18 @@ def keychain_item_metadata(account: str) -> dict:
     }
 
 
+def openclaw_channel_status() -> dict:
+    result = subprocess.run(
+        ["openclaw", "channels", "status", "--probe", "--json"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return {"available": False, "error": (result.stderr or result.stdout).strip() or None}
+    return {"available": True, **json.loads(result.stdout or "{}")}
+
+
 def channel_runtime_summary(name: str, data: dict) -> dict:
     summary = {
         "enabled": bool(data.get("enabled")),
@@ -71,6 +83,24 @@ def channel_runtime_summary(name: str, data: dict) -> dict:
     elif name == "discord":
         summary["bot_token_configured"] = bool(data.get("token"))
         summary["bot_token_keychain"] = keychain_item_metadata("discord-bot-token")
+    return summary
+
+
+def enrich_channel_summary(name: str, summary: dict, status_payload: dict) -> dict:
+    channel = (status_payload.get("channels") or {}).get(name, {})
+    account = ((status_payload.get("channelAccounts") or {}).get(name) or [{}])[0]
+    probe = channel.get("probe") or {}
+    summary["running"] = channel.get("running")
+    summary["probe_ok"] = probe.get("ok")
+    summary["last_probe_at"] = channel.get("lastProbeAt")
+    summary["last_inbound_at"] = account.get("lastInboundAt")
+    summary["last_outbound_at"] = account.get("lastOutboundAt")
+    if name == "slack":
+        summary["workspace"] = probe.get("team")
+        summary["bot_identity"] = probe.get("bot")
+    elif name == "discord":
+        summary["bot_identity"] = probe.get("bot")
+        summary["application"] = probe.get("application")
     return summary
 
 
@@ -109,6 +139,7 @@ def collect_runtime(agent: str) -> dict:
     installed_skills = sorted(path.name for path in skills_dir.iterdir() if path.is_dir()) if skills_dir.exists() else []
 
     channels = openclaw.get("channels", {})
+    channel_status = openclaw_channel_status()
     defaults = openclaw.get("agents", {}).get("defaults", {})
     gateway = openclaw.get("gateway", {})
 
@@ -125,7 +156,11 @@ def collect_runtime(agent: str) -> dict:
             "bind": gateway.get("bind"),
             "mode": gateway.get("mode"),
         },
-        "channels": {name: channel_runtime_summary(name, data) for name, data in channels.items()},
+        "channels": {
+            name: enrich_channel_summary(name, channel_runtime_summary(name, data), channel_status)
+            for name, data in channels.items()
+        },
+        "channel_probe_available": channel_status.get("available"),
         "workspace_agents_excerpt": workspace_agents[:4000],
         "workspace_memory_excerpt": workspace_memory[:4000],
     }
@@ -163,9 +198,17 @@ def write_runtime_snapshot(runtime: dict) -> tuple[Path, Path]:
             details.append(f"appTokenConfigured={data.get('app_token_configured')}")
             details.append(f"botTokenKeychain={data.get('bot_token_keychain', {}).get('present')}")
             details.append(f"appTokenKeychain={data.get('app_token_keychain', {}).get('present')}")
+            details.append(f"running={data.get('running')}")
+            details.append(f"probeOk={data.get('probe_ok')}")
+            details.append(f"lastInbound={data.get('last_inbound_at')}")
+            details.append(f"lastOutbound={data.get('last_outbound_at')}")
         if name == "discord":
             details.append(f"botTokenConfigured={data.get('bot_token_configured')}")
             details.append(f"botTokenKeychain={data.get('bot_token_keychain', {}).get('present')}")
+            details.append(f"running={data.get('running')}")
+            details.append(f"probeOk={data.get('probe_ok')}")
+            details.append(f"lastInbound={data.get('last_inbound_at')}")
+            details.append(f"lastOutbound={data.get('last_outbound_at')}")
         lines.append(f"- `{name}` " + " ".join(f"`{item}`" for item in details))
     lines.extend(
         [
@@ -213,8 +256,10 @@ def write_tool_stack_live_state(runtime: dict) -> Path:
         f"- Discord channel is currently {'enabled' if discord.get('enabled') else 'disabled'}",
         f"- Slack socket mode tokens are configured in runtime: bot=`{slack.get('bot_token_configured')}` app=`{slack.get('app_token_configured')}`",
         f"- Slack keychain entries are present: bot=`{slack.get('bot_token_keychain', {}).get('present')}` app=`{slack.get('app_token_keychain', {}).get('present')}`",
+        f"- Slack probe status: running=`{slack.get('running')}` probeOk=`{slack.get('probe_ok')}` inbound=`{slack.get('last_inbound_at')}` outbound=`{slack.get('last_outbound_at')}`",
         f"- Discord bot token is configured in runtime: `{discord.get('bot_token_configured')}`",
         f"- Discord keychain entry is present: `{discord.get('bot_token_keychain', {}).get('present')}`",
+        f"- Discord probe status: running=`{discord.get('running')}` probeOk=`{discord.get('probe_ok')}` inbound=`{discord.get('last_inbound_at')}` outbound=`{discord.get('last_outbound_at')}`",
         "- `exec`, `process`, and `apply_patch` remain denied in OpenClaw",
         "- Rendered + validated config scaffold now exists locally:",
         "  - `harness/*.json`",
@@ -249,7 +294,7 @@ def write_tool_stack_live_state(runtime: dict) -> Path:
         "1. The current sync loop is snapshot-first and still needs richer normalization rules",
         "2. Memory synthesis is still first-pass and not yet canon-promotion aware",
         "3. Historical documents still preserve pre-rewire Ajna/Kimi assumptions",
-        "4. Public ontology cutover still depends on DNS / edge for `syncrescendence.com`",
+        "4. Slack and Discord are healthy at the provider layer, but no inbound/outbound traffic has been observed in runtime yet",
         "5. OpenClaw stores active channel credentials in local runtime config; repo truth remains pointer-only and repo-safe",
         "",
         "## Authority",
@@ -290,8 +335,10 @@ def synthesize_memory(runtime: dict) -> Path:
             f"- Channel `discord` enabled: `{discord.get('enabled')}`",
             f"- Slack runtime token presence: bot=`{slack.get('bot_token_configured')}` app=`{slack.get('app_token_configured')}`",
             f"- Slack keychain presence: bot=`{slack.get('bot_token_keychain', {}).get('present')}` app=`{slack.get('app_token_keychain', {}).get('present')}`",
+            f"- Slack provider health: running=`{slack.get('running')}` probeOk=`{slack.get('probe_ok')}` inbound=`{slack.get('last_inbound_at')}` outbound=`{slack.get('last_outbound_at')}`",
             f"- Discord runtime token presence: bot=`{discord.get('bot_token_configured')}`",
             f"- Discord keychain presence: bot=`{discord.get('bot_token_keychain', {}).get('present')}`",
+            f"- Discord provider health: running=`{discord.get('running')}` probeOk=`{discord.get('probe_ok')}` inbound=`{discord.get('last_inbound_at')}` outbound=`{discord.get('last_outbound_at')}`",
         ]
     )
     lines.extend(
