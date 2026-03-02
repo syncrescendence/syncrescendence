@@ -31,6 +31,7 @@ Then support it with:
 - Ontology remains typed projection layer, not a second repo.
 - Exocortex means the externalized SaaS / CLI / service layer, not merely "memory."
 - Do not reopen already-settled Ajna/OpenClaw questions unless you find a direct contradiction in the cited files.
+- Go unusually deep on **Obsidian**. Treat it as a serious architectural surface, not a side-note PKM app.
 
 ## 5. Current Implemented State
 
@@ -46,6 +47,16 @@ This is the live March 2, 2026 state:
 - Commander is resuming the remaining tooling execution queue separately.
 
 So this prompt is **strictly about the boundary policy for the next layer**.
+
+### Important current-world update for this prompt
+
+On **February 10, 2026**, Obsidian 1.12.0 Desktop early access added an official CLI.
+
+Official Obsidian help also now distinguishes:
+- **Obsidian CLI**: controls the desktop app from the terminal
+- **Obsidian Headless (open beta)**: standalone client for Obsidian services that can run without the desktop app
+
+This means Obsidian is no longer merely "a markdown editor" in the practical architecture space. It now has real implications for automation, vault operations, agent access, and local human-facing interfaces.
 
 ## 6. Questions To Answer
 
@@ -69,6 +80,28 @@ Possible roles to adjudicate:
 - something else
 
 How do we prevent Obsidian from becoming a second canon?
+
+Go much deeper than that. We want a serious adjudication of the **full Obsidian role** in this architecture:
+
+- Is the vault primarily:
+  - a repo-native editing surface
+  - a local cockpit over repo truth
+  - an exocortex adapter
+  - a human-facing dashboard layer
+  - a selective capture surface
+  - or some bounded combination?
+- What is the correct role of:
+  - `.obsidian/`
+  - official **Obsidian CLI**
+  - official **Obsidian Headless**
+  - community plugin ecosystem
+  - Sync / Publish / web clipper style services
+- Which Obsidian-originated actions should be:
+  - allowed to write directly to repo files
+  - allowed only as staging drafts
+  - pointer-only into ontology/exocortex
+  - forbidden because they create parallel realities
+- What are the strongest real usage patterns from the field for Obsidian in sovereign/local-first stacks, and which of them are compatible vs incompatible with Syncrescendence?
 
 ### Q3. GitHub
 
@@ -146,6 +179,17 @@ The quote must be **ugly and exact**:
 
 If your quotes read like smooth summary prose, they are not accepted.
 
+In addition to the local anchor files, you must explicitly engage the following official Obsidian pages as current-world reference points:
+
+- [Obsidian CLI help](https://help.obsidian.md/cli)
+- [Obsidian Headless help](https://help.obsidian.md/headless)
+- [Obsidian 1.12.0 Desktop changelog, February 10, 2026](https://obsidian.md/changelog/2026-02-10-desktop-v1.12.0/)
+
+When you discuss Obsidian, distinguish clearly between:
+- desktop-vault interaction
+- CLI automation over the running desktop app
+- headless service access without the desktop app
+
 ## 9. Anchor Files
 
 Read these files:
@@ -170,3 +214,8 @@ Exhaust your output tokens.
 
 We do **not** want a generic architecture essay.
 We want the sharpest possible boundary policy for a system that is already half-built and now needs its remaining truths partitioned correctly.
+
+For Obsidian specifically, go **hyper in-depth**:
+- map the major usage archetypes people are converging on
+- separate what is field-proven from what is seductive-but-dangerous
+- explain exactly how Syncrescendence should and should not use the vault, `.obsidian/`, CLI, Headless, and plugins

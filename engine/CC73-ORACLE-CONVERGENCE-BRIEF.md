@@ -80,6 +80,11 @@ These are the remaining Oracle-grade questions:
    - docs/status surface
    - staged sequence among them
 
+6. **Obsidian just changed materially**
+   - Official Obsidian CLI was added in Obsidian 1.12.0 Desktop early access on **February 10, 2026**
+   - Official help now distinguishes **Obsidian CLI** from **Obsidian Headless (open beta)**
+   - This reopens the practical question of whether Obsidian is only an editor over repo truth, or a stronger local interface/automation surface in the exocortex
+
 ## Recommended Next Oracle Question
 
 Do **not** ask Oracle to redesign Ajna, OpenClaw, or the config scaffold again.
@@ -97,3 +102,18 @@ Commander can continue the rest of tooling stack execution:
 - ontology hookup behind the domain
 
 The Oracle line should now stay on **boundary policy and capture policy**, not on re-litigating already-implemented plumbing.
+
+## Obsidian-Specific Pressure
+
+Oracle should go unusually deep on Obsidian in the next round because:
+
+- there are many real-world Obsidian usage patterns that collapse notes, dashboards, automation, PKM, and local knowledge operations into one surface
+- Syncrescendence already has vault-adjacent repo characteristics
+- the newly released official CLI and Headless surfaces materially expand what Obsidian can be in a sovereign local stack
+
+The next Oracle round should therefore adjudicate not just "whether to use Obsidian" but:
+
+- whether Obsidian is only an editor
+- whether it is the best local human-facing cockpit over repo truth
+- whether CLI and Headless should be allowed as exocortex adapters
+- what must never originate in Obsidian if repo sovereignty is to hold
