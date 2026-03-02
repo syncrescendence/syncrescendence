@@ -91,6 +91,12 @@ def main() -> int:
         seen_agents.add(agent)
         if harness not in harnesses:
             errors.append(f"Target {agent} references unknown harness {harness}")
+        for section in target.get("source_sections", []):
+            if f"## {section}" not in source.read_text(encoding="utf-8"):
+                errors.append(f"Target {agent} missing source section {section!r}")
+        for relative in target.get("extra_sources", []):
+            if not (repo_root / relative).exists():
+                errors.append(f"Target {agent} missing extra source {relative}")
 
     hostnames: set[str] = set()
     for manifest_path in sorted(machine_dir.glob("*.json")):
@@ -104,6 +110,9 @@ def main() -> int:
     sources_to_check = [source]
     for data in harnesses.values():
         for relative in data.get("extension_sources", []):
+            sources_to_check.append(repo_root / relative)
+    for target in targets:
+        for relative in target.get("extra_sources", []):
             sources_to_check.append(repo_root / relative)
 
     for candidate in sources_to_check:

@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw reconcile-ajna-events sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -25,6 +25,18 @@ reconcile: validate
 	@echo "✓ Root harness files reconciled for $(HOSTNAME)"
 	@echo "i OpenClaw workspace deployment remains manual until repo↔runtime sync lands"
 
+deploy-ajna: configs
+	@$(PYTHON) sync-openclaw.py --agent ajna --deploy
+	@echo "✓ Ajna workspace refreshed from generated config"
+
+sync-openclaw:
+	@$(PYTHON) sync-openclaw.py --agent ajna --snapshot --synthesize-memory
+	@echo "✓ OpenClaw runtime snapshot and memory synthesis refreshed"
+
+reconcile-ajna-events:
+	@$(PYTHON) reconcile-ajna-events.py
+	@echo "✓ Ajna event landing zone reconciled into repo memory/state"
+
 # Default target
 help:
 	@echo "Syncrescendence Repository Commands"
@@ -32,6 +44,9 @@ help:
 	@echo "  make validate         - Validate config sources, manifests, and referenced paths"
 	@echo "  make configs          - Render configs/ from AGENTS.md + harness manifests"
 	@echo "  make reconcile        - Render configs/ and sync root harness files"
+	@echo "  make deploy-ajna      - Deploy generated Ajna config to the live OpenClaw workspace"
+	@echo "  make sync-openclaw    - Snapshot live OpenClaw runtime back into repo state"
+	@echo "  make reconcile-ajna-events - Ingest Ajna event files from OpenClaw workspace"
 	@echo "  make sync             - Pull, rebase, push"
 	@echo "  make sync-checkpoint  - Quick sync checkpoint (git state)"
 	@echo "  make tree             - Generate current directory tree"

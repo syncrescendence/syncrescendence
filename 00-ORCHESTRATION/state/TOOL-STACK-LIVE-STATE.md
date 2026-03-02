@@ -23,20 +23,34 @@
   - `render-configs.py`
   - `validate-configs.py`
   - `configs/manifest.json`
+- OpenClaw repo↔runtime tooling now exists locally:
+  - `make deploy-ajna`
+  - `make sync-openclaw`
+  - `sync-openclaw.py`
+  - `00-ORCHESTRATION/state/OPENCLAW-RUNTIME-SNAPSHOT.md`
+  - `memory/AJNA-RUNTIME-SYNTHESIS.md`
+- Ajna event reconciliation now exists locally:
+  - `make reconcile-ajna-events`
+  - `reconcile-ajna-events.py`
+  - `memory/AJNA-EVENT-LEDGER.jsonl`
+  - `memory/AJNA-EVENT-SUMMARY.md`
+  - `00-ORCHESTRATION/state/AJNA-EVENT-RECONCILIATION.json`
+- Ajna's OpenClaw workspace instruction surface has been compacted below the 20k bootstrap ceiling
 
 ## Current Truth Split
 
 - Repo constitutional/orientation docs have been partially reconciled, but historical artifacts still narrate Ajna as Kimi-primary
 - Live OpenClaw runtime has already moved Ajna onto Claude Sonnet
-- Config scaffold is implemented in-repo, but OpenClaw workspace deployment and repo↔runtime sync are still separate
-- Memory remains split across repo memory, OpenClaw workspace memory, and session logs
+- Config scaffold is implemented in-repo and Ajna workspace deployment is now repo-driven
+- Memory remains split across repo memory, OpenClaw workspace memory, and session logs, but there is now a first synthesis loop back into repo memory
+- Ajna can now emit durable event files into a landing zone that Commander reconciles into repo state
 
 ## Immediate Blockers
 
-1. Repo↔OpenClaw reconciliation loop does not exist yet
-2. Memory synthesis loop does not exist yet
-3. OpenClaw workspace deployment from the rendered scaffold is still manual by design
-4. Historical documents still preserve pre-rewire Ajna/Kimi assumptions
+1. The current sync loop is snapshot-first and still needs richer normalization rules
+2. Memory synthesis is still first-pass and not yet canon-promotion aware
+3. Historical documents still preserve pre-rewire Ajna/Kimi assumptions
+4. OpenClaw LaunchAgent restart path is still brittle; the gateway currently recovers cleanly in foreground mode
 5. `gcloud` still needs one-time browser OAuth
 6. `wrangler` still needs one-time browser OAuth
 

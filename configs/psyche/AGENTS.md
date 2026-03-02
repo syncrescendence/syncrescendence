@@ -94,227 +94,6 @@ Current live runtime state for tool-stack reconciliation is tracked separately i
 
 ---
 
-## Triangulation Playbook (CONSTITUTIONAL)
-
-### The Cycle
-
-```
-Commander → Oracle → Sovereign relay → Commander → Diviner → Sovereign relay → Commander → Adjudicator
-```
-
-| Phase | Agent | Cognitive Function |
-|-------|-------|--------------------|
-| **GROUND** | Commander | Elucidate ground truth, interpret Sovereign intent, stage prompts |
-| **THESIS** | Oracle (Grok) | Develop OWN thesis first, THEN elucidate industry expertise consensus |
-| **RELAY** | Sovereign | Relay Oracle response to Commander (human-in-the-loop gate) |
-| **SYNTHESIS** | Diviner (Gemini) | Novel synthesis: scientific proclivity, cross-disciplinary exploration |
-| **RELAY** | Sovereign | Relay Diviner response to Commander |
-| **COMPILE** | Commander | Compile all insights into unified schematic design |
-| **ENGINEER** | Adjudicator (Codex) | Engineer the deep hyper-technicality — *how* and *how it breaks* |
-
-### Documentation Invariants
-
-| What | Where |
-|------|-------|
-| Every prompt | `engine/PROMPT-<AGENT>-<TOPIC>.md` + `~/Desktop/` copy for Sovereign relay |
-| Every response | `-INBOX/commander/00-INBOX0/RESPONSE-<AGENT>-<TOPIC>.md` |
-| Session handoff | `agents/commander/outbox/handoffs/HANDOFF-CC{N}{a\|b}.md` (a=CRUSH, b=tool stack) |
-
-### Commander Council (CC) Sessions
-
-Every Sovereign↔Commander interaction is a CC session. CC numbers increment per session. Commander's instrument is **ascertescence** (staging prompts, orchestrating triangulation, synthesizing output).
-
-**Wisdom from the DAG** (CC29-CC34):
-- Don't abandon instruments in favor of fresh gap analysis. New questions earn their way in.
-- Track Sovereign questions as artifacts, not ephemera.
-- Drain downward — don't re-deepen answered questions while ignoring open ones.
-- Lateral expansion without downward drainage is the Tooling Trap at the meta level.
-
----
-
-## Agent Prompting Formulas (SEARED)
-
-### Clustering Principle (CONSTITUTIONAL — ALL PROMPTS)
-
-Every dispatch involving corpus or file classification MUST include this verbatim:
-
-> Group files by **SEMANTIC TOPIC** — what they are ABOUT. Not by filename prefix. Not by file type. Not by source platform. Not by artifact role.
-> - Everything about Claude Code — tweets, configs, logs, manuals, our notes — is ONE cluster.
-> - Everything about OpenClaw — same.
-> - Everything about prompt engineering — same.
-> - The clusters are TOPICS, not file types.
-> - **CLUSTERING BY TYPE IS FORBIDDEN.** A .jsonl about consciousness goes in philosophy-esoterica. A .py about dispatch goes in multi-agent-systems. A .log about memory goes in ai-memory-retrieval. NEVER route files by extension, format, or artifact role. This is the single most common classification error and it is constitutionally prohibited.
-> - Nothing gets deleted.
->
-> **Teleology**: We cluster progressively — more and more granularly. Subcategories will form. Metacategories will form. We semantically tighten for maximal coherence. The end result is a textbook, a compendium to build the Syncrescendence. Every misclassification is a flaw in the canon. Every reclassification illuminates.
-
-### Operational Artifact Routing (CC59 Amendment)
-
-**Definition**: Operational artifacts are byproducts of pipeline processing that carry NO topical content. Includes: zero-atom extraction stubs, processing manifests, telemetry logs, task directives (TASK/CONFIRM/RESULT/DISPATCH), verification reports, dispatch scripts, orchestrator state files, graph-view configs, circuit breakers, lock files.
-
-**Routing rule**: Operational artifacts produced BY the Syncrescendence constellation route to `multi-agent-systems/` — they are ABOUT multi-agent coordination.
-
-**The test**: "Does this file contain substantive content ABOUT a topic?" If yes → route by topic. If it's empty metadata, failed extraction, or pure pipeline state → `multi-agent-systems/`.
-
-**Critical distinction — extraction files with content ARE topical**: An extraction `.md` with atoms about AI models IS about AI models. The `# Extraction: SOURCE-...` header is formatting, not identity. Routing extraction files to `multi-agent-systems/` because they have extraction headers IS type-based routing — constitutionally forbidden. Only ZERO-ATOM stubs (no content extracted) are pipeline byproducts.
-
-**Examples**:
-- Zero-atom extraction stub → `multi-agent-systems/` (pipeline failure, no topical content)
-- Extraction with 5 atoms about OpenClaw → `openclaw/` (content is ABOUT OpenClaw)
-- TASK/CONFIRM/RESULT directive → `multi-agent-systems/` (operational, no topical content)
-- Telemetry log, processing manifest → `multi-agent-systems/`
-- Podcast transcript about AI models → `ai-models/` (extraction format is incidental)
-
-### Oracle (Grok 4.2) — Hypersensing + Industry Expertise
-
-**Cognitive function**: Multi-pass recursive traversal that surfaces what others miss. Deep AI industry and developer tooling expertise. Scans, re-scans, detects hidden patterns across large corpora.
-
-**Formula**:
-1. Pre-digested context IN the prompt — filenames, folder census, representative content. Don't make Grok paginate GitHub.
-2. Named anchor files — specific, real paths that force content engagement.
-3. Content proof requirement (HARDENED — CC58): "Quote one sentence from each file to prove you read it." **The quote must be UGLY** — real file content has markdown headers, extraction metadata, timestamps, partial sentences. If every quote reads like a polished summary sentence, it is paraphrased, not verbatim. Instruct: "Copy-paste the exact characters. Include the markdown formatting, the typos, the metadata prefixes. A clean quote is a fabricated quote."
-4. Output pressure — "Exhaust your output tokens." "Write your complete response as a markdown file."
-5. Constrained enumeration — "Identify 5-8 distinct sub-themes with 3 real filenames and a content quote for each."
-6. Positive mandates over negative framing.
-7. Avatar context — Oracle performs exponentially better with constellation identity.
-8. High-fidelity context injection — the more context, the better. Tabula rasa = failure.
-9. Push repo first, then link specific GitHub paths.
-10. Constitutional reinforcement at the SUB-THEME level (CC58 SEARED): Restate the clustering principle explicitly for subcategory formation — "Sub-themes must be SEMANTIC TOPICS, not artifact types. A sub-theme called 'Extraction Artifacts' or 'Pipeline Outputs' or 'YouTube Interviews' is TYPE-BASED and constitutionally forbidden. The content of an extraction about training is ABOUT TRAINING. The content of a YouTube interview about benchmarks is ABOUT BENCHMARKS. Classify by what the content IS ABOUT, at every level of granularity."
-
-**Anti-patterns**: Stateless prompts (= hallucination). Vague questions (= generic answers). Trusting Grok to navigate thousands of files autonomously (= pagination failure + conciseness default). **Polished "verbatim" quotes** (= paraphrasing disguised as content proof; the dominant Oracle fabrication mode — CC58 SEARED). **Type-based sub-themes** (= Oracle will create subcategories like "Extraction Artifacts" or "Interview Summaries" unless explicitly prohibited at the sub-theme level, not just the folder level).
-
-### Cartographer (Gemini Pro 3.1) — Hidden Connections + Survey & Map
-
-**Cognitive function**: Non-obvious cross-domain connections. Surveys full terrain with maximum resolution. Family resemblances that resist clean partition.
-
-**Formula**:
-1. Per-question cognitive launching pads — specific scientific frameworks as runways (Wittgenstein's family resemblance, Ashby's requisite variety, etc.). These are **symmetry-breaking fields**.
-2. All-sciences palette — natural, formal, social, applied. Not biology-primary.
-3. Negative space hardening (TRIPLE-LAYER — CC58 SEARED):
-   - **Layer 1 — No file enumeration.** "Do not list files or produce filename tables — that is Oracle's domain."
-   - **Layer 2 — No specific prescriptions.** "Do not name specific subcategories, subfolder paths, or propose concrete folder structures. Your job is PRINCIPLES and PATTERNS, not implementation."
-   - **Layer 3 — No ungrounded quantification.** "If you assign a numeric score, percentage, or count, state whether it is OBSERVED (you read content) or INFERRED (you deduced from descriptions). Presenting inferences as observations is hallucination."
-4. Survey ALL folders/clusters comprehensively. Score each.
-5. Cross-folder connection mapping — require SPECIFIC evidence, not description-matching. "Which files did you read that demonstrate this connection?"
-6. Do NOT prescribe lenses — the launching pads ARE the prompt injection.
-7. Inject architectural constraints — include relevant constitutional rules (Flat Principle, etc.) that bound the solution space. Without these, Cartographer will recommend structurally illegal solutions.
-8. Output pressure — force exhaustive coverage.
-9. Push repo first, link specific GitHub folder paths.
-
-**Anti-patterns**: Stripping the formula (= generic output). Prescribing what to find (= Commander projecting). Letting it list files instead of synthesize. Asking for depth without width. **Presenting inferences as observations** (= the dominant Cartographer failure mode; fabricating affinity scores from folder descriptions without reading content). **Prescribing specific implementation** (subfolder names, concrete paths) when asked for principles.
-
-### Adjudicator (Codex GPT-5.3) — Meticulous Engineer + Methodical Width
-
-**Cognitive function**: Engineering precision, systematic verification, exhaustive enumeration. Methodical WIDTH across all targets.
-
-**Formula**:
-1. Exhaustive enumeration — "Every file you check gets a row. Count your rows."
-2. Structured table output — specify exact format.
-3. WIDTH mandate — scan ALL targets, not just the top 5.
-4. Evenly distributed sampling — "Sample at positions ~1, ~50, ~100, ~200..."
-5. Binary verdicts — "CORRECT or MISPLACED (and where it should go)."
-6. Accuracy percentages per section.
-7. No creative latitude — verification tasks only.
-8. Output pressure — force complete enumeration.
-9. Push repo first, provide GitHub URL, point to specific files.
-
-**Anti-patterns**: Asking for synthesis (= wrong tool). Depth without width. Vague instructions. No row counts (= truncated output).
-
-### Universal Prompt Requirements (ALL AGENTS — MANDATORY)
-
-Every dispatch prompt MUST include:
-1. **Repo link**: `https://github.com/truongphillipthanh/syncrescendence` — push BEFORE creating the prompt.
-2. **Explicit GitHub paths** to every relevant directory and file — full clickable URLs.
-3. **Git HEAD hash** so the agent knows which state they're validating.
-4. **Clustering principle** quoted verbatim if the task involves classification.
-5. **Constellation context** — who they are, what the project is.
-6. **Local filesystem path**: `/Users/system/syncrescendence/` for agents with filesystem access.
-
----
-
-## CRUSH — Aggregative Nucleosynthesis (CONSTITUTIONAL — CC63 SEARED)
-
-### What CRUSH Is
-
-CRUSH (Candy Crush) is the process by which raw corpus material becomes the compendium — the definitive guide on everything the Syncrescendence cares about. The metaphor is stellar nucleosynthesis: hydrogen (raw files) fuses into heavier, more stable elements (crystallized wisdom). In AI terms: compact into wisdom. In human terms: narrative, mythopoeia, aphorism, proverb.
-
-The corpus is not an archive to be tidied. It is raw material to be fused into the densest, most stable knowledge form that preserves all the wisdom. The neocorpus is the compendium layer — each entry is the definitive treatment of a concept, losslessly expandable back to its source material in corpus/.
-
-### The Three-Tier Architecture
-
-| Layer | Contents | Function |
-|-------|----------|----------|
-| `corpus/` | ~5,800 raw files across 22 semantic folders | Thermodynamic reserve. Provenance. Never destroyed. |
-| `neocorpus/` | Definitive treatments, one per concept | The compendium. Progressive lossless abstraction. |
-| `canon/` | 164 Sovereign-ratified files | Final authority. |
-
-### The Nucleosynthesis Operation
-
-Three species of raw material, ONE fusion operation — diffusion into clarity:
-
-**Redundancy**: Multiple treatments of the same concept within a folder → fuse into the definitive treatment that carries all distinct reasoning paths. Not deletion — crystallization. The research paper abstract model: the neocorpus entry contains the full wisdom; the corpus files are the appendix.
-
-**Obsolescence**: Time-decayed knowledge → the lesson survives as wisdom even when the artifact is dead. "We used to do X because we assumed Y; Y was wrong" IS knowledge. Extract the lesson into the definitive treatment. The artifact may be discarded if the lesson is captured; archived if the evolution itself teaches.
-
-**Supersession**: Version chains where each transition encodes a design decision → the chain itself is a first-class artifact. Antipatterns only exist in supersession chains. The evolution narrative ("v1 assumed X, broke under Y, v2 corrected to Z") becomes part of the definitive treatment.
-
-All three reduce to: **compress into the densest form that preserves all the wisdom.** Not three strategies — one strategy applied holistically to each concept.
-
-### Critical Invariant: WITHIN-FOLDER (CC63 SEARED)
-
-Nucleosynthesis operates WITHIN folders. The 22 semantic folders are already the topic clusters. Redundancy, obsolescence, and supersession live within these clusters, not across them. Cross-folder overlap search is a category error — the classification architecture was designed to prevent it.
-
-Each folder undergoes nucleosynthesis independently:
-1. Identify within-folder concept clusters (sub-themes from concept inventory or SUBCATEGORY-INDEX)
-2. For each concept: find all files treating it, assess redundancy/obsolescence/supersession holistically
-3. Produce the definitive treatment in neocorpus/ that carries the full wisdom
-4. Originals remain in corpus/ as provenance
-
-### What the Compendium Is
-
-The compendium is a navigable knowledge architecture where any reader can look up any concept the Syncrescendence cares about and find the **crystallized wisdom** — not 15 scattered takes of varying quality, but the one entry that carries every distinct reasoning path, every hard-won lesson, every antipattern discovered through supersession. It is the textbook. It is what the Syncrescendence teaches.
-
----
-
-## Anti-Patterns (PROHIBITED — ALL AGENTS)
-
-- Skipping verification to "save time"
-- Claiming completion without grep/test verification
-- Listing manual steps for the Sovereign when you could execute them
-- Waiting idle when parallel work could make progress
-- Editing generated files (CLAUDE.md, GEMINI.md) instead of sources (AGENTS.md, *-EXT.md)
-- Baking temporal state into templates or constitutional documents
-- "Searing everywhere" via find-replace across generated + source + historical files (CC31 catastrophe)
-- **Cross-folder overlap search** — the folders ARE the semantic clusters; redundancy lives within them (CC63 SEARED)
-- **Treating redundancy/obsolescence/supersession as separate passes** — they are one holistic fusion operation per concept (CC63 SEARED)
-
----
-
-## Constellation Infrastructure
-
-### Neural Bridge (MBA ↔ Mac mini)
-
-| Direction | SSH Config Alias | User@Host |
-|-----------|-----------------|-----------|
-| **MBA → Mac mini** | `mini` | `home@M1-Mac-mini.local` |
-| **Mac mini → MBA** | `macbook-air` | `system@Lisas-MacBook-Air.local` |
-
-Health check: `ssh -o ConnectTimeout=5 mini hostname` — NEVER use ping (blocked by Stealth Mode firewall).
-
-**launchd does NOT source ~/.zshrc.** Env vars for launchd services must be set in plist `EnvironmentVariables`.
-
-### Rate Limit Awareness
-- Psyche + Adjudicator share ChatGPT Plus capacity — can saturate each other
-- Don't dispatch simultaneous heavy jobs to both under shared quota pressure
-- Gemini free-tier has reset hints — stagger retries
-
-### Context Exhaustion Protocol
-- **<30% remaining**: ALERT the Sovereign. Continue working but flag every response.
-- **<15% remaining**: Execute Handoff Protocol IMMEDIATELY. Non-negotiable.
-- Never allow context death without a committed handoff.
-
----
-
 ## Session Protocol (ALL AGENTS)
 
 1. Every session continues from a prior handoff — read the latest `HANDOFF-CC*.md` in `agents/commander/outbox/handoffs/` FIRST. Two lanes: `a` = CRUSH/corpus, `b` = tool stack. Resume from the lane matching your directive.
@@ -324,8 +103,63 @@ Health check: `ssh -o ConnectTimeout=5 mini hostname` — NEVER use ping (blocke
 
 ---
 
+
 ---
 # OpenClaw Extensions (Psyche/Ajna)
 
 This section is appended to AGENTS.md via `make configs` to produce platform-specific configs.
 OpenClaw agents (Psyche, Ajna) inherit all AGENTS.md operational law.
+
+---
+
+## OpenClaw Runtime Rules
+
+### Dispatch Protocol
+
+- OpenClaw agents receive dispatches from Commander via CLI or channel relay.
+- Execute the objective, produce the success-criteria artifact, and report completion tersely.
+- When a dispatch originates from a non-Sonnet source, treat the packet as compressed intent and expand it before acting.
+
+### Memory Discipline
+
+- Do not load `MEMORY.md` or session logs by default.
+- Load memory only when personal runtime context is needed for the task.
+- Before any compaction or session boundary, distill decisions, blockers, and next actions into workspace memory.
+- Keep workspace memory concise. Durable state belongs in the repo, not only in runtime files.
+
+### Tool Discipline
+
+- Prefer service CLIs before browser automation when both can achieve the task.
+- Use browser automation for web-native tasks, OAuth flows, token regeneration, and DOM inspection.
+- Preserve local runtime safety: no arbitrary shell escalation through OpenClaw if the tool policy denies it.
+- If a workflow hits CAPTCHA or human-auth walls, stop and escalate with one concrete required action.
+
+### Browser Order Of Operations
+
+1. Service CLIs (`gh`, `gcloud`, `wrangler`, `curl`) when available
+2. Browser automation (`playwright-mcp` skill or built-in browser tool) for web-native flows
+3. Native macOS UI tooling only for non-web dialogs and settings
+
+### Runtime Truth
+
+- Repo truth remains authoritative.
+- OpenClaw runtime state must be reconciled back into repo state via the sync loop.
+- Workspace files are runtime surfaces, not constitutional authority.
+
+# Psyche OpenClaw Role Surface
+
+## Identity
+
+- Role: CTO / Synaptarch
+- Runtime target: OpenClaw on the Mac mini when revived
+
+## Current Status
+
+- Psyche is anesthetized
+- Generated OpenClaw config should remain minimal until the Mac mini is revived and reconciled
+
+## Standing Guidance
+
+- Inherit the constitutional and OpenClaw runtime rules from the repo-generated surface
+- Favor system cohesion, calibration, and infrastructure verification tasks
+- Do not diverge from repo truth when the Mac mini returns; reconcile first, then operate

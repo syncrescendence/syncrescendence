@@ -28,11 +28,55 @@ def machine_index(machine_dir: Path) -> dict[str, dict]:
     return index
 
 
+def extract_source_sections(source_path: Path, sections: list[str]) -> str:
+    text = source_path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+
+    preamble: list[str] = []
+    body_lines: list[str] = []
+    in_preamble = True
+    current_heading: str | None = None
+    current_buffer: list[str] = []
+    captured: dict[str, str] = {}
+
+    for line in lines:
+        if in_preamble and line.startswith("## "):
+            in_preamble = False
+        if in_preamble:
+            preamble.append(line)
+            continue
+
+        if line.startswith("## "):
+            if current_heading is not None and current_heading in sections:
+                captured[current_heading] = "\n".join(current_buffer).rstrip()
+            current_heading = line[3:].strip()
+            current_buffer = [line]
+            continue
+
+        if current_heading is not None:
+            current_buffer.append(line)
+
+    if current_heading is not None and current_heading in sections:
+        captured[current_heading] = "\n".join(current_buffer).rstrip()
+
+    rendered = ["\n".join(preamble).rstrip()]
+    for heading in sections:
+        block = captured.get(heading)
+        if block:
+            rendered.append(block)
+    return "\n\n".join(part for part in rendered if part).rstrip() + "\n"
+
+
 def render_target(repo_root: Path, harnesses: dict[str, dict], target: dict) -> tuple[str, str]:
     harness = harnesses[target["harness"]]
-    parts = [repo_root / "AGENTS.md"]
+    if target.get("source_sections"):
+        parts = []
+        rendered = [extract_source_sections(repo_root / "AGENTS.md", target["source_sections"])]
+    else:
+        parts = [repo_root / "AGENTS.md"]
+        rendered = []
     parts.extend(repo_root / source for source in harness.get("extension_sources", []))
-    rendered = []
+    parts.extend(repo_root / source for source in target.get("extra_sources", []))
     for path in parts:
         rendered.append(path.read_text(encoding="utf-8").rstrip())
     return harness["generated_filename"], "\n\n".join(rendered).rstrip() + "\n"
@@ -59,6 +103,10 @@ def build_manifest(
             "generated": str(relative_output),
             "root_sync": bool(harness.get("root_sync")),
         }
+        if target.get("source_sections"):
+            item["source_sections"] = target["source_sections"]
+        if target.get("extra_sources"):
+            item["extra_sources"] = target["extra_sources"]
         if target["agent"] in root_outputs:
             item["root_output"] = root_outputs[target["agent"]]
         if target["agent"] in openclaw_workspaces:

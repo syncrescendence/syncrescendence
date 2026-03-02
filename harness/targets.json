@@ -13,10 +13,34 @@
   },
   {
     "agent": "ajna",
-    "harness": "openclaw"
+    "harness": "openclaw",
+    "source_sections": [
+      "Identity",
+      "Five Invariants (Constitutional Law)",
+      "Constitutional Rules",
+      "Directory Structure",
+      "Enterprise Role Mapping",
+      "Sovereign Interaction Protocol (GLOBAL — ALL AGENTS)",
+      "Session Protocol (ALL AGENTS)"
+    ],
+    "extra_sources": [
+      "agents/ajna/OPENCLAW-ROLE.md"
+    ]
   },
   {
     "agent": "psyche",
-    "harness": "openclaw"
+    "harness": "openclaw",
+    "source_sections": [
+      "Identity",
+      "Five Invariants (Constitutional Law)",
+      "Constitutional Rules",
+      "Directory Structure",
+      "Enterprise Role Mapping",
+      "Sovereign Interaction Protocol (GLOBAL — ALL AGENTS)",
+      "Session Protocol (ALL AGENTS)"
+    ],
+    "extra_sources": [
+      "agents/psyche/OPENCLAW-ROLE.md"
+    ]
   }
 ]

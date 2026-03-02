@@ -26,16 +26,40 @@
     },
     {
       "agent": "ajna",
+      "extra_sources": [
+        "agents/ajna/OPENCLAW-ROLE.md"
+      ],
       "generated": "ajna/AGENTS.md",
       "harness": "openclaw",
       "openclaw_workspace": "/Users/system/.openclaw/workspace/AGENTS.md",
-      "root_sync": false
+      "root_sync": false,
+      "source_sections": [
+        "Identity",
+        "Five Invariants (Constitutional Law)",
+        "Constitutional Rules",
+        "Directory Structure",
+        "Enterprise Role Mapping",
+        "Sovereign Interaction Protocol (GLOBAL \u2014 ALL AGENTS)",
+        "Session Protocol (ALL AGENTS)"
+      ]
     },
     {
       "agent": "psyche",
+      "extra_sources": [
+        "agents/psyche/OPENCLAW-ROLE.md"
+      ],
       "generated": "psyche/AGENTS.md",
       "harness": "openclaw",
-      "root_sync": false
+      "root_sync": false,
+      "source_sections": [
+        "Identity",
+        "Five Invariants (Constitutional Law)",
+        "Constitutional Rules",
+        "Directory Structure",
+        "Enterprise Role Mapping",
+        "Sovereign Interaction Protocol (GLOBAL \u2014 ALL AGENTS)",
+        "Session Protocol (ALL AGENTS)"
+      ]
     }
   ]
 }
