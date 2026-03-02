@@ -369,8 +369,11 @@ def project_event_entities(connection: sqlite3.Connection, event: dict[str, Any]
     event_entity_id = f"exo-event:{event['id']}"
     agent_state_id = "agent-state:ajna"
     event_payload = {
+        "surface": event.get("surface"),
+        "artifact_class": event.get("artifact_class"),
         "type": event["type"],
         "capture_level": event["capture_level"],
+        "durable_capture": event.get("durable_capture"),
         "repo_paths": event.get("repo_paths", []),
         "ontology_entities": event.get("ontology_entities", []),
     }
@@ -540,7 +543,17 @@ def health_payload(db_path: Path = DB_PATH) -> dict[str, Any]:
 
 
 def validate_event_payload(event: dict[str, Any]) -> None:
-    required = {"id", "type", "source", "summary", "capture_level", "emitted_at"}
+    required = {
+        "id",
+        "type",
+        "source",
+        "surface",
+        "artifact_class",
+        "summary",
+        "capture_level",
+        "durable_capture",
+        "emitted_at",
+    }
     missing = sorted(required - event.keys())
     if missing:
         raise ValueError(f"missing event fields: {missing}")
@@ -554,8 +567,11 @@ def ingest_event(event: dict[str, Any], db_path: Path = DB_PATH) -> dict[str, An
         "id": event["id"],
         "type": event["type"],
         "source": event["source"],
+        "surface": event["surface"],
+        "artifact_class": event["artifact_class"],
         "summary": event["summary"],
         "capture_level": event["capture_level"],
+        "durable_capture": event["durable_capture"],
         "payload": event.get("payload", {}),
         "emitted_at": event["emitted_at"],
         "reconciled_at": event.get("reconciled_at", utc_now()),

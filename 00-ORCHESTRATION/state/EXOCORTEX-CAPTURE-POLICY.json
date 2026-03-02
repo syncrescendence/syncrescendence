@@ -1,0 +1,120 @@
+{
+  "durable_capture_modes": [
+    "none",
+    "pointer",
+    "summary_markdown",
+    "typed_record",
+    "summary_and_typed_record"
+  ],
+  "surfaces": [
+    "repo",
+    "runtime",
+    "obsidian",
+    "github",
+    "exocortex",
+    "browser"
+  ],
+  "artifact_classes": {
+    "repo_markdown_change": {
+      "allowed_durable_capture": [
+        "summary_markdown",
+        "summary_and_typed_record"
+      ]
+    },
+    "runtime_state": {
+      "allowed_durable_capture": [
+        "pointer",
+        "summary_markdown"
+      ]
+    },
+    "obsidian_repo_markdown": {
+      "allowed_durable_capture": [
+        "summary_markdown",
+        "summary_and_typed_record"
+      ]
+    },
+    "obsidian_workspace_state": {
+      "allowed_durable_capture": [
+        "none",
+        "pointer"
+      ]
+    },
+    "slack_discord_comms": {
+      "allowed_durable_capture": [
+        "summary_and_typed_record"
+      ],
+      "forbidden_payload_keys": [
+        "body",
+        "content",
+        "message",
+        "messages",
+        "thread_body",
+        "transcript"
+      ]
+    },
+    "github_issue_pr": {
+      "allowed_durable_capture": [
+        "pointer",
+        "summary_markdown"
+      ]
+    },
+    "linear_issue_project": {
+      "allowed_durable_capture": [
+        "typed_record",
+        "summary_and_typed_record"
+      ]
+    },
+    "cloudflare_dns_domain": {
+      "allowed_durable_capture": [
+        "pointer"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "api_key"
+      ]
+    },
+    "gcloud_resource": {
+      "allowed_durable_capture": [
+        "pointer"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "credential",
+        "access_token"
+      ]
+    },
+    "wrangler_worker": {
+      "allowed_durable_capture": [
+        "pointer"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "api_key"
+      ]
+    },
+    "manus_workflow": {
+      "allowed_durable_capture": [
+        "summary_and_typed_record"
+      ]
+    },
+    "browser_action": {
+      "allowed_durable_capture": [
+        "summary_markdown",
+        "pointer"
+      ],
+      "forbidden_payload_keys": [
+        "cookie",
+        "cookies",
+        "html_dump",
+        "dom_dump",
+        "session_dump"
+      ]
+    }
+  },
+  "forbidden_repo_path_substrings": [
+    "/.obsidian/"
+  ]
+}

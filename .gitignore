@@ -43,8 +43,8 @@ tmp/
 temp/
 *.tmp
 
-# Obsidian workspace (editor state, not content)
-.obsidian/workspace.json
+# Obsidian local interface state (vault config, plugins, workspace)
+.obsidian/
 
 # Drive sync temp artifacts
 .tmp.driveupload/
