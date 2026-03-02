@@ -1,9 +1,9 @@
 # NUCLEOSYNTHESIS MAP — Corpus Classification Authority
 
-**Updated**: 2026-03-01 (CC74a)
+**Updated**: 2026-03-02 (CC75a)
 **Corpus**: 22 semantic topic folders, 5,783 files (50.7% reduction from 11,733 originals)
-**Neocorpus**: 72 entries across 13 topic folders (13 COMPLETE)
-**Subcategory Indexes**: 5 largest folders indexed with cross-references
+**Neocorpus**: 96 entries across 15 topic folders (15 COMPLETE)
+**Subcategory Indexes**: 7 folders indexed with cross-references
 **Constitutional Law**: Classification by SEMANTIC TOPIC only. Type-based clustering FORBIDDEN.
 
 ---
@@ -13,29 +13,29 @@
 | Folder | Files | Description | Subcategories |
 |--------|------:|-------------|:---:|
 | ai-biotech | 21 | Biotechnology, BCI, AI in life sciences | — |
-| ai-capability-futures | 338 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions | **6** |
+| ai-capability-futures | 342 | Frontier AI capabilities, scaling laws, AGI timelines, capability predictions (CC75a COMPLETE) | **8** |
 | ai-memory-retrieval | 319 | Long-term memory, RAG, vector databases, knowledge graphs, Graphiti, agent memory architecture | — |
 | ai-models | 643 | Model releases, benchmarks, LLM architecture, training, fine-tuning, tokenization | **6** |
 | ai-safety | 42 | Constitutional AI, RLHF, alignment, governance, existential risk | — |
 | ai-video-vfx | 22 | AI image/video generation, VFX workflows, creative AI tooling | — |
-| claude-code | 347 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
+| claude-code | 346 | Claude Code CLI: architecture, hooks, Plan Mode, MCP, skills, worktrees, permissions | **6** |
 | design-taste | 34 | Design philosophy, aesthetics, craft, UI/UX, "Taste for Makers" (CC73a COMPLETE) | — |
-| geopolitics-grand-strategy | 99 | US-China, grand strategy, civilizational analysis, defense, international relations | — |
-| health-psychology | 81 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
-| infrastructure | 84 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs | — |
+| geopolitics-grand-strategy | 102 | US-China, grand strategy, civilizational analysis, defense, international relations | — |
+| health-psychology | 83 | Sleep, fitness, mental health, neuroscience, biohacking, psychology | — |
+| infrastructure | 118 | AI compute supply chain, data center economics, PAI, developer tooling, homelabs | — |
 | leadership-management | 26 | Executive decision-making, org design, management frameworks, AI adoption | — |
-| meaning-civilization | 233 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
-| multi-agent-systems | 2294 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
-| openclaw | 238 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
-| philosophy-esoterica | 283 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah | — |
-| product-business | 275 | Business models, PMF, SaaS, AI product strategy, distribution | — |
-| productivity-pkm | 88 | Second Brain, PKM, Obsidian, habits, workflow automation, focus (124 reclassified in CC74a, 57%) | — |
-| prompt-engineering | 40 | Prompt design, templates, optimization, few-shot patterns | — |
+| meaning-civilization | 246 | Meaning crisis (Vervaeke), civilizational inflection, cultural criticism | — |
+| multi-agent-systems | 2335 | Multi-agent coordination, swarms, orchestration, MCP patterns, harness engineering, Syncrescendence operational files | **6** |
+| openclaw | 244 | OpenClaw/ClawdBot/Moltbot: installation, security, memory, SOUL.md, phone, fleets, ecosystem | **5** (Operational Tooling dissolved) |
+| philosophy-esoterica | 151 | Consciousness, transhumanism, qualia, panpsychism, Hermetic tradition, alchemy, Kabbalah (CC75a COMPLETE) | **8** |
+| product-business | 274 | Business models, PMF, SaaS, AI product strategy, distribution | — |
+| productivity-pkm | 108 | Second Brain, PKM, Obsidian, habits, workflow automation, focus | — |
+| prompt-engineering | 44 | Prompt design, templates, optimization, few-shot patterns | — |
 | startup-vc | 71 | Founders, fundraising, startup culture, VC dynamics | — |
 | vibe-coding | 193 | AI-assisted coding practice, prompt-to-product, Karpathy guidelines | — |
 | writing-creation | 12 | Writing craft, rhetoric, content creation, voice/TTS (213 reclassified in CC74a, 96%) | — |
 
-**Total**: 5,783 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 5 folders subcategorized with cross-references. CC74a: massive reclassification — productivity-pkm lost 124 files (57%), writing-creation lost 213 files (96%, worst misclassification rate yet — Watch Later dump). Major recipients: ai-capability-futures (+103), ai-models (+47), philosophy-esoterica (+34), geopolitics-grand-strategy (+20), infrastructure (+26), prompt-engineering (+14), vibe-coding (+11).
+**Total**: 5,783 files across 22 folders (0 uncategorized). 50.7% reduction from 11,733 originals. 7 folders subcategorized with cross-references. CC75a: CRUSH completed ai-capability-futures (14 entries) and philosophy-esoterica (10 entries). Major reclassification: philosophy-esoterica lost 152 files (54%), ai-capability-futures lost 55 files (25%). Cross-reclassification between the two folders (61 philo→ai-cap, 12 ai-cap→philo).
 
 ---
 
@@ -205,6 +205,44 @@ The compendium layer. Each entry is the definitive treatment of a concept, lossl
 | `platform-distribution-and-tone-architecture.md` | 00932, CANON-31110, CANON-31120, CANON-31121 | Alchemizing Catalyst, Feedcraft, Tone Library, platform-specific distribution |
 
 **Totals**: 3 entries from 12 on-topic source files. 213 of 221 files (96%) reclassified to 20 folders — worst misclassification rate ever (Watch Later dump). writing-creation/ nucleosynthesis COMPLETE.
+
+### ai-capability-futures/ (CC75a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `agi-timelines-predictions.md` | 101 files (AGI subcategory) | Timeline convergence, METR exponential, Feb 2026 inflection, definition problem |
+| `intelligence-explosion-recursive-improvement.md` | (AGI subcategory) | Feedback loop mechanics, self-building threshold, physical constraints as ceiling |
+| `post-agi-futures-civilizational-vision.md` | (AGI subcategory) | Amodei compressed century, phase transition, boring singularity, agent-to-agent world |
+| `agi-governance-geopolitical-race.md` | (AGI subcategory) | Nationalization vs private anarchy, US-China race, entente strategy |
+| `agi-skepticism-counternarratives.md` | (AGI subcategory) | Tool-shaped objects thesis, discovery limitation, embodiment debate |
+| `scaling-laws-trajectories.md` | 43 files | Two axes of capability, clean reward signal, scaling-to-research transition, cost collapse |
+| `ai-market-investment-dynamics.md` | 48 files | Compute arms race, not-a-bubble evidence, SaaSpocalypse, platform layer battle |
+| `ai-labor-displacement-historical-pattern.md` | 34 files (Econ subcategory) | Bastiat seen/unseen, 500-year track record, K-shaped economy, deskilling shock |
+| `post-labor-economics.md` | (Econ subcategory) | Refactoring thesis, four factors evolved, robot deployment, UBI/deflation |
+| `human-ai-productivity-augmentation.md` | 25 files (Symbiosis subcategory) | Orchestration paradigm, 2026 stack, CEO productivity gap, verification discipline |
+| `human-competitive-advantage-ai-era.md` | (Symbiosis subcategory) | Talent stack, polymath imperative, AI as amplifier not equalizer |
+| `physical-ai-robotics.md` | 16 files | Four waves of AI, data bottleneck, simulation-to-real, $100T opportunity |
+| `agent-evals-capability-benchmarks.md` | 13 files | Anthropic 3-layer framework, ARC-AGI v3, measurement crisis, non-determinism |
+| `democratization-open-models.md` | 2 files | Moatlessness thesis, printing press cascade, Renaissance 2.0 vision |
+
+**Totals**: 14 entries from 282 on-topic source files. 55 files reclassified (25%). 8 subcategories (2 new: AI Economic Impact & Labor, Physical AI & Robotics). ai-capability-futures/ nucleosynthesis COMPLETE.
+
+### philosophy-esoterica/ (CC75a)
+
+| Entry | Sources Fused | Concept |
+|-------|--------------|---------|
+| `consciousness-hard-problem.md` | 22 sources | Nagel, Chalmers, Damasio, Hoffman, Levin, Koch — hard problem, qualia, phenomenology |
+| `panpsychism-idealism.md` | 12 sources | Kastrup analytic idealism, Faggin quantum consciousness, Lucille non-duality, Advaita Vedanta |
+| `ai-consciousness-debate.md` | 13 sources | Hoffman, Kastrup, Koch, Penrose — machine sentience, AI identity, IIT |
+| `metaphysics-ontology-existence.md` | 22 sources | Wolfram Ruliad, Deutsch constructor theory, Hamkins mathematical multiverse, Gödel, free will |
+| `cosmos-origins-evolution.md` | 30 sources | Riess dark energy, Noble biological relativity, Lane origins of life, Fermi paradox, panspermia |
+| `intelligence-computation-life.md` | 11 sources | Aguera y Arcas, Walker assembly theory, Kempes universal hierarchy, Bratton planetary computation |
+| `stoicism-ethics-meaning.md` | 16 sources | Marcus Aurelius, Nietzsche genealogy, Buddhist desire, existentialism, metaethics |
+| `esoteric-mystical-traditions.md` | 11 sources | Agrippa, Kabbalah, Hermetic tradition, Nicholas of Cusa, Irving Finkel Mesopotamia |
+| `transhumanist-suffering-abolition.md` | 4 sources | David Pearce, bioethics, suffering as engineering problem |
+| `meaning-faith-permeability.md` | 2 sources | Cross-cut: spiritual dimension of technology, faith/reason permeability |
+
+**Totals**: 10 entries from 143 on-topic source files. 152 of 283 files (54%) reclassified — heavily contaminated (Palantir "ontology" keyword, agent session logs, AI news dumps). 8 subcategories. philosophy-esoterica/ nucleosynthesis COMPLETE.
 
 ---
 
