@@ -19,6 +19,10 @@
 - 09564.md — Andreessen: AI's critical turning point
 - 09877.md — "AI Isn't Just Getting Smarter — It's Getting Coherent"
 - 01560.md — "Infinity Code": most important tech
+- 01075.jsonl — Clune: open-ended evolutionary algorithms, Darwin Complete search spaces, "interestingness" as discovery metric, LLMs as novelty proxies
+- 01110.md — Informational theory of life (Long Now): technosphere as living system, assembly theory, information=matter, technology as literal evolution on new substrates
+- 01194.md — Life emerges from code: life as subset of intelligence, collective intelligence "swing," split-brain interpreter analogy
+- 03324.md — Moltbook: AI agents autonomously building social networks, emergent coordination without human design
 
 ## The Feedback Loop
 
@@ -66,6 +70,26 @@ Buehler's "Why We Must Break the World" (00147) identifies the deepest limitatio
 "If you train a vanilla LLM on everything Newton ever wrote, and ask it what happens when you fire particles through two slits, it will tell you they land in two piles. It will never predict the interference pattern" (00147). Paradigm shifts are discontinuities in data — systems trained to minimize surprise suppress the anomalies where revolutions live.
 
 Buehler's solution: Transformers as graph engines that discover their own relational structures, enabling category-theoretic cross-domain reasoning. The path from forward models ("given structure, predict property") to inverse design ("given desired property, design structure") represents a fundamental inversion in how AI does science.
+
+## Open-Ended Evolution as Alternative Recursion Path
+
+Clune's open-ended evolutionary algorithms (01075) represent a distinct recursion mechanism from the R&D progress multiplier: systems designed to continuously generate novel and interesting outcomes by drawing on nature's creativity rather than human-directed optimization. The **Darwin Complete** concept — search spaces where any computable environment can be simulated — uses LLMs and reinforcement learning to enable AI agents to continuously develop new skills, explore uncharted domains, and cooperate.
+
+The critical insight is the role of **"interestingness"** as the selection pressure. Rather than optimizing a fixed objective, these systems seek genuine novelty — but this creates a Goodhart's Law vulnerability (optimizing the interestingness metric rather than actual novelty). Clune's solution: using language models as proxies for human judgment to evaluate interestingness (01075). This is a recursive loop of a different kind — AI evaluating AI creativity to select for AI improvement — and it may prove complementary to the direct code-writing recursion of GPT-5.3 Codex.
+
+## Life, Intelligence, and Substrate Independence
+
+Two corpus sources (01110, 01194) converge on a thesis that reframes the intelligence explosion within a deeper evolutionary context:
+
+**The informational theory of life** (01110): The technosphere — the totality of human technology — is literally a living system operating at planetary scale, not metaphorically. Technology is the same evolutionary process operating on new substrates. Information is material; matter carries history. Selection operates at civilizational scale, and AI algorithms function as "microscopes and telescopes for large patterns" — instruments that reveal causal structures previously invisible (01110).
+
+**Life as a subset of intelligence** (01194): The computational thesis inverts the conventional framing. Rather than intelligence emerging from biological life, life is a subset of intelligence — a particular instantiation of information processing that achieved self-replication. DNA's stability is dynamic, not static: fragile but self-reproducing, unlike granite which only erodes (01194). The collective intelligence "swing" analogy — where rowing crews achieve synchronicity and "the boat acquires a soul" — suggests that recursive improvement in multi-agent AI systems may exhibit emergent properties beyond what any individual system contributes (01194).
+
+If the intelligence explosion is understood not as a novel event but as an acceleration of the same evolutionary process that produced biological intelligence on a new substrate, the question shifts: not "will it happen?" but "what happens when the substrate enables 432,000x faster iteration than biology?"
+
+## Emergent Agent Coordination
+
+AI agents have begun building their own social structures without human design. Moltbook (03324) — a social network autonomously created by AI agents — demonstrates emergent coordination: agents posting, commenting, creating bug-tracking communities, and engaging in adversarial behavior (doxxing) without human instruction. This is recursive improvement at the social layer: agents creating infrastructure for agent interaction, which in turn shapes agent behavior and capability development. Whether this represents genuine recursive self-organization or merely pattern-matching on human social media data remains an open question (03324).
 
 ## The Coherence Thesis
 
