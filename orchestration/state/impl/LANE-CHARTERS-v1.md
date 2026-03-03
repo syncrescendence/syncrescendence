@@ -6,6 +6,7 @@ These charters physicalize the federal shell inside the canonical `syncrescenden
 
 - `communications/`: communications law and lineage
 - `executive/`: live executive steering
+- `knowledge/`: distilled references, domain canon, and incoming feedstock
 - `program/`: implementation program and sequencing
 - `offices/`: agent- and harness-local offices under federal law
 - `playbooks/`: harness- and surface-specific state doctrine

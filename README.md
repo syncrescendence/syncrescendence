@@ -48,6 +48,7 @@ The predecessor shell has been offloaded to Desktop archival lanes such as:
 - `.obsidian/`: optional local vault-interface state, never canonical
 - [communications](/Users/system/syncrescendence/communications): prompts, responses, handoffs, logs, assessments
 - [executive](/Users/system/syncrescendence/executive): live executive steering lane
+- [knowledge](/Users/system/syncrescendence/knowledge): distilled references, domain canon, and incoming feedstock
 - [program](/Users/system/syncrescendence/program): backlog and tranche lane
 - [offices](/Users/system/syncrescendence/offices): lawful local offices for agents and harnesses
 - [playbooks](/Users/system/syncrescendence/playbooks): harness and surface doctrine
@@ -58,11 +59,13 @@ The predecessor shell has been offloaded to Desktop archival lanes such as:
 - [orchestration/state/impl](/Users/system/syncrescendence/orchestration/state/impl): redesign package and shell law
 - [orchestration/state/impl/ROOT-SURFACES-RATIONALE-v1.md](/Users/system/syncrescendence/orchestration/state/impl/ROOT-SURFACES-RATIONALE-v1.md): why the root contains a compact operator cockpit
 - [orchestration/state/impl/ROOT-INTERFACE-SURFACES-RATIONALE-v1.md](/Users/system/syncrescendence/orchestration/state/impl/ROOT-INTERFACE-SURFACES-RATIONALE-v1.md): why certain root dotfiles and harness adapters remain lawful
+- [orchestration/state/impl/KNOWLEDGE-LANE-LAW-v1.md](/Users/system/syncrescendence/orchestration/state/impl/KNOWLEDGE-LANE-LAW-v1.md): why `knowledge/` exists and what belongs there
 - [orchestration/relay/cowork-v1](/Users/system/syncrescendence/orchestration/relay/cowork-v1): successor-shell relay substrate
 - [pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md): semantic reading of the original Rosetta
 - [pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md): executive reading of the original intent instrument
 - [pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md): queue-authority reading of the old backlog systems
 - [pedigree/originals](/Users/system/syncrescendence/pedigree/originals): local copies of key legacy pedigree artifacts
+- [knowledge/references/neocorpus](/Users/system/syncrescendence/knowledge/references/neocorpus): internalized distilled research substrate from the predecessor shell
 
 ## Pedigree Recovery
 

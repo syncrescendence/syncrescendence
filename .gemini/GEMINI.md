@@ -7,6 +7,7 @@ Primary entrypoint:
 
 Use the root Gemini surface plus the Cartographer playbook as the operative doctrine:
 - [playbooks/cartographer/PLAYBOOK.md](/Users/system/syncrescendence/playbooks/cartographer/PLAYBOOK.md)
+- [knowledge](/Users/system/syncrescendence/knowledge) for live research substrates when doing broad surveys or structural mapping
 
 This directory is allowed at the root because Gemini expects a local harness-facing surface.
 It is not a second canon and should remain a thin adapter over repo truth.

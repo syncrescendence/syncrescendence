@@ -13,10 +13,9 @@
 - `pedigree-or-knowledge-archive`: 1
 - `pedigree-review`: 4
 - `playbook-or-knowledge-pedigree`: 1
-- `program-or-runtime-pedigree`: 1
 - `runtime-local-state`: 3
 - `runtime-pedigree`: 1
-- `unclassified`: 1
+- `unclassified`: 2
 
 ## Top-Level Entry Classification
 
@@ -27,7 +26,7 @@
 - `.constellation` (directory): `runtime-local-state` — operator-runtime family mapping
 - `.gemini` (directory): `runtime-local-state` — operator-runtime family mapping
 - `.obsidian` (directory): `runtime-local-state` — operator-runtime family mapping
-- `00-ORCHESTRATION` (directory): `program-or-runtime-pedigree` — program family mapping
+- `00-ORCHESTRATION` (directory): `unclassified` — no rule yet
 - `01-CANON` (directory): `pedigree-or-knowledge-archive` — knowledge-pedigree family mapping
 - `02-ENGINE` (directory): `communications-pedigree` — engine treated as prompt/spec/response lineage pedigree
 - `04-SOURCES` (directory): `knowledge-feedstock` — knowledge-pedigree family mapping

@@ -15,6 +15,7 @@ Operate with these rules:
 5. Prefer lawful lanes over ad hoc placement:
    - `communications/`
    - `executive/`
+   - `knowledge/`
    - `program/`
    - `offices/`
    - `playbooks/`

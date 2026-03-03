@@ -34,6 +34,7 @@ ALLOWED_TOP_LEVEL = {
     "WORK-LOOP.md",
     "communications",
     "executive",
+    "knowledge",
     "offices",
     "operators",
     "pedigree",

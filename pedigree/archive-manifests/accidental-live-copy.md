@@ -16,14 +16,14 @@
 - `live-runtime`: 1
 - `live-validated-patterns`: 1
 - `operator-pedigree`: 1
-- `program-or-runtime-pedigree`: 1
 - `root-explanation`: 1
 - `runtime-local-state`: 1
+- `unclassified`: 1
 
 ## Top-Level Entry Classification
 
 - `.claude` (directory): `runtime-local-state` — operator-runtime family mapping
-- `00-ORCHESTRATION` (directory): `program-or-runtime-pedigree` — program family mapping
+- `00-ORCHESTRATION` (directory): `unclassified` — no rule yet
 - `AGENTS.md` (file): `constitution-pedigree` — directly mapped by name
 - `CLAUDE.md` (file): `constitution-pedigree` — directly mapped by name
 - `communications` (directory): `live-communications` — communications family mapping

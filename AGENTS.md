@@ -39,6 +39,7 @@ Allowed root entries are:
 - `orchestration/`
 - `communications/`
 - `executive/`
+- `knowledge/`
 - `offices/`
 - `operators/`
 - `pedigree/`
@@ -51,6 +52,7 @@ Allowed root entries are:
 
 - `communications/`: prompts, responses, handoffs, logs, retros, assessments
 - `executive/`: live intention and steering surfaces
+- `knowledge/`: distilled references, domain canon, and incoming feedstock under explicit knowledge law
 - `program/`: backlog, tranches, implementation sequencing
 - `offices/`: agent- and harness-local offices under federal law
 - `playbooks/`: harness- and surface-specific doctrine

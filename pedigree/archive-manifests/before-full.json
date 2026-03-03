@@ -11,10 +11,9 @@
     "pedigree-or-knowledge-archive": 1,
     "pedigree-review": 4,
     "playbook-or-knowledge-pedigree": 1,
-    "program-or-runtime-pedigree": 1,
     "runtime-local-state": 3,
     "runtime-pedigree": 1,
-    "unclassified": 1
+    "unclassified": 2
   },
   "entries": [
     {
@@ -62,8 +61,8 @@
     {
       "name": "00-ORCHESTRATION",
       "kind": "directory",
-      "disposition": "program-or-runtime-pedigree",
-      "rationale": "program family mapping"
+      "disposition": "unclassified",
+      "rationale": "no rule yet"
     },
     {
       "name": "01-CANON",

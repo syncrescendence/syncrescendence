@@ -23,10 +23,10 @@
 - `operator-review`: 25
 - `pedigree-or-knowledge-archive`: 1
 - `pedigree-review`: 9
-- `program-or-runtime-pedigree`: 1
 - `root-explanation`: 1
 - `runtime-local-state`: 3
 - `runtime-pedigree`: 1
+- `unclassified`: 1
 - `validated-patterns-or-operator-pedigree`: 1
 
 ## Top-Level Entry Classification
@@ -35,7 +35,7 @@
 - `.claude` (directory): `runtime-local-state` — operator-runtime family mapping
 - `.env.graphiti` (file): `runtime-local-state` — operator-runtime family mapping
 - `.openclaw` (directory): `runtime-local-state` — operator-runtime family mapping
-- `00-ORCHESTRATION` (directory): `program-or-runtime-pedigree` — program family mapping
+- `00-ORCHESTRATION` (directory): `unclassified` — no rule yet
 - `agents` (directory): `office-or-playbook-pedigree` — office-playbook family mapping
 - `AGENTS.md` (file): `constitution-pedigree` — directly mapped by name
 - `artifact_law_inventory.py` (file): `operator-review` — top-level executable or config requires operator-law review

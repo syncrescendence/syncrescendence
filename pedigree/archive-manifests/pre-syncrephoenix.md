@@ -16,10 +16,11 @@
 - `pedigree-review`: 9
 - `playbook-or-runtime-pedigree`: 1
 - `playbook-pedigree`: 1
-- `program-or-runtime-pedigree`: 2
+- `program-or-runtime-pedigree`: 1
 - `root-explanation`: 1
 - `runtime-local-state`: 5
 - `runtime-pedigree`: 1
+- `unclassified`: 1
 
 ## Top-Level Entry Classification
 
@@ -31,7 +32,7 @@
 - `.env.graphiti` (file): `runtime-local-state` — operator-runtime family mapping
 - `.gemini` (directory): `runtime-local-state` — operator-runtime family mapping
 - `.obsidian` (directory): `runtime-local-state` — operator-runtime family mapping
-- `00-ORCHESTRATION` (directory): `program-or-runtime-pedigree` — program family mapping
+- `00-ORCHESTRATION` (directory): `unclassified` — no rule yet
 - `ACTIVE-TASKS.md` (file): `pedigree-review` — top-level document requires hermeneutic review before promotion
 - `agents` (directory): `office-or-playbook-pedigree` — office-playbook family mapping
 - `AGENTS.md` (file): `constitution-pedigree` — directly mapped by name

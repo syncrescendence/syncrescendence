@@ -261,7 +261,31 @@ Communications artifacts are not all the same.
 - runtime state is explicit, localizable, and dated
 - runtime state never pretends to be constitutional law
 
-## 2.8 Projection / Registry
+## 2.8 Knowledge
+
+**Purpose**
+- host living research substrates, promoted domain knowledge, and incoming feedstock that the shell actively thinks with
+
+**Examples**
+- `knowledge/references/neocorpus`
+- domain canon promoted from repeated research
+- lawful feedstock bundles awaiting compaction
+
+**Allowed writers**
+- research compaction operators
+- deliberate archive-to-reference migrations
+- synthesis passes that promote feedstock into references or canon
+
+**Storage rule**
+- knowledge is distinct from pedigree, runtime, communications lineage, and shell law
+- distilled references belong in `knowledge/references/`
+- promoted domain doctrine belongs in `knowledge/canon/`
+- raw incoming research belongs in `knowledge/feedstock/`
+
+**Lineage rule**
+- every promoted knowledge artifact should trace back to reference or feedstock provenance
+
+## 2.9 Projection / Registry
 
 **Purpose**
 - typed downstream mirror of already-normalized truth
@@ -274,7 +298,7 @@ Communications artifacts are not all the same.
 **Rule**
 - projection cannot authoritatively mutate law, playbooks, or lineage
 
-## 2.9 Provenance / Archive
+## 2.10 Provenance / Archive
 
 **Purpose**
 - preserve originals, superseded artifacts, and historical shells

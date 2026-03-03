@@ -134,3 +134,14 @@
    Vocabulary: `office`, `receipt`, `operator`, `protected zone`
 4. compact role-specific office distinctions into office playbooks without restoring predecessor sprawl  
    Status: active
+
+### Tranche N — Knowledge Lane Reconstitution
+
+1. classify predecessor-shell knowledge families (`neocorpus`, `sources`, portions of `05-SIGMA`) against the successor shell  
+   Status: archive-fit tranche 01 completed
+2. physicalize `knowledge/` as a first-class live lane instead of forcing research into pedigree  
+   Status: completed tranche 01
+3. internalize the distilled archived `neocorpus` as a live reference substrate with receipts  
+   Status: completed tranche 01
+4. derive future intake and compaction rules so new research enters `knowledge/feedstock/` lawfully  
+   Vocabulary: `knowledge lane`, `feedstock`, `reference substrate`, `compaction`

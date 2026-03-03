@@ -16,6 +16,7 @@ This index exists so the canonical successor shell can be navigated without depe
 - [OFFICE-LAW-v1.md](/Users/system/syncrescendence/orchestration/state/impl/OFFICE-LAW-v1.md)
 - [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/orchestration/state/impl/COMMUNICATIONS-LAW-v1.md)
 - [EXECUTIVE-LANE-LAW-v1.md](/Users/system/syncrescendence/orchestration/state/impl/EXECUTIVE-LANE-LAW-v1.md)
+- [KNOWLEDGE-LANE-LAW-v1.md](/Users/system/syncrescendence/orchestration/state/impl/KNOWLEDGE-LANE-LAW-v1.md)
 - [INTENT-PROGRAM-GOVERNANCE-v1.md](/Users/system/syncrescendence/orchestration/state/impl/INTENT-PROGRAM-GOVERNANCE-v1.md)
 - [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/orchestration/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)
 - [LANE-CHARTERS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/LANE-CHARTERS-v1.md)
@@ -29,6 +30,7 @@ This index exists so the canonical successor shell can be navigated without depe
 
 - [communications](/Users/system/syncrescendence/communications)
 - [executive](/Users/system/syncrescendence/executive)
+- [knowledge](/Users/system/syncrescendence/knowledge)
 - [program](/Users/system/syncrescendence/program)
 - [offices](/Users/system/syncrescendence/offices)
 - [playbooks](/Users/system/syncrescendence/playbooks)
@@ -49,6 +51,7 @@ This index exists so the canonical successor shell can be navigated without depe
 - [pedigree/originals](/Users/system/syncrescendence/pedigree/originals)
 - [INTENT-COMPASS.live.md](/Users/system/syncrescendence/executive/INTENT-COMPASS.live.md)
 - [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
+- [knowledge/references/neocorpus](/Users/system/syncrescendence/knowledge/references/neocorpus)
 
 ## Compaction Passes
 

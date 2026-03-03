@@ -14,9 +14,9 @@
     "live-runtime": 1,
     "live-validated-patterns": 1,
     "operator-pedigree": 1,
-    "program-or-runtime-pedigree": 1,
     "root-explanation": 1,
-    "runtime-local-state": 1
+    "runtime-local-state": 1,
+    "unclassified": 1
   },
   "entries": [
     {
@@ -28,8 +28,8 @@
     {
       "name": "00-ORCHESTRATION",
       "kind": "directory",
-      "disposition": "program-or-runtime-pedigree",
-      "rationale": "program family mapping"
+      "disposition": "unclassified",
+      "rationale": "no rule yet"
     },
     {
       "name": "AGENTS.md",
