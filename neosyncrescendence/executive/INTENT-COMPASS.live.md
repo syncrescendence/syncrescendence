@@ -3,17 +3,36 @@
 **Status**: initial live executive surface  
 **Role**: current steering vector for shell reconstitution inside `neosyncrescendence`
 
-## Current Executive Objective
+## Active Intentions
 
-Reconstitute the ideal Syncrescendent shell from first principles while preserving pedigree and proven working patterns.
+### INT-SHELL-001
 
-## Near-Term Steering
+- **title**: Reconstitute the ideal Syncrescendent shell from first principles
+- **status**: active
+- **campaign**: shell redesign
+- **linked vocabulary**: `constitution`, `pedigree`, `playbook`, `communications law`
+- **linked program surface**: [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
+
+### INT-SHELL-002
+
+- **title**: Keep redesign work inside the sandbox until migration law is ready
+- **status**: active
+- **campaign**: containment
+- **linked vocabulary**: `constitution`, `program`, `operator`
+
+### INT-SHELL-003
+
+- **title**: Compact repeated success into doctrine and operators quickly
+- **status**: active
+- **campaign**: compaction
+- **linked vocabulary**: `playbook`, `operator`, `compaction`, `validated pattern`
+
+## Executive Steering
 
 1. keep redesign work inside `neosyncrescendence`
-2. formalize communications law and live routing inside the sandbox
-3. continue compacting high-value surfaces into playbooks
-4. turn copied heritage and validated patterns into live lanes, not just archives
-5. prepare lossless migration logic before any large-scale repopulation of the legacy repo
+2. continue turning copied heritage into live, binding lanes
+3. bind current program work upward to Rosetta and intention IDs
+4. only migrate legacy material after successor placement law is explicit
 
 ## Non-Negotiables
 
@@ -21,3 +40,4 @@ Reconstitute the ideal Syncrescendent shell from first principles while preservi
 - do not collapse artifact classes
 - do not let the sandbox become another cluttered shell
 - promote repeated success into doctrine quickly
+- keep ontology and external tooling downstream of constitutional law

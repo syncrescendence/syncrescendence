@@ -29,6 +29,12 @@ This index exists so the sandbox can be navigated without depending on legacy-re
 - [pedigree](/Users/system/syncrescendence/neosyncrescendence/pedigree)
 - [validated-patterns](/Users/system/syncrescendence/neosyncrescendence/validated-patterns)
 
+## Live Federal Surfaces
+
+- [ROSETTA-STONE.live.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE.live.md)
+- [INTENT-COMPASS.live.md](/Users/system/syncrescendence/neosyncrescendence/executive/INTENT-COMPASS.live.md)
+- [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
+
 ## Compaction Passes
 
 - [PLAYBOOK-COMPACTION-PASS-01-CLAUDE-CODE.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/PLAYBOOK-COMPACTION-PASS-01-CLAUDE-CODE.md)
