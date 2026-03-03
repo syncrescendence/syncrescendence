@@ -17,6 +17,8 @@
 - `corpus/productivity-pkm/02058.md` — Extraction: skills to learn for AI in 2026 (7 atoms)
 - `corpus/productivity-pkm/09908.md` — Most People Want Validation, Not Perspective
 - `corpus/productivity-pkm/04354.jsonl` — Atom: 80 unrelated mental models beat information accumulation for decisions
+- `corpus/productivity-pkm/00037.md` — Polymath-as-survival thesis: meta-game framework, quality gap problem, software case study
+- `corpus/productivity-pkm/03106.jsonl` — Renaissance man rebirth: historical generalist/specialist oscillation, identity loss under AI, safe harbors
 
 ## Core Thesis
 The most important skill for the next decade is not any particular technical competency but agency — the capacity to set direction, acquire whatever skills are needed, and adapt when conditions change (00019). Agency is the meta-skill that makes all other skills acquirable. In an AI world, this matters more because AI acts as a forcing function on agency (02931): it commoditizes execution skills while amplifying the gap between directed and undirected people. The practical expression of agency is skill stacking — becoming rare not through single-skill mastery but through the unique intersection of multiple top-25% competencies.
@@ -41,7 +43,13 @@ The AI engineering aspirant pieces document the failure mode: chasing credential
 ### 6. Mental Models Over Information (04354, 10470)
 The atom from 04354: 80 unrelated mental models are more effective for decision-making than information accumulation. "How To Think Like The Top 1%" (10470) extends this — elite thinking is not having more data but having better lenses. This connects skill stacking to the learning science cluster: the value is not in the skills themselves but in the mental models each skill installs.
 
-### 7. Validation vs Perspective (09908)
+### 7. The Polymath Meta-Game (00037)
+The polymath's meta-game reduces to three moves: learn to make things, attract people who want those things, articulate why those things matter. Each element requires a different skill set — building requires technical skill, attracting requires psychology and distribution, articulating requires persuasion and communication. Specialists can do one of these; polymaths can span all three. This is why multi-skilled individuals are structurally advantaged: the meta-game itself is a skill stack. The source also identifies three traps that prevent multi-interested people from converting interest into output: the framework problem (productivity systems assume a single goal), the validation problem (social pressure to specialize), and the quality gap (taste develops faster than ability, triggering impostor syndrome). None are character flaws — all are solvable system design problems.
+
+### 8. The Historical Generalist/Specialist Oscillation (03106)
+Human society has oscillated between periods favoring generalists and periods favoring specialists. The industrial revolution entrenched specialization for two centuries. AI is now "killing the factory model" — reversing the economic logic that made specialization safe. The source identifies a psychological cost: specialists experience "loss of identity" as their specialized knowledge becomes optional or irrelevant. The prescription for established specialists is to voluntarily let go of identity tied to specialization and rebuild from first principles, rather than having that identity stripped by external forces. Safe harbors persist in roles where the core value is genuine human connection — teachers, therapists, coaches — because their value lies in attention, not information transfer. The four-year degree as the default career path is predicted to disappear.
+
+### 9. Validation vs Perspective (09908)
 Most people seek validation (confirmation that they are on the right path) rather than perspective (genuine insight into where they are). This is the psychological trap that prevents skill stacking: the desire for external validation locks people into established paths, while the polymathic path requires comfort with being unclassifiable.
 
 ## Synthesis
