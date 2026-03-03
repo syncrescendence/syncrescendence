@@ -56,3 +56,19 @@ Public perception, however, tracks use case closely. 77% of survey respondents s
 ## The Lesson
 
 The BCI bottleneck problem is real and precisely quantified. Neuralink's engineering solution — flexible threads, on-chip amplification, ML decoding, robotic insertion — is the most credible current attempt to attack it at scale. But the bottleneck is not solely architectural. The brain's deepest computational power may lie in its reward functions, a layer the N1 cannot yet address. And the social bottleneck — the conditional public license that extends to restoration but retracts from enhancement — is a constraint as binding as electrode impedance. The path from medical device to cognitive augmentation is not blocked by hardware; it is blocked by legitimacy, and legitimacy must be earned in sequence, not assumed in parallel.
+
+---
+
+## Obsolescence
+
+**The electrode-count maximalism assumption is breaking down.** Early BCI research operated under the assumption that more electrodes meant better decoding — more channels, more neurons sampled, more information to work with. The Utah Array (96 electrodes, rigid, the dominant research implant for two decades) was built on this assumption. Its limitation revealed the flaw: rigid probes induce glial scarring that degrades signal quality within months, meaning a thousand electrodes that drift into noise underperform a hundred stable ones. The assumption "channel count determines capability" was wrong; *signal stability over time* is the binding constraint. Neuralink's N1 design — flexible polymer threads chosen specifically to reduce glial encapsulation — is the correction. The Utah Array era's implicit model of "more probes in rigid fixed positions" is obsolete as a long-term implant architecture.
+
+**Manual surgical insertion for cortical electrodes is obsolete for scalable deployment.** Pre-R1, thread insertion was a microsurgery performed by highly trained neurosurgeons under magnification. This constrained BCI implantation to major academic medical centers, made it non-scalable, and introduced human variability in placement precision. The R1 robot autonomously maps surface vasculature via stereo vision and inserts threads in interstitial spaces at precision and speed no human hand can match consistently. Surgical art has been superseded by surgical engineering — the bottleneck has shifted entirely to biocompatibility and decoder performance, not insertion skill.
+
+---
+
+## Supersession
+
+**The corpus contains no version chain for N1 hardware beyond the current generation.** Sources document N1 as the current implant (64 threads, 1,024 electrodes, coin-sized, hermetically sealed, Bluetooth transmission). No N2 or successor architecture is described in the source material. The supersession chain at the hardware level cannot be written from these sources without fabrication.
+
+**Decoder training: from fixed to adaptive models.** The calibration protocol described — approximately 20 minutes of imagined movement, correlation to observed firing patterns — encodes an assumption that the decoder can be trained once and adapted incrementally. The sources note that the model "continues to adapt as neural representations drift," signaling that the original "train once" assumption was insufficient: neural representations reorganize over time (plasticity), and any static decoder degrades. Adaptive decoders that continuously recalibrate are the response to this discovered failure mode. The v1 assumption (stable representations, fixed decoder) broke under the empirical observation of representational drift; the correction is continuous online learning. This is a live design evolution, not a completed transition.

@@ -55,3 +55,27 @@ A practical intermediate technique: cut out elements from video, arrange in 3D s
 ## The Economics
 
 Midjourney: ~$200M ARR, profitable. LTX Studio has the "closest user experience" to the ideal unified tool, though the models currently lag behind the interface vision.
+
+---
+
+## Obsolescence
+
+**The multi-software pipeline assumption is broken.** The pre-2024 VFX workflow assumed that each stage of production required specialist software and specialist expertise: After Effects for compositing, Nuke for node-based VFX, Cinema 4D for 3D, Mocha for planar tracking, DaVinci Resolve for color. The underlying assumption was that no single system could internalize the varied computational tasks these tools addressed — structure preservation, motion tracking, lighting estimation, temporal coherence — and that only human specialists operating multiple tools in sequence could achieve broadcast-quality results. A 2018 VFX shot (described in the corpus) — inserting a 3D object into live footage — required 3D camera tracking, lighting estimation, geometry creation, and depth-of-field composition, each in different software by different specialists.
+
+That assumption is now obsolete for a broad class of shots. Instruction-based video editing with a reference image and text prompt replaces the multi-stage pipeline for consumer-grade compositing. The specialist multi-software workflow has not disappeared — it remains the ceiling for precision work — but it has ceased to be the floor for competent-looking results.
+
+**"Warbly physiology" was treated as an unsolvable constraint.** Early AI video generation (Runway Gen-1, early Sora previews, Kling) exhibited consistent degradation of human body motion — the "warbly physiology" problem: limbs behaved as if made of rubber, bodies warped incoherently through motion. This was widely cited as a fundamental limitation of diffusion-based video models and treated as a reason AI video would remain unsuitable for human-subject content at scale. VideoJAM (Meta) falsifies this by demonstrating that adding joint appearance-motion priors — at the cost of only 2 linear layers added to existing architectures — substantially addresses the problem across multiple model families. The "warbly physics is fundamental" assumption was wrong; it was a training data and objective function problem, not an architectural ceiling.
+
+---
+
+## Supersession
+
+**Video generation model generations: the capability floor has lifted multiple times.** The corpus documents a clear version chain in commercial video AI:
+
+- **Runway Gen-3 / early Kling** (pre-2025): Established the first commercial-grade text-to-video capability. Temporal consistency was the headline limitation. Used primarily for short stylized clips, not production VFX insertion.
+- **Runway Gen-4.5 / ALF**: Described as a "World Model" framing. Adds instruction-based editing within existing footage — not just generation from scratch. The design shift: v1 assumed the use case was generation (blank slate → video); Gen-4.5 recognizes the dominant use case is editing (existing footage → modified footage).
+- **Seedance 2.0** (ByteDance): Native-audio multimodal 2K generation with precise lip-sync and multi-cut. Assessed in sources as the highest-quality model at time of writing. The version chain from Gen-3 to Seedance 2.0 represents roughly 12–18 months of generational improvement — a pace comparable to image generation model evolution.
+
+Each generation revision corrected a specific prior assumption: that audio had to be added post-hoc; that 2K resolution required upscaling; that lip-sync required separate dedicated models; that camera work needed manual specification. The corrections are not incremental refinements — they are architectural decisions driven by identified failure modes of the prior generation.
+
+**The "temporal coherence is unsolvable" assumption broke in early 2025.** The dominant limiting assumption through 2024 was that video models could produce individually coherent frames but would fail to maintain consistency across frames — identity drift, lighting inconsistency, physics breakdown. This was the primary reason AI video was positioned as "for short stylized clips only." VideoJAM and the Topaz Starlite diffusion upscaler both represent responses to this specific problem. The assumption was not abandoned theoretically — it broke against empirical evidence that targeted training objectives (joint appearance-motion priors, world-knowledge-leveraged upscaling) could address it without full architectural replacement.

@@ -58,6 +58,25 @@ Cronin (09905) represents the opposite pole: a working chemist who argues curren
 - **Binary embodiment debate**: The question is not "does AI need a body?" but "what information requires physical interaction to acquire?" — which is empirical, not philosophical (08479).
 - **Ignoring the boring scenario**: The most likely outcome — gradual, normalizing transformation — is the least discussed because it lacks narrative drama.
 
+## Obsolescence & Supersession
+
+### Obsolescence: Blanket Denial as Credible Skepticism
+
+Through approximately 2023, the dominant skeptic position was categorical: LLMs are "stochastic parrots," statistical pattern matchers with no understanding, fundamentally incapable of reasoning. This position was adopted by Chomsky, Gary Marcus, and others and gave skepticism intellectual cover. The arrival of models demonstrating sustained reasoning chains, code generation that debugs itself, and the February 2026 GPT-5.3 Codex self-improvement threshold (00257) rendered blanket denial non-credible. The lesson: dismissing AI capability categorically was always epistemically sloppy — the interesting question was never "does AI understand?" but "what does AI lack that would be required for X?" Cronin, Manidis, and Buehler represent the mature skeptic position: precise limitation identification rather than categorical denial. The shift from blanket denial to precise critique is itself a supersession.
+
+### Supersession: The Skeptic's Target
+
+**Phase 1 (2023 — Skepticism of basic capability):** "LLMs cannot reason, cannot code, cannot perform multi-step tasks reliably." This was refuted by successive model generations.
+
+**Phase 2 (2024 — Skepticism of reliability):** "LLMs hallucinate too frequently for production deployment." Partially valid, partially refuted by engineering solutions (eval infrastructure, verification layers, grounded generation). Still relevant in high-stakes domains.
+
+**Phase 3 (Current — Skepticism of impact and discovery):** The three live critiques that survive generational model improvement:
+1. Manidis (03867): AI spending produces the experience of work, not economic output. This is a diffusion-speed critique, not a capability critique. The claim is that LLMs "will become very effective" but the timeline to real-economy impact is longer and stranger than GPU capex implies.
+2. Buehler (00147): Discovery requires mechanisms current architectures lack — compositional world-model building, adversarial falsification, physical grounding. This is a structural critique of interpolation-based training for paradigm-breaking science.
+3. The boring singularity (10134): Not a denial but a narrative correction — the most likely transformative scenario is gradual normalization, not a dramatic threshold event.
+
+All three Phase 3 critiques remain structurally intact as of February 2026. None have been falsified by GPT-5.3 or Opus 4.6 releases.
+
 ## Cross-References
 - neocorpus/ai-capability-futures/agi-timelines-predictions (what the skeptics challenge)
 - neocorpus/ai-capability-futures/intelligence-explosion-recursive-improvement (discovery vs optimization distinction)

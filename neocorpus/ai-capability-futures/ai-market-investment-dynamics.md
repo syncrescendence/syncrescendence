@@ -106,6 +106,24 @@ Insurers seeking to exclude AI risk from coverage amid growing litigation (09524
 - **Ignoring the SaaSpocalypse signal**: Claude Cowork's $285B crash is a leading indicator, not an isolated event. Every SaaS company whose value proposition is "organize information" is at risk when AI agents can do it directly (03606).
 - **Fighting the platform layer war with features**: Distribution and lock-in come from owning the compute surface, not from having better individual features (04308).
 
+## Obsolescence & Supersession
+
+### Obsolescence: Compute as Utility
+
+For approximately 15 years (2010-2025), cloud compute was treated as a utility — a commodity line item at 3-5% of OpEx, purchased on-demand, undifferentiated across providers. The assumption "compute is like electricity, just buy what you need" was correct when AI workloads were marginal. It became obsolete when compute rose to 15-30% of OpEx and the allocation race began. The companies that treated compute as a strategic asset in 2024-2025 secured supply lines; those that treated it as a utility became tenants of companies that did. The lesson: the utility assumption persisted past its useful life because the inflection was slow enough to normalize year-over-year while large enough to be transformative over 3-5 years.
+
+### Obsolescence: The AI Bubble Narrative
+
+The "AI is a bubble" narrative (analogous to the dot-com bubble) was widely held through 2024. The counter-evidence from the corpus: $50-100B in real data center construction, chips, and productive capacity — not ephemeral paper valuations. The structural difference between 2000 and 2026: 2000 bubble companies had revenue projections but no physical infrastructure; 2026 AI companies are building physical infrastructure at unprecedented speed. The bubble narrative was not entirely wrong (some AI startup valuations are speculative), but it misidentified the infrastructure layer as speculative when it is the most concrete element of the investment landscape.
+
+### Supersession: The Investment Thesis
+
+**Phase 1 (2022-2023 — Model-centric investing):** Investment followed model capability announcements. OpenAI's ChatGPT release generated massive retail and institutional attention. The assumption: the model providers would capture most value.
+
+**Phase 2 (2024 — Infrastructure layer bet):** Hyperscaler capex became the dominant investment thesis. NVIDIA's revenue growth made GPU ownership the clearest AI value capture. The compute arms race (00199) became legible to sophisticated investors.
+
+**Phase 3 (Current — Application and orchestration layer):** The platform layer battle is emerging: who owns the distribution layer for AI agent capabilities (04308)? The App Store model predicts that the orchestration layer (owning daily-driver UX, personal memory, and proprietary skills) will capture value above the infrastructure layer. No player has locked this in as of early 2026. a16z's $15B+ 2025 raise (18% of US venture) is betting this layer is still open. The SaaSpocalypse ($285B market crash) is the first signal that the application layer is being disrupted from below — the orchestration layer may inherit value from the SaaS layer, not just from new market creation.
+
 ## Cross-References
 - neocorpus/ai-capability-futures/scaling-laws-trajectories (compute scaling economics)
 - neocorpus/ai-capability-futures/ai-labor-displacement-historical-pattern (SaaS workforce implications)

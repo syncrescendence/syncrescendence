@@ -98,4 +98,20 @@ The sources collectively point to an emerging hybrid: neither pure human delegat
 
 ---
 
+---
+
+## Obsolescence and Supersession
+
+**The "delegation requires human agents" assumption is superseded.** The prior model of leverage through delegation — codified in classic management literature — assumed a human delegatee: a direct report, a contractor, an executive assistant. The skill was matching the right task to the right person and establishing accountability for outcomes. The constraint was human capacity: delegation was bounded by how many trustworthy people you could find, retain, and coordinate.
+
+The documentation-execution loop (00200) and the callable expert advisor architecture (00250) both supersede this constraint. When a task can be documented precisely enough for AI execution, the delegatee is a skill, not a person. The marginal cost of additional execution drops to near zero; the scaling constraint moves from "how many people can I coordinate" to "how well can I document the process." The assumption that leverage through delegation is bounded by human capacity is obsoleted by AI's ability to execute documented workflows at scale.
+
+**The "accountability requires hierarchy" assumption.** Traditional accountability systems assumed an organizational structure — a manager above, subordinates below, performance reviews, reporting relationships. Accountability was a property of hierarchy: the manager's judgment provided the external check on the individual's self-narrative.
+
+Sources 02365 and 02367 identify the problem with this model — individuals are unreliable narrators of their own progress, and the governance structures that correct this at the corporate level (boards for public companies) are not accessible at the individual or small-team level. The "AI board of directors" concept supersedes the hierarchy assumption: AI can provide governance structure at a cost that makes it accessible to individuals, not just institutions. The accountability function is decoupled from organizational hierarchy and provided by a system that tracks commitments, surfaces drift, and applies external perspective uncorrupted by the individual's self-narrative.
+
+**"Expert knowledge is scarce and access is expensive" breaks against the callable advisor architecture.** The prior constraint on accessing expert judgment was access itself — consultants charge by the hour, advisors are hard to schedule, books give you the framework but not the decision. The assumption encoded in high consulting rates and advisory board structures: expert judgment is a scarce resource whose cost reflects its scarcity.
+
+The callable expert advisor system (00250) — training AI on distilled frameworks from specific domain experts (Hormozi, Godin, Bezos), then querying it on demand — supersedes the scarcity assumption in a specific domain: expert frameworks and decision heuristics can be extracted once and queried indefinitely. The sources are appropriately precise about what this does and does not provide: it is not the expert's real-time judgment on novel situations, but it is their extracted frameworks applied to your specific question. For the class of decisions that framework application can address, the scarcity constraint is eliminated.
+
 *This entry is the definitive treatment of leverage, delegation, and accountability systems as of 2026-03-01. All distinct reasoning paths from sources 01801, 02365, 02367, 00200, and 00250 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*

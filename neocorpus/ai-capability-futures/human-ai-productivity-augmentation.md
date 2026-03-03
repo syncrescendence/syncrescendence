@@ -88,6 +88,20 @@ Non-negotiable verification patterns:
 - **Monolithic AI tasks**: "Fix everything in the repo" produces unmergeable 500-file diffs. Scope to one PR each, run 5 PRs at 20% each (00233).
 - **Dismissing current capabilities based on prior versions**: "Like test driving a golf cart in 2023 and deciding you don't need to worry about Teslas in 2026" (03855).
 
+## Obsolescence & Supersession
+
+### Obsolescence: The Individual-Model Productivity Model
+
+Through 2024, AI productivity augmentation was framed as "you + one AI assistant = more productive you." Interaction was sequential: human asks, AI answers, human acts. The productivity ceiling was bounded by the sequential throughput of one human directing one AI. This model was superseded by parallel orchestration: multiple AI agents running simultaneously on separate contexts, with the human cycling between decision points rather than performing all sequential steps. The CEO experiment (10870) quantifies the limit of the individual-model approach for executive work — 10-20% improvement, not 10x — and identifies where it breaks: AI cannot determine importance in complex multi-party situations. The 10x gains come from operational/coding work where the task specification is clean and the output is verifiable.
+
+### Supersession: AI-Assisted Engineering
+
+**Phase 1 (2023 — Vibe coding):** Developers discovered they could generate code with AI. Output quality was accepted on vibes. Technical debt accumulated invisibly; GitClear's analysis of 211 million AI-touched lines found spiking defect rates (00233). This phase produced impressive demos and degrading codebases.
+
+**Phase 2 (2024-2025 — Framework-assisted):** IDE integrations (Copilot, Cursor) became standard. Code generation quality improved but the fundamental "accept AI output blindly" pattern persisted. The 84% developer adoption figure (00233) comes from this phase; it measures breadth, not depth of productive integration.
+
+**Phase 3 (Current — Systems orchestration):** The canonical 2026 workflow is the Boris Cherny parallel-sessions pattern: 5 Claude Code sessions in numbered terminal tabs, each a separate worker, human cycling through at decision points. The stack (AI-first IDE + terminal agent + background agents + general chat + AI code review + observability CI) is not adoption of AI as a tool but construction of a development system around AI. Persistent context engineering (`claude.md` as living document, updated weekly, tagged on PRs for automatic compounding) is the differentiator between Phase 2 and Phase 3 practitioners. The 100-trillion-token study (01791) — programming now >50% of LLM token consumption — confirms this phase is operational at scale.
+
 ## Cross-References
 - neocorpus/ai-capability-futures/human-competitive-advantage-ai-era (talent stacking, what remains uniquely human)
 - neocorpus/ai-capability-futures/agent-evals-capability-benchmarks (verification, eval-driven development)

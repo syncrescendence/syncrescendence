@@ -62,6 +62,17 @@ Ross Douthat's reflection on T.S. Eliot's "Journey of the Magi" — written for 
 - **Meaning as discovery vs. construction**: Does meaning exist to be found (realist) or must it be created (constructivist)? Existentialism says constructed; Stoicism says discovered (in nature's rational order); Buddhism says the question dissolves under analysis.
 - **The emotivist challenge**: If moral claims are expressions rather than truth claims, what becomes of moral reasoning, moral progress, and moral education?
 
+## Obsolescence & Supersession
+
+### Stoicism as Emotional Suppression — Superseded
+The popular understanding of Stoicism — reduced to emotional suppression, the stiff upper lip, the "don't feel things" ethos — is a significant distortion that has been superseded by scholarly engagement with the actual texts. Alex O'Connor and John Sellars' treatment (10522) recovers the full three-part system: logic, physics, and ethics form an integrated whole. The "preferred indifferents" doctrine (health, wealth, and reputation are not good or bad but preferable or dispreferred) is far more nuanced than simple indifference. Marcus Aurelius' Meditations, widely read as a self-help text, is "surprisingly difficult to get the most out of" because it is a private therapeutic exercise by someone working through Stoic practice, not a systematic philosophical treatise. The supersession: popular Stoicism is valid Stoic practice stripped of its theoretical foundations; what's needed is the full system.
+
+### Nietzsche as Proto-Fascist — Superseded
+Nietzsche's reception was long distorted by his sister Elisabeth Förster-Nietzsche's selective editing and appropriation of his work for nationalist ideology. The slave morality / master morality distinction, the will to power, and the sovereign individual were systematically misread as political doctrines rather than psychological genealogies. The scholarly consensus, reflected in the sources' treatment (09262), reads Nietzsche as a psychologist of morality whose project is descriptive-critical rather than prescriptive-authoritarian. The "sovereign individual" is the rare person who has internalized discipline without external moral constraint — not a political category. This supersession of the politically distorted reading is largely complete in scholarship but continues in popular reception.
+
+### The Grammar of "The Meaning of Life" — Revealed as Misleading
+The question "What is the meaning of life?" presupposes that life has a single discoverable meaning — the way a word has a definition. The sources document the recognition that this presupposition is probably a grammatical artifact rather than a genuine philosophical structure: meaning is not a property of life to be found but a relationship between agents and their activities. "The grammar trap" (01161, 09314) supersedes the naive formulation. The superseding framing asks not "what is the meaning of life?" but "what generates meaning for agents like us?" — a question with different and more tractable implications. Camus' "Imagine Sisyphus happy" and the Buddhist anatta doctrine converge from different directions on the same move: dissolving the question by transforming the asker.
+
 ## Cross-References
 - neocorpus/philosophy-esoterica/meaning-faith-permeability.md (meaning crisis and multiscale causality)
 - neocorpus/philosophy-esoterica/transhumanist-suffering-abolition.md (suffering as philosophical problem)

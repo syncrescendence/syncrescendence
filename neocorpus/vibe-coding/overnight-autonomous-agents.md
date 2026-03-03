@@ -61,6 +61,16 @@ AI may have structural advantages over humans for architectural work specificall
 - **Infinite review loops**: self-healing PRs need explicit allowlists and loop controls or they run forever (10885.md).
 - **Over-automating without understanding**: the random bug hunter and silent bug fixer work because the team already understands the codebase. Automation without understanding is just faster ways to create problems.
 
+## Obsolescence and Supersession
+
+**"AI as coding assistant" frame superseded by "AI as engineering team" frame.** The initial framing positioned AI as a smarter autocomplete — the developer drives, AI assists. The overnight agent pattern (Ralph) represents a structural inversion: the human is the product designer, the agent is the engineering team (10130.md). This is not an incremental improvement to the assistant model but a role reversal. The developer who optimizes their AI use as "better autocomplete" is operating in the predecessor paradigm; the developer who learns to specify and queue work for autonomous execution is operating in the current one.
+
+**Sequential, synchronous development workflows are being superseded by asynchronous queuing.** Traditional development assumed the developer and the work are in the same session at the same time — you sit down, you build, you stop. The overnight agent model introduces asynchronous work queuing: the developer specifies work in batch, the agent executes overnight, the developer reviews results in the morning (10130.md, 10532.md). This changes the unit of developer time from "hours of coding" to "specification sessions + review sessions." The tools (Linear, GitHub) that assume humans as the bottleneck are lagging behind this shift (04002.md).
+
+**"Current version control will change dramatically."** Thorsten Ball articulated the structural supersession: "Most engineers who believe agents will be integrated into existing loops are not thinking far enough ahead. Current tools like Linear and GitHub assume humans are a much wider bottleneck than they actually are" (04002.md). The version control paradigm (branches, PRs, code review by humans) was built for human development timelines and human context switching. Agentic development — agents writing, testing, committing, and self-healing PRs in loops — requires a fundamentally different coordination layer. What exactly replaces it is not yet determined, but the assumption that today's toolchain persists unchanged is itself an obsolete assumption.
+
+**"Context loss causes architectural entropy" as inevitable human tax.** The pre-AI framing treated context loss as a given — systems grow complex, humans forget, architecture degrades. The AI advantage identified in 10380.md and 03202.jsonl is that AI agents holding an entire codebase in attention can catch what humans miss precisely because they do not lose context. The design implication is that human-AI architectural partnerships can address a class of entropy that human architects were always going to lose to. This is not "AI replaces architects" but "AI catches what architects structurally cannot retain."
+
 ## Cross-References
 - neocorpus/vibe-coding/definition-and-eras.md (where autonomous agents sit in the evolution)
 - neocorpus/vibe-coding/agents-md-and-codebase-patterns.md (the infrastructure that enables agents)

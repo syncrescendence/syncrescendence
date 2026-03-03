@@ -126,4 +126,20 @@ The organizations that succeed treat AI adoption like any other organizational c
 
 ---
 
+---
+
+## Obsolescence and Supersession
+
+**The "prompting skills drive adoption success" assumption is falsified.** The dominant early framing of AI workforce adoption — from 2022 through approximately 2024 — positioned prompt engineering as the critical new literacy: workers who learned to prompt well would succeed; those who didn't would fall behind. Training programs focused on prompt writing, output review, and basic tool usage.
+
+The Microsoft 300,000-employee study (03040) directly falsifies the dominant assumption: the skills that predict AI success are management skills, not prompting skills. The workers who failed most visibly were those who couldn't identify when AI was operating outside its capability frontier (the "jagged frontier" where AI competence drops unpredictably) — a judgment skill, not a prompting skill. The organizations with 3x better financial outcomes from AI had embedded use cases and explicit managerial expectations — organizational design choices, not training program choices. The assumption that upskilling = prompting training has been superseded by the finding that upskilling = judgment development about AI's limits.
+
+**The "AI reduces work" efficiency assumption is empirically contradicted.** The pre-adoption narrative, widespread from 2022-2024, framed AI as a productivity tool in the efficiency sense: the same work, faster, by fewer people. This assumption drove most early enterprise AI business cases — cost per unit decreasing, headcount reduction potential, SLA improvement.
+
+Berkeley Haas / HBR research (10752) documents the actual finding: AI power users experience task expansion, not task reduction. The mechanisms are specific: new categories of review work, parallel multitasking encouraged by AI speed, constant partial attention, spillover verification requirements. More capability creates more work. The organizations that succeed reframe AI as expansionary (new products, markets, revenue streams) rather than efficiency (same work cheaper). The efficiency assumption is not merely incomplete — it produces burnout when the efficiency gains are captured by volume increase rather than workload reduction. The supersession is from efficiency framing to expansion framing as the appropriate mental model for AI adoption ROI.
+
+**The apprentice model as a casualty of AI capability.** The prior assumption underlying professional development in most knowledge work disciplines — that junior workers develop judgment by working alongside senior practitioners, observing their decisions, and gradually internalizing their heuristics — encoded a specific information transmission mechanism: exposure to expert process over time. This is the apprenticeship model.
+
+AI short-circuits this by giving junior workers senior-seeming outputs without the underlying judgment. The "201 training gap" (03040, 10276) names the specific failure: workers with 101-level prompting skills but without 201-level judgment about AI's capability frontier make worse decisions than non-AI users in the AI's failure zones. The apprenticeship model implicitly assumed that output quality and judgment quality were coupled — a junior worker's poor outputs would signal the need for more development. AI decouples them: junior workers produce good-looking outputs while developing no judgment about when those outputs are wrong. The coupling assumption is obsoleted by this decoupling.
+
 *This entry is the definitive treatment of AI adoption as organizational design as of 2026-03-01. All distinct reasoning paths from sources 10238, 03040, 10276, 10752, 00230, and 02095 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*

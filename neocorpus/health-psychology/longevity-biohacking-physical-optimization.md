@@ -115,3 +115,14 @@ Twitter post (472K views, 5.3K bookmarks) maps cultural topology: gene editing, 
 6. **Boredom theory testability**: What interventions would uniquely address goal-depletion vs. alternative aging theories?
 7. **Mammalian mortality as parameter**: What evidence would establish this either way?
 8. **Behavioral sufficiency**: Does the lifestyle layer produce longevity effects independently of molecular interventions?
+
+## Obsolescence and Supersession
+
+### Biological Aging as Fixed Hardware — Under Fundamental Revision
+The pre-modern consensus treated biological aging as an immutable constant — hardware, not software. The longevity field has progressively eroded this assumption across multiple decades: first by identifying specific molecular pathways (telomere shortening, mTOR signaling, senescent cell accumulation) as modifiable targets; then by Levin's bioelectricity framework, which relocates the control logic from the genome to the bioelectric state. The revision timeline: the genome-as-destiny model dominated mid-20th century biology. By the late 20th century, epigenetics established that gene expression is environmentally modifiable. Levin's flatworm and xenobot experiments extend this: biological memory and morphogenetic programs can be rewritten without touching the genome at all. The current frontier (10475, 10188) treats mortality as a tunable parameter, not a constraint. The epistemically honest position is "under revision" rather than "superseded" because mammalian evidence remains limited. (10188, 02868)
+
+### The Genome-as-Destiny Model — Substantially Weakened
+The early molecular biology framing assumed that the genome was the master control document: if you wanted to understand or modify biological outcomes, you needed to modify DNA. Levin's bioelectricity work supersedes this at the level of causal architecture: the genome is "factory settings," not destiny. Bioelectric states modify how genetic programs are expressed. Two-headed flatworms regenerate with normal brains when their bioelectric pattern is normalized — without any change to the DNA. The genome is necessary but not sufficient; the bioelectric control layer is the operative level for morphogenetic outcomes. (10188, 02868)
+
+### Audit Note
+This entry is classified REDUNDANCY-ONLY. Supersession claims are grounded directly in Levin (10188, 02868) and Johnson (10475) content in the entry. Several sources lack transcripts (10028, 10234, 10475 description-based), which limits verifiable detail — noted in the entry's Open Questions. No fabrication.

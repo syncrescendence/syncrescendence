@@ -82,4 +82,18 @@ These are not PAI-specific predictions, but they reinforce the sovereignty argum
 
 ---
 
+---
+
+## Obsolescence and Supersession
+
+**The "AI is a third-party app" assumption is the target of PAI.** The pre-PAI assumption for personal AI use was that you accessed AI through managed services: ChatGPT, Claude.ai, Gemini — you authenticate, you query, the provider owns the context, the data, and the continuation. This model treats AI as a utility, not as infrastructure. The assumption encoded in managed service AI: the provider's platform is your AI layer, and portability is not your concern.
+
+PAI explicitly supersedes this by framing the alternative: locally controlled, persistent, user-owned infrastructure where the architecture is portable across models and providers. The sources (03079) make the sovereignty argument explicit — controlling your AI layer is controlling your economic future. The prior model (managed service AI) fails under the lock-in critique: your context, workflows, and memory are all captive to the provider. The PAI correction: architecture portability over tool rigidity (02782), so that model or provider swaps don't destroy accumulated context and workflow.
+
+**"Principles-based guidance over rigid rules" supersedes configuration-file AI.** The prior approach to personal AI customization was configuration: system prompts, custom instructions, temperature settings — fixed parameters that applied uniformly. This was adequate when AI was a query-response system with no memory and no multi-step agency. The assumption: fixed configuration is sufficient to shape AI behavior for recurring personal use.
+
+TELOS (02755) — a purpose-definition layer for agents within PAI — supersedes this by treating agent purpose as a first-class architectural component, not a configuration parameter. Where a system prompt says "you are a helpful assistant," TELOS says "you pursue these specific goals with this specific scope in these specific domains." The difference is agentic orientation: configuration shapes responses, purpose shapes initiative. As AI shifts from reactive (responding to queries) to proactive (pursuing defined goals), the configuration model becomes insufficient and purpose-definition becomes necessary.
+
+**The "knowledge work is safe from automation" assumption breaks against PAI.** Source 03079 names what PAI is a response to: the automation of knowledge work. The prior assumption — held through most of the 2010s — was that knowledge work (analysis, writing, synthesis, judgment) was the durable comparative advantage of educated workers relative to automation. Physical tasks would be automated; cognitive tasks would not. PAI's sovereignty framing inverts this: PAI is necessary precisely because knowledge work is automating, and the question is not whether automation will affect knowledge workers but whether they will own their AI layer or be mediated by platforms that own it for them. The assumption that knowledge work immunity from automation provides stable employment is the obsoleted belief that PAI's design philosophy is built to navigate.
+
 *This entry is the definitive treatment of Personal AI Infrastructure as of 2026-03-01. All distinct reasoning paths from sources 01942, 02755, 03079, and 02782 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*

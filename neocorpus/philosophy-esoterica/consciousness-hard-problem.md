@@ -68,6 +68,17 @@ Faggin argues that quantum fields possess consciousness and free will as fundame
 - **The measurement problem**: How do you measure consciousness in a system that cannot report its experience? IIT proposes phi; behavioral tests are unreliable (Chinese room); the fundamental problem may be insoluble from the outside.
 - **Mystical experience as evidence**: Should mystical and psychedelic experiences count as evidence about the nature of consciousness, or are they (merely) fascinating neurological phenomena? Koch increasingly treats them as evidence; most neuroscientists do not.
 
+## Obsolescence & Supersession
+
+### Neuro-Reductionism as Closure — Superseded
+A dominant mid-20th century assumption was that consciousness would eventually be "explained" by identifying its neural correlates — that once we mapped brain states to mental states precisely enough, the explanatory gap would close. This assumption, implicit in much neuroscience funding and framing, has been superseded by the hard problem articulation itself. Nagel's "what it is like" argument and Chalmers' explicit formulation of the hard problem established that identifying correlates does not explain why there is experience at all. The superseding view: the explanatory gap is structural, not just a gap to be filled with more neuroscience. This has not killed neural correlation research, but it has shifted its status from "solving consciousness" to "mapping functional correlates of experience." (09277, 10210)
+
+### Consciousness as Brain-Centric — Expanding
+The assumption that consciousness requires brains — or at minimum, neurons — is being progressively weakened by evidence from multiple domains. Levin's flatworm and xenobot research demonstrates goal-directed behavior and biological memory in systems without nervous systems. Plant intelligence research (mycorrhizal networks, Mimosa habituation) extends the question further. Avian consciousness shows convergent evolution in a radically different neural architecture (no neocortex). The superseding view is that consciousness is a property of certain organizational patterns, not a property of neural tissue per se. How far this extends — to cells, to plants, to AI — remains contested; but the brain-centric assumption is no longer the working consensus. (09555, 09693, 09291)
+
+### Mystical Experience as Mere Noise — Eroding
+The prior consensus in scientific consciousness research treated mystical, psychedelic, and peak experiences as neurologically interesting phenomena but philosophically irrelevant — curious data about brain states, not evidence about the nature of consciousness. This exclusion is eroding. Koch, following his own mystical experiences, now treats them as potentially evidential. The "hyper-real mode of knowing" framing (Kastrup, Koch) proposes that mystical experiences may constitute a form of direct acquaintance with truth that laboratory methodology systematically excludes. This represents a methodological supersession: expanding the evidential base for consciousness research beyond third-person observation. The direction is contested within the field. (09976, 02505)
+
 ## Cross-References
 - neocorpus/philosophy-esoterica/panpsychism-idealism.md (consciousness as fundamental)
 - neocorpus/philosophy-esoterica/ai-consciousness-debate.md (AI and consciousness)

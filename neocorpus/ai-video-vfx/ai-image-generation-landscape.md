@@ -35,3 +35,19 @@ An emergent workflow (documented in 10337): using Claude to orchestrate sequenti
 ### Competitive Dynamics
 
 The GPT Image 1.5 vs. Nano Banana Pro comparison crystallizes the current landscape: OpenAI emphasizes aesthetic polish and casual creativity; Google emphasizes reasoning-on-images capabilities. Early benchmark reactions generated debate. The market is fragmenting by use case rather than converging on a winner — "there is no one image generator to rule them all."
+
+---
+
+---
+
+## Obsolescence and Supersession
+
+**Sources for this REDUNDANCY-ONLY entry document a moment in time (late 2025 / early 2026) without treating prior model generations or explicit version chains.** What follows is what can be honestly extracted from the sources themselves, plus a clearly marked audit note on the gap.
+
+**The "one tool will win" assumption is structurally falsified — but not traced in these sources.** The sources collectively arrive at the conclusion that "there is no one image generator to rule them all" — each tool excels in distinct dimensions (Midjourney for artistic aesthetics, Ideogram for text rendering, Adobe Firefly for commercial safety, Flux for open-source deployment). This fragmentation-as-permanent-state is a supersession of the earlier expectation — prevalent during the Stable Diffusion 1.x / DALL-E 2 / Midjourney V1-V3 era — that one dominant model would eventually emerge. But the sources do not trace this chain explicitly. The version transitions are named (Midjourney V6/V6.1, Flux as August 2024 entrant, GPT Image 1.5 as an upgrade from 4o) without documenting what changed from prior versions or what assumptions those versions encoded that failed.
+
+**The "text rendering is impossible" assumption is obsolete.** Ideogram 3.0 is described as the "text rendering leader" — generating accurate text for book covers, title treatments, and thumbnails. This represents an obsolescence of the assumption that AI image generators were categorically incapable of accurate text rendering, which was a defining limitation of earlier generations (Stable Diffusion 1.x, DALL-E 2, early Midjourney) that made them unsuitable for design work requiring legible text. The sources document the current capability without tracing the chain from prior failure.
+
+**The "reasoning-on-images" paradigm is a genuine discontinuity.** Google Imagen 4 / Nano Banana Pro introducing 25 previously unavailable capabilities — real text rendering, accurate charts, whiteboard-style document compression, flowcharts, technical drawings, virtual staging, precise spot-editing — is described as qualitatively distinct from prior image generation. The framing "reasoning-on-images paradigm" signals that Google is positioning this as an architectural shift, not an incremental quality improvement. The prior assumption was that image generators were generative tools (blank slate to output); the Nano Banana Pro framing positions them as reasoning tools (understanding context, generating structured visual information). This supersession is named but not elaborated in the sources.
+
+**Audit note on enrichment limits:** The sources available for this REDUNDANCY-ONLY entry do not provide sufficient version-chain content to write a complete supersession narrative. A future enrichment pass with corpus sources covering the 2022-2024 model generations (DALL-E 2, Stable Diffusion 1.x/2.x, early Midjourney, early Adobe Firefly) could reconstruct the full obsolescence chain from "text rendering impossible, one tool will win" to "use-case fragmentation is permanent and text rendering is solved." This entry accurately represents what its sources contain.

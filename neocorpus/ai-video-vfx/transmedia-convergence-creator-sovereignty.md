@@ -42,4 +42,20 @@ The Matrix was a cautionary tale about enslavement by wondrous, dangerous system
 
 ## The Emerging Tech Entertainment Complex
 
-An "emerging tech entertainment complex" is forming where technology monoliths (Google, Meta, Apple, Nvidia) will subsume entertainment mini-monoliths (Disney, Warner, Sony). The convergence is not partnership — it is absorption. Volume and velocity of content are increasing across all modalities. Two reactions: returning to trusted classics, or seeking novel curation forms. 
+An "emerging tech entertainment complex" is forming where technology monoliths (Google, Meta, Apple, Nvidia) will subsume entertainment mini-monoliths (Disney, Warner, Sony). The convergence is not partnership — it is absorption. Volume and velocity of content are increasing across all modalities. Two reactions: returning to trusted classics, or seeking novel curation forms.
+
+---
+
+---
+
+## Obsolescence and Supersession
+
+**The "capture first, compute later" production paradigm is obsolete.** The Matrix productions exemplify the last generation of visual effects work built on the assumption that production capture (photography, practical effects, physical sets) was the irreducible starting point — computation enhanced but could not replace capture. Bullet time required 120 physical cameras. "Universal capture" required five HD cameras owned by Lucas. The assumption: you needed to physically record the thing before AI/computation could work with it.
+
+That assumption is reversed in the world Gaeta describes as now materializing. Google Genie 3 enables walking around AI-generated 3D worlds; Unreal Engine enables virtual production without physical sets. The progression from "120 cameras to approximate a computer-generated perspective" to "generate the world directly from a prompt" is a complete supersession of the capture-first assumption. The intermediate stage — image-based rendering, photogrammetry, virtual backlots — was not a destination but a transition between the two paradigms.
+
+**The "sequential media release" model encodes a capital logic that AI disrupts.** Gaeta explicitly frames "20th-century thinking" as demanding a successful film before other media (games, merchandise, interactive) could launch. This sequencing was not aesthetic preference — it was a risk management response to the capital costs of parallel production. Producing a film, a game, and interactive counterparts simultaneously required resources only studios could marshal, and studios required proof of concept (the successful film) before committing those resources.
+
+AI collapses the marginal cost of parallel production. When a single creator can generate concept art, animated sequences, and interactive environments in parallel at near-zero incremental cost, the financial logic that made sequential release necessary dissolves. Gaeta's parallel production thesis — stories, interactive counterparts, and autonomous character agents simultaneously — was previously constrained to the likes of George Lucas. It is now accessible to independent creators. The assumption being superseded is not an aesthetic choice but an economic necessity that AI has eliminated.
+
+**Gatekeeping as the obsolescing constraint.** Gaeta's "Escape" platform framing and the "GenAI gives creators permission to attempt impossible tasks" argument both point to the same supersession: the prior assumption that access to audiences required studio gatekeepers, algorithmic platform submission, or institutional backing. The gatekeeping assumption encoded not just a business model but a conception of quality — only what passed through the gate was "real" enough to reach audiences. Gaeta's argument is that this constraint is ending, not just that the tools are better. The platform he describes curates people rather than media, surfacing content through editorial judgment rather than studio greenlight. The old gate is gone; the new architecture is different, not gateless.

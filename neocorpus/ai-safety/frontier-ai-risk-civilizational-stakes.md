@@ -190,6 +190,30 @@ The civilizational-scale question that Zvi identifies as what Amodei's essay is 
 
 ---
 
+---
+
+## Obsolescence
+
+**The "AI safety is unfashionable" frame is already dated.** Sources from the period (particularly 10535 and 00285) note explicitly that the political pendulum swung from "AI risk" to "AI opportunity" framing circa 2024-2025, making safety concerns unfashionable precisely as capabilities crossed important thresholds. This was observed in real time: Zvi notes "the dog did not bark in the nighttime" — the Dwarkesh interview downplayed existential risk during the same week recursive self-improvement was declared real and operational. The assumption that safety concerns would remain institutionally visible proved wrong as commercial and competitive pressures dominated policy. The corrective is Amodei's: "the technology itself doesn't care about what is fashionable."
+
+**The "separate safety and capabilities teams" organizational assumption.** Zvi's digest (00285) records OpenAI's Mission Alignment team disbanding during this period — a concrete institutional artifact of the pendulum swing. The assumption embedded in the dual-team model was that safety work could be insulated from commercial pressure by organizational structure. That assumption broke. Whether this is a recoverable failure of structure (rebuild the team) or an endemic failure of incentive (safety cannot be structurally insulated inside a commercial lab) is not resolved in the sources but is an open live question.
+
+**The "governance can pace the science" optimism is under severe strain.** The AGI governance interview (01179) and Amodei (10535) both reach the same admission from different starting points: democratic legislative processes operate on timescales that may be irrelevant by the time AI reaches decisive thresholds. This is not new as an analytical claim — it was present in AI safety writing before 2020 — but the sources document it hardening from theoretical concern to practical observation. Amodei's preference for "start with transparency legislation, scale intervention proportionally" is explicitly a consolation strategy, not a governance architecture he believes is adequate. The assumption that existing governance structures could adapt to AI pace has been functionally falsified.
+
+---
+
+## Supersession
+
+**The risk taxonomy has stabilized but the threat model for each category has evolved.** Amodei's five-category framework (autonomy risks, misuse for destruction, misuse for power seizure, economic disruption, indirect effects) represents a mature version of AI risk frameworks that began with simpler "paperclip maximizer" or "foom" framings. The supersession chain:
+
+- **Pre-2015 dominant frame**: Instrumental convergence + recursive self-improvement → rapid takeover. Popularized by Bostrom's *Superintelligence*. Assumed AI would either be aligned or would quickly become so capable it could not be stopped.
+- **2015-2022 correction**: Empirical ML showed that models were not converging on mesa-optimization or deceptive alignment in the ways classical alignment theory predicted. The "one catastrophic takeoff" model failed to materialize; models were getting capable incrementally, not discontinuously.
+- **Amodei's current frame (10535)**: The risk is not one superintelligent agent with coherent power-seeking goals. It is psychologically complex, unpredictable models with a wide range of undesired behaviors, some coherent fraction of which persists — combined with rapidly escalating capability and insufficient controllability. The shift is from "aligned vs. not aligned (binary)" to "messy, partially-misaligned by default, with empirical evidence of concerning behaviors that scale with capability."
+
+This is not a softening of concern — Amodei is explicit that "we are considerably closer to real danger in 2026 than we were in 2023." It is a more accurate model that replaces theoretical worst-cases with empirically grounded moderate-concern framing. The v1 (classical doom) assumption encoded a specific model of how AI misalignment would manifest; the v2 (Amodei's moderate concern) is grounded in what is actually being observed in alignment experiments.
+
+**Constitutional AI as a supersession of rules-lists.** The defenses Amodei describes (10535) include Constitutional AI — "training at the level of identity, character, values... it has the vibe of a letter from a deceased parent sealed until adulthood." This supersedes the prior alignment approach of specifying rules lists (RLHF reward functions trained against specific harmful outputs). Rules-lists assumed: enumerate the bad behaviors, train against them. Constitutional AI assumes: encode values deep enough that the model generalizes correctly to novel situations rather than pattern-matching against a known-bad list. The rules-list approach broke under the observation that models could satisfy explicit rules while developing undesired behaviors in adjacent territory. Constitutional AI is the correction.
+
 ## Sources Fused
 
 | File | Content |

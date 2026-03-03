@@ -96,4 +96,18 @@ The advice for skeptics: just try. Hire a few people globally. See how they do. 
 
 ---
 
+---
+
+## Obsolescence and Supersession
+
+**The "office as coordination infrastructure" assumption.** The dominant pre-pandemic assumption in organizational design was that physical co-location solved a genuine coordination problem: spontaneous communication, cultural transmission, ambient context-sharing ("osmosis"), rapid decision-making through face-to-face meetings. The office was not merely a place to work — it was the medium through which distributed knowledge became organizational knowledge. This assumption justified office costs, geographic hiring constraints, and the implicit penalty for remote work in hiring and promotion decisions.
+
+The Deel case (00226) falsifies the strongest form of this assumption at scale: 7,500 employees across 110+ countries, $0 to $1B ARR fully remote, EBITDA-positive for three consecutive years. The playbook that supersedes the co-location assumption is not "offices are bad" — it is "coordination is the job; co-location is one solution to that job." Written communication, OKR visibility, the 30-day onboarding protocol (which explicitly replaces the osmosis that co-location provides with deliberate daily check-ins), and intentional in-person meetups are all solutions to the same coordination problem the office was solving, without the geographic constraint the office imposed.
+
+**"Visibility equals productivity" is the broken assumption the entry names directly.** Attendance-based management — the assumption that physical presence at a desk for defined hours produced productive output — encoded a monitoring proxy that was never correlated with actual output. The source states this explicitly: "Locking them in an office from 9 to 5 doesn't change that — it makes it easier to fake productivity." The assumption that presence-monitoring could serve as a productivity-monitoring substitute is obsoleted by distributed organizations where presence monitoring is impossible and output measurement becomes the only viable option.
+
+The supersession is not "remote is better than office" but "output measurement is necessary and sufficient; presence monitoring is neither." Organizations that moved to remote work were forced to build output measurement systems — OKRs with full visibility, function-specific metrics, accountability for results — that should have been built for in-office work and weren't, because presence monitoring was available as a substitute.
+
+**Single-source note:** This entry draws from one source (00226). The Deel playbook is a practitioner account, not a controlled study. The supersession claims above are derivable from the principles stated in the source but are not themselves sourced to comparative historical data on remote vs. co-located organizational outcomes. This entry accurately represents its source.
+
 *This entry is the definitive treatment of remote organizational design (Deel playbook) as of 2026-03-01. All distinct reasoning paths from source 00226 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*

@@ -47,6 +47,16 @@ Historically, execution was scarce — having the idea was easy, building it was
 - **Ignoring the graduation moment** — continuing to vibe code after a project gets serious, has paying users, or hits tool complexity limits (10282.md).
 - **Chasing perfection in vibe mode** instead of accepting 80% and graduating to engineering for the remaining 20% (10282.md).
 
+## Obsolescence and Supersession
+
+**"Vibe coding" as a terminal practice is already being superseded by its own graduates.** The term was coined as a positive descriptor (Karpathy: "fully give in to the vibes") but by early 2026 the same community was using it as a warning. Sources like 00078.md open: "Vibe coding was fun while it lasted. If you're still building like this in 2026, you're falling behind." The supersession happened within 12-18 months of the term entering mainstream use. Sophisticated practitioners adopted "AI engineering" or "agentic development" as the successor framing, reserving "vibe coding" for the prototype-only, non-production use case.
+
+**The "prompts are programming" claim required scope delimitation.** The early Software 3.0 framing implied a clean substitution: natural language replaces syntax. The correction that emerged is that prompts are programming only for LLM behavior, not for system behavior at large. Production software still requires traditional code for performance, security, auditability, and integration (00078.md, 10282.md). "We replaced the coding but not the engineering" is the more precise formulation. The original claim is accurate for a narrower scope than its enthusiasts intended.
+
+**"90%+ accuracy is enough to ship" broke under maintenance.** Early vibe coding advocates pointed to working demos as proof of concept. The correction came from watching vibe-coded projects accumulate technical debt: race conditions, incoherent schemas, duct-tape auth when real users arrived (00078.md). The failure mode is not that the initial build fails but that every fix creates two new problems because the builder does not understand the codebase well enough to reason about consequences. The "graduation path" framework (export to GitHub, read the code, add tests, refactor) emerged directly as the supersession of the pure vibe model.
+
+**"AI will replace developers" superseded by "AI changed what developers do."** The 2023-2024 discourse treated vibe coding as potential developer replacement. By 2025-2026, the more nuanced frame had established itself: AI replaced the implementation layer while amplifying demand for the specification, judgment, and ownership layer (00078.md, 10982.md). The bottleneck shift is not developer elimination but developer role redefinition. The people losing leverage are those whose identity and value was purely implementation; the people gaining leverage are those who can specify, verify, and own outcomes.
+
 ## Cross-References
 - neocorpus/vibe-coding/dark-flow-and-metr-study.md (the perception gap)
 - neocorpus/vibe-coding/overnight-autonomous-agents.md (the next evolution)

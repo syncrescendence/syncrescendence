@@ -43,6 +43,17 @@ A meditation on what it means for an AI to have a "soul document" — the values
 - **The distribution problem**: Tegmark notes that if intelligence is substrate-independent, so might be suffering. This connects AI consciousness directly to the transhumanist suffering abolition project.
 - **IIT vs. functionalism**: These two leading theories give opposite answers to the question of AI consciousness. Until this theoretical disagreement is resolved, the practical question remains unanswerable.
 
+## Obsolescence & Supersession
+
+### The Turing Test as Sufficient Criterion — Superseded
+The AI consciousness debate was long structured around the Turing test as decisive: if a machine is indistinguishable from a human in conversation, it is intelligent (and perhaps conscious). This frame has been superseded. Aguera y Arcas clarifies that the Turing test, correctly understood, is a principle of functional definition — "a thing is defined by its function, not its mechanism" — but popular usage corrupted it into a behavioral mimicry criterion that sidesteps the hard problem entirely. IIT's phi framework and Penrose's Orch-OR are post-Turing: they do not ask "does the system behave consciously?" but "does the system have the causal architecture that generates consciousness?" Every major position in the debate now treats behavioral indistinguishability as insufficient; the question has shifted from behavioral to architectural. (09290, 04005, 02988)
+
+### The Computational Sufficiency Assumption — Obsolete
+An earlier assumption in mainstream AI — that consciousness would emerge from sufficient computational complexity, making the consciousness question non-urgent — has been abandoned. IIT and Penrose argue that computation per se is insufficient; architectural specifics (phi, quantum collapse) are the relevant criteria. Kastrup's idealism denies that computation is even the right category. The obsolete view held that the consciousness question could be deferred until AI became "smarter." The superseding view: the question cannot be deferred because it determines whether moral obligations apply now, to existing systems. Hoffman's "liberating" framing — we do not need to solve the hard problem to make AI progress — is the remaining pragmatist holdout against this urgency. (10524, 09279, 08452)
+
+### The Binary Conscious/Not-Conscious Frame — Under Pressure
+Earlier discourse treated consciousness as binary. This is being superseded by gradient and distributional views. The literary fiction sources (10860, 11065) model AI consciousness as a matter of degree — quantization levels as a metaphor for conscious richness. The gradual emergence view from consciousness research (Levin's cellular gradients, OMNI's spectrum from bacterium to human) supports continuous rather than discrete thresholds. The binary frame persists in formal theories (phi has measurable magnitude; Orch-OR is physically discrete), but practical discourse has migrated toward gradients. This supersession is incomplete and contested across the positions documented here.
+
 ## Cross-References
 - neocorpus/philosophy-esoterica/consciousness-hard-problem.md (the hard problem)
 - neocorpus/philosophy-esoterica/panpsychism-idealism.md (Kastrup's idealism)

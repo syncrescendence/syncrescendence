@@ -20,3 +20,15 @@ The media ecosystem shift: decentralized speech environments versus centralized 
 ## The Governance Legitimacy Crisis
 
 Multiple converging pressures on institutional governance: datacenter electricity costs as political issue, semiconductor export controls as industrial policy, balanced budget constitutional pressure, and research reliability questions (50+ NeurIPS 2025 papers found to contain AI hallucinations).
+
+---
+
+## Obsolescence and Supersession
+
+**The "institutional gatekeeping as information quality control" assumption is under structural strain.** The Substack / decentralized media shift documented in the sources represents a supersession of the prior assumption that legacy media gatekeepers — editorial boards, editorial standards, institutional reputation — were the primary quality-control mechanism for public information. The assumption: institutional filtering (editorial oversight, fact-checking, publication standards) was what made information credible; consumer-direct publishing could not provide equivalent quality signals.
+
+Substack's rise as a creator-led platform eroding legacy media's "information monopoly" does not simply add channels — it routes around the gatekeeping assumption. Reputation becomes the quality signal when institutional affiliation is no longer the filter. The sources frame this as an investment thesis: "reputation-driven platforms" matter more in AI-era information markets because AI as a "universal problem solver" makes technical capability cheap and reputation the remaining differentiator. The prior model (institution → credibility → audience) is being superseded by the model (individual reputation → direct audience → institution optional).
+
+**"50+ NeurIPS 2025 papers with AI hallucinations" as an institutional reliability signal.** The finding that over 50 papers accepted at NeurIPS 2025 contained AI hallucinations represents a concrete obsolescence of the assumption that academic peer review is robust to AI-generated errors. The prior assumption embedded in academic publishing: peer review filters out factually incorrect claims because human reviewers can detect them. AI-generated content that is syntactically and stylistically indistinguishable from accurate content but factually wrong breaks this filter. The peer review mechanism was not designed to detect confident-sounding hallucinations from domain-adjacent AI systems. The assumption that institutional peer review provides reliable quality filtering is under empirical strain as AI-generated content becomes increasingly indistinguishable from expert-produced content at the surface level.
+
+**Audit note:** These sources are relatively shallow — this entry covers WEF coordination, JPMorgan finance, balanced budget politics, and decentralized media as distinct sub-themes without deep treatment of any. The supersession claims above are derivable from the documented shifts but are not elaborated as historical argument chains in the source material. This entry accurately represents its sources.

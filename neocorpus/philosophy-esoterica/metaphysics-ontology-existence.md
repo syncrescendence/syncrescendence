@@ -68,6 +68,17 @@ Lee Cronin's assembly theory (via 02382) proposes that selection and evolution c
 - **Free will and determinism**: Segall's process philosophy, Faggin's quantum free will, and the Stoics' rational determinism represent three incompatible frameworks for the same question.
 - **The limits of formalism**: Godel shows that formal systems have inherent limits. Does this limit apply to consciousness, computation, and reality itself — or only to our representations of them?
 
+## Obsolescence & Supersession
+
+### Classical Mechanics as the Default Physics — Long Superseded, Still Culturally Lagging
+Quantum mechanics replaced classical mechanics as the accurate description of physical reality in the early 20th century. This supersession is scientifically settled but culturally incomplete: most everyday reasoning, institutional structures, and philosophical frameworks still operate on classical-mechanics intuitions. Kinsella's observation that binary logic (zeros and ones) is a "heuristic for simulating reality" while quantum computers "are reality at the quantum level" captures this lag. The philosophical implications of quantum mechanics — superposition, entanglement, observer-dependent outcomes — have not been absorbed into mainstream metaphysics despite being established physics for a century. The sources in this entry treat quantum mechanics as the relevant physical reality with significant philosophical implications still being worked out. (08450, 09317, 09338)
+
+### The Human Genome Project's Promise — Partially Obsolete
+The Human Genome Project operated on the assumption that sequencing the human genome would unlock biological determinism — "false hopes" in Noble's characterization. The genome was assumed to be the program; the organism was assumed to execute it deterministically. This assumption is substantially weakened. Noble's biological relativity, Levin's bioelectricity, and assembly theory jointly establish that the genome is an "interactive participant" rather than a dictatorial blueprint. What persists: the genome does contain the primary information store for cellular construction. What is obsolete: the assumption that the genome is causally sufficient to explain the organism. (09542 via cosmos cross-cut)
+
+### Mathematical Platonism as Default — Contested by Computational Ontology
+The traditional default in philosophy of mathematics has been some form of Platonism: mathematical objects exist independently of minds, and mathematicians discover rather than invent. Wolfram's Ruliad — every possible computation as the fundamental substrate of reality — offers a competing ontology: mathematics is a particular way of sampling a computational structure, not a description of an independent realm. Hamkins' mathematical multiverse further complicates Platonism by arguing that mathematical truth is relative to which set-theoretic universe one inhabits. These are not settled supersessions; the Plato/computation debate is active. But the sources document a genuine contest between frameworks that did not exist in the same form in prior decades. (09724, 09862)
+
 ## Cross-References
 - neocorpus/philosophy-esoterica/consciousness-hard-problem.md (Penrose, quantum consciousness)
 - neocorpus/philosophy-esoterica/intelligence-computation-life.md (computation and life)

@@ -79,3 +79,13 @@ The current sources support a biographical sketch of two figures and a definitio
 | `corpus/ai-safety/01240.jsonl` | Fei-Fei Li: HCAI ethics atoms | 4 | Ethics as core component of AI; HCAI definition (dignity, purpose, creativity); Li's computer vision authority |
 | `corpus/ai-safety/01297.jsonl` | Kate Crawford: Atlas of AI atoms | 3 | Biographical/credentialing only — USC/Sydney professorships, Microsoft Research, École Normale Supérieure chair, "Knowing Machines" lab, *Atlas of AI* reception. Zero argument atoms. |
 | `corpus/ai-safety/09860.md` | Dr Waku Christmas Special 2025 (YouTube) | N/A | Unrelated — AI safety science communication, career update, community building. No Whittaker/Signal content. |
+
+---
+
+## Obsolescence and Supersession
+
+**Enrichment deferred: sources do not support Phase 3-4 temporal analysis.** This entry's three designated sources contain: four argument atoms from Fei-Fei Li (constructive, definitional, no historical arc), three credentialing atoms from Kate Crawford (no argument content), and an entirely unrelated Dr. Waku Christmas video (no ethics content). None contain version chains, before/after framings, or explicit accounts of superseded assumptions in the AI ethics domain.
+
+**What the sources gesture at but cannot substantiate:** Li's Human-Centered AI definition — "preserve human dignity, purpose, and creativity in an increasingly automated world" — is a response to assumptions embedded in pure-capability AI development: that the optimization target is performance, not human welfare. This is an implicit supersession claim (ethics as afterthought → ethics as core component), but the sources provide a definitional frame, not a historical account of what failed and how. Crawford's "Knowing Machines" lab name signals an epistemological critique (examining how AI systems construct knowledge and power), but the argument is not present in these atoms.
+
+**To write a proper Obsolescence and Supersession section for this concept would require:** substantive argument atoms from Crawford's *Atlas of AI* (specifically her infrastructure analysis and extraction critique), Whittaker's privacy-as-precondition argument, or Li's programmatic HAI proposals — none of which are in the current corpus cluster. This entry accurately represents its sources.

@@ -62,3 +62,14 @@ Three scientific traditions converge on a common substrate: the brain as predict
 5. **Group minds**: What would a "thousand brains" system look like at multi-agent scale? Would phi be calculable?
 6. **Hallucinatory response to boredom**: Would IIT predict hallucination specifically (vs. any subjective state) in high-phi systems with no external input?
 7. **Neuromorphic AI and consciousness**: Would a Thousand Brains implementation have higher phi than a standard transformer?
+
+## Obsolescence and Supersession
+
+### Neuron Count as the Measure of Conscious Capacity — Superseded
+The naive assumption — that more neurons means more consciousness — is superseded by the cerebellar anomaly that IIT addresses directly. The cerebellum contains approximately 80% of all brain neurons yet can be damaged or absent without abolishing consciousness. The superseding account: what matters is the topology of integration (phi), not the raw count. This is a clean supersession with empirical grounding: the anomaly was known before IIT, but IIT provides the first framework that explains it rather than treating it as a puzzling exception. (10810)
+
+### Boredom as Pure Absence — Superseded
+The folk conception of boredom is absence: nothing happening, therefore no experience worth analyzing. The prediction-engine model supersedes this: boredom is an active state — the brain generating discomfort rather than quiescence when prediction error goes to zero. The phenomenology of boredom (restlessness, irritability, difficulty concentrating) is explained as the system generating internal perturbation to restore productive uncertainty. The previous framing treated boredom as the problem to be solved by external stimulation; the superseding framing treats it as a signal that the brain is doing its job — forcing re-engagement. (03168, 10357)
+
+### Audit Note
+This entry is classified REDUNDANCY-ONLY. The supersession claims are grounded in IIT (10810) and boredom-as-signal (03168, 10357) content documented in the entry. The cortical column / Thousand Brains material (09293) is convergent but supports the synthesis, not a temporal supersession narrative specific to that framework. No fabrication.

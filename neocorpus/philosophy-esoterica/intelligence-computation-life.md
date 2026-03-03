@@ -74,6 +74,17 @@ The integrative view: AI is not an alien intelligence invading human civilizatio
 - **The phase transition question**: If the origin of life is a phase transition in computational space, is it inevitable? And if so, should we expect life to be common in the universe — contradicting the Fermi paradox evidence? (See cosmos-origins entry)
 - **AI as continuation vs. disruption**: The symbiogenesis framing is optimistic. Weinstein's "evolutionary trap" framing is pessimistic. Whether AI continues the pattern or breaks it may depend on factors neither framework addresses.
 
+## Obsolescence & Supersession
+
+### Intelligence as Individual Capacity — Superseded
+The intuitive model of intelligence locates it in individual cognitive agents — a person, an animal, a brain. The collective brain thesis (Henrich) and the social intelligence hypothesis (Aguera y Arcas) jointly supersede this. Intelligence is social and cumulative: the capacity lives in the network and its transmission mechanisms, not in individual nodes. "It's been a long time since individual humans were the pinnacle of intelligence on Earth" — human civilization is already a distributed intelligence system. The superseding view reframes individual intelligence as a parameter of a larger system rather than the primary unit of analysis. AI is then not a competitor to individual human intelligence but a new participant in the collective intelligent fabric. (09296, 01134)
+
+### The Narrow/General AI Distinction as Quantitative — Contested
+The prevailing assumption in AI development has been that the difference between narrow AI (good at one thing) and general AI is quantitative — more data, more compute, better architecture, and narrow AI scales toward general AI. Deutsch's constructor theory intervention (via metaphysics-ontology entry) argues this is wrong: the distinction is qualitative. Current AI performs pattern matching and prediction; AGI requires explanatory knowledge creation — generating new explanations through conjecture and criticism that go beyond available data. This supersession is contested: the scaling hypothesis (more compute → generalization) remains the working assumption of most major AI labs. The debate is empirically open; the sources document both positions without resolving it. (08447, 09301 via metaphysics cross-cut)
+
+### Life as Uniquely Biological Chemistry — Superseded by Walker
+The assumption that life requires biological chemistry — that the boundary between living and non-living is chemical — is superseded by Walker's assembly theory and Kempes' universal hierarchy. Assembly theory provides a substrate-independent criterion: objects with assembly index above ~15 almost certainly required a living process. This makes the life/non-life boundary a matter of historical construction complexity, not chemistry. Technologies are high-assembly objects; the technosphere is a living system at planetary scale. Whether this constitutes a genuine supersession or an aggressive redefinition of "life" depends on how the word is used — the sources present Walker's framework as a live proposal rather than settled consensus. (08443, 08454, 09283)
+
 ## Cross-References
 - neocorpus/philosophy-esoterica/consciousness-hard-problem.md (consciousness vs. intelligence)
 - neocorpus/philosophy-esoterica/metaphysics-ontology-existence.md (computational ontology, Wolfram, Deutsch)
