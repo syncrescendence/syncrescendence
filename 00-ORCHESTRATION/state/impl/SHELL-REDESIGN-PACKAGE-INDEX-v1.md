@@ -41,6 +41,12 @@
 11. [SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md)  
    Failure modes and migration hazards the redesign must survive.
 
+12. [ARTIFACT-LAW-VALIDATOR-SPEC-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ARTIFACT-LAW-VALIDATOR-SPEC-v1.md)  
+   Staged validator design for enforcing artifact law without destabilizing the live system.
+
+13. [MIGRATION-TRANCHE-01-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/MIGRATION-TRANCHE-01-v1.md)  
+   First low-risk tranche for measured shell change.
+
 ---
 
 ## Current Status
@@ -62,9 +68,9 @@ It **does** define the legal shell those future operations must obey.
 ## Next Logical Derivations
 
 1. target physical lane charters / README files
-2. validator specification
-3. first playbook compaction candidates
-4. first migration tranche
+2. implement validator inventory mode
+3. define lane-status matrix and allowlist
+4. first playbook compaction candidates
 
 ---
 
