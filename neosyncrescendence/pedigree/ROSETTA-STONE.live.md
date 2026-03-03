@@ -69,6 +69,70 @@
 - **aliases**: dispatch lineage law
 - **operational use**: held in [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/COMMUNICATIONS-LAW-v1.md)
 
+### repo sovereignty
+
+- **family**: constitutional
+- **definition**: the repository outranks platform threads, browser state, and transient runtime as the durable truth surface
+- **status**: live
+- **aliases**: repo wins, file-backed truth
+- **operational use**: inherited from the old invariants and enforced by the sandbox shell as the primary epistemic rule
+
+### translation layer
+
+- **family**: communications
+- **definition**: outputs must remain intelligible without retransmission or hidden conversational context
+- **status**: live
+- **aliases**: intelligible relay, self-contained handoff
+- **operational use**: governs packets, responses, handoffs, and relay artifacts that must survive thread deletion
+
+### receipt
+
+- **family**: communications
+- **definition**: a completion claim is only valid when grounded in concrete written artifacts or committed state
+- **status**: live
+- **aliases**: proof of work, artifact receipt
+- **operational use**: survives from the old invariants and should govern all future execution and migration claims
+
+### continuation/deletability
+
+- **family**: communications
+- **definition**: work must be structured so a conversation can be deleted without losing the ability to continue
+- **status**: live
+- **aliases**: resumability, deletable thread doctrine
+- **operational use**: justifies self-contained packets, responses, handoffs, and office-local memory surfaces
+
+### decision envelope
+
+- **family**: communications
+- **definition**: compact rationale, assumptions, and dependency metadata that travel with a handoff or directive
+- **status**: live
+- **aliases**: handoff envelope, relay rationale header
+- **operational use**: descends from the old handoff protocol design and should inform future handoff and packet metadata law
+
+### protected zone
+
+- **family**: constitutional
+- **definition**: a lane whose contents are not casually deleted, overwritten, or repurposed without explicit promotion or governance
+- **status**: live
+- **aliases**: protected state, guarded lane
+- **operational use**: inherited from the old orchestration state concept and now applies to constitutional, executive, program, and pedigree lanes
+
+### office
+
+- **family**: playbook
+- **definition**: the local working domain of an agent or harness, including intake, memory, scratch space, and outgoing work
+- **status**: live
+- **aliases**: agent office, local office
+- **operational use**: descends from the old `agents/*` structure and supports the federal distinction between central law and local working state
+
+### medley
+
+- **family**: playbook
+- **definition**: a coordinated multi-surface mode where different harnesses receive specialized prompts or roles rather than identical parallel input
+- **status**: live
+- **aliases**: specialized chorus
+- **operational use**: inherited from the old Rosetta distinction and aligned with the successor-shell commitment to harness-specific playbooks
+
 ### operator
 
 - **family**: operator

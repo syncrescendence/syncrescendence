@@ -49,6 +49,14 @@ The intended end state is inversion:
 - [00-ORCHESTRATION/state/impl](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl): redesign package and shell law
 - [00-ORCHESTRATION/relay/cowork-v1](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/relay/cowork-v1): sandbox-native relay substrate
 
+## Pedigree Recovery
+
+The successor shell is not built from abstractions alone.
+It also mines the strongest structures from the pre-nuclear shell and forbids the topology mistakes that made that shell decay.
+
+Primary archaeology artifact:
+- [PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md)
+
 ## Design Principle
 
 As above, so below:

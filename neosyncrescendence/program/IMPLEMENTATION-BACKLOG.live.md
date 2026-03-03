@@ -39,3 +39,21 @@
    Intent: `INT-SHELL-001`, `INT-SHELL-003`
 5. operatorize further communications-chain absorption so migration stops depending on manual copy steps  
    Vocabulary: `operator`, `communications law`, `inversion`
+
+### Tranche D — Pre-Syncrephoenix Pedigree Recovery
+
+1. codify what the pre-nuclear shell got right about offices, protocols, protected state, and compaction  
+   Status: active
+2. explicitly ban the topological mistakes that made the old shell decay: dashed root lanes, duplicate logistics, mixed constitutional status  
+   Vocabulary: `protected zone`, `office`, `communications law`
+3. use the old shell as pedigree for future office-law and playbook physicalization rather than ad hoc memory  
+   Vocabulary: `pedigree`, `playbook`, `inversion`
+
+### Tranche E — Office Law and Communications Metadata
+
+1. derive successor-shell office law from the old `agents/` structure  
+   Vocabulary: `office`, `continuation/deletability`
+2. promote decision-envelope and receipt doctrine into sandbox templates and validators  
+   Vocabulary: `decision envelope`, `receipt`, `translation layer`
+3. distinguish federal lanes from office-local lanes before broader migration continues  
+   Intent: `INT-SHELL-003`
