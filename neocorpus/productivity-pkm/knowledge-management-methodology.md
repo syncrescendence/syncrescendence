@@ -12,6 +12,7 @@
 - `corpus/productivity-pkm/CANON-34100.sn_from_sn_compressed.md` — Mastery compressed SN
 - `corpus/productivity-pkm/CANON-34110.sn.md` — Syncrescendent Curriculum
 - `corpus/productivity-pkm/CANON-34120-SYLLABUS-lunar-MASTERY-planetary-KNOWLEDGE.md` — Mastery Syllabus (demoted)
+- `corpus/productivity-pkm/04269.md` — Ars Contexta skill graphs: wikilink-connected knowledge networks for agent traversal, progressive disclosure pattern
 
 ## Core Thesis
 The methodology wars in knowledge management — Zettelkasten vs PARA vs Cornell vs Evergreen Notes — are fought over a false premise (04222, 10932). These are not competing paradigms but named coordinates in a shared configuration space parameterized by eight dimensions. The real question is not "which method is best?" but "what are the knobs, and where should I set them?" Additionally, the vocabulary wrapping any knowledge system is not cosmetic but architectural (10969): domain-native terminology changes how both humans and AI agents reason about what belongs where.
@@ -27,10 +28,15 @@ Borrowed from modular synthesis: any valid combination of enabled modules with s
 ### 3. Vocabulary-as-Architecture (10969)
 Abstract field names ("notes," "tags," "categories") force a translation step on every interaction. Domain-native vocabulary ("triggers" for a therapist, "signals" for a trader) eliminates this tax and — critically — shapes how AI agents reason about content. The Ars Contexta derivation engine does not offer preset modes but derives vocabulary from conversation about the practitioner's actual domain. The four-phase processing skeleton (capture, process, connect, verify) is universal; only the process step and its vocabulary are domain-specific. Multi-domain users get separate vocabularies at the template layer with a shared graph underneath.
 
-### 4. Knowledge as Externalized Memory (03781, 01816)
+### 4. Skill Graphs: Agent-Traversable Knowledge Networks (04269)
+Ars Contexta's skill graph concept extends the configuration space framework into agent-native architecture. A skill graph is a network of markdown files connected with wikilinks, where each file represents a single composable piece of knowledge — a complete thought, technique, or skill. The key architectural features: YAML frontmatter with descriptions (agents scan without reading full files), wikilinks woven into prose to carry meaning (not bare references), Maps of Content (MOCs) organizing clusters of related skills, and a progressive disclosure pattern for information access: index then descriptions then links then sections then full content. Most agent decisions happen before reading any full file.
+
+The Arscontexta implementation itself is a skill graph comprising approximately 250 connected markdown files designed to teach an agent how to build skill graphs — a self-hosting architecture. Complex domains (cognitive science, zettelkasten, graph theory, agent architecture) require this interconnected structure because a single skill file cannot carry the relational density. This is the Eurorack principle (Section 2) applied specifically to agent knowledge: composable modules with explicit dependency links, navigable without loading the entire graph.
+
+### 5. Knowledge as Externalized Memory (03781, 01816)
 The atom from 03781 frames the entire history of knowledge management as a project of externalizing memory — from clay tablets to markdown vaults. The 01816 atom adds the constraint that all externalized storage has an expiration date. Together these establish the existential problem: knowledge systems must not only capture but maintain, and maintenance is the phase where most systems fail.
 
-### 5. Syncrescendent Knowledge Chain (CANON-34100, CANON-34110, CANON-34120)
+### 6. Syncrescendent Knowledge Chain (CANON-34100, CANON-34110, CANON-34120)
 The CANON files position Mastery as a planetary-tier concept in the Knowledge Chain, cultivating "embodied capability" through Earth-aligned practice. CANON-34110 defines the Syncrescendent Curriculum with a four-stage progression from abstract foundations to transcendence. CANON-34120 (demoted as stale) was a tactical implementation syllabus. These represent the Syncrescendence project's own knowledge management ontology — mastery as progressive embodiment, not mere information accumulation.
 
 ## Synthesis
