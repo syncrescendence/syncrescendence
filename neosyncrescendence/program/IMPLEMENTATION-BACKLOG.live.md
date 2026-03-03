@@ -93,3 +93,12 @@
    Status: active
 4. make office creation reproducible through an operator rather than hand-crafted drift  
    Vocabulary: `operator`, `office`
+
+### Tranche J — Rosetta Reconstitution
+
+1. read the original Rosetta as semantic pedigree rather than only as a missing constitutional role  
+   Status: active
+2. classify salient Rosetta terms into preserve-live / pedigree-only / adapt / deprecate / cautionary  
+   Status: active
+3. revise the live Rosetta so it is derived from pedigree without collapsing back into a mega-glossary  
+   Vocabulary: `pedigree`, `semantic debt`, `inversion`

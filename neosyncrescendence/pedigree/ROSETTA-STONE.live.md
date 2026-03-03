@@ -3,7 +3,9 @@
 **Status**: initial live constitutional vocabulary surface  
 **Role**: compact semantic authority for the sandbox shell  
 **Pedigree**: [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/LIVE-ROSETTA-DESIGN-v1.md)  
-**Exegesis**: [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)
+**Exegesis**: [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)  
+**Hermeneutic assessment**: [ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md)  
+**Disposition matrix**: [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
 
 ## Semantic Families
 
@@ -45,6 +47,14 @@
 - **aliases**: executive steering
 - **operational use**: held in [INTENT-COMPASS.live.md](/Users/system/syncrescendence/neosyncrescendence/executive/INTENT-COMPASS.live.md)
 
+### triumvirate
+
+- **family**: executive
+- **definition**: the upper calibration triad of destination, method, and current state
+- **status**: live
+- **aliases**: upper federal triad
+- **operational use**: instantiated as intent compass, decision lenses / constitutional method, and backlog
+
 ### backlog
 
 - **family**: program
@@ -52,6 +62,14 @@
 - **status**: live
 - **aliases**: implementation queue, program surface
 - **operational use**: held in [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
+
+### ephemeral vs durable
+
+- **family**: constitutional
+- **definition**: the rule that transient sessions, browser state, and runtime exhaust are ephemeral while filed repo artifacts are durable
+- **status**: live
+- **aliases**: durable cognition, truth-surface distinction
+- **operational use**: governs promotion, filing, relay behavior, and runtime reconciliation
 
 ### playbook
 
@@ -133,6 +151,22 @@
 - **aliases**: specialized chorus
 - **operational use**: inherited from the old Rosetta distinction and aligned with the successor-shell commitment to harness-specific playbooks
 
+### characteristic cognition
+
+- **family**: playbook
+- **definition**: the distinctive cognitive grain of a given harness or surface
+- **status**: live
+- **aliases**: native grain
+- **operational use**: governs why playbooks exist and why surfaces should not be flattened into one mega-agent
+
+### capture > dispatch > return
+
+- **family**: communications
+- **definition**: the high-level lifecycle of any dispatch artifact moving through an execution surface and coming back into lawful storage
+- **status**: live
+- **aliases**: communications lifecycle
+- **operational use**: governs packetization, relay, response landing, and return-path expectations
+
 ### operator
 
 - **family**: operator
@@ -149,6 +183,22 @@
 - **aliases**: autocompaction
 - **operational use**: logs compact into quality/automation, prompts into primitives/skills/hooks, research into canon and program deltas
 
+### clarescence
+
+- **family**: operator
+- **definition**: value-guided progressive refinement through the full evaluation stack toward an authenticated path
+- **status**: live
+- **aliases**: full-stack refinement, clarity pass
+- **operational use**: should remain a bounded evaluation primitive rather than a license for endless elaboration
+
+### reviewtrospective
+
+- **family**: operator
+- **definition**: a post-build-cycle strategic synthesis instrument that compounds multiple perspectives rather than merely replaying process history
+- **status**: live
+- **aliases**: certescence instrument
+- **operational use**: preserved as a lawful retrospective instrument when a build cycle warrants multi-perspectival synthesis
+
 ### exocortex
 
 - **family**: exocortex
@@ -156,6 +206,14 @@
 - **status**: live
 - **aliases**: external surface layer
 - **operational use**: defined by the exocortex taxonomy and account matrix in the redesign package
+
+### synapticality
+
+- **family**: shell
+- **definition**: the design aspiration of near-frictionless intention-to-invocation across the shell
+- **status**: live
+- **aliases**: cognitive UX maturity
+- **operational use**: points toward the longer-term human-shell interaction target without becoming a vague substitute for present execution law
 
 ### ontology
 

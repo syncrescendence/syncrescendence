@@ -49,6 +49,7 @@ The intended end state is inversion:
 - [validated-patterns](/Users/system/syncrescendence/neosyncrescendence/validated-patterns): known-good working patterns staged from the old shell
 - [00-ORCHESTRATION/state/impl](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl): redesign package and shell law
 - [00-ORCHESTRATION/relay/cowork-v1](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/relay/cowork-v1): sandbox-native relay substrate
+- [pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md): semantic reading of the original Rosetta
 
 ## Pedigree Recovery
 
@@ -58,6 +59,7 @@ It also mines the strongest structures from the pre-nuclear shell and forbids th
 Primary archaeology artifact:
 - [PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md)
 - [SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md)
+- [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
 
 ## Design Principle
 
