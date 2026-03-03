@@ -29,6 +29,12 @@
 - 02424.md — Claude Opus 4.5 and the AGI inflection point
 - 00270.md — "21 actions if you believe in AI acceleration": investing, career, lifestyle implications
 - 03900.md — "21 actions" extraction atoms: AI takeoff probability, acceleration-driven lifestyle changes
+- 01233.md — No Priors best of 2025: reasoning as biggest paradigm shift since transformer, superintelligence geopolitics (nuclear analogy), rapid displacement prediction
+- 01242.md — Fei-Fei Li: human-centered AI, ethics as core component, spatial intelligence
+- 01302.md — Mustafa Suleyman: next decade changes humanity, routine work disappearing, intelligent agent interaction at scale
+- 01671.md — Ex-Google insider warns about 2027: AI outpacing governments, UBI may not work, junior workers highest risk, political power shifts when labor unnecessary
+- 02115.md — Israetel: ASI 2028-2030, embodiment not required for intelligence, processing power substitution thesis
+- 02226.md — "Normalizing things we don't fully understand": AGI computational case, epistemic caution on rapid normalization
 
 ## The Definition Problem
 
@@ -86,6 +92,22 @@ The "21 actions" thread (00270, 03900) — 2M+ views — captures how accelerati
 - **Finance**: Pull forward cash flows, lock fixed-rate debt, perceive debt 10+ years out as "likely nonexistent"
 
 This represents an emerging accelerationist lifestyle philosophy — rational behavior given AGI assumptions, reckless behavior if assumptions are wrong.
+
+## Reasoning as Paradigm Shift
+
+The No Priors panel (01233) identifies reasoning as the biggest paradigm shift in AI architecture since the transformer. Models are learning to break problems down, consider multiple approaches, and self-correct — exhibiting metacognition by reflecting on their own reasoning and identifying wrong paths. Visual reasoning models can transparently express uncertainty about perception limitations (01233). When given tool access, models allocate compute more efficiently by deferring tasks where they lack comparative advantage to specialized programs. The caveat: models can appear to reason when they are following learned patterns — the distinction between genuine reasoning and sophisticated pattern completion remains unresolved.
+
+## Superintelligence Geopolitics
+
+The geopolitical implications of superintelligence differ from nuclear MAD in three critical ways (01233): capability is concentrated in very few actors, controllability at capability thresholds is questionable, and development speed is high. Nuclear deterrence worked because states shared vulnerability and the threat of retaliation. With AI, the deterrence logic is less stable — states on the verge of creating superintelligence may attempt preemptive cyberattacks on each other's data centers (01233). Addressing this requires international coordination mechanisms, verification protocols, and solutions for racing dynamics where slowing down means losing.
+
+## The Governance Gap and Political Displacement
+
+An ex-Google insider (01671) warns that AI will outpace human control and reshape society faster than governments can react. Junior workers and new graduates face the highest displacement risk (01671). UBI may not work in an AI-driven world — the framing is too narrow for the scope of disruption (01671). Political power will shift fundamentally when humans are no longer needed for labor, with entire economies potentially collapsing when key job sectors disappear (01671). This is the most pessimistic variant of the timeline thesis: not just that AGI arrives soon, but that the institutional capacity to manage the transition is structurally inadequate.
+
+## The Embodiment Debate
+
+Israetel (02115) argues that embodiment in a traditional physical sense is not necessary for genuine intelligence — sufficient data and processing power can substitute for physical experience. A model trained on billions of images, videos, and text describing physical interactions can be considered "grounded" in reality even without a body (02115). The primary limitation for humans learning from observational data is insufficient processing power, not a fundamental need for embodiment. This challenges the "disembodied AI can't understand the real world" objection to near-term AGI timelines — if processing power, not embodiment, is the bottleneck, then ASI timelines of 2028-2030 become more plausible.
 
 ## Antipatterns & Lessons
 - **Definition as weapon**: Using the absence of consensus AGI definition to dismiss capabilities that are clearly transformative (01365, 00023).
