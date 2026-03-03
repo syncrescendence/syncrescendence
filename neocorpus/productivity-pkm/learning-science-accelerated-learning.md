@@ -13,6 +13,7 @@
 - `corpus/productivity-pkm/02944.jsonl` — Atom: Spaced repetition and active recall build durable expertise
 - `corpus/productivity-pkm/01182.md` — Extraction: Universal Hierarchy of Life (78 atoms, learning-adjacent)
 - `corpus/productivity-pkm/09256.md` — How to Speak (Patrick Winston, MIT)
+- `corpus/productivity-pkm/08825.md` — Complete system for rapid domain expertise using Claude Code + Notion MCP + spaced repetition
 
 ## Core Thesis
 Accelerated learning is not about consuming faster but about encoding more efficiently. The Justin Sung series (09329, 09464, 09554), as described in video summaries and extractions, converges on a single claim: most learners optimize for input volume when they should optimize for encoding quality. The neuroscience-backed techniques — spaced repetition, active recall, interleaving, elaborative interrogation — are well-established (02670, 02944) but chronically underused because they feel effortful. The 2026 twist is that AI threatens to make learning feel unnecessary ("why memorize what I can look up?"), which makes the distinction between shallow retrieval and deep understanding existentially important.
@@ -31,7 +32,10 @@ A specific praxis: externalize thinking through handwritten or sketched represen
 ### 4. Learning 2.0 — The AI Shift (00030, 10158)
 The argument that AI changes what is worth learning. Learning 2.0 (00030) claims that the shift most people will miss is from "acquiring knowledge" to "acquiring the meta-skill of learning itself." AI & Education (10158) examines whether generative AI undermines or enhances critical thinking. The tension: if AI handles recall, does spaced repetition become obsolete? The counter-argument is that deep understanding (not mere recall) is what enables effective AI prompting and judgment.
 
-### 5. Communication as Learning Multiplier (09256)
+### 5. AI-Managed Spaced Repetition System (08825)
+A complete implementation architecture for rapid domain expertise acquisition: Claude Code as the AI teacher and system manager, Notion as the knowledge database, Notion MCP as the connector. The system operationalizes three learning science principles simultaneously — spaced repetition (intervals: 1d/3d/7d/14d/30d, with reset-to-1d on failed recall), active recall (Socratic deep dives where Claude tests understanding before providing information), and connected understanding (relation links between concepts in the knowledge base). The workflow has three phases: learning sessions that start with mental models and frameworks before facts, Socratic deep dives that build on correct/incorrect understanding, and a daily "newsletter" that surfaces review items, generates recall questions, and identifies cross-concept connections. The compound effect is the key claim: "Pattern recognition across contexts" — by the 10th domain, learning takes half the time of the 1st; by the 20th, a quarter. The author reports 400+ concepts across 12+ domains, all connected. Notable limitations acknowledged: intellectual understanding does not equal practical skill, relationships and judgment cannot be automated, and Claude can be wrong on high-stakes claims.
+
+### 6. Communication as Learning Multiplier (09256)
 Patrick Winston's MIT "How to Speak" lecture treats communication skill as a force multiplier for every other competency. The connection to learning science: explaining what you know is a powerful form of active recall, and presentation skill determines whether your learning translates into influence.
 
 ## Synthesis
