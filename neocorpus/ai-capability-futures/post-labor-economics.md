@@ -14,6 +14,8 @@
 - 10438.md — "The New Unemployable Class"
 - 09601.md — AI Universal Income: deflation vs redistribution, wealth gap dynamics
 - 10726.md — "AI agents now hiring humans": Moltbook AI-only social network, Rent a Human concept
+- 01104.md — Amanda Cassatt: value creation over credentials, IP/dollar/attention obsolescence, steady shift not singularity
+- 01230.md — Shapiro "The Post-Labor Enterprise" (full transcript, 83 atoms — primary source for 08472)
 
 ## The Refactoring Thesis
 
@@ -68,6 +70,14 @@ Multiple sources grapple with redistribution mechanics (01716, 09601):
 - AI tax proposals for redistribution of excess profit
 - Maslow's hierarchy: AI may address physiological/safety needs through deflation but cannot address belonging, esteem, self-actualization (01716)
 - Emad Mostaque's thesis: intelligence becomes "too cheap to measure," meaning comes from community, networks, relationships — not work titles (09904)
+
+## The Obsolescence of Credentials, IP, and Currency
+
+Amanda Cassatt (01104) frames the transition not as a singularity event but as a steady shift redefining work, governance, and life. In an AI-driven world, human value will be shaped by value creation, not credentials (01104). More provocatively: intellectual property, the US dollar, and human attention may all become obsolete as AI redefines what has economic value (01104). Economic protectionism should be challenged rather than reinforced — high-skilled immigration and competitiveness matter more than barriers (01104). Emerging financial instruments like gold-backed digital currency and AI-enhanced hiring signal a parallel restructuring of the economic substrate alongside the labor restructuring.
+
+## The Deepened Shapiro Model: Post-Labor Firm Boundaries
+
+The full Shapiro transcript (01230) extends the thesis beyond the summary already captured. Key additions: labor arbitrage will likely collapse, making offshoring to distant countries unviable when local factories with AI/robots produce more efficiently by reducing time and distance lags (01230). Software business margins will become razor-thin because everyone can produce software — the competitive moat shifts from knowledge to physical infrastructure, resource access, and logistics (01230). Tribal and specialized knowledge ceases to be a competitive moat when AI can generate any expertise on demand (01230). The firm boundary (make vs. buy) resolves almost entirely to capital and physics when labor management and knowledge gaps are eliminated (01230). This predicts a world where Coase's theory of the firm persists but with radically different boundary conditions.
 
 ## The Techno-Homestead Vision
 
