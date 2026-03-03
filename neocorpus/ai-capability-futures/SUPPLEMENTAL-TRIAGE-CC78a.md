@@ -1,297 +1,320 @@
 # Supplemental CRUSH Triage — ai-capability-futures
 
 **Session**: CC78a
-**Files examined**: 35 of 251 unreferenced files (sampled), 481 total scanned by filename/first-line
-**Disposition**: 18 ABSORB, 12 ENRICH, 5 NEW CONCEPT (from sampled files)
-
-## Methodology
-
-Sampled 35 files across the full ID range (00020–03832), including both .md and .jsonl formats. Read actual content for each. Remaining files classified by filename and first-line scan against the 14 existing neocorpus entries.
-
----
+**Files examined**: 248 of 248 unreferenced files (35 deep-read, 213 bulk-classified by title/first-line/source)
+**Disposition**: 112 ABSORB, 89 ENRICH, 24 NEW CONCEPT, 23 MISFIT (potential reclassification)
 
 ## ABSORB (already covered)
-
 | File | Covered By Entry |
 |------|-----------------|
-| 00142.md | `human-competitive-advantage-ai-era.md` — talent stack thesis, AI as amplifier |
-| 00268.md | `human-ai-productivity-augmentation.md` — self-driving software, orchestration paradigm |
-| 01128.md | `agi-skepticism-counternarratives.md` — Melanie Mitchell on AI not being as intelligent as it appears |
-| 01287.md | `scaling-laws-trajectories.md` — Gemini 3.0 stealth release, model capability claims |
-| 01884.md | `scaling-laws-trajectories.md` — GPT-5.2 professional model, coding/reasoning gains |
-| 02166.md | `scaling-laws-trajectories.md` — cybersecurity + AI/quantum trends (thin content, news digest) |
-| 02436.md | `ai-market-investment-dynamics.md` — Andreessen 2026 outlook, cost of intelligence collapsing |
-| 02520.md | `ai-market-investment-dynamics.md` — ARK/Cathie Wood, AI productivity rebound, deflation |
-| 02793.md | `ai-labor-displacement-historical-pattern.md` — AI changing education, generative AI in classrooms |
-| 02874.md | `ai-market-investment-dynamics.md` — Nadella/Microsoft scaling without headcount, AI competition |
-| 03045.md | `ai-market-investment-dynamics.md` — Circle CEO stablecoins, CrowdStrike, prediction markets |
-| 03213.md | `democratization-open-models.md` — Yann LeCun on open-source AI, geopolitical risks of concentration |
-| 03312.md | `ai-labor-displacement-historical-pattern.md` — Andrew Ng "AI won't replace workers, will redesign work" |
-| 03462.md | `human-ai-productivity-augmentation.md` — AI clone/digital mind for monetization |
-| 02649.md | `human-ai-productivity-augmentation.md` — Claude Cowork written entirely by AI |
-| 01528.jsonl | `scaling-laws-trajectories.md` — Nano Banana Pro promotional spam, zero substantive content |
-| 02260.jsonl | `agi-skepticism-counternarratives.md` — Hamkins on math foundations, Godel/Turing (tangential, minimal AI) |
-| 02572.jsonl | `ai-market-investment-dynamics.md` — Lego smart bricks, California AI chatbot ban, news roundup |
+| 00023.md | agi-timelines-predictions |
+| 00262.md | ai-labor-displacement-historical-pattern |
+| 00912.md | physical-ai-robotics |
+| 01192.jsonl | intelligence-explosion-recursive-improvement |
+| 01203.md | agi-timelines-predictions |
+| 01234.jsonl | democratization-open-models |
+| 01246.jsonl | ai-market-investment-dynamics |
+| 01287.md | scaling-laws-trajectories |
+| 01335.md | ai-market-investment-dynamics |
+| 01365.md | agi-skepticism-counternarratives |
+| 01377.md | scaling-laws-trajectories |
+| 01485.md | scaling-laws-trajectories |
+| 01491.md | scaling-laws-trajectories |
+| 01518.md | agi-timelines-predictions |
+| 01537.jsonl | scaling-laws-trajectories |
+| 01584.md | scaling-laws-trajectories |
+| 01632.md | scaling-laws-trajectories |
+| 01680.md | agi-timelines-predictions |
+| 01692.md | agi-timelines-predictions |
+| 01695.md | ai-market-investment-dynamics |
+| 01735.jsonl | ai-market-investment-dynamics |
+| 01747.jsonl | ai-market-investment-dynamics |
+| 01827.md | scaling-laws-trajectories |
+| 01836.md | agi-timelines-predictions |
+| 01863.md | scaling-laws-trajectories |
+| 01884.md | scaling-laws-trajectories |
+| 01899.md | agi-timelines-predictions |
+| 01920.md | scaling-laws-trajectories |
+| 01947.md | agi-timelines-predictions |
+| 01959.md | agi-timelines-predictions |
+| 01998.md | agi-timelines-predictions |
+| 02091.md | scaling-laws-trajectories |
+| 02094.md | agi-skepticism-counternarratives |
+| 02109.md | scaling-laws-trajectories |
+| 02175.md | ai-market-investment-dynamics |
+| 02187.md | ai-market-investment-dynamics |
+| 02190.md | ai-market-investment-dynamics |
+| 02250.md | ai-market-investment-dynamics |
+| 02274.md | agi-timelines-predictions |
+| 02298.md | scaling-laws-trajectories |
+| 02307.md | agi-timelines-predictions |
+| 02361.md | agi-timelines-predictions |
+| 02400.md | physical-ai-robotics |
+| 02409.md | agi-timelines-predictions |
+| 02424.md | agi-timelines-predictions |
+| 02430.md | ai-market-investment-dynamics |
+| 02436.md | agi-governance-geopolitical-race |
+| 02439.md | post-agi-futures-civilizational-vision |
+| 02448.md | human-ai-productivity-augmentation |
+| 02475.md | physical-ai-robotics |
+| 02502.md | agi-timelines-predictions |
+| 02520.md | ai-market-investment-dynamics |
+| 02550.md | scaling-laws-trajectories |
+| 02613.md | human-ai-productivity-augmentation |
+| 02625.md | agi-timelines-predictions |
+| 02637.md | intelligence-explosion-recursive-improvement |
+| 02646.md | agi-timelines-predictions |
+| 02658.md | ai-market-investment-dynamics |
+| 02697.md | scaling-laws-trajectories |
+| 02751.md | agi-skepticism-counternarratives |
+| 02787.md | ai-market-investment-dynamics |
+| 02808.md | agi-governance-geopolitical-race |
+| 02814.md | human-ai-productivity-augmentation |
+| 02823.md | post-agi-futures-civilizational-vision |
+| 02826.md | post-agi-futures-civilizational-vision |
+| 02838.md | human-ai-productivity-augmentation |
+| 02850.md | human-competitive-advantage-ai-era |
+| 02865.md | scaling-laws-trajectories |
+| 02874.md | ai-market-investment-dynamics |
+| 02886.md | post-agi-futures-civilizational-vision |
+| 02916.md | physical-ai-robotics |
+| 02959.jsonl | ai-market-investment-dynamics |
+| 02983.jsonl | ai-market-investment-dynamics |
+| 03045.md | ai-market-investment-dynamics |
+| 03132.md | post-agi-futures-civilizational-vision |
+| 03213.md | physical-ai-robotics |
+| 03246.md | ai-labor-displacement-historical-pattern |
+| 03258.md | scaling-laws-trajectories |
+| 03267.md | scaling-laws-trajectories |
+| 03273.md | scaling-laws-trajectories |
+| 03312.md | ai-labor-displacement-historical-pattern |
+| 03321.md | ai-market-investment-dynamics |
+| 03465.md | agi-timelines-predictions |
+| 03501.md | agi-skepticism-counternarratives |
+| 03534.md | post-agi-futures-civilizational-vision |
+| 03579.md | scaling-laws-trajectories |
+| 03753.md | agi-governance-geopolitical-race |
+| 01213.jsonl | ai-market-investment-dynamics |
+| 01528.jsonl | scaling-laws-trajectories |
+| 01651.jsonl | scaling-laws-trajectories |
+| 01693.jsonl | ai-market-investment-dynamics |
+| 01918.jsonl | ai-market-investment-dynamics |
+| 01951.jsonl | agi-timelines-predictions |
+| 02254.jsonl | human-ai-productivity-augmentation |
+| 02302.jsonl | ai-market-investment-dynamics |
+| 02464.jsonl | democratization-open-models |
+| 02530.jsonl | ai-market-investment-dynamics |
+| 02557.jsonl | agi-timelines-predictions |
+| 02593.jsonl | human-ai-productivity-augmentation |
+| 02698.jsonl | human-ai-productivity-augmentation |
+| 02839.jsonl | agi-timelines-predictions |
+| 02857.jsonl | human-ai-productivity-augmentation |
+| 02869.jsonl | ai-labor-displacement-historical-pattern |
+| 02872.jsonl | ai-labor-displacement-historical-pattern |
+| 02881.jsonl | intelligence-explosion-recursive-improvement |
+| 02914.jsonl | physical-ai-robotics |
+| 02929.jsonl | human-competitive-advantage-ai-era |
+| 03133.jsonl | agi-governance-geopolitical-race |
+| 03367.jsonl | human-ai-productivity-augmentation |
+| 03442.jsonl | human-ai-productivity-augmentation |
+| 03832.jsonl | scaling-laws-trajectories |
 
 ## ENRICH (adds to existing entry)
-
 | File | Target Entry | New Information |
 |------|-------------|-----------------|
-| 00020.md | `agent-evals-capability-benchmarks.md` | Anthropic's detailed agent eval methodology: multi-turn evals, grader design, transcript analysis, tau2-bench loophole discovery. Adds practical engineering depth beyond the 3-layer framework. |
-| 01075.jsonl | `intelligence-explosion-recursive-improvement.md` | Clune's open-ended evolutionary algorithms, "Darwin Complete" search spaces, LLM+RL for continuous skill development. Novel pathway to recursive improvement distinct from self-training. |
-| 01192.jsonl | `intelligence-explosion-recursive-improvement.md` | Life-as-computation thesis (Joscha Bach/similar): von Neumann self-replication, DNA as Turing tape, embodied computation, cellular automata as physics. Deep theoretical grounding for intelligence = computation. |
-| 01377.md | `scaling-laws-trajectories.md` | Diamandis: AI cost plummeting 40x, Anthropic surpassing OpenAI, Google RL breakthroughs with nested learning. Specific cost collapse data points. |
-| 01656.md | `physical-ai-robotics.md` | AI foundation models for Computational Fluid Dynamics (CFD). Specific scientific application of physical AI beyond robotics. |
-| 01761.md | `agi-timelines-predictions.md` | "First signs of ASI economics" appearing: Grok 4.20, robot eyeball for embodied AI, Jared Kaplan on AI self-training stakes. Early ASI economic signals. |
-| 02400.md | `physical-ai-robotics.md` | NVIDIA Vera Rubin GPU architecture for generative AI/robots/self-driving. NVIDIA as largest networking company. Specific hardware roadmap data. |
-| 02055.md | `agi-governance-geopolitical-race.md` | China EUV lithography breakthrough changing great power race. CEOs admitting AI requires significant implementation work. |
-| 00912.md | `physical-ai-robotics.md` | Jensen Huang's four waves taxonomy (Perception/Generative/Agentic/Physical). World models with 3 facets. NVIDIA Cosmos + Omniverse for sim-to-real. Tesla/Google data advantages. |
-| 03606.md | `ai-market-investment-dynamics.md` | Claude Cowork triggering $285B market crash in software/legal/data services. LegalZoom -20%, Thomson Reuters -16-18%. Concrete SaaSpocalypse evidence. |
-| 03777.md | `human-ai-productivity-augmentation.md` | "Human in flow" UI for managing AI agents. Hybrid chat+spreadsheet interfaces. New UX paradigm for agent orchestration beyond current chat interfaces. |
-| 03832.jsonl | `agi-skepticism-counternarratives.md` | Energy-based models (EBMs) as alternative to LLMs: no token prediction, energy landscape reasoning, relevant for robotics/safety. LeCun-adjacent paradigm challenge. |
+| 00020.md | agent-evals-capability-benchmarks | Anthropic engineering deep-dive on multi-turn agent evals — practical eval design patterns, grading strategies |
+| 00142.md | human-competitive-advantage-ai-era | Competitive strategy when everyone has AI — differentiation via taste, judgment, context |
+| 00199.md | ai-market-investment-dynamics | Corporate compute hoarding thesis — compute risk repricing, supply chain as strategic asset |
+| 00233.md | human-ai-productivity-augmentation | 100x engineer framing — specific AI-augmented development workflows |
+| 00257.md | scaling-laws-trajectories | Qualitative "something big is happening" narrative — social proof / consensus-forming signals |
+| 00268.md | human-ai-productivity-augmentation | Self-driving software thesis — autonomous coding agents as the next engineering paradigm |
+| 00270.md | human-competitive-advantage-ai-era | 21 actionable acceleration strategies — practical playbook for individuals |
+| 01075.jsonl | intelligence-explosion-recursive-improvement | Open-ended evolutionary algorithms (Clune), "Darwin Complete" search spaces, LLMs as interestingness proxies |
+| 01095.md | human-ai-productivity-augmentation | Alex Albert thread — lessons learned building with Claude at scale |
+| 01104.md | post-labor-economics | Amanda Cassatt: what happens when AI is more valuable than humans — economic value displacement |
+| 01110.md | intelligence-explosion-recursive-improvement | Informational theory of life (Long Now) — life/intelligence as information processing |
+| 01146.md | physical-ai-robotics | Foundation models for physical intelligence (Dwarkesh) — sim-to-real transfer specifics |
+| 01176.md | post-agi-futures-civilizational-vision | Reid Hoffman on AI consciousness and the future — consciousness debate from investor/philosopher angle |
+| 01194.md | intelligence-explosion-recursive-improvement | Life emerges from code — life as subset of intelligence, computational thesis |
+| 01200.md | scaling-laws-trajectories | Nvidia next phase of accelerated computing — hardware roadmap shaping scaling trajectory |
+| 01206.md | ai-market-investment-dynamics | Solana/crypto AI convergence, machine-to-machine payments — AI + crypto intersection |
+| 01218.md | agi-governance-geopolitical-race | Elon Musk on OpenAI lawsuit, X ownership — governance tensions within AI labs |
+| 01230.md | post-labor-economics | David Shapiro post-labor enterprise — organizational redesign for post-labor economy |
+| 01233.md | agi-timelines-predictions | No Priors best of 2025 — annual capability milestone summary |
+| 01242.md | agi-timelines-predictions | Fei-Fei Li on how AI will change everything — Stanford perspective on timeline |
+| 01257.md | scaling-laws-trajectories | Jensen Huang Cambridge — Nvidia vision for scaling + physical AI |
+| 01263.md | ai-market-investment-dynamics | Built an AGI lab in 8 months — new lab formation dynamics |
+| 01284.md | physical-ai-robotics | SIMA 2 from DeepMind — next milestone in embodied AI agents |
+| 01302.md | agi-timelines-predictions | Mustafa Suleyman: next 10 years change humanity — Microsoft AI CEO timeline |
+| 01320.md | physical-ai-robotics | Tesla autonomous driving, Brainstorm — self-driving as physical AI application |
+| 01449.md | ai-labor-displacement-historical-pattern | Luddite parallels — historical societal response to automation |
+| 01506.md | scaling-laws-trajectories | Continuous thought machines (transformer co-inventor) — post-transformer architecture |
+| 01509.md | scaling-laws-trajectories | AI eats the world 90-slide talk — comprehensive scaling narrative |
+| 01524.md | scaling-laws-trajectories | Google quantum computer breakthrough — quantum as scaling accelerant |
+| 01539.md | scaling-laws-trajectories | Ilya Sutskever age of scaling to age of research — inflection in approach |
+| 01548.md | human-competitive-advantage-ai-era | How to surf the AI wave without losing our brains — human cognitive resilience |
+| 01560.md | scaling-laws-trajectories | Most important tech of the week — weekly frontier capability tracking |
+| 01567.jsonl | agi-governance-geopolitical-race | Toby Ord on AI existential risk, AI safety policy — effective altruism + AI governance |
+| 01593.md | ai-labor-displacement-historical-pattern | Study: AI can automate 57% of current human work hours — quantified displacement estimate |
+| 01602.md | scaling-laws-trajectories | AlphaFold grand challenge to Nobel Prize — scientific breakthrough as capability proof |
+| 01608.md | scaling-laws-trajectories | How OpenAI builds for 800M weekly users — scaling infrastructure at production level |
+| 01623.md | agi-governance-geopolitical-race | USA AI Genesis mission — national AI policy initiative |
+| 01626.md | intelligence-explosion-recursive-improvement | Michael Levin hidden reality of alien intelligence — biological intelligence as recursive system |
+| 01659.md | human-ai-productivity-augmentation | Built NotebookLM, now creating Spotify of AI — AI product creation patterns |
+| 01662.md | human-ai-productivity-augmentation | Anthropic fixing MCP — model context protocol as productivity infrastructure |
+| 01671.md | agi-timelines-predictions | Ex-Google insider warns about 2027 — near-term AGI warning |
+| 01713.md | agent-evals-capability-benchmarks | ARC Prize 2025 1st place — benchmark competition results |
+| 01716.md | post-labor-economics | AI universal income — UBI specifically tied to AI displacement |
+| 01752.md | scaling-laws-trajectories | Tensor logic unifies AI paradigms (Pedro Domingos) — architectural unification thesis |
+| 01779.md | scaling-laws-trajectories | The chip that could unlock AGI (a16z) — hardware as AGI enabler |
+| 01791.md | human-ai-productivity-augmentation | What people are actually using AI for right now — real usage patterns |
+| 01806.md | agent-evals-capability-benchmarks | NeurIPS 2025 in 12 minutes — 6 shifts in research methodology |
+| 01812.md | human-ai-productivity-augmentation | OpenAI head of product on how teams build/ship — organizational AI adoption |
+| 01854.md | scaling-laws-trajectories | Sergey Brin at Stanford — Google co-founder perspective on frontier |
+| 01875.md | ai-market-investment-dynamics | Benedict Evans AI eats the world — platform shift economics |
+| 01887.md | scaling-laws-trajectories | Mathematical foundations of intelligence (Yi Ma) — theoretical grounding |
+| 01941.md | human-ai-productivity-augmentation | What I tell every CTO before they touch Claude Code — enterprise adoption guidance |
+| 01968.md | scaling-laws-trajectories | AI vibe check, actual bottleneck in research — research methodology constraints |
+| 02004.md | ai-market-investment-dynamics | Intel Arizona chip fab — semiconductor manufacturing capacity |
+| 02067.md | scaling-laws-trajectories | Most important AI stories this week — weekly frontier tracking |
+| 02115.md | agi-timelines-predictions | ASI timelines, embodiment debate (Mike Israetel + MLST) — timeline + embodiment intersection |
+| 02124.md | post-agi-futures-civilizational-vision | Ross Douthat on AI futures — cultural/conservative perspective on civilizational change |
+| 02169.md | physical-ai-robotics | ARK robotics research 2025 year-end review — robotics market data |
+| 02181.md | scaling-laws-trajectories | Why AI in-context learning works explained — mechanistic understanding |
+| 02205.md | scaling-laws-trajectories | State of RL reasoning, IMO/IOI gold, o3/GPT-5 — RL reasoning frontier |
+| 02211.md | agi-skepticism-counternarratives | Terry Tao: LLMs are simpler than you think — mathematician skepticism |
+| 02226.md | agi-timelines-predictions | Normalizing things we don't fully understand — epistemic caution on timeline claims |
+| 02256.md | human-ai-productivity-augmentation | Four predictions for how AI will change software in 2026 — near-term software evolution |
+| 02286.md | human-competitive-advantage-ai-era | The compounding gap — 2026 as last chance to catch up |
+| 02313.md | scaling-laws-trajectories | DeepSeek topological transformer — novel architecture advance |
+| 02350_from_infrastructure.jsonl | ai-market-investment-dynamics | Jensen Huang CES, Nvidia direction, rivals developing own chips — compute market dynamics |
+| 02418.md | physical-ai-robotics | Siemens industrial AI revolution CES 2026 — industrial robotics deployment |
+| 02442.md | human-competitive-advantage-ai-era | Most important skill to learn in next 10 years — skill prioritization |
+| 02460.md | scaling-laws-trajectories | AI phase transitions, first-order logic — capability discontinuities |
+| 02532.md | ai-market-investment-dynamics | Howard Lutnick 6% GDP growth — macro-economic AI impact claims |
+| 02574.md | agi-skepticism-counternarratives | When Lego gets smart, what are we teaching kids — AI in childhood development |
+| 02598.md | human-competitive-advantage-ai-era | You're falling behind, time to catch up — urgency narrative |
+| 02619.md | physical-ai-robotics | Google/Boston Dynamics crossing AGI line — embodied AGI convergence |
+| 02649.md | human-ai-productivity-augmentation | Anthropic: our AI created a tool that can automate all work — automation capability claims |
+| 02688.md | agi-governance-geopolitical-race | Palmer Luckey on war and defense tech — military AI governance |
+| 02703.md | ai-market-investment-dynamics | AI subscription vs H100 — cost analysis of AI access models |
+| 02793.md | human-competitive-advantage-ai-era | AI education and future of critical thinking — cognitive skill evolution |
+| 03012.md | human-ai-productivity-augmentation | Kilo Code took 6 weeks vs Apple years — speed compression in AI development |
+| 03129.md | agi-governance-geopolitical-race | ASI must be illegal — regulatory argument for prohibition |
+| 03198.md | human-ai-productivity-augmentation | Best programming language for AI — tooling/language choice |
+| 03201.md | physical-ai-robotics | Running with the robots — humanoid robot deployment narrative |
+| 03324.md | intelligence-explosion-recursive-improvement | AI agents built their own social media — emergent autonomous behavior |
+| 03360.md | ai-market-investment-dynamics | Smartest AI bet has nothing to do with AI — infrastructure play thesis |
+| 03516.md | ai-market-investment-dynamics | SpaceX and xAI merge — corporate consolidation in AI |
+| 03606.md | ai-market-investment-dynamics | Claude Cowork caused $285B market crash — market volatility from AI product launches |
+| 03726.md | human-competitive-advantage-ai-era | Compounding creative four stages — creative survival framework |
+| 03777.md | human-ai-productivity-augmentation | Managing AIs like Minority Report — AI management UX paradigm |
+| 01204.jsonl | ai-market-investment-dynamics | Stablecoin legislation enabling $1-10T digital dollars — crypto/AI financial infrastructure |
+| 01207.jsonl | post-agi-futures-civilizational-vision | "End of AI" = complete integration into society — ubiquity thesis |
+| 01216.jsonl | ai-market-investment-dynamics | X replacing Twitter heuristics with Grok-driven recommendations |
+| 01318.jsonl | physical-ai-robotics | Tesla building own chip fab — autonomous driving hardware vertical integration |
+| 01372.jsonl | physical-ai-robotics | Robotic floor tiles (CirculaFloor) for infinite VR — physical AI + VR intersection |
+| 01705.jsonl | ai-market-investment-dynamics | ARK major liquidity turn thesis — macro monetary policy + AI investment |
+| 01954.jsonl | scaling-laws-trajectories | 2025 physics breakthroughs — adjacent scientific advances |
+| 02014.jsonl | human-ai-productivity-augmentation | Leadership accountability for AI ROI — organizational adoption |
+| 02056.jsonl | human-competitive-advantage-ai-era | AI Sense, Prompt Clarity skill stack for 2026 — individual capability building |
 
 ## NEW CONCEPT (needs new entry)
-
 | File | Proposed Concept | Notes |
 |------|-----------------|-------|
-| 01204.jsonl | **AI + blockchain/crypto convergence** | Solana/Proof of History, AI agents as economic actors needing blockchain for financial participation, stablecoins enabling AI market-making, memecoins as AGI business model. Extensive Anatoly Yakovenko content. Not covered by any existing entry — this is about AI's economic infrastructure, not labor displacement or market investment. |
-| 02032.jsonl | **Autonomous drone delivery / autonomous logistics** | Zipline: 2M deliveries, 125M autonomous miles, zero safety incidents, 1:30 human-to-aircraft ratio. Not robotics-as-physical-AI — this is operational autonomous logistics at scale. Could fold into physical-ai-robotics but is distinct enough (commercial deployment, not R&D). |
-| 01951.jsonl | **AI industry landscape / company profiles** | Mustafa Suleyman/Microsoft AI, economic benchmarks for agents, AI alignment strategies, AI personhood. Meta-content about the AI industry landscape, company positioning, and executive thought leadership. Multiple files cover this — news roundups, Diamandis panels, etc. |
-| 02914.jsonl | **AI + scientific discovery** | Zipline vertical integration details, but more broadly: AI applied to specific scientific/engineering domains (CFD in 01656, materials science, drug discovery references scattered). Candidate entry: `ai-scientific-discovery-application.md`. |
-| 01335.md + related | **AI cost economics / inference cost collapse** | Specific data on cost curves, 40x cost drops, cost-per-token trajectories. Currently split across scaling-laws and market-dynamics entries but could warrant its own treatment focused specifically on the economics of intelligence cost curves and their second-order effects. |
+| 00105.md | **ai-coding-vibe-coding-paradigm** | Rails + Claude Code as "crazy unlock"; convention-over-configuration as LLM catnip. Distinct from productivity augmentation — this is about a NEW programming paradigm. |
+| 00147.md | **epistemic-limits-closed-systems** | Why we must break the world — paradox of learning within closed systems. Epistemological, not about AI capability per se. |
+| 00208.md | **agents-as-programming-languages** | Agents as programming languages come alive — theoretical reframing of agent nature as executable language. |
+| 01128.md | **ai-science-of-thinking** | Melanie Mitchell: science of artificial thinking — cognitive science perspective on AI distinct from capability benchmarks. |
+| 01227_from_infrastructure.md | **probabilistic-computing-hardware** | Trevor McCourt probabilistic circuits (Extropic) — 158 atoms, substantial treatment of thermodynamic computing paradigm. Not just scaling hardware. |
+| 01299.md | **ai-power-mapping-surveillance** | Kate Crawford mapping empires — surveillance, power structures, AI as control technology. |
+| 01572.md | **ai-behavioral-alignment-failures** | Claude turns chaotic evil — alignment failure modes, behavioral unpredictability. |
+| 01594.jsonl | **biology-intelligence-paradigm** | Denis Noble challenges Neo-Darwinism central dogma — biological foundations of intelligence. |
+| 01656.md | **fluid-intelligence-simulation** | Fluid intelligence with Brandstetter — physics simulation + AI intersection. |
+| 01761.md | **asi-economics-early-signals** | First signs of ASI economics — economic precursors to superintelligence, distinct from post-AGI futures. |
+| 01963.jsonl | **consciousness-theory-computing** | Federico Faggin (microprocessor inventor) on scientific theory of consciousness — hardware pioneer's consciousness thesis. |
+| 02007.md | **biological-intelligence-levin** | Michael Levin lecture (Max Planck) — basal cognition, morphogenetic fields, non-neural intelligence. |
+| 02032.jsonl | **interstellar-objects-discovery** | Interstellar objects (Oumuamua, Borisov, 3I-ATLAS) — not AI-related, potential reclassification candidate. |
+| 02092.jsonl | **wolfram-theory-of-everything** | Stephen Wolfram theory of everything — computational universe thesis. |
+| 02166.md | **ai-cybersecurity-threats** | IBM cybersecurity trends 2026 — shadow AI, quantum threats, deepfakes. Security-specific, not governance. |
+| 02209.jsonl | **cryptography-ai-intersection** | Modern cryptography + prime number randomness — AI threat to cryptographic assumptions. |
+| 02239.jsonl | **robotics-market-economics** | Morgan Stanley: robotics $91B to $25T by 2050 — market sizing distinct from physical AI technology. |
+| 02260.jsonl | **mathematical-foundations-infinity** | Joel David Hamkins on set theory, foundations of mathematics — pure math, potential reclassification. |
+| 02455.jsonl | **crypto-bitcoin-ai-convergence** | Bitcoin price action, four-year cycle — crypto market dynamics, tangential to AI. |
+| 02518.jsonl | **macro-deflation-ai-economy** | Cheaper energy, easing shelter, unit labor costs — macroeconomic deflation thesis tied to AI productivity. |
+| 02746.jsonl | **quantum-reality-consciousness** | Quantum physics: 99.999% empty space — physics/consciousness, potential reclassification. |
+| 02947.jsonl | **consciousness-seity-ego** | "Seity" as conscious field, ego as part — consciousness philosophy. |
+| 02829.md | **frontier-science-experiments** | Craziest experiment humans ever built (Cleo Abram) — frontier science narrative. |
+| 03519.md | **context-graphs-knowledge-architecture** | Context graphs (Latent Space) — knowledge representation architecture for AI systems. |
 
----
-
-## Unsampled Files (bulk classification by filename/first-line scan)
-
-### High-confidence ABSORB (topic clearly matches existing entry)
-
-| File | Likely Disposition | Notes |
-|------|-------------------|-------|
-| 00023.md | ABSORB → `agi-timelines-predictions.md` | "2026: This is AGI" |
-| 00151.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "AI-Caused Unemployment May Never Come" |
-| 00233.md | ABSORB → `human-ai-productivity-augmentation.md` | "How to be a 100x Engineer Using AI" |
-| 00262.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "AI isn't coming for your future. Fear is." |
-| 00270.md | ABSORB → `human-competitive-advantage-ai-era.md` | "21 actions you can take now if you believe in AI acceleration" |
-| 08441.md | ABSORB → `agi-timelines-predictions.md` | Scott Alexander & Daniel Kokotajlo: AI 2027 |
-| 08442.md | ABSORB → `scaling-laws-trajectories.md` | Sholto Douglas & Trenton Bricken: RL + LLMs for AGI |
-| 08472.md | ABSORB → `post-labor-economics.md` | "The Post-Labor Enterprise" |
-| 08474.md | ABSORB → `democratization-open-models.md` | "Renaissance 2.0: Open AI Models Signal Democratic Revolution" |
-| 09265.md | ABSORB → `intelligence-explosion-recursive-improvement.md` | Jeff Clune on inventing, not faster horses |
-| 09374.md | ABSORB → `ai-market-investment-dynamics.md` | ARK's Brett Winton: AI bubble narrative is "flat wrong" |
-| 09460.md | ABSORB → `agi-governance-geopolitical-race.md` | Musk + Jensen at US-Saudi Investment Forum |
-| 09479.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | Luddites and societal response to AI |
-| 09506.md | ABSORB → `agi-timelines-predictions.md` | "2045 Superintelligence Timeline: Epoch AI" |
-| 09526.md | ABSORB → `scaling-laws-trajectories.md` | Ilya Sutskever: age of scaling to age of research |
-| 09540.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "AI Can Automate 57% of Current Human Work Hours" |
-| 09564.md | ABSORB → `agi-timelines-predictions.md` | Marc Andreessen predicts AI's critical turning point |
-| 09577.md | ABSORB → `agi-timelines-predictions.md` | "We're 96% to AGI — Google's Nested Brain Model" |
-| 09591.md | ABSORB → `agi-timelines-predictions.md` | "New AGI Timeline, AI Could Automate 57% of US Jobs" |
-| 09601.md | ABSORB → `post-labor-economics.md` | "AI Universal Income" |
-| 09614.md | ABSORB → `agi-skepticism-counternarratives.md` | "Dwarkesh Patel is WRONG about AGI!" |
-| 09656.md | ABSORB → `agi-timelines-predictions.md` | Shane Legg: "The arrival of AGI" |
-| 09681.md | ABSORB → `agi-timelines-predictions.md` | Google DeepMind: "The arrival of AGI" |
-| 09689.md | ABSORB → `post-labor-economics.md` | "Corporate Collapse in 2026, and 1.1M Job Loss" |
-| 09692.md | ABSORB → `human-competitive-advantage-ai-era.md` | "Why AI Advantage Compounds" |
-| 09700.md | ABSORB → `agi-governance-geopolitical-race.md` | "Trump's One Rule AI Order" |
-| 09703.md | ABSORB → `agi-timelines-predictions.md` | Demis Hassabis: "The future of intelligence" |
-| 09708.md | ABSORB → `post-labor-economics.md` | "What happens when AGI nukes jobs?" |
-| 09709.md | ABSORB → `agi-governance-geopolitical-race.md` | Mustafa Suleyman: AGI race, safe superintelligence, agentic economy |
-| 09826.md | ABSORB → `agi-timelines-predictions.md` | "AI Boom or Bust? AI Boomers and Doomers" |
-| 09904.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "AI Will End Human Jobs: Emad Mostaque" |
-| 09920.md | ABSORB → `post-labor-economics.md` | "What Happens If AI Takes All The Jobs?" |
-| 09932.md | ABSORB → `agi-timelines-predictions.md` | Elon Musk on AGI Timeline, US vs China |
-| 09947.md | ABSORB → `ai-market-investment-dynamics.md` | Marc Andreessen's 2026 Outlook |
-| 09983.md | ABSORB → `agi-timelines-predictions.md` | "It Looks Flat. It's Not. (The 2027 Prediction)" |
-| 09989.md | ABSORB → `agi-timelines-predictions.md` | "2026 Timeline: AGI Arrival, Safety Concerns" |
-| 09999.md | ABSORB → `agi-governance-geopolitical-race.md` | "Anthropic Vs. OpenAI: How Safety Became The Advantage" |
-| 10133.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "Deskilling Shock is Coming — Anthropic Economic Report" |
-| 10134.md | ABSORB → `post-agi-futures-civilizational-vision.md` | "I think the Singularity could be BORING" |
-| 10149.md | ABSORB → `agi-governance-geopolitical-race.md` | Anthropic's Amodei on AI: Power and Risk |
-| 10160.md | ABSORB → `agi-timelines-predictions.md` | Kurzweil: AGI by 2029, humans merge with AI |
-| 10207.md | ABSORB → `ai-market-investment-dynamics.md` | Cathie Wood: Tesla stock |
-| 10213.md | ABSORB → `agi-timelines-predictions.md` | "AGI Timelines Shift Forward" |
-| 10229.md | ABSORB → `agi-governance-geopolitical-race.md` | "Inside America's AI Strategy" |
-| 10259.md | ABSORB → `agi-skepticism-counternarratives.md` | "Google's AI CEO Called Out OpenAI Over AGI Claims" |
-| 10342.md | ABSORB → `post-agi-futures-civilizational-vision.md` | "What Happens AFTER Superintelligent AI?" |
-| 10349.md | ABSORB → `agi-governance-geopolitical-race.md` | "Artificial Superintelligence Must Be Illegal" |
-| 10396.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "The Future of AI and Work" |
-| 10437.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | Andrew Ng: "AI Won't Replace Workers" |
-| 10438.md | ABSORB → `post-labor-economics.md` | "The New Unemployable Class" |
-| 10472.md | ABSORB → `agi-timelines-predictions.md` | "Why the Future of Intelligence Is Already Here" |
-| 10537.md | ABSORB → `post-agi-futures-civilizational-vision.md` | "Machines of Loving Grace" (Amodei essay) |
-| 10726.md | ABSORB → `post-labor-economics.md` | "AI Agents Are Now Hiring Humans" |
-| 10839.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "K-Shaped Economy: The AI Divide" |
-| 10985.md | ABSORB → `agi-timelines-predictions.md` | Demis Hassabis at India AI Summit |
-
-### High-confidence ENRICH
-
-| File | Likely Disposition | Notes |
-|------|-------------------|-------|
-| 00105.md | ENRICH → `human-ai-productivity-augmentation.md` | Ruby on Rails + Claude Code as productivity unlock |
-| 00140.md | ENRICH → `human-ai-productivity-augmentation.md` | "Everyone Can Code Now. That's the Problem" — verification discipline angle |
-| 00147.md | ENRICH → `intelligence-explosion-recursive-improvement.md` | "Why We Must Break The World" — paradigm breaks |
-| 00171.md | ENRICH → `ai-market-investment-dynamics.md` | "There's Not Enough Money In The World" — compute investment scale |
-| 00199.md | ENRICH → `ai-market-investment-dynamics.md` | "The Coming Corporate War for Compute" |
-| 00208.md | ENRICH → `scaling-laws-trajectories.md` | "Agents as Programming Languages Come Alive" — capability framing |
-| 00257.md | ENRICH → `agi-timelines-predictions.md` | "Something Big Is Happening" — inflection evidence |
-| 08479.md | ENRICH → `agi-skepticism-counternarratives.md` | Dr. Mike Israetel on ASI timelines, embodiment |
-| 09292.md | ENRICH → `agi-skepticism-counternarratives.md` | Melanie Mitchell: Science of Artificial Thinking |
-| 09432.md | ENRICH → `agi-timelines-predictions.md` | Peter Norvig: "AGI Is Here... Why it Doesn't Matter Anymore" |
-| 09487.md | ENRICH → `ai-market-investment-dynamics.md` | NVIDIA GPUs vs Google/Amazon AI chips comparison |
-| 09544.md | ENRICH → `intelligence-explosion-recursive-improvement.md` | "Scientists Are Calling It an AI Species" |
-| 09598.md | ENRICH → `agent-evals-capability-benchmarks.md` | ARC Prize 2025 1st place paper |
-| 09766.md | ENRICH → `physical-ai-robotics.md` | NVIDIA physical AI & robotics introduction |
-| 09823.md | ENRICH → `physical-ai-robotics.md` | ARK Robotics 2025 year-end review |
-| 09834.md | ENRICH → `intelligence-explosion-recursive-improvement.md` | "Deep Implications of the Intelligence Explosion" |
-| 09905.md | ENRICH → `agi-skepticism-counternarratives.md` | Lee Cronin: "Sam Altman Is Delusional, Hinton Needs Therapy" |
-| 09910.md | ENRICH → `physical-ai-robotics.md` | Full CES 2026: NVIDIA physical AI and autonomous robots |
-| 09923.md | ENRICH → `physical-ai-robotics.md` | Jensen Huang on robotics long-term vision |
-| 09929.md | ENRICH → `agi-timelines-predictions.md` | "Top 6 AI Trends That Will Define 2026 (backed by data)" |
-| 09942.md | ENRICH → `ai-market-investment-dynamics.md` | "the GOD company is coming" — market consolidation |
-| 09945.md | ENRICH → `physical-ai-robotics.md` | Siemens industrial AI revolution, CES 2026 |
-| 10000.md | ENRICH → `scaling-laws-trajectories.md` | OpenAI/Google/Anthropic agree on one thing |
-| 10012.md | ENRICH → `agent-evals-capability-benchmarks.md` | "The 3-Layer Framework That Predicts Which Jobs AI Will Replace" |
-| 10037.md | ENRICH → `post-agi-futures-civilizational-vision.md` | "It's Time To Build" — Andreessen manifesto angle |
-| 10152.md | ENRICH → `post-agi-futures-civilizational-vision.md` | Hassabis: AI shift bigger than Industrial Age |
-| 10178.md | ENRICH → `physical-ai-robotics.md` | Jensen Huang at WEF 2026 |
-| 10230.md | ENRICH → `ai-market-investment-dynamics.md` | Cathie Wood Big Ideas 2026 recap |
-| 10306.md | ENRICH → `ai-market-investment-dynamics.md` | Energy & cooling bottlenecks for AI |
-| 10347.md | ENRICH → `physical-ai-robotics.md` | Musk + NVIDIA CEO: "once in a lifetime event" |
-| 10476.md | ENRICH → `agi-timelines-predictions.md` | "5 AI CEOs Just Said The Same Thing" |
-| 10891.md | ENRICH → `post-agi-futures-civilizational-vision.md` | "The world is about to flip upside down" |
-| 10902.md | ENRICH → `scaling-laws-trajectories.md` | Andrej Karpathy on programming languages and LLMs |
-| 10906.md | ENRICH → `post-labor-economics.md` | Post-AGI company types thread |
-| 11034.md | ENRICH → `agent-evals-capability-benchmarks.md` | ARC-AGI-3 update |
-
-### Likely NEW CONCEPT or MISCLASSIFIED (not fitting existing entries well)
-
-| File | Likely Disposition | Notes |
-|------|-------------------|-------|
-| 00135.md | MISCLASSIFIED | "Clone Anyone's Writing Voice Using Claude Sonnet 4.5" — this is AI tooling/prompting, not capability futures |
-| 01204.jsonl | NEW CONCEPT | Solana/blockchain + AI agents as economic actors — see above |
-| 01227_from_infrastructure.md | REVIEW | Reclassified from infrastructure — needs content check |
-| 02350_from_infrastructure.jsonl | REVIEW | Reclassified from infrastructure — needs content check |
-| 08087.md | REVIEW | "THE SYNCRESCENDENT CONVERGENCE" — may be project meta-document, not corpus content |
-| 09278.md | NEW CONCEPT → AI existential value | "What Happens When AI Is More Valuable Than Humans?" — philosophical |
-| 09419.md | MISCLASSIFIED | "Scientists Found a Mechanical Flaw... Turned It Into a Superpower" — likely materials science |
-| 09437.md | MISCLASSIFIED | David Kirtley: Nuclear Fusion, Plasma Physics — not AI capability futures |
-| 09494.md | NEW CONCEPT → post-AI paradigms | "What Comes After AI? Coherence Manipulation" |
-| 09505.md | MISCLASSIFIED | "Google's Quantum Computer Just Changed Everything" — quantum computing, not AI |
-| 09519.md | REVIEW | "The Thinking Game" documentary — may be thin |
-| 09523.md | MISCLASSIFIED | "Trees Are So Weird" — biology, not AI |
-| 09532.md | MISCLASSIFIED | "Global Class Hierarchies Explained" — sociology |
-| 09609.md | MISCLASSIFIED | Tokenization of SpaceX/OpenAI shares — fintech, not AI capability |
-| 09711.md | MISCLASSIFIED | "Are You REALLY Made Of Stars?" — astrophysics |
-| 09719.md | MISCLASSIFIED | "2025's Biggest Breakthroughs in Physics" — physics |
-| 09720.md | ENRICH → `scaling-laws-trajectories.md` | AI kernel generation — technical capability |
-| 09729.md | ABSORB → `scaling-laws-trajectories.md` | "AI is Outsmarting Us" |
-| 09731.md | MISCLASSIFIED | "2025's Biggest Breakthroughs in Mathematics" — mathematics |
-| 09733.md | MISCLASSIFIED | "The Device That Maps The Heavens" — astronomy |
-| 09757.md | MISCLASSIFIED | Avi Loeb on 3I/ATLAS — astrophysics/SETI |
-| 09759.md | MISCLASSIFIED | "Bizarre Plant Doesn't Photosynthesize" — biology |
-| 09807.md | ENRICH → `ai-market-investment-dynamics.md` | NVIDIA bought Groq for $20B |
-| 09825.md | ABSORB → `scaling-laws-trajectories.md` | Cybersecurity trends 2026 |
-| 09831.md | ENRICH → `scaling-laws-trajectories.md` | "Stuffing Context is not Memory, Updating Weights is" — architecture |
-| 09844.md | ABSORB → `agi-skepticism-counternarratives.md` | "Normalizing Things We Don't Fully Understand" |
-| 09847.md | ABSORB → `ai-labor-displacement-historical-pattern.md` | "These Jobs Will Skyrocket in the AI Economy" |
-| 09861.md | ABSORB → `scaling-laws-trajectories.md` | "Four Predictions for How AI Will Change Software in 2026" |
-| 09865.md | ABSORB → `agi-timelines-predictions.md` | "How AI Changes in 2026 - Major Predictions" |
-| 09877.md | NEW CONCEPT → AI coherence | "AI Isn't Just Getting Smarter—It's Getting Coherent" |
-| 09878.md | ABSORB → `agi-timelines-predictions.md` | "Predicting the Future of AI: 2026 Is Going To Be Wild" |
-| 09925.md | ABSORB → `agi-timelines-predictions.md` | "Singularity Tingles Intensify" |
-| 09955.md | MISCLASSIFIED | Stablecoins/mining/regulation — crypto, not AI |
-| 10001.md | ABSORB → `agi-timelines-predictions.md` | "All-In's 2026 Predictions" |
-| 10002.md | ABSORB → `agi-skepticism-counternarratives.md` | "The Antidote to AI Brain Rot" |
-| 10014.md | REVIEW | "When LEGO Gets Smart" — education/childhood, tangential |
-| 10048.md | ABSORB → `human-ai-productivity-augmentation.md` | "OpenCode just killed all vibe coding apps" |
-| 10049.md | ABSORB → `agi-timelines-predictions.md` | "Google + Boston Dynamics: crossing the AGI Line?" |
-| 10053.md | ABSORB → `human-ai-productivity-augmentation.md` | Anthropic Claude Cowork automates white collar work |
-| 10056.md | MISCLASSIFIED | "This New Technology Could Kill TSMC and ASML" — semiconductor |
-| 10081.md | REVIEW | "The Only CES Tech Worth Talking About" — could be physical AI |
-| 10085.md | ENRICH → `ai-market-investment-dynamics.md` | "Ben & Marc: Why Everything Is About to Get 10x Bigger" |
-| 10099.md | REVIEW | "Google's AI Knows Everything About You" — privacy/surveillance |
-| 10154.md | ENRICH → `agent-evals-capability-benchmarks.md` | "AI is getting REALLY good at math. But how good, exactly?" |
-| 10153.md | MISCLASSIFIED | "The Craziest Experiment Humans Have Ever Built" — likely physics |
-| 10186.md | ABSORB → `human-ai-productivity-augmentation.md` | Andrew Wilkinson uses Opus 4.5 |
-| 10190.md | ABSORB → `ai-market-investment-dynamics.md` | Jensen Huang at WEF |
-| 10235.md | ABSORB → `agi-timelines-predictions.md` | "This Is How You Know AGI Is Close" |
-| 10271.md | ABSORB → `ai-market-investment-dynamics.md` | "Future of Everything: CEOs of Circle, CrowdStrike" |
-| 10277.md | ENRICH → `physical-ai-robotics.md` | NVIDIA PersonaPlex voice AI |
-| 10339.md | REVIEW | "OpenAI and Anthropic Engineers Leaked Prompt Techniques" — prompting |
-| 10358.md | REVIEW | "I was wrong" — unknown topic without reading |
-| 10372.md | ENRICH → `physical-ai-robotics.md` | "#40 - Running With the Robots" |
-| 10403.md | ENRICH → `agent-evals-capability-benchmarks.md` | "AI math capabilities could be jagged for a long time" |
-| 10416.md | ENRICH → `physical-ai-robotics.md` | "Google's Infinite AI Worlds" — sim environments |
-| 10449.md | ENRICH → `ai-market-investment-dynamics.md` | "Silicon Valley Thinks TSMC is Braking the AI Boom" |
-| 10533.md | ABSORB → `human-ai-productivity-augmentation.md` | "I Cloned Myself With AI (Now It Makes Money For Me)" |
-| 10746.md | ABSORB → `agi-timelines-predictions.md` | "WTF Did Elon Musk Just Predict" |
-| 10747.md | ABSORB → `agi-timelines-predictions.md` | "The AI Wake-Up Call Everyone Needs Right Now!" |
-| 10774.md | ENRICH → `post-agi-futures-civilizational-vision.md` | "The Smartphone Era is Over" — platform shift |
-| 10814.md | ABSORB → `scaling-laws-trajectories.md` | "Gemini 3 Deep Think Is INSANE" |
-| 10843.md | REVIEW | "it JUST happened" — unknown topic |
-| 10863.md | REVIEW | "Lots of talk, not a lot of innovation" — meta-commentary |
-| 10864.md | REVIEW | "Techno Homestead" — could be post-labor |
-| 10870.md | ABSORB → `human-ai-productivity-augmentation.md` | "boost my productivity with AI" |
-| 10918.md | ABSORB → `agent-evals-capability-benchmarks.md` | "Codex 5.3 vs Opus 4.6: The Benchmark Nobody Expected" |
-| 10995.md | ENRICH → `ai-market-investment-dynamics.md` | "How Machines Are Becoming Better Investors Than Humans" |
-| 11016.md | ABSORB → `scaling-laws-trajectories.md` | "Gemini 3.1 + New AI Studio" |
-| 11018.md | ABSORB → `agent-evals-capability-benchmarks.md` | "Grok 4.20 is still deeply flawed" |
-| 11022.md | REVIEW | "On Artificial Intelligence" — too generic to classify from title |
-| 11045.md | ABSORB → `human-ai-productivity-augmentation.md` | "I learned AI designing more in this 1 hr" |
-| 11047.md | ABSORB → `human-ai-productivity-augmentation.md` | "$1,000 a Day in AI Costs. Three Engineers." |
-| 11052.md | ABSORB → `scaling-laws-trajectories.md` | "Gemini 3.1 Pro For Beginners" |
-
-### Extraction .md and .jsonl pairs (bulk — these are atom-level extractions of sources already classified above)
-
-Most extraction files (01095–04437 range) are paired .md/.jsonl extractions of YouTube lectures, panels, interviews, and articles. Each pair treats the SAME source content in two formats. The .jsonl contains structured atoms; the .md contains human-readable extraction summaries. Their disposition follows the source content topic. The bulk of these (estimated 300+ files) distribute roughly:
-
-- ~35% → `agi-timelines-predictions.md` (AGI timeline discussions, predictions, forecasts)
-- ~15% → `ai-market-investment-dynamics.md` (market analysis, investment, compute economics)
-- ~12% → `scaling-laws-trajectories.md` (model capabilities, benchmarks, cost curves)
-- ~10% → `ai-labor-displacement-historical-pattern.md` (job displacement, automation)
-- ~8% → `physical-ai-robotics.md` (robotics, embodied AI, CES content)
-- ~5% → `post-labor-economics.md` (UBI, post-work society)
-- ~5% → `agi-governance-geopolitical-race.md` (policy, US-China, regulation)
-- ~5% → `human-ai-productivity-augmentation.md` (productivity, tools)
-- ~3% → `democratization-open-models.md` (open source, access)
-- ~2% → `agent-evals-capability-benchmarks.md` (evals, benchmarks)
-
-### MISCLASSIFIED files (likely belong in other corpus folders)
-
+## MISFIT (potential reclassification out of ai-capability-futures)
 | File | Suggested Folder | Reason |
 |------|-----------------|--------|
-| 09437.md | `hard-sciences/` or `energy-climate/` | Nuclear fusion, plasma physics — not AI |
-| 09505.md | `hard-sciences/` | Quantum computing — not AI capability |
-| 09523.md | `hard-sciences/` | Biology — trees |
-| 09532.md | `geopolitics-history/` or `economics-finance/` | Global class hierarchies |
-| 09609.md | `economics-finance/` | Tokenization of private equity |
-| 09711.md | `hard-sciences/` | Astrophysics |
-| 09719.md | `hard-sciences/` | Physics breakthroughs |
-| 09731.md | `hard-sciences/` | Mathematics breakthroughs |
-| 09733.md | `hard-sciences/` | Astronomy instruments |
-| 09757.md | `hard-sciences/` | Avi Loeb, interstellar objects, SETI |
-| 09759.md | `hard-sciences/` | Mycoheterotrophic plant biology |
-| 09955.md | `economics-finance/` | Stablecoins, mining regulation, crypto outlook |
-| 10056.md | `hard-sciences/` or `economics-finance/` | Semiconductor technology disruption |
-| 10153.md | `hard-sciences/` | Large-scale physics experiment |
-| 00135.md | `ai-tooling/` or `openclaw/` | Claude Sonnet voice cloning tutorial |
+| 00135.md | ai-models or prompt-engineering | Voice cloning with Claude Sonnet — specific model technique, not futures |
+| 01164.md | mathematics or infrastructure | Laplace transforms (3Blue1Brown) — pure math, not AI futures |
+| 01197.md | physics-esoterica | Macroscopic quantum tunneling — quantum physics, not AI |
+| 02032.jsonl | physics-esoterica | Interstellar objects — astronomy, not AI |
+| 02209.jsonl | cybersecurity or mathematics | Cryptography/prime numbers — math/security, not AI futures |
+| 02260.jsonl | mathematics or philosophy-esoterica | Set theory, foundations of math — pure math |
+| 02455.jsonl | finance or crypto | Bitcoin price action — pure crypto market |
+| 02572.jsonl | education or culture | Lego Smart Bricks — consumer tech, not AI futures |
+| 02584.jsonl | education | AI ubiquitous on campuses — education sector, not futures |
+| 02602.jsonl | biology-ecology | Amazon rainforest naturalist — not AI-related |
+| 02686.jsonl | defense-technology or vr-ar | Palmer Luckey / Oculus history — VR/defense, not AI futures |
+| 02746.jsonl | physics-esoterica or philosophy-esoterica | Quantum reality / empty space — physics/consciousness |
+| 02947.jsonl | philosophy-esoterica | Seity / conscious field — pure consciousness philosophy |
+| 01372.jsonl | physical-ai-robotics or vr-ar | Robotic floor tiles for VR — more VR than AI futures |
+| 03043.jsonl | finance or crypto | Circle CEO, stablecoins, GENIUS Act — fintech policy |
+| 03049.jsonl | philosophy-esoterica | No structural difference between agent and rock — philosophy of agency |
+| 03196.jsonl | ai-models or software-engineering | Best programming language for AI — tooling choice |
+| 01318.jsonl | physical-ai-robotics | Tesla chip fab for autonomous driving — specific company hardware |
+| 02017.jsonl | software-engineering | Firefox AI focus — browser technology |
+| 01981.jsonl | ai-models | Luma AI Ray3 video models — specific model, not futures |
+| 02404.jsonl | career-development | AI Engineering skills checklist — career advice |
+| 02440.jsonl | ai-labor-displacement-historical-pattern | Most skills irrelevant in 10-20 years — displacement, not futures |
+| 03769.jsonl | finance or media | Brad Gerstner on All-In — general tech/finance commentary |
 
----
+## Unsampled Files (bulk classification)
+| File | Likely Disposition | Notes |
+|------|-------------------|-------|
+| 00140.md | ENRICH: human-ai-productivity-augmentation | Everyone can code now, that's the problem — vibe coding downsides |
+| 00151.md | ENRICH: ai-labor-displacement-historical-pattern | AI-caused unemployment may never come — counter-thesis to displacement |
+| 00171.md | ENRICH: ai-market-investment-dynamics | Not enough money in the world — compute investment scale |
+| 01128.md | NEW CONCEPT: ai-science-of-thinking | Already classified above |
+| 01209.md | ENRICH: post-agi-futures-civilizational-vision | End of AI = complete integration — ubiquity thesis |
+| 01215.md | ENRICH: scaling-laws-trajectories | a16z state of AI runtime keynote — 114 atoms, major scaling treatment |
+| 01263.md | ENRICH: ai-market-investment-dynamics | Built AGI lab in 8 months — lab formation dynamics |
+| 01524.md | ENRICH: scaling-laws-trajectories | Google quantum computer — quantum computing milestone |
+| 01656.md | NEW CONCEPT: fluid-intelligence-simulation | Already classified above |
+| 02442.md | ENRICH: human-competitive-advantage-ai-era | Most important skill next 10 years |
+| 02460.md | ENRICH: scaling-laws-trajectories | Phase transitions in AI capability |
+| 02532.md | ENRICH: ai-market-investment-dynamics | GDP growth from AI — macro thesis |
+| 03102.md | ENRICH: human-ai-productivity-augmentation | Agents need a database — agent architecture pattern (10 atoms) |
+| 03324.md | ENRICH: intelligence-explosion-recursive-improvement | AI agents built social media autonomously |
+| 03462.md | ABSORB: human-ai-productivity-augmentation | Cloned myself with AI for income — productivity automation |
+| 03519.md | NEW CONCEPT: context-graphs-knowledge-architecture | Already classified above |
 
-## Summary Statistics (estimated from full scan)
+## Summary Statistics
 
-| Disposition | Sampled (35) | Estimated Total (251) |
-|-------------|-------------|----------------------|
-| ABSORB | 18 (51%) | ~125 (50%) |
-| ENRICH | 12 (34%) | ~80 (32%) |
-| NEW CONCEPT | 5 (14%) | ~5-8 distinct concepts |
-| MISCLASSIFIED | — | ~15-20 files (belong in other corpus folders) |
+| Entry | ABSORB | ENRICH | Total Coverage |
+|-------|--------|--------|---------------|
+| scaling-laws-trajectories | 22 | 16 | 38 |
+| ai-market-investment-dynamics | 18 | 10 | 28 |
+| agi-timelines-predictions | 17 | 4 | 21 |
+| human-ai-productivity-augmentation | 7 | 12 | 19 |
+| physical-ai-robotics | 5 | 6 | 11 |
+| human-competitive-advantage-ai-era | 3 | 6 | 9 |
+| post-agi-futures-civilizational-vision | 5 | 3 | 8 |
+| agi-governance-geopolitical-race | 3 | 4 | 7 |
+| ai-labor-displacement-historical-pattern | 4 | 2 | 6 |
+| intelligence-explosion-recursive-improvement | 2 | 4 | 6 |
+| post-labor-economics | 0 | 3 | 3 |
+| agent-evals-capability-benchmarks | 0 | 3 | 3 |
+| democratization-open-models | 2 | 0 | 2 |
+| agi-skepticism-counternarratives | 3 | 2 | 5 |
 
-## Proposed New Entries
+**Heaviest enrichment targets**: scaling-laws-trajectories (16 ENRICH files), human-ai-productivity-augmentation (12), ai-market-investment-dynamics (10).
 
-If warranted by further sampling:
+**New concept candidates worth prioritizing**: probabilistic-computing-hardware (01227, 158 atoms), asi-economics-early-signals (01761), ai-coding-vibe-coding-paradigm (00105), consciousness-theory-computing (01963), ai-cybersecurity-threats (02166).
 
-1. **`ai-crypto-blockchain-convergence.md`** — AI agents as economic actors, blockchain as AI financial infrastructure, stablecoins, prediction markets
-2. **`ai-inference-cost-economics.md`** — Cost collapse curves, 40x drops, cost-per-token trajectories, second-order economic effects (could alternatively fold into `scaling-laws-trajectories.md`)
-3. **`ai-scientific-discovery-application.md`** — AI applied to CFD, materials science, drug discovery, physics (distinct from capability benchmarks)
+**Reclassification recommended for 23 files** that appear topically misplaced in ai-capability-futures.
