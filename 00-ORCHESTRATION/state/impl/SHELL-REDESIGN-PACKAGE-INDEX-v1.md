@@ -17,22 +17,28 @@
 3. [ROSETTA-INTENT-BACKLOG-TRIAD-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ROSETTA-INTENT-BACKLOG-TRIAD-v1.md)  
    Restoration design for semantic vocabulary, executive intention, and program execution.
 
-4. [PLAYBOOK-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PLAYBOOK-LAW-v1.md)  
+4. [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/LIVE-ROSETTA-DESIGN-v1.md)  
+   Concrete design for the compact live constitutional vocabulary surface.
+
+5. [LIVE-INTENT-COMPASS-DESIGN-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/LIVE-INTENT-COMPASS-DESIGN-v1.md)  
+   Concrete design for the compact live executive steering surface.
+
+6. [PLAYBOOK-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PLAYBOOK-LAW-v1.md)  
    Formalization of harness-native doctrine as first-class institutional layer.
 
-5. [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/COMMUNICATIONS-LAW-v1.md)  
+7. [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/COMMUNICATIONS-LAW-v1.md)  
    Prompt/response/handoff/log/assessment/output law.
 
-6. [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)  
+8. [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)  
    Classification of operators in the execution fabric.
 
-7. [PHYSICAL-SHELL-MIGRATION-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PHYSICAL-SHELL-MIGRATION-v1.md)  
+9. [PHYSICAL-SHELL-MIGRATION-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PHYSICAL-SHELL-MIGRATION-v1.md)  
    Mapping from the current shell to the target shell and staged migration order.
 
-8. [ENFORCEMENT-AND-QUARANTINE-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ENFORCEMENT-AND-QUARANTINE-v1.md)  
+10. [ENFORCEMENT-AND-QUARANTINE-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ENFORCEMENT-AND-QUARANTINE-v1.md)  
    Validator regime, quarantine law, and sunset mechanics.
 
-9. [SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md)  
+11. [SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SHELL-RISK-AND-EDGE-CASE-REGISTER-v1.md)  
    Failure modes and migration hazards the redesign must survive.
 
 ---
@@ -55,12 +61,10 @@ It **does** define the legal shell those future operations must obey.
 
 ## Next Logical Derivations
 
-1. live Rosetta design
-2. live Intent Compass design
-3. target physical lane charters / README files
-4. validator specification
-5. first playbook compaction candidates
-6. first migration tranche
+1. target physical lane charters / README files
+2. validator specification
+3. first playbook compaction candidates
+4. first migration tranche
 
 ---
 
