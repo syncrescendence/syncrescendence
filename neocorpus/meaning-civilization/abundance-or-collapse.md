@@ -66,6 +66,17 @@ CANON-00005 frames the convergence crisis as the condition demanding conscious e
 - **Machine governance legitimacy:** Even if ASI governance would be objectively better by utilitarian metrics, does legitimacy require consent? Can a species consent to being governed by entities it cannot comprehend?
 - **The moral fading gap:** If the real risk is gradual value drift rather than misaligned objectives, current alignment research is preparing for the wrong threat. The safety community has not incorporated this.
 
+## Obsolescence and Supersession
+
+### The Adjacent Technologies Assumption — Superseded
+The dominant pre-Convergence framing treated AI, robotics, and energy as adjacent technologies that occasionally interact. Policy, investment, and journalism tracked them as separate sectors with separate timelines. The Convergence thesis supersedes this: they are one interconnected system where each element amplifies the others through feedback loops. The superseding insight (grounded explicitly in 03849/03847) is that treating them separately produces systematically wrong forecasts — the self-improving flywheel property is an emergent feature of the combination, not present in any component alone.
+
+### The Great Man / Brilliant Inventor Model of Technological Progress — Superseded
+Earlier disruption narratives framed technological revolutions as driven by breakthrough inventions and visionary individuals. The Wright's Law and flywheel model supersedes this: costs fall through cumulative production volume, not invention events. The relevant unit is not the inventor but the learning curve. The Bastiat framework (03843) reinforces this from the economic side: the transformative dynamic is demand creation through cost reduction, not individual creation events. The inventor is real but incidental to the curve.
+
+### Alignment Research Threat Model — Under Revision
+The dominant safety framing targets misaligned objectives (the paperclip maximizer). Shapiro's moral fading analysis (00292) proposes that the real risk is gradual value drift through continuous learning — not a rogue objective but an aligned objective that drifts. This is a supersession-in-progress: the old threat model has not been abandoned but the new one is not yet absorbed into mainstream safety discourse. The Tensions section documents this gap. (00292)
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/post-labor-meaning-economy.md` — The human experience of the transition

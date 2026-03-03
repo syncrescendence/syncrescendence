@@ -32,6 +32,17 @@ The attention economy is Moloch operating on cognition: locally rational choices
 - **Class and meaning:** If class is a meaning architecture, does post-scarcity economics dissolve class or merely restructure it around new axes (attention, taste, agency)?
 - **Attention as prerequisite:** If sustained attention is a precondition for meaning, and the attention economy systematically degrades attention, then the meaning crisis may be partly an attention crisis. This suggests that attention ecology interventions (not just philosophical frameworks) are required.
 
+## Obsolescence and Supersession
+
+### Theology as the Only Container for Wisdom — Superseded
+The pre-secular framing treated religious and theological propositions as an inseparable package: the wisdom content (psychological architecture, ethical prescriptions) was bonded to the theological scaffolding (divine command, supernatural cosmology). Peterson's project supersedes this directly: the psychological architecture can be extracted from the theological packaging. The Sermon on the Mount as an instruction set for meaning-generation under suffering is recoverable without accepting the theological frame. The supersession is contested: the Tensions section names the extraction problem — community, ritual, and commitment structure may be load-bearing in ways that Peterson's approach underestimates. The direction is established (extraction is possible); the completeness is disputed. (02536, 02538)
+
+### Class as Purely Economic Category — Superseded
+The standard analysis of class (Marxist, Weberian) treated it primarily as an economic category: income, wealth, means of production. The dual-pyramid analysis (01564, 01566) supersedes this: cultural class (taste, education, social capital) operates on a distinct axis from economic class, producing acute meaning dissonance at intersections (high cultural capital / low economic capital; high economic capital / low cultural capital). This is not a new observation in sociology, but the entry frames it specifically as a meaning architecture — class is a system for meaning-location, not just resource distribution. The supersession is partial: the economic dimension is not displaced, but shown to be insufficient.
+
+### Audit Note
+Sources for this entry (01564/01566, 02536/02538, 09872, 10272) are mixed in richness. Peterson sources (02536 extraction, 02538 transcript) are substantive; class analysis (01564/01566) grounded; coupling crisis (09872) and ragebait (10272) are described-only or extraction. Supersession claims are conservative and grounded in entry content. No fabrication.
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/meaning-crisis-and-multiscale-coherence.md` — The crisis these frameworks address

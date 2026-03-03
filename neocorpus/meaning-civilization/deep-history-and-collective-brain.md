@@ -47,6 +47,17 @@ Henrich's framework has direct implications for AI (08439.md): "An AGI wouldn't 
 - **Lost civilizations as evidence or myth:** The cyclical hypothesis is compelling narratively but has limited archaeological support. Distinguishing real lost complexity from projection of current anxieties onto the past remains methodologically difficult.
 - **Eurasia's advantage:** Henrich notes "almost every single first invention of something big was invented in Eurasia" — the Lucky Latitudes thesis. This is the collective brain model's answer to geographic determinism, but it risks naturalizing historical contingency.
 
+## Obsolescence and Supersession
+
+### The Great Man Theory of History — Superseded
+Carlyle's framework — history as the biography of great men — presumed that individual genius is the prime mover of civilizational change. Henrich's collective brain thesis supersedes this at the explanatory level: the preconditions for individual achievement (population density, network connectivity, cultural transmission fidelity) determine what individual genius can accomplish and when. The great man is a node in a network, not the network's cause. Neanderthals had larger brains than Homo sapiens and lost anyway — the decisive variable was institutional and cultural, not individual cognitive capacity. The supersession is not that great individuals don't exist but that the causal explanation runs through the collective brain, not through the individuals themselves. (08439)
+
+### The Natural Superiority Assumption in Colonial Encounter — Obsolete
+When Europeans encountered indigenous populations and outcompeted them militarily, the prevailing explanation attributed this to cognitive or civilizational superiority. The collective brain thesis falsifies this: Europeans had accumulated specific technological and institutional knowledge in their collective brain; indigenous populations had accumulated different knowledge optimized for their environments. The starvation of European explorers who had "every advantage" — guns, steel tools — but lacked locally adapted knowledge is the direct empirical refutation. The assumption was not just wrong morally; it was wrong mechanistically. (08439)
+
+### Individual Memory as the Locus of Knowledge — Obsolete
+Prior to Henrich's framing, cognitive science and folk understanding treated knowledge as residing in individual minds. The collective brain thesis reframes knowledge as fundamentally distributed: the ten-step cassava detoxification process cannot be invented through individual insight, cannot be held in a single mind, and cannot be reconstructed by any individual genius starting from scratch. Knowledge is a property of the network, recoverable only through the network. AI's implications follow directly: an AGI without biological memory and transmission constraints is not just a smarter individual — it is a different kind of collective brain entirely. (08439)
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/meaning-crisis-and-multiscale-coherence.md` — Meaning as the collective brain's self-awareness

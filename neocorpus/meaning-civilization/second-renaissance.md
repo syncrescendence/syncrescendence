@@ -65,6 +65,17 @@ CANON-00015 provides the macroscopic narrative lens: the "Renaissance Recursion"
 - **The orchestrator trap:** "Moving up the stack" implies a hierarchy. What happens when AI moves up the stack too? Is there a fixed ceiling where human orchestration remains necessary, or does the ceiling keep rising?
 - **Speed of the cycle:** Previous generalist-specialist oscillations took centuries. This one may complete in a decade. Can cultural institutions adapt fast enough?
 
+## Obsolescence and Supersession
+
+### Specialization as the Winning Career Strategy — Superseded
+For two centuries following industrialization, specialization was the economically rational human response to market structure. The factory didn't need polymaths; it needed people who could do one thing exceptionally well, repeatedly. Career advice, education systems, and credentialing architecture were all built around this logic. The AI transition supersedes this directly: when narrow expertise can be automated and generalist synthesis cannot, the economic logic inverts. The supersession is not that depth is valueless — the Tensions section names the synthesis-vs-depth problem honestly — but that specialization as the primary optimization target is no longer correct. The orchestrator-generalist who can deploy AI agents and maintain cross-domain coherence supersedes the narrow specialist as the economic target. (10295)
+
+### The Printing Press as a One-Time Democratization — Superseded
+The printing press was treated as a singular event: it broke the Church's information monopoly and democratized knowledge, and then that democratization was complete. The Second Renaissance thesis supersedes this by identifying the structural pattern that recurs: printing press (knowledge), internet (communication), AI (intelligence). Each technology democratizes a different layer of the knowledge-creation stack. The press gave people access to text; the internet gave people communication channels; AI gives people cognitive amplification. The pattern is not a one-time event but a repeating wave, each time operating at a different layer and producing a cultural explosion analogous to the original Renaissance. (09756, 09367)
+
+### The "Digital Middle Ages" Frame — Temporal Supersession in Progress
+The Digital Middle Ages framing (09756) identifies the current era (2020s) as a contraction period analogous to medieval stagnation — attention span collapse, AI slop, enshittification as feudalism. The thesis explicitly positions the 2030s as the exit: re-spatialization, return of sincerity, civic humanism. This is an anticipated supersession that has not yet occurred. The entry documents both the current obsolescence (the pattern the Middle Ages framing maps) and the supersession that the framing predicts.
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/post-labor-meaning-economy.md` — The skill stack for the post-labor world

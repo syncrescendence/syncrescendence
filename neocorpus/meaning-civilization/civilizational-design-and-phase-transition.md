@@ -56,6 +56,17 @@ CANON-00015 provides the macroscopic narrative lenses for interpreting the phase
 - **Who designs?** Civilizational optioneering assumes designers. But who has the legitimacy, knowledge, and power to design civilizational alternatives? The risk of civilizational design is that it becomes civilizational engineering by a self-selected elite.
 - **The closure gap:** Most real civilizational analysis fails closure conditions (08082.md). If rigorous analysis requires closures that cannot be achieved in practice, is the framework aspirational or operational?
 
+## Obsolescence and Supersession
+
+### The "Within the System" Reform Assumption — Superseded
+Previous civilizational analysis presumed that the operative question was how to reform existing institutions — better governments, better markets, better international bodies. Johar's civilizational optioneering explicitly supersedes this: the task is not optimizing within current constraints but designing alternative civilizational configurations. The meta-narrative taxonomy (08082) operationalizes this shift by providing the analytical infrastructure to think about civilizational options as a design space. The supersession is not that existing institutions are irrelevant but that treating their preservation as the constraint is the error.
+
+### The Description/Prescription Collapse in Civilizational Analysis — Identified as Methodological Failure
+The meta-narrative taxonomy (08082) identifies a systematic error in prior civilizational analysis: mixing time horizons, causal grammars, and evidence regimes without acknowledgment produces narrative artifacts that appear to be predictions but are actually confounded composites. The closure conditions framework exposes this as a methodological failure, not just a rhetorical one. This is not a supersession of a specific theory but of an entire analytical practice — the assumption that civilizational narratives can be constructed without declaring their meta-axes. The taxonomy's contribution is diagnostic: it shows why previous frameworks produced so many confident predictions that failed.
+
+### Audit Note
+Civilizational-design-and-phase-transition is classified REDUNDANCY-ONLY. The supersession claims here are grounded in the entry's own documented frameworks (Johar/01995, meta-narrative taxonomy/08082, Dalio/10827, von Scheel/08458). No fabrication.
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/abundance-or-collapse.md` — The fork that makes civilizational design urgent

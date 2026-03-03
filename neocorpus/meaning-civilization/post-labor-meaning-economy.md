@@ -88,6 +88,17 @@ The Syncrescendence CANON provides a concrete civilizational alternative (CANON-
 - **China advantage:** Collective social structures may navigate this transition more smoothly than Western individualism. Multigenerational households, government mandate capacity, cultural acceptance of sacrifice.
 - **The mancession:** AI job displacement may hit men disproportionately (10345.md). Gender implications of post-labor economics are underexplored.
 
+## Obsolescence and Supersession
+
+### Labor as the Primary Source of Meaning — Superseded
+The industrial-era settlement linked meaning to productive labor: work was not just economic but constitutive of identity, social belonging, and moral worth. The Protestant work ethic crystallized this. The post-labor meaning economy supersedes it on two tracks simultaneously: (1) AI/robotics are removing the economic necessity of broad human labor, decoupling survival from contribution; (2) the psychological framework recognizes that labor-as-meaning was always downstream of deeper capacities (agency, purpose, connection) that labor merely activated. Frankl's existential vacuum concept (03852) names the risk directly: removing survival pressure without replacing the meaning-generating structure produces a void. The superseding frame: labor was a delivery mechanism for meaning, not the source. (00263, 03852)
+
+### The Fixed-Pie Labor Model — Obsolete
+Previous technological disruption discourse operated on an implicit fixed-pie assumption: if machines do X, fewer humans can earn a living from X. The Bastiat/Shapiro framework (03843, 00261) establishes that this is systematically wrong across 500 years of disruption history — demand increases when costs fall, new applications emerge, and human effort redirects to higher-order problems. The Tensions section honestly acknowledges where this historical pattern may break under AI's simultaneous breadth and speed. The model is obsolete as the primary frame; the question is whether its supersession is complete or whether it holds in new conditions. (03843)
+
+### Knowledge Work as the Safe Harbor — Superseded
+Post-industrial workers who survived manufacturing automation often retreated to knowledge work as the safe zone — the cognitive labor that machines couldn't do. The post-labor economy entry documents the supersession of this refuge: AI now performs judgment, analysis, writing, and strategy at levels that displace the middle 60% of knowledge workers. The supersession is documented as psychologically acute: "AI broke the link between effort and value that formed the basis of professional identity" — the unexpected emotion was embarrassment, not fear, because the cognitive capacity that workers had identified with as distinctively human turned out to be replicable. (03438)
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/meaning-crisis-and-multiscale-coherence.md` — The crisis being solved

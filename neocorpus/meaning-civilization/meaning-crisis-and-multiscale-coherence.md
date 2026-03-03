@@ -59,6 +59,17 @@ CANON-00015 operationalizes this through macroscopic narrative lenses — fiftee
 - **Faith and reason:** Laukkonen's "conscious faith" — calibrated openness to the whole — sits uncomfortably between scientific materialism and religious tradition. How to operationalize it without either collapse?
 - **The postmodern trap:** If no perspective is absolute but some are better, what determines "better"? Developmental psychology (ego development theory) offers one answer, but risks elitism.
 
+## Obsolescence and Supersession
+
+### Meaning as a Psychological Malady — Superseded
+The default framing of the "meaning crisis" in therapeutic and popular discourse treats it as a psychological problem: depression, nihilism, existential anxiety, amenable to cognitive-behavioral interventions or antidepressants. Laukkonen's multiscale framework supersedes this by relocating the cause: the meaning crisis is a breakdown in cross-scale coupling between the individual agent and the larger systems it is embedded in. Psychological symptoms are downstream effects; the causal mechanism is structural (desynchronization from higher-order patterns), not individual pathology. Interventions that treat only the psychological symptoms without restoring the embedding relationship will not resolve the crisis. (03055, 03057)
+
+### Existentialism's Individualist Resolution — Inadequate Superseded
+The existentialist tradition (Sartre, Camus) proposed that the individual must create their own meaning in a universe without inherent purpose. This was a genuine supersession of theological frameworks that located meaning in divine order. But the Laukkonen/Koe synthesis exposes a new inadequacy: individualist meaning-creation ignores the game-theoretic dimension of coordination failure (Moloch). Individual meaning-generation cannot solve what is fundamentally a civilizational coordination problem. The postmodern move (no perspective is absolute) is correct but produces paralysis; the developmental move (some perspectives are better) is directionally correct but risks elitism. The current frontier supersedes both: meaning is structural, distributed, and requires institutional engineering (Moloch-trap design), not just individual philosophy. (01159, 03055, 00022)
+
+### The Spiritual vs. Material Framing — Dissolved
+Earlier discourse organized responses to the meaning crisis along a spiritual/material axis: either the problem requires spiritual/religious answers or it requires material/economic answers. Koe's developmental stages (00036) and Laukkonen's multiscale framework both dissolve this axis. Meaning-generation is a structural capacity of embedded agents — neither purely spiritual nor purely material, but a property of how agents are coupled to their embedding systems. The relevant dimension is coupling fidelity, which has both material (institutional design, coordination architecture) and experiential (felt coherence, synchronicity, metacognitive gradient) components.
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/post-labor-meaning-economy.md` — What happens to meaning when work disappears

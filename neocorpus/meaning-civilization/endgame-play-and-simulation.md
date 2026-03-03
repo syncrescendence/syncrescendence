@@ -53,6 +53,17 @@ Simulation has not exhausted the middle of everything. It has exhausted our pati
 - **The patience problem:** If the middlegame is where meaning lives (see meaning crisis entry), and we have lost patience for it, then the meaning crisis is partly a crisis of temporal orientation — we cannot find meaning because we cannot stop trying to skip to the end.
 - **Conservative cultural decline vs. structural transformation:** Some sources (09730.md, 10038.md) frame cultural decline through a conservative lens (Hollywood, California collapse). Is this genuine aesthetic decline or nostalgia for a middlegame that was always messier than memory allows?
 
+## Obsolescence and Supersession
+
+### The Preparation Model of Strategy — Superseded in Elite Play
+The chess metaphor documents a live supersession: in 1985, opening preparation consumed 40% of clock time; by the current era, it has dropped to 5% because computer analysis has made the first 25 moves recitation. The supersession is not that preparation is unimportant — it is that human judgment can no longer add value in the preparatory phase when computer lines are complete. The middlegame is what remains after simulation has exhausted the opening. This pattern recurs across war, technology, and cultural production. The strategic value-add has migrated from preparation to the zone where no model can pre-solve the position. (00188)
+
+### Willingness to Engage the Middlegame as Virtue — Reframed
+The older framework of "grit" and "discipline" — as personal moral qualities — positioned middlegame engagement as a character matter. The endgame-play entry reframes this as a structural misunderstanding of where value now lives. The category error is not a failure of will; it is a mistaking of fluency for proximity. The supersession: what looks like impatience or laziness is often rational optimization given a world where simulation has compressed so much of the opening and midgame that the remaining middlegame is invisible. The intervention is cognitive re-orientation (recognizing the category error) rather than moral exhortation. (00188)
+
+### Audit Note
+Primary source (00188) is substantive with good coverage. Supporting sources (01441/01443 for aesthetic dimension, 10272 for ragebait economy) are referenced in the entry. Supersession claims are grounded in the entry's own content. No fabrication.
+
 ## Cross-References
 
 - `neocorpus/meaning-civilization/meaning-crisis-and-multiscale-coherence.md` — Meaning as navigation of the middlegame
