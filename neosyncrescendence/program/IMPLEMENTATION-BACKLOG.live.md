@@ -37,3 +37,5 @@
    Status: active
 4. derive first migration tranche for communications artifacts  
    Intent: `INT-SHELL-001`, `INT-SHELL-003`
+5. operatorize further communications-chain absorption so migration stops depending on manual copy steps  
+   Vocabulary: `operator`, `communications law`, `inversion`

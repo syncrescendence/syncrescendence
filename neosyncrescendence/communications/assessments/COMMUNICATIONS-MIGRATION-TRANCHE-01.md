@@ -31,3 +31,6 @@ It matters because it:
 ## Rule Going Forward
 
 Subsequent redesign communications should prefer landing here directly instead of being copied over after the fact.
+
+Where legacy-side absorption is still needed, it should prefer:
+- [migrate_communications_chain.py](/Users/system/syncrescendence/neosyncrescendence/operators/migrate_communications_chain.py)

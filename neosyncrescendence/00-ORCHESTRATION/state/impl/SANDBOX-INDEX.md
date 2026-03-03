@@ -32,6 +32,7 @@ This index exists so the sandbox can be navigated without depending on legacy-re
 ## Live Federal Surfaces
 
 - [ROSETTA-STONE.live.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE.live.md)
+- [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)
 - [INTENT-COMPASS.live.md](/Users/system/syncrescendence/neosyncrescendence/executive/INTENT-COMPASS.live.md)
 - [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
 

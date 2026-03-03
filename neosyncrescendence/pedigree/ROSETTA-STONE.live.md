@@ -2,7 +2,8 @@
 
 **Status**: initial live constitutional vocabulary surface  
 **Role**: compact semantic authority for the sandbox shell  
-**Pedigree**: [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/LIVE-ROSETTA-DESIGN-v1.md)
+**Pedigree**: [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/LIVE-ROSETTA-DESIGN-v1.md)  
+**Exegesis**: [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)
 
 ## Semantic Families
 
@@ -16,6 +17,7 @@
 - exocortex
 - registry
 - archive
+- shell
 
 ## Live Terms
 
@@ -98,6 +100,46 @@
 - **status**: live
 - **aliases**: registry, projection layer
 - **operational use**: should remain downstream of constitutional and runtime truth
+
+### successor shell
+
+- **family**: shell
+- **definition**: the next lawful operating shell intended to become the primary structure
+- **status**: live
+- **aliases**: next shell, true shell
+- **operational use**: currently instantiated as `neosyncrescendence`
+
+### legacy shell
+
+- **family**: archive
+- **definition**: the older operating shell that remains as provenance, evidence, and migration source
+- **status**: live
+- **aliases**: condemned repo, historical shell
+- **operational use**: the current broader `syncrescendence` repo outside the sandbox
+
+### inversion
+
+- **family**: shell
+- **definition**: the constitutional flip where the successor shell becomes primary and the old shell becomes sandboxed provenance
+- **status**: live
+- **aliases**: shell inversion, microcosm/macrocosm flip
+- **operational use**: governs the intended relationship between `neosyncrescendence` and the legacy shell
+
+### transient runtime
+
+- **family**: runtime
+- **definition**: a sanctioned staging artifact that is operationally necessary but not canonical
+- **status**: live
+- **aliases**: staging lane, relay exhaust
+- **operational use**: applies to relay `artifacts/outgoing/` and similar short-lived execution traces
+
+### lane charter
+
+- **family**: constitutional
+- **definition**: the governing statement of what a lane is for, what it may contain, and what role it plays in the federal shell
+- **status**: live
+- **aliases**: lane law
+- **operational use**: embodied in each sandbox lane `CHARTER.md`
 
 ### validated pattern
 

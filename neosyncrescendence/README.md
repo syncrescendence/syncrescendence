@@ -1,8 +1,8 @@
 # Neosyncrescendence
 
-This directory is the sandboxed shell-reconstitution microcosm for Syncrescendence.
+This directory is the shell-reconstitution microcosm for Syncrescendence and the intended successor shell.
 
-It exists so the redesign can proceed inside a contained substrate instead of continuing to sprawl across the legacy repo.
+It exists so the redesign can proceed inside a contained substrate and eventually invert the relationship with the legacy repo.
 
 ## Purpose
 
@@ -25,9 +25,13 @@ The legacy repo is:
 - historical runtime context
 
 This directory is:
-- staging shell
-- redesign sandbox
-- future migration target
+- successor shell
+- redesign substrate
+- future primary structure
+
+The intended end state is inversion:
+- `neosyncrescendence` becomes the true operating shell
+- the previous shell is relegated to sandboxed provenance and migration source
 
 ## Root Layout
 
