@@ -50,6 +50,12 @@
 14. [ARTIFACT-LAW-INVENTORY.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/ARTIFACT-LAW-INVENTORY.md)  
    First inventory-mode output measuring the current shell against the redesign law.
 
+15. [LANE-STATUS-MATRIX-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/LANE-STATUS-MATRIX-v1.md)  
+   Explicit legal status of the current major lanes.
+
+16. [TRANSITIONAL-ALLOWLIST-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/TRANSITIONAL-ALLOWLIST-v1.md)  
+   Named temporary exceptions for root files and live transitional lanes.
+
 ---
 
 ## Current Status
@@ -75,9 +81,9 @@ The first executable derivative now exists:
 ## Next Logical Derivations
 
 1. target physical lane charters / README files
-2. define lane-status matrix and allowlist
-3. first playbook compaction candidates
-4. first migration tranche implementation beyond inventory mode
+2. first playbook compaction candidates
+3. first migration tranche implementation beyond inventory mode
+4. first lane-charter physicalization
 
 ---
 
