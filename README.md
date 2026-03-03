@@ -14,6 +14,35 @@ This root is where the next shell is staged:
 - proven working patterns are preserved as curated staging artifacts
 - condemned legacy structure is preserved as pedigree and provenance, not the immediate write surface for redesign work
 
+Syncrescendence is not just a software repository. It is an attempt to construct an institutional shell in which individual cognition, agentic execution, external tool surfaces, and durable knowledge can compound without collapsing into clutter, hidden state, or tool-specific feudalism.
+
+The working teleology of the shell is:
+
+- convert volatile signals into durable institutional memory
+- turn repeated successful work into law, playbooks, operators, and validated patterns
+- preserve originality without becoming semantically unstable
+- remain adaptable as models, harnesses, and external capabilities shift
+
+This is why the shell is opinionated about lineage, lanes, receipts, and compaction.
+
+## Modal Structure
+
+The root is meant to hold four distinct kinds of orientation at once:
+
+- **constitutional**: what is lawful
+- **teleological**: what the shell is for
+- **modal**: how each office and harness naturally works
+- **metabolic**: how raw work becomes compacted doctrine
+
+The root files exist because each one carries one of those burdens:
+
+- [AGENTS.md](/Users/system/syncrescendence/AGENTS.md): constitutional law and federal office boundaries
+- [BOOT.md](/Users/system/syncrescendence/BOOT.md): session-start alignment and entry into the shell
+- [WORK-LOOP.md](/Users/system/syncrescendence/WORK-LOOP.md): the basic metabolism of work
+- [INTER-OFFICE.md](/Users/system/syncrescendence/INTER-OFFICE.md): office modalities and routing
+- [CONTINUOUS-IMPROVEMENT.md](/Users/system/syncrescendence/CONTINUOUS-IMPROVEMENT.md): compaction, quality management, and antifragile iteration
+- [CLAUDE.md](/Users/system/syncrescendence/CLAUDE.md) and [GEMINI.md](/Users/system/syncrescendence/GEMINI.md): harness-facing veneers that preserve office grain without becoming second constitutions
+
 ## Operating Rule
 
 Work from this root unless a migration step explicitly says otherwise.
@@ -87,6 +116,15 @@ As above, so below:
 - operator law
 - staged, lossless migration
 - provenance preserved, not discarded
+
+The shell should eventually be strong enough that predecessor matter can be retrofitted into it losslessly and lawfully:
+
+- live if it still belongs in the current institution
+- pedigree if it is constitutional ancestry
+- archive if it is historical evidence
+- warning if it is a negative pattern
+
+That is the real standard for shell quality.
 
 ## Immediate Rule of Thumb
 

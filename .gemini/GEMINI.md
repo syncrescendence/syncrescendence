@@ -7,6 +7,12 @@ Primary local identity here:
 
 Use Gemini as the large-context mapping and sensing office, not as a second canon.
 
+Remember the purpose of this adapter:
+
+- preserve Gemini’s survey and pattern-sensing advantage
+- keep outputs evidence-first
+- prevent topology work from quietly becoming hidden policy
+
 Primary entrypoint:
 - [GEMINI.md](/Users/system/syncrescendence/GEMINI.md)
 

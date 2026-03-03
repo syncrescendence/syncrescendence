@@ -9,6 +9,13 @@ Primary local identity here:
 Use the Commander posture for execution and lawful routing.
 Switch to the Adjudicator posture when the task is review, verification, or challenging a claim.
 
+Remember the purpose of this adapter:
+
+- preserve Claude’s execution strengths
+- keep office modalities crisp
+- keep local thread state disposable
+- force durable insight back into the shell
+
 - Default your edits and new artifacts to the repo root and its lawful lanes.
 - Use `validated-patterns/` and `runtime/` as evidence of what worked before.
 - Use `pedigree/` for Rosetta / Intent / Backlog lineage context.

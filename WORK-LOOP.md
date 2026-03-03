@@ -13,3 +13,27 @@ Follow the successor-shell work loop:
 
 Primary pattern:
 - [WORK-LOOP-CYCLE-v1.md](/Users/system/syncrescendence/validated-patterns/office-operations/WORK-LOOP-CYCLE-v1.md)
+
+## Teleology
+
+The work loop exists to prevent two common failures:
+
+- work that happens but never becomes durable institutional state
+- work that becomes durable too early and hardens noise into law
+
+The loop therefore has two obligations:
+
+- **act**: move the work forward
+- **metabolize**: convert what matters into the right surviving form
+
+## Metabolic Rule
+
+Not everything should survive in the same way.
+
+- transient local reasoning belongs in offices while it is still volatile
+- prompts, responses, and handoffs belong in communications lineage
+- stable decisions belong in executive or program lanes
+- repeated success belongs in playbooks, operators, or validated patterns
+- raw traces belong in runtime or logs, not in constitutions
+
+The work loop is good when it leaves the shell cleaner and more capable than it found it.
