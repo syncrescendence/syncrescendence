@@ -21,6 +21,7 @@
 - 10342.md — MacAskill & Boeree: what happens after superintelligent AI
 - 10472.md — Wissner-Gross: future of intelligence already here
 - 03360.md — "Smartest AI Bet Has Nothing to Do with AI"
+- 01207.jsonl — "End of AI" = complete societal integration: specification class, social fissures between AI definers and AI-managed, filter bubbles as infrastructure
 
 ## Amodei's Compressed Century
 
@@ -54,6 +55,14 @@ Post-AGI reduces company types to four (10906): labs, infrastructure, systems of
 The agent-to-agent economy (10891): "The point isn't bill splitting. The point is that coordination problems disappear when software talks to software." If your product cannot be accessed via API, "it effectively doesn't exist in an agent-driven world." The architectural shift: from great UX to great composability.
 
 "The collapse of distance between intention and execution" (10891) — you think, it happens. If this is true, "the real leverage is the thought, the intention, the consciousness."
+
+## The "End of AI": Integration as Disappearance
+
+The most structurally provocative post-AGI vision is not dramatic transformation but complete absorption (01207): the "end of AI" refers to its integration into society becoming so ubiquitous and seamless that it is no longer perceived as a separate intelligence. AI does not arrive — it dissolves into infrastructure.
+
+This creates a new class structure. The **specification class** — policymakers, data scientists, corporate strategists — defines AI reward functions, translating human goals into formal objective functions that shape societal behavior (01207). Everyone else becomes the "systematically managed class" whose lives are optimized by AI systems they cannot see or influence. Human institutions manage the social consequences of AI decisions without the ability to influence the underlying mechanics (01207).
+
+The social fissures are structural, not incidental: AI-shaped information and opportunities harden filter bubbles into fundamental infrastructure, creating sealed communities as a permanent societal feature (01207). The incompatibility between human logic (meaning, narrative, ambiguity) and AI logic (optimization, probabilistic inference, pattern matching) produces friction that no amount of alignment work eliminates — because the friction is between two fundamentally different operating systems for organizing collective behavior (01207).
 
 ## The Boring Singularity
 
