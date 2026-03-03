@@ -9,14 +9,15 @@
 - `corpus/productivity-pkm/03190.jsonl` — Atom: Obsidian only shows current version, no edit history
 - `corpus/productivity-pkm/03826.jsonl` — Atom: Everything possible in Obsidian UI is also possible from CLI
 - `corpus/productivity-pkm/03634.jsonl` — Atom: Graph traversal via wikilinks replicates spreading activation
+- `corpus/productivity-pkm/03828.md` — Obsidian CLI v1.12 full command set (early access)
 
 ## Core Thesis
 Obsidian has emerged as the dominant tool for serious knowledge workers because it satisfies a unique set of constraints: local-first plain-text storage (future-proof, git-trackable), a plugin ecosystem that extends without lock-in, and a vault architecture that treats notes as a codebase rather than a database. The critical insight across these sources is that Obsidian's power scales with the degree to which the user treats the vault as infrastructure rather than as a notebook. The four-level progression (09405) from journaling through production through synthesis to creative output mirrors the maturity curve of any infrastructure adoption.
 
 ## Key Frameworks
 
-### 1. Vault-as-Codebase Paradigm (00031, 02766, 10723, 03826)
-The Ars Contexta guide and its extraction atoms establish that an Obsidian vault, because it is a directory of markdown files, can be operated entirely from the command line. Claude Code can create notes, modify frontmatter, build indexes, and validate schemas without ever opening the Obsidian GUI. This reframes the vault from "app with files" to "repository with an optional viewer." The CLI thread (10723) extends this: anything achievable in the Obsidian interface is achievable from a terminal, which means agentic systems can operate on vaults natively. Git tracking becomes trivial because the vault IS the repo.
+### 1. Vault-as-Codebase Paradigm (00031, 02766, 10723, 03826, 03828)
+The Ars Contexta guide and its extraction atoms establish that an Obsidian vault, because it is a directory of markdown files, can be operated entirely from the command line. Claude Code can create notes, modify frontmatter, build indexes, and validate schemas without ever opening the Obsidian GUI. This reframes the vault from "app with files" to "repository with an optional viewer." The CLI thread (10723) extends this: anything achievable in the Obsidian interface is achievable from a terminal, which means agentic systems can operate on vaults natively. Git tracking becomes trivial because the vault IS the repo. The Obsidian CLI (v1.12, early access — 03828) makes this concrete with a specific command set: `aliases`, `append`, `backlinks`, `basiccreate`, `backup`, `baseviews`, `bases`, `bookmark`, `bookmarks`, `command`, `task`, and `tasks`. This is the vault-as-codebase paradigm operationalized — programmatic access to vault operations including task management, content appending, and backup without the GUI.
 
 ### 2. Four Cognitive Modes (09405)
 Nick Milo's Obsidian Bases + Workspaces framework defines four levels of vault usage: Inner Guide (self-mapping, journaling), Producer (task execution, project tracking), Synthesizer (cross-domain idea combination), and Creative (output generation). The key claim is that switching between these modes with one click provides "cognitive context switching" — the vault reconfigures its visible surfaces to match the user's current mental mode. This is workspace-as-cognitive-scaffold.
