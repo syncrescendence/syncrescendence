@@ -30,6 +30,7 @@ Use it for:
 
 - [COMMUNICATIONS-MIGRATION-TRANCHE-01.md](/Users/system/syncrescendence/neosyncrescendence/communications/assessments/COMMUNICATIONS-MIGRATION-TRANCHE-01.md)
 - [COMMUNICATIONS-MIGRATION-TRANCHE-02-GOLD-MINE.md](/Users/system/syncrescendence/neosyncrescendence/communications/assessments/COMMUNICATIONS-MIGRATION-TRANCHE-02-GOLD-MINE.md)
+- [COMMUNICATIONS-MIGRATION-TRANCHE-03-CLI-WEB-GAP.md](/Users/system/syncrescendence/neosyncrescendence/communications/assessments/COMMUNICATIONS-MIGRATION-TRANCHE-03-CLI-WEB-GAP.md)
 
 ## Rule
 
