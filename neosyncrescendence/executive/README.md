@@ -1,17 +1,10 @@
 # Executive
 
-This lane is the successor shell for live executive steering.
+This lane holds live executive steering for the sandbox shell.
 
-Its role is to hold:
+Start here:
+- [INTENT-COMPASS.live.md](/Users/system/syncrescendence/neosyncrescendence/executive/INTENT-COMPASS.live.md)
 
-- the live Intent Compass
-- campaign surfaces
-- deferred steering commitments
-- executive-level directional artifacts
-
-This lane does not yet replace existing references. It exists in tranche 01 so the shell can grow a lawful executive surface before migration and enforcement.
-
-Authority:
-
-- [LIVE-INTENT-COMPASS-DESIGN-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/LIVE-INTENT-COMPASS-DESIGN-v1.md)
-- [ROSETTA-INTENT-BACKLOG-TRIAD-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ROSETTA-INTENT-BACKLOG-TRIAD-v1.md)
+Pedigree and design context:
+- [LIVE-INTENT-COMPASS-DESIGN-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/LIVE-INTENT-COMPASS-DESIGN-v1.md)
+- [ROSETTA-INTENT-BACKLOG-TRIAD-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-INTENT-BACKLOG-TRIAD-v1.md)

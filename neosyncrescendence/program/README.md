@@ -1,18 +1,10 @@
 # Program
 
-This lane is the successor shell for program execution surfaces.
+This lane holds live execution queues and implementation sequencing for the sandbox shell.
 
-Its role is to hold:
+Start here:
+- [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
 
-- backlog
-- implementation maps
-- tranches
-- migration queues
-- program-level deferred work
-
-The purpose is to separate program execution from both constitutional law and executive intention while still binding upward to both.
-
-Authority:
-
-- [ROSETTA-INTENT-BACKLOG-TRIAD-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ROSETTA-INTENT-BACKLOG-TRIAD-v1.md)
-- [MIGRATION-TRANCHE-01-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/MIGRATION-TRANCHE-01-v1.md)
+Supporting law:
+- [ROSETTA-INTENT-BACKLOG-TRIAD-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/ROSETTA-INTENT-BACKLOG-TRIAD-v1.md)
+- [MIGRATION-TRANCHE-01-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/MIGRATION-TRANCHE-01-v1.md)

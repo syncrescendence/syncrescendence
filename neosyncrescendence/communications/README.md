@@ -1,28 +1,37 @@
 # Communications
 
-This lane is the successor shell for communications lineage.
+This lane is the live communications surface for `neosyncrescendence`.
 
-It is intended to hold:
-
-- prompts / packets
-- responses
-- dispatch metadata
+Use it for:
+- dispatch packets and prompts
+- returned responses
 - handoffs
 - logs
 - retros
 - assessments
 
-This lane is not yet the live filing authority for all current work.
-It exists in tranche 01 as a lawful successor lane so future migration can redirect writes here deliberately rather than improvising another shell.
+## Sub-lanes
 
-Until hard migration:
+- [prompts](/Users/system/syncrescendence/neosyncrescendence/communications/prompts)
+- [responses](/Users/system/syncrescendence/neosyncrescendence/communications/responses)
+- [handoffs](/Users/system/syncrescendence/neosyncrescendence/communications/handoffs)
+- [logs](/Users/system/syncrescendence/neosyncrescendence/communications/logs)
+- [retros](/Users/system/syncrescendence/neosyncrescendence/communications/retros)
+- [assessments](/Users/system/syncrescendence/neosyncrescendence/communications/assessments)
 
-- [engine](/Users/system/syncrescendence/engine) remains `live-transitional` for prompt/packet work
-- [-INBOX](/Users/system/syncrescendence/-INBOX) remains `live-transitional` for many responses
-- [agents/commander/outbox/handoffs](/Users/system/syncrescendence/agents/commander/outbox/handoffs) remains the live handoff lane
+## Initial templates
 
-Use the redesign package as authority:
+- [prompts/PACKET-TEMPLATE.md](/Users/system/syncrescendence/neosyncrescendence/communications/prompts/PACKET-TEMPLATE.md)
+- [responses/RESPONSE-TEMPLATE.md](/Users/system/syncrescendence/neosyncrescendence/communications/responses/RESPONSE-TEMPLATE.md)
+- [assessments/ASSESSMENT-TEMPLATE.md](/Users/system/syncrescendence/neosyncrescendence/communications/assessments/ASSESSMENT-TEMPLATE.md)
+- [handoffs/HANDOFF-TEMPLATE.md](/Users/system/syncrescendence/neosyncrescendence/communications/handoffs/HANDOFF-TEMPLATE.md)
 
-- [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/COMMUNICATIONS-LAW-v1.md)
-- [PHYSICAL-SHELL-MIGRATION-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PHYSICAL-SHELL-MIGRATION-v1.md)
-- [LANE-STATUS-MATRIX-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/LANE-STATUS-MATRIX-v1.md)
+## Rule
+
+Inside the sandbox, this lane is no longer merely “future-lane.”
+It is the intended home for new communications artifacts produced by the redesign effort.
+
+## Authority
+
+- [COMMUNICATIONS-LAW-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/COMMUNICATIONS-LAW-v1.md)
+- [AGENTS.md](/Users/system/syncrescendence/neosyncrescendence/AGENTS.md)

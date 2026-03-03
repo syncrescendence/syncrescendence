@@ -1,19 +1,21 @@
 # Operators
 
-This lane is the successor shell for execution operators.
+This lane holds executable shell operators.
 
-Operators are the scripts, wrappers, bridges, collectors, reconcilers, validators, bootstraps, and migration tools that make the shell executable.
+Current staged classes:
+- validators
+- CLI↔web-gap packet/bridge operators
 
-This lane exists so the repo can stop treating root as a permanent operator graveyard.
+## Key surfaces
 
-Tranche-01 rule:
+- [validators/artifact_law_inventory.py](/Users/system/syncrescendence/neosyncrescendence/operators/validators/artifact_law_inventory.py)
+- [cli-web-gap](/Users/system/syncrescendence/neosyncrescendence/operators/cli-web-gap)
 
-- existing root-level operators remain transitional and allowlisted
-- new operator placement should bias toward this lane once practical
-- compatibility wrappers may remain at root where required
+## Rule
 
-Authority:
+In the sandbox, new redesign operators should land here by default rather than at the repo root.
 
-- [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)
-- [TRANSITIONAL-ALLOWLIST-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/TRANSITIONAL-ALLOWLIST-v1.md)
-- [ARTIFACT-LAW-VALIDATOR-SPEC-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/ARTIFACT-LAW-VALIDATOR-SPEC-v1.md)
+## Authority
+
+- [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)
+- [ARTIFACT-LAW-VALIDATOR-SPEC-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/ARTIFACT-LAW-VALIDATOR-SPEC-v1.md)
