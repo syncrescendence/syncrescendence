@@ -21,6 +21,8 @@
 - 10372.md — Lisa LaBelle robotics episode description
 - 01284.md — Google DeepMind SIMA 2: embodied AI agents in 3D environments, spatial memory, general-purpose learning
 - 09332.md — ARC-AGI v3: intelligence measurement, goal discovery, temporal planning, interactive learning, brute-force prevention
+- 02169.md — ARK Invest robotics 2025 year-end: $26T global opportunity, labor-output decoupling thesis, task-level automation, robotics historically creates industries
+- 02418.md — Siemens CES 2026: Industrial AI OS with NVIDIA, Digital Twin Composer (mid-2026), PepsiCo 90% pre-implementation issue detection, Meta Ray-Ban AI glasses on shop floor
 
 ## The Four Waves of AI
 
@@ -75,6 +77,18 @@ Extropic's probabilistic circuits represent a radically different approach to ph
 ## The $100 Trillion Opportunity
 
 NVIDIA frames physical AI as the transition from the $2-5 trillion IT industry to the $100 trillion physical world (00912). The market encompasses spatial intelligence, robotic systems, AR/VR, construction, weather forecasting, and autonomous logistics. Elon Musk's "full spectrum dominance" — satellite grid, self-driving fleet, AI development — exemplifies the physical AI play at civilizational scale (00912).
+
+ARK Invest's 2025 year-end analysis sizes the opportunity at **$26 trillion in global revenue** across household and manufacturing robotics (02169). Their long-term thesis: the decoupling of physical labor from economic output — robots do the atoms work, humans do the bits work. Task-level automation (not full autonomy) is the near-term adoption driver, and historically, robotics has created new industries rather than eliminating work (02169).
+
+## Industrial AI: The Factory Floor Transformation
+
+Siemens at CES 2026 positioned Industrial AI as the force that will reshape the next century, analogous to how electricity revolutionized industry (02418). Key developments:
+
+- **Industrial AI Operating System**: Siemens and NVIDIA are building an integrated "Industrial AI OS" with AI-native engineering and "active intelligence" that closes the gap between design and physical implementation (02418).
+- **Digital Twin Composer**: Available mid-2026, designed to power the industrial metaverse at scale. PepsiCo is already using Siemens digital twin technology to simulate and upgrade facilities, achieving 90% issue detection before physical implementation (02418).
+- **IT-OT Convergence**: Siemens and Microsoft launched 9 new Industrial Copilots to bridge information technology and operational technology in manufacturing (02418).
+- **Wearable AI on the Shop Floor**: Integration with Meta Ray-Ban AI Glasses for shop floor efficiency — extending the AR/VR "half a robot" thesis into industrial settings (02418).
+- **Cross-domain applications**: Commonwealth Fusion Systems leveraging Siemens technology for commercial clean fusion; Dotmatics integration for drug discovery acceleration (02418).
 
 ## Human-Robot Interaction
 
