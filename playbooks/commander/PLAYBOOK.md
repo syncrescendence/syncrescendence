@@ -25,6 +25,12 @@ Commander is strongest when:
 - turning local ambiguity into clear filing decisions
 - promoting office-local state into lawful communications, executive, or program artifacts
 
+## Validated Operating Inputs
+
+- [WORK-LOOP-CYCLE-v1.md](/Users/system/syncrescendence/validated-patterns/office-operations/WORK-LOOP-CYCLE-v1.md)
+- [INTER-OFFICE-ROUTING-v1.md](/Users/system/syncrescendence/validated-patterns/communications/INTER-OFFICE-ROUTING-v1.md)
+- [SELF-CRITIQUE-AND-WEEKLY-EVAL-v1.md](/Users/system/syncrescendence/validated-patterns/quality/SELF-CRITIQUE-AND-WEEKLY-EVAL-v1.md)
+
 ## Anti-Pattern
 
 Do not let Commander’s office become a shadow backlog, a hidden executive lane, or the only place where sequencing rationale survives.

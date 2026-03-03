@@ -1,0 +1,8 @@
+{
+  "label": "before-full-progress-log",
+  "source": "/Users/system/Desktop/syncrescendence-before-full/progress.md",
+  "destination": "/Users/system/syncrescendence/pedigree/rehoused/before-full/progress.md",
+  "dest_rel": "pedigree/rehoused/before-full/progress.md",
+  "reason": "Preserve the numbered-shell progress discipline as pedigree for explicit run logs and operational retrospectives.",
+  "timestamp_utc": "20260303T053858Z"
+}

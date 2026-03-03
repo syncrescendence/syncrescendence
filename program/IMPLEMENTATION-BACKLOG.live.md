@@ -112,3 +112,14 @@
    Status: active
 3. preserve queue-type distinctions without preserving competing authorities  
    Vocabulary: `program`, `office`, `receipt`, `protected zone`
+
+### Tranche L — Archive Retrofit and Pattern Compaction
+
+1. generate shell-comparison manifests for the archived predecessor states and use them as lawful migration maps  
+   Status: manifests completed
+2. rehouse high-value predecessor artifacts with receipts instead of ad hoc restoration  
+   Status: tranche 01 active
+3. compact rehoused operational doctrine into successor-shell validated patterns, playbook atoms, and future operators  
+   Status: active
+4. keep archival preservation, live promotion, and cautionary pedigree distinct so the shell gains signal without recreating predecessor clutter  
+   Vocabulary: `pedigree`, `receipt`, `validated pattern`, `inversion`

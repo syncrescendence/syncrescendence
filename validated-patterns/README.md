@@ -6,5 +6,9 @@ Current contents emphasize:
 - CLI ↔ web-gap closure
 - Cowork relay proof
 - packet-and-bridge discipline
+- office work rhythms
+- routing doctrine
+- quality evaluation
+- orientation surfaces
 
 These are staging precedents, not immutable law.
