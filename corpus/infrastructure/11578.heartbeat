@@ -1,8 +1,0 @@
-timestamp_unix=1771807738
-timestamp_iso=2026-02-23T00:48:58Z
-agent=psyche
-pid=32350
-state=IDLE
-detail=polling
-current_task=none
-tmux_pane=constellation:1.1

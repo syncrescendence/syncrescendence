@@ -24,16 +24,16 @@ Its job is simple:
 **Run shell script**
 
 ```bash
-/usr/bin/env python3 /Users/system/syncrescendence/CLI-WEB-GAP/scripts/finalize_cowork_relay_job.py --status-file "$1" --project-ontology
+/usr/bin/env python3 /Users/system/syncrescendence/operators/cli-web-gap/finalize_cowork_relay_job.py --status-file "$1"
 ```
 
 **What this does**
 
 - reads the Cowork-written status file
 - infers job id, result, note, and optional citation count
-- copies the staged response artifact into the repo target path
+- copies the staged response artifact into the sandbox target path
 - runs the correct bridge script
-- reconciles into the event ledger and ontology
+- emits a local sandbox event entry
 
 This is the main Hazel integration point.
 

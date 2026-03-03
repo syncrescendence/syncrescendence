@@ -1,9 +1,0 @@
-role_id,role_name,role_function,specification_tier,invocation_mode
-1,INTERPRETER,Transform messy ideation into structured understanding,open_or_guided,continuous
-2,COMPILER,Transform explicit specifications into formatted artifacts,strict,on_demand
-3,DIGESTOR,Transform complex artifacts into digestible summaries,guided,on_demand
-4,ORACLE,Sense corpus state and generate evidence packs,strict,on_demand
-5,EXECUTOR_LEAD,Implement changes with judgment and verification,guided,on_demand
-6,PARALLEL_EXECUTOR,Execute mechanically parallelizable tasks,strict,batch
-7,RED_TEAM,Stress-test and challenge architectural decisions,open,on_demand
-8,VERIFIER,Verify facts with citation-backed research,guided,on_demand

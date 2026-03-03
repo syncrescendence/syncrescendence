@@ -7,14 +7,14 @@
 - [AGENTS.md](/Users/system/syncrescendence/AGENTS.md)
 - [CLAUDE.md](/Users/system/syncrescendence/CLAUDE.md)
 - [PLAYBOOK-LAW-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PLAYBOOK-LAW-v1.md)
-- [claude-md-configuration-system.md](/Users/system/syncrescendence/neocorpus/claude-code/claude-md-configuration-system.md)
-- [context-window-management-and-compaction.md](/Users/system/syncrescendence/neocorpus/claude-code/context-window-management-and-compaction.md)
-- [skills-and-progressive-disclosure.md](/Users/system/syncrescendence/neocorpus/claude-code/skills-and-progressive-disclosure.md)
-- [sub-agent-architecture.md](/Users/system/syncrescendence/neocorpus/claude-code/sub-agent-architecture.md)
-- [filesystem-as-agent-memory.md](/Users/system/syncrescendence/neocorpus/claude-code/filesystem-as-agent-memory.md)
-- [hooks-and-permissions-architecture.md](/Users/system/syncrescendence/neocorpus/claude-code/hooks-and-permissions-architecture.md)
-- [plan-mode-and-human-in-the-loop.md](/Users/system/syncrescendence/neocorpus/claude-code/plan-mode-and-human-in-the-loop.md)
-- [mcp-as-integration-standard.md](/Users/system/syncrescendence/neocorpus/claude-code/mcp-as-integration-standard.md)
+- [claude-md-configuration-system.md](/Users/system/syncrescendence/playbooks/claude-code/references/claude-md-configuration-system.md)
+- [context-window-management-and-compaction.md](/Users/system/syncrescendence/playbooks/claude-code/references/context-window-management-and-compaction.md)
+- [skills-and-progressive-disclosure.md](/Users/system/syncrescendence/playbooks/claude-code/references/skills-and-progressive-disclosure.md)
+- [sub-agent-architecture.md](/Users/system/syncrescendence/playbooks/claude-code/references/sub-agent-architecture.md)
+- [filesystem-as-agent-memory.md](/Users/system/syncrescendence/playbooks/claude-code/references/filesystem-as-agent-memory.md)
+- [hooks-and-permissions-architecture.md](/Users/system/syncrescendence/playbooks/claude-code/references/hooks-and-permissions-architecture.md)
+- [plan-mode-and-human-in-the-loop.md](/Users/system/syncrescendence/playbooks/claude-code/references/plan-mode-and-human-in-the-loop.md)
+- [mcp-as-integration-standard.md](/Users/system/syncrescendence/playbooks/claude-code/references/mcp-as-integration-standard.md)
 
 ## 0. What This Surface Is For
 

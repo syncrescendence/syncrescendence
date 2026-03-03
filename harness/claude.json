@@ -1,8 +1,0 @@
-{
-  "name": "claude",
-  "extension_sources": [
-    "CLAUDE-EXT.md"
-  ],
-  "generated_filename": "CLAUDE.md",
-  "root_sync": true
-}

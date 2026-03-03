@@ -1,9 +1,0 @@
-.DS_Store
-__pycache__/
-*.pyc
-.pytest_cache/
-.mypy_cache/
-
-00-ORCHESTRATION/state/ARTIFACT-LAW-INVENTORY.json
-00-ORCHESTRATION/state/ARTIFACT-LAW-INVENTORY.md
-00-ORCHESTRATION/state/SANDBOX-EVENT-LEDGER.jsonl

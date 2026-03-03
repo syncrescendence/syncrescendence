@@ -68,7 +68,7 @@ This schematic is grounded in:
 - [CANON-ONTOLOGY-GATE_v2.md](/Users/system/syncrescendence/canon/CANON-ONTOLOGY-GATE_v2.md)
 - [AGENTS.md](/Users/system/syncrescendence/AGENTS.md)
 - [BOUNDARY-CONTRACT-POLICY-CC73.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/BOUNDARY-CONTRACT-POLICY-CC73.md)
-- [INTENT-AND-OPERATING-MODEL-CC76.md](/Users/system/syncrescendence/CLI-WEB-GAP/INTENT-AND-OPERATING-MODEL-CC76.md)
+- [INTENT-AND-OPERATING-MODEL-CC76.md](/Users/system/syncrescendence/validated-patterns/cli-web-gap/INTENT-AND-OPERATING-MODEL-CC76.md)
 - [EXOCORTEX-ACCOUNT-IDENTITY-MATRIX-CC76.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/EXOCORTEX-ACCOUNT-IDENTITY-MATRIX-CC76.md)
 - [IMPLEMENTATION-BACKLOG.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/IMPLEMENTATION-BACKLOG.md)
 - [IMPLEMENTATION-MAP.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/IMPLEMENTATION-MAP.md)

@@ -1,8 +1,0 @@
-timestamp_unix=1771807749
-timestamp_iso=2026-02-23T00:49:09Z
-agent=cartographer
-pid=37294
-state=IDLE
-detail=polling
-current_task=none
-tmux_pane=constellation:1.7

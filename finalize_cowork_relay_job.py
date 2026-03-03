@@ -8,6 +8,6 @@ import runpy
 import sys
 
 
-TARGET = Path(__file__).resolve().parent / "CLI-WEB-GAP" / "scripts" / "finalize_cowork_relay_job.py"
+TARGET = Path(__file__).resolve().parent / "operators" / "cli-web-gap" / "finalize_cowork_relay_job.py"
 sys.argv[0] = str(TARGET)
 runpy.run_path(str(TARGET), run_name="__main__")

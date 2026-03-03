@@ -1,6 +1,0 @@
-[plugins] openclaw-mem0: registered (mode: open-source, user: sovereign, graph: false, autoRecall: true, autoCapture: true)
-Results written to:
-
-- `-OUTBOX/ajna/RESULTS/RESULT-ajna-20260209-discord_server_setup.md`
-
-Current state: **blocked on Sovereign prerequisites** (Discord UI Phases 1–2 + Developer Portal Phase 3 enabling **MESSAGE_CONTENT intent**). Once those are done, we can finish Phase 4 (OpenClaw Discord allowlist/routing + restart + verification) quickly.

@@ -115,10 +115,10 @@ When a response returns from Oracle or Perplexity:
 
 Wrapper scripts:
 
-- [oracle_response_bridge.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/oracle_response_bridge.py)
-- [perplexity_response_bridge.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/perplexity_response_bridge.py)
-- [notebooklm_response_bridge.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/notebooklm_response_bridge.py)
-- [claude_cowork_response_bridge.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/claude_cowork_response_bridge.py)
+- [oracle_response_bridge.py](/Users/system/syncrescendence/operators/cli-web-gap/oracle_response_bridge.py)
+- [perplexity_response_bridge.py](/Users/system/syncrescendence/operators/cli-web-gap/perplexity_response_bridge.py)
+- [notebooklm_response_bridge.py](/Users/system/syncrescendence/operators/cli-web-gap/notebooklm_response_bridge.py)
+- [claude_cowork_response_bridge.py](/Users/system/syncrescendence/operators/cli-web-gap/claude_cowork_response_bridge.py)
 
 These wrappers emit:
 
@@ -136,10 +136,10 @@ The emitted event provides the machine-readable bridge into memory and ontology.
 Generation helpers exist for the two initial packet classes:
 Generation helpers exist for the first four packet classes:
 
-- [stage_oracle_packet.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/stage_oracle_packet.py)
-- [stage_perplexity_packet.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/stage_perplexity_packet.py)
-- [stage_notebooklm_packet.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/stage_notebooklm_packet.py)
-- [stage_claude_cowork_packet.py](/Users/system/syncrescendence/CLI-WEB-GAP/scripts/stage_claude_cowork_packet.py)
+- [stage_oracle_packet.py](/Users/system/syncrescendence/operators/cli-web-gap/stage_oracle_packet.py)
+- [stage_perplexity_packet.py](/Users/system/syncrescendence/operators/cli-web-gap/stage_perplexity_packet.py)
+- [stage_notebooklm_packet.py](/Users/system/syncrescendence/operators/cli-web-gap/stage_notebooklm_packet.py)
+- [stage_claude_cowork_packet.py](/Users/system/syncrescendence/operators/cli-web-gap/stage_claude_cowork_packet.py)
 
 These create repo-native dispatch packets with:
 

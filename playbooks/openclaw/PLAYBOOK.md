@@ -8,12 +8,13 @@
 - [TOOL-STACK-LIVE-STATE.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/TOOL-STACK-LIVE-STATE.md)
 - [OPENCLAW-RUNTIME-SNAPSHOT.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/OPENCLAW-RUNTIME-SNAPSHOT.md)
 - [AGENT-RUNTIME-IDENTITIES-CC75.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/AGENT-RUNTIME-IDENTITIES-CC75.md)
-- [OPENCLAW-ROLE.md](/Users/system/syncrescendence/agents/ajna/OPENCLAW-ROLE.md)
-- [openclaw-memory-architecture.md](/Users/system/syncrescendence/neocorpus/openclaw/openclaw-memory-architecture.md)
-- [openclaw-setup-and-operations.md](/Users/system/syncrescendence/neocorpus/openclaw/openclaw-setup-and-operations.md)
-- [openclaw-model-configuration.md](/Users/system/syncrescendence/neocorpus/openclaw/openclaw-model-configuration.md)
-- [openclaw-communication-channels.md](/Users/system/syncrescendence/neocorpus/openclaw/openclaw-communication-channels.md)
-- [syncrescendence-openclaw-infrastructure.md](/Users/system/syncrescendence/neocorpus/openclaw/syncrescendence-openclaw-infrastructure.md)
+- [OPENCLAW-ROLE.md](/Users/system/syncrescendence/playbooks/openclaw/references/OPENCLAW-ROLE.md)
+- [EVENT-SCHEMA.md](/Users/system/syncrescendence/playbooks/openclaw/references/EVENT-SCHEMA.md)
+- [openclaw-memory-architecture.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-memory-architecture.md)
+- [openclaw-setup-and-operations.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-setup-and-operations.md)
+- [openclaw-model-configuration.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-model-configuration.md)
+- [openclaw-communication-channels.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-communication-channels.md)
+- [syncrescendence-openclaw-infrastructure.md](/Users/system/syncrescendence/playbooks/openclaw/references/syncrescendence-openclaw-infrastructure.md)
 
 ## 0. What This Surface Is For
 

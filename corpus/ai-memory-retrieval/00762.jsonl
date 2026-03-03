@@ -1,4 +1,0 @@
-{"timestamp": "2026-02-25T21:19:45.803600+00:00", "atoms_in": 3, "atoms_out": 3, "compression_ratio": 1.0, "target_tier": "praxis", "intention_coverage": ["INT-1707", "INT-P035"], "axiom_token_count": 301}
-{"timestamp": "2026-02-25T21:20:45.061092+00:00", "atoms_in": 3, "atoms_out": 3, "compression_ratio": 1.0, "target_tier": "canon", "intention_coverage": ["INT-1707", "INT-P035"], "axiom_token_count": 301}
-{"timestamp": "2026-02-26T02:32:04.563096+00:00", "atoms_in": 5, "atoms_out": 3, "compression_ratio": 1.67, "target_tier": "praxis", "intention_coverage": ["INT-1707", "INT-1804", "INT-P035"], "axiom_token_count": 194}
-{"timestamp": "2026-02-26T02:32:08.613030+00:00", "atoms_in": 5, "atoms_out": 3, "compression_ratio": 1.67, "target_tier": "canon", "intention_coverage": ["INT-1707", "INT-1804", "INT-P035"], "axiom_token_count": 194}

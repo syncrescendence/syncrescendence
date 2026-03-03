@@ -1,150 +1,90 @@
 # Syncrescendence
 
-**Version**: 4.1.0
-**Updated**: 2026-03-02
-**Purpose**: 30,000ft orientation for any platform entering the constellation
+This repository is now the shell-reconstitution substrate for Syncrescendence and the intended successor shell.
 
----
+The earlier nested `neosyncrescendence` microcosm proved the design. The canonical root is now the live successor-shell locus.
 
-## What Is Syncrescendence?
+## Purpose
 
-Syncrescendence is a distributed cognition system demonstrating that individual capability can achieve institutional-scale intelligence through orchestrated AI platforms. It serves as proof-of-concept for navigating civilizational phase transitions where no single intelligence possesses the complete capability matrix for polymathic synthesis.
+This root is where the next shell is staged:
 
-**We are no longer coding, but conducting logistics. Our materiel is tokens, and our personnel are agents.**
+- constitutional law is kept compact
+- playbooks are first-class
+- communications, executive, program, and operators have explicit lanes
+- proven working patterns are preserved as curated staging artifacts
+- condemned legacy structure is preserved as pedigree and provenance, not the immediate write surface for redesign work
 
----
+## Operating Rule
 
-## The Constellation
+Work from this root unless a migration step explicitly says otherwise.
 
-### Subscription Substrate
-| Service | Status | Primary Function |
-|---------|--------|------------------|
-| Claude Max | Active | Commander runtime, Ajna shared Claude capacity test |
-| ChatGPT Plus | Active | Psyche/Adjudicator substrate (mini-side, dormant while mini is anesthetized) |
-| Gemini Pro | Active | Cartographer, NotebookLM, GCP credits |
-| SuperGrok | Active | Oracle sensing |
-| Manus Pro | Active | Autonomous backend / infrastructure tasks |
+The predecessor shell is now treated as:
+- provenance
+- evidence
+- source material
+- historical runtime context
 
-Live account-routing and harness truth moves faster than this orientation page. For current operational reality, see `engine/CC65-TOOL-STACK-FINAL.md` and `00-ORCHESTRATION/state/TOOL-STACK-LIVE-STATE.md`.
+This root is now:
+- successor shell
+- redesign substrate
+- primary structure
 
-### Enterprise Roles
+The predecessor shell has been offloaded to Desktop archival lanes such as:
+- [syncrescendence_pre_schematic_design](/Users/system/Desktop/syncrescendence_pre_schematic_design)
+- [syncrescendence-pre-syncrephoenix](/Users/system/Desktop/syncrescendence-pre-syncrephoenix)
+- [syncrescendence-before-full](/Users/system/Desktop/syncrescendence-before-full)
 
-| Agent | Epithet | Role | Model | Machine | Summon |
-|-------|---------|------|-------|---------|--------|
-| **Sovereign** | — | CEO | Human | Both | — |
-| **Commander** | Viceroy | COO | Claude Opus 4.6 | MacBook Air | "Commander, pivot to..." |
-| **Adjudicator** | Executor | CQO | Codex CLI (GPT-5.3-Codex) | Mac mini | "Adjudicator, execute..." |
-| **Cartographer** | Exegete | CIO | Gemini Pro 3.1 | Mac mini | "Cartographer, survey..." |
-| **Psyche** | Synaptarch | CTO | GPT-5.3-codex (OpenClaw) | Mac mini | "Psyche, holistically calibrate..." |
-| **Ajna** | Strategos | CSO | Claude Sonnet 4.5 (OpenClaw, current live runtime) | MacBook Air | "Ajna, illuminate..." |
+## Root Layout
 
-**AjnaPsyche Archon**: Ajna (steering wheel) + Psyche (rudder) = fused executive brain.
+- [AGENTS.md](/Users/system/syncrescendence/AGENTS.md): constitutional source for the successor shell
+- [CLAUDE.md](/Users/system/syncrescendence/CLAUDE.md): compiled harness-facing surface
+- [.claude/CLAUDE.md](/Users/system/syncrescendence/.claude/CLAUDE.md): local Claude Code staging instructions
+- [communications](/Users/system/syncrescendence/communications): prompts, responses, handoffs, logs, assessments
+- [executive](/Users/system/syncrescendence/executive): live executive steering lane
+- [program](/Users/system/syncrescendence/program): backlog and tranche lane
+- [offices](/Users/system/syncrescendence/offices): lawful local offices for agents and harnesses
+- [playbooks](/Users/system/syncrescendence/playbooks): harness and surface doctrine
+- [operators](/Users/system/syncrescendence/operators): validators and proven execution operators
+- [runtime](/Users/system/syncrescendence/runtime): copied runtime evidence from what already worked
+- [pedigree](/Users/system/syncrescendence/pedigree): Rosetta/Intent/Backlog lineage anchors
+- [validated-patterns](/Users/system/syncrescendence/validated-patterns): known-good working patterns staged from the old shell
+- [00-ORCHESTRATION/state/impl](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl): redesign package and shell law
+- [00-ORCHESTRATION/relay/cowork-v1](/Users/system/syncrescendence/00-ORCHESTRATION/relay/cowork-v1): successor-shell relay substrate
+- [pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md): semantic reading of the original Rosetta
+- [pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md): executive reading of the original intent instrument
+- [pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md): queue-authority reading of the old backlog systems
+- [pedigree/originals](/Users/system/syncrescendence/pedigree/originals): local copies of key legacy pedigree artifacts
 
-**Constellation status**: tmux `constellation` session is ANESTHETIZED. Agent dispatch is currently manual (Sovereign-relayed prompts). The repo is the coordination layer. Historical strategy artifacts may still describe Ajna as Kimi-primary; current live runtime truth is Ajna on Claude Sonnet 4.5 via OpenClaw on the MacBook Air.
+## Pedigree Recovery
 
-#### Web Avatars (Sovereign-Operated)
+The successor shell is not built from abstractions alone.
+It also mines the strongest structures from the pre-nuclear shell and forbids the topology mistakes that made that shell decay.
 
-| Avatar | Epithet | Role | Platform | Summon |
-|--------|---------|------|----------|--------|
-| **Augur** | Inquisitor | VERIFIER | Perplexity | "Augur, ascertain..." |
-| **Oracle** | Recon | RECON | Grok | "Oracle, understand..." |
-| **Vizier** | Hermeneut | INTERPRETER | Claude Web | "Vizier, elucidate..." |
-| **Vanguard** | Architect | COMPILER | ChatGPT Web | "Vanguard, formulate..." |
-| **Diviner** | Illuminator | DIGESTOR | Gemini Web | "Diviner, elaborate..." |
+Primary archaeology artifact:
+- [PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md)
+- [SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md)
+- [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
 
----
+## Design Principle
 
-## Repository Structure
+As above, so below:
 
-```
-corpus/              Knowledge corpus (5,954 files across 22 semantic topic folders)
-  NUCLEOSYNTHESIS-MAP.md   Classification authority
-canon/               Verified canonical knowledge (PROTECTED, 164 files)
-  sn/                Syncrescript notation
-engine/              Prompts for agent dispatch
-  02-ENGINE/         Subcategory/audit prompts
-agents/              Agent offices
-  commander/outbox/handoffs/   Session handoffs (HANDOFF-CC{N}.md)
-00-ORCHESTRATION/    Strategic coordination
-  state/             Implementation backlog + map
-ascertescence/       Triangulation session artifacts
-  oracle/            Oracle prompts + responses
-  canon-remediation/ Canon remediation passes
-memory/              Operational state (burndown, logs, legacy handoffs)
--INBOX/              Commander inbox for triangulation responses
-  commander/00-INBOX0/
-```
+- one root
+- one constitutional source
+- explicit lanes
+- operator law
+- staged, lossless migration
+- provenance preserved, not discarded
 
----
+## Immediate Rule of Thumb
 
-## Ground Truth
+If a new artifact is created for redesign work:
+- prefer this canonical shell over the archived predecessor shell
+- put it in the correct lane
+- keep lineage clear
+- compact repeated patterns into playbooks or operators quickly
 
-The **repository** is ground truth. All platforms verify against it via:
-- **Fingerprint**: 8-character git commit hash
-- **Handoff Token**: State marker transferred between platforms
+## Validation
 
-### The Three-Word Mnemonic: CAPTURE > DISPATCH > RETURN
-
-1. **CAPTURE** — Seize the idea before it evaporates. Raw form is fine.
-2. **DISPATCH** — Route to the right platform for processing.
-3. **RETURN** — Commit the processed artifact to the repository. Work doesn't exist until it's in the repo.
-
----
-
-## Sovereign Cockpit
-
-### 8-Layer Stack
-```
-1. Ghostty          Terminal emulator (macos-titlebar-style=hidden)
-2. Zsh + P10k       Shell + prompt
-3. tmux + sesh      Terminal multiplexer (session: constellation)
-4. Bun              JavaScript runtime
-5. Neovim/LazyVim   Code editor
-6. Whisper/Piper    Offline STT/TTS
-7. Doom Emacs       Observation Layer (standalone)
-8. Cursor           AI IDE (standalone)
-```
-
-### Display Geometry
-- **Display**: 5120x1440 ultrawide
-- **Grid**: 6 lanes horizontal, center 4 = cockpit
-- **Font**: Liga SFMono Nerd Font, size 13 = 93 chars/lane
-
-### Neural Bridge (MBA ↔ Mac mini)
-| Direction | SSH Alias | User@Host |
-|-----------|-----------|-----------|
-| MBA → Mac mini | `mini` | `home@M1-Mac-mini.local` |
-| Mac mini → MBA | `macbook-air` | `system@Lisas-MacBook-Air.local` |
-
-Health check: `ssh -o ConnectTimeout=5 mini hostname` — NEVER use ping (ICMP blocked by Stealth Mode).
-
----
-
-## Semantic Notation (SN)
-
-~80% token compression via hybrid symbol/operator/block notation.
-
-**Symbols**: Psi = Syncrescendence, K = CANON, O = ENGINE, Sigma = SOURCE, Delta = DIRECTIVE, Lambda = LOG
-**Operators**: `::` expands, `|` constrains, `>>` transforms, `:=` binds, `=>` implies, `<->` bidirectional
-
----
-
-## When In Doubt
-
-1. Check the repository (ground truth)
-2. Verify the fingerprint matches
-3. Ask the Sovereign for clarification
-4. Never assume context not explicitly provided
-
----
-
-## Key References
-
-| Reference | Path |
-|-----------|------|
-| Constitutional law | `AGENTS.md` |
-| Classification authority | `corpus/NUCLEOSYNTHESIS-MAP.md` |
-| Session handoffs | `agents/commander/outbox/handoffs/` |
-| Config generation | `make validate`, `make configs`, `make reconcile` |
-
-*This document provides orientation. For operational law, see AGENTS.md.*
+- `make inventory`: write the current artifact-law inventory
+- `make check-artifact-law`: fail if prompt/response/handoff/root placement drifts outside the shell law

@@ -1,8 +1,0 @@
-timestamp_unix=1771807744
-timestamp_iso=2026-02-23T00:49:04Z
-agent=adjudicator
-pid=32331
-state=IDLE
-detail=polling
-current_task=TASK-20260221-ecosystem_health
-tmux_pane=constellation:1.5

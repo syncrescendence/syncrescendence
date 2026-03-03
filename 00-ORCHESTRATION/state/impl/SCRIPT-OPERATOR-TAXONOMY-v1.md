@@ -164,7 +164,7 @@ Each operator should answer:
 ## 3.1 Stage operators
 
 - [render-configs.py](/Users/system/syncrescendence/render-configs.py)
-- packet staging scripts under [CLI-WEB-GAP/scripts](/Users/system/syncrescendence/CLI-WEB-GAP/scripts)
+- packet staging scripts under [operators/cli-web-gap](/Users/system/syncrescendence/operators/cli-web-gap)
 
 ## 3.2 Validate operators
 

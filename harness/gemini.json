@@ -1,8 +1,0 @@
-{
-  "name": "gemini",
-  "extension_sources": [
-    "GEMINI-EXT.md"
-  ],
-  "generated_filename": "GEMINI.md",
-  "root_sync": true
-}

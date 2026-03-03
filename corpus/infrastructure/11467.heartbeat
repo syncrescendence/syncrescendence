@@ -1,8 +1,0 @@
-timestamp_unix=1771807753
-timestamp_iso=2026-02-23T00:49:13Z
-agent=commander
-pid=32319
-state=IDLE
-detail=polling
-current_task=none
-tmux_pane=constellation:1.3

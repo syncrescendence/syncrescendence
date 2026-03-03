@@ -1,7 +1,0 @@
-canon/
-AGENTS.md
-orchestration/00-ORCHESTRATION/state/ARCH-*
-engine/REF-ROSETTA_STONE.md
-agents/commander/AUTONOMY_LEDGER.json
-orchestration/00-ORCHESTRATION/state/REF-SCOPE_PROBE_SUITE.yaml
-orchestration/00-ORCHESTRATION/state/REF-IMMUTABLE_CORE_PATHS.txt

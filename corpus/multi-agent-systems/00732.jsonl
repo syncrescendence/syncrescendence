@@ -1,1 +1,0 @@
-{"schema_version": "1.0.0", "generated_at": "2026-02-27T01:17:38Z", "state": "AUDIT_AMBIENT", "energy_audit_status": "PASS", "ops_checked": 0, "max_net_new_nodes": 0, "reason_codes": ["THRESHOLD_EXCEEDED"]}
