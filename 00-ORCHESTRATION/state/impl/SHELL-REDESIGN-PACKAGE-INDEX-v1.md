@@ -56,6 +56,9 @@
 16. [TRANSITIONAL-ALLOWLIST-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/TRANSITIONAL-ALLOWLIST-v1.md)  
    Named temporary exceptions for root files and live transitional lanes.
 
+17. [PLAYBOOK-COMPACTION-CANDIDATES-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/PLAYBOOK-COMPACTION-CANDIDATES-v1.md)  
+   Ranking of the first harness and surface playbooks that should be institutionalized.
+
 ---
 
 ## Current Status
@@ -81,8 +84,8 @@ The first executable derivative now exists:
 ## Next Logical Derivations
 
 1. target physical lane charters / README files
-2. first playbook compaction candidates
-3. first migration tranche implementation beyond inventory mode
+2. first migration tranche implementation beyond inventory mode
+3. first playbook compaction pass
 4. first lane-charter physicalization
 
 ---
