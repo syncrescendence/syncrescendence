@@ -1,0 +1,1070 @@
+{
+  "handoffs": [
+    {
+      "note": "handoff outside approved handoff lanes",
+      "path": "memory/HANDOFF-CC52.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "handoff outside approved handoff lanes",
+      "path": "memory/HANDOFF-CC53.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "handoff outside approved handoff lanes",
+      "path": "memory/HANDOFF-CC54.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC72b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC73b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC68a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC71b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC65b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC58.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC70b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC74b.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC59.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC63-TOOLSTACK.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC56.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC62.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC57.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC60.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC55.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC61.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC74a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC75a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC63a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC77a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC76a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC66a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC72a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC73a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC67a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC71a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC65a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC64a.md",
+      "status": "live"
+    },
+    {
+      "note": "handoff in approved live or successor lane",
+      "path": "agents/commander/outbox/handoffs/HANDOFF-CC70a.md",
+      "status": "live"
+    }
+  ],
+  "prompts": [
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-ORACLE-cc78a-architectural-remediation-hypersensing.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC76a-CLAUDE-CODE.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CRUSH-PHASE2-OVERLAP-VERIFICATION.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC76a-MEMORY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-PERPLEXITY-cc75-google-youtube-xai-verification.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-MEMORY_ARCHITECTURE_SENSING.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-CRUSH-PHASE2-THESIS.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-NUCLEOSYNTHESIS-CC55.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC71a-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-FOLLOWUP-OPENCLAW-ARCHITECTURE.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-PERPLEXITY-cc76-cli-web-gap-verification.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC76a-MAS.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-HYPERSENSING-AJNA-ONTOLOGY-CC72b.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC76a-AI-MODELS.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-CLUSTERING-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-PERPLEXITY-cc76-cli-web-gap-followup.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-ORACLE-cc75-surface-taxonomy.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-HEALTH-PSYCHOLOGY-CC73a.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-BOUNDARY-CONTRACT-CC73.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC67-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-FOLLOWUP-COMMANDER-CAPABILITIES.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-GROK-LIVE_LEDGER_SENSING.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC71a-GEOPOLITICS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-ORACLE-cc76-cli-web-gap-followup.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-FOLLOWUP-SUBSCRIPTION-AUDIT.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-CARTOGRAPHER-NUCLEOSYNTHESIS-CC55.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-AUTONOMOUS-EXECUTION-CC66b.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CLUSTERING-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-SCAFFOLD_CONSENSUS.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-NEOCORPUS-FIDELITY-VERIFICATION.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC71a-REMEDIATION-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-PUBLICCHECK-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-CARTOGRAPHER-CRUSH-PHASE2-SYNTHESIS.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC68-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-NEARDUPES-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-ORACLE-cc78a-architectural-remediation-hypersensing-response.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC75a.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-SUBCATEGORY-CC58.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-CARTOGRAPHER-BOTTOMUP-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-FULL-STRATEGY-REVIEW.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-ORACLE-cc76-cli-web-gap-hypersensing.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-PERPLEXITY-cc78a-architectural-remediation-verification.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-VANGUARD-MEMORY_ARCHITECTURE_ENGINEERING.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC69a-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-CARTOGRAPHER-SUBCATEGORY-CC58-.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PACKET-PERPLEXITY-cc78a-architectural-remediation-verification-response.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-NUCLEOSYNTHESIS-CC55.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC75a-BATCH2.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-CARTOGRAPHER-CLUSTERING-CC53.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-TOOL-STACK-INTEL.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-SPOTCHECK-CC59-v2.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-CRUSH-PHASE2-OVERLAP-NOMINATION.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-DIVINER-MEMORY_ARCHITECTURE_REASONING.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-CONFIG-ARCHITECTURE-CC71b.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-SPOTCHECK-CC59-v3.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-HYPERSENSING-STACK-CONVERGENCE-CC72b-FOLLOWUP.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC70-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-CC66-NEOCORPUS-FIDELITY.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-VERIFY-CC75a-BATCH3.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ORACLE-CONFIG-CONSENSUS-ARCHITECTURE.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/PROMPT-ADJUDICATOR-SPOTCHECK-CC59.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/02-ENGINE/PROMPT-CARTOGRAPHER-SUBCATEGORY-CC58-v2.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/02-ENGINE/PROMPT-CARTOGRAPHER-SUBCATEGORY-CC58.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact in an allowed or successor lane",
+      "path": "engine/02-ENGINE/PROMPT-ORACLE-SUBCATEGORY-CC58.md",
+      "status": "live"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/canon-remediation/PROMPT-CANON-REMEDIATION-PASS5-SCHEMA.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/canon-remediation/PROMPT-CANON-REMEDIATION-PASS7-NUMBERING.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/canon-remediation/PROMPT-CANON-REMEDIATION-PASS6-GRAPH.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/canon-remediation/PROMPT-DIVINER-ASCERTESCENCE-CC49.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/canon-remediation/PROMPT-CANON-REMEDIATION-PASS8-RATIFICATION.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-CANON-REMEDIATION-PASS5-SCHEMA.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-ORACLE-NUCLEOSYNTHESIS-CC46-PASS1.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-ORACLE-NUCLEOSYNTHESIS-CC46-PASS4.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-ORACLE-CASCADE-AUDIT-CC48.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-CANON-REMEDIATION-PASS7-NUMBERING.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-CANON-REMEDIATION-PASS6-GRAPH.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-CANON-REMEDIATION-PASS8-RATIFICATION.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-ORACLE-NUCLEOSYNTHESIS-CC46-PASS3.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "prompt-like artifact outside approved prompt lanes",
+      "path": "ascertescence/oracle/PROMPT-ORACLE-NUCLEOSYNTHESIS-CC46-PASS2.md",
+      "status": "misfiled"
+    }
+  ],
+  "responses": [
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-CANON-REMEDIATION-PASS5.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-ASCERTESCENCE-CC49-cli.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-CANON-REMEDIATION-PASS8.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-CANON-REMEDIATION-PASS7.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-ASCERTESCENCE-CC49-web.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/canon-remediation/RESPONSE-CANON-REMEDIATION-PASS6.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC45-KNOWLEDGE-TRIAGE.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-CANON-REMEDIATION-PASS5.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC44-PASS2.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC44-PASS3.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC46-PASS1.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC46-PASS4.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC46-PASS3.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-CANON-REMEDIATION-PASS8.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC46-PASS2.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-CASCADE-AUDIT-CC48.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-CANON-REMEDIATION-PASS7.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC44.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC45-SEMANTIC-AUDIT.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "ascertescence/oracle/RESPONSE-CANON-REMEDIATION-PASS6.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact outside approved response lanes",
+      "path": "00-ORCHESTRATION/relay/cowork-v1/artifacts/outgoing/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md",
+      "status": "misfiled"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CC66-NEOCORPUS-FIDELITY.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-CARTOGRAPHER-NUCLEOSYNTHESIS-CC55.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC75a-BATCH2-CODEX.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-AUTONOMOUS-EXECUTION-CC66b.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-ANTIFRAGILE_SCAFFOLD.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-CRUSH-PHASE2-THESIS.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-SCAFFOLD_CONSENSUS.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC75a-BATCH3.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC76a-CLAUDE-CODE.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-NUCLEOSYNTHESIS-CC55.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-CARTOGRAPHER-SUBCATEGORY-CC58-.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-cc76-cli-web-gap-followup.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-VANGUARD-ANTIFRAGILE_SCAFFOLD.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-FULL-STRATEGY-REVIEW.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CC75a-NEOCORPUS-VERIFICATION.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CC68-NEOCORPUS-FIDELITY.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-CARTOGRAPHER-CRUSH-PHASE2-SYNTHESIS.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-PERPLEXITY-cc75-google-youtube-xai-verification.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC75a-BATCH2.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-cc75-surface-taxonomy.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CRUSH-PHASE2-OVERLAP-VERIFICATION.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC76a-AI-MODELS.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-HYPERSENSING-STACK-CONVERGENCE-CC72b-FOLLOWUP.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-SUBSCRIPTION-DECISION-SPRINT.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CC69a-NEOCORPUS-FIDELITY.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-CC67-NEOCORPUS-FIDELITY.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-HEALTH-PSYCHOLOGY-CC73a.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-CARTOGRAPHER-SUBCATEGORY-CC58-v2.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC76a-MAS.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ADJUDICATOR-VERIFY-CC76a-MEMORY.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-PERPLEXITY-cc76-cli-web-gap-verification.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-SUBCATEGORY-CC58.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-DIVINER-ANTIFRAGILE_SCAFFOLD.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-cc76-cli-web-gap-hypersensing.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-TOOL-STACK-INTEL.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-NUCLEOSYNTHESIS-CC55.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-CRUSH-PHASE2-OVERLAP-NOMINATION.md",
+      "status": "transitional"
+    },
+    {
+      "note": "response-like artifact in transitional or successor response lane",
+      "path": "-INBOX/commander/00-INBOX0/RESPONSE-ORACLE-OPENCLAW-ARCHITECTURE.md",
+      "status": "transitional"
+    }
+  ],
+  "root_operators": [
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "sanitize-openclaw-events.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "youtube_feed_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "render-configs.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "normalize_event_ledger.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "exocortex_event_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "install-mini-constellation-launchagent.sh",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "github_issue_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "sync-openclaw.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "cloudflare_domain_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "ontology_v1.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "artifact_law_inventory.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "channel_surface_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "validate-configs.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "bootstrap-mac-mini.sh",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "obsidian_repo_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "collect-mini-constellation-status.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "google_model_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "hydrate-openclaw-channels.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "collect-tooling-surface-status.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "constellation-mini-stage1.sh",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "manus_checkpoint_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "xai_model_bridge.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "reconcile-ajna-events.py",
+      "status": "transitional-root"
+    },
+    {
+      "note": "root-level operator is allowlisted as transitional during shell redesign",
+      "path": "finalize_cowork_relay_job.py",
+      "status": "transitional-root"
+    }
+  ],
+  "status_buckets": {
+    "handoffs": {
+      "live": 29,
+      "misfiled": 3
+    },
+    "prompts": {
+      "live": 64,
+      "misfiled": 14
+    },
+    "responses": {
+      "misfiled": 21,
+      "transitional": 39
+    },
+    "root_operators": {
+      "transitional-root": 24
+    }
+  },
+  "summary": {
+    "handoff_like": 32,
+    "prompt_like": 78,
+    "response_like": 60,
+    "root_operators": 24,
+    "unknown_top_level_entries": 3
+  },
+  "top_level_entries": [
+    "-INBOX",
+    ".claude",
+    ".env.graphiti",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".openclaw",
+    "00-ORCHESTRATION",
+    "AGENTS.md",
+    "CLAUDE-EXT.md",
+    "CLAUDE.md",
+    "CLI-WEB-GAP",
+    "GEMINI-EXT.md",
+    "GEMINI.md",
+    "HEARTBEAT.md",
+    "IDENTITY.md",
+    "Makefile",
+    "OPENCLAW-EXT.md",
+    "README.md",
+    "SOUL.md",
+    "TOOLS.md",
+    "USER.md",
+    "__pycache__",
+    "agents",
+    "artifact_law_inventory.py",
+    "ascertescence",
+    "bootstrap-mac-mini.sh",
+    "canon",
+    "channel_surface_bridge.py",
+    "cloudflare_domain_bridge.py",
+    "collect-mini-constellation-status.py",
+    "collect-tooling-surface-status.py",
+    "configs",
+    "constellation-mini-stage1.sh",
+    "corpus",
+    "engine",
+    "exocortex_event_bridge.py",
+    "finalize_cowork_relay_job.py",
+    "github_issue_bridge.py",
+    "google_model_bridge.py",
+    "harness",
+    "hydrate-openclaw-channels.py",
+    "install-mini-constellation-launchagent.sh",
+    "machine",
+    "manus_checkpoint_bridge.py",
+    "memory",
+    "neocorpus",
+    "normalize_event_ledger.py",
+    "obsidian_repo_bridge.py",
+    "ontology_v1.py",
+    "ontology_v1_schema.sql",
+    "reconcile-ajna-events.py",
+    "render-configs.py",
+    "requirements-ontology.txt",
+    "sanitize-openclaw-events.py",
+    "sync-openclaw.py",
+    "validate-configs.py",
+    "xai_model_bridge.py",
+    "youtube_feed_bridge.py"
+  ],
+  "unknown_top_level_entries": [
+    "__pycache__",
+    "ontology_v1_schema.sql",
+    "requirements-ontology.txt"
+  ]
+}

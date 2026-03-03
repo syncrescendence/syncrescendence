@@ -47,6 +47,9 @@
 13. [MIGRATION-TRANCHE-01-v1.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/impl/MIGRATION-TRANCHE-01-v1.md)  
    First low-risk tranche for measured shell change.
 
+14. [ARTIFACT-LAW-INVENTORY.md](/Users/system/syncrescendence/00-ORCHESTRATION/state/ARTIFACT-LAW-INVENTORY.md)  
+   First inventory-mode output measuring the current shell against the redesign law.
+
 ---
 
 ## Current Status
@@ -63,14 +66,18 @@ It does **not** yet:
 
 It **does** define the legal shell those future operations must obey.
 
+The first executable derivative now exists:
+
+- inventory-mode artifact-law scan via `make artifact-law-inventory`
+
 ---
 
 ## Next Logical Derivations
 
 1. target physical lane charters / README files
-2. implement validator inventory mode
-3. define lane-status matrix and allowlist
-4. first playbook compaction candidates
+2. define lane-status matrix and allowlist
+3. first playbook compaction candidates
+4. first migration tranche implementation beyond inventory mode
 
 ---
 

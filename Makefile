@@ -1,7 +1,7 @@
 # Syncrescendence Makefile
 # Standard targets for repository operations
 
-.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help oracle-packet-help perplexity-packet-help notebooklm-packet-help claude-cowork-packet-help oracle-response-bridge-help perplexity-response-bridge-help notebooklm-response-bridge-help claude-cowork-response-bridge-help youtube-feed-bridge-help xai-model-bridge-help google-model-bridge-help cowork-relay-stage-help cowork-relay-finalize-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
+.PHONY: configs validate reconcile deploy-ajna sync-openclaw hydrate-openclaw-channels tooling-surface-status artifact-law-inventory cloudflared-version ontology-domain-health-edge reconcile-ajna-events reconcile-ajna-events-project reconcile-ajna-events-project-domain sanitize-openclaw-events normalize-event-ledger ontology-init ontology-project ontology-run ontology-smoke ontology-domain-health obsidian-bridge-help exocortex-bridge-help manus-checkpoint-help cloudflare-domain-bridge-help github-issue-bridge-help channel-surface-bridge-help oracle-packet-help perplexity-packet-help notebooklm-packet-help claude-cowork-packet-help oracle-response-bridge-help perplexity-response-bridge-help notebooklm-response-bridge-help claude-cowork-response-bridge-help youtube-feed-bridge-help xai-model-bridge-help google-model-bridge-help cowork-relay-stage-help cowork-relay-finalize-help bootstrap-mini revive-mini-constellation constellation-mini-status mini-constellation-snapshot install-mini-constellation-launchagent sync clean sync-checkpoint tree help
 
 PYTHON ?= python3
 HOSTNAME := $(shell hostname -s)
@@ -43,6 +43,10 @@ hydrate-openclaw-channels:
 tooling-surface-status:
 	@$(PYTHON) collect-tooling-surface-status.py
 	@echo "✓ Local tooling/auth/domain status report refreshed"
+
+artifact-law-inventory:
+	@$(PYTHON) artifact_law_inventory.py
+	@echo "✓ Artifact-law inventory report refreshed"
 
 cloudflared-version:
 	@cloudflared --version
@@ -179,6 +183,7 @@ help:
 	@echo "  make sync-openclaw    - Snapshot live OpenClaw runtime back into repo state"
 	@echo "  make hydrate-openclaw-channels - Hydrate local OpenClaw Slack/Discord tokens from Keychain"
 	@echo "  make tooling-surface-status - Write repo-safe local auth/domain readiness status"
+	@echo "  make artifact-law-inventory - Inventory the current shell against redesign artifact-law conventions"
 	@echo "  make cloudflared-version - Verify local Cloudflare Tunnel client is installed"
 	@echo "  make reconcile-ajna-events - Ingest Ajna event files from OpenClaw workspace"
 	@echo "  make reconcile-ajna-events-project - Reconcile Ajna events and POST them to local ontology"
