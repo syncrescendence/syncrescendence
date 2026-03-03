@@ -56,6 +56,7 @@ It also mines the strongest structures from the pre-nuclear shell and forbids th
 
 Primary archaeology artifact:
 - [PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md)
+- [SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md)
 
 ## Design Principle
 

@@ -73,3 +73,12 @@
    Status: completed tranche 04
 2. bind the successful run more tightly to operator and playbook compaction so it becomes a true reusable worker primitive  
    Vocabulary: `validated pattern`, `operator`, `playbook`
+
+### Tranche H — Executive and Numbered-Shell Recovery
+
+1. preserve the executive meaning of `-SOVEREIGN` without preserving its topological form  
+   Status: completed pedigree pass
+2. preserve the semantic hierarchy encoded by `00-ORCHESTRATION`, `01-CANON`, `02-ENGINE`, `04-SOURCES`, `05-SIGMA`  
+   Status: completed pedigree pass
+3. use that recovered hierarchy to guide future physicalization of successor-shell lanes rather than flattening by taste alone  
+   Status: active

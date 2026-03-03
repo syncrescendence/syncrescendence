@@ -18,6 +18,7 @@ This index exists so the sandbox can be navigated without depending on legacy-re
 - [SCRIPT-OPERATOR-TAXONOMY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/SCRIPT-OPERATOR-TAXONOMY-v1.md)
 - [LANE-CHARTERS-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/LANE-CHARTERS-v1.md)
 - [PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/PRE-SYNCREPHOENIX-ARCHAEOLOGY-v1.md)
+- [SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl/SOVEREIGN-AND-NUMBERED-SHELL-ARCHAEOLOGY-v1.md)
 
 ## Live Lanes
 
