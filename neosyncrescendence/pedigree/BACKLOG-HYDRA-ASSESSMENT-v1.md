@@ -2,9 +2,9 @@
 
 **Status**: pedigree assessment  
 **Primary sources**:
-- [DYN-BACKLOG.md](/Users/system/Desktop/syncrescendence-before-full/00-ORCHESTRATION/state/DYN-BACKLOG.md)
-- [IMPLEMENTATION-BACKLOG.md](/Users/system/Desktop/syncrescendence-before-full/00-ORCHESTRATION/state/IMPLEMENTATION-BACKLOG.md)
-- [RENDEZVOUS-SUMMIT-CC34-BACKLOG_MANAGEMENT.md](/Users/system/Desktop/syncrescendence-pre-syncrephoenix/-SOVEREIGN/RENDEZVOUS-SUMMIT-CC34-BACKLOG_MANAGEMENT.md)
+- [DYN-BACKLOG.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/DYN-BACKLOG.original.md)
+- [IMPLEMENTATION-BACKLOG.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/IMPLEMENTATION-BACKLOG.original.md)
+- [RENDEZVOUS-SUMMIT-CC34-BACKLOG_MANAGEMENT.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/RENDEZVOUS-SUMMIT-CC34-BACKLOG_MANAGEMENT.original.md)
 
 ## 0. Executive Reading
 

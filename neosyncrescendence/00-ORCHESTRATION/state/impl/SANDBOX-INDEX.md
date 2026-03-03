@@ -45,6 +45,7 @@ This index exists so the sandbox can be navigated without depending on legacy-re
 - [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
 - [INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md)
 - [BACKLOG-HYDRA-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md)
+- [pedigree/originals](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals)
 - [INTENT-COMPASS.live.md](/Users/system/syncrescendence/neosyncrescendence/executive/INTENT-COMPASS.live.md)
 - [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/neosyncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
 

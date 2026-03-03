@@ -2,7 +2,7 @@
 
 **Status**: pedigree assessment  
 **Purpose**: read the original Rosetta for semantic content rather than treating it only as a missing constitutional role
-**Primary source**: [REF-ROSETTA_STONE.md](/Users/system/syncrescendence/engine/02-ENGINE/REF-ROSETTA_STONE.md)
+**Primary source**: [REF-ROSETTA_STONE.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/REF-ROSETTA_STONE.original.md)
 
 ## 0. Executive Reading
 

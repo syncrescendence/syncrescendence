@@ -3,7 +3,8 @@
 **Status**: pedigree assessment  
 **Primary sources**:
 - [ARCH-INTENTION_COMPASS.md](/Users/system/Desktop/syncrescendence-before-full/00-ORCHESTRATION/state/ARCH-INTENTION_COMPASS.md)
-- [RENDEZVOUS-SUMMIT-CC34-INTENT_COMPASS_MANAGEMENT.md](/Users/system/Desktop/syncrescendence-pre-syncrephoenix/-SOVEREIGN/RENDEZVOUS-SUMMIT-CC34-INTENT_COMPASS_MANAGEMENT.md)
+- [ARCH-INTENTION_COMPASS.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/ARCH-INTENTION_COMPASS.original.md)
+- [RENDEZVOUS-SUMMIT-CC34-INTENT_COMPASS_MANAGEMENT.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/RENDEZVOUS-SUMMIT-CC34-INTENT_COMPASS_MANAGEMENT.original.md)
 
 ## 0. Executive Reading
 

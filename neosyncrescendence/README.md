@@ -52,6 +52,7 @@ The intended end state is inversion:
 - [pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md): semantic reading of the original Rosetta
 - [pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/INTENT-COMPASS-HERMENEUTIC-ASSESSMENT-v1.md): executive reading of the original intent instrument
 - [pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/BACKLOG-HYDRA-ASSESSMENT-v1.md): queue-authority reading of the old backlog systems
+- [pedigree/originals](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals): local copies of key legacy pedigree artifacts
 
 ## Pedigree Recovery
 

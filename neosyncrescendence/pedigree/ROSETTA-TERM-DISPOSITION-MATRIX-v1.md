@@ -2,7 +2,7 @@
 
 **Status**: constitutional triage  
 **Purpose**: classify salient Rosetta terms for successor-shell treatment
-**Primary source**: [REF-ROSETTA_STONE.md](/Users/system/syncrescendence/engine/02-ENGINE/REF-ROSETTA_STONE.md)
+**Primary source**: [REF-ROSETTA_STONE.original.md](/Users/system/syncrescendence/neosyncrescendence/pedigree/originals/REF-ROSETTA_STONE.original.md)
 
 ## Preserve Live
 
