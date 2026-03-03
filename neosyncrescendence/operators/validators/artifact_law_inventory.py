@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-"""Inventory the current repo shell against artifact-law conventions.
-
-This is intentionally inventory-mode only. It reports drift but does not fail
-the build or mutate the worktree.
-"""
+"""Inventory or check the sandbox shell against artifact-law conventions."""
 
 from __future__ import annotations
 
 import json
 from collections import defaultdict
 from dataclasses import asdict, dataclass
+import argparse
 from pathlib import Path
 
 
@@ -47,6 +44,9 @@ ALLOWED_PROMPT_DIRS = (
 ALLOWED_RESPONSE_DIRS = (
     Path("communications") / "responses",
 )
+TRANSIENT_RESPONSE_DIRS = (
+    Path("00-ORCHESTRATION") / "relay" / "cowork-v1" / "artifacts" / "outgoing",
+)
 ALLOWED_HANDOFF_DIRS = (
     Path("communications") / "handoffs",
 )
@@ -72,8 +72,8 @@ def path_in_dir(path: Path, candidate: Path) -> bool:
 
 def classify_prompt(path: Path) -> Finding:
     if any(path_in_dir(path, allowed) for allowed in ALLOWED_PROMPT_DIRS):
-        status = "live" if path.parts[0] == "engine" else "future-lane"
-        note = "prompt-like artifact in an allowed or successor lane"
+        status = "live"
+        note = "prompt-like artifact in the sandbox prompt lane"
     else:
         status = "misfiled"
         note = "prompt-like artifact outside approved prompt lanes"
@@ -82,8 +82,11 @@ def classify_prompt(path: Path) -> Finding:
 
 def classify_response(path: Path) -> Finding:
     if any(path_in_dir(path, allowed) for allowed in ALLOWED_RESPONSE_DIRS):
-        status = "transitional" if path.parts[0] == "-INBOX" else "future-lane"
-        note = "response-like artifact in transitional or successor response lane"
+        status = "live"
+        note = "response-like artifact in the sandbox response lane"
+    elif any(path_in_dir(path, allowed) for allowed in TRANSIENT_RESPONSE_DIRS):
+        status = "transient-runtime"
+        note = "response-like artifact in an approved relay staging lane"
     else:
         status = "misfiled"
         note = "response-like artifact outside approved response lanes"
@@ -92,8 +95,8 @@ def classify_response(path: Path) -> Finding:
 
 def classify_handoff(path: Path) -> Finding:
     if any(path_in_dir(path, allowed) for allowed in ALLOWED_HANDOFF_DIRS):
-        status = "live" if "agents" in path.parts else "future-lane"
-        note = "handoff in approved live or successor lane"
+        status = "live"
+        note = "handoff in the sandbox handoff lane"
     else:
         status = "misfiled"
         note = "handoff outside approved handoff lanes"
@@ -230,7 +233,7 @@ def render_markdown(report: dict[str, object]) -> str:
             return
         for finding in findings:
             lines.append(
-                f"- `{finding['status']}` [{finding['path']}](/Users/system/syncrescendence/{finding['path']}): {finding['note']}"
+                f"- `{finding['status']}` [{finding['path']}](/Users/system/syncrescendence/neosyncrescendence/{finding['path']}): {finding['note']}"
             )
         lines.append("")
 
@@ -242,13 +245,32 @@ def render_markdown(report: dict[str, object]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def has_failures(report: dict[str, object]) -> bool:
+    if report["unknown_top_level_entries"]:
+        return True
+    for key in ("prompts", "responses", "handoffs", "root_operators"):
+        for finding in report[key]:
+            if finding["status"] in {"misfiled", "unexpected-root"}:
+                return True
+    return False
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--format", choices=("both", "json", "md"), default="both")
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+
     report = generate_inventory()
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    JSON_OUT.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
-    MD_OUT.write_text(render_markdown(report))
-    print(f"Wrote {JSON_OUT.relative_to(REPO_ROOT)}")
-    print(f"Wrote {MD_OUT.relative_to(REPO_ROOT)}")
+    if args.format in {"both", "json"}:
+        JSON_OUT.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+        print(f"Wrote {JSON_OUT.relative_to(REPO_ROOT)}")
+    if args.format in {"both", "md"}:
+        MD_OUT.write_text(render_markdown(report))
+        print(f"Wrote {MD_OUT.relative_to(REPO_ROOT)}")
+    if args.check and has_failures(report):
+        return 1
     return 0
 
 

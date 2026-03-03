@@ -43,6 +43,7 @@ This directory is:
 - [pedigree](/Users/system/syncrescendence/neosyncrescendence/pedigree): Rosetta/Intent/Backlog lineage anchors
 - [validated-patterns](/Users/system/syncrescendence/neosyncrescendence/validated-patterns): known-good working patterns staged from the old shell
 - [00-ORCHESTRATION/state/impl](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/state/impl): redesign package and shell law
+- [00-ORCHESTRATION/relay/cowork-v1](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/relay/cowork-v1): sandbox-native relay substrate
 
 ## Design Principle
 
@@ -62,3 +63,8 @@ If a new artifact is created for redesign work:
 - put it in the correct lane
 - keep lineage clear
 - compact repeated patterns into playbooks or operators quickly
+
+## Validation
+
+- `make inventory`: write the current artifact-law inventory
+- `make check-artifact-law`: fail if prompt/response/handoff/root placement drifts outside the sandbox law
