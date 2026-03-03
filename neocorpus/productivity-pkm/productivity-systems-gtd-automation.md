@@ -7,6 +7,7 @@
 - `corpus/productivity-pkm/11013.md` — 21 OpenClaw Prompts for Agent Self-Improvement
 - `corpus/productivity-pkm/03234.md` — Extraction: How to Make Your Agent Learn and Ship While You Sleep (17 atoms)
 - `corpus/productivity-pkm/04590.md` — MECH: source_anneal_pipeline
+- `corpus/productivity-pkm/00231.md` — Full AI life automation audit prompt: 9 domains, 3 phases, automation impact scoring
 
 ## Core Thesis
 Traditional productivity systems (GTD, Todoist workflows) and the emerging agent-driven automation stack (OpenClaw, Agent Skills) are converging. The GTD methodology (capture, clarify, organize, reflect, engage) maps directly onto the agentic workflow: agents capture input, classify tasks, route to appropriate contexts, execute at scheduled intervals, and report results. The difference is that in the agent-driven model, the human shifts from executor to supervisor — the system runs while you sleep (03234) and the human's job is to set direction, review output, and adjust configuration.
@@ -25,7 +26,10 @@ The specification for how agents declare and expose capabilities. A skill is a d
 ### 4. Source Anneal Pipeline (04590)
 A mechanical specification (blueprint-stage; not yet implemented) for processing source material through stages of increasing refinement. This bridges the PKM and productivity domains: the pipeline is both a knowledge management process (extracting, compressing, synthesizing source material) and a productivity system (automated stages with defined inputs, outputs, and quality gates).
 
-### 5. Agent-Learns-While-You-Sleep (03234)
+### 5. The AI Life Automation Audit (00231)
+A structured three-phase methodology for mapping automation opportunities across an entire life. Phase 1 is a conversational audit covering nine domains systematically: primary work, side hustle, personal finance, health/fitness, personal productivity, communication/relationships, home/lifestyle, learning/personal development, and content consumption. Phase 2 produces an automation map scoring each opportunity on time saved, implementation difficulty, cost, and impact level — culminating in a "Top 10 Quick Wins" prioritized by high-impact-to-low-difficulty ratio. Phase 3 delivers implementation guides (what/why/tools/how/pro-tip/setup-time/maintenance) with a phased rollout plan. The methodology enforces discipline: maximum 3-5 questions per message, domain-by-domain progression, user confirmation before advancing. The key design choice is exhaustiveness before optimization — audit everything first, then prioritize. This extends the GTD paradigm: where GTD captures and organizes tasks, the automation audit captures and maps the entire task landscape for delegation to AI or automation tools.
+
+### 6. Agent-Learns-While-You-Sleep (03234)
 The extraction documents an architecture where agents ship work on automated schedules, learn from the outcomes, and improve their own processes. The human sets direction in the morning, reviews output in the evening, and the agent handles the execution cycle in between. This is GTD's "engage" phase fully delegated.
 
 ## Synthesis
