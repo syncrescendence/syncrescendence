@@ -7,6 +7,7 @@ Current staged classes:
 - CLI↔web-gap packet/bridge operators
 - communications migration operators
 - office bootstrap operators
+- office topology refinement operators
 - config operators
 - runtime/reconciliation operators
 - exocortex bridge operators
@@ -19,6 +20,7 @@ Current staged classes:
 - [cli-web-gap](/Users/system/syncrescendence/operators/cli-web-gap)
 - [migrate_communications_chain.py](/Users/system/syncrescendence/operators/migrate_communications_chain.py)
 - [bootstrap_office.py](/Users/system/syncrescendence/operators/bootstrap_office.py)
+- [office](/Users/system/syncrescendence/operators/office)
 - [config](/Users/system/syncrescendence/operators/config)
 - [runtime](/Users/system/syncrescendence/operators/runtime)
 - [exocortex](/Users/system/syncrescendence/operators/exocortex)

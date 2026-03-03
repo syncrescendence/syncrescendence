@@ -123,3 +123,14 @@
    Status: active
 4. keep archival preservation, live promotion, and cautionary pedigree distinct so the shell gains signal without recreating predecessor clutter  
    Vocabulary: `pedigree`, `receipt`, `validated pattern`, `inversion`
+
+### Tranche M — Office Contract Refinement
+
+1. rehouse predecessor office contracts and memory diagnostics as pedigree with receipts  
+   Status: tranche 02 active
+2. refine live office topology so inbox, outbox, and memory have lawful substructure instead of remaining flat shells  
+   Status: active
+3. bind office refinement to reproducible operators and not one-off directory surgery  
+   Vocabulary: `office`, `receipt`, `operator`, `protected zone`
+4. compact role-specific office distinctions into office playbooks without restoring predecessor sprawl  
+   Status: active

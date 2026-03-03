@@ -54,6 +54,20 @@ Each office has:
 - `outbox/`
 - `platform/`
 
+The first refinement layer now also recognizes these lawful sublanes:
+
+- `inbox/pending/`
+- `inbox/active/`
+- `inbox/done/`
+- `inbox/failed/`
+- `inbox/blocked/`
+- `outbox/dispatches/`
+- `outbox/receipts/`
+- `outbox/results/`
+- `memory/journal/`
+- `memory/cache/`
+- `memory/sync/`
+
 This preserves the old strengths:
 
 - local intake
@@ -108,5 +122,6 @@ Forbidden:
 Future offices should be instantiated with:
 
 - [bootstrap_office.py](/Users/system/syncrescendence/operators/bootstrap_office.py)
+- [upgrade_existing_offices.py](/Users/system/syncrescendence/operators/office/upgrade_existing_offices.py)
 
 This keeps office shape reproducible and prevents hand-made drift.
