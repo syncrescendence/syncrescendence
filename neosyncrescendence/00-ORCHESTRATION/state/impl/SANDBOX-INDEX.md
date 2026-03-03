@@ -23,6 +23,7 @@ This index exists so the sandbox can be navigated without depending on legacy-re
 - [program](/Users/system/syncrescendence/neosyncrescendence/program)
 - [playbooks](/Users/system/syncrescendence/neosyncrescendence/playbooks)
 - [operators](/Users/system/syncrescendence/neosyncrescendence/operators)
+- [relay/cowork-v1](/Users/system/syncrescendence/neosyncrescendence/00-ORCHESTRATION/relay/cowork-v1)
 - [runtime](/Users/system/syncrescendence/neosyncrescendence/runtime)
 - [pedigree](/Users/system/syncrescendence/neosyncrescendence/pedigree)
 - [validated-patterns](/Users/system/syncrescendence/neosyncrescendence/validated-patterns)

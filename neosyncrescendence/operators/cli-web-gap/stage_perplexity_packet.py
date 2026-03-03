@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a repo-native Perplexity verification packet."""
+"""Create a sandbox-native Perplexity verification packet."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ import re
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-ENGINE_DIR = REPO_ROOT / "engine"
-INBOX_DIR = REPO_ROOT / "-INBOX" / "commander" / "00-INBOX0"
+PROMPTS_DIR = REPO_ROOT / "communications" / "prompts"
+RESPONSES_DIR = REPO_ROOT / "communications" / "responses"
 
 
 def utc_now() -> str:
@@ -37,9 +37,12 @@ def main() -> int:
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
+    PROMPTS_DIR.mkdir(parents=True, exist_ok=True)
+    RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+
     slug = slugify(args.slug)
-    packet_path = ENGINE_DIR / f"PACKET-PERPLEXITY-{slug}.md"
-    response_path = INBOX_DIR / f"RESPONSE-PERPLEXITY-{slug}.md"
+    packet_path = PROMPTS_DIR / f"PACKET-PERPLEXITY-{slug}.md"
+    response_path = RESPONSES_DIR / f"RESPONSE-PERPLEXITY-{slug}.md"
     if packet_path.exists() and not args.force:
         raise SystemExit(f"Packet already exists: {packet_path}")
 
@@ -55,8 +58,8 @@ def main() -> int:
     body = [
         f"# Perplexity Verification Packet — {args.title}",
         "",
-        f"- Surface: `perplexity_web_surface`",
-        f"- Packet type: `perplexity_verification`",
+        "- Surface: `perplexity_web_surface`",
+        "- Packet type: `perplexity_verification`",
         f"- Created: `{utc_now()}`",
         f"- Slug: `{slug}`",
         f"- Return artifact: `{repo_rel(response_path)}`",
@@ -73,13 +76,7 @@ def main() -> int:
         "",
     ]
     body.extend(f"- {question}" for question in verification_questions)
-    body.extend(
-        [
-            "",
-            "## Acceptable Source Classes",
-            "",
-        ]
-    )
+    body.extend(["", "## Acceptable Source Classes", ""])
     body.extend(f"- {source}" for source in acceptable_sources)
     body.extend(
         [
@@ -94,12 +91,11 @@ def main() -> int:
             "",
             f"- Save or relay the response back into `{repo_rel(response_path)}`",
             "- Keep citations intact in the returned artifact.",
-            "- Return disproofs, caveats, and confidence limits explicitly.",
             "",
             "## Bridge Command",
             "",
             "```bash",
-            f"python3 CLI-WEB-GAP/scripts/perplexity_response_bridge.py --dispatch {repo_rel(packet_path)} --response {repo_rel(response_path)} --summary \"<one-line landing summary>\" --project-ontology",
+            f"python3 operators/cli-web-gap/perplexity_response_bridge.py --dispatch {repo_rel(packet_path)} --response {repo_rel(response_path)} --summary \"<one-line landing summary>\"",
             "```",
             "",
         ]

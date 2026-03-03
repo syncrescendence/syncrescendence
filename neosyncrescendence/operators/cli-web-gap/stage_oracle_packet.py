@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a repo-native Oracle web dispatch packet."""
+"""Create a sandbox-native Oracle web dispatch packet."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ import re
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-ENGINE_DIR = REPO_ROOT / "engine"
-INBOX_DIR = REPO_ROOT / "-INBOX" / "commander" / "00-INBOX0"
+PROMPTS_DIR = REPO_ROOT / "communications" / "prompts"
+RESPONSES_DIR = REPO_ROOT / "communications" / "responses"
 
 
 def utc_now() -> str:
@@ -37,26 +37,27 @@ def main() -> int:
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
+    PROMPTS_DIR.mkdir(parents=True, exist_ok=True)
+    RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+
     slug = slugify(args.slug)
-    packet_path = ENGINE_DIR / f"PACKET-ORACLE-{slug}.md"
-    response_path = INBOX_DIR / f"RESPONSE-ORACLE-{slug}.md"
+    packet_path = PROMPTS_DIR / f"PACKET-ORACLE-{slug}.md"
+    response_path = RESPONSES_DIR / f"RESPONSE-ORACLE-{slug}.md"
     if packet_path.exists() and not args.force:
         raise SystemExit(f"Packet already exists: {packet_path}")
 
-    anchors = args.anchor or [
-        "Add at least one repo or GitHub anchor with --anchor.",
-    ]
+    anchors = args.anchor or ["Add at least one sandbox anchor with --anchor."]
     output_contract = args.output_contract or [
         "Lead with your own thesis before consensus or precedent.",
         "Ground the response in the provided anchors.",
-        "Return only what is needed for downstream engineering or decision.",
+        "Return only what is needed for downstream shell design.",
     ]
 
     body = [
         f"# Oracle Dispatch Packet — {args.title}",
         "",
-        f"- Surface: `oracle_web_surface`",
-        f"- Packet type: `oracle_dispatch`",
+        "- Surface: `oracle_web_surface`",
+        "- Packet type: `oracle_dispatch`",
         f"- Created: `{utc_now()}`",
         f"- Slug: `{slug}`",
         f"- Return artifact: `{repo_rel(response_path)}`",
@@ -73,13 +74,7 @@ def main() -> int:
         "",
     ]
     body.extend(f"- {anchor}" for anchor in anchors)
-    body.extend(
-        [
-            "",
-            "## Required Output Contract",
-            "",
-        ]
-    )
+    body.extend(["", "## Required Output Contract", ""])
     body.extend(f"- {line}" for line in output_contract)
     body.extend(
         [
@@ -87,13 +82,12 @@ def main() -> int:
             "## Return Instructions",
             "",
             f"- Save or relay the response back into `{repo_rel(response_path)}`",
-            "- Do not let the response remain only in web-session state.",
-            "- Keep citations and concrete source references where relevant.",
+            "- Keep the response outside transient web-session state.",
             "",
             "## Bridge Command",
             "",
             "```bash",
-            f"python3 CLI-WEB-GAP/scripts/oracle_response_bridge.py --dispatch {repo_rel(packet_path)} --response {repo_rel(response_path)} --summary \"<one-line landing summary>\" --project-ontology",
+            f"python3 operators/cli-web-gap/oracle_response_bridge.py --dispatch {repo_rel(packet_path)} --response {repo_rel(response_path)} --summary \"<one-line landing summary>\"",
             "```",
             "",
         ]

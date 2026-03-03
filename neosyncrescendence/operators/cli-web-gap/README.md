@@ -1,11 +1,13 @@
 # CLI-Web-Gap Operators
 
-These operators are copied from the proven legacy path.
+These operators began as copies of the proven legacy path and are now being
+adapted to run natively inside `neosyncrescendence`.
 
-They are staged here because the new shell should inherit:
+The local contract is:
 - packet generation
-- response bridging
-- relay staging
-- cowork finalization
+- response bridging into sandbox communications
+- relay staging against the sandbox-local `cowork-v1` queue
+- cowork finalization into sandbox event state
 
-without continuing to rely on the legacy root as the only place these tools live.
+This lets the new shell inherit the validated pattern without continuing to rely
+on the condemned repo as the only execution substrate.
