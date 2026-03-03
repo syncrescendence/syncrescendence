@@ -6,13 +6,22 @@
 - 00233.md — "How to be a 100x Engineer Using AI": full stack breakdown, parallel agents, persistent context, plan-first methodology
 - 10870.md — CEO experiment with OpenClaw full-system access: 10-20% productivity gain for executive work vs 10x for operational work
 - 10186.md — Andrew Wilkinson using Opus 4.5/Claude Code: "$100K/month payroll of engineers," personal AI systems
-- 03777.md — Geoffrey Litt: "Minority Report" UI for managing AI agents, hybrid AI approach, flow-state agent management
+- 03777.md — Geoffrey Litt: "Minority Report" UI for managing AI agents, hybrid AI approach, flow-state agent management, kanban visualization, ephemeral UIs
 - 03879.md — Peter Yang "5 Levels of AI Native": voice/meetings/projects → prototyping → apps → personal agents
 - 01791.md — 100T-token study: programming now >50% of LLM token consumption, reasoning models paradigm shift
-- 01812.md — OpenAI Head of Product: GPT 5.1/Codex achieving automation in coding, pharma, support; engineers would "riot" if AI tools removed
+- 01812.md — OpenAI Head of Product: GPT 5.1/Codex achieving automation in coding, pharma, support; engineers would "riot" if AI tools removed; RFT significance; reference architectures
 - 09620.md — Anthropic survey of 1,250 professionals: 86% report time savings, 65% satisfaction, concerns about creative identity
 - 10002.md — David Shapiro "Antidote to AI Brain Rot"
 - 03855.md — "How to Become AI-Proof": AI building/testing/shipping full applications, GPT-5.3 debugging its own training, golf cart vs Tesla analogy
+- 00268.md — Self-driving software: three teams converged on same process, code-as-model-weights, digital twin universes, holdout test sets, continuous cleanup agents
+- 01095.md — Alex Albert: Anthropic's lessons building with Claude Code — explore-plan-code, TDD, headless automation, worktree parallelism, CLAUDE.md hierarchy, image-based UI review
+- 01941.md — Enterprise CTO guidance: "correctness undefined" as root cause of AI project failure, hallucinations as correctness problem
+- 02256.md — Four 2026 predictions: agent-native architecture, designers as power users, new engineer archetype, autonomy-focused training
+- 03012.md — Speed compression: Kilo Code 6 weeks vs Apple years, Hassabis "5% humans can't touch" framing
+- 02014.jsonl — Leadership accountability for AI ROI, top-down prompting practice, AI Measurement Framework for SDLC bottlenecks
+- 02649.md — Claude Cowork: code written exclusively by AI (thin — claim only)
+- 01659.md — NotebookLM → Huxe: next AI breakthrough is seamless daily integration, not smarter models (thin)
+- 01662.md — MCP fixes in progress (thin — no substantive content beyond title)
 
 ## The Orchestration Paradigm
 
@@ -70,6 +79,57 @@ A maturity model (03879):
 ## Agent Management UI Evolution
 
 Current agent management via chat threads makes tracking tasks and understanding progress difficult (03777). The frontier: "Minority Report"-style flow UIs for managing agents where models are fast enough to eliminate task switching. Hybrid approaches — a chat producing a spreadsheet for instant manipulation — combine AI generation with direct manipulation (03777).
+
+Concrete UI patterns emerging: kanban boards with live task status and color codes (tasks turn red when input needed, allowing direct response on the card to unblock agents), ephemeral UIs ("Claude Code Playgrounds") where human and AI visualize and tinker on a problem together at higher bandwidth than code, and direct latent-space manipulation (editing fonts with sliders for semantic dimensions) (03777).
+
+## The Self-Driving Software Thesis
+
+Three independent teams — OpenAI, StrongDM, and a solo founder — converged on the same process without coordination (00268). The shared conclusion: the engineering role has shifted from writing code to designing environments that let agents write code reliably.
+
+**Code as model weights**: StrongDM's strongest idea is to treat generated code as opaque, like neural network weights. Don't read it for correctness — validate through external behavior. This requires rigorous behavioral validation: "Digital Twin Universes" (full API replicas of Okta, Jira, Slack, Google Docs) that let agents run thousands of integration scenarios per hour without rate limits or API costs (00268).
+
+**Holdout test sets**: Test scenarios stored OUTSIDE the codebase as a holdout set. If tests live in the repo, agents can rewrite them to match broken code. External holdout sets cannot be gamed (00268).
+
+**Sustained coherent work**: The capability threshold that made this viable was GPT 5.2 Codex Extra High — before this generation, agents could not sustain complex work over long periods (context rot). Now single agent runs last six hours, producing working features while the team sleeps (00268).
+
+**The new role**: Not "software engineer" anymore. It is engineer, product manager, and agent orchestrator in one — "Senior Agent Native Product Engineer." The combination is rare (00268). One team uses a multi-model workflow: Claude Opus 4.6 for planning (captures intent, edge cases, integration points), then GPT 5.3 Codex for implementation, then Opus again for UI review via Playwright screenshots (00268).
+
+**Continuous cleanup agents**: OpenAI's team used to spend every Friday fixing "AI slop" — agent-generated pattern violations. That did not scale. Now they run recurring agents that scan for violations and open small refactoring PRs. Garbage collection, not spring cleaning (00268).
+
+**Boring technology wins**: Both teams chose composable, stable, well-documented tools because they are well-represented in training data and have stable APIs. Nobody picked anything exotic (00268).
+
+## Anthropic's Own Lessons (Building with Claude at Scale)
+
+Alex Albert's team at Anthropic codified patterns from internal Claude Code usage (01095):
+
+- **Explore-plan-code workflow**: Claude first reads files, then creates a plan (using 'think' for deeper reasoning), then implements. Significantly improves quality over immediate code generation.
+- **TDD with Claude**: Write and commit tests first, then let Claude implement until all tests pass — this maintains focus and provides a verification contract.
+- **Headless automation**: `claude -p` for automation tasks (PR labeling, subjective code review). `--dangerously-skip-permissions` inside isolated containers (no internet) for mass lint fixes or boilerplate.
+- **Git worktree parallelism**: Use git worktrees for parallel Claude sessions on different features — structural isolation beyond terminal tabs.
+- **CLAUDE.md hierarchy**: Root, parent, child, and ~/.claude locations so monorepos automatically inherit both global and per-package guidance.
+- **Image-based UI iteration**: Paste screenshots or file paths for Claude to visually compare mockups vs output and iterate until pixels match.
+- **Codebase onboarding**: Engineers ask "why does this work this way?" and Claude searches git history and code for answers, significantly reducing onboarding time.
+- **gh CLI as super-power**: Claude speaks gh fluently — draft PRs, fix review comments, triage issues, write commit messages that cite history.
+
+## The Correctness Problem in Enterprise Adoption
+
+The primary reason AI projects fail to deliver value is not model intelligence — it is that "correctness" is undefined (01941). When quality criteria are vague, all subsequent architectural choices are meaningless. Humans shift goalposts and attribute unreliability to the AI system rather than their own undefined expectations. Hallucinations are fundamentally a correctness problem, not solely a model problem (01941).
+
+The prescription: before any AI architecture decision, define correctness in terms of claims, evidence, and failure penalties. AI builders who remain vague about quality will experience stalled adoption (01941).
+
+## Organizational Adoption Patterns
+
+**Leadership accountability**: To realize meaningful AI ROI, leadership must own establishing best practices, enabling engineers, measuring impact, and ensuring guardrails. When prompting practice and reflexive AI use is driven top-down, engineers align on highest-value use cases and experience peak productivity gains (02014.jsonl). DX's AI Measurement Framework identifies real SDLC bottlenecks that can be augmented with AI (02014.jsonl).
+
+**Domain-specific automation**: Companies like Amgen use AI to accelerate drug development timelines from months to weeks through automated regulatory documentation (01812). Cost reduction is the unlock for new use cases; reinforcement fine-tuning (RFT) is becoming significant for frontier customers (01812). OpenAI's philosophy: provide reference architectures and harnesses alongside models, not just raw capability (01812).
+
+## Speed Compression and the Near-Term Trajectory
+
+Kilo Code took 6 weeks to build what Apple took years to catch up on — AI supercharges development velocity for those who master it (03012). Demis Hassabis frames the dynamic: AI supercharges the humans who master the remaining 5% machines cannot touch (03012). Anthropic and DeepMind leaders publicly agree AGI is arriving faster than most outsiders expect (03012).
+
+Four predictions for 2026 software evolution (02256): agent-native architecture becomes standard, designers become power users of AI, a new kind of software engineer emerges who directs AI agents rather than writing code, and AI training shifts focus toward autonomy.
+
+The next AI product breakthrough may focus on seamless integration into daily routines rather than simply being smarter — ambient AI over query-response AI (01659).
 
 ## Verification as Core Discipline
 
