@@ -23,6 +23,10 @@ Federal promotion rules still apply:
 
 Local artifact-shape doctrine:
 - [platform/contracts/ARTIFACT-SHAPES-v1.md](/Users/system/syncrescendence/offices/commander/platform/contracts/ARTIFACT-SHAPES-v1.md)
+- [platform/contracts/TASK-ENVELOPE-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/TASK-ENVELOPE-TEMPLATE.md)
+- [platform/contracts/RECEIPT-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/RECEIPT-TEMPLATE.md)
+- [platform/contracts/RESULT-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/RESULT-TEMPLATE.md)
+- [platform/contracts/CONFIRM-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/CONFIRM-TEMPLATE.md)
 
 Commander should be the cleanest office in the shell:
 - pending work in `inbox/pending`

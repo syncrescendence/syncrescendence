@@ -41,6 +41,13 @@ Every cross-office handoff should include:
 - expected receipt
 - completion or acknowledgement condition
 
+Where possible, use the live local envelopes under:
+
+- [TASK-ENVELOPE-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/TASK-ENVELOPE-TEMPLATE.md)
+- [RECEIPT-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/RECEIPT-TEMPLATE.md)
+- [RESULT-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/RESULT-TEMPLATE.md)
+- [CONFIRM-TEMPLATE.md](/Users/system/syncrescendence/offices/commander/platform/contracts/CONFIRM-TEMPLATE.md)
+
 ## Compaction Targets
 
 This pattern should eventually inform:
