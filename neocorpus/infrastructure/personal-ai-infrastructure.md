@@ -13,7 +13,8 @@
 | Source 02755 | PAI + TELOS system for agent purpose definition; AI-accelerated cybersecurity predictions |
 | Source 03079 | PAI as agency retention in automating economy; permission to fail; UBI; human bifurcation |
 | Source 02782 | Four principles of successful AI builders: architecture portability, principles-based guidance, agent-driven build/maintenance, system as infrastructure |
-| Fusion type | Nucleosynthesis — four sources fused into unified treatment of personal AI infrastructure |
+| Source 00899 | System prompt design for Claude: evidence-grounded thinking, productive uncertainty, reasoning architecture |
+| Fusion type | Nucleosynthesis — five sources fused into unified treatment of personal AI infrastructure |
 
 ---
 
@@ -72,7 +73,19 @@ This means higher-level systems thinking leads to compounding advantages: the pe
 
 ---
 
-## 6. Cybersecurity Implications
+## 6. System Prompt Design as Infrastructure (00899)
+
+Source 00899 provides a unified system prompt architecture for Claude that demonstrates PAI principles in practice. The prompt design encodes five reasoning principles: evidence-grounded thinking (distinguish known from inferred from assumed), causal clarity (mechanisms over correlations), productive uncertainty (quantify confidence, make uncertainty explicit), bias awareness (actively seek disconfirming evidence), and parsimony with purpose (simpler explanations when sufficient, necessary complexity when reality demands it).
+
+The analytical methodology scales cognitive approach to problem complexity: clarify the real question beneath surface requests, generate multiple hypotheses early, hold competing ideas simultaneously until evidence tips the balance, weight evidence types appropriately, and explain mechanisms rather than just outcomes.
+
+The communication architecture mandates substance-first responses (lead with strongest insight, not ceremony), progressive complexity (core insights then layered nuance), recursive deepening (each paragraph deepens rather than merely adds), and transparent reasoning (show process, make assumptions explicit, acknowledge limitations honestly).
+
+This is principles-based guidance (PAI Principle 2) operationalized as a system prompt. The prompt does not prescribe specific behaviors but establishes reasoning architecture that adapts to novel situations — exactly the kind of infrastructure-level AI configuration that PAI advocates over rigid rules.
+
+---
+
+## 7. Cybersecurity Implications
 
 Source 02755 extends PAI into the security domain with two predictions:
 - AI will accelerate cybersecurity testing, compressing what took days into minutes
@@ -96,4 +109,4 @@ TELOS (02755) — a purpose-definition layer for agents within PAI — supersede
 
 **The "knowledge work is safe from automation" assumption breaks against PAI.** Source 03079 names what PAI is a response to: the automation of knowledge work. The prior assumption — held through most of the 2010s — was that knowledge work (analysis, writing, synthesis, judgment) was the durable comparative advantage of educated workers relative to automation. Physical tasks would be automated; cognitive tasks would not. PAI's sovereignty framing inverts this: PAI is necessary precisely because knowledge work is automating, and the question is not whether automation will affect knowledge workers but whether they will own their AI layer or be mediated by platforms that own it for them. The assumption that knowledge work immunity from automation provides stable employment is the obsoleted belief that PAI's design philosophy is built to navigate.
 
-*This entry is the definitive treatment of Personal AI Infrastructure as of 2026-03-01. All distinct reasoning paths from sources 01942, 02755, 03079, and 02782 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*
+*This entry is the definitive treatment of Personal AI Infrastructure as of 2026-03-02. All distinct reasoning paths from sources 01942, 02755, 03079, 02782, and 00899 are carried forward. Subsequent discoveries should be fused into this entry, not appended alongside it.*
