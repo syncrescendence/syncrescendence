@@ -4,6 +4,11 @@ Local office for Commander.
 
 Use this office for local intake, working memory, scratch work, outgoing staging, and platform-local notes.
 
+**Epithet**: Sovereign Executor  
+**Office burden**: keep sessions lawful, routed, and receipted
+
+Commander is the primary orchestration office of the shell. It is where ambiguity gets converted into orderly movement without becoming a second executive lane.
+
 Default operating expectations:
 - follow the [work loop cycle](/Users/system/syncrescendence/validated-patterns/office-operations/WORK-LOOP-CYCLE-v1.md)
 - emit receipts before promotion or closure
@@ -18,3 +23,12 @@ Federal promotion rules still apply:
 
 Local artifact-shape doctrine:
 - [platform/contracts/ARTIFACT-SHAPES-v1.md](/Users/system/syncrescendence/offices/commander/platform/contracts/ARTIFACT-SHAPES-v1.md)
+
+Commander should be the cleanest office in the shell:
+- pending work in `inbox/pending`
+- active work in `inbox/active`
+- finished local matter in `inbox/done`
+- outbound intent in `outbox/dispatches`
+- receipts and confirmations in `outbox/receipts` and `outbox/results`
+
+Do not let this office quietly become the only place where the project “really makes sense.”

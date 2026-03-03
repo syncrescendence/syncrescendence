@@ -61,6 +61,32 @@ Allowed root entries are:
 - `pedigree/`: constitutional ancestry and unresolved heritage anchors
 - `validated-patterns/`: staged “what worked” patterns from the legacy shell
 
+## Federal Offices
+
+The live shell recognizes five primary offices. These are not ornamental titles; they are routing and burden-bearing roles recovered from predecessor pedigree and retained because they improve execution quality.
+
+- `Commander` — **Sovereign Executor**: repo-facing fiduciary operator for orchestration, lawful promotion, and closure discipline.
+- `Adjudicator` — **Quality Gate**: rule-bound verifier for pressure, challenge, receipts, and judgment under evidence.
+- `Ajna` — **Strategos**: long-horizon strategy office for exocortex, orientation, dispatch arbitration, and objective lock.
+- `Cartographer` — **Exegete**: mapping and sensing office for topology, inventories, structural legibility, and large-context surveys.
+- `Psyche` — **Synaptarch**: cohesion office for runtime substrate, constellation continuity, generated-surface hygiene, and technical integration.
+
+These offices are federal surfaces, not isolated personalities.
+
+- the constitution defines their lawful boundaries
+- playbooks define their native grain
+- offices hold local matter before lawful promotion
+- runtime and communications lanes preserve only what survives normalization
+
+## Harness Differentiation Rule
+
+Harnesses are not interchangeable. The shell keeps one constitutional source while allowing each office and harness to retain the operating style that empirically fits its grain.
+
+- Claude-facing surfaces should optimize for execution, consolidation, and lawful promotion.
+- Gemini-facing surfaces should optimize for sensing, mapping, and evidence-pack generation.
+- OpenClaw-facing surfaces should optimize for browser, runtime, and exocortex adjacency while preserving strict promotion boundaries.
+- Review and verification surfaces should remain pressure-first rather than drifting into hidden strategy or hidden canon.
+
 ## Working Rule
 
 When in doubt:

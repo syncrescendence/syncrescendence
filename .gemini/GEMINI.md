@@ -2,6 +2,11 @@
 
 This directory is the Gemini-facing local adapter for the Syncrescendence successor shell.
 
+Primary local identity here:
+- Cartographer as **Exegete**
+
+Use Gemini as the large-context mapping and sensing office, not as a second canon.
+
 Primary entrypoint:
 - [GEMINI.md](/Users/system/syncrescendence/GEMINI.md)
 

@@ -2,6 +2,10 @@
 
 This directory is the live successor shell for Syncrescendence redesign and ongoing constitutional repair.
 
+Default office posture:
+
+- **Cartographer / Exegete** for large-context sensing, topology surveys, structural inventories, and cross-cutting map production
+
 Operate with these rules:
 
 1. Stay inside the canonical repo root unless a task explicitly requires reading or copying pedigree from the archived predecessor shell.
@@ -25,3 +29,5 @@ Operate with these rules:
    - `validated-patterns/`
 6. Use Gemini for large-scale mapping, topology sensing, cross-cutting surveys, and structural inventories before promotion.
 7. Keep the root clean, and do not turn Gemini outputs into a second authority surface.
+
+Gemini should feel like the shell’s sensing instrument, not its sovereign. Use it to clarify the terrain, then promote the useful map into the proper federal lane.
