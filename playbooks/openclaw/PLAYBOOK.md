@@ -15,6 +15,7 @@
 - [openclaw-model-configuration.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-model-configuration.md)
 - [openclaw-communication-channels.md](/Users/system/syncrescendence/playbooks/openclaw/references/openclaw-communication-channels.md)
 - [syncrescendence-openclaw-infrastructure.md](/Users/system/syncrescendence/playbooks/openclaw/references/syncrescendence-openclaw-infrastructure.md)
+- [OPENCLAW-COMMAND-SURFACE-CC79.md](/Users/system/syncrescendence/playbooks/openclaw/references/OPENCLAW-COMMAND-SURFACE-CC79.md)
 
 ## 0. What This Surface Is For
 
@@ -154,6 +155,8 @@ That means:
 - runtime snapshotting matters
 
 The harness is healthy only when it can execute live turns cleanly, not merely when configuration files look plausible.
+
+Command-surface claims must also be verified against live CLI behavior before promotion into operators.
 
 ## 8. Output and Event Doctrine
 
