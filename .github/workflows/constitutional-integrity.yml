@@ -6,14 +6,13 @@ on:
     branches: [main]
     paths:
       - 'AGENTS.md'
-      - 'harness/**'
-      - 'machine/**'
-      - 'render-configs.py'
-      - 'validate-configs.py'
-      - 'reconcile-ajna-events.py'
-      - 'ontology_v1.py'
-      - 'exocortex_event_bridge.py'
       - 'Makefile'
+      - '.github/workflows/constitutional-integrity.yml'
+      - 'operators/**'
+      - 'orchestration/**'
+      - 'communications/**'
+      - 'playbooks/**'
+      - 'program/**'
   pull_request:
     branches: [main]
 
@@ -28,19 +27,42 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile repo scripts
+      - name: Compile tracked Python scripts
+        env:
+          PYTHONPYCACHEPREFIX: /tmp/pycache
         run: |
-          python3 -m py_compile render-configs.py
-          python3 -m py_compile validate-configs.py
-          python3 -m py_compile reconcile-ajna-events.py
-          python3 -m py_compile ontology_v1.py
-          python3 -m py_compile exocortex_event_bridge.py
+          python3 - <<'PY'
+          import py_compile
+          import subprocess
+          import sys
 
-      - name: Render configs (syntax + structure check)
+          files = subprocess.check_output(["git", "ls-files", "*.py"], text=True).splitlines()
+          failures = []
+          for path in files:
+              try:
+                  py_compile.compile(path, doraise=True)
+              except Exception as exc:
+                  failures.append((path, str(exc)))
+          if failures:
+              for path, exc in failures:
+                  print(f"{path}: {exc}")
+              sys.exit(1)
+          print(f"Compiled {len(files)} python files.")
+          PY
+
+      - name: Artifact law inventory check
         run: |
-          python3 render-configs.py \
-            --source AGENTS.md \
-            --harness-dir harness \
-            --machine-dir machine \
-            --output-dir configs \
-            --machine "lisas-macbook-air"
+          make check-artifact-law
+
+      - name: Render effective harness registry
+        run: |
+          make harness-registry-effective
+
+      - name: Verify generated artifacts are committed
+        run: |
+          git diff --exit-code -- \
+            orchestration/state/ARTIFACT-LAW-INVENTORY.json \
+            orchestration/state/ARTIFACT-LAW-INVENTORY.md \
+            orchestration/state/HARNESS-CAPABILITY-REGISTRY-CC79-EFFECTIVE.json \
+            orchestration/state/impl/HARNESS-CAPABILITY-REGISTRY-CC79-EFFECTIVE.md \
+            orchestration/state/impl/HARNESS-PROMOTION-CANDIDATES-CC79-EFFECTIVE.md
