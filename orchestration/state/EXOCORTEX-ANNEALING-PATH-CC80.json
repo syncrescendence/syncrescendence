@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-03-04",
+  "status": "active_execution_contract",
+  "objective": "Converge to a non-duplicative exocortex with repo sovereignty and deterministic surface bridges.",
+  "functional_primaries": {
+    "engineering_execution": {
+      "primary": "linear_surface",
+      "secondary": [
+        "jira_surface"
+      ]
+    },
+    "personal_execution": {
+      "primary": "todoist_surface",
+      "secondary": [
+        "ticktick_surface"
+      ]
+    },
+    "structured_operational_data": {
+      "primary": "airtable_surface",
+      "secondary": []
+    },
+    "sovereign_cognition": {
+      "primary": "obsidian_repo_surface",
+      "secondary": []
+    },
+    "enterprise_governance_wiki": {
+      "primary": "none",
+      "secondary": [
+        "confluence_surface"
+      ]
+    }
+  },
+  "phases": [
+    {
+      "id": "A",
+      "name": "freeze_and_clean_boundaries",
+      "deliverables": [
+        "surface_registry_with_primary_secondary_quarantined",
+        "single_activation_trigger_per_secondary_surface",
+        "policy_check_for_role_and_anti_role_presence"
+      ],
+      "exit_criteria": [
+        "no_ambiguous_surface_ownership",
+        "no_duplicate_primaries_per_function"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "harden_p1_core",
+      "scope": [
+        "obsidian_repo_surface",
+        "linear_surface",
+        "chat_bus"
+      ],
+      "deliverables": [
+        "obsidian_promotion_protocol",
+        "linear_bridge_protocol",
+        "chat_bus_archival_policy"
+      ],
+      "exit_criteria": [
+        "deterministic_durable_paths_for_p1",
+        "lineage_reconstructable_without_full_chat_logs"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "controlled_p2_activation",
+      "deliverables": [
+        "surface_entry_contracts",
+        "overlap_quarantine_rule",
+        "single_real_workload_pilot_per_surface"
+      ],
+      "exit_criteria": [
+        "replay_test_passed_for_each_activated_p2",
+        "lineage_audit_passed_for_each_activated_p2",
+        "no_duplicate_systems_of_record"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "automation_and_compression",
+      "deliverables": [
+        "auto_compaction_flow",
+        "weekly_drift_checks",
+        "deprecation_workflow"
+      ],
+      "exit_criteria": [
+        "drift_checks_scheduled_and_running",
+        "stale_surface_count_trending_down"
+      ]
+    }
+  ],
+  "assignment_matrix": {
+    "commander": [
+      "policy_docs",
+      "wrappers",
+      "capture_enforcement",
+      "repo_native_validators"
+    ],
+    "manus": [
+      "bounded_external_api_execution"
+    ],
+    "human_action_required": [
+      "browser_oauth",
+      "token_rotation",
+      "trust_bound_account_operations"
+    ]
+  },
+  "immediate_next_actions": [
+    "create_EXOCORTEX_SURFACE_REGISTRY_json",
+    "create_SURFACE_ACTIVATION_TRIGGERS_md",
+    "add_surface_role_anti_role_validator",
+    "write_OBSIDIAN_PROMOTION_CONTRACT_md",
+    "write_LINEAR_BRIDGE_CONTRACT_md",
+    "add_weekly_drift_report_scaffold",
+    "open_execution_tickets_with_acceptance_tests"
+  ],
+  "converged_definition": [
+    "one_to_one_primary_mapping_per_function",
+    "deterministic_ingress_egress_for_active_surfaces",
+    "repo_artifacts_as_durable_memory",
+    "new_surface_onboarding_without_architectural_drift"
+  ]
+}

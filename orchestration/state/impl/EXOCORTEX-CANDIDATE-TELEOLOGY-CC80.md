@@ -75,3 +75,8 @@ This contract defines:
 ## Machine-Readable Companion
 
 - [EXOCORTEX-CANDIDATE-TELEOLOGY-CC80.json](/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CANDIDATE-TELEOLOGY-CC80.json)
+
+## Annealed Path Forward
+
+- [EXOCORTEX-ANNEALING-PATH-CC80.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-ANNEALING-PATH-CC80.md)
+- [EXOCORTEX-ANNEALING-PATH-CC80.json](/Users/system/syncrescendence/orchestration/state/EXOCORTEX-ANNEALING-PATH-CC80.json)
