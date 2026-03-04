@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-03-04",
+  "status": "stage0",
+  "surfaces": [
+    {
+      "slug": "obsidian_repo_surface",
+      "epithet": "Vault",
+      "x_factor": "local_first_sovereign_markdown_and_plugin_protocol",
+      "proper_role": "local_sovereign_thinking_and_pre_compaction_synthesis",
+      "anti_role": "federal_source_of_truth_replacement",
+      "integration_priority": "P1"
+    },
+    {
+      "slug": "notion_surface",
+      "epithet": "Studio",
+      "x_factor": "block_database_hybrid_with_narrative_ux",
+      "proper_role": "collaborative_narrative_workspace_for_external_collaboration",
+      "anti_role": "high_governance_enterprise_process_enforcement",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "coda_surface",
+      "epithet": "Control Surface",
+      "x_factor": "programmable_buttons_plus_packs_doc_as_app",
+      "proper_role": "operational_runbooks_with_action_execution_inside_docs",
+      "anti_role": "passive_wiki_archive_only",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "confluence_surface",
+      "epithet": "Archive Grid",
+      "x_factor": "jira_symbiosis_plus_compliance_and_scale",
+      "proper_role": "enterprise_technical_knowledgebase_with_audit_traceability",
+      "anti_role": "personal_pkm_and_rapid_capture",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "linear_surface",
+      "epithet": "Momentum Rail",
+      "x_factor": "high_velocity_low_drag_issue_flow",
+      "proper_role": "default_product_engineering_execution_tracker",
+      "anti_role": "generalized_non_software_bureaucratic_governance",
+      "integration_priority": "P1"
+    },
+    {
+      "slug": "jira_surface",
+      "epithet": "Compliance Engine",
+      "x_factor": "process_enforcement_and_scheme_level_plasticity",
+      "proper_role": "regulated_delivery_program_governance",
+      "anti_role": "lightweight_small_team_execution",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "clickup_surface",
+      "epithet": "Consolidator",
+      "x_factor": "all_in_one_work_os_and_aggregate_logic",
+      "proper_role": "tool_sprawl_consolidation_control_tower",
+      "anti_role": "minimal_scope_issue_tracking_only",
+      "integration_priority": "P3"
+    },
+    {
+      "slug": "basecamp_surface",
+      "epithet": "Calm Capsule",
+      "x_factor": "opinionated_async_calm_and_attention_protection",
+      "proper_role": "bounded_async_project_capsules",
+      "anti_role": "high_customization_workflow_engineering",
+      "integration_priority": "P3"
+    },
+    {
+      "slug": "smartsheet_surface",
+      "epithet": "PMO Grid",
+      "x_factor": "governance_at_scale_via_control_center",
+      "proper_role": "portfolio_pmo_blueprint_factory",
+      "anti_role": "primary_relational_app_modeling",
+      "integration_priority": "P3"
+    },
+    {
+      "slug": "airtable_surface",
+      "epithet": "Relational Workbench",
+      "x_factor": "relational_integrity_at_ui_speed_plus_api_ecosystem",
+      "proper_role": "structured_operational_data_plane_and_internal_app_backend",
+      "anti_role": "partition_heavy_enterprise_pmo_governance",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "ticktick_surface",
+      "epithet": "Temporal Engine",
+      "x_factor": "calendar_task_habit_focus_continuity",
+      "proper_role": "manager_maker_personal_execution_with_time_blocking",
+      "anti_role": "team_canonical_project_system_of_record",
+      "integration_priority": "P2"
+    },
+    {
+      "slug": "todoist_surface",
+      "epithet": "Capture Rail",
+      "x_factor": "universal_cross_platform_low_friction_capture_nlp",
+      "proper_role": "ubiquitous_personal_and_light_shared_action_capture",
+      "anti_role": "deep_temporal_operating_system_alone",
+      "integration_priority": "P2"
+    }
+  ],
+  "non_duplication_contract": {
+    "engineering_execution_primary": "linear_surface",
+    "engineering_compliance_secondary": "jira_surface",
+    "personal_capture_primary": "todoist_surface",
+    "personal_temporal_secondary": "ticktick_surface",
+    "structured_ops_data_primary": "airtable_surface",
+    "enterprise_doc_governance_secondary": "confluence_surface"
+  }
+}
