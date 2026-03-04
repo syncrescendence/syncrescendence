@@ -23,13 +23,32 @@ Primary references:
 4. Every active surface must have deterministic ingress and egress.
 5. If a surface duplicates an existing primary and adds no unique leverage, quarantine it.
 
-## Functional Primaries (Locked)
+## Functional Rails (Locked)
 
-- Engineering execution rail: `linear_surface` (primary), `jira_surface` (compliance-only secondary).
-- Personal execution rail: `todoist_surface` (capture primary), `ticktick_surface` (temporal-depth secondary).
-- Structured operational data rail: `airtable_surface` (primary).
-- Sovereign long-horizon cognition rail: `obsidian_repo_surface` (primary, local-first).
-- Enterprise governance wiki rail: `confluence_surface` (secondary, only when audit burden demands).
+- Repo force multiplier: `obsidian_repo_surface`.
+- Context lakehouse and ontology data center: `notion_surface`.
+- Source-to-canon mutability workflows: `coda_surface`.
+- Technical know-how base: `confluence_surface`.
+- Technical execution in-repo: `linear_surface`.
+- Technical execution outside repo: `jira_surface`.
+- Non-technical program aggregation: `clickup_surface`.
+- Project breakout rooms: `basecamp_surface`.
+- Metaconnections/databasal wiring: `airtable_surface`.
+- Procedural knowledge execution: `ticktick_surface`.
+- Project-based GTD execution: `todoist_surface`.
+- Private manual lane: `things_surface` (non-automated).
+
+## Modality Decision (Agentified vs Headless)
+
+1. `headless` by default when the surface is a wiring/data plane:
+   - `airtable_surface`
+2. `agentified` by default when the surface is primarily human coordination UX:
+   - `confluence_surface`, `clickup_surface`, `basecamp_surface`, `ticktick_surface`, `todoist_surface`
+3. `hybrid` when both UI deliberation and machine integration are first-class:
+   - `obsidian_repo_surface`, `notion_surface`, `coda_surface`, `linear_surface`, `jira_surface`
+4. `manual_only` when platform capabilities block reliable automation:
+   - `things_surface` (no official public API)
+5. Promotion to headless backend is allowed only after stable API-based replay evidence and governance receipts.
 
 ## Phased Path
 
@@ -48,13 +67,16 @@ Exit criteria:
 
 ### Phase B — Harden the P1 Core
 
-Scope: `obsidian_repo_surface`, `linear_surface`, existing chat bus.
+Scope: `obsidian_repo_surface`, `notion_surface`, `coda_surface`, `linear_surface`, `airtable_surface`, existing chat bus.
 
 Deliverables:
 
 1. Obsidian promotion protocol: define exactly which notes can promote into repo artifacts and where.
-2. Linear bridge protocol: map issue state transitions to repo events and artifact expectations.
-3. Chat bus archival policy: classify what is transient chat vs durable decision record.
+2. Notion lakehouse contract: define context classes, ownership, and promotion boundaries.
+3. Coda mutability contract: define source -> candidate -> canon state transitions.
+4. Linear bridge protocol: map issue state transitions to repo events and artifact expectations.
+5. Airtable wiring contract: define canonical keys and relationship contracts for cross-surface joins.
+6. Chat bus archival policy: classify what is transient chat vs durable decision record.
 
 Exit criteria:
 
@@ -63,7 +85,7 @@ Exit criteria:
 
 ### Phase C — Controlled P2 Activation
 
-Scope: `airtable_surface`, `todoist_surface`, `ticktick_surface`, `notion_surface`, `coda_surface`, `confluence_surface`, `jira_surface`.
+Scope: `confluence_surface`, `jira_surface`, `clickup_surface`, `basecamp_surface`, `ticktick_surface`, `todoist_surface`, `things_surface`.
 
 Deliverables:
 
@@ -72,10 +94,12 @@ Deliverables:
    - owner
    - allowed workloads
    - mandatory capture mode
+   - modality class (`agentified`, `headless`, `hybrid`, `manual_only`)
    - promotion destination in repo
 2. A quarantine rule for overlap:
    - if workload can already be completed by a primary + existing bridge, block activation.
 3. One real workload pilot per activated surface before broader use.
+4. `things_surface` governance note: explicit manual-only handling and no automation obligations.
 
 Exit criteria:
 
@@ -112,15 +136,15 @@ Exit criteria:
 - Human actions:
   - any browser OAuth, token rotation, or trust-bound account operations.
 
-## Immediate Next 7 Actions
+## Immediate Next Actions
 
 1. Create `EXOCORTEX-SURFACE-REGISTRY.json` with `tier`, `role`, `anti_role`, `owner`, `status`.
 2. Add `SURFACE-ACTIVATION-TRIGGERS.md` with one explicit trigger per secondary surface.
 3. Add a validator script that fails when a surface artifact omits role/anti-role.
 4. Write `OBSIDIAN-PROMOTION-CONTRACT.md` and wire it to artifact destinations.
-5. Write `LINEAR-BRIDGE-CONTRACT.md` for issue-to-artifact mapping.
-6. Add weekly drift report scaffold under `orchestration/state/impl/`.
-7. Open execution tickets for each action with acceptance tests.
+5. Write `NOTION-LAKEHOUSE-CONTRACT.md`, `CODA-MUTABILITY-CONTRACT.md`, and `LINEAR-BRIDGE-CONTRACT.md`.
+6. Write `AIRTABLE-METACONNECTIONS-CONTRACT.md` for keying/wiring across surfaces.
+7. Add weekly drift report scaffold under `orchestration/state/impl/` and open execution tickets with acceptance tests.
 
 ## Risks and Countermeasures
 

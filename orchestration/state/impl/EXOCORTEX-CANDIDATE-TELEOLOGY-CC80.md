@@ -32,43 +32,56 @@ This contract defines:
 
 ## Teleology Matrix
 
-| Surface | Epithet | X-Factor (from deep dive) | Proper Role in Syncrescendence | Do Not Use It For | Integration Priority |
-|---|---|---|---|---|---|
-| `obsidian_repo_surface` | `Vault` | local-first sovereign markdown + plugin protocol | local sovereign thinking, long-horizon synthesis, private pre-compaction drafting | federal source of truth replacing repo law | `P1` |
-| `notion_surface` | `Studio` | block+database hybrid with strong narrative UX | collaborative narrative workspace when external collaborators need low-friction docs+db | high-governance process enforcement at enterprise scale | `P2` |
-| `coda_surface` | `Control Surface` | programmable buttons + packs (`doc as app`) | operational runbooks that must execute actions from inside docs | passive wiki/archive use where programmability is unnecessary | `P2` |
-| `confluence_surface` | `Archive Grid` | Jira symbiosis + compliance/governance + scale | enterprise technical knowledge base where SDLC traceability/audit requirements matter | personal PKM or rapid ad hoc note capture | `P2` |
-| `linear_surface` | `Momentum Rail` | high-velocity, low-friction software issue flow | default product/engineering execution tracker when speed and focus are paramount | generalized non-software governance bureaucracy | `P1` |
-| `jira_surface` | `Compliance Engine` | process enforcement + scheme/workflow plasticity at enterprise scale | regulated delivery programs needing strict workflow controls and auditability | lightweight builder workflows where setup tax dominates | `P2` |
-| `clickup_surface` | `Consolidator` | all-in-one work OS + aggregate logic (`everything view`) | tool-sprawl consolidation for mixed teams requiring one control tower | minimal teams that only need simple issue/task tracking | `P3` |
-| `basecamp_surface` | `Calm Capsule` | opinionated async calm + attention protection | bounded async project capsules where reduced notification entropy is a feature | high-customization workflow engineering | `P3` |
-| `airtable_surface` | `Relational Workbench` | relational integrity at UI speed + strong ecosystem/API | structured operational data plane and lightweight internal app backend | high-security partition-heavy PMO portfolio governance | `P2` |
-| `ticktick_surface` | `Temporal Engine` | task+calendar+habit+focus continuity | manager-maker personal execution where time-blocking and focus loops are central | team-level canonical project system of record | `P2` |
-| `todoist_surface` | `Capture Rail` | universal cross-platform low-friction capture + strong NLP | ubiquitous personal/family/shared lightweight action capture | deep time-blocked personal operating system by itself | `P2` |
+| Surface | Epithet | X-Factor (from deep dive) | Proper Role in Syncrescendence | Do Not Use It For | Default Modality | Integration Priority |
+|---|---|---|---|---|---|---|
+| `obsidian_repo_surface` | `Vault` | local-first markdown + plugin protocol over a sovereign vault | centralizing repo force multiplier; operator cockpit for navigating and synthesizing repo intelligence inside Obsidian ecosystem | replacing Git-backed constitutional authority | `hybrid` | `P1` |
+| `notion_surface` | `Lakehouse` | narrative blocks + databases with fast contextual composition | context lakehouse and ontology data center for cross-domain context assembly | replacing canonical decision law in repo artifacts | `hybrid` | `P1` |
+| `coda_surface` | `Mutability Engine` | programmable docs (`buttons`, packs, automations) | source-to-canon mutation engine; controlled transition workflows from candidate source to ratified canon | static archive where no transformation workflow is needed | `hybrid` | `P1` |
+| `confluence_surface` | `Know-How Atlas` | enterprise wiki structure + durable technical documentation ergonomics | technical know-how base of Syncrescendence (implementation patterns, runbooks, failure handling) | replacing execution systems or ontology wiring logic | `agentified` | `P2` |
+| `linear_surface` | `Inner Scaffold` | high-velocity software issue flow with low interaction drag | technical work scaffold/container inside repo scope; above each agent's local task list | enterprise cross-domain program management outside repo boundary | `hybrid` | `P1` |
+| `jira_surface` | `Outer Scaffold` | high-control workflow engine for cross-team governance | technical work scaffold/container outside repo (exocortex work, ontology work, multi-program tracks) | replacing Linear for repo-internal execution velocity | `hybrid` | `P2` |
+| `clickup_surface` | `Program Canopy` | all-in-one work OS spanning many work object types | one layer above Jira for non-technical work program aggregation | technical issue-of-record inside repo delivery stream | `agentified` | `P2` |
+| `basecamp_surface` | `Breakout Rooms` | opinionated communication containment and scoped collaboration | project breakout rooms with bounded context and focused async coordination | permanent system-of-record for core architecture decisions | `agentified` | `P2` |
+| `airtable_surface` | `Metaconnector` | relational model + automation/API ecosystem | metaconnections layer; databasal wiring across exocortex, ontology, and repo | narrative knowledge base or human chat surface | `headless` | `P1` |
+| `ticktick_surface` | `Procedure Codex` | checklists + habit + time primitives in one loop | procedural knowledge execution (`checklist manifesto`) | replacing project-level GTD planning container | `agentified` | `P2` |
+| `todoist_surface` | `GTD Rail` | low-friction capture and project/action decomposition | project-based GTD execution rail | deep procedural checklist governance canon | `agentified` | `P2` |
+| `things_surface` | `Quiet Queue` | high-quality personal task UX with no official public API | personal private action lane when manual curation is preferred | automation backbone or machine-to-machine integration surface | `manual_only` | `P4` |
 
 ## Non-Duplication Contract
 
 1. `repo` remains constitutional authority and durable decision plane.
 2. Exocortex surfaces are execution/coordination organs; none become canonical law.
-3. Select one primary per function to avoid mirror systems:
-   - engineering execution rail: `linear_surface` primary, `jira_surface` for compliance-bound programs
-   - personal execution rail: `todoist_surface` primary for capture, `ticktick_surface` when temporal execution depth is required
-   - structured ops data: `airtable_surface` primary relational workbench
-   - enterprise doc governance: `confluence_surface` only when audit/compliance burden justifies it
+3. Distinct rails are function-specific, not interchangeable:
+   - repo force multiplication: `obsidian_repo_surface`
+   - context lakehouse + ontology data center: `notion_surface`
+   - source -> canon mutability workflow: `coda_surface`
+   - technical know-how atlas: `confluence_surface`
+   - technical execution in-repo: `linear_surface`
+   - technical execution out-of-repo: `jira_surface`
+   - non-technical program aggregation: `clickup_surface`
+   - breakout coordination cells: `basecamp_surface`
+   - databasal wiring/metaconnections: `airtable_surface`
+   - procedural checklist execution: `ticktick_surface`
+   - project-based GTD execution: `todoist_surface`
+   - private manual task lane: `things_surface`
 4. All surfaced outputs that alter direction/policy/design must be promoted into repo artifacts.
+5. `things_surface` remains explicitly non-automated until an official supported integration path exists.
 
 ## Architecture Fit (via PM epistemology analysis)
 
-- high volatility + low iteration cost contexts fit empirical rails (`linear_surface`, selected `clickup_surface` use)
-- high governance/compliance contexts fit governance rails (`jira_surface`, `confluence_surface`)
-- optimization-heavy recurring operational contexts fit grid/process rails (`airtable_surface`)
-- personal cognition sovereignty contexts fit local-first rail (`obsidian_repo_surface`)
+- cognition and synthesis plane: `obsidian_repo_surface`, `notion_surface`
+- mutability and canonization plane: `coda_surface`
+- execution plane (technical): `linear_surface` (inside), `jira_surface` (outside)
+- execution plane (non-technical): `clickup_surface`, `basecamp_surface`
+- wiring and integration plane: `airtable_surface`
+- personal execution plane: `todoist_surface`, `ticktick_surface`, `things_surface` (manual lane)
 
 ## Immediate Wiring Plan
 
 1. keep all new candidates at stage0 doctrine until concrete wrapper demand appears.
-2. only operatorize surfaces with clear near-term workload and deterministic ingress/egress.
-3. when onboarding, require: surface owner, auth substrate, capture mode, bridge path, and promotion disposition.
+2. operatorize only surfaces with clear workload and deterministic ingress/egress.
+3. classify each surface as `agentified`, `headless`, `hybrid`, or `manual_only` before onboarding.
+4. when onboarding, require: surface owner, auth substrate, capture mode, bridge path, modality class, and promotion disposition.
 
 ## Machine-Readable Companion
 

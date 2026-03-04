@@ -2,33 +2,41 @@
   "generated_at": "2026-03-04",
   "status": "active_execution_contract",
   "objective": "Converge to a non-duplicative exocortex with repo sovereignty and deterministic surface bridges.",
-  "functional_primaries": {
-    "engineering_execution": {
-      "primary": "linear_surface",
-      "secondary": [
-        "jira_surface"
-      ]
-    },
-    "personal_execution": {
-      "primary": "todoist_surface",
-      "secondary": [
-        "ticktick_surface"
-      ]
-    },
-    "structured_operational_data": {
-      "primary": "airtable_surface",
-      "secondary": []
-    },
-    "sovereign_cognition": {
-      "primary": "obsidian_repo_surface",
-      "secondary": []
-    },
-    "enterprise_governance_wiki": {
-      "primary": "none",
-      "secondary": [
-        "confluence_surface"
-      ]
-    }
+  "functional_rails": {
+    "repo_force_multiplier": "obsidian_repo_surface",
+    "context_lakehouse_ontology_data_center": "notion_surface",
+    "source_to_canon_mutability": "coda_surface",
+    "technical_know_how_base": "confluence_surface",
+    "technical_execution_in_repo": "linear_surface",
+    "technical_execution_outside_repo": "jira_surface",
+    "nontechnical_program_aggregation": "clickup_surface",
+    "project_breakout_rooms": "basecamp_surface",
+    "metaconnections_databasal_wiring": "airtable_surface",
+    "procedural_knowledge_execution": "ticktick_surface",
+    "project_based_gtd_execution": "todoist_surface",
+    "private_manual_lane": "things_surface"
+  },
+  "modality_decision": {
+    "headless": [
+      "airtable_surface"
+    ],
+    "agentified": [
+      "confluence_surface",
+      "clickup_surface",
+      "basecamp_surface",
+      "ticktick_surface",
+      "todoist_surface"
+    ],
+    "hybrid": [
+      "obsidian_repo_surface",
+      "notion_surface",
+      "coda_surface",
+      "linear_surface",
+      "jira_surface"
+    ],
+    "manual_only": [
+      "things_surface"
+    ]
   },
   "phases": [
     {
@@ -49,12 +57,18 @@
       "name": "harden_p1_core",
       "scope": [
         "obsidian_repo_surface",
+        "notion_surface",
+        "coda_surface",
         "linear_surface",
+        "airtable_surface",
         "chat_bus"
       ],
       "deliverables": [
         "obsidian_promotion_protocol",
+        "notion_lakehouse_contract",
+        "coda_mutability_contract",
         "linear_bridge_protocol",
+        "airtable_wiring_contract",
         "chat_bus_archival_policy"
       ],
       "exit_criteria": [
@@ -68,7 +82,8 @@
       "deliverables": [
         "surface_entry_contracts",
         "overlap_quarantine_rule",
-        "single_real_workload_pilot_per_surface"
+        "single_real_workload_pilot_per_surface",
+        "things_surface_manual_only_governance_note"
       ],
       "exit_criteria": [
         "replay_test_passed_for_each_activated_p2",
@@ -111,9 +126,13 @@
     "create_SURFACE_ACTIVATION_TRIGGERS_md",
     "add_surface_role_anti_role_validator",
     "write_OBSIDIAN_PROMOTION_CONTRACT_md",
+    "write_NOTION_LAKEHOUSE_CONTRACT_md",
+    "write_CODA_MUTABILITY_CONTRACT_md",
     "write_LINEAR_BRIDGE_CONTRACT_md",
+    "write_AIRTABLE_METACONNECTIONS_CONTRACT_md",
     "add_weekly_drift_report_scaffold",
-    "open_execution_tickets_with_acceptance_tests"
+    "open_execution_tickets_with_acceptance_tests",
+    "publish_THINGS_MANUAL_ONLY_GOVERNANCE_NOTE"
   ],
   "converged_definition": [
     "one_to_one_primary_mapping_per_function",
