@@ -15,6 +15,16 @@ This is intentionally not product UI. It is a control surface for:
 python3 operators/webshell/syncrescendence_dev_shell.py --repo-root /Users/system/syncrescendence --host 127.0.0.1 --port 8890
 ```
 
+To enable callback POST intake, you must set a token:
+
+```bash
+python3 operators/webshell/syncrescendence_dev_shell.py \
+  --repo-root /Users/system/syncrescendence \
+  --host 127.0.0.1 \
+  --port 8890 \
+  --callback-token "set-a-strong-random-token"
+```
+
 ## Routes
 
 - `GET /health`
@@ -43,5 +53,6 @@ This keeps web ingress aligned with office law and wake-on-inbox semantics.
 ## Security notes
 
 1. Default bind is local loopback (`127.0.0.1`).
-2. Add `--callback-token` to require `X-Sync-Token` on callback POST.
-3. Secrets should not be included in callback payloads.
+2. Callback POST ingestion is disabled unless `--callback-token` is set.
+3. When token is set, callback POST requires `X-Sync-Token`.
+4. Secrets should not be included in callback payloads.

@@ -92,3 +92,12 @@ webshell-smoke:
 	curl -fsS "http://127.0.0.1:$(PORT)/status" > /dev/null
 	curl -fsS "http://127.0.0.1:$(PORT)/docs" > /dev/null
 	echo "webshell smoke passed on :$(PORT)"
+
+webshell-callback-smoke:
+	@test -n "$(PORT)" || (echo "usage: make webshell-callback-smoke PORT=8890 CALLBACK_TOKEN=token" && exit 1)
+	@test -n "$(CALLBACK_TOKEN)" || (echo "usage: make webshell-callback-smoke PORT=8890 CALLBACK_TOKEN=token" && exit 1)
+	curl -fsS -X POST "http://127.0.0.1:$(PORT)/callbacks/generic" \
+	  -H "Content-Type: application/json" \
+	  -H "X-Sync-Token: $(CALLBACK_TOKEN)" \
+	  -d '{"event":"callback-smoke","source":"make"}' > /dev/null
+	echo "webshell callback smoke passed on :$(PORT)"

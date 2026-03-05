@@ -29,6 +29,7 @@ Make targets:
 
 - `make webshell-dev`
 - `make webshell-smoke PORT=8890`
+- `make webshell-callback-smoke PORT=8890 CALLBACK_TOKEN=...`
 
 ## Route Contract
 
@@ -53,9 +54,10 @@ This keeps web ingress aligned with office law and wake-on-inbox.
 ## Security Boundary
 
 1. Default bind is loopback (`127.0.0.1`).
-2. Optional shared token enforcement via `--callback-token` and `X-Sync-Token`.
-3. Artifact serving is prefix-restricted and repo-root constrained.
-4. Secrets remain local; no keychain export or remote broad-secret handoff.
+2. Callback POST ingestion is disabled unless `--callback-token` is configured.
+3. When configured, callback POST requires `X-Sync-Token`.
+4. Artifact serving is prefix-restricted and repo-root constrained.
+5. Secrets remain local; no keychain export or remote broad-secret handoff.
 
 ## What Stage0 Is Not
 

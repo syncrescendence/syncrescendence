@@ -58,9 +58,10 @@ This preserves office-law routing and wake-on-inbox semantics.
 ## Security boundary
 
 1. local loopback bind by default
-2. optional callback token gate via `--callback-token` + `X-Sync-Token`
-3. no keychain export, no broad secret delegation
-4. artifact serving constrained to allowlisted repo prefixes
+2. callback POST ingestion disabled unless `--callback-token` is set
+3. when enabled, callback token gate via `X-Sync-Token`
+4. no keychain export, no broad secret delegation
+5. artifact serving constrained to allowlisted repo prefixes
 
 ## Manus follow-up dispatch
 
@@ -80,3 +81,16 @@ This preserves office-law routing and wake-on-inbox semantics.
 ## Account topology decision landing
 
 - [ACCOUNT-TOPOLOGY-DECISION-CC83.md](/Users/system/syncrescendence/orchestration/state/impl/ACCOUNT-TOPOLOGY-DECISION-CC83.md)
+
+## Webshell risk decision landing
+
+- [WEBSHELL-DECISION-CC84.md](/Users/system/syncrescendence/orchestration/state/impl/WEBSHELL-DECISION-CC84.md)
+
+## CC84 hardening updates
+
+1. callback POST routes now fail closed unless `--callback-token` is configured.
+2. added callback smoke target:
+   - `make webshell-callback-smoke PORT=... CALLBACK_TOKEN=...`
+3. verified behavior:
+   - no token configured: callback returns `503 callback_auth_not_configured`
+   - token configured: callback accepted with `X-Sync-Token`

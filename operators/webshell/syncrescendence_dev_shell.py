@@ -267,11 +267,21 @@ class DevShellHandler(BaseHTTPRequestHandler):
             return
 
         expected_token = self.server.callback_token
-        if expected_token:
-            provided_token = self.headers.get("X-Sync-Token")
-            if provided_token != expected_token:
-                self._send_json({"status": "error", "error": "unauthorized"}, status=401)
-                return
+        if not expected_token:
+            self._send_json(
+                {
+                    "status": "error",
+                    "error": "callback_auth_not_configured",
+                    "detail": "set --callback-token to enable callback ingestion",
+                },
+                status=503,
+            )
+            return
+
+        provided_token = self.headers.get("X-Sync-Token")
+        if provided_token != expected_token:
+            self._send_json({"status": "error", "error": "unauthorized"}, status=401)
+            return
 
         try:
             content_length = int(self.headers.get("Content-Length", "0"))
