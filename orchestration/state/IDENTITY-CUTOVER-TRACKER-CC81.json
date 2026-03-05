@@ -3,65 +3,172 @@
   "status": "active",
   "target_primary_identity": "syncrescendence@gmail.com",
   "legacy_break_glass_identity": "truongphillipthanh@icloud.com",
+  "intel": {
+    "manus_task_id": "RLFc4aVWZfz7UjXGRZahHC",
+    "manus_task_status": "completed",
+    "manus_response_artifact": "communications/responses/RESPONSE-MANUS-cc81-identity-cutover-capability-development.md",
+    "manus_raw_artifact": "communications/responses/RESPONSE-MANUS-cc81-identity-cutover-capability-development-raw.md"
+  },
   "global_rules": [
     "no_owner_mutation_without_pre_cutover_snapshot",
     "no_secrets_in_repo_artifacts",
     "one_platform_cutover_at_a_time",
-    "explicit_rollback_owner_and_window_required"
+    "explicit_rollback_owner_and_window_required",
+    "no_legacy_owner_removal_before_verification_pass"
   ],
   "automation_constraints": {
     "manus_api_reachable": true,
     "psyche_nodes_paired": false,
     "psyche_blocker": "openclaw_nodes_list_reports_zero_paired_nodes"
   },
+  "phase_status": {
+    "phase0_security_readiness": "pending",
+    "phase1_snapshot_capture": "pending",
+    "phase2_low_blast_radius_surfaces": "pending",
+    "phase3_scaffold_and_comms_surfaces": "pending",
+    "phase4_control_plane_surfaces": "pending",
+    "phase5_terminal_actions": "pending"
+  },
   "platforms": [
     {
       "platform": "github",
       "role": "code_sovereignty_control_plane",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "hybrid",
-      "requires_human_owner_action": true
+      "automation_envelope": "partial",
+      "mutation_mode": "human_plus_api",
+      "risk_level": "low",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "owner_granted": false,
+        "billing_aligned": false,
+        "verified": false,
+        "rollback_ready": false
+      }
     },
     {
       "platform": "cloudflare_domain",
       "role": "edge_and_domain_authority",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "hybrid",
-      "requires_human_owner_action": true
+      "automation_envelope": "low",
+      "mutation_mode": "human_ui",
+      "risk_level": "medium",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "owner_granted": false,
+        "dns_zone_transition_complete": false,
+        "verified": false,
+        "rollback_ready": false
+      }
     },
     {
-      "platform": "google_cloud_workspace",
-      "role": "upstream_identity_and_project_control",
+      "platform": "google_workspace",
+      "role": "upstream_identity_admin_plane",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "hybrid",
-      "requires_human_owner_action": true
+      "automation_envelope": "partial",
+      "mutation_mode": "human_plus_api",
+      "risk_level": "medium",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "super_admin_granted": false,
+        "verified": false,
+        "legacy_demoted": false,
+        "rollback_ready": false
+      }
+    },
+    {
+      "platform": "gcp",
+      "role": "project_iam_control",
+      "owner_target": "syncrescendence@gmail.com",
+      "automation_mode": "hybrid",
+      "automation_envelope": "high",
+      "mutation_mode": "api_first",
+      "risk_level": "low",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "owner_bindings_updated": false,
+        "verified": false,
+        "rollback_ready": false
+      }
     },
     {
       "platform": "slack",
       "role": "operator_bus",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "agentified",
-      "requires_human_owner_action": true
+      "automation_envelope": "conditional",
+      "mutation_mode": "plan_dependent",
+      "risk_level": "medium",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "plan_tier_verified": false,
+        "owner_granted": false,
+        "token_rotation_complete": false,
+        "verified": false,
+        "rollback_ready": false
+      }
     },
     {
       "platform": "discord",
       "role": "runtime_channel_surface",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "agentified",
-      "requires_human_owner_action": true
+      "automation_envelope": "low",
+      "mutation_mode": "human_ui",
+      "risk_level": "low",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "server_owner_transferred": false,
+        "developer_team_owner_transferred": false,
+        "verified": false,
+        "rollback_ready": false
+      }
     },
     {
       "platform": "exocortex_suite",
       "role": "knowledge_and_execution_surfaces",
       "owner_target": "syncrescendence@gmail.com",
-      "state": "not_started",
       "automation_mode": "mixed",
-      "requires_human_owner_action": true
+      "automation_envelope": "low_to_partial",
+      "mutation_mode": "human_ui_first",
+      "risk_level": "medium",
+      "state": "not_started",
+      "substate": {
+        "snapshot_done": false,
+        "notion_done": false,
+        "coda_done": false,
+        "linear_done": false,
+        "jira_done": false,
+        "confluence_done": false,
+        "clickup_done": false,
+        "basecamp_done": false,
+        "airtable_done": false,
+        "verified": false,
+        "rollback_ready": false
+      }
+    },
+    {
+      "platform": "atlassian_org_transfer",
+      "role": "terminal_org_consolidation",
+      "owner_target": "syncrescendence@gmail.com",
+      "automation_mode": "hybrid",
+      "automation_envelope": "irreversible_gate",
+      "mutation_mode": "human_terminal_window",
+      "risk_level": "high",
+      "state": "deferred_terminal_phase",
+      "substate": {
+        "preconditions_met": false,
+        "executed": false,
+        "verified": false
+      }
     }
   ]
 }

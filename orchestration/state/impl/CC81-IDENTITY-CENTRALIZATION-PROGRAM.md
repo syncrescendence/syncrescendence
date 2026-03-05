@@ -14,6 +14,17 @@ Centralize control-plane ownership toward `syncrescendence@gmail.com` without br
 2. Manus API is reachable from CLI with Keychain-backed auth and can create tasks via `POST /v1/tasks`.
 3. Local auth surfaces still show legacy account bindings (Claude/gcloud/wrangler all still on the legacy account in current local status snapshot).
 
+## Current Program State
+
+1. Capability analysis from Manus is completed and landed:
+   - [RESPONSE-MANUS-cc81-identity-cutover-capability-development.md](/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc81-identity-cutover-capability-development.md)
+   - [RESPONSE-MANUS-cc81-identity-cutover-capability-development-raw.md](/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc81-identity-cutover-capability-development-raw.md)
+2. Execution runbook is now active:
+   - [CC81-IDENTITY-CUTOVER-RUNBOOK-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CC81-IDENTITY-CUTOVER-RUNBOOK-v1.md)
+3. Tracker state machine is active:
+   - [IDENTITY-CUTOVER-TRACKER-CC81.json](/Users/system/syncrescendence/orchestration/state/IDENTITY-CUTOVER-TRACKER-CC81.json)
+4. Psyche remote execution remains blocked pending OpenClaw node pairing.
+
 ## Program Law
 
 1. No direct owner/billing mutation without pre-cutover snapshot.
