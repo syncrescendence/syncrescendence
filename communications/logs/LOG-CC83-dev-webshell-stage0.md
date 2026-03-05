@@ -72,3 +72,11 @@ This preserves office-law routing and wake-on-inbox semantics.
   - [manus task](https://manus.im/app/kD8SxUjH6FyVv7hYFNQVT4)
 - response target:
   - [RESPONSE-MANUS-cc83-account-topology-and-cutover.md](/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc83-account-topology-and-cutover.md)
+- task status:
+  - `completed`
+- landed raw artifact:
+  - [RESPONSE-MANUS-cc83-account-topology-and-cutover-raw.md](/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc83-account-topology-and-cutover-raw.md)
+
+## Account topology decision landing
+
+- [ACCOUNT-TOPOLOGY-DECISION-CC83.md](/Users/system/syncrescendence/orchestration/state/impl/ACCOUNT-TOPOLOGY-DECISION-CC83.md)

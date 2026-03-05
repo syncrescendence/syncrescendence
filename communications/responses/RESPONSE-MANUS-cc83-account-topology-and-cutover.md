@@ -1,13 +1,15 @@
 # RESPONSE-MANUS-cc83-account-topology-and-cutover
 
-**Status**: pending  
+**Status**: completed  
 **Task ID**: `kD8SxUjH6FyVv7hYFNQVT4`  
 **Task URL**: [manus task](https://manus.im/app/kD8SxUjH6FyVv7hYFNQVT4)
 
-## Retrieval
+## Returned Artifacts
 
-```bash
-python3 operators/exocortex/manus_task_api.py wait \
-  --task-id kD8SxUjH6FyVv7hYFNQVT4 \
-  --extract-text
-```
+- [RESPONSE-MANUS-cc83-account-topology-and-cutover-raw.md](/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc83-account-topology-and-cutover-raw.md)
+
+## Highlights
+
+1. Proposed canonical role topology for Account 1/2/3 plus `syncrescendence@gmail.com`.
+2. Returned phased migration sequencing with rollback framing.
+3. Included paid-subscription strategy while preserving current benefit constraints.
