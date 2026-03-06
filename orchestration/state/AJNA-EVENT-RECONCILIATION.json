@@ -1,13 +1,14 @@
 {
   "failed_count": 0,
   "failed_files": [],
-  "last_run_at": "2026-03-06T05:23:15Z",
-  "processed_count": 1,
+  "last_run_at": "2026-03-06T06:52:43Z",
+  "processed_count": 2,
   "processed_ids": [
-    "system-20260306-052315-371637-exocortex-surface-registry-snapshot"
+    "system-20260306-065243-091001-exocortex-connector-manifest-snapshot",
+    "system-20260306-065243-091619-exocortex-control-plane-status-snapshot"
   ],
   "skipped_duplicates": [],
   "source_counts": {
-    "system": 5
+    "system": 15
   }
 }

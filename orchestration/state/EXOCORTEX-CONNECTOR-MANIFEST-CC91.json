@@ -7,13 +7,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "notion_surface--slack_surface--1",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "notion_surface--slack_surface--1",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for notion.so or slack.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Notion or Slack within the sandbox. The canonical connector manifest path /Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-MANIFEST-CC91.json is not accessible. Verification requires valid OAuth credentials provided by the account holder.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "Notion Integrations",
       "source_section": "Notion Integrations",
       "source_slug": "notion_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Notion or Slack within the sandbox. The canonical connector manifest path /Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-MANIFEST-CC91.json is not accessible. Verification requires valid OAuth credentials provided by the account holder.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Slack",
-      "target_slug": "slack_surface"
+      "target_slug": "slack_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "notion_surface--slack_surface--1",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for notion.so or slack.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Notion or Slack within the sandbox. The canonical connector manifest path /Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-MANIFEST-CC91.json is not accessible. Verification requires valid OAuth credentials provided by the account holder.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -31,13 +84,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "notion_surface--jira_surface--3",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "notion_surface--jira_surface--3",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for notion.so or atlassian.net is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Notion or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "Notion Integrations",
       "source_section": "Notion Integrations",
       "source_slug": "notion_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Notion or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Jira Sync",
-      "target_slug": "jira_surface"
+      "target_slug": "jira_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "notion_surface--jira_surface--3",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for notion.so or atlassian.net is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Notion or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -55,13 +161,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "notion_surface--github_surface--5",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "notion_surface--github_surface--5",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for notion.so or github.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Notion or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "Notion Integrations",
       "source_section": "Notion Integrations",
       "source_slug": "notion_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Notion or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "GitHub (Workspace)",
-      "target_slug": "github_surface"
+      "target_slug": "github_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "notion_surface--github_surface--5",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for notion.so or github.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Notion or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -379,25 +538,131 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "clickup_surface--slack_surface--1",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "clickup_surface--slack_surface--1",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for clickup.com or slack.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for ClickUp or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "ClickUp Integrations",
       "source_section": "ClickUp Integrations",
       "source_slug": "clickup_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for ClickUp or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Slack",
-      "target_slug": "slack_surface"
+      "target_slug": "slack_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "clickup_surface--slack_surface--1",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for clickup.com or slack.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for ClickUp or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "clickup_surface--github_surface--2",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "clickup_surface--github_surface--2",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for clickup.com or github.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for ClickUp or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "ClickUp Integrations",
       "source_section": "ClickUp Integrations",
       "source_slug": "clickup_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for ClickUp or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "GitHub",
-      "target_slug": "github_surface"
+      "target_slug": "github_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "clickup_surface--github_surface--2",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for clickup.com or github.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for ClickUp or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -463,13 +728,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_platform_integration",
       "id": "clickup_surface--jira_surface--8",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "clickup_surface--jira_surface--8",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for clickup.com or atlassian.net is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for ClickUp or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "ClickUp Integrations",
       "source_section": "ClickUp Integrations",
       "source_slug": "clickup_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for ClickUp or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Jira",
-      "target_slug": "jira_surface"
+      "target_slug": "jira_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "clickup_surface--jira_surface--8",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for clickup.com or atlassian.net is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for ClickUp or Jira. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -943,13 +1261,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_app_connector",
       "id": "perplexity_surface--notion_surface--4",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "perplexity_surface--notion_surface--4",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for perplexity.ai or notion.so is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Perplexity or Notion. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "perplexity_surface",
       "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
       "source_slug": "perplexity_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Perplexity or Notion. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Notion",
-      "target_slug": "notion_surface"
+      "target_slug": "notion_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "perplexity_surface--notion_surface--4",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for perplexity.ai or notion.so is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Perplexity or Notion. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -979,13 +1350,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_app_connector",
       "id": "perplexity_surface--github_surface--7",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "perplexity_surface--github_surface--7",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for perplexity.ai or github.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Perplexity or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "perplexity_surface",
       "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
       "source_slug": "perplexity_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Perplexity or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "GitHub",
-      "target_slug": "github_surface"
+      "target_slug": "github_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "perplexity_surface--github_surface--7",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for perplexity.ai or github.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Perplexity or GitHub. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -1003,13 +1427,66 @@
       "auth_mode": "oauth_popup",
       "connector_type": "native_app_connector",
       "id": "perplexity_surface--slack_surface--9",
+      "last_verification": {
+        "applied_at": "2026-03-06T06:50:24Z",
+        "connector_id": "perplexity_surface--slack_surface--9",
+        "evidence_refs": [
+          {
+            "label": "manus_evidence_pointer",
+            "value": "Auth gate: no session token or API key for perplexity.ai or slack.com is present in the execution environment."
+          },
+          {
+            "label": "manus_response",
+            "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+          }
+        ],
+        "notes": "No authenticated session exists for Perplexity or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+        "outcome": "blocked",
+        "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+        "state": "verification_blocked",
+        "verification_batch_id": "cc91-tranche-01",
+        "verification_surface": "manus_api_runtime",
+        "verified_at": "2026-03-06T00:00:00Z",
+        "verified_by": "manus"
+      },
       "source_label": "perplexity_surface",
       "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
       "source_slug": "perplexity_surface",
-      "state": "user_claimed_configured_unverified",
+      "state": "verification_blocked",
+      "state_reason": "No authenticated session exists for Perplexity or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+      "state_updated_at": "2026-03-06T00:00:00Z",
+      "state_updated_by": "manus",
+      "state_updated_via": "manus_api_runtime",
       "target_kind": "registry",
       "target_label": "Slack",
-      "target_slug": "slack_surface"
+      "target_slug": "slack_surface",
+      "verification_batch_ids": [
+        "cc91-tranche-01"
+      ],
+      "verification_history": [
+        {
+          "applied_at": "2026-03-06T06:50:24Z",
+          "connector_id": "perplexity_surface--slack_surface--9",
+          "evidence_refs": [
+            {
+              "label": "manus_evidence_pointer",
+              "value": "Auth gate: no session token or API key for perplexity.ai or slack.com is present in the execution environment."
+            },
+            {
+              "label": "manus_response",
+              "value": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+            }
+          ],
+          "notes": "No authenticated session exists for Perplexity or Slack. Manifest file inaccessible. Verification requires valid credentials.",
+          "outcome": "blocked",
+          "receipt_source": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+          "state": "verification_blocked",
+          "verification_batch_id": "cc91-tranche-01",
+          "verification_surface": "manus_api_runtime",
+          "verified_at": "2026-03-06T00:00:00Z",
+          "verified_by": "manus"
+        }
+      ]
     },
     {
       "auth_mode": "oauth_popup",
@@ -1074,15 +1551,20 @@
   ],
   "counts": {
     "connector_count": 89,
+    "connector_state_counts": {
+      "user_claimed_configured_unverified": 80,
+      "verification_blocked": 9
+    },
     "external_target_count": 19,
     "source_count": 14,
-    "source_profile_count": 39
+    "source_profile_count": 39,
+    "verified_connector_count": 0
   },
   "gaps": {
     "unknown_internal_targets_not_in_registry": [],
     "unknown_sources_not_in_registry": []
   },
-  "generated_at": "2026-03-06T05:22:55Z",
+  "generated_at": "2026-03-06T06:52:33Z",
   "source_artifact": "/Users/system/Desktop/guide.md",
   "source_profiles": [
     {
@@ -1242,6 +1724,21 @@
       "source_slug": "zapier_surface"
     }
   ],
-  "status": "user_claimed_unverified",
+  "status": "verification_in_progress",
+  "verification": {
+    "last_batch_applied_at": "2026-03-06T06:50:24Z",
+    "last_batch_applied_count": 9,
+    "last_batch_id": "cc91-tranche-01",
+    "last_batch_outcome_counts": {
+      "blocked": 9
+    },
+    "last_batch_receipt_path": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+    "last_batch_touched_sources": {
+      "clickup_surface": 3,
+      "notion_surface": 3,
+      "perplexity_surface": 3
+    },
+    "last_batch_unknown_connector_ids": []
+  },
   "version": "cc91"
 }

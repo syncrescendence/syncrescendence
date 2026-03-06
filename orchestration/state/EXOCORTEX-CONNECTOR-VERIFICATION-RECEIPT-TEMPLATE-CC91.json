@@ -1,0 +1,36 @@
+{
+  "verification_batch_id": "cc91-tranche-01",
+  "captured_at": "2026-03-06T00:00:00Z",
+  "captured_by": "ajna",
+  "receipt_scope": "high_fanout_hubs",
+  "receipts": [
+    {
+      "connector_id": "notion_surface--slack_surface--1",
+      "outcome": "connected",
+      "verified_by": "ajna",
+      "verified_at": "2026-03-06T00:00:00Z",
+      "verification_surface": "browser_ui",
+      "notes": "Connector card shows connected.",
+      "evidence_refs": [
+        {
+          "label": "screenshot",
+          "value": "communications/responses/RESPONSE-AJNA-cc91-connector-verification-tranche-01.md#notion-slack"
+        }
+      ]
+    },
+    {
+      "connector_id": "clickup_surface--github_surface--2",
+      "outcome": "blocked",
+      "verified_by": "ajna",
+      "verified_at": "2026-03-06T00:00:00Z",
+      "verification_surface": "browser_ui",
+      "notes": "Requires owner re-auth in popup; no mutation performed.",
+      "evidence_refs": [
+        {
+          "label": "screenshot",
+          "value": "communications/responses/RESPONSE-AJNA-cc91-connector-verification-tranche-01.md#clickup-github"
+        }
+      ]
+    }
+  ]
+}

@@ -43,7 +43,7 @@
     "unresolved_connector_sources": [],
     "unresolved_internal_targets": []
   },
-  "generated_at": "2026-03-06T05:22:55Z",
+  "generated_at": "2026-03-06T06:52:43Z",
   "hubs": {
     "cross_boundary_heavy_sources": [],
     "high_fanout_sources": [
@@ -147,9 +147,10 @@
   },
   "readiness": {
     "connector_state_distribution": {
-      "user_claimed_configured_unverified": 89
+      "user_claimed_configured_unverified": 80,
+      "verification_blocked": 9
     },
-    "control_plane_readiness": "bounded_unverified",
+    "control_plane_readiness": "verification_in_progress",
     "surface_profile_coverage_pct": 35.9,
     "teleology_coverage_pct": 100.0
   },

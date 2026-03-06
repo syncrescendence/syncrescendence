@@ -105,10 +105,19 @@ def build_status(registry: dict[str, Any], teleology: dict[str, Any], connector:
         "surface_profile_coverage_pct": coverage_pct,
         "teleology_coverage_pct": round((len(registry_slugs & teleology_slugs) / max(1, len(registry_slugs))) * 100, 2),
         "connector_state_distribution": dict(sorted(state_counter.items())),
-        "control_plane_readiness": "bounded_unverified"
-        if state_counter.get("user_claimed_configured_unverified", 0) > 0
-        else "verified",
+        "control_plane_readiness": "bounded_unverified",
     }
+    has_user_claimed = state_counter.get("user_claimed_configured_unverified", 0) > 0
+    has_verified = any(state.startswith("verified_") for state in state_counter)
+    has_blocked = state_counter.get("verification_blocked", 0) > 0
+    if has_user_claimed and (has_verified or has_blocked):
+        readiness["control_plane_readiness"] = "verification_in_progress"
+    elif has_user_claimed:
+        readiness["control_plane_readiness"] = "bounded_unverified"
+    elif has_blocked and not has_verified:
+        readiness["control_plane_readiness"] = "verification_blocked"
+    else:
+        readiness["control_plane_readiness"] = "verified"
 
     recommendations = [
         "verify high-fanout hubs first (Slack, Notion, ClickUp, Linear, Atlassian lanes).",

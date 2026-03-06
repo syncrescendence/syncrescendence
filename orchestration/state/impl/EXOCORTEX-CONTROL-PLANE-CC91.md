@@ -22,11 +22,21 @@ Convert connector sprawl into a tractable, auditable control plane that can be p
 make -C /Users/system/syncrescendence exocortex-control-plane-run GUIDE=/Users/system/Desktop/guide.md
 ```
 
+Apply evidence receipts without resetting verified states:
+
+```bash
+make -C /Users/system/syncrescendence exocortex-connector-verification-run \
+  RECEIPTS=/abs/path/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json \
+  BATCH_ID=cc91-tranche-01 \
+  STRICT=1
+```
+
 ## Control Plane Semantics
 
 1. `user_claimed_configured_unverified` means a connector claim exists but evidence is still pending.
 2. `bounded_unverified` means topology is mapped and policy-compliant, but verification receipts are not complete.
 3. Unknown source/target lists are explicit gaps and must trend to zero or be explicitly accepted as external.
+4. Re-import from guide preserves existing verification state/history by connector ID.
 
 ## Verification Tranches
 

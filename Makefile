@@ -1,4 +1,4 @@
-.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry exocortex-import-connector-guide exocortex-audit-control-plane exocortex-sync-connector-manifest exocortex-control-plane-run ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
+.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry exocortex-import-connector-guide exocortex-audit-control-plane exocortex-sync-connector-manifest exocortex-apply-connector-receipts exocortex-connector-verification-run exocortex-control-plane-run ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
 
 inventory:
 	python3 operators/validators/artifact_law_inventory.py --format both
@@ -130,6 +130,17 @@ exocortex-audit-control-plane:
 
 exocortex-sync-connector-manifest:
 	python3 operators/exocortex/exocortex_connector_manifest_bridge.py $(if $(PROJECT_ONTOLOGY),--project-ontology,) --ontology-url "$(or $(ONTOLOGY_URL),domain)"
+
+exocortex-apply-connector-receipts:
+	@test -n "$(RECEIPTS)" || (echo "usage: make exocortex-apply-connector-receipts RECEIPTS=/abs/path/receipts.json [BATCH_ID=batch-id] [STRICT=1]" && exit 1)
+	python3 operators/exocortex/apply_connector_verification_receipts.py --receipts "$(RECEIPTS)" $(if $(MANIFEST),--manifest "$(MANIFEST)",) $(if $(TRACKER),--tracker "$(TRACKER)",) $(if $(TRACKER_MD),--tracker-md "$(TRACKER_MD)",) $(if $(BATCH_ID),--batch-id "$(BATCH_ID)",) $(if $(filter 1 true yes,$(STRICT)),--strict-unknown,)
+
+exocortex-connector-verification-run:
+	@test -n "$(RECEIPTS)" || (echo "usage: make exocortex-connector-verification-run RECEIPTS=/abs/path/receipts.json [BATCH_ID=batch-id] [STRICT=1] [PROJECT_ONTOLOGY=1]" && exit 1)
+	$(MAKE) exocortex-apply-connector-receipts RECEIPTS="$(RECEIPTS)" $(if $(BATCH_ID),BATCH_ID="$(BATCH_ID)",) $(if $(STRICT),STRICT="$(STRICT)",)
+	$(MAKE) exocortex-audit-control-plane
+	$(MAKE) exocortex-sync-connector-manifest $(if $(PROJECT_ONTOLOGY),PROJECT_ONTOLOGY=1,) ONTOLOGY_URL="$(or $(ONTOLOGY_URL),domain)"
+	$(MAKE) ontology-project-repo
 
 exocortex-control-plane-run:
 	$(MAKE) exocortex-import-connector-guide GUIDE="$(or $(GUIDE),/Users/system/Desktop/guide.md)"

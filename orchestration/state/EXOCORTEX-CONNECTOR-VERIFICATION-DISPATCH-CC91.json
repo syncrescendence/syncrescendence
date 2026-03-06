@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-06T06:49:00Z",
+  "status": "active_verification_in_progress",
+  "version": "cc91",
+  "tranche": "cc91-tranche-01",
+  "dispatches": {
+    "ajna": {
+      "mode": "office_task",
+      "task_path": "/Users/system/syncrescendence/offices/ajna/inbox/pending/TASK-cc91-connector-verification-tranche-01-20260306T064820Z.md",
+      "state": "queued"
+    },
+    "manus": {
+      "mode": "manus_api",
+      "task_id": "HN3BVTzV6zhshniaPqjJ5C",
+      "task_url": "https://manus.im/app/HN3BVTzV6zhshniaPqjJ5C",
+      "state": "completed_all_blocked_no_auth",
+      "response_path": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md"
+    }
+  },
+  "expected_outputs": {
+    "markdown_response": "/Users/system/syncrescendence/communications/responses/RESPONSE-MANUS-cc91-connector-verification-tranche-01.md",
+    "receipt_json": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json"
+  }
+}

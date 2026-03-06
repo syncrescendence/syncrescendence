@@ -81,6 +81,12 @@ def load_registry(registry_path: Path) -> dict:
     return json.loads(registry_path.read_text(encoding="utf-8"))
 
 
+def load_existing_manifest(path: Path) -> dict | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def parse_table_target(line: str) -> str | None:
     match = TABLE_ROW_RE.match(line)
     if not match:
@@ -92,13 +98,29 @@ def parse_table_target(line: str) -> str | None:
     return bold.group(1).strip() if bold else first_col.strip()
 
 
-def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
+def build_manifest(
+    guide_text: str,
+    registry: dict,
+    source_path: str,
+    *,
+    existing_manifest: dict | None = None,
+) -> dict:
     registry_surfaces = registry.get("surfaces", [])
     registry_slugs = {
         row.get("slug")
         for row in registry_surfaces
         if isinstance(row, dict) and isinstance(row.get("slug"), str)
     }
+    existing_by_id: dict[str, dict] = {}
+    existing_verification = None
+    if isinstance(existing_manifest, dict):
+        if isinstance(existing_manifest.get("verification"), dict):
+            existing_verification = existing_manifest.get("verification")
+        for row in existing_manifest.get("connectors", []):
+            if isinstance(row, dict):
+                connector_id = row.get("id")
+                if isinstance(connector_id, str):
+                    existing_by_id[connector_id] = row
 
     connectors: list[dict] = []
     by_source: dict[str, int] = {}
@@ -132,20 +154,33 @@ def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
                     target_slug, target_kind = normalize_target(target_label)
                     idx = by_source.get(ai_source_slug, 0) + 1
                     by_source[ai_source_slug] = idx
-                    connectors.append(
-                        {
-                            "id": f"{ai_source_slug}--{target_slug}--{idx}",
-                            "source_slug": ai_source_slug,
-                            "target_slug": target_slug,
-                            "target_kind": target_kind,
-                            "connector_type": "native_app_connector",
-                            "auth_mode": "oauth_popup",
-                            "state": "user_claimed_configured_unverified",
-                            "source_section": current_section,
-                            "source_label": ai_source_slug,
-                            "target_label": target_label,
-                        }
-                    )
+                    connector = {
+                        "id": f"{ai_source_slug}--{target_slug}--{idx}",
+                        "source_slug": ai_source_slug,
+                        "target_slug": target_slug,
+                        "target_kind": target_kind,
+                        "connector_type": "native_app_connector",
+                        "auth_mode": "oauth_popup",
+                        "state": "user_claimed_configured_unverified",
+                        "source_section": current_section,
+                        "source_label": ai_source_slug,
+                        "target_label": target_label,
+                    }
+                    existing = existing_by_id.get(connector["id"])
+                    if existing:
+                        connector["state"] = str(existing.get("state", connector["state"]))
+                        for key in (
+                            "last_verification",
+                            "verification_history",
+                            "verification_batch_ids",
+                            "state_reason",
+                            "state_updated_at",
+                            "state_updated_by",
+                            "state_updated_via",
+                        ):
+                            if key in existing:
+                                connector[key] = existing[key]
+                    connectors.append(connector)
                 continue
 
         if current_section in SOURCE_MAP:
@@ -156,20 +191,33 @@ def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
                 target_slug, target_kind = normalize_target(target_label)
                 idx = by_source.get(source_slug, 0) + 1
                 by_source[source_slug] = idx
-                connectors.append(
-                    {
-                        "id": f"{source_slug}--{target_slug}--{idx}",
-                        "source_slug": source_slug,
-                        "target_slug": target_slug,
-                        "target_kind": target_kind,
-                        "connector_type": "native_platform_integration",
-                        "auth_mode": "oauth_popup",
-                        "state": "user_claimed_configured_unverified",
-                        "source_section": current_section,
-                        "source_label": current_section,
-                        "target_label": target_label,
-                    }
-                )
+                connector = {
+                    "id": f"{source_slug}--{target_slug}--{idx}",
+                    "source_slug": source_slug,
+                    "target_slug": target_slug,
+                    "target_kind": target_kind,
+                    "connector_type": "native_platform_integration",
+                    "auth_mode": "oauth_popup",
+                    "state": "user_claimed_configured_unverified",
+                    "source_section": current_section,
+                    "source_label": current_section,
+                    "target_label": target_label,
+                }
+                existing = existing_by_id.get(connector["id"])
+                if existing:
+                    connector["state"] = str(existing.get("state", connector["state"]))
+                    for key in (
+                        "last_verification",
+                        "verification_history",
+                        "verification_batch_ids",
+                        "state_reason",
+                        "state_updated_at",
+                        "state_updated_by",
+                        "state_updated_via",
+                    ):
+                        if key in existing:
+                            connector[key] = existing[key]
+                connectors.append(connector)
 
     source_slugs = sorted({row["source_slug"] for row in connectors})
     source_profiles: list[dict] = []
@@ -193,9 +241,23 @@ def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
         {row["target_slug"] for row in internal_targets if row["target_slug"] not in registry_slugs}
     )
 
-    return {
+    state_counts: dict[str, int] = {}
+    for row in connectors:
+        state = str(row.get("state", "unknown"))
+        state_counts[state] = state_counts.get(state, 0) + 1
+    verified_count = sum(count for state, count in state_counts.items() if state.startswith("verified_"))
+    if verified_count == len(connectors) and connectors:
+        manifest_status = "verified"
+    elif verified_count > 0:
+        manifest_status = "partially_verified"
+    elif any(state != "user_claimed_configured_unverified" for state in state_counts):
+        manifest_status = "verification_in_progress"
+    else:
+        manifest_status = "user_claimed_unverified"
+
+    manifest = {
         "generated_at": utc_now(),
-        "status": "user_claimed_unverified",
+        "status": manifest_status,
         "version": "cc91",
         "source_artifact": source_path,
         "canonical_identity": registry.get("canonical_identity"),
@@ -206,6 +268,8 @@ def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
             "source_count": len(source_slugs),
             "source_profile_count": len(source_profiles),
             "external_target_count": sum(1 for row in connectors if row["target_kind"] == "external"),
+            "verified_connector_count": verified_count,
+            "connector_state_counts": dict(sorted(state_counts.items())),
         },
         "source_profiles": source_profiles,
         "connectors": connectors,
@@ -214,12 +278,19 @@ def build_manifest(guide_text: str, registry: dict, source_path: str) -> dict:
             "unknown_internal_targets_not_in_registry": unknown_internal_targets,
         },
     }
+    if isinstance(existing_verification, dict):
+        manifest["verification"] = existing_verification
+    return manifest
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--guide", required=True, help="Path to integration guide markdown.")
     parser.add_argument("--registry", default=str(DEFAULT_REGISTRY))
+    parser.add_argument(
+        "--merge-existing-manifest",
+        default=str(REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-CONNECTOR-MANIFEST-CC91.json"),
+    )
     parser.add_argument(
         "--output",
         default=str(REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-CONNECTOR-MANIFEST-CC91.json"),
@@ -228,13 +299,16 @@ def main() -> int:
 
     guide_path = Path(args.guide).expanduser().resolve()
     registry_path = Path(args.registry).expanduser().resolve()
+    existing_manifest_path = Path(args.merge_existing_manifest).expanduser().resolve()
     output_path = Path(args.output).expanduser().resolve()
 
     registry = load_registry(registry_path)
+    existing_manifest = load_existing_manifest(existing_manifest_path)
     manifest = build_manifest(
         guide_text=guide_path.read_text(encoding="utf-8"),
         registry=registry,
         source_path=str(guide_path),
+        existing_manifest=existing_manifest,
     )
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")

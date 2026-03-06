@@ -1,0 +1,38 @@
+{
+  "batches": [
+    {
+      "applied_at": "2026-03-06T06:50:24Z",
+      "applied_count": 9,
+      "batch_id": "cc91-tranche-01",
+      "outcome_counts": {
+        "blocked": 9
+      },
+      "receipt_path": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-RECEIPTS-cc91-tranche-01.json",
+      "state_counts_after_apply": {
+        "user_claimed_configured_unverified": 80,
+        "verification_blocked": 9
+      },
+      "touched_sources": {
+        "clickup_surface": 3,
+        "notion_surface": 3,
+        "perplexity_surface": 3
+      },
+      "unknown_connector_ids": []
+    }
+  ],
+  "generated_at": "2026-03-06T06:50:24Z",
+  "manifest_path": "/Users/system/syncrescendence/orchestration/state/EXOCORTEX-CONNECTOR-MANIFEST-CC91.json",
+  "status": "active",
+  "summary": {
+    "batch_count": 1,
+    "last_applied_count": 9,
+    "last_batch_id": "cc91-tranche-01",
+    "last_unknown_connector_count": 0,
+    "state_counts": {
+      "user_claimed_configured_unverified": 80,
+      "verification_blocked": 9
+    },
+    "verified_connector_count": 0
+  },
+  "version": "cc91"
+}
