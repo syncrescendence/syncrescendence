@@ -238,3 +238,18 @@
    Status: active
 6. codify duplicate-doctrine merge law and repo / exocortex / ontology non-duplication before higher-volume migration continues
    Status: active
+
+### Tranche V — Tributary Ratification Write Set
+
+1. consolidate Batch 02 into one adjudicated implementation handoff artifact
+   Status: completed v1
+2. draft the registry artifact set under `orchestration/state/registry/`
+   Status: active
+3. draft the Sigma ratification update and staged compatibility treatment for the current `knowledge/references/` tree
+   Status: active
+4. draft the pedigree custody artifact and the minimum manifest/receipt guidance needed for lawful preservation
+   Status: active
+5. draft the promotion-threshold artifact and first-class `communications/dispatches/` physicalization contract
+   Status: active
+6. draft the compact witness / externalization / lineage law artifact and the first migration seed set
+   Status: active
