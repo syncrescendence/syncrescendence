@@ -1,0 +1,164 @@
+{
+  "counts": {
+    "connector_count": 89,
+    "connector_source_count": 14,
+    "cross_boundary_heavy_count": 0,
+    "external_target_connector_count": 19,
+    "high_fanout_count": 3,
+    "profile_missing_count": 25,
+    "registry_surface_count": 39,
+    "teleology_surface_count": 39,
+    "unresolved_internal_target_count": 0,
+    "unresolved_source_count": 0
+  },
+  "coverage": {
+    "connector_profile_missing_slugs": [
+      "basecamp_surface",
+      "canva_surface",
+      "cloudflare_surface",
+      "discord_surface",
+      "dropbox_surface",
+      "github_surface",
+      "grok_surface",
+      "huggingface_surface",
+      "incident_surface",
+      "loveable_surface",
+      "make_surface",
+      "miro_surface",
+      "openrouter_surface",
+      "oracle_cloud_surface",
+      "reddit_surface",
+      "replit_surface",
+      "slack_surface",
+      "supabase_surface",
+      "ticktick_surface",
+      "tiktok_surface",
+      "trello_surface",
+      "twitch_surface",
+      "x_surface",
+      "youtube_surface",
+      "zapier_surface"
+    ],
+    "teleology_missing_slugs": [],
+    "unresolved_connector_sources": [],
+    "unresolved_internal_targets": []
+  },
+  "generated_at": "2026-03-06T05:22:55Z",
+  "hubs": {
+    "cross_boundary_heavy_sources": [],
+    "high_fanout_sources": [
+      {
+        "count": 10,
+        "slug": "clickup_surface"
+      },
+      {
+        "count": 10,
+        "slug": "perplexity_surface"
+      },
+      {
+        "count": 9,
+        "slug": "notion_surface"
+      }
+    ],
+    "top_source_fanout": [
+      {
+        "count": 10,
+        "slug": "clickup_surface"
+      },
+      {
+        "count": 10,
+        "slug": "perplexity_surface"
+      },
+      {
+        "count": 9,
+        "slug": "notion_surface"
+      },
+      {
+        "count": 7,
+        "slug": "linear_surface"
+      },
+      {
+        "count": 6,
+        "slug": "airtable_surface"
+      },
+      {
+        "count": 6,
+        "slug": "coda_surface"
+      },
+      {
+        "count": 6,
+        "slug": "chatgpt_openai_surface"
+      },
+      {
+        "count": 6,
+        "slug": "claude_anthropic_surface"
+      },
+      {
+        "count": 5,
+        "slug": "jira_surface"
+      },
+      {
+        "count": 5,
+        "slug": "confluence_surface"
+      }
+    ],
+    "top_target_inflow": [
+      {
+        "count": 13,
+        "slug": "slack_surface"
+      },
+      {
+        "count": 12,
+        "slug": "github_surface"
+      },
+      {
+        "count": 9,
+        "slug": "jira_surface"
+      },
+      {
+        "count": 9,
+        "slug": "figma_surface"
+      },
+      {
+        "count": 9,
+        "slug": "notion_surface"
+      },
+      {
+        "count": 6,
+        "slug": "google_drive_external"
+      },
+      {
+        "count": 6,
+        "slug": "google_workspace_external"
+      },
+      {
+        "count": 5,
+        "slug": "dropbox_surface"
+      },
+      {
+        "count": 4,
+        "slug": "google_calendar_external"
+      },
+      {
+        "count": 3,
+        "slug": "canva_surface"
+      }
+    ]
+  },
+  "readiness": {
+    "connector_state_distribution": {
+      "user_claimed_configured_unverified": 89
+    },
+    "control_plane_readiness": "bounded_unverified",
+    "surface_profile_coverage_pct": 35.9,
+    "teleology_coverage_pct": 100.0
+  },
+  "recommendations": [
+    "verify high-fanout hubs first (Slack, Notion, ClickUp, Linear, Atlassian lanes).",
+    "convert user-claimed connector state to evidence-backed state with receipt pointers.",
+    "keep external-target connectors under least-privilege scopes and periodic token rotation.",
+    "promote connector verification artifacts into repo and re-run ontology projection after each tranche."
+  ],
+  "status": "active",
+  "version": "cc91"
+}

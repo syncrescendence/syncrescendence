@@ -23,7 +23,7 @@ It expands prior CC75/CC76 surface notes into a full inventory with auth-depende
 
 ## Included Scope
 
-1. 37 exocortex surfaces
+1. 39 exocortex surfaces
 2. 2 auth dependencies:
    - `github_surface -> supabase_surface` (Sign in with GitHub)
    - `slack_surface -> incident_surface` (Sign in with Slack)
@@ -52,4 +52,4 @@ This enables deterministic projection to ontology entities/relations without emb
    - [EXOCORTEX-SURFACE-TAXONOMY-CC75.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-SURFACE-TAXONOMY-CC75.md)
 2. CC76 identity matrix remains useful as the original framing:
    - [EXOCORTEX-ACCOUNT-IDENTITY-MATRIX-CC76.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-ACCOUNT-IDENTITY-MATRIX-CC76.md)
-3. CC90 registry is the live canonical expansion for full exocortex inventory.
+3. Registry now includes `figma_surface` and `manus_surface` so connector topology can be projected without unresolved source slugs.

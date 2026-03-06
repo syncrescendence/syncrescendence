@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-05",
   "status": "active",
-  "version": "cc90",
+  "version": "cc91",
   "canonical_identity": "syncrescendence@gmail.com",
   "canonical_workspace_domain": "syncrescendence",
   "surfaces": [
@@ -94,6 +94,14 @@
       "integration_priority": "P3"
     },
     {
+      "slug": "figma_surface",
+      "epithet": "Design Mesh",
+      "proper_role": "design system, prototyping, and UI-component integration lane for product surfaces",
+      "anti_role": "canonical policy memory store",
+      "default_modality": "hybrid",
+      "integration_priority": "P2"
+    },
+    {
       "slug": "github_surface",
       "epithet": "Sovereign Forge",
       "proper_role": "code sovereignty, review workflow, CI surface, and repository governance",
@@ -155,6 +163,14 @@
       "proper_role": "cross-system workflow automation and event choreography",
       "anti_role": "long-term state store",
       "default_modality": "headless",
+      "integration_priority": "P1"
+    },
+    {
+      "slug": "manus_surface",
+      "epithet": "Autonomous Operator",
+      "proper_role": "high-autonomy remote execution lane for browser-dependent and multi-step operational tasks",
+      "anti_role": "unbounded credential root with unrestricted secrets retention",
+      "default_modality": "agentified",
       "integration_priority": "P1"
     },
     {

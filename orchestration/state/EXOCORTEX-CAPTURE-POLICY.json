@@ -171,6 +171,38 @@
         "refresh_token",
         "session"
       ]
+    },
+    "exocortex_connector_manifest": {
+      "allowed_durable_capture": [
+        "typed_record",
+        "summary_and_typed_record"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "password",
+        "api_key",
+        "access_token",
+        "refresh_token",
+        "session",
+        "cookie"
+      ]
+    },
+    "exocortex_control_plane_status": {
+      "allowed_durable_capture": [
+        "typed_record",
+        "summary_and_typed_record"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "password",
+        "api_key",
+        "access_token",
+        "refresh_token",
+        "session",
+        "cookie"
+      ]
     }
   },
   "forbidden_repo_path_substrings": [

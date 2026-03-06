@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-05",
   "status": "active",
-  "version": "cc90",
+  "version": "cc91",
   "canonical_identity": "syncrescendence@gmail.com",
   "canonical_workspace_domain": "syncrescendence",
   "canonical_github_repo": "https://github.com/syncrescendence/syncrescendence",
@@ -9,7 +9,7 @@
   "teleology_doctrine_ref": "orchestration/state/impl/EXOCORTEX-TELEOLOGY-REGISTRY-CC90.md",
   "source_of_truth_note": "User-confirmed exocortex ownership migrated to canonical identity with workspace namespace aligned to syncrescendence.",
   "counts": {
-    "surface_count": 37,
+    "surface_count": 39,
     "auth_dependency_count": 2
   },
   "auth_dependencies": [
@@ -138,6 +138,16 @@
       "ontology_entity_id": "surface-state:dropbox"
     },
     {
+      "slug": "figma_surface",
+      "service": "Figma",
+      "class": "design_system_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:figma"
+    },
+    {
       "slug": "github_surface",
       "service": "GitHub",
       "class": "code_sovereignty_control_plane",
@@ -217,6 +227,16 @@
       "workspace_namespace": "syncrescendence",
       "status": "canonical_owner_confirmed",
       "ontology_entity_id": "surface-state:make"
+    },
+    {
+      "slug": "manus_surface",
+      "service": "Manus",
+      "class": "agentic_execution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:manus"
     },
     {
       "slug": "miro_surface",

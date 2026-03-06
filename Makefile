@@ -1,4 +1,4 @@
-.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
+.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry exocortex-import-connector-guide exocortex-audit-control-plane exocortex-sync-connector-manifest exocortex-control-plane-run ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
 
 inventory:
 	python3 operators/validators/artifact_law_inventory.py --format both
@@ -121,6 +121,21 @@ acumen-pipeline-run:
 
 exocortex-sync-surface-registry:
 	python3 operators/exocortex/exocortex_surface_registry_bridge.py $(if $(PROJECT_ONTOLOGY),--project-ontology,) --ontology-url "$(or $(ONTOLOGY_URL),domain)"
+
+exocortex-import-connector-guide:
+	python3 operators/exocortex/import_connector_guide.py --guide "$(or $(GUIDE),/Users/system/Desktop/guide.md)" $(if $(REGISTRY),--registry "$(REGISTRY)",) $(if $(OUTPUT),--output "$(OUTPUT)",)
+
+exocortex-audit-control-plane:
+	python3 operators/exocortex/exocortex_control_plane_audit.py $(if $(REGISTRY),--registry "$(REGISTRY)",) $(if $(TELEOLOGY),--teleology "$(TELEOLOGY)",) $(if $(CONNECTOR_MANIFEST),--connector-manifest "$(CONNECTOR_MANIFEST)",) $(if $(OUTPUT_JSON),--output-json "$(OUTPUT_JSON)",) $(if $(OUTPUT_MD),--output-md "$(OUTPUT_MD)",)
+
+exocortex-sync-connector-manifest:
+	python3 operators/exocortex/exocortex_connector_manifest_bridge.py $(if $(PROJECT_ONTOLOGY),--project-ontology,) --ontology-url "$(or $(ONTOLOGY_URL),domain)"
+
+exocortex-control-plane-run:
+	$(MAKE) exocortex-import-connector-guide GUIDE="$(or $(GUIDE),/Users/system/Desktop/guide.md)"
+	$(MAKE) exocortex-audit-control-plane
+	$(MAKE) exocortex-sync-connector-manifest $(if $(PROJECT_ONTOLOGY),PROJECT_ONTOLOGY=1,) ONTOLOGY_URL="$(or $(ONTOLOGY_URL),domain)"
+	$(MAKE) ontology-project-repo
 
 ontology-project-repo:
 	python3 operators/ontology/ontology_v1.py project-repo

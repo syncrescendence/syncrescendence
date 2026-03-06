@@ -1,0 +1,1247 @@
+{
+  "canonical_identity": "syncrescendence@gmail.com",
+  "canonical_workspace_domain": "syncrescendence",
+  "connector_auth_baseline": "oauth_popup",
+  "connectors": [
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--slack_surface--1",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--google_drive_external--2",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--jira_surface--3",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira Sync",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--figma_surface--4",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--github_surface--5",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub (Workspace)",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--canva_surface--6",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Canva",
+      "target_slug": "canva_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--dropbox_surface--7",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Dropbox",
+      "target_slug": "dropbox_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--clickup_surface--8",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "ClickUp",
+      "target_slug": "clickup_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "notion_surface--linear_surface--9",
+      "source_label": "Notion Integrations",
+      "source_section": "Notion Integrations",
+      "source_slug": "notion_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Linear",
+      "target_slug": "linear_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--github_surface--1",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--slack_surface--2",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--jira_surface--3",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--notion_surface--4",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--figma_surface--5",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--discord_surface--6",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Discord",
+      "target_slug": "discord_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "linear_surface--google_sheets_external--7",
+      "source_label": "Linear Integrations",
+      "source_section": "Linear Integrations",
+      "source_slug": "linear_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Sheets",
+      "target_slug": "google_sheets_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "jira_surface--slack_surface--1",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "jira_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "confluence_surface--slack_surface--1",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "confluence_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "atlassian_projects_surface--slack_surface--1",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "atlassian_projects_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "jira_surface--github_surface--2",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "jira_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "confluence_surface--github_surface--2",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "confluence_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "atlassian_projects_surface--github_surface--2",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "atlassian_projects_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "jira_surface--google_workspace_external--3",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "jira_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "confluence_surface--google_workspace_external--3",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "confluence_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "atlassian_projects_surface--google_workspace_external--3",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "atlassian_projects_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "jira_surface--figma_surface--4",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "jira_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "confluence_surface--figma_surface--4",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "confluence_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "atlassian_projects_surface--figma_surface--4",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "atlassian_projects_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "jira_surface--notion_surface--5",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "jira_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "confluence_surface--notion_surface--5",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "confluence_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "atlassian_projects_surface--notion_surface--5",
+      "source_label": "Atlassian (Jira & Confluence) Integrations",
+      "source_section": "Atlassian (Jira & Confluence) Integrations",
+      "source_slug": "atlassian_projects_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--slack_surface--1",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--github_surface--2",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--google_drive_external--3",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--google_calendar_external--4",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Calendar",
+      "target_slug": "google_calendar_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--dropbox_surface--5",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Dropbox",
+      "target_slug": "dropbox_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--figma_surface--6",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--discord_surface--7",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Discord",
+      "target_slug": "discord_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--jira_surface--8",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--confluence_surface--9",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Confluence",
+      "target_slug": "confluence_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "clickup_surface--todoist_surface--10",
+      "source_label": "ClickUp Integrations",
+      "source_section": "ClickUp Integrations",
+      "source_slug": "clickup_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Todoist",
+      "target_slug": "todoist_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--slack_surface--1",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--google_drive_external--2",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--google_calendar_external--3",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Calendar",
+      "target_slug": "google_calendar_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--dropbox_surface--4",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Dropbox",
+      "target_slug": "dropbox_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--jira_surface--5",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "airtable_surface--github_surface--6",
+      "source_label": "Airtable Integrations",
+      "source_section": "Airtable Integrations",
+      "source_slug": "airtable_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--slack_surface--1",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--google_workspace_external--2",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--github_surface--3",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--jira_surface--4",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--figma_surface--5",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "coda_surface--dropbox_surface--6",
+      "source_label": "Coda Integrations",
+      "source_section": "Coda Integrations",
+      "source_slug": "coda_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Dropbox",
+      "target_slug": "dropbox_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "figma_surface--slack_surface--1",
+      "source_label": "Figma Integrations",
+      "source_section": "Figma Integrations",
+      "source_slug": "figma_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "figma_surface--jira_surface--2",
+      "source_label": "Figma Integrations",
+      "source_section": "Figma Integrations",
+      "source_slug": "figma_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "figma_surface--github_surface--3",
+      "source_label": "Figma Integrations",
+      "source_section": "Figma Integrations",
+      "source_slug": "figma_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "figma_surface--notion_surface--4",
+      "source_label": "Figma Integrations",
+      "source_section": "Figma Integrations",
+      "source_slug": "figma_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "figma_surface--google_workspace_external--5",
+      "source_label": "Figma Integrations",
+      "source_section": "Figma Integrations",
+      "source_slug": "figma_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "todoist_surface--google_calendar_external--1",
+      "source_label": "Todoist Integrations",
+      "source_section": "Todoist Integrations",
+      "source_slug": "todoist_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Calendar",
+      "target_slug": "google_calendar_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "todoist_surface--gmail_external--2",
+      "source_label": "Todoist Integrations",
+      "source_section": "Todoist Integrations",
+      "source_slug": "todoist_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Gmail",
+      "target_slug": "gmail_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "todoist_surface--github_surface--3",
+      "source_label": "Todoist Integrations",
+      "source_section": "Todoist Integrations",
+      "source_slug": "todoist_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "todoist_surface--jira_surface--4",
+      "source_label": "Todoist Integrations",
+      "source_section": "Todoist Integrations",
+      "source_slug": "todoist_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_platform_integration",
+      "id": "todoist_surface--notion_surface--5",
+      "source_label": "Todoist Integrations",
+      "source_section": "Todoist Integrations",
+      "source_slug": "todoist_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--canva_surface--1",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Canva",
+      "target_slug": "canva_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--airtable_surface--2",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Airtable",
+      "target_slug": "airtable_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--figma_surface--3",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--jira_surface--4",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--google_drive_external--5",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "chatgpt_openai_surface--slack_surface--6",
+      "source_label": "chatgpt_openai_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "chatgpt_openai_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--notion_surface--1",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--canva_surface--2",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Canva",
+      "target_slug": "canva_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--figma_surface--3",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Figma",
+      "target_slug": "figma_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--linear_surface--4",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Linear",
+      "target_slug": "linear_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--slack_surface--5",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "claude_anthropic_surface--google_drive_external--6",
+      "source_label": "claude_anthropic_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "claude_anthropic_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--google_drive_external--1",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Drive",
+      "target_slug": "google_drive_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--gmail_external--2",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Gmail",
+      "target_slug": "gmail_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--google_calendar_external--3",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Calendar",
+      "target_slug": "google_calendar_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--notion_surface--4",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--jira_surface--5",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Jira",
+      "target_slug": "jira_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--confluence_surface--6",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Confluence",
+      "target_slug": "confluence_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--github_surface--7",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--linear_surface--8",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Linear",
+      "target_slug": "linear_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--slack_surface--9",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "perplexity_surface--dropbox_surface--10",
+      "source_label": "perplexity_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "perplexity_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Dropbox",
+      "target_slug": "dropbox_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "manus_surface--google_workspace_external--1",
+      "source_label": "manus_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "manus_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "external",
+      "target_label": "Google Workspace",
+      "target_slug": "google_workspace_external"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "manus_surface--notion_surface--2",
+      "source_label": "manus_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "manus_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Notion",
+      "target_slug": "notion_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "manus_surface--slack_surface--3",
+      "source_label": "manus_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "manus_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "Slack",
+      "target_slug": "slack_surface"
+    },
+    {
+      "auth_mode": "oauth_popup",
+      "connector_type": "native_app_connector",
+      "id": "manus_surface--github_surface--4",
+      "source_label": "manus_surface",
+      "source_section": "AI Platform Integrations (ChatGPT, Claude, Perplexity, Manus)",
+      "source_slug": "manus_surface",
+      "state": "user_claimed_configured_unverified",
+      "target_kind": "registry",
+      "target_label": "GitHub",
+      "target_slug": "github_surface"
+    }
+  ],
+  "counts": {
+    "connector_count": 89,
+    "external_target_count": 19,
+    "source_count": 14,
+    "source_profile_count": 39
+  },
+  "gaps": {
+    "unknown_internal_targets_not_in_registry": [],
+    "unknown_sources_not_in_registry": []
+  },
+  "generated_at": "2026-03-06T05:22:55Z",
+  "source_artifact": "/Users/system/Desktop/guide.md",
+  "source_profiles": [
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "airtable_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "atlassian_projects_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "basecamp_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "canva_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "chatgpt_openai_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "claude_anthropic_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "clickup_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "cloudflare_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "coda_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "confluence_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "discord_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "dropbox_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "figma_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "github_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "grok_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "huggingface_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "incident_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "jira_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "linear_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "loveable_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "make_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "manus_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "miro_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "notion_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "openrouter_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "oracle_cloud_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "perplexity_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "reddit_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "replit_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "slack_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "supabase_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "ticktick_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "tiktok_surface"
+    },
+    {
+      "profile_state": "documented_in_guide",
+      "source_slug": "todoist_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "trello_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "twitch_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "x_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "youtube_surface"
+    },
+    {
+      "profile_state": "no_native_connector_map_captured_yet",
+      "source_slug": "zapier_surface"
+    }
+  ],
+  "status": "user_claimed_unverified",
+  "version": "cc91"
+}

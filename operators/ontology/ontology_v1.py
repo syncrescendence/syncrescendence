@@ -24,6 +24,8 @@ RUNTIME_SNAPSHOT_PATH = STATE_DIR / "OPENCLAW-RUNTIME-SNAPSHOT.json"
 CONFIG_MANIFEST_PATH = REPO_ROOT / "configs" / "manifest.json"
 EXOCORTEX_REGISTRY_PATH = STATE_DIR / "EXOCORTEX-SURFACE-REGISTRY-CC90.json"
 EXOCORTEX_TELEOLOGY_PATH = STATE_DIR / "EXOCORTEX-TELEOLOGY-REGISTRY-CC90.json"
+EXOCORTEX_CONNECTOR_MANIFEST_PATH = STATE_DIR / "EXOCORTEX-CONNECTOR-MANIFEST-CC91.json"
+EXOCORTEX_CONTROL_PLANE_STATUS_PATH = STATE_DIR / "EXOCORTEX-CONTROL-PLANE-STATUS-CC91.json"
 
 
 def utc_now() -> str:
@@ -445,6 +447,89 @@ def project_exocortex_teleology(connection: sqlite3.Connection, commit_sha: str 
     return 1
 
 
+def project_exocortex_connector_manifest(connection: sqlite3.Connection, commit_sha: str | None) -> int:
+    if not EXOCORTEX_CONNECTOR_MANIFEST_PATH.exists():
+        return 0
+    manifest = load_json(EXOCORTEX_CONNECTOR_MANIFEST_PATH)
+    version = manifest.get("version", "unknown")
+    snapshot_id = f"config-snapshot:exocortex-connector-manifest:{version}"
+    upsert_config_snapshot(
+        connection,
+        snapshot_id=snapshot_id,
+        snapshot_kind="exocortex_connector_manifest",
+        source="repo-exocortex-connector-manifest",
+        summary=f"Exocortex connector manifest ({version})",
+        payload=manifest,
+        captured_at=manifest.get("generated_at", utc_now()),
+        provenance_commit=commit_sha,
+        provenance_path=str(EXOCORTEX_CONNECTOR_MANIFEST_PATH.relative_to(REPO_ROOT)),
+    )
+    upsert_entity(
+        connection,
+        entity_id=snapshot_id,
+        kind="ExocortexConnectorManifest",
+        slug=slugify(f"exocortex-connector-manifest-{version}"),
+        title=f"Exocortex connector manifest ({version})",
+        state=manifest.get("status", "active"),
+        payload={
+            "connector_count": manifest.get("counts", {}).get("connector_count"),
+            "source_count": manifest.get("counts", {}).get("source_count"),
+            "external_target_count": manifest.get("counts", {}).get("external_target_count"),
+            "unknown_source_count": len(manifest.get("gaps", {}).get("unknown_sources_not_in_registry", [])),
+            "unknown_internal_target_count": len(
+                manifest.get("gaps", {}).get("unknown_internal_targets_not_in_registry", [])
+            ),
+        },
+        source="repo-exocortex-connector-manifest",
+        captured_at=manifest.get("generated_at", utc_now()),
+        provenance_type="repo-path",
+        provenance_ref=str(EXOCORTEX_CONNECTOR_MANIFEST_PATH.relative_to(REPO_ROOT)),
+    )
+    return 1
+
+
+def project_exocortex_control_plane_status(connection: sqlite3.Connection, commit_sha: str | None) -> int:
+    if not EXOCORTEX_CONTROL_PLANE_STATUS_PATH.exists():
+        return 0
+    status = load_json(EXOCORTEX_CONTROL_PLANE_STATUS_PATH)
+    version = status.get("version", "unknown")
+    snapshot_id = f"config-snapshot:exocortex-control-plane-status:{version}"
+    upsert_config_snapshot(
+        connection,
+        snapshot_id=snapshot_id,
+        snapshot_kind="exocortex_control_plane_status",
+        source="repo-exocortex-control-plane-status",
+        summary=f"Exocortex control-plane status ({version})",
+        payload=status,
+        captured_at=status.get("generated_at", utc_now()),
+        provenance_commit=commit_sha,
+        provenance_path=str(EXOCORTEX_CONTROL_PLANE_STATUS_PATH.relative_to(REPO_ROOT)),
+    )
+    upsert_entity(
+        connection,
+        entity_id=snapshot_id,
+        kind="ExocortexControlPlaneStatus",
+        slug=slugify(f"exocortex-control-plane-status-{version}"),
+        title=f"Exocortex control-plane status ({version})",
+        state=status.get("readiness", {}).get("control_plane_readiness", "unknown"),
+        payload={
+            "status": status.get("status"),
+            "surface_profile_coverage_pct": status.get("readiness", {}).get("surface_profile_coverage_pct"),
+            "teleology_coverage_pct": status.get("readiness", {}).get("teleology_coverage_pct"),
+            "connector_count": status.get("counts", {}).get("connector_count"),
+            "high_fanout_count": status.get("counts", {}).get("high_fanout_count"),
+            "profile_missing_count": status.get("counts", {}).get("profile_missing_count"),
+            "unresolved_source_count": status.get("counts", {}).get("unresolved_source_count"),
+            "unresolved_internal_target_count": status.get("counts", {}).get("unresolved_internal_target_count"),
+        },
+        source="repo-exocortex-control-plane-status",
+        captured_at=status.get("generated_at", utc_now()),
+        provenance_type="repo-path",
+        provenance_ref=str(EXOCORTEX_CONTROL_PLANE_STATUS_PATH.relative_to(REPO_ROOT)),
+    )
+    return 1
+
+
 def project_event_entities(connection: sqlite3.Connection, event: dict[str, Any], commit_sha: str | None) -> int:
     count = 0
     event_entity_id = f"exo-event:{event['id']}"
@@ -585,9 +670,15 @@ def project_repo_state(db_path: Path = DB_PATH) -> dict[str, int]:
         projected["snapshots"] += project_config_manifest(connection, commit_sha)
         projected["snapshots"] += project_exocortex_registry(connection, commit_sha)
         projected["snapshots"] += project_exocortex_teleology(connection, commit_sha)
+        projected["snapshots"] += project_exocortex_connector_manifest(connection, commit_sha)
+        projected["snapshots"] += project_exocortex_control_plane_status(connection, commit_sha)
         if EXOCORTEX_REGISTRY_PATH.exists():
             projected["entities"] += 1
         if EXOCORTEX_TELEOLOGY_PATH.exists():
+            projected["entities"] += 1
+        if EXOCORTEX_CONNECTOR_MANIFEST_PATH.exists():
+            projected["entities"] += 1
+        if EXOCORTEX_CONTROL_PLANE_STATUS_PATH.exists():
             projected["entities"] += 1
 
         for event in events:

@@ -99,7 +99,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--summary",
-        default="Canonical exocortex registry synchronized with 37 surfaces and auth dependency edges.",
+        default="Canonical exocortex registry synchronized with auth dependency edges.",
     )
     parser.add_argument("--project-ontology", action="store_true")
     parser.add_argument("--ontology-url", choices=["local", "domain"], default="domain")
