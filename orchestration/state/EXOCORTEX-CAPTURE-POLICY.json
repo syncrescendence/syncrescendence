@@ -141,6 +141,21 @@
         "chain_of_thought",
         "raw_output"
       ]
+    },
+    "exocortex_surface_registry": {
+      "allowed_durable_capture": [
+        "typed_record",
+        "summary_and_typed_record"
+      ],
+      "forbidden_payload_keys": [
+        "token",
+        "secret",
+        "password",
+        "api_key",
+        "access_token",
+        "refresh_token",
+        "session"
+      ]
     }
   },
   "forbidden_repo_path_substrings": [

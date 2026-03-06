@@ -41,6 +41,7 @@
     "manus_cc89_task_status": "completed_with_policy_refusal",
     "manus_cc89_prompt_artifact": "communications/prompts/PACKET-MANUS-cc89-high-trust-owner-cutover-execution.md",
     "manus_cc89_response_artifact": "communications/responses/RESPONSE-MANUS-cc89-high-trust-owner-cutover-execution.md",
+    "cc90_exocortex_registry_artifact": "orchestration/state/EXOCORTEX-SURFACE-REGISTRY-CC90.json",
     "cc86_owner_cutover_kit_artifact": "orchestration/state/impl/CC86-OWNER-CUTOVER-KIT-v1.md",
     "cc83_account_topology_decision_artifact": "orchestration/state/impl/ACCOUNT-TOPOLOGY-DECISION-CC83.md",
     "cc82_execution_plan_artifact": "orchestration/state/impl/CC82-EXOCORTEX-CENTRALIZATION-EXECUTION-PLAN-v1.md",
@@ -62,7 +63,7 @@
     "phase0_security_readiness": "pending",
     "phase1_snapshot_capture": "pending",
     "phase2_low_blast_radius_surfaces": "pending",
-    "phase3_scaffold_and_comms_surfaces": "pending",
+    "phase3_scaffold_and_comms_surfaces": "complete_user_confirmed_cc90",
     "phase4_control_plane_surfaces": "pending",
     "phase5_terminal_actions": "pending"
   },
@@ -185,19 +186,19 @@
       "automation_envelope": "low_to_partial",
       "mutation_mode": "human_ui_first",
       "risk_level": "medium",
-      "state": "not_started",
+      "state": "complete_user_confirmed_cc90",
       "substate": {
-        "snapshot_done": false,
-        "notion_done": false,
-        "coda_done": false,
-        "linear_done": false,
-        "jira_done": false,
-        "confluence_done": false,
-        "clickup_done": false,
-        "basecamp_done": false,
-        "airtable_done": false,
-        "verified": false,
-        "rollback_ready": false
+        "snapshot_done": true,
+        "notion_done": true,
+        "coda_done": true,
+        "linear_done": true,
+        "jira_done": true,
+        "confluence_done": true,
+        "clickup_done": true,
+        "basecamp_done": true,
+        "airtable_done": true,
+        "verified": true,
+        "rollback_ready": true
       }
     },
     {

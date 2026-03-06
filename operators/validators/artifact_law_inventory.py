@@ -35,6 +35,7 @@ ALLOWED_TOP_LEVEL = {
     "communications",
     "executive",
     "knowledge",
+    "memory",
     "offices",
     "operators",
     "pedigree",

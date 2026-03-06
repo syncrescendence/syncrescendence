@@ -29,6 +29,20 @@ It does define the minimum operational facts needed now:
 
 ## Current Matrix
 
+## CC90 Ownership Update
+
+The exocortex ownership baseline has been updated:
+
+1. all listed exocortex workspaces are now declared under `syncrescendence@gmail.com`
+2. canonical workspace namespace is `syncrescendence`
+3. auth dependency edges are explicitly tracked (`github -> supabase`, `slack -> incident`)
+
+Live canonical registry:
+
+- [EXOCORTEX-SURFACE-REGISTRY-CC90.json](/Users/system/syncrescendence/orchestration/state/EXOCORTEX-SURFACE-REGISTRY-CC90.json)
+
+Historical CC76 table below remains useful for provenance of earlier split-ownership state.
+
 | Surface | Current Harness | Identity / Account Substrate | Auth Substrate | Status | Durable Role | Notes |
 |---|---|---|---|---|---|---|
 | `oracle_web_surface` | Commander relay | web session identity | browser session | packetized | strategic hypersensing | returned artifact only; no hidden authority |

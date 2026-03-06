@@ -8,3 +8,5 @@ __pycache__/
 orchestration/state/ARTIFACT-LAW-INVENTORY.json
 orchestration/state/ARTIFACT-LAW-INVENTORY.md
 orchestration/state/SANDBOX-EVENT-LEDGER.jsonl
+memory/AJNA-EVENT-LEDGER.jsonl
+memory/AJNA-EVENT-SUMMARY.md

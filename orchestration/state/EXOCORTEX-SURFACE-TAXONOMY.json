@@ -1,4 +1,7 @@
 {
+  "status": "active_with_cc90_expansion",
+  "superseded_for_full_inventory_by": "orchestration/state/EXOCORTEX-SURFACE-REGISTRY-CC90.json",
+  "full_inventory_reference": "orchestration/state/impl/EXOCORTEX-SURFACE-REGISTRY-CC90.md",
   "surfaces": [
     {
       "slug": "oracle_web_surface",

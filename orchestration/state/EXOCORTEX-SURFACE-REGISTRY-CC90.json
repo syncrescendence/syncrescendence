@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-03-05",
+  "status": "active",
+  "version": "cc90",
+  "canonical_identity": "syncrescendence@gmail.com",
+  "canonical_workspace_domain": "syncrescendence",
+  "canonical_github_repo": "https://github.com/syncrescendence/syncrescendence",
+  "source_of_truth_note": "User-confirmed exocortex ownership migrated to canonical identity with workspace namespace aligned to syncrescendence.",
+  "counts": {
+    "surface_count": 37,
+    "auth_dependency_count": 2
+  },
+  "auth_dependencies": [
+    {
+      "parent_surface": "github_surface",
+      "child_surface": "supabase_surface",
+      "relation": "signin_provider",
+      "provider": "Sign in with GitHub"
+    },
+    {
+      "parent_surface": "slack_surface",
+      "child_surface": "incident_surface",
+      "relation": "signin_provider",
+      "provider": "Sign in with Slack"
+    }
+  ],
+  "surfaces": [
+    {
+      "slug": "airtable_surface",
+      "service": "Airtable",
+      "class": "metaconnection_data_layer",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:airtable"
+    },
+    {
+      "slug": "basecamp_surface",
+      "service": "Basecamp",
+      "class": "project_breakout_rooms",
+      "access_model": "web",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:basecamp"
+    },
+    {
+      "slug": "canva_surface",
+      "service": "Canva",
+      "class": "design_media_workspace",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:canva"
+    },
+    {
+      "slug": "chatgpt_openai_surface",
+      "service": "ChatGPT/OpenAI",
+      "class": "model_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:chatgpt-openai"
+    },
+    {
+      "slug": "claude_anthropic_surface",
+      "service": "Claude/Anthropic",
+      "class": "model_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:claude-anthropic"
+    },
+    {
+      "slug": "clickup_surface",
+      "service": "ClickUp",
+      "class": "program_management",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:clickup"
+    },
+    {
+      "slug": "cloudflare_surface",
+      "service": "Cloudflare",
+      "class": "edge_domain_control_plane",
+      "access_model": "web_api_cli",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:cloudflare"
+    },
+    {
+      "slug": "coda_surface",
+      "service": "Coda",
+      "class": "mutability_engine",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:coda"
+    },
+    {
+      "slug": "confluence_surface",
+      "service": "Confluence",
+      "class": "technical_knowledge_base",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:confluence"
+    },
+    {
+      "slug": "discord_surface",
+      "service": "Discord",
+      "class": "channel_runtime_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:discord"
+    },
+    {
+      "slug": "dropbox_surface",
+      "service": "Dropbox",
+      "class": "file_system_extension",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:dropbox"
+    },
+    {
+      "slug": "github_surface",
+      "service": "GitHub",
+      "class": "code_sovereignty_control_plane",
+      "access_model": "web_api_cli",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:github"
+    },
+    {
+      "slug": "supabase_surface",
+      "service": "Supabase",
+      "class": "database_backend_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "auth_parent_surface": "github_surface",
+      "ontology_entity_id": "surface-state:supabase"
+    },
+    {
+      "slug": "grok_surface",
+      "service": "Grok",
+      "class": "model_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:grok"
+    },
+    {
+      "slug": "huggingface_surface",
+      "service": "Hugging Face",
+      "class": "model_distribution_surface",
+      "access_model": "web_api_cli",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:huggingface"
+    },
+    {
+      "slug": "jira_surface",
+      "service": "Jira",
+      "class": "external_technical_work_scaffold",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:jira"
+    },
+    {
+      "slug": "linear_surface",
+      "service": "Linear",
+      "class": "internal_technical_work_scaffold",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:linear"
+    },
+    {
+      "slug": "loveable_surface",
+      "service": "Loveable",
+      "class": "app_generation_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:loveable"
+    },
+    {
+      "slug": "make_surface",
+      "service": "Make",
+      "class": "automation_orchestration_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:make"
+    },
+    {
+      "slug": "miro_surface",
+      "service": "Miro",
+      "class": "visual_collaboration_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:miro"
+    },
+    {
+      "slug": "notion_surface",
+      "service": "Notion",
+      "class": "context_lakehouse",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:notion"
+    },
+    {
+      "slug": "openrouter_surface",
+      "service": "OpenRouter",
+      "class": "model_broker_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:openrouter"
+    },
+    {
+      "slug": "oracle_cloud_surface",
+      "service": "Oracle Cloud",
+      "class": "cloud_control_plane",
+      "access_model": "web_api_cli",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:oracle-cloud"
+    },
+    {
+      "slug": "perplexity_surface",
+      "service": "Perplexity",
+      "class": "verification_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:perplexity"
+    },
+    {
+      "slug": "atlassian_projects_surface",
+      "service": "Projects (Atlassian)",
+      "class": "portfolio_tracking_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:atlassian-projects"
+    },
+    {
+      "slug": "reddit_surface",
+      "service": "Reddit",
+      "class": "social_intel_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:reddit"
+    },
+    {
+      "slug": "replit_surface",
+      "service": "Replit",
+      "class": "cloud_dev_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:replit"
+    },
+    {
+      "slug": "slack_surface",
+      "service": "Slack",
+      "class": "operator_bus_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:slack"
+    },
+    {
+      "slug": "incident_surface",
+      "service": "Incident",
+      "class": "incident_response_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "auth_parent_surface": "slack_surface",
+      "ontology_entity_id": "surface-state:incident"
+    },
+    {
+      "slug": "ticktick_surface",
+      "service": "TickTick",
+      "class": "procedural_execution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:ticktick"
+    },
+    {
+      "slug": "tiktok_surface",
+      "service": "TikTok",
+      "class": "social_distribution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:tiktok"
+    },
+    {
+      "slug": "todoist_surface",
+      "service": "Todoist",
+      "class": "gtd_execution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:todoist"
+    },
+    {
+      "slug": "trello_surface",
+      "service": "Trello",
+      "class": "kanban_execution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:trello"
+    },
+    {
+      "slug": "twitch_surface",
+      "service": "Twitch",
+      "class": "live_distribution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:twitch"
+    },
+    {
+      "slug": "youtube_surface",
+      "service": "YouTube",
+      "class": "video_distribution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:youtube"
+    },
+    {
+      "slug": "zapier_surface",
+      "service": "Zapier",
+      "class": "automation_orchestration_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:zapier"
+    },
+    {
+      "slug": "x_surface",
+      "service": "X",
+      "class": "social_distribution_surface",
+      "access_model": "web_api",
+      "owner_identity": "syncrescendence@gmail.com",
+      "workspace_namespace": "syncrescendence",
+      "status": "canonical_owner_confirmed",
+      "ontology_entity_id": "surface-state:x"
+    }
+  ]
+}

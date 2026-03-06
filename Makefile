@@ -1,4 +1,4 @@
-.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
+.PHONY: inventory check-artifact-law bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
 
 inventory:
 	python3 operators/validators/artifact_law_inventory.py --format both
@@ -118,6 +118,12 @@ acumen-pipeline-run:
 	@test -n "$(QUEUE)" || (echo "usage: make acumen-pipeline-run QUEUE=/abs/path/triage-decisions.jsonl OUT=/abs/path/output-dir [REGISTRY=runtime/acumen/registry.json]" && exit 1)
 	@test -n "$(OUT)" || (echo "usage: make acumen-pipeline-run QUEUE=/abs/path/triage-decisions.jsonl OUT=/abs/path/output-dir [REGISTRY=runtime/acumen/registry.json]" && exit 1)
 	python3 operators/acumen/pipeline_flow.py --registry "$(or $(REGISTRY),runtime/acumen/registry.json)" --queue "$(QUEUE)" --out "$(OUT)" --status-json "$(or $(STATUS_JSON),orchestration/state/ACUMEN-PIPELINE-STATUS.json)"
+
+exocortex-sync-surface-registry:
+	python3 operators/exocortex/exocortex_surface_registry_bridge.py $(if $(PROJECT_ONTOLOGY),--project-ontology,) --ontology-url "$(or $(ONTOLOGY_URL),domain)"
+
+ontology-project-repo:
+	python3 operators/ontology/ontology_v1.py project-repo
 
 webshell-dev:
 	python3 operators/webshell/syncrescendence_dev_shell.py --repo-root "$(or $(REPO_ROOT),$(CURDIR))" --host "$(or $(HOST),127.0.0.1)" --port "$(or $(PORT),8890)" $(if $(CALLBACK_TOKEN),--callback-token "$(CALLBACK_TOKEN)",) $(if $(GITHUB_WEBHOOK_SECRET),--github-webhook-secret "$(GITHUB_WEBHOOK_SECRET)",) $(if $(SLACK_SIGNING_SECRET),--slack-signing-secret "$(SLACK_SIGNING_SECRET)",) $(if $(ENFORCE_PROVIDER_SIGNATURES),--enforce-provider-signatures,)

@@ -5,6 +5,17 @@
 
 ---
 
+## CC90 Update
+
+This CC75 artifact remains a valid foundational taxonomy, but the full exocortex inventory now lives in:
+
+- [EXOCORTEX-SURFACE-REGISTRY-CC90.json](/Users/system/syncrescendence/orchestration/state/EXOCORTEX-SURFACE-REGISTRY-CC90.json)
+- [EXOCORTEX-SURFACE-REGISTRY-CC90.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-SURFACE-REGISTRY-CC90.md)
+
+Use CC90 for complete surface accounting and auth-dependency edges.
+
+---
+
 ## Scope
 
 This taxonomy is intentionally narrower than the Oracle response.

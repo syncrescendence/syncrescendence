@@ -1,14 +1,13 @@
 {
   "failed_count": 0,
   "failed_files": [],
-  "last_run_at": "2026-03-02T19:49:34Z",
-  "processed_count": 0,
-  "processed_ids": [],
+  "last_run_at": "2026-03-06T04:46:45Z",
+  "processed_count": 1,
+  "processed_ids": [
+    "system-20260306-044645-173540-exocortex-surface-registry-snapshot"
+  ],
   "skipped_duplicates": [],
   "source_counts": {
-    "ajna": 3,
-    "commander": 10,
-    "manus": 2,
-    "system": 17
+    "system": 1
   }
 }
