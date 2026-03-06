@@ -4,7 +4,7 @@
 **Date**: `2026-03-06`  
 **Lane**: `communications/handoffs`  
 **Status**: `handed off`  
-**Prior lineage**: `session-spanning archaeology -> Batch 01 swarm -> Batch 02 swarm -> Batch 03 drafting swarm`
+**Prior lineage**: `session-spanning archaeology -> Batch 01 swarm -> Batch 02 swarm -> Batch 03 drafting swarm -> Wave 1 ratification -> Wave 2 staging`
 
 ## Decision Envelope
 
@@ -30,13 +30,15 @@ Do not assume any hidden thread memory exists.
 If you are resuming from scratch:
 
 1. read [AGENTS.md](/Users/system/syncrescendence/AGENTS.md)
-2. read [TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md)
-3. read [TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md)
-4. read [CODEX-SWARM-TRIBUTARY-RATIFICATION-WRITESET-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CODEX-SWARM-TRIBUTARY-RATIFICATION-WRITESET-v1.md)
-5. read [IMPLEMENTATION-TRANCHE-V-TRIBUTARY-RATIFICATION-WRITESET.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-V-TRIBUTARY-RATIFICATION-WRITESET.md)
-6. read the landed Batch 03 worker responses listed below
-7. synthesize Batch 03
-8. integrate the smallest safe direct-write pass
+2. read [SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md](/Users/system/syncrescendence/knowledge/canon/SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md)
+3. read [TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md)
+4. read [TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md)
+5. read [TRIBUTARY-RATIFICATION-WRITESET-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-RATIFICATION-WRITESET-SYNTHESIS-v1.md)
+6. read [TRIBUTARY-RATIFICATION-WRITESET-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-RATIFICATION-WRITESET-SYNTHESIS-v1.md)
+7. read [CODEX-SWARM-WAVE-2-COMPATIBILITY-AND-SEED-NORMALIZATION-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CODEX-SWARM-WAVE-2-COMPATIBILITY-AND-SEED-NORMALIZATION-v1.md)
+8. read [IMPLEMENTATION-TRANCHE-W-COMPATIBILITY-AND-SEED-NORMALIZATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-W-COMPATIBILITY-AND-SEED-NORMALIZATION.md)
+9. treat the Batch 03 responses as drafting lineage, not the current unsynthesized frontier
+10. execute Wave 2 compatibility and seed normalization
 
 Do not spend time rebuilding the philosophical backstory unless the user explicitly redirects you there.
 
@@ -116,11 +118,38 @@ Primary coordination artifact:
 
 Batch 03 worker responses have already landed.
 
-They are **not yet synthesized** in repo law.
+They were later synthesized and ratified in Wave 1.
 
-There is currently **no Batch 03 coordinator response committed**.
+They remain important drafting lineage, but they are no longer the active frontier of the work.
 
-That is the true frontier of the work.
+### 6. Macro doctrine anchor
+
+The repo now also carries an explicit macro doctrine artifact:
+
+- [SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md](/Users/system/syncrescendence/knowledge/canon/SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md)
+
+This exists so future handoffs and direct-write waves do not lose the larger telos while working on migration microstructure.
+
+### 7. Wave 1: ratified control plane
+
+Wave 1 later landed the first direct-write pass.
+
+That pass ratified:
+
+- the registry control plane under `orchestration/state/registry/`
+- Sigma ratification in `KNOWLEDGE-LANE-LAW-v1.md` and `knowledge/sigma/README.md`
+- pedigree custody law in `PEDIGREE-CUSTODY-LAW-v1.md`
+- promotion thresholds in `PROMOTION-THRESHOLDS-v1.md`
+- witness / externalization / lineage law in `WITNESS-EXTERNALIZATION-LAW-v1.md`
+- the missing dispatch lane at `communications/dispatches/README.md`
+
+The current frontier is therefore Wave 2:
+
+- compatibility cleanup
+- schema-valid seed normalization
+- first manifests and receipts
+- bounded Sigma subtree sync planning
+- validator normalization
 
 ## Binding Adjudications
 
@@ -146,7 +175,7 @@ Treat the following as binding unless a direct repo contradiction is found.
    - repo ratifies
    - exocortex coordinates
    - ontology projects
-10. `communications/dispatches/` is missing physically and should be added in the first direct-write pass.
+10. `communications/dispatches/` is now a first-class lane and should be treated as such.
 
 ## Current Repo State
 
@@ -177,7 +206,7 @@ If you are reading this after the handoff commit itself, HEAD will be newer than
 
 ## Landed Batch 03 Worker Responses
 
-These files exist and should be treated as the immediate unsynthesized frontier:
+These files exist and should be treated as historical drafting lineage for Wave 1, not as the current active frontier:
 
 - [RESPONSE-CODEX-SWARM-BATCH-03-LANE-01-REGISTRY-ARTIFACTS.md](/Users/system/syncrescendence/communications/responses/RESPONSE-CODEX-SWARM-BATCH-03-LANE-01-REGISTRY-ARTIFACTS.md)
 - [RESPONSE-CODEX-SWARM-BATCH-03-LANE-02-SIGMA-RATIFICATION.md](/Users/system/syncrescendence/communications/responses/RESPONSE-CODEX-SWARM-BATCH-03-LANE-02-SIGMA-RATIFICATION.md)
@@ -190,7 +219,7 @@ These files exist and should be treated as the immediate unsynthesized frontier:
 Observed state at landing:
 
 - all seven worker responses were `complete`
-- there was no `RESPONSE-CODEX-SWARM-BATCH-03-LANE-00-COORDINATOR.md`
+- there is now a coordinator response and a ratified Wave 1 synthesis in the repo
 - lane 07 is optional and should remain subordinate to the main law artifacts
 
 Approximate size of the landed Batch 03 worker corpus:
@@ -214,16 +243,16 @@ Always include reasoning levels when dispatching or re-dispatching.
 
 If resuming autonomously, do this next:
 
-1. Read all landed Batch 03 worker responses.
-2. Produce [RESPONSE-CODEX-SWARM-BATCH-03-LANE-00-COORDINATOR.md](/Users/system/syncrescendence/communications/responses/RESPONSE-CODEX-SWARM-BATCH-03-LANE-00-COORDINATOR.md) or an equivalent synthesis artifact.
-3. Write one adjudicated synthesis artifact for Batch 03.
-4. Integrate the smallest safe direct-write pass:
-   - registry artifacts under `orchestration/state/registry/`
-   - Sigma ratification update and `knowledge/sigma/README.md`
-   - pedigree custody law and minimal manifest/receipt guidance
-   - promotion-threshold artifact and `communications/dispatches/README.md`
-   - compact witness/externalization/lineage law
-5. Commit that write pass.
+1. Read the macro doctrine and the Wave 1 synthesis artifacts.
+2. Read [CODEX-SWARM-WAVE-2-COMPATIBILITY-AND-SEED-NORMALIZATION-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CODEX-SWARM-WAVE-2-COMPATIBILITY-AND-SEED-NORMALIZATION-v1.md).
+3. Dispatch or synthesize Wave 2 lanes.
+4. Execute the next bounded pass:
+   - Sigma compatibility cleanup
+   - communications and dispatch documentation cleanup
+   - schema-valid seed normalization
+   - first manifests and receipts
+   - bounded Sigma subtree sync planning
+5. Commit that pass.
 
 Do **not** start by rewriting unrelated shell law.
 
@@ -249,10 +278,9 @@ These are **not** open enough to justify redoing Batch 02:
 
 ## What Was Done In This Handoff Turn
 
-- detected that Batch 03 worker responses had landed
-- recorded their existence and unsynthesized status
 - created a stateless rehydration packet designed for a fresh GPT-5.4 `extra high`
-- prepared to commit both this handoff and the landed Batch 03 raw response lineage so the frontier is preserved in-repo
+- preserved the landed Batch 03 raw response lineage in the repo
+- later turns extended the repo beyond the original handoff state with Wave 1 ratification and Wave 2 staging
 
 ## Blockers
 
@@ -262,6 +290,7 @@ These are **not** open enough to justify redoing Batch 02:
 ## Receipts
 
 - [AGENTS.md](/Users/system/syncrescendence/AGENTS.md)
+- [SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md](/Users/system/syncrescendence/knowledge/canon/SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md)
 - [TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-UNIFICATION-SWARM-SYNTHESIS-v1.md)
 - [TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/TRIBUTARY-CONTRACT-HARDENING-SYNTHESIS-v1.md)
 - [CODEX-SWARM-TRIBUTARY-RATIFICATION-WRITESET-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CODEX-SWARM-TRIBUTARY-RATIFICATION-WRITESET-v1.md)
