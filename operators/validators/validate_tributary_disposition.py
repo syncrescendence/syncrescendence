@@ -9,13 +9,17 @@ import hashlib
 import json
 import re
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from pathlib import Path, PurePosixPath
+from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+STATE_DIR = REPO_ROOT / "orchestration" / "state"
 DEFAULT_REGISTRY = REPO_ROOT / "orchestration" / "state" / "registry" / "tributary-disposition-registry.csv"
 DEFAULT_LEDGER = REPO_ROOT / "orchestration" / "state" / "registry" / "tributary-disposition-ledger.jsonl"
+DEFAULT_MD_REPORT = STATE_DIR / "TRIBUTARY-DISPOSITION-VALIDATION-REPORT.md"
+DEFAULT_JSON_REPORT = STATE_DIR / "TRIBUTARY-DISPOSITION-VALIDATION-REPORT.json"
 
 EXPECTED_HEADER = [
     "candidate_id",
@@ -107,6 +111,7 @@ ENUMS = {
 
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 SHA256_RE = re.compile(r"^sha256:[0-9a-f]{64}$")
+CANDIDATE_ID_RE = re.compile(r"^tdc-[a-z0-9-]+-[0-9]{4}$")
 REPO_PATH_FIELDS = (
     "source_path",
     "destination_lane",
@@ -136,12 +141,39 @@ STATE_ORDER = {
     "closed": 6,
     "exception": -1,
 }
+SCORE_FIELDS = ("authority_score", "present_relevance", "compaction_yield")
 PROMOTION_DISPOSITIONS = {
     "promote_live_law",
     "promote_sigma",
     "promote_sigma_reference",
     "promote_playbook",
     "promote_operator",
+}
+HASH_REQUIRED_DISPOSITIONS = PROMOTION_DISPOSITIONS | {"retain_pedigree_rehoused"}
+LEGAL_TRANSITIONS = {
+    ("intake_pending", "triaged"),
+    ("triaged", "adjudicated"),
+    ("adjudicated", "scheduled"),
+    ("scheduled", "executed"),
+    ("executed", "verified"),
+    ("verified", "closed"),
+    ("intake_pending", "exception"),
+    ("triaged", "exception"),
+    ("adjudicated", "exception"),
+    ("scheduled", "exception"),
+    ("executed", "exception"),
+    ("verified", "exception"),
+    ("exception", "triaged"),
+    ("exception", "adjudicated"),
+}
+EXPECTED_EVENT_STATE_AFTER = {
+    "row_triaged": "triaged",
+    "row_adjudicated": "adjudicated",
+    "row_scheduled": "scheduled",
+    "row_executed": "executed",
+    "row_verified": "verified",
+    "row_closed": "closed",
+    "row_exception": "exception",
 }
 
 
@@ -209,6 +241,16 @@ def validate_enum(findings: list[Finding], scope: str, field: str, value: str) -
         add_finding(findings, scope, f"{field} has illegal value {value!r}")
 
 
+def validate_score(findings: list[Finding], scope: str, field: str, value: str) -> None:
+    try:
+        parsed = int(value)
+    except ValueError:
+        add_finding(findings, scope, f"{field} must be an integer in 0..5, found {value!r}")
+        return
+    if not 0 <= parsed <= 5:
+        add_finding(findings, scope, f"{field} must be an integer in 0..5, found {value!r}")
+
+
 def validate_required_paths(findings: list[Finding], scope: str, row: dict[str, str]) -> None:
     state = row["record_state"]
     disposition = row["chosen_disposition"]
@@ -257,6 +299,16 @@ def validate_required_paths(findings: list[Finding], scope: str, row: dict[str, 
         if row["external_pointer"] != "none":
             add_finding(findings, scope, "cull_with_receipt requires external_pointer=none")
 
+    dest_hash = row["dest_artifact_hash"]
+    if dest_hash != "none" and not SHA256_RE.fullmatch(dest_hash):
+        add_finding(findings, scope, f"dest_artifact_hash must be sha256:<64 lowercase hex> or 'none', found {dest_hash!r}")
+
+    if state_rank >= STATE_ORDER["verified"] and disposition in HASH_REQUIRED_DISPOSITIONS:
+        if dest_hash == "none":
+            add_finding(findings, scope, "verified promotion or rehousing disposition requires dest_artifact_hash")
+        elif not SHA256_RE.fullmatch(dest_hash):
+            add_finding(findings, scope, f"verified promotion or rehousing disposition has illegal dest_artifact_hash {dest_hash!r}")
+
 
 def validate_registry(findings: list[Finding], rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
     by_candidate: dict[str, dict[str, str]] = {}
@@ -271,11 +323,17 @@ def validate_registry(findings: list[Finding], rows: list[dict[str, str]]) -> di
         else:
             by_candidate[candidate_id] = row
 
+        if not CANDIDATE_ID_RE.fullmatch(candidate_id):
+            add_finding(findings, scope, f"candidate_id has illegal form {candidate_id!r}")
+
         if row["schema_version"] != "v1":
             add_finding(findings, scope, f"schema_version must be 'v1', found {row['schema_version']!r}")
 
         for field in ENUMS:
             validate_enum(findings, scope, field, row[field])
+
+        for field in SCORE_FIELDS:
+            validate_score(findings, scope, field, row[field])
 
         for field in REPO_PATH_FIELDS:
             allow_none = field != "source_path"
@@ -407,6 +465,55 @@ def validate_latest_ledger_parity(
         if observed_versions != expected_versions:
             add_finding(findings, scope, f"row_version sequence is not contiguous: {observed_versions}")
 
+        saw_verified = False
+        prior_after: str | None = None
+        for index, event in enumerate(ordered_events, start=1):
+            event_scope = f"ledger:{candidate_id}:v{event['row_version']}"
+            event_type = str(event.get("event_type", ""))
+            before_raw = event.get("record_state_before")
+            before = None if before_raw is None else str(before_raw)
+            after = str(event.get("record_state_after", ""))
+
+            if after not in STATE_ORDER:
+                add_finding(findings, event_scope, f"record_state_after has illegal value {after!r}")
+            if before is not None and before not in STATE_ORDER:
+                add_finding(findings, event_scope, f"record_state_before has illegal value {before!r}")
+
+            expected_after = EXPECTED_EVENT_STATE_AFTER.get(event_type)
+            if expected_after and after != expected_after:
+                add_finding(findings, event_scope, f"{event_type} must set record_state_after={expected_after!r}, found {after!r}")
+
+            if event_type == "row_intake":
+                if int(event["row_version"]) != 1:
+                    add_finding(findings, event_scope, "row_intake is only legal as row_version=1")
+                if after not in {"intake_pending", "triaged"}:
+                    add_finding(findings, event_scope, f"row_intake may only create intake_pending or triaged, found {after!r}")
+                if before not in {None, "", "none"}:
+                    add_finding(findings, event_scope, f"row_intake requires null prior state, found {before!r}")
+            elif event_type == "row_corrected":
+                if before is None:
+                    add_finding(findings, event_scope, "row_corrected requires record_state_before to preserve state")
+                elif before != after:
+                    add_finding(findings, event_scope, f"row_corrected must preserve record_state {before!r}, found {after!r}")
+            elif before is None:
+                add_finding(findings, event_scope, f"{event_type} requires record_state_before")
+            elif (before, after) not in LEGAL_TRANSITIONS:
+                add_finding(findings, event_scope, f"illegal state transition {before!r} -> {after!r}")
+
+            if prior_after is not None and before != prior_after:
+                add_finding(
+                    findings,
+                    event_scope,
+                    f"record_state_before {before!r} does not match prior ledger state {prior_after!r}",
+                )
+
+            if after == "verified":
+                saw_verified = True
+            if after == "closed" and not saw_verified:
+                add_finding(findings, event_scope, "closed rows must previously pass through verified")
+
+            prior_after = after
+
         latest = ordered_events[-1]
         latest_state = str(latest.get("record_state_after", ""))
         latest_actor = str(latest.get("actor", ""))
@@ -436,22 +543,76 @@ def validate_latest_ledger_parity(
             add_finding(findings, f"ledger:{candidate_id}", "ledger candidate_id is missing from the CSV current-state registry")
 
 
-def render_report(registry_path: Path, ledger_path: Path, rows: list[dict[str, str]], events: list[dict[str, object]], findings: list[Finding]) -> str:
+def build_report(
+    registry_path: Path,
+    ledger_path: Path,
+    rows: list[dict[str, str]],
+    events: list[dict[str, object]],
+    findings: list[Finding],
+) -> dict[str, Any]:
+    return {
+        "validator": "Tributary Disposition Validator",
+        "mode": "report-only",
+        "registry": display_path(registry_path),
+        "ledger": display_path(ledger_path),
+        "rows": len(rows),
+        "ledger_events": len(events),
+        "finding_count": len(findings),
+        "status": "PASS" if not findings else "FAIL",
+        "findings": [asdict(finding) for finding in sorted(findings, key=lambda item: (item.scope, item.message))],
+    }
+
+
+def render_stdout_report(report: dict[str, Any]) -> str:
     lines = [
-        "Tributary Disposition Validator",
-        f"Registry: {display_path(registry_path)}",
-        f"Ledger: {display_path(ledger_path)}",
-        f"Rows: {len(rows)}",
-        f"Ledger events: {len(events)}",
-        f"Findings: {len(findings)}",
-        f"Status: {'PASS' if not findings else 'FAIL'}",
+        str(report["validator"]),
+        f"Registry: {report['registry']}",
+        f"Ledger: {report['ledger']}",
+        f"Rows: {report['rows']}",
+        f"Ledger events: {report['ledger_events']}",
+        f"Findings: {report['finding_count']}",
+        f"Status: {report['status']}",
     ]
+    findings = report["findings"]
     if findings:
         lines.append("")
         lines.append("Findings")
-        for finding in sorted(findings, key=lambda item: (item.scope, item.message)):
-            lines.append(f"- [{finding.scope}] {finding.message}")
+        for finding in findings:
+            lines.append(f"- [{finding['scope']}] {finding['message']}")
     return "\n".join(lines)
+
+
+def render_markdown_report(report: dict[str, Any]) -> str:
+    lines = [
+        "# Tributary Disposition Validation Report",
+        "",
+        "Report-only validation of tributary disposition structural legality, custody joins, transition law, and verified-state hash obligations.",
+        "",
+        "## Summary",
+        "",
+        f"- registry: `{report['registry']}`",
+        f"- ledger: `{report['ledger']}`",
+        f"- rows: {report['rows']}",
+        f"- ledger events: {report['ledger_events']}",
+        f"- findings: {report['finding_count']}",
+        f"- status: `{report['status']}`",
+        "",
+        "## Findings",
+        "",
+    ]
+    findings = report["findings"]
+    if findings:
+        for finding in findings:
+            lines.append(f"- [{finding['scope']}] {finding['message']}")
+    else:
+        lines.append("- none")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_report_artifacts(md_report: Path, json_report: Path, report: dict[str, Any]) -> None:
+    json_report.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    md_report.write_text(render_markdown_report(report), encoding="utf-8")
 
 
 def main() -> int:
@@ -460,6 +621,8 @@ def main() -> int:
     )
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
     parser.add_argument("--ledger", type=Path, default=DEFAULT_LEDGER)
+    parser.add_argument("--md-report", type=Path, default=DEFAULT_MD_REPORT)
+    parser.add_argument("--json-report", type=Path, default=DEFAULT_JSON_REPORT)
     args = parser.parse_args()
 
     findings: list[Finding] = []
@@ -467,8 +630,10 @@ def main() -> int:
     rows_by_candidate = validate_registry(findings, rows)
     events = read_ledger_events(args.ledger, findings)
     validate_latest_ledger_parity(findings, rows_by_candidate, events)
+    report = build_report(args.registry, args.ledger, rows, events, findings)
+    write_report_artifacts(args.md_report, args.json_report, report)
 
-    print(render_report(args.registry, args.ledger, rows, events, findings))
+    print(render_stdout_report(report))
     return 0
 
 

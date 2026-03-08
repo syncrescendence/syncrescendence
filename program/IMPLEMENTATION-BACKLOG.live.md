@@ -300,12 +300,23 @@
 ### Tranche Z — Verified-State Advancement And Enforcement Hardening
 
 1. advance the existing 10 live tributary rows from `executed` to `verified` with real `dest_artifact_hash` values
-   Status: staged
+   Status: completed wave 5
 2. append the matching `row_verified` ledger events and keep CSV/ledger parity exact
-   Status: staged
+   Status: completed wave 5
 3. harden and wire the tributary validator so verified-state obligations and transition legality are checked under report-first discipline
-   Status: staged
+   Status: completed wave 5
 4. classify current communications naming drift into actionable remediation buckets without widening into bulk renames
-   Status: staged
+   Status: completed wave 5
 5. internalize or explicitly bound the remaining transitional root-operator debt before constitution enforcement tightens further
+   Status: completed readiness plan wave 5
+
+### Tranche AA — Strict-Ready Naming And Edge Audit
+
+1. normalize the strict-ready communications metadata subset without renaming or reclassifying historical lineage
+   Status: staged
+2. codify intentional naming exceptions and false positives so report-first enforcement distinguishes raw-lineage tolerances from real debt
+   Status: staged
+3. audit local edge callers for the remaining transitional root wrapper and repoint any discovered usage to the operator path
+   Status: staged
+4. retire the root wrapper only if the caller audit closes cleanly and regenerate constitution, naming, artifact-law, and tributary validation reports afterward
    Status: staged

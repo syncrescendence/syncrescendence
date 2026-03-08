@@ -46,4 +46,8 @@ Legacy root operators are being internalized here in tranches; top-level copies 
 
 ## Tributary Validator
 
-`validate_tributary_disposition.py` is a deterministic, report-only validator for the tributary disposition CSV and ledger. It checks structural legality and custody joins without mutating registry state or acting as an adjudication engine.
+`validate_tributary_disposition.py` is a deterministic, report-only validator for the tributary disposition CSV and ledger. It checks structural legality, legal transition sequences, custody joins, and verified-state hash obligations without mutating registry state or acting as an adjudication engine.
+
+Repo-native report artifacts land at:
+- [orchestration/state/TRIBUTARY-DISPOSITION-VALIDATION-REPORT.md](/Users/system/syncrescendence/orchestration/state/TRIBUTARY-DISPOSITION-VALIDATION-REPORT.md)
+- [orchestration/state/TRIBUTARY-DISPOSITION-VALIDATION-REPORT.json](/Users/system/syncrescendence/orchestration/state/TRIBUTARY-DISPOSITION-VALIDATION-REPORT.json)

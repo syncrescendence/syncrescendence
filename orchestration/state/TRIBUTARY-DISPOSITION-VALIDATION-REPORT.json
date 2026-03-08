@@ -1,0 +1,11 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "ledger": "orchestration/state/registry/tributary-disposition-ledger.jsonl",
+  "ledger_events": 50,
+  "mode": "report-only",
+  "registry": "orchestration/state/registry/tributary-disposition-registry.csv",
+  "rows": 10,
+  "status": "PASS",
+  "validator": "Tributary Disposition Validator"
+}

@@ -1,4 +1,4 @@
-.PHONY: inventory check-artifact-law render-adapters validate-constitution validate-metadata-naming bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry exocortex-import-connector-guide exocortex-audit-control-plane exocortex-sync-connector-manifest exocortex-apply-connector-receipts exocortex-connector-verification-run exocortex-control-plane-run ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
+.PHONY: inventory check-artifact-law render-adapters validate-constitution validate-metadata-naming validate-tributary-disposition bootstrap-office migrate-communications-chain archive-shell-manifest rehouse-archived-artifact sync-reference-tree stage-feedstock operator-tree harness-tranche-ab harness-registry-effective harness-promoted-atoms-smoke office-watch-once dispatch-office-task manus-create manus-wait bootstrap-mini revive-mini-constellation constellation-mini-status install-mini-constellation-launchagent tooling-surface-status mini-constellation-collect-status acumen-init-registry acumen-validate-registry acumen-identity-probe acumen-build-triage-packet acumen-deterministic-track acumen-build-dawn-brief acumen-pipeline-run exocortex-sync-surface-registry exocortex-import-connector-guide exocortex-audit-control-plane exocortex-sync-connector-manifest exocortex-apply-connector-receipts exocortex-connector-verification-run exocortex-control-plane-run ontology-project-repo webshell-dev webshell-smoke webshell-callback-smoke webshell-generate-token webshell-keychain-status webshell-keychain-init-callback webshell-launchagent-install webshell-launchagent-status webshell-launchagent-restart
 
 inventory:
 	python3 operators/validators/artifact_law_inventory.py --format both
@@ -15,6 +15,9 @@ validate-constitution:
 
 validate-metadata-naming:
 	python3 operators/validators/validate_metadata_naming.py $(if $(filter 1 true yes,$(STRICT)),--strict,)
+
+validate-tributary-disposition:
+	python3 operators/validators/validate_tributary_disposition.py
 
 bootstrap-office:
 	@test -n "$(NAME)" || (echo "usage: make bootstrap-office NAME=office-name" && exit 1)

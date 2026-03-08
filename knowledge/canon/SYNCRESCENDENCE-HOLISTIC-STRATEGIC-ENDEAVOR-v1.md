@@ -221,24 +221,24 @@ The project has already completed:
 - the first ratified control-plane pass for migration
 - the first bounded direct-write custody and front-door correction wave
 - the first bounded Sigma reference mirror
-- the first live tributary current-state and ledger population through `executed`
+- the first live tributary current-state and ledger population through `verified`
 - report-first validator instrumentation for constitutional integrity, communications naming, artifact-law inventory, and tributary control-plane state
 - render discipline for root harness veneers
 - external convergence sensing that reaffirmed the shell while clarifying witness trust boundaries
+- naming-debt classification and root-wrapper internalization planning around the newly proven surface
 
 It is now entering the next phase:
 
-- verified-state promotion for the first live tributary tranche
-- destination-hash proof for already-executed custody and promotion rows
-- validator hardening for legal state transitions and verified-state obligations
-- communications naming-debt classification and selective remediation
-- transitional root-operator internalization or explicit bounded retirement planning
-- later Sigma expansion only after the first verified-state proof is stable
+- strict-ready metadata normalization for the small communications subset that can be cleaned safely now
+- codification of intentional naming tolerances so raw-lineage residue stops appearing as generic debt
+- external caller audit for the remaining transitional root wrapper
+- conditional wrapper retirement only if the runtime edge audit closes cleanly
+- later Sigma or tributary expansion only after strict-ready debt retirement stabilizes
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 
 The main danger is no longer conceptual vagueness.
-It is false completion, silent drift, and expansion before the existing control plane survives verification.
+It is false completion, silent drift, and expansion before the proven control plane survives stricter enforcement.
 
 ## 9. Permanent Working Rule
 
