@@ -1,7 +1,11 @@
 # Implementation Tranche AF — Authority Spine And Macro Contracts
 
-**Tranche**: AF  
-**Intent bindings**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **Tranche**: AF
+- **program_id**: `TRANCHE-AF`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `intent compass`, `backlog`, `execution surface`, `repo sovereignty`, `exocortex`, `ontology`
+- **execution_surface**: `program/IMPLEMENTATION-TRANCHE-AF-AUTHORITY-SPINE-AND-MACRO-CONTRACTS.md`
+- **lineage_or_origin**: Campaign 01 ordered writeset promoted into Campaign 02's authority-spine tranche
 
 ## Purpose
 
@@ -28,3 +32,5 @@ This tranche exists to replace ghost authority and under-bound execution with ex
 
 - [CAMPAIGN-01-POST-WRAPPER-MACRO-CONVERGENCE-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CAMPAIGN-01-POST-WRAPPER-MACRO-CONVERGENCE-SYNTHESIS-v1.md)
 - [IMPLEMENTATION-BACKLOG.live.md](/Users/system/syncrescendence/program/IMPLEMENTATION-BACKLOG.live.md)
+- [CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md)
+- [CAMPAIGN-02-AUTHORITY-SPINE-AND-CONFIG-CONVERGENCE-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CAMPAIGN-02-AUTHORITY-SPINE-AND-CONFIG-CONVERGENCE-SYNTHESIS-v1.md)

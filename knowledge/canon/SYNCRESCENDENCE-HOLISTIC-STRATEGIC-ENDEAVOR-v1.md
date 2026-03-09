@@ -222,6 +222,32 @@ The exocortex should increasingly hold live operational substrate state where qu
 This is not a departure from repo sovereignty.
 It is the lawful expansion of repo sovereignty into a broader memory architecture.
 
+### 4.13 Configuration Mereology
+
+The shell should increasingly treat configuration as a layered constitutional system rather than as unrelated files with local syntax.
+
+The highest-resolution behavioral witness currently available is the cross-surface custom-instruction family.
+Other config surfaces should distill the same essence at their own constraint level:
+
+- custom instructions
+- CLI constitutions
+- playbooks
+- skills
+- hooks
+- schemas
+- ledger templates
+
+The shell should also use a mereological grammar when specifying these artifacts:
+
+- atoms
+- modules
+- instructional structures
+- entities
+- workflow architectures
+- ecosystem surfaces
+
+This lets the validated repo compartmentalize detail without losing the connection between microscopic config parts and the macroscopic strategic endeavor.
+
 ## 5. System Boundary
 
 The project currently recognizes three major macro layers:
@@ -290,6 +316,7 @@ The project has already completed:
 - first post-wrapper macro campaign mapping across doctrine promotion, triad rebind, office federalism, exocortex convergence, and source/log shedding
 - internalization of the canonical cross-platform chat-app custom-instruction family as exact Sigma reference substrate plus live Sigma doctrine
 - internalization of the strategic-vision and operational-taxonomy pair as live Sigma guidance for append-only ledgers, freshness logic, and progressive-disclosure memory organs
+- emergence of configuration mereology as the next macro layer after authority-spine restoration
 
 It is now entering the next phase:
 

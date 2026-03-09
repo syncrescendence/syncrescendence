@@ -8,7 +8,8 @@ Executive steering should stay legible against the governing split: repo ratifie
 
 Start here:
 - [INTENT-COMPASS.live.md](/Users/system/syncrescendence/executive/INTENT-COMPASS.live.md)
-- [ROSETTA-STONE.live.md](/Users/system/syncrescendence/pedigree/ROSETTA-STONE.live.md)
+- [ROSETTA-STONE.live.md](/Users/system/syncrescendence/orchestration/state/ROSETTA-STONE.live.md)
+- [CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md)
 
 Executive sublanes:
 - [briefings](/Users/system/syncrescendence/executive/briefings)

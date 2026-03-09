@@ -1,7 +1,11 @@
 # Implementation Tranche AE — Post-Wrapper Macro Reacceleration
 
-**Tranche**: AE  
-**Intent bindings**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **Tranche**: AE
+- **program_id**: `TRANCHE-AE`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `compaction`, `operator`, `repo sovereignty`, `exocortex`, `ontology`
+- **execution_surface**: `program/IMPLEMENTATION-TRANCHE-AE-POST-WRAPPER-MACRO-REACCELERATION.md`
+- **lineage_or_origin**: post-wrapper edge victory synthesized in Wave 9 and ordered into Campaign 01's macro writeset
 
 ## Purpose
 

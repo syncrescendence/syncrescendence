@@ -1,11 +1,11 @@
 # Rosetta Stone — Live
 
-**Status**: initial live constitutional vocabulary surface  
-**Role**: compact semantic authority for the sandbox shell  
-**Pedigree**: [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/pedigree/LIVE-ROSETTA-DESIGN-v1.md)  
-**Exegesis**: [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)  
-**Hermeneutic assessment**: [ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md)  
-**Disposition matrix**: [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
+- **Status**: pedigree semantic derivative, superseded as live authority by [orchestration/state/ROSETTA-STONE.live.md](/Users/system/syncrescendence/orchestration/state/ROSETTA-STONE.live.md)
+- **Role**: semantic ancestry and interpretive witness for the sandbox shell
+- **Pedigree**: [LIVE-ROSETTA-DESIGN-v1.md](/Users/system/syncrescendence/pedigree/LIVE-ROSETTA-DESIGN-v1.md)
+- **Exegesis**: [ROSETTA-STONE-EXEGESIS-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-STONE-EXEGESIS-v1.md)
+- **Hermeneutic assessment**: [ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-HERMENEUTIC-ASSESSMENT-v1.md)
+- **Disposition matrix**: [ROSETTA-TERM-DISPOSITION-MATRIX-v1.md](/Users/system/syncrescendence/pedigree/ROSETTA-TERM-DISPOSITION-MATRIX-v1.md)
 
 ## Semantic Families
 

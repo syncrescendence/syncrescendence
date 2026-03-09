@@ -1,227 +1,259 @@
 # Implementation Backlog — Live
 
-**Status**: initial live program surface
+- **Status**: live program authority surface
+- **Last reviewed**: `2026-03-09`
+- **Review cadence**: weekly and at campaign boundaries
 
 ## Binding
 
 - **Executive source**: [INTENT-COMPASS.live.md](/Users/system/syncrescendence/executive/INTENT-COMPASS.live.md)
-- **Vocabulary source**: [ROSETTA-STONE.live.md](/Users/system/syncrescendence/pedigree/ROSETTA-STONE.live.md)
+- **Semantic authority**: [ROSETTA-STONE.live.md](/Users/system/syncrescendence/orchestration/state/ROSETTA-STONE.live.md)
+- **Pedigree witness**: [ROSETTA-STONE.live.md](/Users/system/syncrescendence/pedigree/ROSETTA-STONE.live.md)
 - **Governance law**: [INTENT-PROGRAM-GOVERNANCE-v1.md](/Users/system/syncrescendence/orchestration/state/impl/INTENT-PROGRAM-GOVERNANCE-v1.md)
+
+## Visible Binding Grammar
+
+Active normalized tranches should expose:
+
+- `program_id`
+- `intent_refs`
+- `rosetta_refs`
+- `execution_surface`
+- `lineage_or_origin`
+
+First normalized set:
+
+- `TRANCHE-J`
+- `TRANCHE-K`
+- `TRANCHE-AE`
+- `TRANCHE-AF`
 
 ## Active Tranche
 
 ### Tranche A — Sandbox Internalization
 
-1. make the canonical root self-addressable and self-governing  
+1. make the canonical root self-addressable and self-governing
    Intent: `INT-SHELL-001`, `INT-SHELL-002`
-2. replace copied legacy-path assumptions with internal routing where practical  
+2. replace copied legacy-path assumptions with internal routing where practical
    Intent: `INT-SHELL-002`
-3. establish live executive, program, and communications surfaces  
+3. establish live executive, program, and communications surfaces
    Intent: `INT-SHELL-001`
 
 ### Tranche B — First Internal Write Surfaces
 
-1. create first root-native prompt/response/assessment templates  
+1. create first root-native prompt/response/assessment templates
    Vocabulary: `communications law`
-2. create first validator pass for the successor shell and graduate it into strict check mode  
+2. create first validator pass for the successor shell and graduate it into strict check mode
    Vocabulary: `operator`, `communications law`
-3. route subsequent redesign outputs into shell lanes by default  
+3. route subsequent redesign outputs into shell lanes by default
    Vocabulary: `constitution`, `program`
 
 ### Tranche C — Reconstitution Prep
 
-1. define Rosetta live reconstitution surface  
+1. define Rosetta live reconstitution surface
    Status: completed v1
-2. define Intent Compass promotion cadence  
+2. define Intent Compass promotion cadence
    Status: active
-3. map lossless migration from legacy lanes into successor shell lanes  
+3. map lossless migration from legacy lanes into successor shell lanes
    Status: active
-4. derive first migration tranche for communications artifacts  
+4. derive first migration tranche for communications artifacts
    Intent: `INT-SHELL-001`, `INT-SHELL-003`
-5. operatorize further communications-chain absorption so migration stops depending on manual copy steps  
+5. operatorize further communications-chain absorption so migration stops depending on manual copy steps
    Vocabulary: `operator`, `communications law`, `inversion`
 
 ### Tranche D — Pre-Syncrephoenix Pedigree Recovery
 
-1. codify what the pre-nuclear shell got right about offices, protocols, protected state, and compaction  
+1. codify what the pre-nuclear shell got right about offices, protocols, protected state, and compaction
    Status: active
-2. explicitly ban the topological mistakes that made the old shell decay: dashed root lanes, duplicate logistics, mixed constitutional status  
+2. explicitly ban the topological mistakes that made the old shell decay: dashed root lanes, duplicate logistics, mixed constitutional status
    Vocabulary: `protected zone`, `office`, `communications law`
-3. use the old shell as pedigree for future office-law and playbook physicalization rather than ad hoc memory  
+3. use the old shell as pedigree for future office-law and playbook physicalization rather than ad hoc memory
    Vocabulary: `pedigree`, `playbook`, `inversion`
 
 ### Tranche E — Office Law and Communications Metadata
 
-1. derive successor-shell office law from the old `agents/` structure  
+1. derive successor-shell office law from the old `agents/` structure
    Status: completed v1
-2. promote decision-envelope and receipt doctrine into shell templates and validators  
+2. promote decision-envelope and receipt doctrine into shell templates and validators
    Status: active
-3. distinguish federal lanes from office-local lanes before broader migration continues  
+3. distinguish federal lanes from office-local lanes before broader migration continues
    Intent: `INT-SHELL-003`
 
 ### Tranche F — Constitutional Lineage Absorption
 
-1. absorb the original gold-mine Oracle scaffold/config/memory line into successor-shell communications  
+1. absorb the original gold-mine Oracle scaffold/config/memory line into successor-shell communications
    Status: completed tranche 02
-2. preserve missing-response gaps as explicit debt rather than implicit summary lore  
+2. preserve missing-response gaps as explicit debt rather than implicit summary lore
    Vocabulary: `communications law`, `pedigree`
-3. absorb the CLI↔web-gap proof chain after the constitutional chain  
+3. absorb the CLI↔web-gap proof chain after the constitutional chain
    Status: completed tranche 03
 
 ### Tranche G — Worker-Proof Lineage
 
-1. absorb the first live Cowork/Claude-in-Chrome success run as its own communications and validated-pattern tranche  
+1. absorb the first live Cowork/Claude-in-Chrome success run as its own communications and validated-pattern tranche
    Status: completed tranche 04
-2. bind the successful run more tightly to operator and playbook compaction so it becomes a true reusable worker primitive  
+2. bind the successful run more tightly to operator and playbook compaction so it becomes a true reusable worker primitive
    Vocabulary: `validated pattern`, `operator`, `playbook`
 
 ### Tranche H — Executive and Numbered-Shell Recovery
 
-1. preserve the executive meaning of `-SOVEREIGN` without preserving its topological form  
+1. preserve the executive meaning of `-SOVEREIGN` without preserving its topological form
    Status: completed pedigree pass
-2. preserve the legacy semantic hierarchy encoded by `00-ORCHESTRATION`, `01-CANON`, `02-ENGINE`, `04-SOURCES`, `05-SIGMA` while translating its surviving functions into the successor shell  
+2. preserve the legacy semantic hierarchy encoded by `00-ORCHESTRATION`, `01-CANON`, `02-ENGINE`, `04-SOURCES`, `05-SIGMA` while translating its surviving functions into the successor shell
    Status: completed pedigree pass
-3. use that recovered hierarchy to guide future physicalization of successor-shell lanes rather than flattening by taste alone  
+3. use that recovered hierarchy to guide future physicalization of successor-shell lanes rather than flattening by taste alone
    Status: active
 
 ### Tranche I — Office Physicalization
 
-1. instantiate a lawful `offices/` lane derived from the old `agents/` pedigree without reviving dashed logistics  
+1. instantiate a lawful `offices/` lane derived from the old `agents/` pedigree without reviving dashed logistics
    Status: active
-2. create first office roots for commander, adjudicator, ajna, cartographer, and psyche with clear promotion rules  
+2. create first office roots for commander, adjudicator, ajna, cartographer, and psyche with clear promotion rules
    Vocabulary: `office`, `receipt`, `decision envelope`
-3. add executive sublanes for briefings, escalations, and summits so `-SOVEREIGN` meaning survives without its broken topology  
+3. add executive sublanes for briefings, escalations, and summits so `-SOVEREIGN` meaning survives without its broken topology
    Status: active
-4. make office creation reproducible through an operator rather than hand-crafted drift  
+4. make office creation reproducible through an operator rather than hand-crafted drift
    Vocabulary: `operator`, `office`
 
 ### Tranche J — Rosetta Reconstitution
 
-1. read the original Rosetta as semantic pedigree rather than only as a missing constitutional role  
+- **program_id**: `TRANCHE-J`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `pedigree`, `compaction`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-J-ROSETTA-RECONSTITUTION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-J-ROSETTA-RECONSTITUTION.md)
+- **lineage_or_origin**: promoted from the live backlog tranche and Campaign 01 Lane 03's authority-spine ordered writeset
+
+1. read the original Rosetta as semantic pedigree rather than only as a missing constitutional role
    Status: active
-2. classify salient Rosetta terms into preserve-live / pedigree-only / adapt / deprecate / cautionary  
+2. classify salient Rosetta terms into preserve-live / pedigree-only / adapt / deprecate / cautionary
    Status: active
-3. revise the live Rosetta so it is derived from pedigree without collapsing back into a mega-glossary  
+3. revise the live Rosetta so it is derived from pedigree without collapsing back into a mega-glossary
    Vocabulary: `pedigree`, `semantic debt`, `inversion`
 
 ### Tranche K — Intent and Program Rebind
 
-1. reconstitute the live intent compass from the old intention archaeology instrument without restoring its sprawl  
+- **program_id**: `TRANCHE-K`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-002`, `INT-SHELL-005`
+- **rosetta_refs**: `intent compass`, `backlog`, `execution surface`, `repo sovereignty`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-K-INTENT-AND-PROGRAM-REBIND.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-K-INTENT-AND-PROGRAM-REBIND.md)
+- **lineage_or_origin**: promoted from the live backlog tranche and Campaign 01 Lane 03's authority-spine ordered writeset
+
+1. reconstitute the live intent compass from the old intention archaeology instrument without restoring its sprawl
    Status: active
-2. explicitly define one live program authority and demote backlog hydra remnants to pedigree or local queue status  
+2. explicitly define one live program authority and demote backlog hydra remnants to pedigree or local queue status
    Status: active
-3. preserve queue-type distinctions without preserving competing authorities  
+3. preserve queue-type distinctions without preserving competing authorities
    Vocabulary: `program`, `office`, `receipt`, `protected zone`
 
 ### Tranche L — Archive Retrofit and Pattern Compaction
 
-1. generate shell-comparison manifests for the archived predecessor states and use them as lawful migration maps  
+1. generate shell-comparison manifests for the archived predecessor states and use them as lawful migration maps
    Status: manifests completed
-2. rehouse high-value predecessor artifacts with receipts instead of ad hoc restoration  
+2. rehouse high-value predecessor artifacts with receipts instead of ad hoc restoration
    Status: tranche 01 active
-3. compact rehoused operational doctrine into successor-shell validated patterns, playbook atoms, and future operators  
+3. compact rehoused operational doctrine into successor-shell validated patterns, playbook atoms, and future operators
    Status: active
-4. keep archival preservation, live promotion, and cautionary pedigree distinct so the shell gains signal without recreating predecessor clutter  
+4. keep archival preservation, live promotion, and cautionary pedigree distinct so the shell gains signal without recreating predecessor clutter
    Vocabulary: `pedigree`, `receipt`, `validated pattern`, `inversion`
 
 ### Tranche M — Office Contract Refinement
 
-1. rehouse predecessor office contracts and memory diagnostics as pedigree with receipts  
+1. rehouse predecessor office contracts and memory diagnostics as pedigree with receipts
    Status: tranche 02 active
-2. refine live office topology so inbox, outbox, and memory have lawful substructure instead of remaining flat shells  
+2. refine live office topology so inbox, outbox, and memory have lawful substructure instead of remaining flat shells
    Status: active
-3. bind office refinement to reproducible operators and not one-off directory surgery  
+3. bind office refinement to reproducible operators and not one-off directory surgery
    Vocabulary: `office`, `receipt`, `operator`, `protected zone`
-4. compact role-specific office distinctions into office playbooks without restoring predecessor sprawl  
+4. compact role-specific office distinctions into office playbooks without restoring predecessor sprawl
    Status: active
 
 ### Tranche N — Knowledge Lane Reconstitution
 
-1. classify predecessor-shell knowledge families (`neocorpus`, `sources`, portions of `05-SIGMA`) against the successor shell  
+1. classify predecessor-shell knowledge families (`neocorpus`, `sources`, portions of `05-SIGMA`) against the successor shell
    Status: archive-fit tranche 01 completed
-2. physicalize `knowledge/` as a first-class live lane instead of forcing research into pedigree  
+2. physicalize `knowledge/` as a first-class live lane instead of forcing research into pedigree
    Status: completed tranche 01
-3. internalize the distilled archived `neocorpus` as a live reference substrate with receipts  
+3. internalize the distilled archived `neocorpus` as a live reference substrate with receipts
    Status: completed tranche 01
-4. derive future intake and compaction rules so new research enters `knowledge/feedstock/` lawfully  
+4. derive future intake and compaction rules so new research enters `knowledge/feedstock/` lawfully
    Vocabulary: `knowledge lane`, `feedstock`, `reference substrate`, `compaction`
 
 ### Tranche O — Sources and Sigma Retrofit
 
-1. split predecessor `sources` from `05-SIGMA` instead of forcing both into one lane  
+1. split predecessor `sources` from `05-SIGMA` instead of forcing both into one lane
    Status: tranche 02 completed
-2. preserve source-ingestion protocol specimens inside `knowledge/feedstock/`  
+2. preserve source-ingestion protocol specimens inside `knowledge/feedstock/`
    Status: tranche 02 completed
-3. preserve high-value Sigma originals in pedigree, then compact the strongest seeds into live validated patterns  
+3. preserve high-value Sigma originals in pedigree, then compact the strongest seeds into live validated patterns
    Status: tranche 02 active
-4. continue deciding which Sigma material should promote into `validated-patterns/` versus `playbooks/`  
+4. continue deciding which Sigma material should promote into `validated-patterns/` versus `playbooks/`
    Vocabulary: `validated pattern`, `feedstock`, `playbook`, `pedigree`
 
 ### Tranche P — Live Knowledge Intake
 
-1. create a lawful operator-backed intake path for new research  
+1. create a lawful operator-backed intake path for new research
    Status: tranche 01 completed
-2. back that path with a feedstock inbox and receipts lane  
+2. back that path with a feedstock inbox and receipts lane
    Status: tranche 01 completed
-3. prove intake with real shell-relevant artifacts rather than empty scaffolding  
+3. prove intake with real shell-relevant artifacts rather than empty scaffolding
    Status: tranche 01 completed
-4. compact future feedstock into references, canon, playbooks, or patterns with explicit lineage  
+4. compact future feedstock into references, canon, playbooks, or patterns with explicit lineage
    Status: tranche 01 active
-5. prove feedstock-to-playbook compaction with the Hxlfed harness/context-engineering line  
+5. prove feedstock-to-playbook compaction with the Hxlfed harness/context-engineering line
    Status: tranche 01 completed
 
 ### Tranche Q — Chat Bus Reconstitution
 
-1. define Slack, Discord, and Telegram as differentiated coordination surfaces instead of interchangeable chat sinks  
+1. define Slack, Discord, and Telegram as differentiated coordination surfaces instead of interchangeable chat sinks
    Status: active
-2. bind those surfaces to disposition and promotion law so chat does not become hidden canon  
+2. bind those surfaces to disposition and promotion law so chat does not become hidden canon
    Vocabulary: `receipt`, `communications law`, `repo sovereignty`, `translation layer`
-3. design bridge operators for dispatch, receipt, result, confirm, alert, and thread-to-repo sync  
+3. design bridge operators for dispatch, receipt, result, confirm, alert, and thread-to-repo sync
    Vocabulary: `operator`, `chat bus`, `promotion`
-4. use Slack as federal work bus, Discord as mesh/community bus, and Telegram as mobile/edge bus unless live evidence justifies a different split  
+4. use Slack as federal work bus, Discord as mesh/community bus, and Telegram as mobile/edge bus unless live evidence justifies a different split
    Status: active
 
 ### Tranche R — Harness Pluralism Remediation
 
-1. absorb the full Grok harness directive/response corpus into lawful communications lineage with contamination quarantine and tier grading  
+1. absorb the full Grok harness directive/response corpus into lawful communications lineage with contamination quarantine and tier grading
    Status: tranche A+B completed (CC79)
-2. build and maintain a command capability registry so cross-harness claims are validated before playbook/operator promotion  
+2. build and maintain a command capability registry so cross-harness claims are validated before playbook/operator promotion
    Status: tranche A+B completed (CC79)
-3. promote only `T0/T1` claims into harness playbooks/operators while preserving native harness grain and federal doctrine boundaries  
+3. promote only `T0/T1` claims into harness playbooks/operators while preserving native harness grain and federal doctrine boundaries
    Status: active (effective-registry gate + stage0 promotions in place)
-4. resolve avatarization for remaining surfaces (Manus, Google AI Studio, NotebookLM, OpenCode, OpenHands, Aider) without collapsing existing certified identities  
+4. resolve avatarization for remaining surfaces (Manus, Google AI Studio, NotebookLM, OpenCode, OpenHands, Aider) without collapsing existing certified identities
    Status: completed stage0 (CC79 avatarization contract)
 
 ### Tranche S — Acumen Intelligence Pipeline Bootstrap
 
-1. intake Acumen PRD as lawful feedstock with receipt lineage  
+1. intake Acumen PRD as lawful feedstock with receipt lineage
    Status: completed wave0 intake (CC87)
-2. implement feed-registry contract, initialization, and validation operators  
+2. implement feed-registry contract, initialization, and validation operators
    Status: completed wave0 (CC87)
-3. implement deterministic processing track scaffold (resolution key, disfluency pass, timing punctuation, depth templating)  
+3. implement deterministic processing track scaffold (resolution key, disfluency pass, timing punctuation, depth templating)
    Status: completed wave0 (CC87)
-4. implement Dawn Brief compiler and triage packet renderer  
+4. implement Dawn Brief compiler and triage packet renderer
    Status: completed wave0 (CC87)
-5. bind Acumen Google surfaces to canonical identity `syncrescendence@gmail.com` with strict drift probe  
+5. bind Acumen Google surfaces to canonical identity `syncrescendence@gmail.com` with strict drift probe
    Status: completed wave0 (CC87)
-6. implement ingestion + Gemini Flash/Pro adapters with cost guardrails and training-corpus logging  
+6. implement ingestion + Gemini Flash/Pro adapters with cost guardrails and training-corpus logging
    Status: active next wave (CC88)
-7. implement local voice synthesis routing and playlist compiler  
+7. implement local voice synthesis routing and playlist compiler
    Status: queued (post-CC88)
-8. implement specialist distillation loop and shadow-mode swap criteria  
+8. implement specialist distillation loop and shadow-mode swap criteria
    Status: queued (post-CC88)
 
 ### Tranche T — Tributary Unification and Compaction
 
-1. ratify the authority split across the live shell, `syncrescendence.old`, and `syncrescendence_pre_schematic_design`  
+1. ratify the authority split across the live shell, `syncrescendence.old`, and `syncrescendence_pre_schematic_design`
    Status: active
-2. define one lawful disposition registry for migration candidates so semantic mass enters the shell by class rather than by folder restoration  
+2. define one lawful disposition registry for migration candidates so semantic mass enters the shell by class rather than by folder restoration
    Vocabulary: `pedigree`, `program`, `inversion`, `compaction`
-3. map predecessor roots (`01-CANON`, `05-SIGMA`, `00-ORCHESTRATION`, `-SOVEREIGN`, `agents`, `04-SOURCES`) into successor-shell lanes  
+3. map predecessor roots (`01-CANON`, `05-SIGMA`, `00-ORCHESTRATION`, `-SOVEREIGN`, `agents`, `04-SOURCES`) into successor-shell lanes
    Status: active
-4. define source/log shedding law so stale volume can be compacted or culled without sacrificing provenance  
+4. define source/log shedding law so stale volume can be compacted or culled without sacrificing provenance
    Vocabulary: `receipt`, `pedigree`, `compaction`, `knowledge lane`
-5. bind exocortex and ontology into the migration program so the repo becomes control plane and registry rather than undifferentiated warehouse  
+5. bind exocortex and ontology into the migration program so the repo becomes control plane and registry rather than undifferentiated warehouse
    Vocabulary: `exocortex`, `ontology`, `repo sovereignty`, `projection`
 
 ### Tranche U — Tributary Contract Hardening
@@ -356,6 +388,12 @@
 
 ### Tranche AE — Post-Wrapper Macro Reacceleration
 
+- **program_id**: `TRANCHE-AE`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `compaction`, `operator`, `repo sovereignty`, `exocortex`, `ontology`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AE-POST-WRAPPER-MACRO-REACCELERATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AE-POST-WRAPPER-MACRO-REACCELERATION.md)
+- **lineage_or_origin**: post-wrapper edge victory synthesized in Wave 9 and ordered into Campaign 01's macro writeset
+
 1. codify the new execution geometry: single-agent closed loops for tightly coupled runtime fronts, human-amplified swarms for broad semantic and migration work
    Status: completed v1
 2. relaunch tributary convergence at macro scale across canon, Sigma, Rosetta, intent, program, pedigree, and validated-pattern surfaces
@@ -367,15 +405,40 @@
 
 ### Tranche AF — Authority Spine And Macro Contracts
 
+- **program_id**: `TRANCHE-AF`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `intent compass`, `backlog`, `execution surface`, `repo sovereignty`, `exocortex`, `ontology`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AF-AUTHORITY-SPINE-AND-MACRO-CONTRACTS.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AF-AUTHORITY-SPINE-AND-MACRO-CONTRACTS.md)
+- **lineage_or_origin**: Campaign 01 ordered writeset promoted into Campaign 02's authority-spine tranche
+
 1. create one non-pedigree live Rosetta authority surface and rebind executive and program readers to it
-   Status: staged
+   Status: completed
 2. normalize the live intent compass with status partitions, review metadata, and pedigree lineage where materially load-bearing
-   Status: staged
+   Status: completed
 3. patch the live program contract and the highest-yield active tranches to require visible `intent_refs`, `rosetta_refs`, `execution_surface`, and `lineage_or_origin`
-   Status: staged
+   Status: completed
 4. publish the compact repo / exocortex / ontology sovereignty contract and ratification-pointer rule
-   Status: staged
+   Status: completed
 5. write the first high-authority doctrine promotions: memory architecture, context transition, research protocols, and tributary adjudication
-   Status: staged
+   Status: completed
 6. keep fresh automatic Hazel wake reproving as an edge sidecar, not the ordering center of the macro writeset
+   Status: partial and quarantined
+
+### Tranche AG — Constitutional Config And Ledger Mereology
+
+- **program_id**: `TRANCHE-AG`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `operator`, `compaction`, `office`, `exocortex`, `ontology`, `repo sovereignty`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AG-CONSTITUTIONAL-CONFIG-AND-LEDGER-MEREOLOGY.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AG-CONSTITUTIONAL-CONFIG-AND-LEDGER-MEREOLOGY.md)
+- **lineage_or_origin**: Campaign 02 convergence synthesis plus the imported chat-app custom-instruction and live-ledger architecture doctrine
+
+1. define the constitutional config source-of-truth architecture using custom instructions as the highest-resolution behavioral witness
+   Status: staged
+2. map the validated repo into a mereological stack of atoms, modules, structures, entities, workflows, and ecosystem surfaces
+   Status: staged
+3. define the generic live-ledger family contract and the first lawful order for domain-ledger rollout
+   Status: staged
+4. translate the office-harness metadata contract and validator plan into a durable repo-law candidate
+   Status: staged
+5. define the rollout path for ratification-pointer fields on authority-bearing registries and schema surfaces
    Status: staged
