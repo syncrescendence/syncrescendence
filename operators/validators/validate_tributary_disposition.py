@@ -18,6 +18,9 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 STATE_DIR = REPO_ROOT / "orchestration" / "state"
 DEFAULT_REGISTRY = REPO_ROOT / "orchestration" / "state" / "registry" / "tributary-disposition-registry.csv"
 DEFAULT_LEDGER = REPO_ROOT / "orchestration" / "state" / "registry" / "tributary-disposition-ledger.jsonl"
+DEFAULT_COMPATIBILITY_RECEIPT = (
+    REPO_ROOT / "orchestration" / "state" / "registry" / "TRIBUTARY-DISPOSITION-COMPATIBILITY-RECEIPT-v1.md"
+)
 DEFAULT_MD_REPORT = STATE_DIR / "TRIBUTARY-DISPOSITION-VALIDATION-REPORT.md"
 DEFAULT_JSON_REPORT = STATE_DIR / "TRIBUTARY-DISPOSITION-VALIDATION-REPORT.json"
 
@@ -110,8 +113,10 @@ ENUMS = {
 }
 
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 SHA256_RE = re.compile(r"^sha256:[0-9a-f]{64}$")
 CANDIDATE_ID_RE = re.compile(r"^tdc-[a-z0-9-]+-[0-9]{4}$")
+CODE_FENCE_RE = re.compile(r"```(?:json)?\n(.*?)\n```", re.DOTALL)
 REPO_PATH_FIELDS = (
     "source_path",
     "destination_lane",
@@ -142,6 +147,7 @@ STATE_ORDER = {
     "exception": -1,
 }
 SCORE_FIELDS = ("authority_score", "present_relevance", "compaction_yield")
+OPERATIVE_RECORD_STATES = {"executed", "verified", "closed"}
 PROMOTION_DISPOSITIONS = {
     "promote_live_law",
     "promote_sigma",
@@ -308,6 +314,177 @@ def validate_required_paths(findings: list[Finding], scope: str, row: dict[str, 
             add_finding(findings, scope, "verified promotion or rehousing disposition requires dest_artifact_hash")
         elif not SHA256_RE.fullmatch(dest_hash):
             add_finding(findings, scope, f"verified promotion or rehousing disposition has illegal dest_artifact_hash {dest_hash!r}")
+
+
+def resolve_artifact_path(value: str) -> Path | None:
+    if not value or value != value.strip():
+        return None
+    if value.startswith("/"):
+        return Path(value)
+    if is_repo_relative_path(value, allow_none=False):
+        return REPO_ROOT / value
+    return None
+
+
+def extract_json_payload(path: Path, findings: list[Finding]) -> dict[str, Any] | None:
+    text = path.read_text(encoding="utf-8")
+    for match in CODE_FENCE_RE.finditer(text):
+        raw_payload = match.group(1).strip()
+        if not raw_payload.startswith("{"):
+            continue
+        try:
+            payload = json.loads(raw_payload)
+        except json.JSONDecodeError as exc:
+            add_finding(
+                findings,
+                "compatibility",
+                f"compatibility receipt JSON block is invalid: {exc.msg}",
+            )
+            return None
+        if not isinstance(payload, dict):
+            add_finding(findings, "compatibility", "compatibility receipt JSON block must be an object")
+            return None
+        return payload
+
+    add_finding(findings, "compatibility", "compatibility receipt must contain a fenced JSON object")
+    return None
+
+
+def validate_pointer_binding(
+    findings: list[Finding],
+    scope: str,
+    binding: dict[str, Any],
+) -> dict[str, str]:
+    fields: dict[str, str] = {}
+    for field in (
+        "ratification_pointer",
+        "ratified_by_artifact_path",
+        "ratified_by_artifact_id",
+        "ratified_at",
+    ):
+        value = binding.get(field)
+        if not isinstance(value, str) or not value.strip():
+            add_finding(findings, scope, f"{field} must be a non-empty string")
+            fields[field] = "none"
+            continue
+        fields[field] = value.strip()
+
+    if fields["ratified_at"] != "none" and not DATE_RE.fullmatch(fields["ratified_at"]):
+        add_finding(findings, scope, f"ratified_at must be YYYY-MM-DD, found {fields['ratified_at']!r}")
+
+    artifact_path = fields["ratified_by_artifact_path"]
+    if artifact_path != "none":
+        resolved_path = resolve_artifact_path(artifact_path)
+        if resolved_path is None:
+            add_finding(findings, scope, f"ratified_by_artifact_path is not a valid repo or absolute path: {artifact_path!r}")
+        elif not resolved_path.exists():
+            add_finding(findings, scope, f"ratified_by_artifact_path does not exist: {artifact_path}")
+
+    return fields
+
+
+def read_compatibility_receipt(
+    path: Path,
+    findings: list[Finding],
+) -> tuple[dict[str, dict[str, str]], dict[str, Any]]:
+    summary: dict[str, Any] = {
+        "receipt": display_path(path),
+        "effective_date": "none",
+        "unbound_rows_status": "unknown",
+        "baseline_status": "unknown",
+        "baseline_rows": None,
+        "baseline_ledger_events": None,
+    }
+
+    if not path.exists():
+        add_finding(findings, "compatibility", f"compatibility receipt missing: {display_path(path)}")
+        return {}, summary
+
+    payload = extract_json_payload(path, findings)
+    if payload is None:
+        return {}, summary
+
+    effective_date = payload.get("effective_date")
+    if not isinstance(effective_date, str) or not DATE_RE.fullmatch(effective_date):
+        add_finding(findings, "compatibility", f"effective_date must be YYYY-MM-DD, found {effective_date!r}")
+    else:
+        summary["effective_date"] = effective_date
+
+    unbound_rows_status = payload.get("unbound_rows_status")
+    if not isinstance(unbound_rows_status, str):
+        add_finding(findings, "compatibility", "unbound_rows_status must be a string")
+    else:
+        summary["unbound_rows_status"] = unbound_rows_status
+        if unbound_rows_status != "informative_only":
+            add_finding(
+                findings,
+                "compatibility",
+                f"unbound_rows_status must be 'informative_only', found {unbound_rows_status!r}",
+            )
+
+    governing_artifact = payload.get("governing_artifact")
+    if not isinstance(governing_artifact, dict):
+        add_finding(findings, "compatibility", "governing_artifact must be an object with the pointer family")
+    else:
+        validate_pointer_binding(findings, "compatibility:governing_artifact", governing_artifact)
+
+    proof_baseline = payload.get("proof_baseline")
+    if not isinstance(proof_baseline, dict):
+        add_finding(findings, "compatibility", "proof_baseline must be an object")
+    else:
+        baseline_status = proof_baseline.get("status")
+        if isinstance(baseline_status, str):
+            summary["baseline_status"] = baseline_status
+        else:
+            add_finding(findings, "compatibility", "proof_baseline.status must be a string")
+
+        baseline_rows = proof_baseline.get("rows")
+        if isinstance(baseline_rows, int) and baseline_rows >= 0:
+            summary["baseline_rows"] = baseline_rows
+        else:
+            add_finding(findings, "compatibility", f"proof_baseline.rows must be a non-negative integer, found {baseline_rows!r}")
+
+        baseline_events = proof_baseline.get("ledger_events")
+        if isinstance(baseline_events, int) and baseline_events >= 0:
+            summary["baseline_ledger_events"] = baseline_events
+        else:
+            add_finding(
+                findings,
+                "compatibility",
+                f"proof_baseline.ledger_events must be a non-negative integer, found {baseline_events!r}",
+            )
+
+    bindings_raw = payload.get("row_bindings")
+    if not isinstance(bindings_raw, list):
+        add_finding(findings, "compatibility", "row_bindings must be a list")
+        return {}, summary
+
+    bindings: dict[str, dict[str, str]] = {}
+    for index, item in enumerate(bindings_raw, start=1):
+        scope = f"compatibility:binding:{index}"
+        if not isinstance(item, dict):
+            add_finding(findings, scope, "row binding must be an object")
+            continue
+
+        candidate_id = item.get("candidate_id")
+        if not isinstance(candidate_id, str) or not CANDIDATE_ID_RE.fullmatch(candidate_id):
+            add_finding(findings, scope, f"candidate_id has illegal form {candidate_id!r}")
+            continue
+        if candidate_id in bindings:
+            add_finding(findings, scope, f"duplicate candidate_id {candidate_id!r} in compatibility receipt")
+            continue
+
+        authority_status = item.get("authority_status")
+        if authority_status != "authority_bound":
+            add_finding(findings, scope, f"authority_status must be 'authority_bound', found {authority_status!r}")
+
+        pointer_fields = validate_pointer_binding(findings, scope, item)
+        bindings[candidate_id] = {
+            "authority_status": str(authority_status),
+            **pointer_fields,
+        }
+
+    return bindings, summary
 
 
 def validate_registry(findings: list[Finding], rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
@@ -543,11 +720,79 @@ def validate_latest_ledger_parity(
             add_finding(findings, f"ledger:{candidate_id}", "ledger candidate_id is missing from the CSV current-state registry")
 
 
+def classify_compatibility(
+    findings: list[Finding],
+    rows: list[dict[str, str]],
+    rows_by_candidate: dict[str, dict[str, str]],
+    events: list[dict[str, object]],
+    bindings: dict[str, dict[str, str]],
+    summary: dict[str, Any],
+) -> dict[str, Any]:
+    if summary["baseline_status"] not in {"unknown", "PASS"}:
+        add_finding(
+            findings,
+            "compatibility",
+            f"proof_baseline.status must preserve PASS, found {summary['baseline_status']!r}",
+        )
+
+    baseline_rows = summary.get("baseline_rows")
+    if isinstance(baseline_rows, int) and baseline_rows != len(rows):
+        add_finding(
+            findings,
+            "compatibility",
+            f"proof_baseline.rows {baseline_rows} does not match current registry row count {len(rows)}",
+        )
+
+    baseline_ledger_events = summary.get("baseline_ledger_events")
+    if isinstance(baseline_ledger_events, int) and baseline_ledger_events != len(events):
+        add_finding(
+            findings,
+            "compatibility",
+            f"proof_baseline.ledger_events {baseline_ledger_events} does not match current ledger event count {len(events)}",
+        )
+
+    for candidate_id in sorted(bindings):
+        if candidate_id not in rows_by_candidate:
+            add_finding(
+                findings,
+                "compatibility",
+                f"compatibility receipt candidate_id {candidate_id!r} is missing from the CSV current-state registry",
+            )
+
+    authority_bound_candidate_ids: list[str] = []
+    informative_only_candidate_ids: list[str] = []
+    for row in rows:
+        candidate_id = row["candidate_id"]
+        if candidate_id in bindings:
+            authority_bound_candidate_ids.append(candidate_id)
+            continue
+
+        informative_only_candidate_ids.append(candidate_id)
+        if row["record_state"] in OPERATIVE_RECORD_STATES:
+            add_finding(
+                findings,
+                f"registry:{candidate_id}",
+                f"{row['record_state']} row is informative_only because candidate_id is not bound in the compatibility receipt",
+            )
+
+    return {
+        "receipt": summary["receipt"],
+        "effective_date": summary["effective_date"],
+        "unbound_rows_status": summary["unbound_rows_status"],
+        "authority_bound_rows": len(authority_bound_candidate_ids),
+        "informative_only_rows": len(informative_only_candidate_ids),
+        "authority_bound_candidate_ids": authority_bound_candidate_ids,
+        "informative_only_candidate_ids": informative_only_candidate_ids,
+    }
+
+
 def build_report(
     registry_path: Path,
     ledger_path: Path,
+    compatibility_receipt_path: Path,
     rows: list[dict[str, str]],
     events: list[dict[str, object]],
+    compatibility: dict[str, Any],
     findings: list[Finding],
 ) -> dict[str, Any]:
     return {
@@ -555,8 +800,10 @@ def build_report(
         "mode": "report-only",
         "registry": display_path(registry_path),
         "ledger": display_path(ledger_path),
+        "compatibility_receipt": display_path(compatibility_receipt_path),
         "rows": len(rows),
         "ledger_events": len(events),
+        "compatibility": compatibility,
         "finding_count": len(findings),
         "status": "PASS" if not findings else "FAIL",
         "findings": [asdict(finding) for finding in sorted(findings, key=lambda item: (item.scope, item.message))],
@@ -564,12 +811,16 @@ def build_report(
 
 
 def render_stdout_report(report: dict[str, Any]) -> str:
+    compatibility = report["compatibility"]
     lines = [
         str(report["validator"]),
         f"Registry: {report['registry']}",
         f"Ledger: {report['ledger']}",
+        f"Compatibility receipt: {report['compatibility_receipt']}",
         f"Rows: {report['rows']}",
         f"Ledger events: {report['ledger_events']}",
+        f"Authority-bound rows: {compatibility['authority_bound_rows']}",
+        f"Informative-only rows: {compatibility['informative_only_rows']}",
         f"Findings: {report['finding_count']}",
         f"Status: {report['status']}",
     ]
@@ -583,23 +834,43 @@ def render_stdout_report(report: dict[str, Any]) -> str:
 
 
 def render_markdown_report(report: dict[str, Any]) -> str:
+    compatibility = report["compatibility"]
     lines = [
         "# Tributary Disposition Validation Report",
         "",
-        "Report-only validation of tributary disposition structural legality, custody joins, transition law, and verified-state hash obligations.",
+        "Report-only validation of tributary disposition structural legality, custody joins, transition law, verified-state hash obligations, and ratification-pointer compatibility classification.",
         "",
         "## Summary",
         "",
         f"- registry: `{report['registry']}`",
         f"- ledger: `{report['ledger']}`",
+        f"- compatibility receipt: `{report['compatibility_receipt']}`",
         f"- rows: {report['rows']}",
         f"- ledger events: {report['ledger_events']}",
         f"- findings: {report['finding_count']}",
         f"- status: `{report['status']}`",
         "",
-        "## Findings",
+        "## Compatibility",
+        "",
+        f"- effective_date: `{compatibility['effective_date']}`",
+        f"- unbound_rows_status: `{compatibility['unbound_rows_status']}`",
+        f"- authority_bound rows: {compatibility['authority_bound_rows']}",
+        f"- informative_only rows: {compatibility['informative_only_rows']}",
+        "",
+        "### Informative-Only Candidate IDs",
         "",
     ]
+    if compatibility["informative_only_candidate_ids"]:
+        for candidate_id in compatibility["informative_only_candidate_ids"]:
+            lines.append(f"- `{candidate_id}`")
+    else:
+        lines.append("- none")
+
+    lines.extend([
+        "",
+        "## Findings",
+        "",
+    ])
     findings = report["findings"]
     if findings:
         for finding in findings:
@@ -621,6 +892,7 @@ def main() -> int:
     )
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
     parser.add_argument("--ledger", type=Path, default=DEFAULT_LEDGER)
+    parser.add_argument("--compatibility-receipt", type=Path, default=DEFAULT_COMPATIBILITY_RECEIPT)
     parser.add_argument("--md-report", type=Path, default=DEFAULT_MD_REPORT)
     parser.add_argument("--json-report", type=Path, default=DEFAULT_JSON_REPORT)
     args = parser.parse_args()
@@ -630,7 +902,9 @@ def main() -> int:
     rows_by_candidate = validate_registry(findings, rows)
     events = read_ledger_events(args.ledger, findings)
     validate_latest_ledger_parity(findings, rows_by_candidate, events)
-    report = build_report(args.registry, args.ledger, rows, events, findings)
+    bindings, compatibility_summary = read_compatibility_receipt(args.compatibility_receipt, findings)
+    compatibility = classify_compatibility(findings, rows, rows_by_candidate, events, bindings, compatibility_summary)
+    report = build_report(args.registry, args.ledger, args.compatibility_receipt, rows, events, compatibility, findings)
     write_report_artifacts(args.md_report, args.json_report, report)
 
     print(render_stdout_report(report))

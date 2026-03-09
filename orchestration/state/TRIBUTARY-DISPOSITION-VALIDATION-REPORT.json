@@ -1,4 +1,25 @@
 {
+  "compatibility": {
+    "authority_bound_candidate_ids": [
+      "tdc-artifact-protocol-old-0001",
+      "tdc-artifact-protocol-neo-0002",
+      "tdc-memory-architecture-old-0003",
+      "tdc-memory-architecture-neo-0004",
+      "tdc-context-transition-old-0005",
+      "tdc-context-transition-neo-0006",
+      "tdc-research-protocols-old-0007",
+      "tdc-research-protocols-neo-0008",
+      "tdc-lineage-old-0009",
+      "tdc-lineage-neo-0010"
+    ],
+    "authority_bound_rows": 10,
+    "effective_date": "2026-03-09",
+    "informative_only_candidate_ids": [],
+    "informative_only_rows": 0,
+    "receipt": "orchestration/state/registry/TRIBUTARY-DISPOSITION-COMPATIBILITY-RECEIPT-v1.md",
+    "unbound_rows_status": "informative_only"
+  },
+  "compatibility_receipt": "orchestration/state/registry/TRIBUTARY-DISPOSITION-COMPATIBILITY-RECEIPT-v1.md",
   "finding_count": 0,
   "findings": [],
   "ledger": "orchestration/state/registry/tributary-disposition-ledger.jsonl",

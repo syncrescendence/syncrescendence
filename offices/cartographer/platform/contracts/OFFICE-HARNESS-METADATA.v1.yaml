@@ -1,19 +1,19 @@
 schema_version: office-harness-metadata/v1
-office_id: commander
-office_title: Commander
-office_epithet: Sovereign Executor
-federal_role: orchestration-office
-office_root: /Users/system/syncrescendence/offices/commander
-playbook_path: /Users/system/syncrescendence/playbooks/commander/PLAYBOOK.md
+office_id: cartographer
+office_title: Cartographer
+office_epithet: Exegete
+federal_role: mapping-office
+office_root: /Users/system/syncrescendence/offices/cartographer
+playbook_path: /Users/system/syncrescendence/playbooks/cartographer/PLAYBOOK.md
 binding:
-  primary_harness: claude_code
-  harness_family: claude_code
-  avatar_label: Commander
-  surface_class: repo-native-coding-harness
+  primary_harness: gemini_cli
+  harness_family: gemini
+  avatar_label: Cartographer
+  surface_class: repo-native-sensing-harness
 promotion:
   may_promote_to:
     - communications
-    - executive
+    - knowledge
     - program
   local_only_classes:
     - inbox-state
@@ -23,9 +23,9 @@ promotion:
 coherence:
   required_sources:
     - /Users/system/syncrescendence/AGENTS.md
-    - /Users/system/syncrescendence/playbooks/commander/PLAYBOOK.md
-    - /Users/system/syncrescendence/playbooks/claude-code/PLAYBOOK.md
-    - /Users/system/syncrescendence/offices/commander/README.md
+    - /Users/system/syncrescendence/GEMINI.md
+    - /Users/system/syncrescendence/playbooks/cartographer/PLAYBOOK.md
+    - /Users/system/syncrescendence/offices/cartographer/README.md
   required_local_paths:
     - inbox
     - outbox
@@ -40,5 +40,5 @@ authority:
   ratified_at: 2026-03-09
 status:
   binding_state: active
-  contract_state: operative
+  contract_state: reference-specimen
   last_verified_on: 2026-03-09

@@ -1,0 +1,250 @@
+[
+  {
+    "office_id": "commander",
+    "office_title": "Commander",
+    "office_epithet": "Sovereign Executor",
+    "federal_role": "orchestration-office",
+    "metadata_path": "offices/commander/platform/contracts/OFFICE-HARNESS-METADATA.v1.yaml",
+    "office_root": "/Users/system/syncrescendence/offices/commander",
+    "playbook_path": "/Users/system/syncrescendence/playbooks/commander/PLAYBOOK.md",
+    "primary_harness": "claude_code",
+    "harness_family": "claude_code",
+    "avatar_label": "Commander",
+    "surface_class": "repo-native-coding-harness",
+    "may_promote_to": [
+      "communications",
+      "executive",
+      "program"
+    ],
+    "local_only_classes": [
+      "inbox-state",
+      "working-memory",
+      "platform-logs",
+      "scratch-work"
+    ],
+    "required_sources": [
+      "/Users/system/syncrescendence/AGENTS.md",
+      "/Users/system/syncrescendence/playbooks/commander/PLAYBOOK.md",
+      "/Users/system/syncrescendence/playbooks/claude-code/PLAYBOOK.md",
+      "/Users/system/syncrescendence/offices/commander/README.md"
+    ],
+    "required_local_paths": [
+      "inbox",
+      "outbox",
+      "memory",
+      "platform/contracts",
+      "platform/logs",
+      "scratchpad"
+    ],
+    "ratification_pointer": "office-harness-binding-contract/v1",
+    "ratified_by_artifact_path": "/Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md",
+    "ratified_by_artifact_id": "OFFICE-HARNESS-BINDING-CONTRACT-v1",
+    "ratified_at": "2026-03-09",
+    "binding_state": "active",
+    "contract_state": "operative",
+    "validator_state": "clean",
+    "authority_state": "operative",
+    "finding_count": 0,
+    "generated_at": "2026-03-09T23:14:25Z"
+  },
+  {
+    "office_id": "adjudicator",
+    "office_title": "Adjudicator",
+    "office_epithet": "Quality Gate",
+    "federal_role": "verification-office",
+    "metadata_path": "offices/adjudicator/platform/contracts/OFFICE-HARNESS-METADATA.v1.yaml",
+    "office_root": "/Users/system/syncrescendence/offices/adjudicator",
+    "playbook_path": "/Users/system/syncrescendence/playbooks/adjudicator/PLAYBOOK.md",
+    "primary_harness": "codex",
+    "harness_family": "codex",
+    "avatar_label": "Adjudicator",
+    "surface_class": "repo-native-coding-harness",
+    "may_promote_to": [
+      "communications",
+      "executive",
+      "program"
+    ],
+    "local_only_classes": [
+      "inbox-state",
+      "working-memory",
+      "platform-logs",
+      "scratch-work"
+    ],
+    "required_sources": [
+      "/Users/system/syncrescendence/AGENTS.md",
+      "/Users/system/syncrescendence/playbooks/adjudicator/PLAYBOOK.md",
+      "/Users/system/syncrescendence/playbooks/codex/PLAYBOOK.md",
+      "/Users/system/syncrescendence/offices/adjudicator/README.md"
+    ],
+    "required_local_paths": [
+      "inbox",
+      "outbox",
+      "memory",
+      "platform/contracts",
+      "platform/logs",
+      "scratchpad"
+    ],
+    "ratification_pointer": "office-harness-binding-contract/v1",
+    "ratified_by_artifact_path": "/Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md",
+    "ratified_by_artifact_id": "OFFICE-HARNESS-BINDING-CONTRACT-v1",
+    "ratified_at": "2026-03-09",
+    "binding_state": "active",
+    "contract_state": "reference-specimen",
+    "validator_state": "clean",
+    "authority_state": "informative_only",
+    "finding_count": 0,
+    "generated_at": "2026-03-09T23:14:25Z"
+  },
+  {
+    "office_id": "ajna",
+    "office_title": "Ajna",
+    "office_epithet": "Strategos",
+    "federal_role": "strategic-office",
+    "metadata_path": "offices/ajna/platform/contracts/OFFICE-HARNESS-METADATA.v1.yaml",
+    "office_root": "/Users/system/syncrescendence/offices/ajna",
+    "playbook_path": "/Users/system/syncrescendence/playbooks/ajna/PLAYBOOK.md",
+    "primary_harness": "openclaw_macbook_air",
+    "harness_family": "openclaw",
+    "avatar_label": "Ajna",
+    "surface_class": "persistent-runtime",
+    "may_promote_to": [
+      "communications",
+      "executive",
+      "runtime"
+    ],
+    "local_only_classes": [
+      "inbox-state",
+      "working-memory",
+      "platform-logs",
+      "scratch-work",
+      "browser-staging",
+      "exocortex-staging"
+    ],
+    "required_sources": [
+      "/Users/system/syncrescendence/AGENTS.md",
+      "/Users/system/syncrescendence/playbooks/ajna/PLAYBOOK.md",
+      "/Users/system/syncrescendence/playbooks/openclaw/PLAYBOOK.md",
+      "/Users/system/syncrescendence/offices/ajna/README.md",
+      "/Users/system/syncrescendence/runtime/AGENT-RUNTIME-IDENTITIES-CC75.md",
+      "/Users/system/syncrescendence/runtime/TOOL-STACK-LIVE-STATE.md"
+    ],
+    "required_local_paths": [
+      "inbox",
+      "outbox",
+      "memory",
+      "platform/contracts",
+      "platform/logs",
+      "scratchpad"
+    ],
+    "ratification_pointer": "office-harness-binding-contract/v1",
+    "ratified_by_artifact_path": "/Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md",
+    "ratified_by_artifact_id": "OFFICE-HARNESS-BINDING-CONTRACT-v1",
+    "ratified_at": "2026-03-09",
+    "binding_state": "active",
+    "contract_state": "reference-specimen",
+    "validator_state": "clean",
+    "authority_state": "informative_only",
+    "finding_count": 0,
+    "generated_at": "2026-03-09T23:14:25Z"
+  },
+  {
+    "office_id": "cartographer",
+    "office_title": "Cartographer",
+    "office_epithet": "Exegete",
+    "federal_role": "mapping-office",
+    "metadata_path": "offices/cartographer/platform/contracts/OFFICE-HARNESS-METADATA.v1.yaml",
+    "office_root": "/Users/system/syncrescendence/offices/cartographer",
+    "playbook_path": "/Users/system/syncrescendence/playbooks/cartographer/PLAYBOOK.md",
+    "primary_harness": "gemini_cli",
+    "harness_family": "gemini",
+    "avatar_label": "Cartographer",
+    "surface_class": "repo-native-sensing-harness",
+    "may_promote_to": [
+      "communications",
+      "knowledge",
+      "program"
+    ],
+    "local_only_classes": [
+      "inbox-state",
+      "working-memory",
+      "platform-logs",
+      "scratch-work"
+    ],
+    "required_sources": [
+      "/Users/system/syncrescendence/AGENTS.md",
+      "/Users/system/syncrescendence/GEMINI.md",
+      "/Users/system/syncrescendence/playbooks/cartographer/PLAYBOOK.md",
+      "/Users/system/syncrescendence/offices/cartographer/README.md"
+    ],
+    "required_local_paths": [
+      "inbox",
+      "outbox",
+      "memory",
+      "platform/contracts",
+      "platform/logs",
+      "scratchpad"
+    ],
+    "ratification_pointer": "office-harness-binding-contract/v1",
+    "ratified_by_artifact_path": "/Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md",
+    "ratified_by_artifact_id": "OFFICE-HARNESS-BINDING-CONTRACT-v1",
+    "ratified_at": "2026-03-09",
+    "binding_state": "active",
+    "contract_state": "reference-specimen",
+    "validator_state": "clean",
+    "authority_state": "informative_only",
+    "finding_count": 0,
+    "generated_at": "2026-03-09T23:14:25Z"
+  },
+  {
+    "office_id": "psyche",
+    "office_title": "Psyche",
+    "office_epithet": "Synaptarch",
+    "federal_role": "runtime-cohesion-office",
+    "metadata_path": "offices/psyche/platform/contracts/OFFICE-HARNESS-METADATA.v1.yaml",
+    "office_root": "/Users/system/syncrescendence/offices/psyche",
+    "playbook_path": "/Users/system/syncrescendence/playbooks/psyche/PLAYBOOK.md",
+    "primary_harness": "openclaw_mac_mini",
+    "harness_family": "openclaw",
+    "avatar_label": "Psyche",
+    "surface_class": "persistent-runtime",
+    "may_promote_to": [
+      "communications",
+      "program",
+      "runtime"
+    ],
+    "local_only_classes": [
+      "inbox-state",
+      "working-memory",
+      "platform-logs",
+      "scratch-work",
+      "automation-staging",
+      "cross-machine-notes"
+    ],
+    "required_sources": [
+      "/Users/system/syncrescendence/AGENTS.md",
+      "/Users/system/syncrescendence/playbooks/psyche/PLAYBOOK.md",
+      "/Users/system/syncrescendence/playbooks/openclaw/PLAYBOOK.md",
+      "/Users/system/syncrescendence/offices/psyche/README.md",
+      "/Users/system/syncrescendence/runtime/AGENT-RUNTIME-IDENTITIES-CC75.md",
+      "/Users/system/syncrescendence/runtime/TOOL-STACK-LIVE-STATE.md"
+    ],
+    "required_local_paths": [
+      "inbox",
+      "outbox",
+      "memory",
+      "platform/contracts",
+      "platform/logs",
+      "scratchpad"
+    ],
+    "ratification_pointer": "office-harness-binding-contract/v1",
+    "ratified_by_artifact_path": "/Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md",
+    "ratified_by_artifact_id": "OFFICE-HARNESS-BINDING-CONTRACT-v1",
+    "ratified_at": "2026-03-09",
+    "binding_state": "active",
+    "contract_state": "reference-specimen",
+    "validator_state": "clean",
+    "authority_state": "informative_only",
+    "finding_count": 0,
+    "generated_at": "2026-03-09T23:14:25Z"
+  }
+]

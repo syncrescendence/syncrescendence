@@ -1,0 +1,414 @@
+{
+  "matrix_id": "config-surface-projection-matrix-v1",
+  "version": "v1",
+  "status": "seeded",
+  "seeded_at": "2026-03-09",
+  "registry_ref": "orchestration/state/registry/CONFIG-SURFACE-REGISTRY-v1.json",
+  "purpose": "Bind config-kernel atom families and surface classes to concrete repo-resident shell surfaces.",
+  "projection_order": [
+    "AF-02",
+    "AF-05",
+    "AF-07",
+    "AF-08",
+    "AF-01",
+    "AF-03",
+    "AF-06",
+    "AF-04"
+  ],
+  "class_projection_rules": [
+    {
+      "surface_class": "cli_constitution",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "projection_form": "terse constitutional prose and file pointers",
+      "concrete_surface_ids": [
+        "cfgs-001",
+        "cfgs-002",
+        "cfgs-003"
+      ]
+    },
+    {
+      "surface_class": "playbook",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "projection_form": "expanded doctrine, examples, and decision rules",
+      "concrete_surface_ids": [
+        "cfgs-004",
+        "cfgs-005",
+        "cfgs-006"
+      ]
+    },
+    {
+      "surface_class": "skill",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "collapsed_families": [
+        "AF-03",
+        "AF-04"
+      ],
+      "projection_form": "bounded protocol, checklist, and verification steps",
+      "concrete_surface_ids": [
+        "cfgs-007"
+      ]
+    },
+    {
+      "surface_class": "hook_policy",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "omitted_families": [
+        "AF-03",
+        "AF-04"
+      ],
+      "projection_form": "executable checks and audit emission",
+      "concrete_surface_ids": [
+        "cfgs-008"
+      ]
+    },
+    {
+      "surface_class": "schema",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "omitted_families": [
+        "AF-03",
+        "AF-04"
+      ],
+      "projection_form": "field contracts, enums, and invariants",
+      "concrete_surface_ids": [
+        "cfgs-009"
+      ]
+    },
+    {
+      "surface_class": "template",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-04",
+        "AF-06",
+        "AF-07"
+      ],
+      "structurally_encoded_families": [
+        "AF-05"
+      ],
+      "omitted_families": [
+        "AF-03"
+      ],
+      "projection_form": "required headings, metadata slots, and evidence scaffolds",
+      "concrete_surface_ids": [
+        "cfgs-010"
+      ]
+    },
+    {
+      "surface_class": "ledger",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "omitted_families": [
+        "AF-03",
+        "AF-04"
+      ],
+      "projection_form": "state fields, provenance joins, and append-only mutation records",
+      "concrete_surface_ids": [
+        "cfgs-011",
+        "cfgs-012"
+      ]
+    }
+  ],
+  "deferred_surface_classes": [
+    {
+      "surface_class": "chat_ci",
+      "reason": "No repo-resident managed render or receipt artifact has been seeded yet for chat custom-instruction projections."
+    }
+  ],
+  "surface_projection_rows": [
+    {
+      "surface_id": "cfgs-001",
+      "path": "AGENTS.md",
+      "surface_class": "cli_constitution",
+      "projection_mode": "canonical_root_source",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-002",
+      "path": "CLAUDE.md",
+      "surface_class": "cli_constitution",
+      "projection_mode": "rendered_adapter_veneer",
+      "derived_from": [
+        "cfgs-001",
+        "cfgs-005"
+      ],
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-003",
+      "path": "GEMINI.md",
+      "surface_class": "cli_constitution",
+      "projection_mode": "rendered_adapter_veneer",
+      "derived_from": [
+        "cfgs-001",
+        "cfgs-006"
+      ],
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-004",
+      "path": "playbooks/commander/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "projection_mode": "office_doctrine_expansion",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-005",
+      "path": "playbooks/claude-code/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "projection_mode": "harness_doctrine_expansion",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-006",
+      "path": "playbooks/cartographer/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "projection_mode": "office_doctrine_expansion",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-007",
+      "path": ".claude/skills/verification-before-completion/SKILL.md",
+      "surface_class": "skill",
+      "projection_mode": "bounded_task_protocol",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ],
+        "collapsed": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-008",
+      "path": "operators/validators/validate_constitution.py",
+      "surface_class": "hook_policy",
+      "projection_mode": "mechanical_policy_gate",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-009",
+      "path": "orchestration/state/registry/tributary-disposition-schema-v1.md",
+      "surface_class": "schema",
+      "projection_mode": "typed_field_contract",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-010",
+      "path": "offices/commander/platform/contracts/TASK-ENVELOPE-TEMPLATE.md",
+      "surface_class": "template",
+      "projection_mode": "structural_scaffold",
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-04",
+          "AF-06",
+          "AF-07"
+        ],
+        "structural": [
+          "AF-05"
+        ],
+        "omitted": [
+          "AF-03"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-011",
+      "path": "orchestration/state/registry/tributary-disposition-registry.csv",
+      "surface_class": "ledger",
+      "projection_mode": "current_state_registry_record",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-012",
+      "path": "orchestration/state/registry/tributary-disposition-ledger.jsonl",
+      "surface_class": "ledger",
+      "projection_mode": "append_only_mutation_record",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    }
+  ]
+}

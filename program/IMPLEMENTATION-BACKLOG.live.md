@@ -471,14 +471,35 @@ First normalized set:
 - **lineage_or_origin**: Campaign 04 direct writes and its synthesis
 
 1. create the office-harness coherence validator, effective registry, and first coherence reports
-   Status: staged
+   Status: completed
 2. promote `commander` from first specimen into a validated operative binding record
-   Status: staged
+   Status: completed
 3. add the next office-harness metadata specimens for `ajna`, `psyche`, `adjudicator`, and `cartographer`
-   Status: staged
+   Status: completed
 4. create the first tributary compatibility receipt and validator upgrade for `authority_bound` versus `informative_only`
-   Status: staged
+   Status: completed
 5. create the first config-surface registry seed and projection matrix for the new config kernel
-   Status: staged
+   Status: completed
 6. create the first live-ledger widening register and rollout-gate artifacts
+   Status: completed
+
+### Tranche AK — Append-Only Family Operationalization
+
+- **program_id**: `TRANCHE-AK`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `operator`, `office`, `repo sovereignty`, `exocortex`, `ontology`, `compaction`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AK-APPEND-ONLY-FAMILY-OPERATIONALIZATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AK-APPEND-ONLY-FAMILY-OPERATIONALIZATION.md)
+- **lineage_or_origin**: Campaign 05 synthesis and its converged next-leg ordering
+
+1. create append-only mutation history for office-harness state and bind a rematerialization rule to the effective registry
+   Status: staged
+2. promote the remaining federal office metadata contracts from `reference-specimen` to validator-backed operative state where lawful
+   Status: staged
+3. create append-only receipt or drift history for config-surface state and attach a first consumer to the seeded registry and projection matrix
+   Status: staged
+4. open the first repo-native `chat_ci` render or receipt surface so chat custom-instruction handling stops being purely deferred
+   Status: staged
+5. add append-only mutation history for the live-ledger domain register and advance seed families toward `phase1_repo_proof`
+   Status: staged
+6. keep exocortex and ontology widening derivative until repo-native proof families are complete
    Status: staged

@@ -1,0 +1,53 @@
+schema_version: office-harness-metadata/v1
+office_id: ajna
+office_title: Ajna
+office_epithet: Strategos
+federal_role: strategic-office
+office_root: /Users/system/syncrescendence/offices/ajna
+playbook_path: /Users/system/syncrescendence/playbooks/ajna/PLAYBOOK.md
+binding:
+  primary_harness: openclaw_macbook_air
+  harness_family: openclaw
+  avatar_label: Ajna
+  surface_class: persistent-runtime
+  machine: macbook-air
+  provider: anthropic
+  model: claude-sonnet-4-5
+  auth_mode: setup-token
+  account_ref: claude-subscription
+promotion:
+  may_promote_to:
+    - communications
+    - executive
+    - runtime
+  local_only_classes:
+    - inbox-state
+    - working-memory
+    - platform-logs
+    - scratch-work
+    - browser-staging
+    - exocortex-staging
+coherence:
+  required_sources:
+    - /Users/system/syncrescendence/AGENTS.md
+    - /Users/system/syncrescendence/playbooks/ajna/PLAYBOOK.md
+    - /Users/system/syncrescendence/playbooks/openclaw/PLAYBOOK.md
+    - /Users/system/syncrescendence/offices/ajna/README.md
+    - /Users/system/syncrescendence/runtime/AGENT-RUNTIME-IDENTITIES-CC75.md
+    - /Users/system/syncrescendence/runtime/TOOL-STACK-LIVE-STATE.md
+  required_local_paths:
+    - inbox
+    - outbox
+    - memory
+    - platform/contracts
+    - platform/logs
+    - scratchpad
+authority:
+  ratification_pointer: office-harness-binding-contract/v1
+  ratified_by_artifact_path: /Users/system/syncrescendence/orchestration/state/impl/OFFICE-HARNESS-BINDING-CONTRACT-v1.md
+  ratified_by_artifact_id: OFFICE-HARNESS-BINDING-CONTRACT-v1
+  ratified_at: 2026-03-09
+status:
+  binding_state: active
+  contract_state: reference-specimen
+  last_verified_on: 2026-03-09

@@ -1,0 +1,447 @@
+{
+  "registry_id": "config-surface-registry-v1",
+  "version": "v1",
+  "status": "seeded",
+  "seeded_at": "2026-03-09",
+  "purpose": "First machine-addressable registry seed for the constitutional config kernel and its repo-resident projection surfaces.",
+  "source_refs": [
+    "knowledge/sigma/CONFIG-SOURCE-OF-TRUTH-ARCHITECTURE-v1.md",
+    "knowledge/sigma/CONFIG-BEHAVIOR-ATOMS-AND-SURFACE-PROFILES-v1.md",
+    "orchestration/state/impl/CODEX-CAMPAIGN-05-TYPED-MIDDLE-LAYER-OPERATIONALIZATION-v1.md"
+  ],
+  "seed_constraints": {
+    "non_exhaustive": true,
+    "repo_resident_only": true,
+    "vendor_runtime_exports_included": false,
+    "lawful_exclusion_note": "External chat custom-instruction surfaces are defined doctrinally but deferred until a repo-native render or receipt surface exists."
+  },
+  "compression_priority": [
+    "AF-02",
+    "AF-05",
+    "AF-07",
+    "AF-08",
+    "AF-01",
+    "AF-03",
+    "AF-06",
+    "AF-04"
+  ],
+  "atom_families": [
+    {
+      "atom_family_id": "AF-01",
+      "slug": "response_calibration",
+      "binding_basis": "answer depth follows task complexity"
+    },
+    {
+      "atom_family_id": "AF-02",
+      "slug": "epistemic_discipline",
+      "binding_basis": "observation, inference, and speculation remain distinct when status matters"
+    },
+    {
+      "atom_family_id": "AF-03",
+      "slug": "collaboration_posture",
+      "binding_basis": "honest pushback outranks agreement theater"
+    },
+    {
+      "atom_family_id": "AF-04",
+      "slug": "prose_and_scanning_discipline",
+      "binding_basis": "direct, active prose with only necessary structure"
+    },
+    {
+      "atom_family_id": "AF-05",
+      "slug": "anti_pattern_suppression",
+      "binding_basis": "decorative verbosity, bluffing, hidden certainty, and duplicated doctrine are suppressed"
+    },
+    {
+      "atom_family_id": "AF-06",
+      "slug": "cognitive_accommodation",
+      "binding_basis": "progressive disclosure and chunked structure outrank persona coaching"
+    },
+    {
+      "atom_family_id": "AF-07",
+      "slug": "repo_sovereignty_and_provenance",
+      "binding_basis": "durable truth lives in repo artifacts, receipts, and cited sources"
+    },
+    {
+      "atom_family_id": "AF-08",
+      "slug": "native_enforcement_and_lawful_projection",
+      "binding_basis": "structural enforcement outranks prose restatement and omissions must be explicit"
+    }
+  ],
+  "surface_classes": [
+    {
+      "surface_class": "chat_ci",
+      "seed_status": "deferred_external",
+      "authority_mode": "witness_corpus_or_rendered_derivative",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "seed_note": "Defined in Sigma doctrine but not seeded here because no repo-resident concrete shell surface currently carries the managed projection."
+    },
+    {
+      "surface_class": "cli_constitution",
+      "seed_status": "seeded",
+      "authority_mode": "constitutional_source_or_derivative_constitutional_adapter",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_class": "playbook",
+      "seed_status": "seeded",
+      "authority_mode": "derivative_operational_doctrine",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_class": "skill",
+      "seed_status": "seeded",
+      "authority_mode": "derivative_task_module",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "collapsed_families": [
+        "AF-03",
+        "AF-04"
+      ]
+    },
+    {
+      "surface_class": "hook_policy",
+      "seed_status": "seeded",
+      "authority_mode": "executable_derivative",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "typically_omitted_families": [
+        "AF-03",
+        "AF-04"
+      ]
+    },
+    {
+      "surface_class": "schema",
+      "seed_status": "seeded",
+      "authority_mode": "typed_contract",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "typically_omitted_families": [
+        "AF-03",
+        "AF-04"
+      ]
+    },
+    {
+      "surface_class": "template",
+      "seed_status": "seeded",
+      "authority_mode": "derivative_scaffold",
+      "required_families": [
+        "AF-01",
+        "AF-02",
+        "AF-04",
+        "AF-06",
+        "AF-07"
+      ],
+      "structurally_encoded_families": [
+        "AF-05"
+      ],
+      "typically_omitted_families": [
+        "AF-03"
+      ]
+    },
+    {
+      "surface_class": "ledger",
+      "seed_status": "seeded",
+      "authority_mode": "current_state_or_append_only_record",
+      "required_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "typically_omitted_families": [
+        "AF-03",
+        "AF-04"
+      ]
+    }
+  ],
+  "concrete_surfaces": [
+    {
+      "surface_id": "cfgs-001",
+      "path": "AGENTS.md",
+      "surface_class": "cli_constitution",
+      "surface_role": "canonical_root_constitution",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "constitutional_source",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "validator_refs": [
+        "operators/validators/validate_constitution.py"
+      ]
+    },
+    {
+      "surface_id": "cfgs-002",
+      "path": "CLAUDE.md",
+      "surface_class": "cli_constitution",
+      "surface_role": "rendered_claude_adapter",
+      "authoring_mode": "rendered",
+      "authority_tier": "derivative_adapter",
+      "derived_from": [
+        "cfgs-001",
+        "cfgs-005"
+      ],
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "renderer_refs": [
+        "operators/config/render_successor_adapters.py"
+      ],
+      "validator_refs": [
+        "operators/validators/validate_constitution.py"
+      ]
+    },
+    {
+      "surface_id": "cfgs-003",
+      "path": "GEMINI.md",
+      "surface_class": "cli_constitution",
+      "surface_role": "rendered_gemini_adapter",
+      "authoring_mode": "rendered",
+      "authority_tier": "derivative_adapter",
+      "derived_from": [
+        "cfgs-001",
+        "cfgs-006"
+      ],
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "renderer_refs": [
+        "operators/config/render_successor_adapters.py"
+      ],
+      "validator_refs": [
+        "operators/validators/validate_constitution.py"
+      ]
+    },
+    {
+      "surface_id": "cfgs-004",
+      "path": "playbooks/commander/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "surface_role": "office_playbook",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "derivative_operational_doctrine",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_id": "cfgs-005",
+      "path": "playbooks/claude-code/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "surface_role": "harness_playbook",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "derivative_operational_doctrine",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_id": "cfgs-006",
+      "path": "playbooks/cartographer/PLAYBOOK.md",
+      "surface_class": "playbook",
+      "surface_role": "office_playbook",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "derivative_operational_doctrine",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_id": "cfgs-007",
+      "path": ".claude/skills/verification-before-completion/SKILL.md",
+      "surface_class": "skill",
+      "surface_role": "verification_gate_skill",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "derivative_task_module",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ]
+    },
+    {
+      "surface_id": "cfgs-008",
+      "path": "operators/validators/validate_constitution.py",
+      "surface_class": "hook_policy",
+      "surface_role": "constitutional_validator",
+      "authoring_mode": "hand_authored_code",
+      "authority_tier": "executable_derivative",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ]
+    },
+    {
+      "surface_id": "cfgs-009",
+      "path": "orchestration/state/registry/tributary-disposition-schema-v1.md",
+      "surface_class": "schema",
+      "surface_role": "typed_registry_contract",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "typed_contract",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ]
+    },
+    {
+      "surface_id": "cfgs-010",
+      "path": "offices/commander/platform/contracts/TASK-ENVELOPE-TEMPLATE.md",
+      "surface_class": "template",
+      "surface_role": "task_dispatch_template",
+      "authoring_mode": "hand_authored",
+      "authority_tier": "derivative_scaffold",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07"
+      ]
+    },
+    {
+      "surface_id": "cfgs-011",
+      "path": "orchestration/state/registry/tributary-disposition-registry.csv",
+      "surface_class": "ledger",
+      "surface_role": "current_state_registry",
+      "authoring_mode": "machine_mutated_controlled",
+      "authority_tier": "current_state_record",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ]
+    },
+    {
+      "surface_id": "cfgs-012",
+      "path": "orchestration/state/registry/tributary-disposition-ledger.jsonl",
+      "surface_class": "ledger",
+      "surface_role": "append_only_mutation_ledger",
+      "authoring_mode": "machine_appended",
+      "authority_tier": "append_only_record",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ]
+    }
+  ]
+}
