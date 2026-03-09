@@ -230,10 +230,10 @@ The project has already completed:
 
 It is now entering the next phase:
 
-- external Hazel caller cutover for the remaining transitional root wrapper
-- conditional wrapper retirement only after that live edge cutover is verified
-- repo-side retirement patch preparation so the wrapper can disappear quickly once the cutover is real
-- later mapping of the `7` remaining communications warnings into rename or permanent report-only debt only after the wrapper path is no longer the dominant cleanup blocker
+- runtime proof that the cut-over Hazel rule actually finalizes successfully
+- conditional wrapper retirement only after that runtime proof exists
+- repo-side retirement execution against the already prepared patch set
+- later coordinated handling of the `4` rename-required communications artifacts once the wrapper path is no longer the dominant cleanup blocker
 - later Sigma or tributary expansion only after strict-ready debt retirement stabilizes
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.

@@ -324,10 +324,21 @@
 ### Tranche AB — Hazel Cutover And Conditional Wrapper Retirement
 
 1. cut over the confirmed live Hazel rule from the root wrapper path to the operator path and remove unsupported `--project-ontology`
-   Status: staged
+   Status: completed wave 7
 2. capture repo-native evidence that the live Hazel caller has been repointed successfully
-   Status: staged
+   Status: completed wave 7 (storage-level evidence)
 3. prepare or execute the repo-side wrapper retirement patch only after the Hazel cutover is confirmed
-   Status: staged
+   Status: patch prepared wave 7, execution pending runtime proof
 4. leave broader naming strictness and bulk rename debt out of scope while the wrapper path remains the dominant live blocker
+   Status: completed sequencing
+
+### Tranche AC — Runtime Proof And Conditional Wrapper Retirement
+
+1. obtain one successful Hazel-triggered post-cutover finalization using the operator-path command
+   Status: staged
+2. apply the prepared wrapper-retirement patch only if that runtime proof succeeds
+   Status: staged
+3. regenerate constitution and artifact-law reports to confirm the wrapper warning and root-level operator count disappear
+   Status: staged
+4. keep the remaining naming rename tranche separate and non-blocking while wrapper retirement is still open
    Status: staged
