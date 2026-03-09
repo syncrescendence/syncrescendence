@@ -106,3 +106,37 @@ Assigned-surface verification results:
 - unsupported `--project-ontology` removed: `yes`
 - repo-native receipt written: `yes`
 - tranche outcome: `complete`
+
+## 7. Runtime Proof Attempt Addendum
+
+**Attempt Date**: `2026-03-08 America/Los_Angeles` / `2026-03-09T00:20:01Z`
+**Objective**: `obtain one successful post-cutover Hazel-triggered finalization before wrapper retirement`
+
+Safe trigger chosen from live Hazel evidence:
+
+- [com.noodlesoft.Hazel.plist](/Users/system/Library/Preferences/com.noodlesoft.Hazel.plist) and Hazel AppleScript both exposed the monitored folder set directly.
+- Hazel AppleScript reported the current monitored folder paths as:
+  - `/Users/system/syncrescendence/orchestration/relay/cowork-v1/artifacts/outgoing`
+  - `/Users/system/syncrescendence/orchestration/relay/cowork-v1/jobs/inbox`
+- [16777231-58660320.hazeldb](/Users/system/Library/Application%20Support/Hazel/16777231-58660320.hazeldb) still showed the active `.status.json` shell rule history for the outgoing folder and `Last Poll Time => 2026-03-08T22:37:24Z`.
+
+Bounded proof method attempted:
+
+1. reject the existing historical smoke status files as proof candidates because their job payloads still reference dead `00-ORCHESTRATION/...` paths and a missing `communications/prompts/PACKET-PERPLEXITY-cowork-sandbox-smoke.md`
+2. stage one synthetic smoke job and matching `.status.json` that reused the live outgoing folder plus current in-repo packet and staged response paths
+3. retrigger Hazel by mtime update, then by Hazel AppleScript `run` on the outgoing folder, then by one bounded Hazel helper restart and clean app relaunch
+
+Observed outcome:
+
+- the synthetic proof job never moved out of `jobs/inbox`
+- no proof response artifact was created under `communications/responses`
+- no sandbox event ledger file was created
+- [16777231-58660320.hazeldb](/Users/system/Library/Application%20Support/Hazel/16777231-58660320.hazeldb) never ingested the proof filename and its `Last Poll Time` remained frozen at `2026-03-08T22:37:24Z`
+- after the clean Hazel relaunch, [com.noodlesoft.Hazel.plist](/Users/system/Library/Preferences/com.noodlesoft.Hazel.plist) recorded `DeployedFolderIDs => ["16777231-58660309"]`, so the outgoing folder id `16777231-58660320` was no longer deployed even though Hazel AppleScript still listed the outgoing path
+
+Runtime-proof classification:
+
+- successful post-cutover Hazel-triggered finalization: `no`
+- wrapper-retirement gate cleared: `no`
+- blocker: `live Hazel deployment/polling state did not execute or even re-index the outgoing-folder proof file`
+- repo-side retirement patch applied: `no`

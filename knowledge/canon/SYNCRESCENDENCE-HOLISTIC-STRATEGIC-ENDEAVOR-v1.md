@@ -230,7 +230,8 @@ The project has already completed:
 
 It is now entering the next phase:
 
-- runtime proof that the cut-over Hazel rule actually finalizes successfully
+- live Hazel deployment and polling recovery for the outgoing-folder automation surface
+- one successful post-cutover Hazel-triggered finalization only after that runtime state is healthy again
 - conditional wrapper retirement only after that runtime proof exists
 - repo-side retirement execution against the already prepared patch set
 - later coordinated handling of the `4` rename-required communications artifacts once the wrapper path is no longer the dominant cleanup blocker
@@ -238,8 +239,17 @@ It is now entering the next phase:
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 
+Wave 8 clarified that the remaining blocker is no longer repo topology, path ambiguity, or patch uncertainty.
+It is machine-local automation state.
+
+That matters strategically because it locates the true boundary between:
+
+- repo law and ratification
+- machine-local exocortical runtime
+- conditional retirement of transitional compatibility surfaces
+
 The main danger is no longer conceptual vagueness.
-It is false completion, silent drift, and expansion before the proven control plane survives stricter enforcement.
+It is false completion, silent drift, and expansion before the proven control plane survives stricter enforcement across real external runtime state.
 
 ## 9. Permanent Working Rule
 
