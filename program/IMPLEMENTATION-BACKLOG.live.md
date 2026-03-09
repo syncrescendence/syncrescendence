@@ -335,21 +335,32 @@
 ### Tranche AC — Runtime Proof And Conditional Wrapper Retirement
 
 1. obtain one successful Hazel-triggered post-cutover finalization using the operator-path command
-   Status: attempted wave 8, blocked by Hazel deployment and polling state
+   Status: completed via direct closure
 2. apply the prepared wrapper-retirement patch only if that runtime proof succeeds
-   Status: blocked wave 8
+   Status: completed via direct closure
 3. regenerate constitution and artifact-law reports to confirm the wrapper warning and root-level operator count disappear
-   Status: blocked wave 8
+   Status: completed via direct closure
 4. keep the remaining naming rename tranche separate and non-blocking while wrapper retirement is still open
-   Status: upheld wave 8
+   Status: upheld
 
 ### Tranche AD — Hazel Deployment Recovery And Runtime Proof
 
 1. reconcile the live Hazel deployed-folder set with the outgoing cowork folder and restore the missing deployment only if the target surface is confirmed exactly
-   Status: staged
+   Status: completed via direct closure
 2. verify that Hazel polling resumes on the outgoing cowork folder before any wrapper-retirement attempt is retried
-   Status: staged
+   Status: completed via direct closure
 3. prepare one repo-valid synthetic runtime-proof candidate and expected response/ledger evidence surfaces
-   Status: staged
+   Status: completed wave 9 + direct closure
 4. attempt one bounded post-recovery Hazel-triggered finalization and retire the wrapper only if that runtime proof succeeds
+   Status: completed via direct closure
+
+### Tranche AE — Post-Wrapper Macro Reacceleration
+
+1. codify the new execution geometry: single-agent closed loops for tightly coupled runtime fronts, human-amplified swarms for broad semantic and migration work
+   Status: staged
+2. relaunch tributary convergence at macro scale across canon, Sigma, Rosetta, intent, program, pedigree, and validated-pattern surfaces
+   Status: staged
+3. accelerate repo / exocortex / ontology convergence so the repo remains ratification core while larger surfaces absorb operational mass
+   Status: staged
+4. convert narrow enforcement wins into broad compaction and doctrinal promotion rather than returning to micro-wave localism
    Status: staged

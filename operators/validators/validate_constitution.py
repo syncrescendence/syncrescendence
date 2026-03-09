@@ -44,9 +44,7 @@ ALLOWED_ROOT = {
     "WORK-LOOP.md",
 }
 
-TRANSITIONAL_ROOT = {
-    "finalize_cowork_relay_job.py",
-}
+TRANSITIONAL_ROOT = set()
 
 REQUIRED_PATHS = [
     "AGENTS.md",

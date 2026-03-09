@@ -1,0 +1,25 @@
+{
+  "attachment_staging_paths": [],
+  "attachments": [],
+  "created_at": "2026-03-09T00:00:00Z",
+  "id": "perplexity-20260309-000000-wave-9-runtime-proof-candidate",
+  "instructions": [
+    "Open Perplexity in the browser and submit the packet content from packet_staging_path as-is.",
+    "When the answer completes, save the returned markdown into the exact response_staging_path from the job.",
+    "After saving the response, write the status JSON to the exact status_path from the job."
+  ],
+  "job_type": "verification_query",
+  "metadata": {
+    "hazel_dependency": "none_for_candidate_definition",
+    "prepared_by": "wave-9-lane-02",
+    "purpose": "synthetic_runtime_proof_candidate"
+  },
+  "packet": "communications/prompts/PACKET-PERPLEXITY-wave-9-runtime-proof-candidate.md",
+  "packet_staging_path": "orchestration/relay/cowork-v1/packets/perplexity-20260309-000000-wave-9-runtime-proof-candidate-PACKET-PERPLEXITY-wave-9-runtime-proof-candidate.md",
+  "response_artifact": "communications/responses/RESPONSE-PERPLEXITY-wave-9-runtime-proof-candidate.md",
+  "response_staging_path": "orchestration/relay/cowork-v1/artifacts/outgoing/RESPONSE-PERPLEXITY-wave-9-runtime-proof-candidate.md",
+  "status_path": "orchestration/relay/cowork-v1/artifacts/outgoing/perplexity-20260309-000000-wave-9-runtime-proof-candidate.status.json",
+  "summary_for_bridge": "Wave 9 runtime proof candidate response landed.",
+  "surface": "perplexity",
+  "title": "Wave 9 runtime proof candidate"
+}

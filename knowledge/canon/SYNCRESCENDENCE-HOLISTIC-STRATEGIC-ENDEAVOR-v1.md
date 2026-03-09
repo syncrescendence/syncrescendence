@@ -167,6 +167,31 @@ The shell must therefore prefer:
 - convergent external synthesis for architecture pressure-testing
 - explicit downgrading of surfaces that speak plausibly but misread the actual repo
 
+### 4.10 Execution Geometry And Velocity
+
+The system should not use the same orchestration pattern for every class of work.
+
+Tightly coupled, stateful, machine-local, or sequential work should be driven by one agent in a closed loop until the boundary is actually cleared.
+
+Examples:
+
+- live connector repair
+- local runtime recovery
+- validator cleanup that depends on a single moving edge
+
+Broad, weakly coupled, high-read-fanout work should be swarm-amplified aggressively.
+
+Examples:
+
+- tributary archaeology
+- doctrine promotion mapping
+- Sigma and canon compaction
+- source and log shedding analysis
+- exocortex and ontology convergence mapping
+
+The human should not be reduced to relaying micro-packets for a tightly coupled blocker that one agent can own end to end.
+The human should be used to multiply the swarm where true parallelism exists.
+
 ## 5. System Boundary
 
 The project currently recognizes three major macro layers:
@@ -227,15 +252,18 @@ The project has already completed:
 - external convergence sensing that reaffirmed the shell while clarifying witness trust boundaries
 - naming-debt classification and root-wrapper internalization planning around the newly proven surface
 - strict-ready communications metadata normalization and explicit naming-tolerance codification around that same proven surface
+- direct repair of the outgoing Hazel rule-envelope integrity failure
+- live Hazel deployment and polling recovery for the outgoing cowork surface
+- one successful post-cutover Hazel-triggered runtime proof using the clean synthetic candidate
+- root-wrapper retirement and validator cleanup with constitution warnings reduced to `0`
 
 It is now entering the next phase:
 
-- live Hazel deployment and polling recovery for the outgoing-folder automation surface
-- one successful post-cutover Hazel-triggered finalization only after that runtime state is healthy again
-- conditional wrapper retirement only after that runtime proof exists
-- repo-side retirement execution against the already prepared patch set
-- later coordinated handling of the `4` rename-required communications artifacts once the wrapper path is no longer the dominant cleanup blocker
-- later Sigma or tributary expansion only after strict-ready debt retirement stabilizes
+- post-wrapper edge consolidation so stale receipts, handoffs, smoke artifacts, and edge guidance stop describing a blocker that no longer exists
+- a higher-velocity tributary convergence campaign across canon, Sigma, Rosetta, intent, program, and pedigree surfaces
+- exocortex and ontology convergence work that treats the repo as ratification core and larger external surfaces as operational field
+- continued source and log compaction so raw volume stops dominating live cognition
+- aggressive swarm amplification for broad semantic work, with single-agent closed loops reserved for tightly coupled runtime fronts
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 
@@ -249,7 +277,7 @@ That matters strategically because it locates the true boundary between:
 - conditional retirement of transitional compatibility surfaces
 
 The main danger is no longer conceptual vagueness.
-It is false completion, silent drift, and expansion before the proven control plane survives stricter enforcement across real external runtime state.
+It is re-fragmentation: solving one blocker, then falling back into micro-local steering instead of converting the win into higher-velocity macro convergence.
 
 ## 9. Permanent Working Rule
 

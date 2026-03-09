@@ -47,7 +47,6 @@ ALLOWED_TOP_LEVEL = {
 
 TRANSITIONAL_ROOT_OPERATORS = {
     "artifact_law_inventory.py",
-    "finalize_cowork_relay_job.py",
 }
 
 ALLOWED_PROMPT_PREFIXES = ("PROMPT-", "PACKET-")
