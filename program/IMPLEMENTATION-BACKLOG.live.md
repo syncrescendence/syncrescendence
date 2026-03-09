@@ -433,12 +433,31 @@ First normalized set:
 - **lineage_or_origin**: Campaign 02 convergence synthesis plus the imported chat-app custom-instruction and live-ledger architecture doctrine
 
 1. define the constitutional config source-of-truth architecture using custom instructions as the highest-resolution behavioral witness
-   Status: staged
+   Status: completed design pass
 2. map the validated repo into a mereological stack of atoms, modules, structures, entities, workflows, and ecosystem surfaces
-   Status: staged
+   Status: completed design pass
 3. define the generic live-ledger family contract and the first lawful order for domain-ledger rollout
-   Status: staged
+   Status: completed design pass
 4. translate the office-harness metadata contract and validator plan into a durable repo-law candidate
-   Status: staged
+   Status: completed design pass
 5. define the rollout path for ratification-pointer fields on authority-bearing registries and schema surfaces
+   Status: completed design pass
+
+### Tranche AH — Typed Middle Layer Direct Writes
+
+- **program_id**: `TRANCHE-AH`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `constitution`, `operator`, `office`, `repo sovereignty`, `exocortex`, `ontology`, `compaction`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AH-TYPED-MIDDLE-LAYER-DIRECT-WRITES.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AH-TYPED-MIDDLE-LAYER-DIRECT-WRITES.md)
+- **lineage_or_origin**: Campaign 03 synthesis and coordinator-ordered direct-write set
+
+1. land the constitutional config source-of-truth architecture as live Sigma law
+   Status: staged
+2. land the behavior-atom and surface-profile layer for future config distillation
+   Status: staged
+3. land the office-harness binding contract and first typed `commander` specimen
+   Status: staged
+4. land the generic live-ledger family contract without widening dashboard or ontology scope prematurely
+   Status: staged
+5. land the non-breaking ratification-pointer rollout law while preserving the live tributary proof
    Status: staged

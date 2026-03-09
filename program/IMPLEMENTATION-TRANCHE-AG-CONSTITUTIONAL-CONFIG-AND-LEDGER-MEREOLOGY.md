@@ -39,3 +39,4 @@ This tranche exists to make two macro moves:
 - [CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md](/Users/system/syncrescendence/knowledge/sigma/CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md)
 - [LIVE-LEDGER-STRATEGIC-AND-TAXONOMIC-ARCHITECTURE-v1.md](/Users/system/syncrescendence/knowledge/sigma/LIVE-LEDGER-STRATEGIC-AND-TAXONOMIC-ARCHITECTURE-v1.md)
 - [CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CONTROL-PLANE-SOVEREIGNTY-CONTRACT-v1.md)
+- [CAMPAIGN-03-CONSTITUTIONAL-CONFIG-AND-LEDGER-MEREOLOGY-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CAMPAIGN-03-CONSTITUTIONAL-CONFIG-AND-LEDGER-MEREOLOGY-SYNTHESIS-v1.md)

@@ -248,6 +248,16 @@ The shell should also use a mereological grammar when specifying these artifacts
 
 This lets the validated repo compartmentalize detail without losing the connection between microscopic config parts and the macroscopic strategic endeavor.
 
+The shell therefore needs a typed middle layer between high doctrine and low projections:
+
+- a constitutional config kernel
+- reusable behavior atoms
+- surface profiles
+- projection rules
+- ratified contracts for mutable control-plane bindings
+
+Without that middle layer, the system oscillates between overstuffed constitutions and under-specified local surfaces.
+
 ## 5. System Boundary
 
 The project currently recognizes three major macro layers:
@@ -317,6 +327,8 @@ The project has already completed:
 - internalization of the canonical cross-platform chat-app custom-instruction family as exact Sigma reference substrate plus live Sigma doctrine
 - internalization of the strategic-vision and operational-taxonomy pair as live Sigma guidance for append-only ledgers, freshness logic, and progressive-disclosure memory organs
 - emergence of configuration mereology as the next macro layer after authority-spine restoration
+- convergence on the shell's next real bottleneck: the missing typed middle layer between doctrine and projections
+- convergence on one ordered direct-write set for that typed middle layer across config kernel law, behavior atoms, office-harness binding law, ledger-family law, and ratification-pointer rollout law
 
 It is now entering the next phase:
 
@@ -326,6 +338,7 @@ It is now entering the next phase:
 - exocortex and ontology convergence work that treats the repo as ratification core and larger external surfaces as operational field
 - continued source and log compaction so raw volume stops dominating live cognition
 - aggressive swarm amplification for broad semantic work, with single-agent closed loops reserved for tightly coupled runtime fronts
+- direct ratification of the typed middle layer so configuration, ledger growth, and office-harness binding stop relying on implicit doctrine
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 
