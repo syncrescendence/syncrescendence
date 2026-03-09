@@ -192,6 +192,19 @@ Examples:
 The human should not be reduced to relaying micro-packets for a tightly coupled blocker that one agent can own end to end.
 The human should be used to multiply the swarm where true parallelism exists.
 
+### 4.11 Surface Constitutions And Behavioral Veneers
+
+Chat apps, harnesses, and other execution surfaces that expose custom instructions, user preferences, agent profiles, or equivalent steering fields should be treated as rendered behavioral constitutions.
+
+The durable source of truth belongs in repo doctrine.
+The provider field, snippet, or profile block is a surface-specific compression of that doctrine into the UI constraints of the host platform.
+
+This matters because:
+
+- vendor fields are too small, too brittle, or too provider-specific to become hidden sovereign law
+- exact surface renderings still matter operationally and therefore need preserved provenance
+- future re-renders should start from stable doctrine plus rationale, not from memory or copy-pasted drift
+
 ## 5. System Boundary
 
 The project currently recognizes three major macro layers:
@@ -258,6 +271,7 @@ The project has already completed:
 - root-wrapper retirement and validator cleanup with constitution warnings reduced to `0`
 - proof that a single-agent closed loop is the right operating mode for tightly coupled runtime blockers
 - first post-wrapper macro campaign mapping across doctrine promotion, triad rebind, office federalism, exocortex convergence, and source/log shedding
+- internalization of the canonical cross-platform chat-app custom-instruction family as exact Sigma reference substrate plus live Sigma doctrine
 
 It is now entering the next phase:
 

@@ -38,3 +38,7 @@ Until staged rehousing is complete:
 - `knowledge/sigma/` -> `knowledge/canon/`
 
 Artifacts may also exit laterally to `playbooks/`, `operators/`, `validated-patterns/`, or `pedigree/` if that is their true class.
+
+## Current Anchors
+
+- [CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md](/Users/system/syncrescendence/knowledge/sigma/CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md)
