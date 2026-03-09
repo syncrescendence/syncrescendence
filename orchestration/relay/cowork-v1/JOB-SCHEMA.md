@@ -47,9 +47,9 @@ Optional fields:
   "surface": "perplexity",
   "job_type": "verification_query",
   "title": "Perplexity relay smoke test",
-  "packet": "engine/PACKET-PERPLEXITY-cc76-cli-web-gap-followup.md",
+  "packet": "communications/prompts/PACKET-PERPLEXITY-cc76-cli-web-gap-followup.md",
   "packet_staging_path": "orchestration/relay/cowork-v1/packets/perplexity-20260302-193000-example-PACKET-PERPLEXITY-cc76-cli-web-gap-followup.md",
-  "response_artifact": "-INBOX/commander/00-INBOX0/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md",
+  "response_artifact": "communications/responses/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md",
   "response_staging_path": "orchestration/relay/cowork-v1/artifacts/outgoing/RESPONSE-PERPLEXITY-cc76-cli-web-gap-followup.md",
   "status_path": "orchestration/relay/cowork-v1/artifacts/outgoing/perplexity-20260302-193000-example.status.json",
   "summary_for_bridge": "Perplexity follow-up landed for current official Cowork and Claude in Chrome capabilities.",
@@ -64,3 +64,5 @@ Optional fields:
   }
 }
 ```
+
+Use repo-relative paths rooted in the current shell. Historical prefixes such as `engine/...`, `-INBOX/...`, or `00-ORCHESTRATION/...` should not appear in new jobs.

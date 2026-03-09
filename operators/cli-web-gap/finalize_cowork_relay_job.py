@@ -25,6 +25,19 @@ BRIDGE_SCRIPTS = {
 }
 
 
+def classify_job_state(job_path: Path) -> str:
+    parent = job_path.parent.resolve()
+    if parent == INBOX_DIR.resolve():
+        return "inbox"
+    if parent == RUNNING_DIR.resolve():
+        return "running"
+    if parent == COMPLETED_DIR.resolve():
+        return "completed"
+    if parent == FAILED_DIR.resolve():
+        return "failed"
+    return "unknown"
+
+
 def load_job(job_ref: str) -> tuple[Path, dict]:
     candidates = []
     ref_path = Path(job_ref)
@@ -96,6 +109,7 @@ def main() -> int:
         raise SystemExit("Finalization requires job id, result, and note, directly or via --status-file.")
 
     job_path, job = load_job(args.job)
+    job_state = classify_job_state(job_path)
     bridge_script = BRIDGE_SCRIPTS.get(job["surface"])
     if bridge_script is None:
         raise SystemExit(f"No bridge script registered for surface: {job['surface']}")
@@ -114,11 +128,21 @@ def main() -> int:
         final_status["citation_count"] = args.citation_count
 
     if args.result == "failed":
+        if job_state == "failed":
+            write_status(status_path, final_status)
+            print(f"Already marked failed: {job_path}")
+            return 0
         failed_job_path = FAILED_DIR / job_path.name
         if job_path.resolve() != failed_job_path.resolve():
             shutil.move(str(job_path), str(failed_job_path))
         write_status(status_path, final_status)
         print(f"Marked failed: {failed_job_path}")
+        return 0
+
+    if job_state == "completed" and target_path.exists():
+        final_status["response_artifact"] = job["response_artifact"]
+        write_status(status_path, final_status)
+        print(f"Already finalized: {job_path}")
         return 0
 
     if not staging_path.exists():

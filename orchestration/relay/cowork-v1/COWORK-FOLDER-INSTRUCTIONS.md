@@ -20,6 +20,7 @@ Each job asks you to use the browser to complete a specific web task, then save 
 8. Do not leave the result only in browser state.
 9. After saving the artifact, write the status JSON to the exact `status_path`.
 10. If the job cannot be completed, move it to `jobs/failed/` and write a failure status JSON.
+11. Treat `orchestration/...` and `communications/...` repo-relative paths as canonical; do not reintroduce historical prefixes such as `00-ORCHESTRATION/...`.
 
 ## Output Contract
 

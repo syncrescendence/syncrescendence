@@ -34,6 +34,7 @@ Its job is simple:
 - copies the staged response artifact into the repo target path
 - runs the correct bridge script
 - reconciles into the event ledger
+- tolerates replay of already-finalized jobs so forced Hazel rescans do not reopen old edge failures
 
 This is the main Hazel integration point.
 
@@ -108,6 +109,9 @@ Optional fields:
 - `citation_count`
 
 The matching response markdown must already exist at the job's `response_staging_path`.
+New jobs should use current repo-relative paths such as `communications/...` and `orchestration/...`, not historical `00-ORCHESTRATION/...` variants.
+
+If Hazel is forced to rescan the outgoing folder, already-finalized jobs should no-op rather than emit a fresh failure.
 
 ---
 

@@ -256,25 +256,19 @@ The project has already completed:
 - live Hazel deployment and polling recovery for the outgoing cowork surface
 - one successful post-cutover Hazel-triggered runtime proof using the clean synthetic candidate
 - root-wrapper retirement and validator cleanup with constitution warnings reduced to `0`
+- proof that a single-agent closed loop is the right operating mode for tightly coupled runtime blockers
+- first post-wrapper macro campaign mapping across doctrine promotion, triad rebind, office federalism, exocortex convergence, and source/log shedding
 
 It is now entering the next phase:
 
 - post-wrapper edge consolidation so stale receipts, handoffs, smoke artifacts, and edge guidance stop describing a blocker that no longer exists
+- a higher-velocity authority-spine tranche across live Rosetta, intent, program, and control-plane sovereignty surfaces
 - a higher-velocity tributary convergence campaign across canon, Sigma, Rosetta, intent, program, and pedigree surfaces
 - exocortex and ontology convergence work that treats the repo as ratification core and larger external surfaces as operational field
 - continued source and log compaction so raw volume stops dominating live cognition
 - aggressive swarm amplification for broad semantic work, with single-agent closed loops reserved for tightly coupled runtime fronts
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
-
-Wave 8 clarified that the remaining blocker is no longer repo topology, path ambiguity, or patch uncertainty.
-It is machine-local automation state.
-
-That matters strategically because it locates the true boundary between:
-
-- repo law and ratification
-- machine-local exocortical runtime
-- conditional retirement of transitional compatibility surfaces
 
 The main danger is no longer conceptual vagueness.
 It is re-fragmentation: solving one blocker, then falling back into micro-local steering instead of converting the win into higher-velocity macro convergence.

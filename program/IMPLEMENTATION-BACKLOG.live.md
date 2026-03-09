@@ -357,10 +357,25 @@
 ### Tranche AE — Post-Wrapper Macro Reacceleration
 
 1. codify the new execution geometry: single-agent closed loops for tightly coupled runtime fronts, human-amplified swarms for broad semantic and migration work
-   Status: staged
+   Status: completed v1
 2. relaunch tributary convergence at macro scale across canon, Sigma, Rosetta, intent, program, pedigree, and validated-pattern surfaces
-   Status: staged
+   Status: mapping completed, write set pending
 3. accelerate repo / exocortex / ontology convergence so the repo remains ratification core while larger surfaces absorb operational mass
-   Status: staged
+   Status: mapping completed, contract write pending
 4. convert narrow enforcement wins into broad compaction and doctrinal promotion rather than returning to micro-wave localism
+   Status: active
+
+### Tranche AF — Authority Spine And Macro Contracts
+
+1. create one non-pedigree live Rosetta authority surface and rebind executive and program readers to it
+   Status: staged
+2. normalize the live intent compass with status partitions, review metadata, and pedigree lineage where materially load-bearing
+   Status: staged
+3. patch the live program contract and the highest-yield active tranches to require visible `intent_refs`, `rosetta_refs`, `execution_surface`, and `lineage_or_origin`
+   Status: staged
+4. publish the compact repo / exocortex / ontology sovereignty contract and ratification-pointer rule
+   Status: staged
+5. write the first high-authority doctrine promotions: memory architecture, context transition, research protocols, and tributary adjudication
+   Status: staged
+6. keep fresh automatic Hazel wake reproving as an edge sidecar, not the ordering center of the macro writeset
    Status: staged

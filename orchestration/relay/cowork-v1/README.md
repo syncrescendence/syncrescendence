@@ -39,6 +39,7 @@ Hazel is the recommended edge-trigger layer for v1:
 ## Current Status
 
 The first live Perplexity round-trip succeeded on 2026-03-02.
+The post-wrapper edge was re-stabilized on 2026-03-09 after Hazel deployment and polling recovered, and the finalizer was made replay-safe for already-completed jobs.
 
 That verified the full v1 loop:
 
@@ -47,3 +48,4 @@ That verified the full v1 loop:
 - Cowork execution with Claude in Chrome
 - response markdown + status JSON written to `artifacts/outgoing/`
 - Hazel-triggered finalization back into sandbox truth
+- replay of completed status files no longer requires the original staging artifact to avoid a false failure

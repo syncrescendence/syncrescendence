@@ -16,6 +16,7 @@ This pattern justifies:
 
 - validator-driven artifact law
 - Hazel finalization for relay output
+- replay-safe post-action handlers when the edge trigger can force-rescan prior artifacts
 - future lifecycle hooks around staging, receipts, and office promotion
 
 It also sharpens the split between:
