@@ -1,0 +1,34 @@
+{
+  "artifact_dir": "/Users/system/syncrescendence/runtime/acumen/out/triage",
+  "captured_at": "2026-03-11T02:06:01Z",
+  "external_dependencies": {
+    "gemini_api": {
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/models",
+      "api_key_env": "GEMINI_API_KEY",
+      "available": false,
+      "calls_used": 0,
+      "estimated_cost_per_call_usd": 0.0,
+      "estimated_cost_usd": 0.0,
+      "max_attempts_per_call": 3,
+      "max_estimated_cost_usd": 0.0,
+      "max_live_calls": 5,
+      "max_output_tokens": 220,
+      "max_prompt_chars": 18000,
+      "max_total_tokens": 4096,
+      "model": "gemini-2.5-flash",
+      "required": false,
+      "timeout_seconds": 45.0
+    }
+  },
+  "failures": 0,
+  "mode": "heuristic",
+  "ok": true,
+  "poll_jsonl": "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl",
+  "processed": 0,
+  "queue_jsonl": "/Users/system/syncrescendence/runtime/acumen/triage-decisions.jsonl",
+  "queued": 0,
+  "registry": "/Users/system/syncrescendence/runtime/acumen/registry.json",
+  "skipped_existing": 0,
+  "training_jsonl": "/Users/system/syncrescendence/runtime/acumen/training-corpus.jsonl",
+  "training_records": 0
+}

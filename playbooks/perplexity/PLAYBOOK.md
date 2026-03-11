@@ -4,6 +4,7 @@
 **Class**: external cognition playbook  
 **Authority chain**: constitution -> executive intention -> program -> playbook -> verification packets / responses / assessments  
 **Primary sources**:
+- [PERPLEXITY-HARNESS-TELEOLOGY-v1.md](/Users/system/syncrescendence/knowledge/sigma/PERPLEXITY-HARNESS-TELEOLOGY-v1.md)
 - [WEB-SURFACE-PACKET-STANDARD-CC75.md](/Users/system/syncrescendence/orchestration/state/impl/WEB-SURFACE-PACKET-STANDARD-CC75.md)
 - [CC75-WEB-SURFACE-RESPONSE-ASSESSMENT.md](/Users/system/syncrescendence/orchestration/state/impl/CC75-WEB-SURFACE-RESPONSE-ASSESSMENT.md)
 - [CC76-CLI-WEB-GAP-RESPONSE-ASSESSMENT.md](/Users/system/syncrescendence/orchestration/state/impl/CC76-CLI-WEB-GAP-RESPONSE-ASSESSMENT.md)
@@ -16,17 +17,21 @@
 Perplexity (Augur role) is the external verification and current-reality surface.
 
 Its proper role is:
+- conduct cold-start reconnaissance when the source terrain is still unknown
 - verify claims
 - check current capability reality
+- map sources and find primary or near-primary materials faster
 - find disconfirming evidence or exceptions
 - provide citation-backed support for or against a thesis
 
 Perplexity is not the main architectural synthesizer and not the constitutional authority.
+It is also not the default drafting or creation surface.
 
 ## 1. Native Grain
 
 Perplexity’s native grain is:
 - fast verification
+- domain-routed research and reconnaissance
 - citation-rich response structure
 - product/release/current-reality lookup
 - narrower question answering with source support
@@ -51,8 +56,9 @@ Perplexity should answer:
 - is this currently true?
 - is there official or primary-source support?
 - what current product or ecosystem reality bears on this thesis?
+- what source landscape should a stronger reasoning surface read next?
 
-It should usually follow Oracle, not replace Oracle.
+It should usually precede or flank stronger synthesis surfaces, not replace them.
 
 ## 4. Packet Doctrine
 
@@ -80,6 +86,7 @@ Do not treat them as:
 ## 6. Common Use Cases
 
 Perplexity is the right surface for:
+- cold-start domain reconnaissance
 - current product or feature verification
 - release/update checks
 - API/docs/status triangulation

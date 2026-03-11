@@ -16,12 +16,22 @@ REPO_ROOT = SCRIPT_DIR.parent.parent
 ONTOLOGY_LOCAL_URL = "http://127.0.0.1:8787/ingest/event"
 ONTOLOGY_DOMAIN_URL = "https://syncrescendence.com/ingest/event"
 RECONCILER_PATH = REPO_ROOT / "operators" / "runtime" / "reconcile-ajna-events.py"
+ACUMEN_TRIAGE_PATH = REPO_ROOT / "operators" / "acumen" / "build_triage_packet.py"
 
 
 def load_reconciler():
     spec = importlib.util.spec_from_file_location("reconcile_ajna_events", RECONCILER_PATH)
     if spec is None or spec.loader is None:
         raise SystemExit(f"Could not load reconciler from {RECONCILER_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_acumen_triage():
+    spec = importlib.util.spec_from_file_location("acumen_build_triage_packet", ACUMEN_TRIAGE_PATH)
+    if spec is None or spec.loader is None:
+        raise SystemExit(f"Could not load Acumen triage helper from {ACUMEN_TRIAGE_PATH}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -45,6 +55,16 @@ def main() -> int:
     parser.add_argument("--payload", default="{}")
     parser.add_argument("--project-ontology", action="store_true")
     parser.add_argument("--ontology-url", choices=["local", "domain"], default="domain")
+    parser.add_argument(
+        "--acumen-registry",
+        default=None,
+        help="Optional Acumen registry path. When set, materialize an Acumen-owned handoff under the runtime lane.",
+    )
+    parser.add_argument(
+        "--acumen-runtime-root",
+        default="runtime/acumen",
+        help="Runtime root for Acumen handoff artifacts when --acumen-registry is provided.",
+    )
     args = parser.parse_args()
 
     policy = load_policy()
@@ -85,6 +105,19 @@ def main() -> int:
         payload=payload,
     )
     print(f"Emitted YouTube checkpoint: {event_path}")
+
+    if args.acumen_registry:
+        acumen_triage = load_acumen_triage()
+        acumen_runtime_root = Path(args.acumen_runtime_root)
+        if not acumen_runtime_root.is_absolute():
+            acumen_runtime_root = REPO_ROOT / acumen_runtime_root
+        handoff = acumen_triage.materialize_youtube_bridge_handoff(
+            registry_path=args.acumen_registry,
+            output_root=acumen_runtime_root,
+            bridge_payload=payload,
+            summary=args.summary,
+        )
+        print(f"Acumen handoff: {json.dumps(handoff, sort_keys=True)}")
 
     ontology_url = ONTOLOGY_DOMAIN_URL if args.ontology_url == "domain" else ONTOLOGY_LOCAL_URL
     reconciler = load_reconciler()

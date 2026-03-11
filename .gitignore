@@ -7,6 +7,9 @@ __pycache__/
 
 orchestration/state/ARTIFACT-LAW-INVENTORY.json
 orchestration/state/ARTIFACT-LAW-INVENTORY.md
+orchestration/state/ACUMEN-YOUTUBE-POLL-STATUS.json
 orchestration/state/SANDBOX-EVENT-LEDGER.jsonl
+runtime/acumen/poll-candidates.jsonl
+runtime/acumen/poll_cursor.json
 memory/AJNA-EVENT-LEDGER.jsonl
 memory/AJNA-EVENT-SUMMARY.md

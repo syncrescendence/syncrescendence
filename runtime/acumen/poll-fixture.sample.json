@@ -1,0 +1,22 @@
+[
+  {
+    "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+    "video_id": "deepmind-gemini-31-architecture",
+    "title": "Gemini 3.1 Architecture Update and TPUv5e Notes",
+    "description": "DeepMind team discusses Gemini architecture updates, evaluation framing, and deployment implications.",
+    "duration": "01:02:11",
+    "initial_transcript": "today demis hassabis outlines gemini architecture changes and how tpuv5e deployment shifts practical throughput",
+    "published_at": "2026-03-10T07:15:00Z",
+    "source_url": "https://www.youtube.com/watch?v=deepmind-gemini-31-architecture"
+  },
+  {
+    "channel_id": "UCv83tO5cePwHMt1952IVVHw",
+    "video_id": "karpathy-tokenizer-walkthrough",
+    "title": "Tokenizer Implementation Walkthrough",
+    "description": "A practical walkthrough of tokenizer implementation details, edge cases, and evaluation heuristics.",
+    "duration": "00:41:28",
+    "initial_transcript": "this walkthrough covers tokenizer implementation details, tradeoffs, unicode edge cases, and evaluation heuristics",
+    "published_at": "2026-03-10T09:45:00Z",
+    "source_url": "https://www.youtube.com/watch?v=karpathy-tokenizer-walkthrough"
+  }
+]

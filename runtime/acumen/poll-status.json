@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-03-11T02:06:01Z",
+  "channels": [
+    {
+      "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+      "channel_name": "Google DeepMind",
+      "items_seen": 1,
+      "new_items": 0,
+      "source_mode": "fixture",
+      "status": "ok"
+    },
+    {
+      "channel_id": "UCv83tO5cePwHMt1952IVVHw",
+      "channel_name": "Andrej Karpathy",
+      "items_seen": 1,
+      "new_items": 0,
+      "source_mode": "fixture",
+      "status": "ok"
+    }
+  ],
+  "channels_total": 2,
+  "cursor_json": "/Users/system/syncrescendence/runtime/acumen/poll_cursor.json",
+  "external_dependencies": {
+    "youtube_feed": {
+      "required": false,
+      "satisfied": null
+    }
+  },
+  "failures": 0,
+  "fixture_feed": "/Users/system/syncrescendence/runtime/acumen/poll-fixture.sample.json",
+  "mode": "fixture",
+  "new_uploads": 0,
+  "ok": true,
+  "output": "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl",
+  "registry": "/Users/system/syncrescendence/runtime/acumen/registry.json"
+}

@@ -566,3 +566,43 @@ First normalized set:
    Status: staged
 6. keep provider automation, hidden second control planes, and silent ontology overreach out of scope until projection governance is stable
    Status: staged
+
+### Tranche AN — Acumen CC88 Ingestion And Triage Operationalization
+
+- **program_id**: `TRANCHE-AN`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `operator`, `knowledge lane`, `exocortex`, `runtime`, `live-ledger`, `projection`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AN-ACUMEN-CC88-INGESTION-AND-TRIAGE-OPERATIONALIZATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AN-ACUMEN-CC88-INGESTION-AND-TRIAGE-OPERATIONALIZATION.md)
+- **lineage_or_origin**: post-Campaign-08 pivot into substantive intelligence-pipeline work
+
+1. land the registry-driven YouTube poller and cursor discipline
+   Status: completed
+2. land the Gemini triage adapter and guardrails
+   Status: completed in code, live credentials unproven
+3. land the triage-decision and training-corpus evidence family
+   Status: completed as a family, not yet fully integrated into the normal batch path
+4. upgrade the sequential pipeline flow from scaffold to fixture-safe executable batch
+   Status: completed
+5. harden runtime docs, Make surfaces, and bridge integration
+   Status: completed, with truth reconciliation still needed
+6. determine whether Acumen crossed into a first true operational batch
+   Status: adjudicated partial
+
+### Tranche AO — Acumen CC89 Live Batch Closure And Augur Verification
+
+- **program_id**: `TRANCHE-AO`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `operator`, `runtime`, `live-ledger`, `projection`, `exocortex`, `repo sovereignty`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AO-ACUMEN-CC89-LIVE-BATCH-CLOSURE-AND-AUGUR-VERIFICATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AO-ACUMEN-CC89-LIVE-BATCH-CLOSURE-AND-AUGUR-VERIFICATION.md)
+- **lineage_or_origin**: Campaign 09 synthesis and the integrated Perplexity harness teleology
+
+1. close the evidence-native gap in the normal Acumen batch path
+   Status: staged
+2. reconcile runtime, adoption, and operator docs to the actual CC88 state
+   Status: staged
+3. create the first truthful one-command live-batch operator path
+   Status: staged
+4. add lawful Augur / Perplexity verification artifacts for promoted or flagged items
+   Status: staged
+5. create the first promoted-item dossier bridge from Acumen outputs into follow-on verification
+   Status: staged

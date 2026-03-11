@@ -1,14 +1,131 @@
 {
   "canonical_identity": "syncrescendence@gmail.com",
-  "captured_at": "2026-03-11T00:26:30Z",
+  "captured_at": "2026-03-11T02:06:01Z",
   "dawn_brief_path": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260311.md",
+  "dawn_brief_status": {
+    "command": [
+      "python3",
+      "/Users/system/syncrescendence/operators/acumen/build_dawn_brief.py",
+      "--input-jsonl",
+      "/Users/system/syncrescendence/runtime/acumen/triage-decisions.jsonl",
+      "--output",
+      "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260311.md"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260311.md"
+  },
   "dawn_brief_success": true,
-  "identity_probe_stderr": "",
-  "identity_probe_stdout": "/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-STATUS.json",
+  "external_dependencies": {
+    "gemini_api": {
+      "api_base": "https://generativelanguage.googleapis.com/v1beta/models",
+      "api_key_env": "GEMINI_API_KEY",
+      "estimated_cost_per_call_usd": 0.0,
+      "live_calls_guardrail": 5,
+      "max_estimated_cost_usd": 0.0,
+      "max_output_tokens": 220,
+      "max_prompt_chars": 18000,
+      "max_total_tokens": 4096,
+      "mode": "heuristic",
+      "retry_backoff_seconds": 1.5,
+      "timeout_seconds": 45.0
+    },
+    "youtube_feed": {
+      "fixture_feed": "/Users/system/syncrescendence/runtime/acumen/poll-fixture.sample.json",
+      "mode": "fixture"
+    }
+  },
+  "identity_probe": {
+    "command": [
+      "python3",
+      "/Users/system/syncrescendence/operators/acumen/identity_binding_probe.py",
+      "--binding",
+      "/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-BINDING-CC87.json",
+      "--output",
+      "/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-STATUS.json"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-STATUS.json"
+  },
   "identity_probe_success": true,
+  "identity_status_json": "/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-STATUS.json",
   "mode": "sequential",
+  "poll_output": "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl",
+  "poll_status": {
+    "command": [
+      "python3",
+      "/Users/system/syncrescendence/operators/acumen/poll_registry.py",
+      "--registry",
+      "/Users/system/syncrescendence/runtime/acumen/registry.json",
+      "--output",
+      "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl",
+      "--cursor-json",
+      "/Users/system/syncrescendence/runtime/acumen/poll_cursor.json",
+      "--status-json",
+      "/Users/system/syncrescendence/runtime/acumen/poll-status.json",
+      "--mode",
+      "fixture",
+      "--fixture-feed",
+      "/Users/system/syncrescendence/runtime/acumen/poll-fixture.sample.json",
+      "--force"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl"
+  },
+  "poll_success": true,
   "queue_exists": true,
   "registry_exists": true,
-  "stderr": "",
-  "stdout": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260311.md"
+  "training_jsonl": "/Users/system/syncrescendence/runtime/acumen/training-corpus.jsonl",
+  "triage_status": {
+    "command": [
+      "python3",
+      "/Users/system/syncrescendence/operators/acumen/run_triage.py",
+      "--registry",
+      "/Users/system/syncrescendence/runtime/acumen/registry.json",
+      "--poll-jsonl",
+      "/Users/system/syncrescendence/runtime/acumen/out/poll-latest.jsonl",
+      "--queue-jsonl",
+      "/Users/system/syncrescendence/runtime/acumen/triage-decisions.jsonl",
+      "--training-jsonl",
+      "/Users/system/syncrescendence/runtime/acumen/training-corpus.jsonl",
+      "--status-json",
+      "/Users/system/syncrescendence/runtime/acumen/triage-status.json",
+      "--artifact-dir",
+      "/Users/system/syncrescendence/runtime/acumen/out/triage",
+      "--mode",
+      "heuristic",
+      "--api-key-env",
+      "GEMINI_API_KEY",
+      "--api-base",
+      "https://generativelanguage.googleapis.com/v1beta/models",
+      "--timeout-seconds",
+      "45.0",
+      "--max-live-calls",
+      "5",
+      "--max-retries",
+      "2",
+      "--retry-backoff-seconds",
+      "1.5",
+      "--max-prompt-chars",
+      "18000",
+      "--max-output-tokens",
+      "220",
+      "--max-total-tokens",
+      "4096",
+      "--estimated-cost-per-call-usd",
+      "0.0",
+      "--max-estimated-cost-usd",
+      "0.0"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "/Users/system/syncrescendence/runtime/acumen/triage-decisions.jsonl"
+  },
+  "triage_success": true
 }

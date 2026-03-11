@@ -258,6 +258,33 @@ The shell therefore needs a typed middle layer between high doctrine and low pro
 
 Without that middle layer, the system oscillates between overstuffed constitutions and under-specified local surfaces.
 
+### 4.14 Research Harness Asymmetry
+
+Not every external intelligence surface should be treated as a general-purpose reasoner or writer.
+
+Some harnesses are specialized reconnaissance instruments whose value lies in:
+
+- discovery
+- corpus routing
+- source mapping
+- current-reality sensing
+- citation-grounded verification
+
+The shell should therefore route work asymmetrically.
+
+Example:
+
+- Perplexity / Augur is best treated as a reconnaissance and verification accelerant
+- stronger synthesis or authorship surfaces should consume what Augur surfaces rather than delegating final doctrine or final drafting to Augur itself
+- repo-native evidence remains mandatory whenever the question is about the shell's own state
+
+This matters strategically because it prevents the system from confusing retrieval advantage with sovereign judgment.
+
+The broader rule is:
+
+- use specialized external harnesses for the narrow thing they are unusually good at
+- keep constitutional reasoning, durable artifacts, and repo-local claims inside lawful shell-controlled surfaces
+
 ### 4.14 Proof Families And Asymmetric Widening
 
 The shell should increasingly treat major live state surfaces as proof families with explicit maturity phases rather than as undifferentiated "state."

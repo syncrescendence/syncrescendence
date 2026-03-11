@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the Gemini Flash triage packet from registry + video metadata."""
+"""Build deterministic Acumen triage packets and optional prompt previews."""
 
 from __future__ import annotations
 
@@ -8,43 +8,15 @@ import json
 from pathlib import Path
 from typing import Any
 
-
-TRIAGE_PROMPT_TEMPLATE = """System: You are an intelligence triage engine for a personal knowledge pipeline monitoring
-YouTube channels. Your job: determine whether this upload justifies the practitioner's
-attention, and if so, at what compression depth and polish level.
-
-Context from registry:
-- Channel: {name} | Genre: {genre} | Priority: {priority_band}
-- Default compression: {default_compression} | Default polish: {default_polish}
-- Signal density: {signal_density}
-- Domain tags: {domain_tags}
-- Resolution vocabulary: {resolution_vocabulary}
-
-Video metadata:
-- Title: {title}
-- Duration: {duration}
-- Description: {description}
-- First 60s transcript: {initial_transcript}
-
-Output strictly valid JSON:
-{{
-  "decision": "Skip|Headline|Compress|Promote|Flag-for-Primary",
-  "target_depth": "None|Headline|Abstract|Precis|Synopsis|Blueprint|Treatment|Transcript",
-  "target_polish": "clean_verbatim|charitable|editorial",
-  "rationale": "One sentence: why this decision, what signal was detected or absent.",
-  "primary_flag_reason": "null unless Flag-for-Primary. Why must this be consumed in original form?"
-}}
-
-Decision rules:
-1. Skip: Bulletin content restating existing news with no novel signal.
-2. Headline: Low-signal content from medium/high-density channels worth logging.
-3. Compress: Standard content processed at channel defaults.
-4. Promote: Override defaults upward when a lower-tier channel hosts a Tier 1 guest,
-   covers a paradigm shift, or produces unusually deep analysis.
-5. Flag-for-Primary: Content where compression destroys signal — live debates with
-   performative dynamics, hardware teardowns, visually dependent demonstrations,
-   or events where the practitioner's own judgment is required.
-"""
+from triage_contract import (
+    build_packet as contract_build_packet,
+    load_json,
+    normalize_video_metadata,
+    render_prompt_preview,
+    resolve_channel as contract_resolve_channel,
+    validate_video,
+    write_json,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -52,51 +24,129 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--registry", required=True)
     parser.add_argument("--channel-id", required=True)
     parser.add_argument("--video", required=True, help="JSON object with title/duration/description/initial_transcript.")
-    parser.add_argument("--output", required=True)
+    parser.add_argument("--output", required=True, help="Path for the JSON triage packet artifact.")
+    parser.add_argument("--prompt-output", help="Optional path for a human-readable prompt preview.")
     return parser.parse_args()
 
 
-def load_json(path: str) -> Any:
-    return json.loads(Path(path).expanduser().read_text(encoding="utf-8"))
+def normalize_video_metadata_for_bridge(video: dict[str, Any]) -> dict[str, Any]:
+    return normalize_video_metadata(video)
+
+
+def validate_video_metadata(video: dict[str, Any], *, require_non_empty: bool = False) -> list[str]:
+    return validate_video(video, require_non_empty=require_non_empty)
 
 
 def resolve_channel(registry: dict[str, Any], channel_id: str) -> dict[str, Any]:
-    for channel in registry.get("channels", []):
-        if str(channel.get("channel_id")) == channel_id:
-            return channel
-    raise SystemExit(f"channel not found in registry: {channel_id}")
+    return contract_resolve_channel(registry, channel_id)
+
+
+def build_triage_packet(registry: dict[str, Any], channel_id: str, video: dict[str, Any]) -> dict[str, Any]:
+    return contract_build_packet(registry, channel_id, video)
+
+
+def render_triage_packet(registry: dict[str, Any], channel_id: str, video: dict[str, Any]) -> str:
+    return render_prompt_preview(build_triage_packet(registry, channel_id, video))
+
+
+def handoff_filename(channel_id: str, resource_id: str) -> str:
+    raw = f"{channel_id}-{resource_id}"
+    return "".join(ch.lower() if ch.isalnum() or ch in {"-", "_"} else "-" for ch in raw)
+
+
+def build_bridge_video_metadata(bridge_payload: dict[str, Any], *, summary: str) -> dict[str, Any]:
+    metadata = {
+        "title": bridge_payload.get("title") or summary,
+        "duration": bridge_payload.get("duration") or bridge_payload.get("duration_text") or "",
+        "description": bridge_payload.get("description") or summary,
+        "initial_transcript": bridge_payload.get("initial_transcript") or bridge_payload.get("transcript_excerpt") or "",
+        "channel_id": bridge_payload.get("channel_id"),
+        "channel_title": bridge_payload.get("channel_title"),
+        "published_at": bridge_payload.get("published_at"),
+        "resource_id": bridge_payload.get("resource_id"),
+        "source_url": bridge_payload.get("source_url"),
+        "summary": summary,
+    }
+    return normalize_video_metadata(metadata)
+
+
+def materialize_youtube_bridge_handoff(
+    *,
+    registry_path: str | Path,
+    output_root: str | Path,
+    bridge_payload: dict[str, Any],
+    summary: str,
+) -> dict[str, Any]:
+    resource_kind = str(bridge_payload.get("resource_kind", "")).strip()
+    if resource_kind != "video":
+        return {"status": "skipped", "reason": "resource_kind must be 'video' for Acumen handoff"}
+
+    channel_id = str(bridge_payload.get("channel_id", "")).strip()
+    if not channel_id:
+        return {"status": "skipped", "reason": "channel_id missing from YouTube bridge payload"}
+
+    registry = load_json(registry_path)
+    resource_id = str(bridge_payload.get("resource_id", "")).strip() or "unknown-resource"
+    try:
+        channel = resolve_channel(registry, channel_id)
+    except SystemExit as exc:
+        return {
+            "status": "skipped",
+            "channel_id": channel_id,
+            "resource_id": resource_id,
+            "reason": str(exc),
+        }
+
+    output_root = Path(output_root).expanduser().resolve()
+    intake_dir = output_root / "intake" / "youtube"
+    triage_dir = output_root / "intake" / "triage-packets"
+    prompt_dir = output_root / "intake" / "triage-prompts"
+    intake_dir.mkdir(parents=True, exist_ok=True)
+    triage_dir.mkdir(parents=True, exist_ok=True)
+    prompt_dir.mkdir(parents=True, exist_ok=True)
+
+    stem = handoff_filename(channel_id, resource_id)
+    video = build_bridge_video_metadata(bridge_payload, summary=summary)
+
+    metadata_path = intake_dir / f"{stem}.json"
+    metadata_path.write_text(json.dumps(video, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    result = {
+        "status": "metadata_only",
+        "channel_id": channel_id,
+        "channel_name": channel.get("name"),
+        "resource_id": resource_id,
+        "video_metadata_path": str(metadata_path),
+    }
+    errors = validate_video_metadata(video, require_non_empty=True)
+    if errors:
+        result["reason"] = errors[0]
+        return result
+
+    triage_packet = build_triage_packet(registry, channel_id, video)
+    triage_packet_path = write_json(triage_dir / f"{stem}.json", triage_packet)
+    triage_prompt_path = prompt_dir / f"{stem}.md"
+    triage_prompt_path.write_text(render_prompt_preview(triage_packet), encoding="utf-8")
+
+    result["status"] = "ready_for_triage"
+    result["triage_packet_path"] = str(triage_packet_path)
+    result["triage_prompt_path"] = str(triage_prompt_path)
+    return result
 
 
 def main() -> int:
     args = parse_args()
     registry = load_json(args.registry)
     video = load_json(args.video)
-    channel = resolve_channel(registry, args.channel_id)
+    packet = build_triage_packet(registry, args.channel_id, video)
 
-    required_video = {"title", "duration", "description", "initial_transcript"}
-    missing = required_video - set(video.keys())
-    if missing:
-        raise SystemExit(f"video metadata missing required keys: {sorted(missing)}")
-
-    packet = TRIAGE_PROMPT_TEMPLATE.format(
-        name=channel.get("name"),
-        genre=channel.get("genre"),
-        priority_band=channel.get("priority_band"),
-        default_compression=channel.get("default_compression"),
-        default_polish=channel.get("default_polish"),
-        signal_density=channel.get("signal_density"),
-        domain_tags=", ".join(channel.get("domain_tags", [])),
-        resolution_vocabulary=", ".join(channel.get("resolution_vocabulary", [])),
-        title=video["title"],
-        duration=video["duration"],
-        description=video["description"],
-        initial_transcript=video["initial_transcript"],
-    )
-
-    output_path = Path(args.output).expanduser().resolve()
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(packet, encoding="utf-8")
+    output_path = write_json(args.output, packet)
     print(output_path)
+    if args.prompt_output:
+        prompt_path = Path(args.prompt_output).expanduser().resolve()
+        prompt_path.parent.mkdir(parents=True, exist_ok=True)
+        prompt_path.write_text(render_prompt_preview(packet), encoding="utf-8")
+        print(prompt_path)
     return 0
 
 

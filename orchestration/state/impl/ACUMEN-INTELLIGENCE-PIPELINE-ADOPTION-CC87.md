@@ -17,36 +17,65 @@ Primary external source ingested as feedstock:
    - [registry_contract.py](/Users/system/syncrescendence/operators/acumen/registry_contract.py)
    - [init_registry.py](/Users/system/syncrescendence/operators/acumen/init_registry.py)
    - [validate_registry.py](/Users/system/syncrescendence/operators/acumen/validate_registry.py)
-2. Deterministic track scaffold (resolution key + disfluency + timing punctuation + depth templates):
-   - [deterministic_track.py](/Users/system/syncrescendence/operators/acumen/deterministic_track.py)
-3. Triage packet renderer for Gemini Flash routing:
-   - [build_triage_packet.py](/Users/system/syncrescendence/operators/acumen/build_triage_packet.py)
-4. Dawn Brief compiler:
-   - [build_dawn_brief.py](/Users/system/syncrescendence/operators/acumen/build_dawn_brief.py)
-5. Flow scaffold:
-   - [pipeline_flow.py](/Users/system/syncrescendence/operators/acumen/pipeline_flow.py)
-6. Identity binding contract and probe:
+2. Identity binding contract and probe:
    - [ACUMEN-IDENTITY-BINDING-CC87.json](/Users/system/syncrescendence/orchestration/state/ACUMEN-IDENTITY-BINDING-CC87.json)
    - [identity_binding_probe.py](/Users/system/syncrescendence/operators/acumen/identity_binding_probe.py)
-7. Runtime lane:
+3. Cadence-aware YouTube polling over the Acumen registry:
+   - [poll_youtube_registry.py](/Users/system/syncrescendence/operators/acumen/poll_youtube_registry.py)
+   - [poll_registry.py](/Users/system/syncrescendence/operators/acumen/poll_registry.py)
+4. Deterministic track scaffold (resolution key + disfluency + timing punctuation + depth templates):
+   - [deterministic_track.py](/Users/system/syncrescendence/operators/acumen/deterministic_track.py)
+5. Triage packet renderer and Gemini triage adapter:
+   - [build_triage_packet.py](/Users/system/syncrescendence/operators/acumen/build_triage_packet.py)
+   - [triage_contract.py](/Users/system/syncrescendence/operators/acumen/triage_contract.py)
+   - [gemini_triage_adapter.py](/Users/system/syncrescendence/operators/acumen/gemini_triage_adapter.py)
+   - [run_gemini_triage.py](/Users/system/syncrescendence/operators/acumen/run_gemini_triage.py)
+   - [run_triage.py](/Users/system/syncrescendence/operators/acumen/run_triage.py)
+6. Repo-sovereign triage evidence family:
+   - [ACUMEN-TRIAGE-EVIDENCE-CONTRACT-v1.md](/Users/system/syncrescendence/orchestration/state/impl/ACUMEN-TRIAGE-EVIDENCE-CONTRACT-v1.md)
+   - [record_evidence.py](/Users/system/syncrescendence/operators/acumen/record_evidence.py)
+   - [rematerialize_evidence.py](/Users/system/syncrescendence/operators/acumen/rematerialize_evidence.py)
+   - [validate_acumen_evidence.py](/Users/system/syncrescendence/operators/validators/validate_acumen_evidence.py)
+7. Dawn Brief compiler:
+   - [build_dawn_brief.py](/Users/system/syncrescendence/operators/acumen/build_dawn_brief.py)
+8. Sequential runtime wrapper:
+   - [pipeline_flow.py](/Users/system/syncrescendence/operators/acumen/pipeline_flow.py)
+9. Acumen-owned bridge seam from YouTube capture into Acumen intake:
+   - [youtube_feed_bridge.py](/Users/system/syncrescendence/operators/exocortex/youtube_feed_bridge.py)
+10. Runtime lane:
    - [runtime/acumen/README.md](/Users/system/syncrescendence/runtime/acumen/README.md)
 
-## Scope Boundary (Wave 0)
+## Current Integrated Reading
+
+CC88 materially landed.
+
+The truthful integrated state is:
+
+- real polling code exists
+- real Gemini adapter code exists
+- real append-only evidence surfaces exist
+- the fixture-safe sequential pipeline works
+- live YouTube polling and live Gemini invocation remain unproven in this environment because credentials are absent
+- the normal batch path still needs final evidence-native closure
+
+## Scope Boundary (Post-CC88)
 
 Implemented in repo:
 
 1. deterministic processing primitives
-2. data contracts
-3. delivery artifact compilation
-4. execution runbook and make targets
+2. identity and registry contracts
+3. polling, triage, and delivery operators
+4. evidence-family seed surfaces
+5. execution runbook and make targets
 
-Deferred to next wave:
+Still deferred or incomplete:
 
-1. YouTube Data API ingestion worker
-2. Gemini Flash/Pro invocation adapters
-3. TTS batch generation stack
-4. Prefect deployment and cron surface
-5. LoRA specialist training loop
+1. first true live batch with external credentials exercised
+2. final evidence-native closure in the normal batch path
+3. promoted-item verification and reconnaissance sidecars
+4. TTS batch generation stack
+5. Prefect deployment and cron surface
+6. LoRA specialist training loop
 
 ## Why This Cut
 
@@ -58,8 +87,8 @@ This cut lands enforceable substrate first:
 
 ## Next Milestone
 
-CC88 should implement ingestion + triage execution with strict cost guardrails:
+CC89 should close the gap between executable harness and first true live batch:
 
-1. channel polling with cadence-aware backoff
-2. triage decision JSONL queue
-3. deterministic-first routing with intelligent-track only on promote/depth thresholds
+1. route normal execution through the evidence family
+2. make the live-batch operator path one-command and truthfully documented
+3. add promoted-item verification routing through Augur / Perplexity without making Perplexity the intake engine
