@@ -64,6 +64,20 @@ Its job is to bind:
 
 This is where implementation becomes accountable rather than ambient.
 
+## 4.5 Typed Middle Layer
+
+The shell now also has a real typed middle layer between high doctrine and low execution surfaces.
+
+That layer includes:
+
+- config source-of-truth law
+- behavior atoms and surface profiles
+- office-harness binding contracts
+- live-ledger family contracts
+- projection contracts
+
+This matters because the shell no longer has to jump directly from canon into local file drift.
+
 ## 5. Office Layer
 
 The office layer is one of the strongest recovered ideas from the predecessor shell.
@@ -213,6 +227,36 @@ Ontology exists to:
 - project normalized state into structured form
 
 That is the correct role.
+
+## 11.5 Family Portfolio Governance
+
+A new architectural layer has effectively appeared inside the shell:
+
+- live-ledger families
+- rollout gates
+- family register
+- derivative projection governance
+
+This is not a replacement for the original architecture line.
+It is a refinement inside the middle-to-lower layers that governs how append-only state organs mature from seed to proof to widening.
+
+The architecture line now reads more accurately as:
+
+`constitution -> executive -> program -> playbooks/typed middle layer -> communications -> operators/execution -> live-ledger families -> exocortex/runtime -> ontology projection`
+
+## 11.6 Strategic Vision and Taxonomic Translation
+
+The imported strategic-vision and operational-taxonomy artifacts have not been adopted literally as a directory rewrite.
+
+Instead, they have been translated into current-shell law through:
+
+- live-ledger doctrine
+- progressive-disclosure doctrine
+- configuration mereology
+- family portfolio governance
+
+This is an intentional choice.
+The shell is absorbing the semantics of the imported architecture without destabilizing the successor-shell topology that already proved livable.
 
 ## 12. Chat Bus
 

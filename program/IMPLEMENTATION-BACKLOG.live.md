@@ -237,11 +237,32 @@ First normalized set:
 5. bind Acumen Google surfaces to canonical identity `syncrescendence@gmail.com` with strict drift probe
    Status: completed wave0 (CC87)
 6. implement ingestion + Gemini Flash/Pro adapters with cost guardrails and training-corpus logging
-   Status: active next wave (CC88)
+   Status: active next wave (CC88) -> promoted into Tranche AN
 7. implement local voice synthesis routing and playlist compiler
    Status: queued (post-CC88)
 8. implement specialist distillation loop and shadow-mode swap criteria
    Status: queued (post-CC88)
+
+### Tranche AN — Acumen CC88 Ingestion And Triage Operationalization
+
+- **program_id**: `TRANCHE-AN`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `operator`, `knowledge lane`, `exocortex`, `runtime`, `live-ledger`, `projection`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AN-ACUMEN-CC88-INGESTION-AND-TRIAGE-OPERATIONALIZATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AN-ACUMEN-CC88-INGESTION-AND-TRIAGE-OPERATIONALIZATION.md)
+- **lineage_or_origin**: Tranche S wave0 baseline, live wave0 execution proof, and the post-Campaign-08 pivot ruling
+
+1. implement a real YouTube ingestion worker over the curated Acumen registry with cadence-aware polling
+   Status: staged
+2. implement Gemini Flash/Pro triage adapters with strict JSON contracts, cost guardrails, and retry discipline
+   Status: staged
+3. create a triage-decision ledger and training-corpus logging path so model calls and routing decisions become durable evidence
+   Status: staged
+4. upgrade the Acumen flow from sample compile to real poll -> triage -> queue -> Dawn Brief execution
+   Status: staged
+5. harden Make/runtime/runbook surfaces so Acumen can run repeatedly without artisanal intervention
+   Status: staged
+6. integrate YouTube exocortex capture with Acumen ingress where it lowers duplication without creating a second intake plane
+   Status: staged
 
 ### Tranche T — Tributary Unification and Compaction
 

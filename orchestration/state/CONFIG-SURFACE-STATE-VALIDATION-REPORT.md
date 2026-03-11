@@ -9,13 +9,13 @@ Report-only validation of config-surface structure, projection joins, required s
 - ledger: `orchestration/state/registry/config-surface-state-ledger.jsonl`
 - atom families: 8
 - surface classes: 8
-- concrete surfaces: 20
+- concrete surfaces: 23
 - class projection rules: 8
-- surface projection rows: 20
-- receipt events: 3
-- latest receipt event: `csl-20260310-0003`
+- surface projection rows: 23
+- receipt events: 4
+- latest receipt event: `csl-20260310-0004`
 - alignment status: `current_matches_latest_receipt`
-- latest materialization event: `csl-20260310-0003`
+- latest materialization event: `csl-20260310-0004`
 - rematerialization status: `rebuild_matches_latest_materialization`
 - findings: 0
 - status: `PASS`

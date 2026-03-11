@@ -15,6 +15,7 @@ Major latent zones:
 - worker-fabric hardening
 - ontology enrichment
 - auth-backed connector verification closure across the exocortex control plane
+- Acumen CC88 ingestion and triage operationalization
 
 ## 2. What Is in the Pipeline
 
@@ -29,8 +30,14 @@ The most consequential active lines are:
 - live knowledge intake and compaction
 - chat bus reconstitution
 - connector verification tranches (high-fanout hubs first)
+- Acumen pipeline execution beyond wave0 scaffolding
 
 These are not side quests.
+But they are not equal in substantive leverage anymore.
+
+The connector and family-governance lines have now proved enough.
+The next major proof should be a real intelligence pipeline.
+
 Together they answer the question:
 
 **can the shell become self-improving instead of merely well-organized?**
@@ -93,6 +100,26 @@ The next maturity step is operatorized promotion from feedstock into:
 - playbooks
 - validated patterns
 
+### Acumen CC88
+
+This is now the most important substantive next line.
+
+Wave0 already proved:
+
+- registry contract
+- identity binding
+- deterministic processing
+- Dawn Brief compilation
+- sample sequential flow
+
+What remains is the first real production leg:
+
+- YouTube ingestion worker
+- Gemini Flash/Pro triage adapters
+- decision ledger and training-corpus logging
+- upgraded flow from polling through Dawn Brief compilation
+- runtime and runbook hardening for repeatable batch execution
+
 ## 4. What Needs More Clarity
 
 Not all uncertainty is bad. Some needs to remain open until the shell has more evidence.
@@ -130,6 +157,10 @@ still needs further evidence.
 
 The latest tranche result reinforces this: sandbox-only workers can classify auth-gated blockers, but cannot replace authenticated browser agents for final verification at the edge.
 
+The same strategic lesson now applies more broadly:
+
+the shell should stop treating governance recursion as the mainline when a substantive intelligence-production pipeline is already architecturally ready for operationalization.
+
 ## 5. Why Waiting Work Matters
 
 Waiting work is where shells either mature or relapse.
@@ -148,3 +179,4 @@ If waiting work is sequenced well:
 - agents can move in without inventing new filing habits
 
 The successor shell is now at that threshold.
+The best next move is to spend its next macroscopic burst on Acumen.

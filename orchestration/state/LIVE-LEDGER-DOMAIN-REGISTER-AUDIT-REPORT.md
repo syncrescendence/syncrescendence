@@ -20,7 +20,7 @@ Report-first audit of register coherence against landed family artifacts.
 | Domain | Claimed Phase | Expected Phase | Claimed Append Surface | Actual Append Surface | Findings |
 |---|---|---|---|---|---|
 | tributary_disposition | `phase1_repo_proof` | `phase1_repo_proof` | `orchestration/state/registry/tributary-disposition-ledger.jsonl` | `orchestration/state/registry/tributary-disposition-ledger.jsonl` | 0 |
-| office_harness_state | `phase1_repo_proof` | `phase1_repo_proof` | `orchestration/state/registry/office-harness-binding-ledger.jsonl` | `orchestration/state/registry/office-harness-binding-ledger.jsonl` | 0 |
+| office_harness_state | `phase3_projection_open` | `phase3_projection_open` | `orchestration/state/registry/office-harness-binding-ledger.jsonl` | `orchestration/state/registry/office-harness-binding-ledger.jsonl` | 0 |
 | config_surface_state | `phase1_repo_proof` | `phase1_repo_proof` | `orchestration/state/registry/config-surface-state-ledger.jsonl` | `orchestration/state/registry/config-surface-state-ledger.jsonl` | 0 |
 
 ## Findings

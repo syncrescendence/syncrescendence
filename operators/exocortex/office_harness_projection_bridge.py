@@ -20,6 +20,7 @@ DEFAULT_SURFACE_REGISTRY = REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-SU
 DEFAULT_TELEOLOGY_REGISTRY = REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-TELEOLOGY-REGISTRY-CC90.json"
 DEFAULT_CONTROL_PLANE_STATUS = REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-CONTROL-PLANE-STATUS-CC91.json"
 DEFAULT_PROJECTION_JSON = REPO_ROOT / "orchestration" / "state" / "EXOCORTEX-OFFICE-HARNESS-PROJECTION-CC92.json"
+DEFAULT_LEDGER = REPO_ROOT / "orchestration" / "state" / "registry" / "office-harness-exocortex-projection-ledger.jsonl"
 DEFAULT_REPORT_JSON = REPO_ROOT / "orchestration" / "state" / "OFFICE-HARNESS-EXOCORTEX-PROJECTION-REPORT.json"
 DEFAULT_REPORT_MD = REPO_ROOT / "orchestration" / "state" / "OFFICE-HARNESS-EXOCORTEX-PROJECTION-REPORT.md"
 EVENT_BRIDGE_PATH = SCRIPT_DIR / "exocortex_event_bridge.py"
@@ -27,6 +28,7 @@ CONTRACT_PATH = "orchestration/state/impl/OFFICE-HARNESS-EXOCORTEX-PROJECTION-CO
 SCOPE_ID = "persistent-runtime-openclaw-offices"
 PROJECTION_FAMILY = "office_harness_exocortex_projection"
 SCHEMA_VERSION = "office-harness-exocortex-projection/v1"
+LEDGER_SCHEMA_VERSION = "office-harness-exocortex-projection-ledger-event/v1"
 CONTROL_PLANE_PATH = "orchestration/state/EXOCORTEX-CONTROL-PLANE-STATUS-CC91.json"
 OFFICE_ORDER = ["commander", "adjudicator", "ajna", "cartographer", "psyche"]
 PROVIDER_SURFACE_MAP = {
@@ -85,6 +87,10 @@ def sha256_json(payload: Any) -> str:
     return sha256_text(canonical)
 
 
+def sha256_file(path: Path) -> str:
+    return sha256_text(path.read_text(encoding="utf-8"))
+
+
 def repo_rel(path: Path) -> str:
     return str(path.resolve().relative_to(REPO_ROOT))
 
@@ -105,6 +111,23 @@ def load_module(path: Path, name: str):
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    events: list[dict[str, Any]] = []
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        if not raw_line.strip():
+            continue
+        try:
+            event = json.loads(raw_line)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"Invalid JSON in {repo_rel(path)} line {line_number}: {exc}") from exc
+        if not isinstance(event, dict):
+            raise SystemExit(f"Ledger line {line_number} in {repo_rel(path)} must be a JSON object")
+        events.append(event)
+    return events
 
 
 def load_registry(path: Path) -> tuple[list[dict[str, Any]], str]:
@@ -214,7 +237,6 @@ def build_projection(
         )
         for row in select_scope(rows)
     ]
-
     return {
         "schema_version": SCHEMA_VERSION,
         "projection_family": PROJECTION_FAMILY,
@@ -236,8 +258,11 @@ def build_report(
     registry_path: Path,
     projection_path: Path,
     registry_sha256: str,
+    surface_registry_path: Path,
     surface_registry: dict[str, dict[str, Any]],
+    teleology_registry_path: Path,
     teleology_registry: dict[str, dict[str, Any]],
+    control_plane_status_path: Path,
     control_plane_status_version: str,
 ) -> dict[str, Any]:
     findings: list[dict[str, str]] = []
@@ -252,6 +277,10 @@ def build_report(
         "projection_scope": SCOPE_ID,
         "projection_contract_path": CONTRACT_PATH,
         "source_effective_registry_path": repo_rel(registry_path),
+        "source_effective_registry_sha256": registry_sha256,
+        "source_surface_registry_path": repo_rel(surface_registry_path),
+        "source_teleology_registry_path": repo_rel(teleology_registry_path),
+        "source_control_plane_status_path": repo_rel(control_plane_status_path),
     }.items():
         if projection.get(field) != expected:
             findings.append(
@@ -562,6 +591,124 @@ def emit_projection_event(
     )
 
 
+def next_ledger_event_id(events: list[dict[str, Any]], recorded_at: str) -> str:
+    date_part = recorded_at[:10].replace("-", "")
+    return f"ohxp-{date_part}-{len(events) + 1:04d}"
+
+
+def build_ledger_event(
+    *,
+    report: dict[str, Any],
+    projection: dict[str, Any],
+    projection_path: Path,
+    surface_registry_path: Path,
+    teleology_registry_path: Path,
+    control_plane_status_path: Path,
+    recorded_at: str,
+    event_type: str,
+    actor: str,
+    event_id: str,
+) -> dict[str, Any]:
+    summary = report["summary"]
+    return {
+        "schema_version": LEDGER_SCHEMA_VERSION,
+        "event_id": event_id,
+        "event_type": event_type,
+        "recorded_at": recorded_at,
+        "actor": actor,
+        "projection_family": PROJECTION_FAMILY,
+        "projection_scope": summary["projection_scope"],
+        "projection_contract_path": CONTRACT_PATH,
+        "source_effective_registry_path": projection["source_effective_registry_path"],
+        "source_effective_registry_sha256": projection["source_effective_registry_sha256"],
+        "source_surface_registry_path": projection["source_surface_registry_path"],
+        "source_surface_registry_sha256": sha256_file(surface_registry_path),
+        "source_teleology_registry_path": projection["source_teleology_registry_path"],
+        "source_teleology_registry_sha256": sha256_file(teleology_registry_path),
+        "source_control_plane_status_path": projection["source_control_plane_status_path"],
+        "source_control_plane_status_sha256": sha256_file(control_plane_status_path),
+        "projection_path": repo_rel(projection_path),
+        "projection_sha256": summary["projection_sha256"],
+        "projection_record_count": summary["projection_record_count"],
+        "projected_offices": summary["projected_offices"],
+        "pointer_complete_record_count": summary["pointer_complete_record_count"],
+        "operative_record_count": summary["operative_record_count"],
+        "informative_only_record_count": summary["informative_only_record_count"],
+        "projection_state_counts": summary["projection_state_counts"],
+        "binding_state_counts": summary["binding_state_counts"],
+        "notes": (
+            "Initial append-only snapshot receipt for the first repo-native office-harness exocortex projection family."
+            if event_type == "projection_seeded"
+            else "Projection receipt refresh after a repo-native proof-state or projection snapshot change."
+        ),
+    }
+
+
+def should_append_event(latest: dict[str, Any], current: dict[str, Any]) -> bool:
+    for key in (
+        "projection_family",
+        "projection_scope",
+        "projection_contract_path",
+        "source_effective_registry_path",
+        "source_effective_registry_sha256",
+        "source_surface_registry_path",
+        "source_surface_registry_sha256",
+        "source_teleology_registry_path",
+        "source_teleology_registry_sha256",
+        "source_control_plane_status_path",
+        "source_control_plane_status_sha256",
+        "projection_path",
+        "projection_sha256",
+        "projection_record_count",
+        "projected_offices",
+        "pointer_complete_record_count",
+        "operative_record_count",
+        "informative_only_record_count",
+        "projection_state_counts",
+        "binding_state_counts",
+    ):
+        if latest.get(key) != current.get(key):
+            return True
+    return False
+
+
+def append_projection_receipt(
+    *,
+    ledger_path: Path,
+    report: dict[str, Any],
+    projection: dict[str, Any],
+    projection_path: Path,
+    surface_registry_path: Path,
+    teleology_registry_path: Path,
+    control_plane_status_path: Path,
+    actor: str,
+) -> tuple[bool, str | None]:
+    events = load_jsonl(ledger_path)
+    recorded_at = utc_now()
+    event_type = "projection_seeded" if not events else "projection_refresh"
+    event_id = next_ledger_event_id(events, recorded_at)
+    event = build_ledger_event(
+        report=report,
+        projection=projection,
+        projection_path=projection_path,
+        surface_registry_path=surface_registry_path,
+        teleology_registry_path=teleology_registry_path,
+        control_plane_status_path=control_plane_status_path,
+        recorded_at=recorded_at,
+        event_type=event_type,
+        actor=actor,
+        event_id=event_id,
+    )
+    if events and not should_append_event(events[-1], event):
+        latest_event_id = events[-1].get("event_id")
+        return False, latest_event_id if isinstance(latest_event_id, str) else None
+
+    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    with ledger_path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(event, separators=(",", ":"), ensure_ascii=True) + "\n")
+    return True, event_id
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
@@ -569,6 +716,8 @@ def main() -> int:
     parser.add_argument("--teleology-registry", type=Path, default=DEFAULT_TELEOLOGY_REGISTRY)
     parser.add_argument("--control-plane-status", type=Path, default=DEFAULT_CONTROL_PLANE_STATUS)
     parser.add_argument("--output-json", type=Path, default=DEFAULT_PROJECTION_JSON)
+    parser.add_argument("--ledger", type=Path, default=DEFAULT_LEDGER)
+    parser.add_argument("--ledger-actor", default="office_harness_projection_bridge")
     parser.add_argument("--output-report-json", type=Path, default=DEFAULT_REPORT_JSON)
     parser.add_argument("--output-report-md", type=Path, default=DEFAULT_REPORT_MD)
     parser.add_argument("--emit-event", action="store_true")
@@ -579,6 +728,7 @@ def main() -> int:
     teleology_registry_path = args.teleology_registry.expanduser().resolve()
     control_plane_status_path = args.control_plane_status.expanduser().resolve()
     output_json = args.output_json.expanduser().resolve()
+    ledger_path = args.ledger.expanduser().resolve()
     output_report_json = args.output_report_json.expanduser().resolve()
     output_report_md = args.output_report_md.expanduser().resolve()
 
@@ -614,8 +764,11 @@ def main() -> int:
         registry_path=registry_path,
         projection_path=output_json,
         registry_sha256=registry_sha256,
+        surface_registry_path=surface_registry_path,
         surface_registry=surface_registry,
+        teleology_registry_path=teleology_registry_path,
         teleology_registry=teleology_registry,
+        control_plane_status_path=control_plane_status_path,
         control_plane_status_version=str(control_plane_status.get("version") or "unknown"),
     )
 
@@ -623,8 +776,19 @@ def main() -> int:
     write_json(output_report_json, report)
     output_report_md.parent.mkdir(parents=True, exist_ok=True)
     output_report_md.write_text(render_markdown(report), encoding="utf-8")
+    append_projection_receipt(
+        ledger_path=ledger_path,
+        report=report,
+        projection=projection,
+        projection_path=output_json,
+        surface_registry_path=surface_registry_path,
+        teleology_registry_path=teleology_registry_path,
+        control_plane_status_path=control_plane_status_path,
+        actor=str(args.ledger_actor),
+    )
 
     print(output_json)
+    print(ledger_path)
     print(output_report_json)
     print(output_report_md)
     if args.emit_event:

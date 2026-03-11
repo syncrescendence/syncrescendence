@@ -157,6 +157,28 @@ def config_rematerialization_artifacts() -> tuple[list[str], list[str]]:
     return sorted(set(laws)), sorted(set(operators))
 
 
+def office_projection_phase_artifacts() -> tuple[bool, bool, list[str], list[str]]:
+    phase2_paths = [
+        "orchestration/state/impl/OFFICE-HARNESS-EXOCORTEX-PROJECTION-CONTRACT-v1.md",
+        "operators/exocortex/office_harness_projection_bridge.py",
+    ]
+    phase3_paths = [
+        "orchestration/state/EXOCORTEX-OFFICE-HARNESS-PROJECTION-CC92.json",
+        "orchestration/state/OFFICE-HARNESS-EXOCORTEX-PROJECTION-REPORT.json",
+    ]
+    phase2_ready = all(path_exists(path) for path in phase2_paths)
+    report = read_json_dict(REPO_ROOT / "orchestration" / "state" / "OFFICE-HARNESS-EXOCORTEX-PROJECTION-REPORT.json")
+    summary = report.get("summary", {})
+    phase3_ready = (
+        phase2_ready
+        and all(path_exists(path) for path in phase3_paths)
+        and summary.get("status") == "coherent"
+        and summary.get("finding_count") == 0
+        and int(summary.get("projection_record_count", 0) or 0) > 0
+    )
+    return phase2_ready, phase3_ready, phase2_paths, phase3_paths
+
+
 def append_surface_drift_message(domain_id: str, actual_surface: str, claimed_surface: str) -> str:
     if claimed_surface == "pending":
         return (
@@ -183,6 +205,8 @@ def evaluate_domain(row: dict[str, str], findings: list[Finding]) -> dict[str, A
     materialization_operator_paths: list[str] = []
     proof_support = False
     evidence_summary = ""
+    family_default_ready = False
+    projection_open = False
 
     if not sovereign_exists:
         add_finding(
@@ -252,6 +276,17 @@ def evaluate_domain(row: dict[str, str], findings: list[Finding]) -> dict[str, A
         operators_exist = all(path_exists(path) for path in materialization_operator_paths)
         proof_support = actual_append_exists and laws_exist and operators_exist and report_passes
         evidence_summary = "append-only ledger, rematerialization law, rematerializer, and coherent report"
+        family_default_ready, projection_open, _, _ = office_projection_phase_artifacts()
+        if proof_support and family_default_ready:
+            evidence_summary = (
+                "append-only ledger, rematerialization law, rematerializer, coherent report, "
+                "projection contract, and projection bridge"
+            )
+        if proof_support and projection_open:
+            evidence_summary = (
+                "append-only ledger, rematerialization law, rematerializer, coherent report, "
+                "projection contract, projection bridge, projection artifact, and coherent projection report"
+            )
         if "still absent" in row["notes"].lower() and actual_append_exists and laws_exist:
             add_finding(
                 findings,
@@ -307,10 +342,16 @@ def evaluate_domain(row: dict[str, str], findings: list[Finding]) -> dict[str, A
             message=append_surface_drift_message(domain_id, actual_append_surface, claimed_append_surface),
         )
 
-    expected_rollout_state = (
-        "phase1_repo_proof" if sovereign_exists and current_state_exists and proof_support else "phase0_lawful_seed"
-    )
+    expected_rollout_state = "phase0_lawful_seed"
+    if sovereign_exists and current_state_exists and proof_support:
+        expected_rollout_state = "phase1_repo_proof"
+        if family_default_ready:
+            expected_rollout_state = "phase2_family_default_ready"
+        if projection_open:
+            expected_rollout_state = "phase3_projection_open"
     expected_domain_status = "active_family" if expected_rollout_state == "phase1_repo_proof" else "candidate_family"
+    if expected_rollout_state in {"phase2_family_default_ready", "phase3_projection_open"}:
+        expected_domain_status = "active_family"
 
     claimed_rollout_state = row["rollout_state"].strip()
     claimed_domain_status = row["domain_status"].strip()

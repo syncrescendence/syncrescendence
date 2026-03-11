@@ -41,6 +41,53 @@ Is the dominant future:
 
 The shell likely wants the hybrid, but the mature division of labor is not final yet.
 
+### How far should the imported strategic and taxonomic architecture be physically translated?
+
+The imported strategic-vision and operational-taxonomy pair are rich and directionally correct.
+But they are not a command to rewrite the successor shell literally.
+
+The open question is:
+
+- which parts should become live shell law
+- which parts should remain translation doctrine
+- which parts should wait until substantive pipelines exist to justify them
+
+## 2. Strategic Vision And Taxonomic Assimilation State
+
+Heuristically, the imported pair is in three different states at once:
+
+| Surface | Conceptual assimilation | Structural integration | Operational implementation |
+|---|---|---|---|
+| Strategic Vision | high | partial | early |
+| Operational Taxonomy | medium-high | partial-to-low | early |
+
+Already absorbed:
+
+- architecture as durable asset
+- human telos / agent workforce split
+- append-only memory priority
+- progressive disclosure
+- configuration mereology
+- live-ledger family thinking
+
+Partly integrated:
+
+- family portfolio governance
+- typed middle layers
+- derivative projection governance
+- ledger-centered control-plane discipline
+
+Still substantially unimplemented:
+
+- seven-ledger system at full operational grade
+- canonical CI registry as a lived ledger family
+- model-profile registry as a lived ledger family
+- FIDS-grade human dashboards
+- broad lakehouse-style high-churn state surfaces
+- the more ambitious intelligence pipelines implied by the architecture
+
+This means the imported pair has been direction-setting, not yet fully realized.
+
 ## 2. Risks
 
 The shell’s main risks are no longer “lack of ideas.” They are architectural regressions.
@@ -69,6 +116,14 @@ Duplicate logistics, mixed artifact classes, and ad hoc root lanes can quietly r
 ### Risk 6 — verification theater
 
 If connector verification stays at narrative level rather than receipt-backed state transitions, the shell can appear governed while remaining operationally blind at the exact integration edges where failures happen.
+
+### Risk 7 — governance recursion
+
+If the shell keeps elaborating family law, control-plane law, and projection law without spending enough energy on substantive intelligence pipelines, it can become beautifully governed and strategically underproductive.
+
+This is a real risk now.
+The architecture has matured enough that the next failure mode is not chaos.
+It is over-governed latency.
 
 ## 3. What Agents Need in Order to Move In
 
@@ -159,6 +214,7 @@ Operationally, that means:
 - operatorized compaction
 - ontology as registry
 - continuous molting rather than episodic collapse
+- real intelligence pipelines that justify the governance stack
 
 ## 6. Final Claim
 
@@ -172,5 +228,6 @@ The right stance now is:
 - preserve pedigree
 - refuse topology relapse
 - require evidence-backed verification transitions on high-risk integration surfaces
+- pivot mainline effort toward the Acumen intelligence pipeline and other substantive intelligence-production lines once governance residue becomes bounded
 
 If that discipline holds, this shell can become the first genuinely durable Syncrescendent form rather than just the latest reorganization.

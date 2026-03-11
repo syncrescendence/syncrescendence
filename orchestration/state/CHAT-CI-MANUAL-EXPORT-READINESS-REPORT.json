@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "readiness_path": "orchestration/state/registry/CHAT-CI-MANUAL-EXPORT-READINESS-v1.json",
+  "provider_profiles_path": "orchestration/state/registry/CHAT-CI-PROVIDER-PROFILES-v1.json",
+  "projection_pack_path": "orchestration/state/registry/CHAT-CI-PROJECTION-PACK-v1.json",
+  "ledger_path": "orchestration/state/registry/chat-ci-manual-export-ledger.jsonl",
+  "providers": [
+    "chatgpt",
+    "claude",
+    "gemini_ai_studio",
+    "gemini_web_app",
+    "grok"
+  ],
+  "provider_count": 5,
+  "latest_config_event_id": "csl-20260310-0004",
+  "latest_readiness_event_id": "cmer-20260310-0001",
+  "findings": []
+}

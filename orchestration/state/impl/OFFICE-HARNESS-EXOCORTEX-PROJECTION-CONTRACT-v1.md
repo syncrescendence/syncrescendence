@@ -106,6 +106,22 @@ Required values:
 - `projection_scope: persistent-runtime-openclaw-offices`
 - `projection_contract_path: orchestration/state/impl/OFFICE-HARNESS-EXOCORTEX-PROJECTION-CONTRACT-v1.md`
 
+## 4A. Append-Only Snapshot Receipt History
+
+If this family keeps repo-native mutation history, that history must remain an append-only receipt ledger over derivative snapshots rather than a second sovereign state family.
+
+The v1 receipt surface is:
+
+- `orchestration/state/registry/office-harness-exocortex-projection-ledger.jsonl`
+
+Receipt-law obligations:
+
+1. Each event must point back to the same repo-native proof inputs named by this contract.
+2. Each event must carry the emitted projection digest so snapshot drift is auditable without hand comparison.
+3. The ledger may record snapshot refresh history, but it must not become the only place where current projected meaning lives.
+4. New receipt events must append; corrections arrive as later receipt events rather than line edits.
+5. The receipt ledger does not outrank the current-state projection artifact, the effective office-harness registry, or the higher-precedence proof chain behind them.
+
 ## 5. Required Row Fields
 
 Each projected row must carry the minimum binding identity, exocortex join, and pointer family.
@@ -208,6 +224,7 @@ The following are forbidden in v1:
 This contract is immediately binding on:
 
 - the first office-harness exocortex projection artifact for runtime offices
+- the append-only snapshot receipt ledger for that projection family
 - any bridge that emits that artifact
 - any report or audit surface that claims to validate that projection
 

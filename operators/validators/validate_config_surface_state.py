@@ -33,6 +33,16 @@ EXPECTED_LEDGER_FAMILY = "config_surface_state"
 EXPECTED_LEDGER_PATH = "orchestration/state/registry/config-surface-state-ledger.jsonl"
 EXPECTED_VALIDATOR_PATH = "operators/validators/validate_config_surface_state.py"
 EXPECTED_REMATERIALIZER_PATH = "operators/validators/rematerialize_config_surface_state.py"
+SHARED_PROJECTION_CONTRACT_PATH = "orchestration/state/impl/PROJECTION-FAMILY-SOVEREIGNTY-NORMALIZATION-v1.md"
+CHAT_CI_PROVIDER_PROFILES_PATH = "orchestration/state/registry/CHAT-CI-PROVIDER-PROFILES-v1.json"
+CHAT_CI_PROJECTION_PACK_PATH = "orchestration/state/registry/CHAT-CI-PROJECTION-PACK-v1.json"
+EXPECTED_CHAT_CI_GOVERNANCE = {
+    "shared_contract_path": SHARED_PROJECTION_CONTRACT_PATH,
+    "sovereignty_rule": "repo_ratifies_exocortex_coordinates_projection_derives",
+    "capture_policy": "manual_export_only",
+    "reliance_ceiling": "informative_only_until_receipted_export",
+    "hidden_second_control_plane": "prohibited",
+}
 EXPECTED_EVENT_TYPES = {"seed_receipt", "receipt_refresh", "drift_receipt", "supersession_receipt"}
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 SHA256_RE = re.compile(r"^sha256:[0-9a-f]{64}$")
@@ -247,6 +257,61 @@ def validate_surface_classes(
 
 def path_exists(relpath: str) -> bool:
     return (REPO_ROOT / relpath).exists()
+
+
+def validate_chat_ci_projection_artifacts(findings: list[Finding]) -> None:
+    for relpath in (CHAT_CI_PROVIDER_PROFILES_PATH, CHAT_CI_PROJECTION_PACK_PATH):
+        payload = read_json_dict(REPO_ROOT / relpath, findings, relpath)
+        governance = payload.get("projection_governance")
+        if not isinstance(governance, dict):
+            add_finding(findings, relpath, "projection_governance must be a top-level object")
+            continue
+        for field, expected in EXPECTED_CHAT_CI_GOVERNANCE.items():
+            if governance.get(field) != expected:
+                add_finding(
+                    findings,
+                    f"{relpath}:{field}",
+                    "projection_governance must follow the shared projection sovereignty contract",
+                )
+
+    provider_profiles = read_json_dict(REPO_ROOT / CHAT_CI_PROVIDER_PROFILES_PATH, findings, CHAT_CI_PROVIDER_PROFILES_PATH)
+    global_constraints = provider_profiles.get("global_constraints")
+    if not isinstance(global_constraints, dict):
+        add_finding(
+            findings,
+            CHAT_CI_PROVIDER_PROFILES_PATH,
+            "global_constraints must be a top-level object",
+        )
+    elif global_constraints.get("manual_export_only") is not True:
+        add_finding(
+            findings,
+            f"{CHAT_CI_PROVIDER_PROFILES_PATH}:global_constraints.manual_export_only",
+            "chat_ci provider profiles must stay manual_export_only",
+        )
+
+    pack = read_json_dict(REPO_ROOT / CHAT_CI_PROJECTION_PACK_PATH, findings, CHAT_CI_PROJECTION_PACK_PATH)
+    provider_pack_rows = pack.get("provider_pack_rows")
+    if not isinstance(provider_pack_rows, list):
+        add_finding(
+            findings,
+            CHAT_CI_PROJECTION_PACK_PATH,
+            "provider_pack_rows must be a list",
+        )
+        return
+    for index, row in enumerate(provider_pack_rows):
+        if not isinstance(row, dict):
+            add_finding(
+                findings,
+                f"{CHAT_CI_PROJECTION_PACK_PATH}:provider_pack_rows[{index}]",
+                "provider_pack_rows entries must be objects",
+            )
+            continue
+        if row.get("state") != "projection_ready_manual_export_only":
+            add_finding(
+                findings,
+                f"{CHAT_CI_PROJECTION_PACK_PATH}:provider_pack_rows[{index}].state",
+                "chat_ci projection-pack rows must remain projection_ready_manual_export_only",
+            )
 
 
 def validate_concrete_surfaces(
@@ -611,6 +676,7 @@ def main() -> int:
     validate_atom_families(registry, matrix, findings)
     validate_surface_classes(registry, matrix, findings)
     validate_concrete_surfaces(registry, matrix, findings)
+    validate_chat_ci_projection_artifacts(findings)
 
     registry_sha256 = sha256_for_file(args.registry) if args.registry.exists() else "sha256:" + "0" * 64
     matrix_sha256 = sha256_for_file(args.projection_matrix) if args.projection_matrix.exists() else "sha256:" + "0" * 64

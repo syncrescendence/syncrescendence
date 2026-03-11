@@ -24,16 +24,21 @@ The core claim of this shell is that the problem is not simply “AI tooling,”
 
 This dissertation states the thesis, records the current proof points, names what remains unfinished, and defines the horizon toward which the shell is being built.
 
-## Current Checkpoint (CC91)
+## Current Checkpoint (CC92)
 
-The dissertation remains aligned, with one major new proof line now added:
+The dissertation remains aligned, but the shell has crossed a second threshold beyond control-plane verification work:
 
-- exocortex connector topology has been promoted into a tractable control plane
-- connector claims can now be converted into evidence-backed state by receipt application, not narrative updates
-- ontology projection now includes connector-manifest and control-plane-status snapshots as typed entities
-- readiness has moved from `bounded_unverified` to `verification_in_progress` through a live tranche execution path
+- it now has multiple true proof families rather than one isolated control-plane proof
+- `office_harness_state` is projection-open through the first lawful exocortex-facing derivative family
+- `config_surface_state` is proof-complete and default-widening-ready through `chat_ci` manual-export law
+- the strategic-vision and operational-taxonomy imports have been partially translated into live shell doctrine, family governance, and typed middle layers
+- the Acumen intelligence pipeline wave0 scaffold is not merely described but executable in repo: registry validation, identity binding, Dawn Brief compilation, and sequential flow all run
 
-This matters because the shell now demonstrates not only mapping, but controlled transition from claim-state to verification-state under policy constraints.
+This matters because the shell now demonstrates three things at once:
+
+1. controlled transition from claim-state to evidence-state on exocortical surfaces
+2. governed phase advancement across multiple live-ledger families
+3. the beginning of a real intelligence-production pipeline rather than governance law alone
 
 ## Reading Order
 
@@ -85,6 +90,10 @@ This package synthesizes, among others:
 - [EXOCORTEX-CONTROL-PLANE-CC91.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-CONTROL-PLANE-CC91.md)
 - [EXOCORTEX-CONTROL-PLANE-STATUS-CC91.md](/Users/system/syncrescendence/orchestration/state/impl/EXOCORTEX-CONTROL-PLANE-STATUS-CC91.md)
 - [CC91-CONNECTOR-VERIFICATION-QUEUE.md](/Users/system/syncrescendence/orchestration/state/impl/CC91-CONNECTOR-VERIFICATION-QUEUE.md)
+- [CAMPAIGN-08-PROJECTION-GOVERNANCE-AND-SECOND-WIDENING-PREP-SYNTHESIS-v1.md](/Users/system/syncrescendence/orchestration/state/impl/CAMPAIGN-08-PROJECTION-GOVERNANCE-AND-SECOND-WIDENING-PREP-SYNTHESIS-v1.md)
+- [SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md](/Users/system/syncrescendence/knowledge/canon/SYNCRESCENDENCE-HOLISTIC-STRATEGIC-ENDEAVOR-v1.md)
+- [LIVE-LEDGER-STRATEGIC-AND-TAXONOMIC-ARCHITECTURE-v1.md](/Users/system/syncrescendence/knowledge/sigma/LIVE-LEDGER-STRATEGIC-AND-TAXONOMIC-ARCHITECTURE-v1.md)
+- [ACUMEN-INTELLIGENCE-PIPELINE-ADOPTION-CC87.md](/Users/system/syncrescendence/orchestration/state/impl/ACUMEN-INTELLIGENCE-PIPELINE-ADOPTION-CC87.md)
 
 ## Net Claim
 
@@ -94,6 +103,8 @@ The successor shell is not yet final, but it is the first version that can plaus
 - because it preserves pedigree without restoring old topology
 - because it treats harnesses as differentiated institutions, not interchangeable workers
 - because it promotes compaction into law, playbooks, operators, and validated patterns
+- because it can now phase-govern multiple live families without flattening them into one control plane
+- because it is beginning to convert strategic architecture into substantive intelligence-production pipelines
 - because it is designed to molt under paradigm shifts rather than shatter under them
 
 The chapters that follow explain that claim in full.

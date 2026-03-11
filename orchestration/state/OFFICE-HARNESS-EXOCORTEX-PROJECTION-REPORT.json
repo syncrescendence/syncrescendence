@@ -1,20 +1,26 @@
 {
   "findings": [],
-  "generated_at": "2026-03-10T06:35:20Z",
+  "generated_at": "2026-03-11T00:20:28Z",
   "mode": "report-first",
   "schema_version": "office-harness-exocortex-projection-report/v1",
   "summary": {
     "binding_state_counts": {
       "active": 2
     },
+    "expected_projection_sha256": "sha256:91586604859c32f54c18ac2d30b795233020c6aa8b4e41b4ff818f6d896e6f49",
     "finding_count": 0,
     "informative_only_record_count": 0,
+    "latest_receipt_event_id": "ohxp-20260310-0001",
+    "ledger_alignment_status": "current_matches_latest_receipt",
+    "ledger_event_count": 1,
+    "ledger_path": "orchestration/state/registry/office-harness-exocortex-projection-ledger.jsonl",
     "operative_record_count": 2,
     "pointer_complete_record_count": 2,
     "projected_offices": [
       "ajna",
       "psyche"
     ],
+    "projection_alignment_status": "matches_repo_native_rebuild",
     "projection_path": "orchestration/state/EXOCORTEX-OFFICE-HARNESS-PROJECTION-CC92.json",
     "projection_record_count": 2,
     "projection_scope": "persistent-runtime-openclaw-offices",

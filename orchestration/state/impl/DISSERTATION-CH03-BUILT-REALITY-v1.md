@@ -146,6 +146,41 @@ What this proved:
 - ontology can function as typed projection
 - the shell can expose a queryable surface without confusing that with law
 
+## 10.5 Live-Ledger Family Portfolio
+
+Built:
+
+- tributary disposition as a mature proof family
+- office-harness state as a true proof family
+- the first lawful office-harness exocortex projection family
+- config-surface state as a true proof family
+- `chat_ci` readiness family and manual-export gating surfaces
+- a shared family register and family auditor
+
+What this proved:
+
+- the shell can govern multiple append-only families at different maturities
+- widening can remain derivative and pointer-carrying
+- portfolio truth can be tracked explicitly rather than only inferred from prose
+
+## 10.6 Acumen Pipeline Wave0
+
+Built:
+
+- Acumen feed-registry contract and validator
+- identity-binding probe against canonical Google identity
+- deterministic transcript-processing track
+- triage-packet renderer
+- Dawn Brief compiler
+- sequential pipeline flow scaffold
+- runtime lane with sample artifacts
+
+What this proved:
+
+- the shell is capable of substantive intelligence-pipeline work, not just governance law
+- wave0 execution surfaces can already run end to end on sample data
+- the next bottleneck is not shell existence but operational completion of ingestion and triage
+
 ## 11. Why This Matters
 
 The shell is already beyond concept stage.
@@ -160,6 +195,8 @@ Its most important proofs are:
 - exocortex connectors can move through a durable verification state machine
 - browser-mediated loops can close
 - ontology can stay downstream
+- multiple live-ledger families can now exist under one truth plane
+- a first intelligence pipeline substrate is already executable
 
 This is why the redesign has credibility.
 
@@ -173,5 +210,7 @@ It has not yet fully built:
 - full office habitation and agent-native routines across all offices
 - a hardened worker fabric beyond the first proofs
 - auth-backed connector verification completion across high-fanout exocortex hubs
+- Acumen CC88 ingestion, triage invocation, decision logging, and substantive overnight batch operation
+- the broader FIDS-like human-resolution layer implied by the strategic and taxonomic imports
 
 But it has built enough to justify the claim that the shell is real.

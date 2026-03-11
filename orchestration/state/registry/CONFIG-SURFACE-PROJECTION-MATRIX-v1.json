@@ -28,11 +28,12 @@
         "AF-07",
         "AF-08"
       ],
-      "projection_form": "compressed prose blocks plus provider-profile and packing metadata with explicit omission notes",
+      "projection_form": "compressed prose blocks plus provider-profile, packing, and manual-export readiness records with explicit omission notes",
       "concrete_surface_ids": [
         "cfgs-013",
         "cfgs-018",
-        "cfgs-019"
+        "cfgs-019",
+        "cfgs-021"
       ]
     },
     {
@@ -112,7 +113,8 @@
       "concrete_surface_ids": [
         "cfgs-008",
         "cfgs-017",
-        "cfgs-020"
+        "cfgs-020",
+        "cfgs-023"
       ]
     },
     {
@@ -178,7 +180,8 @@
         "cfgs-012",
         "cfgs-014",
         "cfgs-015",
-        "cfgs-016"
+        "cfgs-016",
+        "cfgs-022"
       ]
     }
   ],
@@ -602,6 +605,79 @@
       "path": "orchestration/state/registry/config-surface-state-ledger.jsonl",
       "surface_class": "ledger",
       "projection_mode": "append_only_state_receipt_record",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-021",
+      "path": "orchestration/state/registry/CHAT-CI-MANUAL-EXPORT-READINESS-v1.json",
+      "surface_class": "chat_ci",
+      "projection_mode": "manual_export_readiness_record",
+      "source_refs": [
+        "orchestration/state/impl/CHAT-CI-MANUAL-EXPORT-READINESS-CONTRACT-v1.md",
+        "orchestration/state/registry/CONFIG-SURFACE-REGISTRY-v1.json",
+        "orchestration/state/registry/CONFIG-SURFACE-PROJECTION-MATRIX-v1.json",
+        "orchestration/state/registry/CHAT-CI-RENDER-SURFACE-v1.md",
+        "orchestration/state/registry/CHAT-CI-PROVIDER-PROFILES-v1.json",
+        "orchestration/state/registry/CHAT-CI-PROJECTION-PACK-v1.json",
+        "knowledge/sigma/CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md",
+        "knowledge/sigma/CONFIG-BEHAVIOR-ATOMS-AND-SURFACE-PROFILES-v1.md",
+        "knowledge/sigma/CONFIG-SOURCE-OF-TRUTH-ARCHITECTURE-v1.md"
+      ],
+      "families": {
+        "required": [
+          "AF-01",
+          "AF-02",
+          "AF-03",
+          "AF-04",
+          "AF-05",
+          "AF-06",
+          "AF-07",
+          "AF-08"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-022",
+      "path": "orchestration/state/registry/chat-ci-manual-export-ledger.jsonl",
+      "surface_class": "ledger",
+      "projection_mode": "append_only_readiness_receipt_record",
+      "families": {
+        "required": [
+          "AF-02",
+          "AF-05",
+          "AF-07",
+          "AF-08"
+        ],
+        "conditional": [
+          "AF-01",
+          "AF-06"
+        ],
+        "omitted": [
+          "AF-03",
+          "AF-04"
+        ]
+      }
+    },
+    {
+      "surface_id": "cfgs-023",
+      "path": "operators/validators/validate_chat_ci_manual_export_readiness.py",
+      "surface_class": "hook_policy",
+      "projection_mode": "manual_export_readiness_gate",
       "families": {
         "required": [
           "AF-02",

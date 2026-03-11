@@ -5,6 +5,13 @@
   "effective_date": "2026-03-10",
   "actor": "codex_parallel_session",
   "authority_statement": "This artifact maps the repo-native chat_ci semantic kernel into provider-facing packing units and slot assignments. It is a projection-ready packing manifest, not a rendered export or synchronization mechanism.",
+  "projection_governance": {
+    "shared_contract_path": "orchestration/state/impl/PROJECTION-FAMILY-SOVEREIGNTY-NORMALIZATION-v1.md",
+    "sovereignty_rule": "repo_ratifies_exocortex_coordinates_projection_derives",
+    "capture_policy": "manual_export_only",
+    "reliance_ceiling": "informative_only_until_receipted_export",
+    "hidden_second_control_plane": "prohibited"
+  },
   "source_bindings": {
     "provider_profiles": [
       "orchestration/state/registry/CHAT-CI-PROVIDER-PROFILES-v1.json"

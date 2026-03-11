@@ -8,7 +8,8 @@
     "knowledge/sigma/CONFIG-SOURCE-OF-TRUTH-ARCHITECTURE-v1.md",
     "knowledge/sigma/CONFIG-BEHAVIOR-ATOMS-AND-SURFACE-PROFILES-v1.md",
     "orchestration/state/impl/CODEX-CAMPAIGN-05-TYPED-MIDDLE-LAYER-OPERATIONALIZATION-v1.md",
-    "orchestration/state/impl/CODEX-CAMPAIGN-06-APPEND-ONLY-FAMILY-OPERATIONALIZATION-v1.md"
+    "orchestration/state/impl/CODEX-CAMPAIGN-06-APPEND-ONLY-FAMILY-OPERATIONALIZATION-v1.md",
+    "orchestration/state/impl/CODEX-CAMPAIGN-08-PROJECTION-GOVERNANCE-AND-SECOND-WIDENING-PREP-v1.md"
   ],
   "seed_constraints": {
     "non_exhaustive": true,
@@ -71,7 +72,7 @@
   "surface_classes": [
     {
       "surface_class": "chat_ci",
-      "seed_status": "seeded_repo_native_render_and_provider_profiles",
+      "seed_status": "seeded_repo_native_render_profiles_and_manual_export_readiness",
       "authority_mode": "witness_corpus_or_rendered_derivative",
       "required_families": [
         "AF-01",
@@ -83,7 +84,7 @@
         "AF-07",
         "AF-08"
       ],
-      "seed_note": "Seeded through one repo-native render surface plus provider-aware profile and packing artifacts that stay derivative of the witness corpus and config kernel without asserting any provider-specific runtime export."
+      "seed_note": "Seeded through one repo-native render surface, provider-aware profiles, a projection pack, and a manual-export readiness family that remains derivative of config proof state and explicitly non-automated."
     },
     {
       "surface_class": "cli_constitution",
@@ -610,6 +611,77 @@
       "path": "operators/validators/rematerialize_config_surface_state.py",
       "surface_class": "hook_policy",
       "surface_role": "config_surface_state_rematerializer",
+      "authoring_mode": "hand_authored_code",
+      "authority_tier": "executable_derivative",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ]
+    },
+    {
+      "surface_id": "cfgs-021",
+      "path": "orchestration/state/registry/CHAT-CI-MANUAL-EXPORT-READINESS-v1.json",
+      "surface_class": "chat_ci",
+      "surface_role": "manual_export_readiness_record",
+      "authoring_mode": "hand_authored_structured_derivative",
+      "authority_tier": "rendered_derivative",
+      "bound_families": [
+        "AF-01",
+        "AF-02",
+        "AF-03",
+        "AF-04",
+        "AF-05",
+        "AF-06",
+        "AF-07",
+        "AF-08"
+      ],
+      "source_refs": [
+        "orchestration/state/impl/CHAT-CI-MANUAL-EXPORT-READINESS-CONTRACT-v1.md",
+        "orchestration/state/registry/CONFIG-SURFACE-REGISTRY-v1.json",
+        "orchestration/state/registry/CONFIG-SURFACE-PROJECTION-MATRIX-v1.json",
+        "orchestration/state/registry/CHAT-CI-RENDER-SURFACE-v1.md",
+        "orchestration/state/registry/CHAT-CI-PROVIDER-PROFILES-v1.json",
+        "orchestration/state/registry/CHAT-CI-PROJECTION-PACK-v1.json",
+        "knowledge/sigma/CHAT-APP-CUSTOM-INSTRUCTION-ARCHITECTURE-v1.md",
+        "knowledge/sigma/CONFIG-BEHAVIOR-ATOMS-AND-SURFACE-PROFILES-v1.md",
+        "knowledge/sigma/CONFIG-SOURCE-OF-TRUTH-ARCHITECTURE-v1.md"
+      ],
+      "validator_refs": [
+        "operators/validators/validate_chat_ci_manual_export_readiness.py"
+      ]
+    },
+    {
+      "surface_id": "cfgs-022",
+      "path": "orchestration/state/registry/chat-ci-manual-export-ledger.jsonl",
+      "surface_class": "ledger",
+      "surface_role": "chat_ci_manual_export_readiness_ledger",
+      "authoring_mode": "machine_appended",
+      "authority_tier": "append_only_record",
+      "bound_families": [
+        "AF-02",
+        "AF-05",
+        "AF-07",
+        "AF-08"
+      ],
+      "conditional_families": [
+        "AF-01",
+        "AF-06"
+      ],
+      "validator_refs": [
+        "operators/validators/validate_chat_ci_manual_export_readiness.py"
+      ]
+    },
+    {
+      "surface_id": "cfgs-023",
+      "path": "operators/validators/validate_chat_ci_manual_export_readiness.py",
+      "surface_class": "hook_policy",
+      "surface_role": "chat_ci_manual_export_readiness_validator",
       "authoring_mode": "hand_authored_code",
       "authority_tier": "executable_derivative",
       "bound_families": [

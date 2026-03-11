@@ -1,6 +1,6 @@
 {
   "schema_version": "live-ledger-domain-register-audit-report/v1",
-  "generated_at": "2026-03-10T06:35:20Z",
+  "generated_at": "2026-03-11T00:26:29Z",
   "mode": "report-first",
   "repo_root": "/Users/system/syncrescendence",
   "summary": {
@@ -43,8 +43,8 @@
     {
       "domain_id": "office_harness_state",
       "domain_label": "Office harness state",
-      "claimed_rollout_state": "phase1_repo_proof",
-      "expected_rollout_state": "phase1_repo_proof",
+      "claimed_rollout_state": "phase3_projection_open",
+      "expected_rollout_state": "phase3_projection_open",
       "claimed_domain_status": "active_family",
       "expected_domain_status": "active_family",
       "gate_profile": "GL-SHARED-V1",
@@ -63,7 +63,7 @@
         "operators/validators/rematerialize_office_harness_bindings.py"
       ],
       "proof_support": true,
-      "evidence_summary": "append-only ledger, rematerialization law, rematerializer, and coherent report",
+      "evidence_summary": "append-only ledger, rematerialization law, rematerializer, coherent report, projection contract, projection bridge, projection artifact, and coherent projection report",
       "finding_count": 0,
       "warning_count": 0,
       "error_count": 0
