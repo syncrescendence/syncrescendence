@@ -463,6 +463,10 @@ It is now entering the next phase:
 - widening from one intelligence product (`Dawn Brief`) toward a family of downstream products, research queues, and primary-source escalation surfaces
 - shift from generic portfolio widening toward curated inbound feed constellations whose subscription graphs are intentionally crafted per chain and then imported lawfully into the intelligence cycle
 - productization of the post-triage chain so verification, assessment, and primary escalation become operator-usable outputs rather than hidden intermediate state
+- first lawful three-product Acumen family across `Dawn Brief`, `Verified Signal Brief`, and `Primary-Source Queue Readout`
+- recognition that the next real upstream leg is not dissemination-first account wiring but five-account inbound curation for `acumen`, `coherence`, `efficacy`, `mastery`, and `transcendence`
+- reactivation of the older feedcraft doctrine in stripped-down form: curated feeds as cognitive substrate engineering, recon before mutation, preserved manifests, portfolio-before-registry, and role-bound widening
+- explicit separation between already-held chain-email identities and the still-external frontier of platform-account creation, browser capture, and platform-specific session execution
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 

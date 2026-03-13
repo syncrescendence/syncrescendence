@@ -637,7 +637,7 @@ First normalized set:
 - **lineage_or_origin**: Campaign 11 synthesis plus CANON-25230 directional correction toward curated inbound constellation feeds
 
 1. land the intelligence-product family that consumes the now-real post-triage chain
-   Status: staged
+   Status: completed
 2. land the telemetry family as a derived control surface, not a second authority plane
    Status: staged
 3. codify the five-account inbound feed constellation for `acumen`, `coherence`, `efficacy`, `mastery`, and `transcendence`
@@ -647,4 +647,27 @@ First normalized set:
 5. bind channel portfolio widening to curated account feeds and explicit chain roles instead of ad hoc source expansion
    Status: staged
 6. keep dissemination and outbound projection explicitly downstream of inbound curation and intelligence metabolism
+   Status: staged
+
+### Tranche AR — Acumen CC92 Constellation Law, Import, And Enforcement
+
+- **program_id**: `TRANCHE-AR`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `operator`, `runtime`, `verification`, `knowledge lane`, `feedstock`, `registry`, `repo sovereignty`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AR-ACUMEN-CC92-CONSTELLATION-LAW-IMPORT-AND-ENFORCEMENT.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AR-ACUMEN-CC92-CONSTELLATION-LAW-IMPORT-AND-ENFORCEMENT.md)
+- **lineage_or_origin**: Campaign 12 synthesis plus canon mining across five-account architecture, platform grammar, feedcraft, and feed curation
+
+1. land the five-account inbound feed constellation contract and role map
+   Status: staged
+2. land the inbound capture-and-import contract plus manifest family
+   Status: staged
+3. land strict manifest validation and inbound import preview surfaces
+   Status: staged
+4. land portfolio policy and registry enforcement over curated feeds
+   Status: staged
+5. land cross-chain routing and handoff law so later chains remain derivative
+   Status: staged
+6. stage platform-account and browser execution preflight for the five chain emails without mutating live platform state yet
+   Status: staged
+7. land telemetry only after the admitted inbound system is truthful enough to observe
    Status: staged

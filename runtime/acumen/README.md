@@ -14,6 +14,8 @@ This lane stores files produced by the repo-native Acumen flow that actually exi
 6. Dawn Brief compilation from an existing JSONL queue
 7. sequential status snapshots
 8. Augur return assessment JSON artifacts
+9. derivative Verified Signal Brief outputs
+10. derivative primary-source queue readout outputs
 
 This lane carries three different truth classes that should not be merged:
 
@@ -59,7 +61,10 @@ This lane carries three different truth classes that should not be merged:
    - `out/verification-portfolio.md`
 16. Augur return assessment artifacts:
    - `out/augur-return-assessments/*.json`
-17. status files under `/Users/system/syncrescendence/orchestration/state/`:
+17. post-triage product-family outputs:
+   - `out/VERIFIED-SIGNAL-BRIEF-*.md`
+   - `out/PRIMARY-SOURCE-QUEUE-READOUT-*.md`
+18. status files under `/Users/system/syncrescendence/orchestration/state/`:
    - `ACUMEN-IDENTITY-STATUS.json`
    - `ACUMEN-PIPELINE-STATUS.json`
    - `ACUMEN-LIVE-BATCH-PROOF-STATUS.json`
@@ -71,7 +76,7 @@ This lane carries three different truth classes that should not be merged:
    - `ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.md`
    - `ACUMEN-AUGUR-RETURN-REPORT.json`
    - `ACUMEN-AUGUR-RETURN-REPORT.md`
-18. sample fixtures:
+19. sample fixtures:
    - `sample-video.json`
    - `sample-transcript.txt`
    - `triage-decisions.sample.jsonl`
@@ -90,6 +95,7 @@ Those ledgers are the witness surfaces.
 `runtime/acumen/out/verification-dossiers/*.json` are sanitized downstream handoff artifacts generated from those witness surfaces.
 `runtime/acumen/out/verification-portfolio.*` are operator-facing queue views derived from the bridge state, not new intake authority.
 `runtime/acumen/out/augur-return-assessments/*.json` are derived classification artifacts over landed or pending Augur response paths.
+`runtime/acumen/out/VERIFIED-SIGNAL-BRIEF-*.md` and `runtime/acumen/out/PRIMARY-SOURCE-QUEUE-READOUT-*.md` are derivative operator products built from assessment and queue surfaces.
 `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json` is a derived current proof summary rebuilt from the live-batch proof ledger.
 
 Current repo-local witness examples on disk:

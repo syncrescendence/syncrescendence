@@ -17,6 +17,8 @@ This lane provides:
 11. promoted-item dossier and Augur verification bridge generation
 12. live-batch proof receipting, proof-status projection, and validator reporting
 13. Augur return ingestion, repo-side assessment, and primary-source queue generation
+14. derivative Verified Signal Brief rendering from repo-side assessments
+15. derivative primary-source queue readout rendering from queue state plus linked assessments
 
 ## Runtime Contract
 
@@ -173,6 +175,21 @@ Current repo-native Acumen execution is local and file-based.
    - outputs:
      - `orchestration/state/ACUMEN-AUGUR-RETURN-REPORT.json`
      - `orchestration/state/ACUMEN-AUGUR-RETURN-REPORT.md`
+24. build the Verified Signal Brief:
+   - `python3 operators/acumen/build_verified_signal_brief.py --assessment-json-dir runtime/acumen/out/augur-return-assessments --queue-json orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json --output runtime/acumen/out/VERIFIED-SIGNAL-BRIEF-YYYYMMDD.md`
+   - output:
+     - `runtime/acumen/out/VERIFIED-SIGNAL-BRIEF-YYYYMMDD.md`
+   - routing rule: the brief is derivative only and may summarize only repo-side assessment plus queue state
+25. build the primary-source queue readout:
+   - `python3 operators/acumen/build_primary_source_queue_readout.py --queue-json orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json --assessment-json-dir runtime/acumen/out/augur-return-assessments --output runtime/acumen/out/PRIMARY-SOURCE-QUEUE-READOUT-YYYYMMDD.md`
+   - output:
+     - `runtime/acumen/out/PRIMARY-SOURCE-QUEUE-READOUT-YYYYMMDD.md`
+   - routing rule: the readout renders queue state for operators without changing queue admission
+26. build the first post-triage product family in one step:
+   - `make acumen-build-intelligence-product-family DATESTAMP=YYYYMMDD`
+   - outputs:
+     - `runtime/acumen/out/VERIFIED-SIGNAL-BRIEF-YYYYMMDD.md`
+     - `runtime/acumen/out/PRIMARY-SOURCE-QUEUE-READOUT-YYYYMMDD.md`
 
 ## Operator Notes
 
@@ -184,3 +201,4 @@ Current repo-native Acumen execution is local and file-based.
 6. `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json` is now the canonical queue state, while `runtime/acumen/out/verification-portfolio.*` are the operator-facing throughput views.
 7. `communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-*.md` are repo-native classification artifacts, not doctrine surfaces.
 8. `orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.*` is a routing surface only; queue admission does not ratify the Augur response.
+9. `runtime/acumen/out/VERIFIED-SIGNAL-BRIEF-*.md` and `runtime/acumen/out/PRIMARY-SOURCE-QUEUE-READOUT-*.md` are derivative products over assessment and queue state, not new authority surfaces.
