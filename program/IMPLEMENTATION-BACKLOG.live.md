@@ -616,14 +616,35 @@ First normalized set:
 - **lineage_or_origin**: Campaign 10 synthesis and the first truthful Acumen pipeline state
 
 1. create the receipt family and operator loop for the first true credentialed live-batch proof
-   Status: staged
+   Status: completed as repo-native proof family, still awaiting credentialed live proof
 2. widen the Acumen -> Augur verification bridge from one dossier into a repeatable verification queue or portfolio
-   Status: staged
+   Status: completed
 3. ingest Augur returns into repo-side assessment artifacts and primary-source escalation surfaces
-   Status: staged
+   Status: completed as lawful return chain, first external response still absent
 4. widen Acumen outputs beyond `Dawn Brief` into a more complete intelligence-product family
    Status: staged
 5. add telemetry for yield, latency, cost, and promotion quality across poll, triage, and verification
    Status: staged
 6. widen the channel portfolio and signal policy without relaxing intake sovereignty or promotion discipline
+   Status: staged
+
+### Tranche AQ — Acumen CC91 Inbound Feed Constellation And Productization
+
+- **program_id**: `TRANCHE-AQ`
+- **intent_refs**: `INT-SHELL-001`, `INT-SHELL-003`, `INT-SHELL-005`
+- **rosetta_refs**: `operator`, `runtime`, `verification`, `knowledge lane`, `feedstock`, `projection`, `repo sovereignty`
+- **execution_surface**: [IMPLEMENTATION-TRANCHE-AQ-ACUMEN-CC91-INBOUND-FEED-CONSTELLATION-AND-PRODUCTIZATION.md](/Users/system/syncrescendence/program/IMPLEMENTATION-TRANCHE-AQ-ACUMEN-CC91-INBOUND-FEED-CONSTELLATION-AND-PRODUCTIZATION.md)
+- **lineage_or_origin**: Campaign 11 synthesis plus CANON-25230 directional correction toward curated inbound constellation feeds
+
+1. land the intelligence-product family that consumes the now-real post-triage chain
+   Status: staged
+2. land the telemetry family as a derived control surface, not a second authority plane
+   Status: staged
+3. codify the five-account inbound feed constellation for `acumen`, `coherence`, `efficacy`, `mastery`, and `transcendence`
+   Status: staged
+4. create feed recon, capture, and import surfaces for curated subscription manifests before mutation or widening
+   Status: staged
+5. bind channel portfolio widening to curated account feeds and explicit chain roles instead of ad hoc source expansion
+   Status: staged
+6. keep dissemination and outbound projection explicitly downstream of inbound curation and intelligence metabolism
    Status: staged

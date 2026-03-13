@@ -15,6 +15,8 @@ This lane provides:
 9. repo-native evidence logging, rematerialization, and validation
 10. post-triage dossier and Augur verification packet generation for promoted or flagged items
 11. promoted-item dossier and Augur verification bridge generation
+12. live-batch proof receipting, proof-status projection, and validator reporting
+13. Augur return ingestion, repo-side assessment, and primary-source queue generation
 
 ## Runtime Contract
 
@@ -25,7 +27,7 @@ Current repo-native Acumen execution is local and file-based.
 3. `run_gemini_triage.py` is the single-packet Gemini adapter. `run_triage.py` is the batch runner that consumes poll output, builds packets, invokes Gemini when enabled, and appends runtime queue/training artifacts.
 4. `identity_binding_probe.py` shells out to `gcloud` and macOS `security` when present. Strict mode fails only on detected canonical-identity mismatches, not on missing tools.
 5. `record_evidence.py` accepts only sanitized model-call and decision metadata. Raw prompt bodies, raw response bodies, and secret-bearing fields are forbidden.
-6. `make acumen-live-batch` is the narrow operator entrypoint for a first true live batch. It validates the registry, enforces strict identity, and then runs live YouTube polling plus Gemini triage without storing secrets in repo.
+6. `make acumen-live-batch` is the narrow operator entrypoint for a first true live batch. It now writes an append-only proof receipt and a derived proof-status/report surface for each attempt without storing secrets in repo.
 
 ## Truth Boundary
 
@@ -35,12 +37,12 @@ Current repo-native Acumen execution is local and file-based.
    - the repeatable proof path is `make acumen-sample-run`, which uses fixture polling plus heuristic triage and writes status artifacts under `runtime/acumen/` and `orchestration/state/`
    - the current evidence family validates through `python3 operators/validators/validate_acumen_evidence.py`
 3. live external proof:
-   - no committed Acumen runtime artifact here proves a live YouTube API poll
-   - no committed Acumen runtime artifact here proves a live Gemini invocation
+   - the repo now has a lawful witness family for blocked, failed, incomplete, and proven live-batch attempts
+   - no committed Acumen receipt here yet proves a live YouTube poll plus at least one live Gemini triage call
 4. current remaining boundary:
    - the normal batch runner is now evidence-native and the repeatable sample path passes
-   - the remaining repo-external gap is first successful live YouTube plus live Gemini proof with credentials present
-   - the next internal widening gap is downstream assessment and primary-source escalation from Augur returns, not batch closure itself
+   - the remaining repo-external gap is first `live_batch_proven` receipt with credentials present
+   - the Augur return path is now wired repo-side; the remaining external boundary is a cited Augur response landing in the declared response path
 
 ## Commands
 
@@ -98,15 +100,23 @@ Current repo-native Acumen execution is local and file-based.
 13. one-command live batch via Make:
    - `ACUMEN_YOUTUBE_API_KEY=... GEMINI_API_KEY=... make acumen-live-batch`
    - fixed path:
-     - validates `runtime/acumen/registry.json`
-     - enforces strict identity with `orchestration/state/ACUMEN-IDENTITY-BINDING-CC87.json`
-     - writes live poll status to `orchestration/state/ACUMEN-YOUTUBE-POLL-STATUS.json`
-     - writes triage status to `runtime/acumen/triage-status.json`
-     - writes top-level pipeline status to `orchestration/state/ACUMEN-PIPELINE-STATUS.json`
+     - appends a receipt event into `orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl`
+     - derives current proof state at `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json`
+     - validates and reports the family at `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-REPORT.{json,md}`
+     - when credentials are present, validates `runtime/acumen/registry.json`
+     - when credentials are present, enforces strict identity with `orchestration/state/ACUMEN-IDENTITY-BINDING-CC87.json`
+     - when credentials are present, writes live poll status to `orchestration/state/ACUMEN-YOUTUBE-POLL-STATUS.json`
+     - when credentials are present, writes triage status to `runtime/acumen/triage-status.json`
+     - when credentials are present, writes top-level pipeline status to `orchestration/state/ACUMEN-PIPELINE-STATUS.json`
    - bounded live failure classes:
      - `credential`
      - `identity`
      - `external_service`
+   - bounded proof outcomes:
+     - `blocked`
+     - `failed`
+     - `completed_not_proven`
+     - `proven`
 14. record a sanitized triage decision event:
    - `python3 operators/acumen/record_evidence.py decision --input-json /abs/path/decision.json --actor acumen.triage`
    - output: append-only event in `orchestration/state/registry/acumen-triage-decision-ledger.jsonl` plus rebuilt `runtime/acumen/triage-decisions.jsonl`
@@ -117,29 +127,60 @@ Current repo-native Acumen execution is local and file-based.
    - `python3 operators/acumen/rematerialize_evidence.py`
 17. validate the evidence family:
    - `python3 operators/validators/validate_acumen_evidence.py`
-18. build post-triage dossiers and Augur verification packets for eligible items:
+18. validate the live-batch proof family:
+   - `python3 operators/validators/validate_acumen_live_batch_proof.py`
+   - outputs:
+     - `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-REPORT.json`
+     - `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-REPORT.md`
+19. build post-triage dossiers and Augur verification packets for eligible items:
    - `python3 operators/acumen/build_verification_bridge.py --video-id deepmind-gemini-31-architecture`
    - outputs:
      - `runtime/acumen/out/verification-dossiers/deepmind-gemini-31-architecture.json`
      - `communications/prompts/PACKET-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md`
      - expected return target in `communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md`
      - bridge state at `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json`
+     - runtime portfolio views at `runtime/acumen/out/verification-portfolio.json` and `runtime/acumen/out/verification-portfolio.md`
    - guardrail: only `Promote` or `Flag-for-Primary` decision records are eligible
-19. emit verification-ready dossiers and downstream Augur packets:
-   - `python3 operators/acumen/build_verification_bridge.py`
+20. emit a repeatable verification batch and queue surface:
+   - `python3 operators/acumen/build_verification_bridge.py --max-items 10`
+   - optional controls:
+     - `--include-ingested` to regenerate already closed items
+     - `--decision Flag-for-Primary` or `--video-id <id>` to narrow the batch
    - outputs:
-     - `runtime/acumen/out/verification-dossiers/*.json`
-     - `communications/prompts/PACKET-PERPLEXITY-acumen-*.md`
-     - `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json`
+     - `runtime/acumen/out/verification-dossiers/*.json` for selected batch items
+     - `communications/prompts/PACKET-PERPLEXITY-acumen-*.md` for selected batch items
+     - `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json` with queue status for all eligible items
+     - `runtime/acumen/out/verification-portfolio.json`
+     - `runtime/acumen/out/verification-portfolio.md`
    - routing rule: Acumen stays sovereign over intake and triage; Augur receives only sanitized downstream verification packets
-20. validate the dossier and bridge family:
+21. validate the dossier and bridge family:
    - `python3 operators/validators/validate_acumen_verification_bridge.py`
    - outputs:
      - `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE-REPORT.json`
      - `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE-REPORT.md`
+22. ingest landed Augur responses into repo-side assessments and the primary-source queue:
+   - `python3 operators/acumen/ingest_augur_returns.py`
+   - optional controls:
+     - `--video-id <id>` or `--triage-event-id <id>` to narrow the run
+   - outputs:
+     - `runtime/acumen/out/augur-return-assessments/*.json`
+     - `communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-*.md`
+     - `orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json`
+     - `orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.md`
+   - routing rule: the repo assessment classifies Augur as witness input only and keeps verified fact, inference, and next-source recommendations separate
+23. validate the Augur return family:
+   - `python3 operators/validators/validate_acumen_augur_returns.py`
+   - outputs:
+     - `orchestration/state/ACUMEN-AUGUR-RETURN-REPORT.json`
+     - `orchestration/state/ACUMEN-AUGUR-RETURN-REPORT.md`
 
 ## Operator Notes
 
 1. `make acumen-sample-run` remains the fixture-safe proof path and is unchanged by the live-batch target.
-2. `make acumen-live-batch` consumes only env-var credentials by name. It does not echo, persist, or ledger raw secrets.
-3. `orchestration/state/ACUMEN-PIPELINE-STATUS.json` now surfaces `failure_domain`, `failure_code`, `failure_message`, and nested poll / triage status snapshots so a blocked live batch is diagnosable without widening the failure surface.
+2. `make acumen-live-batch` consumes only env-var credential names. It never echoes, persists, or ledgers raw secrets.
+3. `orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl` is the durable witness for blocked, failed, incomplete, and proven live attempts.
+4. `orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json` is a derived current summary and must stay subordinate to the append-only proof ledger.
+5. `orchestration/state/ACUMEN-PIPELINE-STATUS.json` still surfaces `failure_domain`, `failure_code`, `failure_message`, and nested poll / triage status snapshots so a live attempt is diagnosable without widening the secret surface.
+6. `orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json` is now the canonical queue state, while `runtime/acumen/out/verification-portfolio.*` are the operator-facing throughput views.
+7. `communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-*.md` are repo-native classification artifacts, not doctrine surfaces.
+8. `orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.*` is a routing surface only; queue admission does not ratify the Augur response.

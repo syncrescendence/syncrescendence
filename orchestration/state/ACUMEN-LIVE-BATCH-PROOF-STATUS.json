@@ -1,0 +1,42 @@
+{
+  "contract_path": "orchestration/state/impl/ACUMEN-LIVE-BATCH-PROOF-RECEIPT-CONTRACT-v1.md",
+  "counts_by_failure_domain": {
+    "credential": 1
+  },
+  "counts_by_outcome": {
+    "blocked": 1
+  },
+  "counts_by_proof_status": {
+    "blocked_missing_credentials": 1
+  },
+  "family_id": "acumen_live_batch_proof",
+  "generated_at": "2026-03-13T04:37:32Z",
+  "last_proven_at": null,
+  "last_proven_pipeline_status_path": null,
+  "last_proven_receipt_event_id": null,
+  "latest_failure_code": "missing_credentials",
+  "latest_failure_domain": "credential",
+  "latest_failure_message": "missing required environment credentials: ACUMEN_YOUTUBE_API_KEY, GEMINI_API_KEY",
+  "latest_outcome": "blocked",
+  "latest_pipeline_status_path": null,
+  "latest_pipeline_status_sha256": null,
+  "latest_proof_gate": {
+    "meets_live_batch_proof": false,
+    "meets_live_poll_requirement": false,
+    "meets_live_triage_requirement": false,
+    "reason_code": "missing_pipeline_status",
+    "reason_message": "pipeline status was not captured"
+  },
+  "latest_proof_status": "blocked_missing_credentials",
+  "latest_receipt_event_id": "alp-20260313-0001",
+  "latest_recorded_at": "2026-03-13T04:37:32Z",
+  "ledger_path": "orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl",
+  "live_proof_present": false,
+  "receipt_events": 1,
+  "repo_sovereignty": {
+    "intake_authority": "acumen",
+    "live_credentials_must_remain_external": true,
+    "raw_secret_capture": "forbidden",
+    "strict_identity_required": true
+  }
+}

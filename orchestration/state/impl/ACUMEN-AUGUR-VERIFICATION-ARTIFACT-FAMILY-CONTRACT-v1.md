@@ -15,7 +15,7 @@ That creates a narrow follow-on need:
 
 This family satisfies that need with one bounded rule:
 
-`Acumen intake -> Acumen triage -> promoted or flagged item -> verification dossier -> Augur packet -> cited response -> repo-side assessment`
+`Acumen intake -> Acumen triage -> promoted or flagged item -> verification dossier -> Augur packet -> cited response -> repo-side assessment -> primary-source queue`
 
 ## Placement Law
 
@@ -59,6 +59,10 @@ Generation helper:
 Validation helper:
 
 1. `operators/validators/validate_acumen_verification_bridge.py`
+
+Downstream continuation:
+
+1. `orchestration/state/impl/ACUMEN-AUGUR-RETURN-INGESTION-CONTRACT-v1.md`
 
 ## Dossier Law
 

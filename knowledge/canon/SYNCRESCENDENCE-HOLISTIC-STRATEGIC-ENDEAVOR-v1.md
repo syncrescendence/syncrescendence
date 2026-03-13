@@ -442,6 +442,9 @@ The project has already completed:
 - closure of the normal Acumen batch path into an evidence-native route backed by append-only ledgers and rematerialized current-state surfaces
 - first truthful one-command Acumen live-batch entrypoint that is repo-complete and blocked only by external credentials
 - first lawful downstream Augur verification artifact family, including dossier generation, bridge state, and a packetized reconnaissance handoff for promoted items
+- first durable live-batch proof family so blocked, failed, and proven live attempts all leave repo-native witness state
+- first queue-bearing Acumen -> Augur verification surface with explicit item states instead of one-off packet emission
+- first repo-side Augur return-ingestion chain through assessment and primary-source queueing, even while the first external response remains absent
 
 It is now entering the next phase:
 
@@ -458,6 +461,8 @@ It is now entering the next phase:
 - transition from shell-centric hardening into intelligence throughput work where external signal is metabolized through lawful intake, verification, and compaction paths
 - first live-batch proof for Acumen once external credentials are available, followed by repeatable promoted-item verification throughput rather than one-off packet generation
 - widening from one intelligence product (`Dawn Brief`) toward a family of downstream products, research queues, and primary-source escalation surfaces
+- shift from generic portfolio widening toward curated inbound feed constellations whose subscription graphs are intentionally crafted per chain and then imported lawfully into the intelligence cycle
+- productization of the post-triage chain so verification, assessment, and primary escalation become operator-usable outputs rather than hidden intermediate state
 
 This is the phase where the system has crossed from shell design into shell enforcement and controlled proof.
 

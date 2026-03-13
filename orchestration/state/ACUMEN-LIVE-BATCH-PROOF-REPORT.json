@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-03-13T07:17:55Z",
+  "findings": [],
+  "ledger_path": "orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl",
+  "ok": true,
+  "status_json": "orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json",
+  "summary": {
+    "last_proven_receipt_event_id": null,
+    "latest_outcome": "blocked",
+    "latest_proof_status": "blocked_missing_credentials",
+    "latest_receipt_event_id": "alp-20260313-0001",
+    "live_proof_present": false,
+    "receipt_events": 1
+  }
+}

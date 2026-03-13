@@ -1,0 +1,30 @@
+{
+  "assessment_json_dir": "runtime/acumen/out/augur-return-assessments",
+  "assessment_md_dir": "communications/assessments",
+  "bridge_json_path": "orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json",
+  "counts": {
+    "held": 0,
+    "items_tracked": 1,
+    "pending_returns": 1,
+    "queued_for_primary": 0
+  },
+  "generated_at": "2026-03-13T04:39:38Z",
+  "holds": [],
+  "manual_boundary": "Augur or the human relay must still land the cited response markdown before repo-side assessment can extract facts, inferences, and next-source recommendations.",
+  "pending_returns": [
+    {
+      "assessment_json_path": "runtime/acumen/out/augur-return-assessments/deepmind-gemini-31-architecture.json",
+      "assessment_md_path": "communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-deepmind-gemini-31-architecture.md",
+      "augur_response_path": "communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md",
+      "decision": "Promote",
+      "rationale": "The declared Augur response path has not landed yet.",
+      "title": "Gemini 3.1 Architecture Update and TPUv5e Notes",
+      "triage_event_id": "atd-20260311-0001",
+      "video_id": "deepmind-gemini-31-architecture"
+    }
+  ],
+  "queue": [],
+  "queue_json_path": "orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json",
+  "queue_md_path": "orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.md",
+  "schema_version": "acumen.primary_source.queue/v1"
+}

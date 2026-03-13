@@ -12,7 +12,7 @@
         "Research"
       ],
       "genre": "Institutional",
-      "last_processed": "2026-03-12T21:24:42Z",
+      "last_processed": "2026-03-13T04:37:46Z",
       "name": "Google DeepMind",
       "notes": "",
       "priority_band": "Tier 1",
@@ -38,7 +38,7 @@
         "Engineering"
       ],
       "genre": "Tutorial",
-      "last_processed": "2026-03-12T21:24:42Z",
+      "last_processed": "2026-03-13T04:37:46Z",
       "name": "Andrej Karpathy",
       "notes": "",
       "priority_band": "Tier 1",
@@ -54,6 +54,6 @@
       "voice_normalization": "normalize"
     }
   ],
-  "generated_at": "2026-03-12T21:24:42Z",
+  "generated_at": "2026-03-13T04:37:46Z",
   "source_seed": "/Users/system/syncrescendence/operators/acumen/channel_seed.example.json"
 }

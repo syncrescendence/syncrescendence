@@ -13,6 +13,7 @@ This lane stores files produced by the repo-native Acumen flow that actually exi
 5. deterministic transcript artifacts
 6. Dawn Brief compilation from an existing JSONL queue
 7. sequential status snapshots
+8. Augur return assessment JSON artifacts
 
 This lane carries three different truth classes that should not be merged:
 
@@ -24,7 +25,7 @@ This lane carries three different truth classes that should not be merged:
    - the committed repeatable path on disk is fixture polling plus heuristic triage
    - current local status files show that local path succeeding
 3. live external proof:
-   - absent here unless a committed run captures successful live YouTube and Gemini status artifacts
+   - absent here unless the proof ledger records a `live_batch_proven` receipt
 
 ## Environment Variables
 
@@ -54,12 +55,23 @@ This lane carries three different truth classes that should not be merged:
    - `training-corpus.jsonl`
 15. verification bridge artifacts:
    - `out/verification-dossiers/*.json`
-16. status files under `/Users/system/syncrescendence/orchestration/state/`:
+   - `out/verification-portfolio.json`
+   - `out/verification-portfolio.md`
+16. Augur return assessment artifacts:
+   - `out/augur-return-assessments/*.json`
+17. status files under `/Users/system/syncrescendence/orchestration/state/`:
    - `ACUMEN-IDENTITY-STATUS.json`
    - `ACUMEN-PIPELINE-STATUS.json`
+   - `ACUMEN-LIVE-BATCH-PROOF-STATUS.json`
+   - `ACUMEN-LIVE-BATCH-PROOF-REPORT.json`
+   - `ACUMEN-LIVE-BATCH-PROOF-REPORT.md`
    - `ACUMEN-YOUTUBE-POLL-STATUS.json` when the live poller is used directly
    - `ACUMEN-AUGUR-VERIFICATION-BRIDGE.json`
-17. sample fixtures:
+   - `ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json`
+   - `ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.md`
+   - `ACUMEN-AUGUR-RETURN-REPORT.json`
+   - `ACUMEN-AUGUR-RETURN-REPORT.md`
+18. sample fixtures:
    - `sample-video.json`
    - `sample-transcript.txt`
    - `triage-decisions.sample.jsonl`
@@ -71,22 +83,30 @@ Append-only evidence for the runtime files lives at:
 
 1. `orchestration/state/registry/acumen-triage-decision-ledger.jsonl`
 2. `orchestration/state/registry/acumen-training-corpus-ledger.jsonl`
+3. `orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl`
 
 Those ledgers are the witness surfaces.
 `runtime/acumen/triage-decisions.jsonl` and `runtime/acumen/training-corpus.jsonl` are derivative current-state views only.
 `runtime/acumen/out/verification-dossiers/*.json` are sanitized downstream handoff artifacts generated from those witness surfaces.
+`runtime/acumen/out/verification-portfolio.*` are operator-facing queue views derived from the bridge state, not new intake authority.
+`runtime/acumen/out/augur-return-assessments/*.json` are derived classification artifacts over landed or pending Augur response paths.
+`orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json` is a derived current proof summary rebuilt from the live-batch proof ledger.
 
 Current repo-local witness examples on disk:
 
 1. [acumen-triage-decision-ledger.jsonl](/Users/system/syncrescendence/orchestration/state/registry/acumen-triage-decision-ledger.jsonl)
 2. [acumen-training-corpus-ledger.jsonl](/Users/system/syncrescendence/orchestration/state/registry/acumen-training-corpus-ledger.jsonl)
 3. [ACUMEN-TRIAGE-EVIDENCE-REPORT.md](/Users/system/syncrescendence/orchestration/state/ACUMEN-TRIAGE-EVIDENCE-REPORT.md)
+4. [acumen-live-batch-proof-ledger.jsonl](/Users/system/syncrescendence/orchestration/state/registry/acumen-live-batch-proof-ledger.jsonl)
+5. [ACUMEN-LIVE-BATCH-PROOF-REPORT.md](/Users/system/syncrescendence/orchestration/state/ACUMEN-LIVE-BATCH-PROOF-REPORT.md)
 
 Important boundary:
 
 1. the current ledgers prove that sanitized evidence recording and rematerialization work
 2. the normal `run_triage.py` and `pipeline_flow.py` path is now ledger-first and rematerializes runtime current-state views from the append-only ledgers
 3. live external proof still remains a distinct truth class until a credentialed run lands and is preserved
+4. the proof ledger can still record `blocked` or `completed_not_proven` attempts without falsely claiming full live proof
+5. Augur-response content assessment still depends on a cited response landing in `communications/responses/`
 
 ## Repeatable Entry Point
 
@@ -111,6 +131,12 @@ For the narrow one-command live batch path:
 ACUMEN_YOUTUBE_API_KEY=... GEMINI_API_KEY=... make acumen-live-batch
 ```
 
+That path now always writes a proof receipt family:
+
+1. blocked attempts append a durable `blocked_*` receipt rather than stopping as chat-only state
+2. successful runs with zero live Gemini calls remain `completed_not_proven`
+3. only a run that executes live poll plus at least one live Gemini triage call can land `live_batch_proven`
+
 Useful overrides:
 
 1. `STRICT=1` to fail on canonical-identity mismatch during preflight and pipeline run
@@ -130,14 +156,20 @@ Useful overrides:
 7. queue or binding file missing: pipeline wrapper cannot compile Dawn Brief or perform identity preflight
 8. deterministic artifact with `Intelligent Track Required`: requested polish exceeds current deterministic operator capability
 9. live external proof remains absent even when the code exists, if no committed successful live status artifacts are captured
+10. verification throughput remains open when an Augur response markdown file exists but no `perplexity_response_landed` event has been emitted yet
+11. return assessment remains pending when the declared Augur response markdown has not landed yet
+12. primary-source queue admission remains blocked when a landed response does not satisfy the required return structure
 
 For `make acumen-live-batch`, the intended failure boundary is narrower:
 
 1. `credential`: missing `ACUMEN_YOUTUBE_API_KEY` or `GEMINI_API_KEY`
 2. `identity`: strict mismatch against the canonical Acumen identity
 3. `external_service`: YouTube API or Gemini transport / HTTP / provider-response failure
+4. `proof_gap`: the run completed but did not satisfy the live-proof gate, usually because no live Gemini calls were executed
 
 `/Users/system/syncrescendence/orchestration/state/ACUMEN-PIPELINE-STATUS.json` now mirrors that boundary with top-level `failure_domain`, `failure_code`, `failure_message`, and embedded poll / triage status snapshots.
+`/Users/system/syncrescendence/orchestration/state/ACUMEN-LIVE-BATCH-PROOF-STATUS.json` projects the append-only proof ledger into one current summary with latest outcome, counts, and whether repo-local live proof is now present.
 
 This lane is operational output, not constitutional source.
 Augur / Perplexity packet markdown lands under `communications/prompts/` only after Acumen has already produced an eligible promoted or primary-flagged decision.
+Repo-side return assessment and primary-source queueing begin only after the declared Augur response path is populated.

@@ -1,29 +1,73 @@
 {
+  "batch_rules": {
+    "close_condition": "A batch item closes only after the Augur response artifact exists and a `perplexity_response_landed` event records its ingestion.",
+    "default_batch_scope": "open_items_only",
+    "eligibility": [
+      "Flag-for-Primary",
+      "Promote"
+    ],
+    "ordering": [
+      "Flag-for-Primary before Promote",
+      "older triage timestamps first within the same decision class"
+    ],
+    "override_flag": "--include-ingested",
+    "sanitization_rule": "Packets and dossiers remain sanitized and pointer-carrying; source packet provenance stays authoritative for repo state.",
+    "selection_surface": "Acumen remains the intake and triage plane; Augur receives only downstream verification work."
+  },
   "counts": {
     "augur_packets_written": 1,
+    "awaiting_dispatch": 0,
+    "awaiting_response": 1,
     "dossiers_written": 1,
-    "eligible_items_written": 1
+    "eligible_items_total": 1,
+    "eligible_items_written": 1,
+    "open_items_total": 1,
+    "primary_flagged_open_items": 0,
+    "promote_open_items": 1,
+    "remaining_open_after_batch": 0,
+    "response_ingested": 0,
+    "response_landed_uningested": 0,
+    "selected_batch_items": 1
   },
   "dossier_dir": "runtime/acumen/out/verification-dossiers",
   "eligible_decisions": [
     "Flag-for-Primary",
     "Promote"
   ],
-  "generated_at": "2026-03-11T02:59:58Z",
+  "generated_at": "2026-03-13T04:39:29Z",
   "items": [
     {
+      "assessment_json_path": "runtime/acumen/out/augur-return-assessments/deepmind-gemini-31-architecture.json",
+      "assessment_md_path": "communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-deepmind-gemini-31-architecture.md",
+      "augur_packet_exists": true,
       "augur_packet_path": "communications/prompts/PACKET-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md",
+      "augur_response_event_emitted_at": null,
+      "augur_response_event_exists": false,
+      "augur_response_exists": false,
       "augur_response_path": "communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md",
+      "batch_priority": 1,
       "decision": "Promote",
+      "dossier_exists": true,
       "dossier_path": "runtime/acumen/out/verification-dossiers/deepmind-gemini-31-architecture.json",
+      "is_open": true,
       "model_call_event_id": "atc-20260311-0001",
+      "priority_band": "Tier 1",
+      "queue_rank": 1,
+      "queue_status": "awaiting_response",
+      "recorded_at": "2026-03-11T00:55:40Z",
+      "selected_in_batch": true,
       "source_packet_path": "runtime/acumen/out/triage/packets/deepmind-gemini-31-architecture.md",
       "title": "Gemini 3.1 Architecture Update and TPUv5e Notes",
       "triage_event_id": "atd-20260311-0001",
       "video_id": "deepmind-gemini-31-architecture"
     }
   ],
-  "schema_version": "acumen.verification.bridge/v1",
+  "runtime_surfaces": {
+    "portfolio_json": "runtime/acumen/out/verification-portfolio.json",
+    "portfolio_md": "runtime/acumen/out/verification-portfolio.md"
+  },
+  "sandbox_event_ledger": "orchestration/state/SANDBOX-EVENT-LEDGER.jsonl",
+  "schema_version": "acumen.verification.bridge/v2",
   "selected_decisions": [
     "Flag-for-Primary",
     "Promote"
@@ -32,6 +76,15 @@
   "selected_video_ids": [
     "deepmind-gemini-31-architecture"
   ],
+  "selection": {
+    "max_items": null,
+    "remaining_open_after_batch": 0,
+    "selected_batch_items": 1,
+    "selected_triage_event_ids": [
+      "atd-20260311-0001"
+    ],
+    "selection_mode": "open_items_only"
+  },
   "training_ledger": "orchestration/state/registry/acumen-training-corpus-ledger.jsonl",
   "triage_ledger": "orchestration/state/registry/acumen-triage-decision-ledger.jsonl"
 }

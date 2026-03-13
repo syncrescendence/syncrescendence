@@ -1,7 +1,7 @@
 {
   "canonical_identity": "syncrescendence@gmail.com",
-  "captured_at": "2026-03-12T21:24:45Z",
-  "dawn_brief_path": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260312.md",
+  "captured_at": "2026-03-13T04:37:48Z",
+  "dawn_brief_path": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260313.md",
   "dawn_brief_status": {
     "command": [
       "python3",
@@ -9,12 +9,12 @@
       "--input-jsonl",
       "/Users/system/syncrescendence/runtime/acumen/triage-decisions.jsonl",
       "--output",
-      "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260312.md"
+      "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260313.md"
     ],
     "ok": true,
     "returncode": 0,
     "stderr": "",
-    "stdout": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260312.md"
+    "stdout": "/Users/system/syncrescendence/runtime/acumen/out/DAWN-BRIEF-20260313.md"
   },
   "dawn_brief_success": true,
   "evidence_report_json": "/Users/system/syncrescendence/runtime/acumen/out/ACUMEN-TRIAGE-EVIDENCE-REPORT.json",
@@ -110,7 +110,7 @@
   },
   "poll_status_json": "/Users/system/syncrescendence/runtime/acumen/poll-status.json",
   "poll_status_snapshot": {
-    "captured_at": "2026-03-12T21:24:46Z",
+    "captured_at": "2026-03-13T04:37:48Z",
     "channels": [
       {
         "channel_id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
@@ -205,7 +205,7 @@
   "triage_status_json": "/Users/system/syncrescendence/runtime/acumen/triage-status.json",
   "triage_status_snapshot": {
     "artifact_dir": "/Users/system/syncrescendence/runtime/acumen/out/triage",
-    "captured_at": "2026-03-12T21:24:46Z",
+    "captured_at": "2026-03-13T04:37:48Z",
     "external_dependencies": {
       "gemini_api": {
         "api_base": "https://generativelanguage.googleapis.com/v1beta/models",

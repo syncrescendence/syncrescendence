@@ -1,0 +1,15 @@
+{
+  "assessments_checked": 1,
+  "bridge_items": 1,
+  "bridge_json": "orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json",
+  "checked_at": "2026-03-13T07:17:55Z",
+  "findings": [
+    {
+      "level": "warning",
+      "message": "response not landed yet: communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md",
+      "scope": "bridge.items[0].augur_response_path"
+    }
+  ],
+  "ok": true,
+  "queue_json": "orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.json"
+}

@@ -2,10 +2,12 @@
 
 - Surface: `perplexity_web_surface`
 - Packet type: `acumen_verification_bridge`
-- Created: `2026-03-11T02:59:58Z`
+- Created: `2026-03-13T04:39:29Z`
 - Source dossier: `runtime/acumen/out/verification-dossiers/deepmind-gemini-31-architecture.json`
 - Source triage packet: `runtime/acumen/out/triage/packets/deepmind-gemini-31-architecture.md`
 - Return artifact: `communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md`
+- Repo assessment artifact: `communications/assessments/ACUMEN-AUGUR-RETURN-ASSESSMENT-deepmind-gemini-31-architecture.md`
+- Primary-source queue: `orchestration/state/ACUMEN-AUGUR-PRIMARY-SOURCE-QUEUE.md`
 - Intake sovereignty: `Acumen remains the intake and triage plane. Augur is downstream verification only.`
 - Repo sovereignty: `Repo-local decision metadata and source packet provenance remain authoritative for repo state.`
 - Drafting mode: `reconnaissance_only`
@@ -71,10 +73,12 @@
 
 - Save or relay the response back into `communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md`
 - Keep citations intact in the returned artifact.
+- After the response lands, rebuild the repo-side assessment and primary-source queue.
 
-## Bridge Command
+## Repo Return Commands
 
 ```bash
 python3 operators/cli-web-gap/perplexity_response_bridge.py --dispatch communications/prompts/PACKET-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md --response communications/responses/RESPONSE-PERPLEXITY-acumen-deepmind-gemini-31-architecture.md --summary "<one-line landing summary>"
+python3 operators/acumen/ingest_augur_returns.py --video-id deepmind-gemini-31-architecture
 ```
 

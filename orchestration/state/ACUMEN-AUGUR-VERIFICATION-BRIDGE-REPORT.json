@@ -1,7 +1,31 @@
 {
   "bridge_json": "orchestration/state/ACUMEN-AUGUR-VERIFICATION-BRIDGE.json",
-  "checked_at": "2026-03-12T21:33:29Z",
+  "checked_at": "2026-03-13T07:17:55Z",
+  "counts": {
+    "augur_packets_written": 1,
+    "awaiting_dispatch": 0,
+    "awaiting_response": 1,
+    "dossiers_written": 1,
+    "eligible_items_total": 1,
+    "eligible_items_written": 1,
+    "open_items_total": 1,
+    "primary_flagged_open_items": 0,
+    "promote_open_items": 1,
+    "remaining_open_after_batch": 0,
+    "response_ingested": 0,
+    "response_landed_uningested": 0,
+    "selected_batch_items": 1
+  },
   "findings": [],
   "items_checked": 1,
-  "ok": true
+  "ok": true,
+  "selection": {
+    "max_items": null,
+    "remaining_open_after_batch": 0,
+    "selected_batch_items": 1,
+    "selected_triage_event_ids": [
+      "atd-20260311-0001"
+    ],
+    "selection_mode": "open_items_only"
+  }
 }
