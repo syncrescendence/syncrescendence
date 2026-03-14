@@ -118,7 +118,22 @@ async function getTabs() {
 
 async function openSession(match) {
   const tabs = await getTabs();
-  const target = tabs.find((tab) => tab.url.includes(match));
+  const candidates = tabs.filter((tab) => tab.url.includes(match));
+  const score = (tab) => {
+    if (match === "x.com") {
+      if (tab.url.includes("/home")) return 100;
+      if (tab.url === "https://x.com/" || tab.url === "https://x.com") return 90;
+      if (/https:\/\/x\.com\/[^/]+$/.test(tab.url)) return 80;
+      return 10;
+    }
+    if (match === "youtube.com") {
+      if (tab.url.includes("/feed/channels")) return 100;
+      if (tab.url === "https://www.youtube.com/" || tab.url === "https://www.youtube.com") return 90;
+      return 10;
+    }
+    return 0;
+  };
+  const target = candidates.sort((a, b) => score(b) - score(a))[0];
   if (!target) throw new Error(`No tab matched ${match}`);
   const session = new CdpSession(target);
   await session.connect();
@@ -148,20 +163,35 @@ async function listXAccounts(session) {
 async function switchXAccount(session, handle) {
   const state = await listXAccounts(session);
   if (state.currentHandle === handle) return state;
-  await session.evaluate(`(() => {
-    const target = [...document.querySelectorAll('button,[role="button"]')]
-      .find((el) => (el.getAttribute('aria-label') || '') === 'Switch to ${handle}');
-    if (!target) return { ok: false };
-    target.click();
-    return { ok: true };
-  })()`);
-  for (let i = 0; i < 10; i += 1) {
-    await session.wait(1000);
+  const clickTarget = async () =>
+    await session.evaluate(`(() => {
+      const target = [...document.querySelectorAll('button,[role="button"]')]
+        .find((el) => (el.getAttribute('aria-label') || '') === 'Switch to ${handle}');
+      if (!target) return { ok: false };
+      target.click();
+      return { ok: true };
+    })()`);
+  const clicked = await clickTarget();
+  if (!clicked.ok) throw new Error(`Could not find X account switch target ${handle}`);
+  for (let i = 0; i < 20; i += 1) {
+    await session.wait(1500);
     const current = await session.evaluate(`(() => {
       const raw = (document.querySelector('[data-testid="SideNav_AccountSwitcher_Button"]')?.innerText || '').trim();
-      return { handle: (raw.match(/@[A-Za-z0-9_]+/) || [null])[0], raw, url: location.href, title: document.title };
+      return {
+        handle: (raw.match(/@[A-Za-z0-9_]+/) || [null])[0],
+        raw,
+        url: location.href,
+        title: document.title,
+        bodyHandle: ((document.body.innerText || '').match(/@[A-Za-z0-9_]+/) || [null])[0],
+      };
     })()`);
     if (current.handle === handle) return current;
+    if (i === 4 || i === 10) {
+      await session.navigate("https://x.com/account/switch", 2000);
+    }
+    if (i === 11) {
+      await clickTarget();
+    }
   }
   throw new Error(`X account switch did not settle to ${handle}`);
 }
@@ -323,45 +353,78 @@ async function scrapeYoutubeSubscriptions(session, email) {
 async function scrapeXFollowing(session, handle) {
   const normalized = handle.replace(/^@/, "");
   await session.navigate(`https://x.com/${normalized}/following`, 3000);
-  return await session.evaluate(`(async () => {
-    const seen = new Map();
-    let stablePasses = 0;
-    let lastSize = 0;
-    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    const collect = () => {
-      const cells = [...document.querySelectorAll('[data-testid="UserCell"]')];
-      for (const cell of cells) {
+  const expectedCount = await session.evaluate(`(() => {
+    const text = document.body.innerText || '';
+    const match = text.match(/([\\d,]+)\\s+Following/i);
+    return match ? Number(match[1].replace(/,/g, '')) : null;
+  })()`);
+  const seen = new Map();
+  let stablePasses = 0;
+  let lastSize = 0;
+  let lastY = -1;
+  const diagnostics = [];
+  for (let i = 0; i < 140; i += 1) {
+    const batch = await session.evaluate(`(() => {
+      const rows = [...document.querySelectorAll('[data-testid="UserCell"]')];
+      const items = rows.map((cell) => {
+        const rawText = (cell.innerText || '').trim();
+        if (!/Following|Unfollow/i.test(rawText)) return null;
         const links = [...cell.querySelectorAll('a[href]')].map((a) => a.href).filter(Boolean);
         const profileHref = links.find((href) => /^https:\\/\\/x\\.com\\/[^/]+$/.test(href) && !href.includes('/status/'));
-        if (!profileHref) continue;
+        if (!profileHref) return null;
         const path = new URL(profileHref).pathname.replace(/^\\//, '');
-        if (!path || ['home', 'explore', 'messages', 'notifications'].includes(path)) continue;
-        const handle = '@' + path;
-        const lines = (cell.innerText || '').split('\\n').map((line) => line.trim()).filter(Boolean);
-        const displayName = lines.find((line) => !line.startsWith('@') && !/Follow|Following|Unfollow|Follows you/i.test(line)) || '';
-        seen.set(handle, {
+        if (!path || ['home', 'explore', 'messages', 'notifications'].includes(path)) return null;
+        const lines = rawText.split('\\n').map((line) => line.trim()).filter(Boolean);
+        const displayName =
+          lines.find((line) => !line.startsWith('@') && !/Follow|Following|Unfollow|Follows you/i.test(line)) || '';
+        return {
           source_account: ${JSON.stringify(handle)},
           platform: 'x',
           display_name: displayName,
-          handle,
+          handle: '@' + path,
           profile_url: profileHref,
           bio: '',
           notes: '',
-        });
-      }
-    };
-    for (let i = 0; i < 80; i += 1) {
-      collect();
-      window.scrollTo(0, document.documentElement.scrollHeight);
-      await sleep(1200);
-      collect();
-      if (seen.size === lastSize) stablePasses += 1;
-      else stablePasses = 0;
-      lastSize = seen.size;
-      if (stablePasses >= 4) break;
+        };
+      }).filter(Boolean);
+      return {
+        items,
+        y: window.scrollY,
+        scrollHeight: document.documentElement.scrollHeight,
+        clientHeight: document.documentElement.clientHeight,
+      };
+    })()`);
+    for (const item of batch.items) {
+      seen.set(item.handle, item);
     }
-    return { items: [...seen.values()], url: location.href, title: document.title };
-  })()`);
+    diagnostics.push({
+      step: i,
+      seen: seen.size,
+      visible: batch.items.length,
+      y: batch.y,
+      scrollHeight: batch.scrollHeight,
+    });
+    if (expectedCount && seen.size >= expectedCount) break;
+    const atBottom = batch.y + batch.clientHeight >= batch.scrollHeight - 8;
+    if (seen.size === lastSize) stablePasses += 1;
+    else stablePasses = 0;
+    if (atBottom && stablePasses >= 8) break;
+    if (batch.y === lastY && stablePasses >= 8) break;
+    lastSize = seen.size;
+    lastY = batch.y;
+    await session.evaluate(`(() => {
+      window.scrollBy(0, Math.max(900, Math.floor(window.innerHeight * 0.9)));
+      return { y: window.scrollY };
+    })()`);
+    await session.wait(1500);
+  }
+  return {
+    items: [...seen.values()],
+    url: await session.evaluate("location.href"),
+    title: await session.evaluate("document.title"),
+    expectedCount,
+    diagnostics,
+  };
 }
 
 function diffBy(items, key) {
@@ -453,7 +516,9 @@ async function main() {
       );
       return;
     }
+    await switchXAccount(xSession, xSourceHandle);
     const xSource = await scrapeXFollowing(xSession, xSourceHandle);
+    await switchXAccount(xSession, xDestHandle);
     const xDest = await scrapeXFollowing(xSession, xDestHandle);
     const ySource = await scrapeYoutubeSubscriptions(ySession, ySourceEmail);
     const yDest = await scrapeYoutubeSubscriptions(ySession, yDestEmail);
